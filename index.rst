@@ -1,5 +1,5 @@
 .. Flyt-docs documentation master file, created by
-   sphinx-quickstart on Tue Dec 15 10:04:52 2015.
+   sphinx-quickstart on Tue Dec 15 12:10:32 2015.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
@@ -14,8 +14,6 @@ Contents:
    getting_started.rst
 
 .. image:: _static/basic_screenshot.png
-
-
 
 
 Indices and tables
