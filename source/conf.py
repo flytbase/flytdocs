@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 #
 # Flyt-docs documentation build configuration file, created by
-# sphinx-quickstart on Tue Dec 15 12:10:32 2015.
+# sphinx-quickstart on Tue Dec 15 14:58:19 2015.
 #
 # This file is execfile()d with the current directory set to its
 # containing dir.
@@ -76,7 +76,7 @@ language = 'en'
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
-exclude_patterns = ['_build']
+exclude_patterns = []
 
 # The reST default role (used for this markup: `text`) to use for all
 # documents.
