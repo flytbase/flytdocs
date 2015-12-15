@@ -11,7 +11,7 @@ Contents:
 .. toctree::
    :maxdepth: 2
 	
-   getting_started.rst
+   .. getting_started.rst
 
 .. image:: _static/basic_screenshot.png
 
