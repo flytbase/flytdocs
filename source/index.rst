@@ -13,7 +13,7 @@ Flyt comes equipped with an onboard intuitive web app for initial configurations
 
 This documentation gives all the inputs to get you started with Flyt. You can find step by step guides for initial integration and configurations as well as for developing onboard scripts and web/mobile user apps. You will also get a peep into the Flyt internals and a detailed reference for all the APIs.
 
-Checkout our support portal at support.flytbase.com. It has a knowledge base accumulating some useful quick tips and learnings from the community. Also, do participate in the forums<link> and interact with the community sharing your use cases, feedback and anything you need help with. You can always reach out to us for any issues at flytsupport@navstik.org. 
+Checkout our support portal at **support.flytbase.com**. It has a knowledge base accumulating some useful quick tips and learnings from the community. Also, do participate in the **forums<link>** and interact with the community sharing your use cases, feedback and anything you need help with. You can always reach out to us for any issues at flytsupport@navstik.org. 
 
 
 
