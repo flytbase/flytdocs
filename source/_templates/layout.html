@@ -1,18 +1,21 @@
 {# Import the theme's layout. #}
 {% extends "!layout.html" %}
 
-{% block extrahead %}
+
+{%- block extrahead %}
 {{ super() }}
 <script type="text/javascript">
   var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-19344199-2']);
+  _gaq.push(['_setAccount', 'UA-71893943-1']);
   _gaq.push(['_trackPageview']);
 </script>
 {% endblock %}
 
 {% block footer %}
 {{ super() }}
-<div class="footer">
+<div class="footer">This page uses <a href="http://analytics.google.com/">
+Google Analytics</a> to collect statistics. You can disable it by blocking
+the JavaScript coming from www.google-analytics.com.
 <script type="text/javascript">
   (function() {
     var ga = document.createElement('script');
@@ -25,9 +28,9 @@
 </div>
 {% endblock %}
 
+<!-- {# Include our new CSS file into existing ones. #}
+{% set css_files = css_files + ['_static/simple-sidebar.css'] %} -->
 
 {# Import the theme's layout. #}
 
 
-<!-- {# Include our new CSS file into existing ones. #}
-{% set css_files = css_files + ['_static/simple-sidebar.css'] %} -->
