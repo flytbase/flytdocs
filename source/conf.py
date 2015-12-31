@@ -16,13 +16,10 @@ import sys
 import os
 import shlex
 import os
-on_rtd = os.environ.get('SPHINXBOOTSTRAPTHEME', None) == 'True'
+on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 
 if not on_rtd:  # only import and set the theme if we're building docs locally
     import sphinx_bootstrap_theme
-    html_theme = 'bootstrap'
-    html_theme_path = [sphinx_bootstrap_theme.get_html_theme_path()]
-
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
