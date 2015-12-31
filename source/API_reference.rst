@@ -1,3 +1,5 @@
+.. index:: api
+
 .. _api_reference:
 
 API Reference
@@ -5,52 +7,68 @@ API Reference
 
 .. _list-of-APIs:
 
-1. Navigation APIs
-------------------
+Navigation APIs
+---------------
 
 These APIs can be used to send navigational commands to the vehicle and access telemetry data from the vehicle.
 
-1.1. COMMANDS
-^^^^^^^^^^^^^
+COMMANDS
+^^^^^^^^
 These are the list of available APIs for sending commands to the vehicle.
 
 
-1.1.1. Basic
-""""""""""""
+Basic
+"""""
 * `Arm`_
 * Disarm
 * Takeoff
 * Land
 
 
-1.1.2. Intermediary
-"""""""""""""""""""
+Intermediary
+""""""""""""
 * Position Hold/Loiter/Hover
 * Position Setpoint
 * Velocity Setpoint
 * Waypoints
+* testing
 
-    - Send List
-    - Get List 
-    - Clear List
-    - Jump to specific waypoint number
-    - Pause
-    - Execute/Resume
-    
+  - sample1
+      
+#. cvcequvyqcu
+#. cweahcehwacbw
+#. cjha  chjwcjhawecw
 
-1.1.3. Advanced
-"""""""""""""""
+   #) vweawvwav
+   vsvhereverhvhevraev
+   Follow the order below to modify the form.  
+   Later parts may not be visible until you do the previous parts.  The 
+   image shows the final form as filled out by Dr. Harrington.
+
+   - csacvwvawv
+        
+1. cvwjhvacvwh
+2. cjhhawvjwj
+3. cajwvecwv
+
+   a) 
+
+   a) 
+
+Advanced
+""""""""
 * Attitude Setpoint
 * Execute Onboard CPP/Python Script
 * User mode name set - deprecated 
 
 
-1.2. ACCESS TELEMETRY DATA
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+ACCESS TELEMETRY DATA
+^^^^^^^^^^^^^^^^^^^^^
 These are the list of available APIs for accessing telemetry data from the vehicle.
 
-1.2.1. Basic
-""""""""""""
+Basic
+"""""
 * Attitude
 
     - Euler
@@ -60,18 +78,18 @@ These are the list of available APIs for accessing telemetry data from the vehic
     - Local NED Frame
     - Global LLA Frame
 
-1.2.2. Intermediary
-"""""""""""""""""""
+Intermediary
+""""""""""""
 * Vehicle Status
 * 
   
-1.2.3. Advanced
-"""""""""""""""
+Advanced
+""""""""
 * Battery Status
 * 
 
-2. Parameter Handling APIs
---------------------------
+Parameter Handling APIs
+-----------------------
 
 * /get_global_namespace
 * /global_namespace/param/param_create
@@ -108,3 +126,16 @@ Navigation APIs
 .. _Arm:
 
 * /global_namespace/navigation/arm
+
+`link_variable_name`_ 
+
+.. _link_variable_name: http://
+
+
+    .. - Send List
+    .. - Get List 
+    .. - Clear List
+    .. - Jump to specific waypoint number
+    .. - Pause
+    .. - Execute/Resume
+    

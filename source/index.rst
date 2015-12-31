@@ -24,6 +24,8 @@ What is covered in Flyt docs
 
 .. toctree::
    :maxdepth: 2
+   :numbered: 
+   :hidden:
    :caption: User Documentation
 	
    Getting_started.rst

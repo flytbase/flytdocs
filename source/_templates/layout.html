@@ -1,22 +1,33 @@
+{# Import the theme's layout. #}
 {% extends "!layout.html" %}
 
-
-{% block rootrellink %}
-        <li><a href="{{ pathto('index') }}">home</a>|&nbsp;</li>
-        <li><a href="{{ pathto('search') }}">search</a>|&nbsp;</li>
-       <li><a href="{{ pathto('contents') }}">documentation </a> &raquo;</li>
-{% endblock %}
-
-
-{% block relbar1 %}
-
-<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
-<a href="{{ pathto('index') }}"><img src="{{
-pathto("_static/logo.png", 1) }}" border="0" alt="sampledoc"/></a>
-</div>
+{% block extrahead %}
 {{ super() }}
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-19344199-2']);
+  _gaq.push(['_trackPageview']);
+</script>
 {% endblock %}
 
-{# put the sidebar before the body #}
-{% block sidebar1 %}{{ sidebar() }}{% endblock %}
-{% block sidebar2 %}{% endblock %}
+{% block footer %}
+{{ super() }}
+<div class="footer">
+<script type="text/javascript">
+  (function() {
+    var ga = document.createElement('script');
+    ga.src = ('https:' == document.location.protocol ?
+              'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    ga.setAttribute('async', 'true');
+    document.documentElement.firstChild.appendChild(ga);
+  })();
+</script>
+</div>
+{% endblock %}
+
+
+{# Import the theme's layout. #}
+
+
+<!-- {# Include our new CSS file into existing ones. #}
+{% set css_files = css_files + ['_static/simple-sidebar.css'] %} -->
