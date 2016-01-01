@@ -31,6 +31,7 @@ Intermediary
 * Position Setpoint
 * Velocity Setpoint
 * Waypoints
+
   - Send List
   - Get List 
   - Clear List
@@ -54,22 +55,23 @@ Basic
 """""
 * Attitude
 
-    - Euler
-    - Quaternion
+  - Euler
+  - Quaternion
+
 * Position
 
-    - Local NED Frame
-    - Global LLA Frame
+  - Local NED Frame
+  - Global LLA Frame
 
 Intermediary
 """"""""""""
 * Vehicle Status
-* 
+
   
 Advanced
 """"""""
 * Battery Status
-* 
+ 
 
 Parameter Handling APIs
 -----------------------

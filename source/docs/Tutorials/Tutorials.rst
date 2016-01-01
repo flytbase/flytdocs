@@ -3,31 +3,31 @@
 Tutorials
 =========
 
-Setup WiFi Network (ground)
----------------------------
+.. Setup WiFi Network (ground)
+.. ---------------------------
 
-Integrate New Payload
----------------------
+.. Integrate New Payload
+.. ---------------------
 
-Onboard Data Logging
---------------------
+.. Onboard Data Logging
+.. --------------------
 
-Logging on SD card - log On/OFF, data being logged, freq
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. Logging on SD card - log On/OFF, data being logged, freq
+.. ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Retrieving log files and viewing graphs using FlightPlot
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. Retrieving log files and viewing graphs using FlightPlot
+.. ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
-Factory Reset
--------------
+.. Factory Reset
+.. -------------
 
-SITL Simulation
----------------
+.. SITL Simulation
+.. ---------------
 
-Setup
-^^^^^
+.. Setup
+.. ^^^^^
 
-Sample scripts
-^^^^^^^^^^^^^^
+.. Sample scripts
+.. ^^^^^^^^^^^^^^
 
