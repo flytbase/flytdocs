@@ -26,12 +26,12 @@ Checkout our support portal at **support.flytbase.com**. It has a knowledge base
    :hidden:
    :caption: User Documentation
 	
-   Getting_started.rst
-   Flyt_internals.rst
-   User_apps_development.rst
-   Tutorials.rst
-   API_reference.rst
-   Firmware_update.rst
+   docs/GettingStarted/Getting_started_index.rst
+   docs/FlytInternals/Flyt_internals_index.rst
+   docs/UserAppsDevelopment/User_apps_development_index.rst
+   docs/Tutorials/Tutorials_index.rst
+   docs/API/API_index.rst
+   docs/FirmwareUpdate/Firmware_update_index.rst
 
 
 

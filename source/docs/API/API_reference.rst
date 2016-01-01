@@ -31,29 +31,12 @@ Intermediary
 * Position Setpoint
 * Velocity Setpoint
 * Waypoints
-* testing
-
-  - sample1
-      
-#. cvcequvyqcu
-#. cweahcehwacbw
-#. cjha  chjwcjhawecw
-
-   #) vweawvwav
-   vsvhereverhvhevraev
-   Follow the order below to modify the form.  
-   Later parts may not be visible until you do the previous parts.  The 
-   image shows the final form as filled out by Dr. Harrington.
-
-   - csacvwvawv
-        
-1. cvwjhvacvwh
-2. cjhhawvjwj
-3. cajwvecwv
-
-   a) 
-
-   a) 
+  - Send List
+  - Get List 
+  - Clear List
+  - Jump to specific waypoint number
+  - Pause
+  - Execute/Resume                
 
 Advanced
 """"""""
@@ -131,11 +114,4 @@ Navigation APIs
 
 .. _link_variable_name: http://
 
-
-    .. - Send List
-    .. - Get List 
-    .. - Clear List
-    .. - Jump to specific waypoint number
-    .. - Pause
-    .. - Execute/Resume
     
