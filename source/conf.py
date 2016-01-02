@@ -49,7 +49,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Flyt-docs'
+project = u'FlytDocs'
 copyright = u'2015, NavStik Labs'
 author = u'sharvashish_das'
 
@@ -118,10 +118,10 @@ html_theme = 'bootstrap'
 # documentation.
 html_theme_options = {
 	    # Navigation bar title. (Default: ``project`` value)
-    'navbar_title': "Flyt-Documentation",
+    'navbar_title': "FlytDocs",
 
     # Tab name for entire site. (Default: "Site")
-    'navbar_site_name': "Site Map",
+    'navbar_site_name': "Table of Contents",
 
     # A list of tuples containing pages or urls to link to.
     # Valid tuples should be in the following forms:
@@ -269,7 +269,7 @@ html_show_sphinx = False
 #html_search_scorer = 'scorer.js'
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'Flyt-docs'
+htmlhelp_basename = 'FlytDocs'
 
 # -- Options for LaTeX output ---------------------------------------------
 
@@ -291,7 +291,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-  (master_doc, 'Flyt-docs.tex', u'Flyt-docs Documentation',
+  (master_doc, 'FlytDocs.tex', u'FlytDocs',
    u'sharvashish\\_das', 'manual'),
 ]
 
@@ -321,7 +321,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'flyt-docs', u'Flyt-docs Documentation',
+    (master_doc, 'FlytDocs', u'FlytDocs',
      [author], 1)
 ]
 
@@ -335,7 +335,7 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  (master_doc, 'Flyt-docs', u'Flyt-docs Documentation',
+  (master_doc, 'FlytDocs', u'FlytDocs',
    author, 'Flyt-docs', 'One line description of project.',
    'Miscellaneous'),
 ]
