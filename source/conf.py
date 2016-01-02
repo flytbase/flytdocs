@@ -15,7 +15,14 @@
 import sys
 import os
 import shlex
-#sys.path.append(os.path.abspath('_themes'))
+on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
+
+if on_rtd:  # only import and set the theme if we're building docs locally
+  html_context = { 
+    'css_files': [
+        '_static/custom.css',
+    ],  
+  }  
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
