@@ -17,16 +17,6 @@ import os
 import shlex
 on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 
-if on_rtd:  # only import and set the theme if we're building docs locally
-  html_context = { 
-    'css_files': [
-        #'https://media.readthedocs.org/css/sphinx_rtd_theme.css',
-        '_static/rtd_badge.css',
-        'https://media.readthedocs.org/css/readthedocs-doc-embed.css',
-        '_static/custom.css',
-    ],  
-  }  
-
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
@@ -361,3 +351,13 @@ texinfo_documents = [
 
 # If true, do not generate a @detailmenu in the "Top" node's menu.
 #texinfo_no_detailmenu = False
+
+if on_rtd:  # only import and set the theme if we're building docs locally
+  html_context = { 
+    'css_files': [
+        #'https://media.readthedocs.org/css/sphinx_rtd_theme.css',
+        '_static/rtd_badge.css',
+        'https://media.readthedocs.org/css/readthedocs-doc-embed.css',
+        '_static/custom.css',
+    ],  
+  }  
