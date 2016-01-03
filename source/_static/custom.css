@@ -1,3 +1,13 @@
 .navbar-nav > li > .dropdown-menu {
   padding: 10px
 }
+
+.navbar-brand {
+  display: block;
+  width: 250px;
+  height: 60px;
+  text-indent: -9999px;
+  padding: 0 !important;
+  margin-left: -10.0% !important;
+  background: transparent url("FlytLogos/flyt_logo_white_small.png") no-repeat 0px 5px !important;
+}
