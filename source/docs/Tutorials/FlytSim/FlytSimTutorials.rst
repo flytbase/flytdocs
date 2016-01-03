@@ -16,11 +16,11 @@ Launch FlytSim
 
 To launch FlytSim, run this command in the terminal::
 
-	$(rospack find core_api)/scripts/start_flytOS.sh --sitl
+	$ $(rospack find core_api)/scripts/start_flytOS.sh --sitl
 
 To execute prebuilt sample apps, run this command in the terminal::
 
-	sample_app1
+	$ sample_app1
 
 Create your own app
 ^^^^^^^^^^^^^^^^^^^

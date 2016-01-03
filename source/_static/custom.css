@@ -11,3 +11,8 @@
   margin-left: -10.0% !important;
   background: transparent url("FlytLogos/flyt_logo_white_small.png") no-repeat 0px 5px !important;
 }
+
+.wy-plain-list-disc li, .rst-content .section ul li, .rst-content .toctree-wrapper ul li, article ul li{
+	list-style: outside none disc;
+	margin-left: 24px;
+}
