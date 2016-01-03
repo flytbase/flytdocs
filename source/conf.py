@@ -22,7 +22,7 @@ on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 
 if on_rtd:  # only import and set the theme if we're building docs locally
   html_context = { 
-    'css_files': [ css_files + 
+    'css_files': 'css_files' + [  
         #'https://media.readthedocs.org/css/sphinx_rtd_theme.css',
         #'https://media.readthedocs.org/css/readthedocs-doc-embed.css',
         #'_static/custom.css',
