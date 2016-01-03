@@ -8,7 +8,7 @@ Before you can start off with installing FlytSim, make sure you have successfull
 * Intel 32/64 bit architecture
 * Linux - Ubuntu 14.04
 * ROS - Indigo
-* `FlytCore <FlytCoreInstallationGuide.html>`_ 
+* :ref:`FlytCore`
   
 FlytSim is based on Gazebo which comes in packaged with ROS Indigo (Gazebo2). But if you want to use an upgraded version, then you can follow the steps for **installing other versions of gazebo**. 
 

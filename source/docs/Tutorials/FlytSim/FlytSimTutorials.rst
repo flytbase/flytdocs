@@ -3,7 +3,7 @@
 FlytSim
 =======
 
-FlytSim offers a 3D SITL(Software In The Loop) simulation environment for testing user apps without the drone hardware. It is a ROS-Gazebo based environment where the drone and its world are simulated, programmatically generating the state variables, while the control algorithms applied are same as onboard the drone. The FlytAPIs are also available in FlytSim and thus the user apps built with these APIs can be tested on a computer in a native Linux environment using FlytSim. Please follow the `FlytSim Installation Guide`_ to install FlytSim package, start testing your app and see it in action.
+FlytSim offers a 3D SITL(Software In The Loop) simulation environment for testing user apps without the drone hardware. It is a ROS-Gazebo based environment where the drone and its world are simulated, programmatically generating the state variables, while the control algorithms applied are same as onboard the drone. The FlytAPIs are also available in FlytSim and thus the user apps built with these APIs can be tested on a computer in a native Linux environment using FlytSim. Please follow the :ref:`FlytSim Installation Guide` to install FlytSim package, start testing your app and see it in action.
 
 FlytSim Tutorials
 -----------------
@@ -40,10 +40,7 @@ Compile and Execute your own app
 Edit or create your own custom models
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. tip:: This section is for advanced users
+.. note:: This section is for advanced users
 
 * model urdf files are available in <this path>
 * users could edit or create their own model files
-
-
-.. _FlytSim Installation Guide: FlytSimInstallationGuide.html
