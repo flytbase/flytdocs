@@ -10,7 +10,7 @@ Welcome to Flyt documentation!
 
 Welcome to Flyt, the next generation platform for commercial drone applications. It is by design open for developers to build advanced drone applications using its open APIs.
 
-Flyt comes equipped with an onboard intuitive web app for initial configurations, interfaces to connect payloads, APIs to write onboard scripts for embedding business logic to take intelligent decisions on the fly and APIs for building web/mobile apps for remote access with custom user experience.
+Flyt comes equipped with an onboard intuitive web app for initial configurations, interfaces to connect payloads, APIs to write onboard scripts for embedding business logic enabling intelligent decisions on the fly and APIs for building web/mobile apps for remote access with custom user experience.
 
 This documentation gives all the inputs to get you started with Flyt. You can find step by step guides for initial integration and configurations as well as for developing onboard scripts and web/mobile user apps. You will also get a peep into the Flyt internals and a detailed reference for all the APIs.
 
