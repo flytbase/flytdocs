@@ -112,8 +112,4 @@ Navigation APIs
 
 * /global_namespace/navigation/arm
 
-`link_variable_name`_ 
-
-.. _link_variable_name: http://
-
     

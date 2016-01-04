@@ -12,11 +12,6 @@
   background: transparent url("FlytLogos/flyt_logo_white_small.png") no-repeat 0px 5px !important;
 }
 
-.wy-plain-list-disc li, .rst-content .section ul li, .rst-content .toctree-wrapper ul li, article ul li{
-	list-style: outside none disc;
-	margin-left: 24px;
-}
-
 .bs-sidenav {
     margin-top: 30px;
     margin-bottom: 30px;
@@ -28,8 +23,16 @@
 }
 
 body {
-    font-family: Georgia,"Times New Roman",Times,serif;
-    line-height: 1.12 !important;
+    font-family: "Open Sans",sans-serif !important;
+    line-height: 1.4 !important;
     color: #555 !important;
-    font-size: 18px !important;
+    font-size: 16px !important;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+		font-family: "Oswald",sans-serif !important;
+    font-weight: 400 !important;
+    line-height: 1.1;
+    color: #000;
+		letter-spacing: -1px !important;
 }
