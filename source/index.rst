@@ -25,13 +25,18 @@ Checkout and participate in our `forums`_ and interact with the community sharin
    :hidden:
    :caption: User Documentation
 	
-   docs/GettingStarted/Getting_started_index.rst
-   docs/FlytInternals/Flyt_internals_index.rst
-   docs/API/API_index.rst
-   docs/UserAppsDevelopment/User_apps_development_index.rst
-   docs/Tutorials/Tutorials_index.rst
-   docs/FirmwareUpdate/Firmware_update_index.rst
-
+   .. docs/GettingStarted/Getting_started_index.rst
+   .. docs/FlytInternals/Flyt_internals_index.rst
+   .. docs/API/API_index.rst
+   .. docs/UserAppsDevelopment/User_apps_development_index.rst
+   .. docs/Tutorials/Tutorials_index.rst
+   .. docs/FirmwareUpdate/Firmware_update_index.rst
+   docs/GettingStarted/Getting_started.rst
+   docs/FlytInternals/Flyt_internals.rst
+   docs/API/API_reference.rst
+   docs/UserAppsDevelopment/User_apps_development.rst
+   docs/Tutorials/FlytSim/FlytSimTutorials.rst
+   docs/FirmwareUpdate/Firmware_update.rst
 
 .. _forums: http://forums.flytbase.com
 
