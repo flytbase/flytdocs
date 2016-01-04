@@ -3,10 +3,12 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
+.. _introduction:
+
 Welcome to FlytDocs!
 ====================
 
-.. _introduction:
+|br|
 
 Welcome to Flyt, the next generation platform for commercial drone applications. It is by design open for developers to build advanced drone applications using its open APIs.
 
@@ -39,3 +41,7 @@ Checkout and participate in our `forums`_ and interact with the community sharin
 .. * :ref:`genindex`
 .. * :ref:`modindex`
 .. * :ref:`search`
+
+.. |br| raw:: html
+
+   <br />

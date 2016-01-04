@@ -36,3 +36,23 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     color: #000;
 		letter-spacing: -1px !important;
 }
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin: 0 0 60px; /* bottom = footer height */
+    padding-bottom: 100px;
+}
+
+footer {
+    /*background-color: orange;*/
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 60px;
+    width: 100%;
+    /*overflow:hidden;*/
+}
