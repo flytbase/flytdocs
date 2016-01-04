@@ -2,15 +2,31 @@
   padding: 10px
 }
 
+.navbar-nav {
+    margin-left: 8% !important;
+}
+
 .navbar-brand {
   display: block;
-  width: 250px;
-  height: 60px;
+  width: 160px;
+  height: 45px !important;
   text-indent: -9999px;
   padding: 0 !important;
   margin-left: -10.0% !important;
+  margin-top: 4%;	
   background: transparent url("FlytLogos/flyt_logo_white_small.png") no-repeat 0px 5px !important;
 }
+
+.navbar-inverse {
+    background-color: #EE3C39 !important;
+    border-color: #D82B26 !important;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
+    color: #EE3C39 !important;
+    background-color: #FFF !important;
+}
+
 
 .bs-sidenav {
     margin-top: 30px;
