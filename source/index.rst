@@ -20,7 +20,6 @@ Checkout and participate in our `forums`_ and interact with the community sharin
 
 .. toctree::
    :maxdepth: 2
-   :numbered: 
    :hidden:
    :caption: User Documentation
 	

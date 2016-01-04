@@ -3,7 +3,6 @@
 
 .. toctree::
    :maxdepth: 2
-   :numbered: 
    :hidden:
 	
    API_reference.rst

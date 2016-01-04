@@ -10,6 +10,12 @@ FlytSim Tutorials
 
 Once you have installed FlytSim and FlytCore, you are ready to build your own apps and run it out on FlytSim.
 
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+	
+   FlytSimInstallationGuide.rst
+   FlytCoreInstallationGuide.rst
 
 Launch FlytSim
 ^^^^^^^^^^^^^^

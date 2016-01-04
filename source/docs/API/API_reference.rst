@@ -12,7 +12,7 @@ Navigation APIs
 
 These APIs can be used to send navigational commands to the vehicle and access telemetry data from the vehicle.
 
-COMMANDS
+Commands
 ^^^^^^^^
 These are the list of available APIs for sending commands to the vehicle.
 
@@ -47,7 +47,7 @@ Advanced
 
 
 
-ACCESS TELEMETRY DATA
+Access Telemetry Data
 ^^^^^^^^^^^^^^^^^^^^^
 These are the list of available APIs for accessing telemetry data from the vehicle.
 

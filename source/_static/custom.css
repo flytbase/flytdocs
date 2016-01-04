@@ -16,3 +16,20 @@
 	list-style: outside none disc;
 	margin-left: 24px;
 }
+
+.bs-sidenav {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-shadow: 0px 1px 0px #FFF;
+    background-color: #F7F5FA;
+    border-radius: 5px;
+    padding: 10px !important;
+    margin-left: -10%;
+}
+
+body {
+    font-family: Georgia,"Times New Roman",Times,serif;
+    line-height: 1.12 !important;
+    color: #555 !important;
+    font-size: 18px !important;
+}

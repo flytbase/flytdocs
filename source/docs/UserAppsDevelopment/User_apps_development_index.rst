@@ -3,7 +3,6 @@
 
 .. toctree::
    :maxdepth: 2
-   :numbered: 
    :hidden:
 	
    User_apps_development.rst
