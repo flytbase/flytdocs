@@ -3,27 +3,52 @@
 FlytSim Installation Guide
 ==========================
 
-Before you can start off with installing FlytSim, make sure you have successfully installed all the following dependencies in your system.
 
-* Intel 32/64 bit architecture
+Before you can start off with installing FlytSim, make sure you fulfill all the following dependencies.
+
+* Intel 64 bit architecture
 * Linux - Ubuntu 14.04
-* ROS - Indigo
-* :ref:`FlytCore`
+* `ROS - Indigo`_
+* `FlytCore`_
   
-FlytSim is based on Gazebo which comes in packaged with ROS Indigo (Gazebo2). But if you want to use an upgraded version, then you can follow the steps for **installing other versions of gazebo**. 
+FlytSim is based on Gazebo which comes in packaged with ROS Indigo (Gazebo 2). But if you want to upgrade your Gazebo version, follow the steps mentioned in `this`_ tutorial. 
 
-You can install FlytSim using two approaches:
+We have provided the following two approaches for installing FlytSim:
 
-* FlytSim binaries
-* Build FlytSim from source
+* `FlytSim binaries - the preferred approach`_
+* `Build FlytSim from source`_
   
+.. _FlytSim binaries - the preferred approach:
+
 FlytSim binaries
 ^^^^^^^^^^^^^^^^
 
-Download the <package_name>.deb package from Flyt Server.
-run sudo dpkg -i <package_name>.deb in your terminal
+.. warning:: FlytCore is a dependency package for FlytSim. If you have not installed FlytCore yet, go to :ref:`FlytCore Installation Guide` before going any further in this tutorial.
+
+To install FlytSim binaries, 
+
+* Download :download:`this <flytsim_install.sh>` FlytSim install script. Alternatively, you can create your own install script by copying the following lines.
+
+.. literalinclude:: flytsim_install.sh
+   :language: bash
+
+* Make the file executable::
+
+		$ chmod +x <path to install script>/flytsim_install.sh
+* Install FlytSim by executing the install script with sudo permission::
+
+		$ sudo <path to install script>/flytsim_install.sh
+
+.. _Build FlytSim from source:
 
 Build FlytSim from source
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Currently, efforts are being put to make FlytSim available in github.
+Currently, efforts are being put to make FlytSim source code available in github.
+
+
+
+.. _ROS - Indigo: http://wiki.ros.org/indigo/Installation/Ubuntu
+.. _this: https://github.com/ethz-asl/rotors_simulator/wiki/Gazebo-and-Gazebo-Ros-Installation
+.. _FlytSim install script: https://
+.. _FlytCore: https://

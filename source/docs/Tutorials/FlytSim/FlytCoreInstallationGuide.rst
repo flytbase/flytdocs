@@ -1,4 +1,4 @@
-.. _FlytCore Installation Guide: 
+.. _flytCore installation guide: 
 .. _flytcore: 
 
 FlytCore Installation Guide

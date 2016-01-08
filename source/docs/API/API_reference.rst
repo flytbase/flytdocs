@@ -2,8 +2,8 @@
 
 .. _api_reference:
 
-API Reference
-=============
+FlytAPI
+=======
 
 .. _list-of-APIs:
 
