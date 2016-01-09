@@ -336,8 +336,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, nav, sectio
 }
 
 .wy-nav-content {
-    padding: 1.618em 3.236em;
+    padding: 1% 10%;
     height: 100%;
-    max-width: 800px;
     margin: auto;
 }
