@@ -360,4 +360,7 @@ if on_rtd:  # only import and set the theme if we're building docs locally
         'https://media.readthedocs.org/css/readthedocs-doc-embed.css',
         '_static/custom.css',
     ],  
+    'html_files': [
+        '_templates/layout.html',
+    ],
   }  
