@@ -134,7 +134,6 @@
           <span class="fa fa-caret-down"></span>
         </span>
         <div class="rst-other-versions">
-        <!-- rtd footer is injected by rtd autoatically -->
           <dl>
             <dt>Versions</dt>
             {% for slug, url in versions %}
@@ -148,14 +147,6 @@
             {% endfor %}
           </dl>
           <dl>
-            <dt>On Read the Docs</dt>
-              <dd>
-                <a href="//{{ PRODUCTION_DOMAIN }}/projects/{{ slug }}/?fromdocs={{ slug }}">Project Home</a>
-              </dd>
-              <dd>
-                <a href="//{{ PRODUCTION_DOMAIN }}/builds/{{ slug }}/?fromdocs={{ slug }}">Builds</a>
-              </dd>
-          </dl>
           <hr/>
           Free document hosting provided by <a href="http://www.readthedocs.org">Read the Docs</a>.
 
