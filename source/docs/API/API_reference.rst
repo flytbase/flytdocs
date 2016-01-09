@@ -7,18 +7,22 @@ FlytAPI
 
 .. _list-of-APIs:
 
+List of APIs
+------------
+
 Navigation APIs
----------------
+^^^^^^^^^^^^^^^
 
 These APIs can be used to send navigational commands to the vehicle and access telemetry data from the vehicle.
 
 Commands
-^^^^^^^^
+""""""""
+
 These are the list of available APIs for sending commands to the vehicle.
 
-
 Basic
-"""""
++++++
+
 * `Arm`_
 * Disarm
 * Takeoff
@@ -26,7 +30,8 @@ Basic
 
 
 Intermediary
-""""""""""""
+++++++++++++
+
 * Position Hold/Loiter/Hover
 * Position Setpoint
 * Velocity Setpoint
@@ -40,7 +45,8 @@ Intermediary
   - Execute/Resume                
 
 Advanced
-""""""""
+++++++++
+
 * Attitude Setpoint
 * Execute Onboard CPP/Python Script
 * User mode name set - deprecated 
@@ -48,11 +54,13 @@ Advanced
 
 
 Access Telemetry Data
-^^^^^^^^^^^^^^^^^^^^^
+"""""""""""""""""""""
+
 These are the list of available APIs for accessing telemetry data from the vehicle.
 
 Basic
-"""""
++++++
+
 * Attitude
 
   - Euler
@@ -64,17 +72,19 @@ Basic
   - Global LLA Frame
 
 Intermediary
-""""""""""""
+++++++++++++
+
 * Vehicle Status
 
   
 Advanced
-""""""""
+++++++++
+
 * Battery Status
  
 
 Parameter Handling APIs
------------------------
+^^^^^^^^^^^^^^^^^^^^^^^
 
 * /get_global_namespace
 * /global_namespace/param/param_create
@@ -89,7 +99,7 @@ Parameter Handling APIs
 
 
 Setup APIs
-----------
+^^^^^^^^^^
 
 * /global_namespace/setup/actuator_testing
 * /global_namespace/setup/autopilot_reboot
@@ -99,15 +109,16 @@ Setup APIs
 * /global_namespace/setup/module_calibration
 
 Vision APIs
------------
+^^^^^^^^^^^
 
 * /global_namespace/capture_camera
 * /global_namespace/capture_camera_stop
 
 
 
-Navigation APIs123
-------------------
+Navigation APIs
+---------------
+
 .. _Arm:
 
 * /global_namespace/navigation/arm
