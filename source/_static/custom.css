@@ -60,20 +60,16 @@ html {
     min-height: 100%;
 }
 
-body {
-    margin: 0 0 130px; /* bottom = footer height */
+/*body {
+    margin: 0 0 130px;  bottom = footer height 
     padding-bottom: 170px;
-}
+}*/
 
-footer {
-    /*text-align: center;*/
+/*footer {
     position: absolute;
-    left: 0;
-    bottom: 0;
     height: 130px;
-    width: 100%;
     overflow:hidden;
-}
+}*/
 
 .rst-footer-buttons{*zoom:1}.rst-footer-buttons:before,.rst-footer-buttons:after{display:table;content:""}.rst-footer-buttons:after{clear:both}
 
