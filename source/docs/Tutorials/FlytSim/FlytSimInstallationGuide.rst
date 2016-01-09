@@ -9,7 +9,6 @@ Before you can start off with installing FlytSim, make sure you fulfill all the 
 * Intel 64 bit architecture
 * Linux - Ubuntu 14.04
 * `ROS - Indigo`_
-* `FlytCore`_
   
 FlytSim is based on Gazebo which comes in packaged with ROS Indigo (Gazebo 2). But if you want to upgrade your Gazebo version, follow the steps mentioned in `this`_ tutorial. 
 
@@ -23,21 +22,25 @@ We have provided the following two approaches for installing FlytSim:
 FlytSim binaries
 ^^^^^^^^^^^^^^^^
 
-.. warning:: FlytCore is a dependency package for FlytSim. If you have not installed FlytCore yet, go to :ref:`FlytCore Installation Guide` before going any further in this tutorial.
-
 To install FlytSim binaries, 
 
 * Download :download:`this <flytsim_install.sh>` FlytSim install script. Alternatively, you can create your own install script by copying the following lines.
 
 .. literalinclude:: flytsim_install.sh
    :language: bash
+   :tab-width: 4
 
 * Make the file executable::
 
 		$ chmod +x <path to install script>/flytsim_install.sh
+
 * Install FlytSim by executing the install script with sudo permission::
 
 		$ sudo <path to install script>/flytsim_install.sh
+
+* Just in case you see any dependency issues cropping up in your screen while executing the install script, kindly run the following command and execute the install script again::
+  	
+  	$ sudo apt-get -f install 
 
 .. _Build FlytSim from source:
 
@@ -51,4 +54,3 @@ Currently, efforts are being put to make FlytSim source code available in github
 .. _ROS - Indigo: http://wiki.ros.org/indigo/Installation/Ubuntu
 .. _this: https://github.com/ethz-asl/rotors_simulator/wiki/Gazebo-and-Gazebo-Ros-Installation
 .. _FlytSim install script: https://
-.. _FlytCore: https://

@@ -61,8 +61,8 @@ html {
 }
 
 body {
-    margin: 0 0 60px; /* bottom = footer height */
-    padding-bottom: 100px;
+    margin: 0 0 130px; /* bottom = footer height */
+    padding-bottom: 170px;
 }
 
 footer {
@@ -70,7 +70,76 @@ footer {
     position: absolute;
     left: 0;
     bottom: 0;
-    height: 60px;
+    height: 130px;
     width: 100%;
     overflow:hidden;
+}
+
+.rst-footer-buttons{*zoom:1}.rst-footer-buttons:before,.rst-footer-buttons:after{display:table;content:""}.rst-footer-buttons:after{clear:both}
+
+.float-right {
+    float: right;
+}
+.btn-neutral {
+    background-color: #EE3C39 !important;
+    color: #FFF !important;
+}
+/*.btn {
+border-radius: 2px !important;
+line-height: normal !important;
+white-space: nowrap !important;
+text-align: center !important;
+font-size: 100% !important;
+padding: 6px 12px 8px !important;
+color: #FFF !important;
+border: 1px solid rgba(0, 0, 0, 0.1) !important;
+background-color: #27AE60 !important;
+text-decoration: none!important;
+font-weight: normal !important;
+font-family: "Lato","proxima-nova","Helvetica Neue",Arial,sans-serif !important;
+box-shadow: 0px 1px 2px -1px rgba(255, 255, 255, 0.5) inset, 0px -2px 0px 0px rgba(0, 0, 0, 0.1) inset !important;
+vertical-align: middle !important;
+-moz-user-select: none !important;
+transition: all 0.1s linear 0s !important;
+cursor: pointer !important;
+}*/
+
+.btn {
+  box-shadow: 0px 1px 2px -1px rgba(255, 255, 255, 0.5) inset, 0px -2px 0px 0px rgba(0, 0, 0, 0.1) inset;
+  transition: all 0.1s linear 0s;
+}
+
+.fa {
+    display: inline-block;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    font-size-adjust: none;
+    font-stretch: normal;
+    font-feature-settings: normal;
+    font-language-override: normal;
+    font-kerning: auto;
+    font-synthesis: weight style;
+    font-variant: normal;
+    font-size: inherit;
+    text-rendering: auto;
+}
+
+
+.fa::before{
+    font-family: "FontAwesome";
+    display: inline-block;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    text-decoration: inherit;
+}
+
+.fa-arrow-circle-right::before {
+    content: "";
+}
+
+.fa-arrow-circle-left::before {
+    content: "";
 }
