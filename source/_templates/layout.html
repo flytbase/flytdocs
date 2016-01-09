@@ -1,5 +1,5 @@
 {# Import the theme's layout. #}
-<!-- {% extends "!layout.html" %} -->
+{% extends "!layout.html" %}
 
 
 <!-- {%- block extrahead %}
@@ -11,7 +11,7 @@
 </script>
 {% endblock %} -->
 
-{%- block footer %}
+<!-- {%- block footer %}
 <footer>
   {% if next or prev %}
     <div class="container">
@@ -36,7 +36,7 @@
 
   <div class="container">
     <p class="pull-right">
-      <!-- <a href="#">Back to top</a> -->
+      <a href="#">Back to top</a>
       {% if theme_source_link_position == "footer" %}
         <br/>
         {% include "sourcelink.html" %}
@@ -61,7 +61,7 @@
 
 </footer>
 
-  {% endblock %}
+  {% endblock %} -->
 
 {# Include our new CSS file into existing ones. #}
 {% set css_files = css_files + ['_static/custom.css'] + ['_static/rtd_badge.css'] %}
