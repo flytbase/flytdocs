@@ -161,13 +161,11 @@
 
 <!-- Edited the footer for prev next button -->
 {%- block footer %} 
-<footer>
-  {% if next or prev %}
-    <div class="container">
-      <div class="row">
-        <div class="col-md-3">
-        </div>        
-        <div class="{{ bs_span_prefix }}{{ bs_content_width }}">
+<div class="body">
+  <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+    <div class="wy-nav-content">
+			<footer>
+  			{% if next or prev %}
           <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
             {% if next %}
               <a href="{{ next.link|e }}" class="btn btn-neutral float-right" title="{{ next.title|striptags|e }}" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
@@ -176,25 +174,10 @@
               <a href="{{ prev.link|e }}" class="btn btn-neutral float-left" title="{{ prev.title|striptags|e }}" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
             {% endif %}
           </div>
-        </div>
-      </div>
-    </div>      
-  {% endif %}
+  			{% endif %}
 
-  <hr/>
-
-  <div class="container">
-    <p class="pull-right">
-      {% if theme_source_link_position == "footer" %}
-        <br/>
-        {% include "sourcelink.html" %}
-      {% endif %}
-    </p>
-    <div class="row">
-      <div class="col-md-3">
-      </div>        
-      <div class="{{ bs_span_prefix }}{{ bs_content_width }}">
-        <p>
+			  <hr/>
+			  <p>
           {%- if show_copyright %}
             {%- if hasdoc('copyright') %}
               {% trans path=pathto('copyright'), copyright=copyright|e %}&copy; <a href="">Copyright</a> {{ copyright }}.{% endtrans %}<br/>
@@ -209,9 +192,9 @@
             {% trans sphinx_version=sphinx_version|e %}Created using <a href="http://sphinx-doc.org/">Sphinx</a> {{ sphinx_version }}.{% endtrans %}<br/>
           {%- endif %}
         </p>
-      </div>
+      </footer>
     </div>
-  </div>
-</footer>
+  </section>
+</div>
 {%- endblock %}
 
