@@ -34,7 +34,7 @@ To install FlytSim binaries,
 
 		$ chmod +x <path to install script>/flytsim_install.sh
 
-* Install FlytSim by executing the install script with sudo permission::
+* Install FlytSim by executing the install script with **sudo** privileges::
 
 		$ sudo <path to install script>/flytsim_install.sh
 
