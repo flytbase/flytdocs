@@ -63,20 +63,20 @@
 {% if theme_bootstrap_version == "3" %}
   {%- macro bsidebar() %}
       {%- if render_sidebar %}
-      <div class="{{ bs_span_prefix }}3">
-        <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-          <div class="wy-side-scroll">
-            <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-              {% block menu %}
-                {% set toctree = toctree(maxdepth=2, collapse=True, includehidden=True) %}
-                {% if toctree %}
-                    {{ toctree }}
-                {% else %}
-                    <!-- Local TOC -->
-                    <div class="local-toc">{{ toc }}</div>
-                {% endif %}
-              {% endblock %}
-            </div>
+<!--       <div class="{{ bs_span_prefix }}3">
+      </div> -->
+      <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+        <div class="wy-side-scroll">
+          <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+            {% block menu %}
+              {% set toctree = toctree(maxdepth=3, collapse=True, includehidden=True) %}
+              {% if toctree %}
+                  {{ toctree }}
+              {% else %}
+                  <!-- Local TOC -->
+                  <div class="local-toc">{{ toc }}</div>
+              {% endif %}
+            {% endblock %}
           </div>
         </nav>
       </div>
@@ -111,14 +111,31 @@
 
 {%- block content %}
 {{ navBar() }}
-<div class="container">
-  <div class="row">
+<div class="body">
+  <!-- <div class="row"> -->
     {%- block sidebar1 %}{{ bsidebar() }}{% endblock %}
-    <div class="{{ bs_span_prefix }}{{ bs_content_width }} content">
-      {% block body %}{% endblock %}
-    </div>
+    <!-- <div class="{{ bs_span_prefix }}{{ bs_content_width }} content"> -->
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+<!--       {# MOBILE NAV, TRIGGLES SIDE NAV ON TOGGLE #}
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="{{ pathto(master_doc) }}">{{ project }}</a>
+      </nav>
+
+ -->
+      {# PAGE CONTENT #}
+      <div class="wy-nav-content">
+        <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+         <div itemprop="articleBody">
+          {% block body %}{% endblock %}
+         </div>
+        </div>
+      </div>
+    </section>
+    <!-- </div> -->
     {% block sidebar2 %} {# possible location for sidebar #} {% endblock %}
-  </div>
+  <!-- </div> -->
 </div>
 {%- endblock %}
 
