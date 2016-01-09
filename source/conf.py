@@ -50,7 +50,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'FlytDocs'
-copyright = u'2015, NavStik Labs'
+copyright = u'NavStik Labs'
 author = u'sharvashish_das'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -166,7 +166,7 @@ html_theme_options = {
 
     # Fix navigation bar to top of page?
     # Values: "true" (default) or "false"
-    'navbar_fixed_top': "false",
+    'navbar_fixed_top': "true",
 
     # Location of link to source.
     # Options are "nav" (default), "footer" or anything else to exclude.
@@ -222,7 +222,7 @@ html_last_updated_fmt = '%b %d, %Y'
 
 # Custom sidebar templates, maps document names to template names.
 #html_sidebars = {'**': ['custom_sidebar.html'], 'using/windows': ['windowssidebar.html'],}
-html_sidebars = {'**': ['sidebartoc.html'],}
+#html_sidebars = {'**': ['sidebartoc.html'],}
 
 # Additional templates that should be rendered to pages, maps page names to
 # template names.
