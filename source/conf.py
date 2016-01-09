@@ -356,7 +356,7 @@ if on_rtd:  # only import and set the theme if we're building docs locally
   html_context = { 
     'css_files': [
         #'https://media.readthedocs.org/css/sphinx_rtd_theme.css',
-        #'_static/rtd_badge.css',
+        '_static/rtd_badge.css',
         'https://media.readthedocs.org/css/readthedocs-doc-embed.css',
         '_static/custom.css',
     ],  
