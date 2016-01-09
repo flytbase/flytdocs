@@ -359,16 +359,18 @@ article, aside, details, figcaption, figure, footer, header, hgroup, nav, sectio
 .wy-menu-vertical a:hover span.toctree-expand {
     color: #B3B3B3;
 }
-.wy-menu-vertical li span.toctree-expand {
-    display: block;
-    float: left;
-    margin-left: -1.2em;
-    font-size: 0.8em;
-    line-height: 1.6em;
-    color: #4D4D4D;
-}
+
 .wy-menu-vertical li.toctree-l2 span.toctree-expand {
     color: #A3A3A3;
+}
+
+.fa::before, .wy-menu-vertical li span.toctree-expand::before, .wy-menu-vertical li.on a span.toctree-expand::before, .wy-menu-vertical li.current > a span.toctree-expand::before, .rst-content .admonition-title::before, .rst-content h1 .headerlink::before, .rst-content h2 .headerlink::before, .rst-content h3 .headerlink::before, .rst-content h4 .headerlink::before, .rst-content h5 .headerlink::before, .rst-content h6 .headerlink::before, .rst-content dl dt .headerlink::before, .rst-content p.caption .headerlink::before, .rst-content tt.download span:first-child::before, .rst-content code.download span:first-child::before, .icon::before, .wy-dropdown .caret::before, .wy-inline-validate.wy-inline-validate-success .wy-input-context::before, .wy-inline-validate.wy-inline-validate-danger .wy-input-context::before, .wy-inline-validate.wy-inline-validate-warning .wy-input-context::before, .wy-inline-validate.wy-inline-validate-info .wy-input-context::before {
+    font-family: "FontAwesome";
+    display: inline-block;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    text-decoration: inherit;
 }
 
 
