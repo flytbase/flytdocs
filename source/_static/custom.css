@@ -60,19 +60,10 @@ html {
     min-height: 100%;
 }
 
-/*body {
-    margin: 0 0 130px;  bottom = footer height 
-    padding-bottom: 170px;
-}*/
-
-/*footer {
-    position: absolute;
-    height: 130px;
-    overflow:hidden;
-}*/
-
 .rst-footer-buttons{*zoom:1}.rst-footer-buttons:before,.rst-footer-buttons:after{display:table;content:""}.rst-footer-buttons:after{clear:both}
-
+.rst-footer-buttons {
+    padding-top: 4%;
+}
 .float-right {
     float: right;
 }
