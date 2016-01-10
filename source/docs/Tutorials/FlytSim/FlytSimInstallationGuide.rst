@@ -30,16 +30,22 @@ To install FlytSim binaries,
    :language: bash
    :tab-width: 4
 
-* Make the file executable::
+* Make the file executable.
+
+.. code-block:: bash
 
 		$ chmod +x <path to install script>/flytsim_install.sh
 
-* Install FlytSim by executing the install script with sudo permission::
+* Install FlytSim by executing the install script with sudo permission.
+
+.. code-block:: bash
 
 		$ sudo <path to install script>/flytsim_install.sh
 
-* Just in case you see any dependency issues cropping up in your screen while executing the install script, kindly run the following command and execute the install script again::
+* Just in case you see any dependency issues cropping up in your screen while executing the install script, kindly run the following command and execute the install script again.
   	
+.. code-block:: bash
+
   	$ sudo apt-get -f install 
 
 .. _Build FlytSim from source:
