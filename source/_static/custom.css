@@ -280,6 +280,7 @@ a .fa, a .wy-menu-vertical li span.toctree-expand, .wy-menu-vertical li a span.t
     font-size: 80%;
     text-rendering: auto;
 }
+
 .wy-menu-vertical li span.toctree-expand {
     display: block;
     float: left;
@@ -386,10 +387,4 @@ article, aside, details, figcaption, figure, footer, header, hgroup, nav, sectio
     border-top: 10px solid #343131;
     font-family: "Lato","proxima-nova","Helvetica Neue",Arial,sans-serif;
     z-index: 400;
-}
-
-.wy-grid-for-nav {
-    position: absolute;
-    width: 100%;
-    height: 100%;
 }
