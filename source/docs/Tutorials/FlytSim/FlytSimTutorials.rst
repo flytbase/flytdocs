@@ -9,7 +9,9 @@ Once you have installed **FlytSim**, you are ready to build your own apps and ru
 Launch FlytSim
 ^^^^^^^^^^^^^^
 
-To launch FlytSim, run this command in the terminal::
+To launch FlytSim, run this command in the terminal.
+
+.. code-block:: bash
 
 	$ $(rospack find core_api)/scripts/start_flytOS.sh --sitl
 
@@ -18,12 +20,12 @@ The above command would launch ROS and Gazebo. A quadrotor model-Iris will be au
 .. code-block:: bash
 
 	#To make the vehicle take off at its spot, execute this command in your terminal. 
-	rosservice call /flytpod/navigation/take_off "takeoff_alt: 2.0"
+	$ rosservice call /flytpod/navigation/take_off "takeoff_alt: 2.0"
 
 .. code-block:: bash
 
 	#To send a position setpoint to the vehicle, execute this command in your terminal.
-	rosservice call /flytpod/navigation/position_set "twist:
+	$ rosservice call /flytpod/navigation/position_set "twist:
 	header:
 	seq: 0
 	stamp: {secs: 0, nsecs: 0}
