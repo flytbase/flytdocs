@@ -124,7 +124,8 @@
           {% block body %}{% endblock %}
          </div>
         </div>
-  			<footer>
+
+  			<custom_footer>
     			{% if next or prev %}
             <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
               {% if next %}
@@ -155,8 +156,7 @@
             {%- endif %}
           </p>
           </div>
-				  <!-- {%- block extrafooter %} {% endblock %} -->
-        </footer>
+        </custom_footer>
       </div>
       </div>
     </section>
@@ -193,3 +193,6 @@
   <!-- </div> -->
 </div>
 {%- endblock %}
+
+{% block footer %}  
+{% endblock %}
