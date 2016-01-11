@@ -167,16 +167,24 @@ nav.wy-nav-side {
 ul, ol, dl {
     margin: 0px;
     padding: 0px;
-    list-style: outside none none;
 }
 
-li {
+.wy-menu-vertical li {
     list-style: outside none none;
 }
-
 .section ul li, .section ul li ul li {
     list-style: outside none disc;
     margin-left: 3%;
+}
+
+.section ol.arabic li {
+    list-style: outside none decimal;
+    margin-left: 3%;   
+}
+
+.section ol.loweralpha li {
+    list-style: outside none lower-alpha;
+    margin-left: 3%;   
 }
 
 .wy-menu-vertical li.current {
