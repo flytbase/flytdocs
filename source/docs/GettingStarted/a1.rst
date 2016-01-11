@@ -1,0 +1,186 @@
+Getting Started with Flyt
+-------------------------
+
+Introduction
+^^^^^^^^^^^^
+
+FlytPOD
+^^^^^^^
+
+Acts as the brain which controls your drone. The device consists of flight computer, navigation sensors and communication system.
+
+FlytOS
+^^^^^^
+
+Flyt Operating System. Lets you build apps that can control your drone through a set of APIs in REST, CPP and Python.
+
+FlytConsole
+^^^^^^^^^^^
+
+Web application for configuring your drone with Flyt. It also provides basic GCS.
+
+Flytkit Contents
+================
+
+The contents of FlytKit include: 
+
+* FlytPOD
+* MicroSD (Size to be decided) for logging
+* MicroSD (32 GB) preloaded with FlytOS v1.0.1
+* 2x WiFi antenna
+* External GPS-MAG module
+* Power board
+* Power wall adapter
+
+
+
+One Time Setup
+==============
+
+
+.. note:: Even though optional we recommend doing this initial personalization first time you use the device. Of Course you can revisit this whenever you want!
+
+
+.. note:: A drone is not necessary for this part of the setup.
+
+
+
+
+1. Power up the device using the wall adapter or battery. Wall adapter is provided along with the kit.
+
+
+.. warning:: Please check Input power ratings on adapter before plugging it into.
+
+
+2. Wait for a few seconds for flytPOD wifi network to appear. Use password FlytPOD.
+
+3. Once connected, go to https://flytpod:9090/flytconsole which launches FlytConsole.
+
+.. warning:: If for some reason the above link does not work, try replacing flytpod with FlytPOD's IP.
+
+4. Login using default credentials. username, password
+
+5. You can personalize your FlytPOD by setting the Namespace, Timezone, Wifi SSID, Wifi Password. For advanced settings go to advanced 		wifi setup.(tutorial)
+
+6. To proceed to next steps on integration with your drone shut down FlytPOD by pressing its power switch (shown in image) and remove 		the power cable.
+
+
+Flyting your Drone
+==================
+
+.. warning:: Make sure neither your drone nor the FlytPOD are powered before you proceed.
+
+
+
+
+Mounting and Orientation
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+* **Drone and FlytPOD Orientation:**
+
+Make sure to mount on to the Drone in such a way that the head of the FlytPOD is aligned with the heading of the drone. Following image shows various types of platforms with possible heading information.
+
+.. note:: If you want to place FlytPOD on your drone in any other fashion than shown in above diagram then you’ll have to follow extra steps during sensor calibration in flytconsole.
+
+
+
+
+* **Mount points:**
+You can use M3 screws for mounting the FlytPOD onto the Drone. Image shows the mount holes available.
+
+
+Platform specific
+^^^^^^^^^^^^^^^^^
+
+* **Multicopters:**
+
+  - According to your platform connect upto 8 motors (ESCs) to the PWM output channel.
+  
+  	Following image shows the motors numbered on various platforms according to their position. Plugin the Signal cable from the corresponding ESC in exactly the same PWM output channel. e.g. Motor 3 on your platform should be connected to PWM out 3 channel.
+
+  - Ext GPS-MAG mounting / orientation and connections:
+  
+  	External GPS-MAG can be connected to FlytPOD through the connector provided on the side. Default port to be used is GPS-MAG 1. Use of a Standoff is recommended in order to avoid interference. Make sure to mount it in such a way that drone heading and GPS-MAG board heading match.
+
+  	.. note:: If you want to place GPS-MAG board on your drone in any other fashion than shown in above diagram then you’ll have to follow extra steps during sensor calibration in flytconsole.
+
+  - Connecting VI sensor, Power board:
+  
+  	As shown in image You need to Connect Battery to the connector labelled ‘Power IN’(Not Now), ESC’s to the ‘ESC out’, Flytpod to the ‘flytpod power and ‘VI Sens’ to the slot on flytpod for VI sensor.
+
+  - RC receiver:
+    
+    RC receiver is powered through ESC output only. (if your ESC doest not give 5V output then make sure to power receiver separately).
+
+    + PPM :  PPM input from RC receiver. Channel 1 on RC port acts as PPM input when param PWM_PPM_SEL = 1 which can be changed from 			FlytConsole.
+    + PWM:  8x PWM channels available for connection to RC.Channel 1 to 8 on RC port act as PWM input when param PWM_PPM_SEL = 0. 				You can change this in FlytConsole.
+    	
+    	.. note:: By default PPM mode is enabled.
+
+    + SPEK:  Spektrum
+    + SBUS:
+  
+  		.. warning:: Before you power up your device make sure no props are attached to the motors.
+  
+* **Fixed Wing:**
+
+For information regarding fixed wings /  planes go to the following link:
+https://pixhawk.org/platforms/planes/start
+
+* For more info on various platforms and Drone-building go to:
+https://pixhawk.org/platforms/multicopters/start
+
+
+
+FlytPOD power/bring up
+^^^^^^^^^^^^^^^^^^^^^^
+
+* Power up FlytPOD using the the battery.
+* Once FlytPOD is powered , check the following:
+
+  - Expected status: RGB LED Fast flashing red light
+  - Buzzer Beeps: ? 
+  
+  .. note:: In case the device behaves differently check out the forum link…(forum)
+  
+  
+
+
+
+  		
+  		
+
+
+
+
+  		
+  		
+
+
+
+    
+    
+  
+  	
+  	
+  	
+  
+  	
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+

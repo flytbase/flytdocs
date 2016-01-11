@@ -20,17 +20,19 @@ Checkout and participate in our `forums`_ and interact with the community sharin
 
 .. _documentation:
 
+
 .. toctree::
    :maxdepth: 2
    :hidden:
    :caption: User Documentation
 	
-   docs/GettingStarted/Getting_started.rst
+   docs/GettingStarted/Getting_started_index.rst
    docs/FlytInternals/Flyt_internals.rst
    docs/API/API_reference.rst
    docs/UserAppsDevelopment/User_apps_development.rst
    docs/Tutorials/FlytSim/FlytSim.rst
    docs/FirmwareUpdate/Firmware_update.rst
+
 
 .. docs/GettingStarted/Getting_started_index.rst
 .. docs/FlytInternals/Flyt_internals_index.rst
