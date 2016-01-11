@@ -29,8 +29,17 @@ Checkout and participate in our `forums`_ and interact with the community sharin
    docs/FlytInternals/Flyt_internals.rst
    docs/API/API_reference.rst
    docs/UserAppsDevelopment/User_apps_development.rst
-   docs/Tutorials/FlytSim/FlytSim.rst
    docs/FirmwareUpdate/Firmware_update.rst
+
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+   :caption: FlytSim Documentation
+   
+   docs/Tutorials/FlytSim/FlytSim.rst
+   docs/Tutorials/FlytSim/FlytSimInstallationGuide.rst
+   docs/Tutorials/FlytSim/FlytSimTutorials.rst
+   
 
 .. docs/GettingStarted/Getting_started_index.rst
 .. docs/FlytInternals/Flyt_internals_index.rst
