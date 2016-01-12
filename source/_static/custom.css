@@ -177,12 +177,12 @@ ul, ol, dl {
     margin-left: 3%;
 }
 
-.section ol.arabic li {
+ol.arabic {
     list-style: outside none decimal;
     margin-left: 3%;   
 }
 
-.section ol.loweralpha li {
+ol.loweralpha {
     list-style: outside none lower-alpha;
     margin-left: 3%;   
 }
