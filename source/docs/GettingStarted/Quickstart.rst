@@ -121,6 +121,46 @@ Platform specific
   
 * **Fixed Wing:**
 
+.. image:: /_static/Images/Picture1.png
+	:height: 300px
+	:width: 300px
+	:align: center
+
+.. image:: /_static/Images/Picture2.png
+	:height: 300px
+	:width: 300px
+	:align: center
+
+.. image:: /_static/Images/Picture3.png
+	:height: 300px
+	:width: 300px
+	:align: center
+
+.. image:: /_static/Images/Picture4.png
+	:height: 300px
+	:width: 300px
+	:align: center
+
+.. image:: /_static/Images/Picture5.png
+	:height: 300px
+	:width: 300px
+	:align: center
+
+.. image:: /_static/Images/Picture6.png
+	:height: 300px
+	:width: 300px
+	:align: center
+
+.. image:: /_static/Images/Picture7.png
+	:height: 300px
+	:width: 300px
+	:align: center
+
+
+
+
+
+
 For information regarding fixed wings /  planes go to the following link: https://pixhawk.org/platforms/planes/start
 
 * For more info on various platforms and Drone-building go to: https://pixhawk.org/platforms/multicopters/start
@@ -148,41 +188,41 @@ FlytConsole
 
    .. note:: Before you select your frame make sure the ESC is not connected to the supply.
 
+
+
 4. Next go to Motor Config. Here you will be calibrating the ESCs and testing the motors.
 
    .. warning:: Make sure no propellers are attached to the motors before you  proceed with ESC calibration.
 
-   a) ESC calibration
+   a) ESC Calibration:
 
-      0. Not all ESC’s need range calibration. Please consult your esc user documentation before you do it. 
-      1. Also this is one time setup which is NOT required to be done again until you change one or more of your ESC’s.
-      2. Please follow the flytconsole instructions. 
-      3. We recommend using default min, max and actuator no.
+      1. Not all ESC’s need range calibration. Please consult your esc user documentation before you do it.
+      2. Also this is one time setup which is NOT required to be done again until you change one or more of your ESC’s.
+      3. Please follow the flytconsole instructions.
+      4. We recommend using default min, max and actuator no.
 
+      
+   b) The next thing to be done is Motor testing.(You need to power ESCs for this.)
+   
+      You can test the direction of rotation and order of the motors here.
+      ll the motors connected adjacent to one another must rotate in the opposite direction.
 
-Warning: Make sure no propellers are attached to the motors before you  proceed with ESC calibration.
+      To test this click on the motors shown in the image given on FlytConsole and see whether your motors rotate in the correct direction.
 
-b) The next thing to be done is Motor testing. (You need to power ESCs for this.)
-				You can test the direction of rotation and order of the motors here.
-				All the motors connected adjacent to one another must rotate in the opposite direction .
-
-				To test this click on the motors shown in the image given on FlytConsole and see whether your motors rotate in the correct direction.
-
-				.. note:: In case your motors rotate in the incorrect direction, you can swap the ESC cables and make the motors rotate in the desired direction.
-
-
+      .. note:: In case your motors rotate in the incorrect direction, you can swap the ESC cables and make the motors rotate in the desired direction.
+      
 5. Time to Calibrate your sensors and RC
 
    a) Sensor Calibration:
-   		Sensor calibration is a must before you fly the drone. You need to calibrate magnetometer everytime you change the flying field. If your autopilot orientation is not same as that of your vehicle, update AUTOPILOT_ORIETATION parameter accordingly. Similarly, if your external magnetometers’ orientation differ from FlytPOD, update EXT_MAG_ROTATION paramter.
-
-   		Please follow the steps given in FlytConsole. List of calibrations to be done.
+   
+      Sensor calibration is a must before you fly the drone. You need to calibrate magnetometer everytime you change the flying field. If your autopilot orientation is not same as that of your vehicle, update AUTOPILOT_ORIETATION parameter accordingly. Similarly, If your external magnetometers’ orientation differ from FlytPOD, update EXT_MAG_ROTATION paramter.
+      Please follow the steps given in FlytConsole. List of calibrations to be done.
 
       1. Accelerometer Calibration
       2. Gyroscope Calibration
       3. Magnetometer Calibration
       
-    Once the sensors are calibrated you can move on to RC Calibration.
+      Once the sensors are calibrated you can move on to RC Calibration.
       
    b) RC calib:
 
@@ -203,3 +243,14 @@ b) The next thing to be done is Motor testing. (You need to power ESCs for this.
 10. Before you arm make sure that the propeller position is correct i.e. Anti and Clockwise propellers are mounted on right motors.
 11. Even if you  fly in API mode have a RC pilot ready to take control in case of emergency.
 12. To know more about Using Flytconsole while flying your drone go to..(link) and learn how to get waypoints ,operate GCS ,Gain Tuning, 	 	Wifi and Calibration and Parameter settings.
+
+
+
+
+
+
+
+
+.. |br| raw:: html
+
+   <br />

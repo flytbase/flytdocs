@@ -6,7 +6,7 @@
    :hidden:
 	
    Getting_started.rst
-   a1.rst
+   Quickstart.rst
 
 
 
