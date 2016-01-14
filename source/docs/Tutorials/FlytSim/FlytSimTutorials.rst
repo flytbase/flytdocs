@@ -41,6 +41,11 @@ The above command would launch ROS and Gazebo. A quadrotor model-Iris will be au
 
 To know more about such commands, please refer to :ref:`FlytAPIs<api_reference>` for more details.	
 
+To kill this instance of FlytSim, run this command in your terminal.
+
+.. code-block:: bash
+
+	$ $(rospack find core_api)/scripts/kill_flytOS.sh
 
 Create your own custom app
 ^^^^^^^^^^^^^^^^^^^^^^^^^^

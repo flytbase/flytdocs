@@ -36,17 +36,24 @@ To install FlytSim binaries,
 
 		$ chmod +x <path to install script>/flytsim_install.sh
 
-* Install FlytSim by executing the install script with **sudo** privileges::
+* Install FlytSim by executing the install script with **sudo** privileges.
 
 .. code-block:: bash
 
 		$ sudo <path to install script>/flytsim_install.sh
 
-* Just in case you see any dependency issues cropping up in your screen while executing the install script, kindly run the following command and execute the install script again.
+* Just in case you see any dependency issues cropping up in your screen **other than that of Gazebo2** while executing the install script, kindly run the following command and execute the install script again.
   	
 .. code-block:: bash
 
   	$ sudo apt-get -f install 
+
+* If versions other than Gazebo2 is installed in your system, you might encounter dependency issue on Gazebo2. In that case, please go to the download directory and run this command in your terminal.
+
+.. code-block:: bash
+
+  	$ sudo dpkg -i --force-depends flytsim_1.0-1_amd64.deb
+  	#This command would ignore dependency related errors which might crop up while installing FlytSim.
 
 .. _Build FlytSim from source:
 
@@ -54,7 +61,6 @@ Build FlytSim from source
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Currently, efforts are being put to make FlytSim source code available in github.
-
 
 
 .. _ROS - Indigo: http://wiki.ros.org/indigo/Installation/Ubuntu
