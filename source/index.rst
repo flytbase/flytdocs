@@ -20,12 +20,13 @@ Checkout and participate in our `forums`_ and interact with the community sharin
 
 .. _documentation:
 
+
 .. toctree::
    :maxdepth: 2
    :hidden:
    :caption: FlytPOD Documentation
 	
-   docs/GettingStarted/Getting_started.rst
+   docs/GettingStarted/Getting_started_index.rst
    docs/FlytInternals/Flyt_internals.rst
 
 .. toctree::
