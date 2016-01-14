@@ -23,10 +23,16 @@ Checkout and participate in our `forums`_ and interact with the community sharin
 .. toctree::
    :maxdepth: 2
    :hidden:
-   :caption: User Documentation
+   :caption: FlytPOD Documentation
 	
    docs/GettingStarted/Getting_started.rst
    docs/FlytInternals/Flyt_internals.rst
+
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+   :caption: FlytOS Documentation
+	
    docs/API/API_reference.rst
    docs/UserAppsDevelopment/User_apps_development.rst
    docs/FirmwareUpdate/Firmware_update.rst
