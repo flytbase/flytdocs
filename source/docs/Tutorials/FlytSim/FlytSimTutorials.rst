@@ -15,7 +15,10 @@ To launch FlytSim, run this command in the terminal.
 
 	$ $(rospack find core_api)/scripts/start_flytOS.sh --sitl
 
-The above command would launch ROS and Gazebo. A quadrotor model-Iris will be automatically spawned for you to start executing your app. You can simply use FlytAPIs in your command line to do some simple maneuvers. For ex.,
+.. note:: For first time Gazebo users, Gazebo might take some time to launch. Be Patient!!!
+
+
+The above command would launch ROS and Gazebo. A quadrotor model-Iris will be automatically spawned for you to start executing your app. You can use FlytAPIs in your command line to do some simple maneuvers. For ex.,
 
 .. code-block:: bash
 
@@ -24,20 +27,22 @@ The above command would launch ROS and Gazebo. A quadrotor model-Iris will be au
 
 .. code-block:: bash
 
-	#To send a position setpoint to the vehicle, execute this command in your terminal.
-	$ rosservice call /flytpod/navigation/position_set "twist:
-	header:
-	seq: 0
-	stamp: {secs: 0, nsecs: 0}
-	frame_id: ''
-	twist:
-	linear: {x: 1.0, y: -1.0, z: -5.0}
-	angular: {x: 0.0, y: 0.0, z: 0.5}
-	tolerance: 0.5
+	#To send a position setpoint to the vehicle in **NED frame**, execute this command in your terminal.
+	rosservice call /flytpod/navigation/position_set "twist:
+	 header:
+	   seq: 0
+	   stamp: {secs: 0, nsecs: 0}
+	   frame_id: ''
+	 twist:
+	   linear: {x: 3.0, y: 1.0, z: -2.0}
+	   angular: {x: 0.0, y: 0.0, z: 0.0}
+	tolerance: 0.0
 	async: false
 	relative: false
-	yaw_valid: true
+	yaw_valid: false
 	setpoint_type: 0"
+
+.. .. caution:: Gazebo runs in ENU frame, hence the above setpoints 
 
 To know more about such commands, please refer to :ref:`FlytAPIs<api_reference>` for more details.	
 
@@ -47,6 +52,12 @@ To kill this instance of FlytSim, run this command in your terminal.
 
 	$ $(rospack find core_api)/scripts/kill_flytOS.sh
 
+Execute built-in Demo Apps
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+FlytSim package comes with Demo apps which can be 
+
+
 Create your own custom app
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -54,8 +65,6 @@ To begin with one can download
 * go to this directory
 * include library in makefile or use available makefile
 * write your code using FlytAPIs
-
-vjebviuervuie https://flytpod:port/flytconsole kvaebrkbvaebvk.
 
 
 Compile and Execute your own app

@@ -10,7 +10,9 @@ Before you can start off with installing FlytSim, make sure you fulfill all the 
 * Linux - Ubuntu 14.04
 * `ROS - Indigo`_
   
-FlytSim is based on Gazebo which comes in packaged with ROS Indigo (Gazebo 2). But if you want to upgrade your Gazebo version, follow the steps mentioned in `this`_ tutorial. 
+FlytSim is based on Gazebo2 which comes in packaged with ROS Indigo. If in case, you have an upgraded version of Gazebo, please install Gazebo2 before moving ahead in this tutorial. In future, we will add support for upgraded versions of Gazebo as well. 
+
+.. But if you want to upgrade your Gazebo version, follow the steps mentioned in `this`_ tutorial. 
 
 We have provided the following two approaches for installing FlytSim:
 
@@ -48,12 +50,7 @@ To install FlytSim binaries,
 
   	$ sudo apt-get -f install 
 
-* If versions other than Gazebo2 is installed in your system, you might encounter dependency issue on Gazebo2. In that case, please go to the download directory and run this command in your terminal.
-
-.. code-block:: bash
-
-  	$ sudo dpkg -i --force-depends flytsim_1.0-1_amd64.deb
-  	#This command would ignore dependency related errors which might crop up while installing FlytSim.
+* If versions other than Gazebo2 is installed in your system, you might encounter dependency issue on Gazebo2. In that case, please install Gazebo2 in your system, before running the install script again.
 
 .. _Build FlytSim from source:
 
