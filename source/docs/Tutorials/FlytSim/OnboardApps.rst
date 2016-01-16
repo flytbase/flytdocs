@@ -7,6 +7,7 @@ Execute built-in Demo Apps
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 FlytSim package comes with Demo apps which can be executed to do simple navigation tasks. Currently, CPP and Python based FlytAPIs are available, hence DemoApps for both CPP and Python have been provided.
+All the sample apps can be found at our `github link`_.
 
 Demo App 1
 ----------
@@ -43,7 +44,7 @@ This demo app makes the robot takeoff, move in a square trajectory of side lengt
 CPP
 """
 
- The source code of this app is located at */Flyt/FlytApps/Onboard/src/DemoApp2* and its executable *demoapp2* is at */Flyt/FlytApps/Onboard/install*. To execute this app run the following command in your terminal.
+The source code of this app is located at */Flyt/FlytApps/Onboard/src/DemoApp2* and its executable *demoapp2* is at */Flyt/FlytApps/Onboard/install*. To execute this app run the following command in your terminal.
 
 .. code-block:: bash
 
@@ -63,7 +64,7 @@ The source code *demoapp2.py* of this app is located at */Flyt/FlytApps/Onboard/
 Create your own custom app
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-To begin with one can download the above two demo apps from **github link**. Once downloaded follow the following steps to create your own app.
+To begin with one can download the above two demo apps from `github link`_. Once downloaded follow the following steps to create your own app.
 
 * Create a directory where you want to keep the source files of your onboard apps::
 	
@@ -101,3 +102,10 @@ Edit or create your own custom models
 
 * model urdf files are available in <this path>
 * users could edit or create their own model files
+
+
+
+
+
+
+.. _github link: https://github.com/navstik/flytsamples
