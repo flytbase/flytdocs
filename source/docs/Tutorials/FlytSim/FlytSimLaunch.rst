@@ -1,7 +1,9 @@
-.. _launch flytsim:
+.. _flytsim basics:
 
 FlytSim Basics
 ==============
+
+.. _launch flytsim:
 
 Launch FlytSim
 --------------

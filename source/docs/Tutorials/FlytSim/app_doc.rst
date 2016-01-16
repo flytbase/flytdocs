@@ -1,7 +1,7 @@
-.. _flytsim mobile apps:
+********************************
+Getting Started with Mobile Apps
+********************************
 
-Mobile Apps
-===========
 
 Introduction
 ============

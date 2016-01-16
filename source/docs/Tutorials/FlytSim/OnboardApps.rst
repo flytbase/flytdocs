@@ -61,51 +61,52 @@ The source code *demoapp2.py* of this app is located at */Flyt/FlytApps/Onboard/
     $ python /Flyt/FlytApps/Onboard/install/demoapp2.py 3
     # here '3' is passed as an argument, one could send any other float value. 
 
-Create your own custom app
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+Create and Compile custom app
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-To begin with one can download the above two demo apps from our `github link`_. Once downloaded follow the following steps to create your own app.
+To begin with one can download the above two demo apps from our `github link`_ under OnboardApps section. Once downloaded follow the following steps to create your own app.
 
 * Create a directory where you want to keep the source files of your onboard apps::
 	
-	mkdir <sitl_onboard_apps> 
-
+	$ mkdir <sitl_onboard_apps> 
 * Create a directory inside *<sitl_onboard_apps>* for your first app::
 	
-	mkdir <my_first_app>
-
-* Copy CMakeLists.txt from the downloaded demo app 1, and paste it inside <my_first_app>.
+	$ mkdir <my_first_app>
+* Copy CMakeLists.txt from the downloaded DemoApp1, and paste it inside <my_first_app>. **How to edit??**
 * Create your own cpp file 
 * Create a build directory to host all your build files::
 
-	mkdir <build>
-* Inside build directory, 
-* To install your app, so that your Android App could execute it, run this command in your terminal::
-
-	sudo cmake -DCOMPONENT=Runtime -P cmake_install.cmake
-
-
-Compile and Execute your own app
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-* run cmake
-* make
-* your binary will be created
-* launch FLytSim using <command>
-* execute your own script from terminal
+	$ mkdir <build>
+* Inside build directory, run the cmake command::
+  
+	$ cmake ..
+* To build your cpp file, run the make command::
+  
+  $ make
 
 
-Edit or create your own custom models
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Execute custom app
+^^^^^^^^^^^^^^^^^^
 
-.. note:: This section is for advanced users
-
-* model urdf files are available in <this path>
-* users could edit or create their own model files
-
+* After compiling your <my_first_app> your executable <my_first_app> will be created inside <build> directory.
+* If FlytSim is not launched, launch FlytSim using :ref:`this<launch flytsim>` command.
+* Execute <my_first_app> from terminal. 
 
 
+Install custom app
+^^^^^^^^^^^^^^^^^^
 
+To install your app into /Flyt/FlytApps/Onboard/install space, so that your Android/Web App could execute it, run this command in your terminal::
+
+	$ sudo cmake -DCOMPONENT=Runtime -P cmake_install.cmake
+
+.. Edit or create your own custom models
+.. ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. .. note:: This section is for advanced users
+
+.. * model urdf files are available in <this path>
+.. * users could edit or create their own model files
 
 
 .. _github link: https://github.com/navstik/flytsamples
