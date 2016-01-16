@@ -45,7 +45,9 @@ Checkout and participate in our `forums`_ and interact with the community sharin
    
    docs/Tutorials/FlytSim/FlytSim.rst
    docs/Tutorials/FlytSim/FlytSimInstallationGuide.rst
-   docs/Tutorials/FlytSim/FlytSimTutorials.rst
+   docs/Tutorials/FlytSim/FlytSimLaunch.rst
+   docs/Tutorials/FlytSim/OnboardApps.rst
+   docs/Tutorials/FlytSim/MobileApps.rst
    
 
 .. docs/GettingStarted/Getting_started_index.rst
