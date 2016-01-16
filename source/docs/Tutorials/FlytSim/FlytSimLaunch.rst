@@ -1,8 +1,10 @@
 .. _launch flytsim:
 
+FlytSim Basics
+==============
 
 Launch FlytSim
-^^^^^^^^^^^^^^
+--------------
 
 Once you have installed **FlytSim**, you are ready to build your own apps and run it out on the simulation software.
 To launch FlytSim, run this command in the terminal.
@@ -41,6 +43,9 @@ The above command would launch ROS and Gazebo. A quadrotor model-Iris will be au
 .. caution:: Gazebo runs in ENU frame, hence the above setpoints given in NED Frame would be transformed to ENU Frame by Gazebo.
 
 To know more about such commands, please refer to :ref:`FlytAPIs<api_reference>` for more details.	
+
+Kill FlytSim
+------------
 
 To kill this instance of FlytSim, run this command in your terminal.
 
