@@ -285,7 +285,7 @@ a .fa, a .wy-menu-vertical li span.toctree-expand, .wy-menu-vertical li a span.t
     font-kerning: auto;
     font-synthesis: weight style;
     font-variant: normal;
-    font-size: 80%;
+    /*font-size: 80%;*/
     text-rendering: auto;
 }
 
@@ -401,4 +401,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, nav, sectio
     font-size: 150%;
     font-weight: 700;
     font-family: "Roboto Slab","ff-tisa-web-pro","Georgia",Arial,sans-serif;
+}
+
+.rst-content .admonition-title::before {
+    margin-right: 4px;
+}
+
+.fa-exclamation-circle::before, .wy-inline-validate.wy-inline-validate-warning .wy-input-context::before, .wy-inline-validate.wy-inline-validate-info .wy-input-context::before, .rst-content .admonition-title::before {
+    content: "";
 }
