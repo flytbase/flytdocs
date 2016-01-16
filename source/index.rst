@@ -26,7 +26,8 @@ Checkout and participate in our `forums`_ and interact with the community sharin
    :hidden:
    :caption: FlytPOD Documentation
 	
-   docs/GettingStarted/Getting_started_index.rst
+.. docs/GettingStarted/Getting_started_index.rst
+
    docs/FlytInternals/Flyt_internals.rst
 
 .. toctree::
