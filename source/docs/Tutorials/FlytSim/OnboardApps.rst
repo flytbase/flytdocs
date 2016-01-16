@@ -21,7 +21,7 @@ The source code of this app is located at */Flyt/FlytApps/Onboard/src/DemoApp1* 
 
 .. code-block:: bash
 
-    $ ./Flyt/FlytApps/Onboard/install/demoapp1 
+    $ /Flyt/FlytApps/Onboard/install/demoapp1 
 
 Python
 """"""
@@ -48,7 +48,7 @@ The source code of this app is located at */Flyt/FlytApps/Onboard/src/DemoApp2* 
 
 .. code-block:: bash
 
-    $ ./Flyt/FlytApps/Onboard/install/demoapp2 3
+    $ /Flyt/FlytApps/Onboard/install/demoapp2 3
     # here '3' is passed as an argument, one could send any other float value.
 
 Python
@@ -64,7 +64,7 @@ The source code *demoapp2.py* of this app is located at */Flyt/FlytApps/Onboard/
 Create your own custom app
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-To begin with one can download the above two demo apps from `github link`_. Once downloaded follow the following steps to create your own app.
+To begin with one can download the above two demo apps from our `github link`_. Once downloaded follow the following steps to create your own app.
 
 * Create a directory where you want to keep the source files of your onboard apps::
 	
