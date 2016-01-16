@@ -20,14 +20,16 @@ Checkout and participate in our `forums`_ and interact with the community sharin
 
 .. _documentation:
 
-
 .. toctree::
    :maxdepth: 2
    :hidden:
-   :caption: FlytPOD Documentation
-	
-   docs/GettingStarted/Getting_started.rst
-   docs/FlytInternals/Flyt_internals.rst
+   :caption: FlytSim Documentation
+   
+   docs/Tutorials/FlytSim/FlytSim.rst
+   docs/Tutorials/FlytSim/FlytSimInstallationGuide.rst
+   docs/Tutorials/FlytSim/FlytSimLaunch.rst
+   docs/Tutorials/FlytSim/OnboardApps.rst
+   docs/Tutorials/FlytSim/MobileApps.rst
 
 .. toctree::
    :maxdepth: 2
@@ -41,13 +43,11 @@ Checkout and participate in our `forums`_ and interact with the community sharin
 .. toctree::
    :maxdepth: 2
    :hidden:
-   :caption: FlytSim Documentation
-   
-   docs/Tutorials/FlytSim/FlytSim.rst
-   docs/Tutorials/FlytSim/FlytSimInstallationGuide.rst
-   docs/Tutorials/FlytSim/FlytSimLaunch.rst
-   docs/Tutorials/FlytSim/OnboardApps.rst
-   docs/Tutorials/FlytSim/MobileApps.rst
+   :caption: FlytPOD Documentation
+	
+   docs/GettingStarted/Getting_started.rst
+   docs/FlytInternals/Flyt_internals.rst
+
    
 
 .. docs/GettingStarted/Getting_started_index.rst
