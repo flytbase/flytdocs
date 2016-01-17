@@ -5,10 +5,14 @@
 FlytAPI
 =======
 
+This document is the FlytAPI reference for FlytOS/FlytSim.
+
 .. _list-of-APIs:
 
 List of APIs
 ------------
+
+At first, we would list out all the available FlytAPIs. 
 
 Navigation APIs
 ^^^^^^^^^^^^^^^
@@ -20,46 +24,30 @@ Commands
 
 These are the list of available APIs for sending commands to the vehicle.
 
-Basic
-+++++
-
 * `Arm`_
 * Disarm
 * Takeoff
 * Land
-
-
-Intermediary
-++++++++++++
-
 * Position Hold/Loiter/Hover
 * Position Setpoint
 * Velocity Setpoint
-* Waypoints
+* Attitude Setpoint
+* Waypoint Handling
 
   - Send List
   - Get List 
   - Clear List
   - Jump to specific waypoint number
   - Pause
-  - Execute/Resume                
+  - Execute/Resume               
 
-Advanced
-++++++++
-
-* Attitude Setpoint
 * Execute Onboard CPP/Python Script
-* User mode name set - deprecated 
-
 
 
 Access Telemetry Data
 """""""""""""""""""""
 
 These are the list of available APIs for accessing telemetry data from the vehicle.
-
-Basic
-+++++
 
 * Attitude
 
@@ -71,56 +59,70 @@ Basic
   - Local NED Frame
   - Global LLA Frame
 
-Intermediary
-++++++++++++
+.. * Vehicle Status
 
-* Vehicle Status
-
-  
-Advanced
-++++++++
-
-* Battery Status
+.. * Battery Status
  
 
 Parameter Handling APIs
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-* /get_global_namespace
-* /global_namespace/param/param_create
-* /global_namespace/param/param_delete
-* /global_namespace/param/param_get
-* /global_namespace/param/param_get_all
-* /global_namespace/param/param_reset
-* /global_namespace/param/param_save
-* /global_namespace/param/param_load
-* /global_namespace/param/param_set
+These APIs help you in tweaking system parameters.
+This FlytAPI documentation is under construction!!!
+
+.. * /get_global_namespace
+.. * /global_namespace/param/param_create
+.. * /global_namespace/param/param_delete
+.. * /global_namespace/param/param_get
+.. * /global_namespace/param/param_get_all
+.. * /global_namespace/param/param_reset
+.. * /global_namespace/param/param_save
+.. * /global_namespace/param/param_load
+.. * /global_namespace/param/param_set
 
 
 
 Setup APIs
 ^^^^^^^^^^
 
-* /global_namespace/setup/actuator_testing
-* /global_namespace/setup/autopilot_reboot
-* /global_namespace/setup/esc_calibration
-* /global_namespace/setup/is_authenticated
-* /global_namespace/setup/is_pkg_activated
-* /global_namespace/setup/module_calibration
+These APIs help you in setting up your vehicle.
+This FlytAPI documentation is under construction!!!
+
+.. * /global_namespace/setup/actuator_testing
+.. * /global_namespace/setup/autopilot_reboot
+.. * /global_namespace/setup/esc_calibration
+.. * /global_namespace/setup/is_authenticated
+.. * /global_namespace/setup/is_pkg_activated
+.. * /global_namespace/setup/module_calibration
 
 Vision APIs
 ^^^^^^^^^^^
 
-* /global_namespace/capture_camera
-* /global_namespace/capture_camera_stop
+These APIs provide image capture API and some image processing APIs.
+This FlytAPI documentation is under construction!!!
 
+.. * /global_namespace/capture_camera
+.. * /global_namespace/capture_camera_stop
+
+Cloud APIs
+^^^^^^^^^^
+
+These APIs makes your vehicle connect to cloud.
+This FlytAPI documentation is under construction!!!
 
 
 Navigation APIs
 ---------------
 
+Now let's talk about Navigation APIs in detail.
+FlytAPIs have been extended from ROS to CPP, Python and REST. For each of the following APIs, detailed documentation for each of the above is followed.
+
 .. _Arm:
 
-* /global_namespace/navigation/arm
+**Arm**
 
+ROS
+^^^
+
+You can call a ROS Service 
     
