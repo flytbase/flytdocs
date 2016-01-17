@@ -54,7 +54,7 @@ CPP - Code Explained
 	   :tab-width: 2
 	   :lines: 7
 
-  .. caution:: One must ensure to call takeoff() before sending any other position setpoints. takeoff() inherently calls arm(), hence calling arm() directly also arms the vehicle and responsive towards next setpoint commands.
+  .. caution:: You must ensure to call takeoff() before sending any other position setpoints. takeoff() inherently calls arm(), hence calling arm() directly also arms the vehicle and makes it responsive towards next setpoint commands.
 
 * Position Setpoints could be sent to the vehicle with (x,y,z) in metres in Local-NED Frame as argument. 
 

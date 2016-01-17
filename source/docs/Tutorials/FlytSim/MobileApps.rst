@@ -7,24 +7,24 @@ Mobile Apps
 Introduction
 ============
 
-This document deals with the instructions and step by step guide for creating Mobile Apps for your Drone. There are two ways of doing so. The conventional way is to build a native mobile app using IDEs such as Eclipse or Android Studio for Android applications. The other way of going about creating mobile apps is to make a simple HTML,CSS and JS project and convert that into a mobile app using frameworks such as Cordova and Phonegap. This allows for sharing the same codebase for creating cross-platform mobile apps.
+This document deals with the instructions and step by step guide for creating Mobile Apps for your Drone. There are two ways of doing so. The conventional way is to build a native mobile app using IDEs such as Eclipse or Android Studio for Android applications. The other way of going about creating mobile apps is to make a simple HTML, CSS and JS project and convert that into a mobile app using frameworks such as Cordova and Phonegap. This allows for sharing the same codebase for creating cross-platform mobile apps.
 
 
 Here we will delve into the second approach developing mobile apps using web technologies (HTML, CSS, JS) and Cordova engine. These apps will allow you to remotely monitor and command your drone. You will also see how to get custom data from the Drone on your app.
   
 
-The IDE that we have selected for this project is Intellij Idea. The GUI and the client side coding is done in HTML, CSS and JS using Ionic as the front end framework.
+The IDE that we have selected for this project is IntelliJ Idea. The GUI and the client side coding is done in HTML, CSS and JS using Ionic as the front end framework.
 
 
-Front end Framework:
-^^^^^^^^^^^^^^^^^^^^
+Front end Framework
+^^^^^^^^^^^^^^^^^^^
 
 Ionic is free and open source and offers a library of mobile optimized HTML, CSS and JS components, reusable and customizable UI elements and other tools for building highly interactive mobile apps. Ionic uses Cordova engine which is a mobile development framework that uses web technologies for cross platform app development. You can refer to Ionic getting started guide for further instructions and to get yourself familiar with the Ionic framework - http://ionicframework.com/getting-started. For details on Cordova, you can look at their documentation here - https://cordova.apache.org/docs/en/latest/guide/overview/
 
-IDE:
-^^^^
+IDE
+^^^
 
-The IDE that we have used here is Intellij Idea. There are many others available so feel free to use one that you’re comfortable with. Intellij Idea supports Ionic( Front end framework) and allows you to create Phonegap/Cordova projects. Since we will be using both these softwares, make sure the IDE that you use supports them. For more information on IntelliJ - https://www.jetbrains.com/idea/
+The IDE that we have used here is IntelliJ Idea. There are many others available so feel free to use one that you’re comfortable with. IntelliJ Idea supports Ionic( Front end framework) and allows you to create Phonegap/Cordova projects. Since we will be using both these softwares, make sure the IDE that you use supports them. For more information on IntelliJ - https://www.jetbrains.com/idea/
 
 
 
@@ -50,10 +50,10 @@ For a quick start, you can follow steps below to install Ionic and cordova :
 
 
 
-#. Intellij Idea requires JDK 7 and the mobile platform SDK (covered in previous step) as prerequisites before starting mobile app development. To install JDK 7 go to the following link: 
+#. IntelliJ Idea requires JDK 7 and the mobile platform SDK (covered in previous step) as prerequisites before starting mobile app development. To install JDK 7 go to the following link: 
    http://docs.oracle.com/javase/7/docs/webnotes/install/index.html
 
-#. Go to the link given below to download and install Intellij Idea on your system.                                                      https://www.jetbrains.com/idea/download
+#. Go to the link given below to download and install IntelliJ Idea on your system.                                                      https://www.jetbrains.com/idea/download
 
 
 
@@ -68,7 +68,7 @@ Once all components are setup, you can begin app development by creating a new p
 Steps to Create New Project:
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-#. On launching Intellij Idea start wizard for creating new project.
+#. On launching IntelliJ Idea start wizard for creating new project.
 #. Select Static Web in the pop up.
 #. Then select PhoneGap/Cordova App and click on next.
 #. Fill up details of your project viz Project Name, Project Location and Cordova Location. Click on Finish.
@@ -123,7 +123,7 @@ Follow the steps given below to develop the Android application for your drone:
 **Button to Execute Script:**
 
 
-1) Create a new project in Intellij Idea and import the necessary Ionic files by following the steps mentioned earlier in this document.
+1) Create a new project in IntelliJ Idea and import the necessary Ionic files by following the steps mentioned earlier in this document.
 2) Here we create a simple button using the Ionic component ‘Button’. The html code for which is as follows:
 
 .. code-block:: HTML
