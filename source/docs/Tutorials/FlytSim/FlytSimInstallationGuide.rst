@@ -28,27 +28,27 @@ To install FlytSim binaries,
 
 * Go to the `FlytSim download`_ page. Download the FlytSimv1.0.zip file. Once downloaded, unzip the file to find *flytsim_1.0-1_amd64.deb* which is the FlytSim debian paclkage and *flytsim_install.sh*, an install script. Alternatively, you can create your own install script by copying the following lines.
 
-.. literalinclude:: flytsim_install.sh
-   :language: bash
-   :tab-width: 4
+  .. literalinclude:: include/flytsim_install.sh
+	   :language: bash
+	   :tab-width: 4
 
 * Make the install script executable.
 
-.. code-block:: bash
+  .. code-block:: bash
 
-		$ chmod +x <path to install script>/flytsim_install.sh
+			$ chmod +x <path to install script>/flytsim_install.sh
 
 * Install FlytSim by executing the install script with **sudo** privileges.
 
-.. code-block:: bash
+  .. code-block:: bash
 
-		$ sudo <path to install script>/flytsim_install.sh
+			$ sudo <path to install script>/flytsim_install.sh
 
 * Just in case you see any dependency issues cropping up in your screen **other than that of Gazebo2** while executing the install script, kindly run the following command and execute the install script again.
   	
-.. code-block:: bash
+  .. code-block:: bash
 
-  	$ sudo apt-get -f install 
+	  	$ sudo apt-get -f install 
 
 * If versions other than Gazebo2 is installed in your system, you might encounter dependency issue for Gazebo2. We are working to provide support for higher versions of Gazebo as well. Till then, please install Gazebo2 in your system, before running the install script again. 
 
@@ -62,5 +62,4 @@ Currently, efforts are being put to make FlytSim source code available in github
 
 .. _ROS - Indigo: http://wiki.ros.org/indigo/Installation/Ubuntu
 .. _this: https://github.com/ethz-asl/rotors_simulator/wiki/Gazebo-and-Gazebo-Ros-Installation
-.. _FlytSim install script: https://
 .. _FlytSim Download: http://flytbase.com/flytsim/
