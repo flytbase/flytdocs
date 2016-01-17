@@ -147,7 +147,7 @@ The source code *demoapp2.py* of this app is located at */Flyt/FlytApps/Onboard/
 .. code-block:: bash
 
     $ python /Flyt/FlytApps/Onboard/install/demoapp2.py 3
-    # here '3' is passed as an argument, one could send any other integer value. 
+    # here '3' is passed as an argument, one could send any other float value. 
 
 Python - Code
 """""""""""""

@@ -115,14 +115,19 @@ Navigation APIs
 ---------------
 
 Now let's talk about Navigation APIs in detail.
-FlytAPIs have been extended from ROS to CPP, Python and REST. For each of the following APIs, detailed documentation for each of the above is followed.
+FlytAPIs have been extended from ROS to CPP, Python, REST and websocket. For each of the following APIs, detailed documentation for each of the above is followed.
 
 .. _Arm:
 
 **Arm**
 
+This API arms the vehicle, passes controller outputs to the mixer.
+
 ROS
 ^^^
 
-You can call a ROS Service 
-    
+**Arm** is a ROS Service call with service name "/flytsim/navigation/arm".
+
+CPP
+^^^
+
