@@ -6,8 +6,8 @@ import argparse
 nav = api.navigation() # instance of flyt navigation class
 
 ## parsing command line arguments
-parser = argparse.ArgumentParser(description='Process some integers.')
-parser.add_argument('side', metavar='side_length', type=int, help='side length of the square')
+parser = argparse.ArgumentParser(description='Process a float value.')
+parser.add_argument('side', metavar='side_length', type=float, help='side length of the square')
 args = parser.parse_args()
 
 ## lets fly 

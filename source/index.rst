@@ -36,6 +36,7 @@ Checkout and participate in our `forums`_ and interact with the community sharin
    :hidden:
    :caption: FlytOS Documentation
 	
+   docs/API/FlytOS.rst
    docs/API/API_reference.rst
    docs/UserAppsDevelopment/User_apps_development.rst
    docs/FirmwareUpdate/Firmware_update.rst
