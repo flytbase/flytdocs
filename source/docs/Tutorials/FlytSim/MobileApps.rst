@@ -35,13 +35,13 @@ Development Environment Setup
 For a quick start, you can follow steps below to install Ionic and cordova :
 
 
-.. note:: Before installing ionic/cordova you will have to install node.js
 
 
-#. Please install Node.js 4 (Node 5 does not work at the moment with Ionic). To install node.js go to the link given below: 
-   https://nodejs.org/en
 
-#. To install the latest Ionic and Cordova Use the following command:
+#. Please install Node.js v4 (Node.js v5 does not work at the moment with Ionic). To install node.js go to the link given below: 
+   https://nodejs.org/en/download/
+
+#. To install the latest Ionic and Cordova use the following command:
    $ npm install -g cordova ionic
 
 #. Follow the Android and iOS platform guides to install required platform dependencies (SDKs).
@@ -50,7 +50,7 @@ For a quick start, you can follow steps below to install Ionic and cordova :
 
 
 
-#. IntelliJ requires JDK and the mobile platform SDK (covered in previous step) as prerequisites before starting mobile app delopment.   
+#. Intellij Idea requires JDK 7 and the mobile platform SDK (covered in previous step) as prerequisites before starting mobile app development. To install JDK 7 go to the following link: 
    http://docs.oracle.com/javase/7/docs/webnotes/install/index.html
 
 #. Go to the link given below to download and install Intellij Idea on your system.                                                      https://www.jetbrains.com/idea/download
@@ -80,7 +80,7 @@ The front end of the app is developed in HTML, CSS, JS using the Ionic component
 
 To use these components in your app, the Ionic libraries have to be included in your HTML files. Here is a list of Ionic files that have to be included:
 
-#. ionic .css
+#. ionic.css
 #. ionic.min.css
 #. ionic.bundle.js
 #. ionic.bundle.min.js
