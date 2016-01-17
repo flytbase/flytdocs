@@ -410,3 +410,29 @@ article, aside, details, figcaption, figure, footer, header, hgroup, nav, sectio
 .fa-exclamation-circle::before, .wy-inline-validate.wy-inline-validate-warning .wy-input-context::before, .wy-inline-validate.wy-inline-validate-info .wy-input-context::before, .rst-content .admonition-title::before {
     content: "";
 }
+
+.wy-alert-title, .rst-content .admonition-title {
+    font-weight: bold;
+    display: block;
+    margin-top: -7px !important;
+    color: #FFF;
+    margin-left: -7px !important;
+    margin-right: -7px;
+    padding: 3px 8px;
+}
+
+.rst-content .alert-info .admonition-title {
+    background: #6AB0DE none repeat scroll 0% 0%;
+}
+.rst-content .alert-warning .admonition-title{
+    background: #F0B37E none repeat scroll 0% 0%;
+}
+.rst-content .alert-error .admonition-title{
+    background: #CA5B59 none repeat scroll 0% 0%;
+}
+.rst-content .tip, .rst-content .hint {
+    background: #DBFAF4 none repeat scroll 0% 0%;
+}
+.rst-content .tip .admonition-title, .rst-content .hint .admonition-title, .tip .alert .alert-info, .hint .alert .alert-info{
+    background: #1ABC9C none repeat scroll 0% 0%;
+}
