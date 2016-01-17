@@ -29,19 +29,19 @@ The IDE that we have used here is Intellij Idea. There are many others available
 
 
 
-DEVELOPMENT ENVIRONMENT SETUP
+Development Environment Setup
 =============================
 
 For a quick start, you can follow steps below to install Ionic and cordova :
 
 
-.. note:: Before installing ionic/cordova you will have to install node.js
 
 
-#. Please install Node.js 4 (Node 5 does not work at the moment with Ionic). To install node.js go to the link given below: 
-   https://nodejs.org/en
 
-#. To install the latest Ionic and Cordova Use the following command:
+#. Please install Node.js v4 (Node.js v5 does not work at the moment with Ionic). To install node.js go to the link given below: 
+   https://nodejs.org/en/download/
+
+#. To install the latest Ionic and Cordova use the following command:
    $ npm install -g cordova ionic
 
 #. Follow the Android and iOS platform guides to install required platform dependencies (SDKs).
@@ -50,14 +50,14 @@ For a quick start, you can follow steps below to install Ionic and cordova :
 
 
 
-#. IntelliJ requires JDK and the mobile platform SDK (covered in previous step) as prerequisites before starting mobile app delopment.   
+#. Intellij Idea requires JDK 7 and the mobile platform SDK (covered in previous step) as prerequisites before starting mobile app development. To install JDK 7 go to the following link: 
    http://docs.oracle.com/javase/7/docs/webnotes/install/index.html
 
 #. Go to the link given below to download and install Intellij Idea on your system.                                                      https://www.jetbrains.com/idea/download
 
 
 
-CREATING AND RUNNING A PROJECT
+Creating and Running a Project
 ==============================
 
 
@@ -80,7 +80,7 @@ The front end of the app is developed in HTML, CSS, JS using the Ionic component
 
 To use these components in your app, the Ionic libraries have to be included in your HTML files. Here is a list of Ionic files that have to be included:
 
-#. ionic .css
+#. ionic.css
 #. ionic.min.css
 #. ionic.bundle.js
 #. ionic.bundle.min.js
@@ -92,22 +92,22 @@ Building and Running the Project:
 
 You can build and run the app using IntelliJ in either a browser based emulator or load the app on your mobile device.
 
-* **Running in Browser:**
+**Running in Browser:**
 
-   - Go to view.
-   - Click on Open in browser option.
-   - Select the browser your system supports.
+- Go to view.
+- Click on Open in browser option.
+- Select the browser your system supports.
   
 
-* **Running in Device:**
+**Running in Device:**
 
-   - Connect mobile device to computer using a USB/uUSB cable.
-   - Select ‘Specify target’ in IntelliJ corresponding to your device (Refresh if necessary).
-   - Click on <Run> button to start building your app and to install it on the device.
+- Connect mobile device to computer using a USB/uUSB cable.
+- Select ‘Specify target’ in IntelliJ corresponding to your device (Refresh if necessary).
+- Click on <Run> button to start building your app and to install it on the device.
 
 
 
-TUTORIAL FOR DEVELOPING MOBILE APPLICATION
+Tutorial for developing Mobile Application
 ==========================================
 
 
@@ -120,143 +120,138 @@ In order to make your drone navigate in the manner mentioned above an onboard sc
 
 Follow the steps given below to develop the Android application for your drone:
 
-#. BUTTON TO EXECUTE SCRIPT:
-
-    #) Create a new project in Intellij Idea and import the necessary Ionic files by following the steps mentioned earlier in this document.
-    #) Here we create a simple button using the Ionic component ‘Button’. The html code for which is as follows:
-       
-       .. code-block:: HTML
-       
-           <button class="button button-block button-positive" id="square">
-           Execute Square
-           </button>
+**Button to Execute Script:**
 
 
-    #) This button when clicked executes the onboard script which makes the drone form a square.
-    #) The JS code that calls the onboard script is as follows:
+1) Create a new project in Intellij Idea and import the necessary Ionic files by following the steps mentioned earlier in this document.
+2) Here we create a simple button using the Ionic component ‘Button’. The html code for which is as follows:
+
+.. code-block:: HTML
+
+    <button class="button button-block button-positive" id="square">
+    Execute Square
+    </button>
        
-       .. code-block:: JS
        
-           $("#square").click(function(){
-           var msgdata={};
-           msgdata["app_name"]="app2";
-           msgdata["arguments"]="3";
-           $.ajax({
-           type: "POST",
-           dataType: "json",
-           data: JSON.stringify(msgdata),
-           url: "http://"+ip+"/ros/"+namespace+"/navigation/exec_script"
+
+
+3) This button when clicked executes the onboard script which makes the drone form a square.
+4) The JS code that calls the onboard script is as follows:
+       
+.. code-block:: JS
+       
+    $("#square").click(function(){
+    var msgdata={};
+    msgdata["app_name"]="app2";
+    msgdata["arguments"]="3";
+    $.ajax({
+    type: "POST",
+    dataType: "json",
+    data: JSON.stringify(msgdata),
+    url: "http://"+ip+"/ros/"+namespace+"/navigation/exec_script"
 
    The above mentioned code allows you to execute the onboard script with default square dimension. We now see how to use user defined square dimension to do the same.
 
 
+.. image:: /_static/Images/pic1.png
+  :height: 400px
+  :width: 250px
+  :align: center
 
 
 
-#. USER DEFINED SQUARE DIMENSION:
 
-    #) First create a text area that accepts input from the user . The input here will be the Square dimension. The default value for this is 3 meters. Use the following Ionic code for creating the input text box.
+**User defined Square dimension:**
+
+
+1) First create a text area that accepts input from the user . The input here will be the Square dimension. The default value for this is 3 meters. Use the following Ionic code for creating the input text box.
     
-       .. code-block:: HTML
+.. code-block:: HTML
        
-           <label class="item item-input">
-           <input type="text" placeholder="Enter Square Dimension" id="dimension">
-           </label>
+    <label class="item item-input">
+    <input type="text" placeholder="Enter Square Dimension" id="dimension">
+    </label>
     
      
 
 
-    #) The JS for the textbox is as follows:
+2) The JS for the textbox is as follows:
        
-       .. code-block:: JS
+.. code-block:: JS
        
-           dim = $("#dimension").val();
+    dim = $("#dimension").val();
     
     
     
-    #) On clicking the button created in step 1, the dimension set by the user is sent to the onboard script . the script is then executed and the drone forms a square of the dimension set by the user.
-   
+3) On clicking the button created in step 1, the dimension set by the user is sent to the onboard script . the script is then executed and the drone forms a square of the dimension set by the user.
 
-#. LIVE DATA STREAMING FROM DRONE:
-   
-   In this example we request location status from the drone using topic Local Position.
-
-    #) First create a list using the code given below. Ionic provides a collection of lists that can be used .
-       
-       .. code-block:: HTML
-       
-           <div class="item">
-           <div class="row">
-           <div class="col col-25 col-offset-10">X</div>
-           <div class="col col-50 col-offset-25" id="posx"></div>
-           </div>
-           </div>
-           ……….
-
-
-    #) We have also used the Ionic grid component in order to arrange  the elements of the list.
-    #) Before you can stream data the namespace and websocket have to be set . Use the code given below:
-       
-       .. code-block:: JS
-       
-           $.ajax({
-           type: "POST",
-           dataType: "json",
-           data: JSON.stringify(msgdata),
-           url: "http://"+ip+"/ros/get_global_namespace"
-
-
-    #) And for initialising websocket use the following code snippet:
-       
-       .. code-block:: JS
-       
-           var ros = new ROSLIB.Ros({
-           url : 'ws://'+ip+'/websocket'
-           });
-
-
-    #) The JS to initialize Local Position topic and subscribe to it is as follows. The data is being displayed in the HTML list:
-       
-       .. code-block:: JS
-       
-           var listenerLocalPosition = new ROSLIB.Topic({
-           ros :ros,
-           name : '/'+namespace+'/mavros/local_position/local',
-           messageType : 'geometry_msgs/TwistStamped',
-           throttle_rate: 200
-           });
-           listenerLocalPosition.subscribe(function(message) {
-           $("#posx").html(message.twist.linear.x);
-           $("#posy").html(message.twist.linear.y);
-           $("#posz").html(message.twist.linear.z);
-
-           });
-    #) 
    
    
    
-  
-  
-  
+.. image:: /_static/Images/pic2.png
+  :height: 400px
+  :width: 250px
+  :align: center
 
 
 
+**Live data streaming from drone:**
+   
+In this example we request location status from the drone using topic Local Position.
+
+1) First create a list using the code given below. Ionic provides a collection of lists that can be used .
+       
+.. code-block:: HTML
+       
+    <div class="item">
+    <div class="row">
+    <div class="col col-25 col-offset-10">X</div>
+    <div class="col col-50 col-offset-25" id="posx"></div>
+    </div>
+    </div>
+    ……….
 
 
+2) We have also used the Ionic grid component in order to arrange  the elements of the list.
+3) Before you can stream data the namespace and websocket have to be set . Use the code given below:
+       
+.. code-block:: JS
+       
+    $.ajax({
+    type: "POST",
+    dataType: "json",
+    data: JSON.stringify(msgdata),
+    url: "http://"+ip+"/ros/get_global_namespace"
 
 
-* Mobile App Building Framework:
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4) And for initialising websocket use the following code snippet:
+       
+.. code-block:: JS
+       
+    var ros = new ROSLIB.Ros({
+    url : 'ws://'+ip+'/websocket'
+    });
 
 
-Cordova is a framework for building Mobile applications using HTML CSS and JS. Intellij Idea supports Phonegap/Cordova app development. You can install Cordova on your system by following the steps given below.
+5) The JS to initialize Local Position topic and subscribe to it is as follows. The data is being displayed in the HTML list:
+       
+.. code-block:: JS
+       
+   var listenerLocalPosition = new ROSLIB.Topic({
+   ros :ros,
+   name : '/'+namespace+'/mavros/local_position/local',
+   messageType : 'geometry_msgs/TwistStamped',
+   throttle_rate: 200
+   });
+   listenerLocalPosition.subscribe(function(message) {
+   $("#posx").html(message.twist.linear.x);
+   $("#posy").html(message.twist.linear.y);
+   $("#posz").html(message.twist.linear.z);
 
-.. note:: Note: While installing Cordova from the link given below you will be asked to install node.js too . This is important for Cordova to function properly and it is also required for Ionic which we will be installing later.
-
-To download and install Cordova go to the following link:
-https://cordova.apache.org
-
-
-
-
-
+   });
+    
+   
+.. image:: /_static/Images/pic3.png
+  :height: 400px
+  :width: 250px
+  :align: center   
