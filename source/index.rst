@@ -25,29 +25,29 @@ Checkout and participate in our `forums`_ and interact with the community sharin
    :hidden:
    :caption: FlytSim Documentation
    
-   docs/Tutorials/FlytSim/FlytSim.rst
-   docs/Tutorials/FlytSim/FlytSimInstallationGuide.rst
-   docs/Tutorials/FlytSim/FlytSimLaunch.rst
-   docs/Tutorials/FlytSim/OnboardApps.rst
-   docs/Tutorials/FlytSim/MobileApps.rst
+   docs/FlytSim/FlytSim.rst
+   docs/FlytSim/FlytSimInstallationGuide.rst
+   docs/FlytSim/FlytSimLaunch.rst
+   docs/FlytSim/OnboardApps.rst
+   docs/FlytSim/MobileApps.rst
 
 .. toctree::
    :maxdepth: 2
    :hidden:
    :caption: FlytOS Documentation
 	
-   docs/API/FlytOS.rst
-   docs/API/API_reference.rst
-   docs/UserAppsDevelopment/User_apps_development.rst
-   docs/FirmwareUpdate/Firmware_update.rst
+   docs/FlytOS/FlytOS.rst
+   docs/FlytOS/ListOfAPIs.rst
+   docs/FlytOS/OnboardAPIs.rst
+   docs/FlytOS/REST_WebsocketAPIs.rst
 
-.. toctree::
-   :maxdepth: 2
-   :hidden:
-   :caption: FlytPOD Documentation
+.. .. toctree::
+..    :maxdepth: 2
+..    :hidden:
+..    :caption: FlytPOD Documentation
 	
-   docs/GettingStarted/Getting_started.rst
-   docs/FlytInternals/Flyt_internals.rst
+..    docs/GettingStarted/Getting_started.rst
+..    docs/FlytInternals/Flyt_internals.rst
 
    
 
