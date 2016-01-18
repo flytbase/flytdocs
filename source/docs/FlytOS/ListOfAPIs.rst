@@ -1,18 +1,11 @@
-.. index:: api
-
-.. _api_reference:
-
-FlytAPI
-=======
-
-This document is the FlytAPI reference for FlytOS/FlytSim.
+.. index:: api_list
 
 .. _list-of-APIs:
 
 List of APIs
 ------------
 
-At first, we would list out all the available FlytAPIs. 
+This document lists out all the available FlytAPIs.
 
 Navigation APIs
 ^^^^^^^^^^^^^^^
@@ -24,7 +17,7 @@ Commands
 
 These are the list of available APIs for sending commands to the vehicle.
 
-* `Arm`_
+* Arm (:ref:`onboard<Arm_onboard>`) (:ref:`REST<Arm_REST>`)
 * Disarm
 * Takeoff
 * Land
@@ -109,27 +102,6 @@ Cloud APIs
 
 These APIs makes your vehicle connect to cloud.
 This FlytAPI documentation is under construction!!!
-
-
-Navigation APIs
----------------
-
-Now let's talk about Navigation APIs in detail.
-FlytAPIs have been extended from ROS to CPP, Python, REST and websocket. For each of the following APIs, detailed documentation for each of the above is followed.
-
-.. _Arm:
-
-**Arm**
-
-This API arms the vehicle, passes controller outputs to the mixer.
-
-ROS
-^^^
-
-**Arm** is a ROS Service call with service name "/flytsim/navigation/arm".
-
-CPP
-^^^
 
 
 

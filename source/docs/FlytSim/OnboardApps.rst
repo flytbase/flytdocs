@@ -1,7 +1,7 @@
-.. _flytsim onboard apps:
+.. _flytsim onboard app:
 
-Onboard APPs
-============
+Onboard App
+===========
 
 Execute built-in Demo Apps
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -70,7 +70,7 @@ CPP - Code Explained
 	   :tab-width: 2
 	   :lines: 12
 
-* Please refer to :ref:`FlytAPIs<api_reference>` to get more information on the available list of APIs.
+* Please refer to :ref:`FlytAPIs<list-of-APIs>` to get more information on the available list of APIs.
 
 Python - Execution
 """"""""""""""""""
@@ -107,7 +107,7 @@ Python - Code Explained
 
 * Actual flight logic:
 
-By default position_set() is synchronous in action, i.e. your script will wait for the vehicle to reach the specified target before continuing to execute the next command. Visit :ref:`FlytAPIs<api_reference>` for more information. 
+By default position_set() is synchronous in action, i.e. your script will wait for the vehicle to reach the specified target before continuing to execute the next command. Visit :ref:`FlytAPIs<list-of-APIs>` for more information. 
 
 .. literalinclude:: include/demoapp1.py
    :language: py
