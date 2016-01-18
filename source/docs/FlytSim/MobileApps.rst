@@ -7,10 +7,10 @@ Mobile Apps
 Introduction
 ============
 
-This document deals with the instructions and step by step guide for creating Mobile Apps for your Drone. There are two ways of doing so. The conventional way is to build a native mobile app using IDEs such as Eclipse or Android Studio for Android applications. The other way of going about creating mobile apps is to make a simple HTML, CSS and JS project and convert that into a mobile app using frameworks such as Cordova and Phonegap. This allows for sharing the same codebase for creating cross-platform mobile apps.
+This document deals with the instructions and step by step guide for creating mobile apps for your Drone. There are two ways of doing so. The conventional way is to build a native mobile app using IDEs such as Eclipse or Android Studio for Android applications. The other way of going about creating mobile apps is to make a simple HTML, CSS and JS project and convert that into a mobile app using frameworks such as Cordova and Phonegap. This allows for sharing the same codebase for creating cross-platform mobile apps.
 
 
-Here we will delve into the second approach developing mobile apps using web technologies (HTML, CSS, JS) and Cordova engine. These apps will allow you to remotely monitor and command your drone. You will also see how to get custom data from the Drone on your app.
+Here we will delve into the second approach of developing mobile apps using web technologies (HTML, CSS, JS) and Cordova engine. These apps will allow you to remotely monitor and command your drone. You will also see how to get custom data from the Drone on your app.
   
 
 The IDE that we have selected for this project is IntelliJ Idea. The GUI and the client side coding is done in HTML, CSS and JS using Ionic as the front end framework.
@@ -19,12 +19,15 @@ The IDE that we have selected for this project is IntelliJ Idea. The GUI and the
 Front end Framework
 ^^^^^^^^^^^^^^^^^^^
 
-Ionic is free and open source and offers a library of mobile optimized HTML, CSS and JS components, reusable and customizable UI elements and other tools for building highly interactive mobile apps. Ionic uses Cordova engine which is a mobile development framework that uses web technologies for cross platform app development. You can refer to Ionic getting started guide for further instructions and to get yourself familiar with the Ionic framework - http://ionicframework.com/getting-started. For details on Cordova, you can look at their documentation here - https://cordova.apache.org/docs/en/latest/guide/overview/
+Ionic is free and open source and offers a library of mobile optimized HTML, CSS and JS components, reusable and customizable UI elements and other tools for building highly interactive mobile apps. Ionic uses Cordova engine which is a mobile development framework that uses web technologies for cross platform app development. You can refer to Ionic `getting started`_ guide for further instructions and to make yourself familiar with the Ionic framework. For details about Cordova, you can look at their documentation `here`_.
+
 
 IDE
 ^^^
 
-The IDE that we have used here is IntelliJ Idea. There are many others available so feel free to use one that you’re comfortable with. IntelliJ Idea supports Ionic( Front end framework) and allows you to create Phonegap/Cordova projects. Since we will be using both these softwares, make sure the IDE that you use supports them. For more information on IntelliJ - https://www.jetbrains.com/idea/
+The IDE that we have used here is IntelliJ Idea. There are many other options available so feel free to use one that you are comfortable with. IntelliJ Idea supports Ionic( Front end framework) and allows you to create Phonegap/Cordova projects. Since we will be using both these softwares, make sure the IDE that you use supports them. For more information on IntelliJ Idea `click here`_.
+
+ 
 
 
 
@@ -32,14 +35,14 @@ The IDE that we have used here is IntelliJ Idea. There are many others available
 Development Environment Setup
 =============================
 
-For a quick start, you can follow steps below to install Ionic and cordova :
+For a quick start, you can follow the steps given below to install Ionic and Cordova :
 
 
 
 
 
-#. Please install Node.js v4 (Node.js v5 does not work at the moment with Ionic). To install node.js go to the link given below: 
-   https://nodejs.org/en/download/
+#. Please install Node.js v4 (Node.js v5 does not work at the moment with Ionic). To install node.js go to this `link`_. 
+   
 
 #. To install the latest Ionic and Cordova use the following command:
    $ npm install -g cordova ionic
@@ -50,10 +53,9 @@ For a quick start, you can follow steps below to install Ionic and cordova :
 
 
 
-#. IntelliJ Idea requires JDK 7 and the mobile platform SDK (covered in previous step) as prerequisites before starting mobile app development. To install JDK 7 go to the following link: 
-   http://docs.oracle.com/javase/7/docs/webnotes/install/index.html
+#. IntelliJ Idea requires JDK 7 and the mobile platform SDK (covered in previous step) as prerequisites before starting mobile app development. To install JDK 7 go to `this link`_.
 
-#. Go to the link given below to download and install IntelliJ Idea on your system.                                                      https://www.jetbrains.com/idea/download
+#. Go to this `link here`_ to download and install IntelliJ Idea on your system.
 
 
 
@@ -62,7 +64,7 @@ Creating and Running a Project
 
 
 
-Once all components are setup, you can begin app development by creating a new project in IntelliJ.
+Once all components are setup, you can begin app development by creating a new project in IntelliJ Idea.
 
 
 Steps to Create New Project:
@@ -72,10 +74,10 @@ Steps to Create New Project:
 #. Select Static Web in the pop up.
 #. Then select PhoneGap/Cordova App and click on next.
 #. Fill up details of your project viz Project Name, Project Location and Cordova Location. Click on Finish.
-#. In the project skeleton you’ll be able to see a www folder. Put all your HTML, CSS and JS files in this folder.
+#. In the project skeleton you'll be able to see a www folder. Put all your HTML, CSS and JS files in this folder.
 
 
-The front end of the app is developed in HTML, CSS, JS using the Ionic components - http://ionicframework.com/docs/components/
+The front end of the app is developed in HTML, CSS, JS using the `Ionic components`_.
 
 
 To use these components in your app, the Ionic libraries have to be included in your HTML files. Here is a list of Ionic files that have to be included:
@@ -90,19 +92,19 @@ To use these components in your app, the Ionic libraries have to be included in 
 Building and Running the Project:
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-You can build and run the app using IntelliJ in either a browser based emulator or load the app on your mobile device.
+You can build and run the app using IntelliJ Idea in either a browser based emulator or load the app on your mobile device.
 
 **Running in Browser:**
 
 - Go to view.
-- Click on Open in browser option.
+- Click on the <Open in browser> option.
 - Select the browser your system supports.
   
 
 **Running in Device:**
 
 - Connect mobile device to computer using a USB/uUSB cable.
-- Select ‘Specify target’ in IntelliJ corresponding to your device (Refresh if necessary).
+- Select <Specify target> in IntelliJ Idea corresponding to your device (Refresh if necessary).
 - Click on <Run> button to start building your app and to install it on the device.
 
 
@@ -111,10 +113,10 @@ Tutorial for developing Mobile Application
 ==========================================
 
 
-Following is a simple demonstration of how to build an Android Application for your drone. This application allows you to send commands to your drone to form a square the dimension of which will be provided by the user. It also shows you how to receive live data from your drone.
+Following is a simple demonstration of how to build an Android application for your drone. This application allows you to send commands to your drone to form a square the dimension of which will be provided by the user. It also shows you how to receive live data from your drone.
 
 
-In order to make your drone navigate in the manner mentioned above an onboard script is executed. The command for executing this onboard script is given by the user through the Android  application.
+In order to make your drone navigate in the manner mentioned above an on-board script is executed. The command for executing this on-board script is given by the user through the Android  application.
 
 
 
@@ -135,8 +137,8 @@ Follow the steps given below to develop the Android application for your drone:
        
 
 
-3) This button when clicked executes the onboard script which makes the drone form a square.
-4) The JS code that calls the onboard script is as follows:
+3) This button when clicked executes the on-board script which makes the drone form a square.
+4) The JS code that calls the on-board script is as follows:
        
 .. code-block:: JS
        
@@ -150,7 +152,7 @@ Follow the steps given below to develop the Android application for your drone:
     data: JSON.stringify(msgdata),
     url: "http://"+ip+"/ros/"+namespace+"/navigation/exec_script"
 
-   The above mentioned code allows you to execute the onboard script with default square dimension. We now see how to use user defined square dimension to do the same.
+   The above mentioned code allows you to execute the on-board script with default square dimension. We now see how to use user defined square dimension to do the same.
 
 
 .. image:: /_static/Images/pic1.png
@@ -183,7 +185,7 @@ Follow the steps given below to develop the Android application for your drone:
     
     
     
-3) On clicking the button created in step 1, the dimension set by the user is sent to the onboard script . the script is then executed and the drone forms a square of the dimension set by the user.
+3) On clicking the button created in step 1, the dimension set by the user is sent to the on-board script. The script is then executed and the drone forms a square of the dimension set by the user.
 
    
    
@@ -212,8 +214,8 @@ In this example we request location status from the drone using topic Local Posi
     ……….
 
 
-2) We have also used the Ionic grid component in order to arrange  the elements of the list.
-3) Before you can stream data the namespace and websocket have to be set . Use the code given below:
+2) We have also used the Ionic grid component in order to arrange the elements of the list.
+3) Before you can stream data the namespace and websocket have to be set. Use the code given below:
        
 .. code-block:: JS
        
@@ -224,7 +226,7 @@ In this example we request location status from the drone using topic Local Posi
     url: "http://"+ip+"/ros/get_global_namespace"
 
 
-4) And for initialising websocket use the following code snippet:
+4) And for initializing websocket use the following code snippet:
        
 .. code-block:: JS
        
@@ -233,7 +235,7 @@ In this example we request location status from the drone using topic Local Posi
     });
 
 
-5) The JS to initialize Local Position topic and subscribe to it is as follows. The data is being displayed in the HTML list:
+5) The JS to initialize Local Position topic and to subscribe to it is as follows. The data is being displayed in the HTML list:
        
 .. code-block:: JS
        
@@ -255,3 +257,19 @@ In this example we request location status from the drone using topic Local Posi
   :height: 400px
   :width: 250px
   :align: center   
+
+
+
+.. _getting started: http://ionicframework.com/getting-started
+
+.. _here: https://cordova.apache.org/docs/en/latest/guide/overview/
+
+.. _click here: https://www.jetbrains.com/idea/
+
+.. _link: https://nodejs.org/en/download/
+
+.. _this link: http://docs.oracle.com/javase/7/docs/webnotes/install/index.html 
+
+.. _link here: https://www.jetbrains.com/idea/download
+
+.. _Ionic components: http://ionicframework.com/docs/components/
