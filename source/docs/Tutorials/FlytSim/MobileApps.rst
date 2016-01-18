@@ -155,9 +155,14 @@ Following are the components for this application :
     data: JSON.stringify(msgdata),
     url: "http://"+ip+"/ros/"+namespace+"/navigation/exec_script"
 
-   The above mentioned code allows you to execute the on-board script with default square dimension. We now see how to use user defined square dimension to do the same.			
+   The above mentioned code allows you to execute the on-board script with default square dimension. We now see how to use user defined square dimension to do the same.
+			
+						
   			
-
+.. image:: /_static/Images/web0.png
+  :height: 400px
+  :width: 650px
+  :align: center
 
 
 
@@ -179,16 +184,16 @@ Following are the components for this application :
     </label>
        
 
+
+.. image:: /_static/Images/web1.png
+  :height: 400px
+  :width: 650px
+  :align: center
+
     
     
     
 2) On clicking the button created in step 1, the dimension set by the user is sent to the on-board script. The script is then executed and the drone forms a square of the dimension set by the user.
-
-   
-   
-   
-
-
 
 
 **Live data streaming from drone:**
@@ -251,8 +256,13 @@ In this example we stream live data of location status from the drone using topi
    $("#posz").html(message.twist.linear.z);
 
    });
-    
-   
+ 
+.. image:: /_static/Images/web2.png
+  :height: 400px
+  :width: 650px
+  :align: center
+
+
 
 
 .. note:: Please note that you will have to change the IP address in the JS file to the IP address of the device you run FlytSim on. This is required so that data can be received on any external device that you have connected.
@@ -380,7 +390,7 @@ Following are the components for this application :
 
 
 .. image:: /_static/Images/pic1.png
-  :height: 400px
+  :height: 200px
   :width: 250px
   :align: center
         
@@ -407,7 +417,7 @@ Following are the components for this application :
    
    
 .. image:: /_static/Images/pic2.png
-  :height: 400px
+  :height: 200px
   :width: 250px
   :align: center
 
