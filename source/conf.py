@@ -135,9 +135,9 @@ html_theme_options = {
     #     ("Forums", "http://forums.flytbase.com", True),
     # ],
     'navbar_links': [
-        ("Home", 'index'),
+        ("HOME", 'index'),
         ("FLYTBASE", "http://flytbase.com/", True),
-        ("Forums", "http://forums.flytbase.com", True),
+        ("FORUMS", "http://forums.flytbase.com", True),
     ],
 
     # Render the next and previous page links in navbar. (Default: true)
