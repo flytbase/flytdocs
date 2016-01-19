@@ -435,3 +435,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, nav, sectio
 .rst-content .tip .admonition-title, .rst-content .hint .admonition-title, .tip .alert .alert-info, .hint .alert .alert-info{
     background: #1ABC9C none repeat scroll 0% 0%;
 }
+
+img {
+	margin-bottom: 2em;
+	margin-top: 2em;
+}
