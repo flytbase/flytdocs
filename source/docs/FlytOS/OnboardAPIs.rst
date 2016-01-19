@@ -137,7 +137,7 @@ Python
 **TakeOff**
 ^^^^^^^^^^^
 
-This API sends takeoff command to the autopilot. 
+This API sends takeoff command to the autopilot. The API accepts *takeoff_alt* argument, which specifies the TakeOff height in meters above the current positon. It must always be a positive quantity.
 
 .. note:: This API runs in synchronous mode, which means the API call won't return unless either the provided `takeoff_alt` is achieved or timeout(30secs) called.
 
@@ -161,9 +161,9 @@ ROS
 CPP
 """
 
-.. c:function:: int Navigation::take_off(float takeoff_alt = 1.0)
+.. c:function:: int Navigation::take_off(float takeoff_alt = 5.0)
 	 
-   :param takeoff_alt: TakeOff Altitude in meters with default value of 1.0
+   :param takeoff_alt: TakeOff Altitude in meters with default value of 5.0
    :return: 0 if the vehicle reaches takeoff_alt before timeout=30sec, else returns 1.
 
 *Usage:*
@@ -178,9 +178,9 @@ CPP
 Python
 """"""
  
-.. py:function:: class navigation.take_off(takeoff_alt=1.0)
+.. py:function:: class navigation.take_off(takeoff_alt = 5.0)
 		
-   :param takeoff_alt: TakeOff Altitude in meters with default value of 1.0
+   :param takeoff_alt: TakeOff Altitude in meters with default value of 5.0
    :return: 0 if the vehicle reaches takeoff_alt before timeout=30sec, else returns 1.
 
 *Usage:*
