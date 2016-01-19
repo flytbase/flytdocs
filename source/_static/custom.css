@@ -449,5 +449,5 @@ code {
     font-family: "Open Sans",sans-serif !important;
 }
 code.descname, code.descclassname {
-    font-size: 1.0em;
+    font-size: 1.0em !important;
 }
