@@ -1,28 +1,29 @@
 .. _flytsim mobile apps:
 
-***********
-Mobile Apps
-***********
+*******************
+Web and Mobile Apps
+*******************
 
 Introduction
 ============
 
-This document deals with the instructions and step by step guide for creating Web and Mobile apps for your Drone. The Web apps can be developed using HTML, CSS and JS, however in the case of Mobile apps there are two ways of doing so. The conventional way is to build a mobile app using IDEs such as Eclipse or Android Studio in JAVA . The other way of going about creating mobile apps is to use the Web app created i.e a simple HTML,CSS and JS project and convert that into a mobile app using frameworks such as Cordova and Phonegap. This allows for sharing the same codebase for creating cross-platform mobile apps.
+This document deals with the instructions and step by step guide for creating Web and Mobile apps for your Drone. The Web apps can be developed using HTML, CSS and JS, however in the case of Mobile apps there are two ways of doing so. The conventional way is to build a mobile app in JAVA using IDEs such as Eclipse or Android Studio. The other way of going about creating mobile apps is to reuse the Web app code i.e a simple HTML,CSS and JS project and convert that into a mobile app using frameworks such as Cordova and Phonegap. This allows for sharing the same codebase for creating cross-platform mobile apps.
 
 
-Here we will delve into the second approach: developing mobile apps using web technologies (HTML, CSS, JS/Jquery) and Cordova engine. These apps will allow you to remotely monitor and command your drone. You will also see how to get custom data from the Drone on your app.
+Here we will delve into the second approach: developing a web app with HTML, CSS, JS/Jquery and Cordova engine. These apps will allow you to remotely monitor and command your drone. You will also see how to get custom data from the Drone on your app.
   
 
-The IDE that we have selected for this project is Intellij Idea. The GUI and the client side coding is done in HTML, CSS and JS/Jquery using Ionic as the front end framework for both Web and Mobile apps.
+The IDE that we have selected for this project is Intellij Idea. The GUI and the client side coding is done in HTML, CSS and JS/Jquery
+then reusing the code to create mobile apps using Ionic as the front end framework for both Web and Mobile apps.
 
 
 Front end Framework
 ^^^^^^^^^^^^^^^^^^^
 
-Ionic is free and open source and offers a library of mobile optimized HTML, CSS and JS components, reusable and customizable UI elements and other tools for building highly interactive mobile apps.We will be using Ionic for the front end development of Web apps as well as we will be converting this Web app into Mobile app later in this tutorial.For this Ionic uses Cordova engine which is a mobile development framework that uses web technologies for cross platform app development. You can refer to Ionic `getting started`_ guide for further instructions and to make yourself familiarized with the Ionic framework. For details about Cordova, you can look at their documentation `here`_.
+Ionic is free and open source and offers a library of mobile optimized HTML, CSS and JS components, reusable and customizable UI elements and other tools for building highly interactive mobile apps.We will be using Ionic for the front end development of Web apps since we will be converting these Web apps into Mobile apps later in this tutorial.Ionic uses Cordova engine which is a mobile development framework that uses web technologies for cross platform app development. You can refer to Ionic `getting started`_ guide for further instructions and to make yourself familiarized with the Ionic framework. For details about Cordova, you can look at their documentation `here`_.
 
 
-.. note:: There are many other Web and Mobile app front end frameworks available. You can use any framework that you are comfortable with.
+.. note:: There are many other Web and Mobile app front end frameworks available. You can use any framework that you are comfortable with. The UI of an app may have to be designed separately for web and mobile for platform specific optimizations.
 
 
 IDE
@@ -44,7 +45,7 @@ For a quick start, you can follow the steps given below to install Ionic, Cordov
 #. Please install Node.js v4 (Node.js v5 does not work at the moment with Ionic). To install node.js go to this `link`_. 
    
 
-#. To install the latest Ionic and Cordova use the following command:
+#. To install the latest Ionic and Cordova use the following command:                                                                    
    $ npm install -g cordova ionic
 
 #. Follow the Android and iOS platform guides to install required platform dependencies (SDKs).
@@ -67,7 +68,7 @@ Creating and Running a Web Application Project
 Once all components are setup, you can begin app development by creating a new project in IntelliJ IDEA.
 
 
-Steps to Create New Project for Web app:
+Steps to Create New Project for Web App:
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 #. Launch IntelliJ IDEA and click on **create new project**.
@@ -97,11 +98,16 @@ Also include eventemitter2.min.js and then roslib.js in your HTML pages. Follow 
 #. From the JS folder copy eventemitter.js and roslib.js and import them to your project in IntelliJ IDEA.
 
 
+.. note:: The source code for the sample web/mobile apps is available in github in above mentioned repository for your reference.
+
+
+
+
 
 Building and Running the Project:
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-You can build and run the app using IntelliJ IDEA in a browser. Follow the steps below to do so :
+You can build and run the app using IntelliJ IDEA in a browser. Follow the steps below to do so:
 
 
 
@@ -118,7 +124,7 @@ Sample Web Application
 ======================
 
 
-Following is a simple demonstration of how to build a Web application for your drone. This application allows you to trigger an onboard script that sends commands to your drone to trace a square of user defined dimension. We will also see how to stream live data from your drone.
+Following is a simple demonstration of how to build a Web application for your drone. This application allows you to trigger an on-board script that sends commands to your drone to trace a square of user defined dimension. We will also see how to stream live data from your drone.
 
 
 
@@ -129,7 +135,7 @@ Following are the components for this application :
 
 
 
-1) Here we create a simple button using the Ionic component ‘Button’. The html code for which is as follows:
+1) Here we create a simple button using the Ionic component ‘Button’. The HTML code for which is as follows:
 
 .. code-block:: HTML
 
@@ -205,15 +211,28 @@ In this example we stream live data of location status from the drone using topi
 .. code-block:: HTML
        
     <div class="item">
-    <div class="row">
-    <div class="col col-25 col-offset-10">X</div>
-    <div class="col col-50 col-offset-25" id="posx"></div>
+    	<div class="row">
+    		<div class="col col-20 col-offset-10">X</div>
+    		<div class="col col-65 col-offset-20" id="posx"></div>
+    	</div>
     </div>
+    <div class="item">
+    	<div class="row">
+    		<div class="col col-20 col-offset-10">Y</div>
+    		<div class="col col-65 col-offset-20" id="posy"></div>
+    	</div>
     </div>
-    ……….
+    <div class="item">
+    	<div class="row">
+    		<div class="col col-20 col-offset-10">Z</div>
+    		<div class="col col-65 col-offset-20" id="posz"></div>
+    	</div>
+    </div>
 
 
-2) We have also used the Ionic grid component in order to arrange the elements of the list.
+
+
+2) We have also used the Ionic Grid component in order to arrange the elements of the list.
 3) Before you can stream data the namespace and websocket have to be set. Use the code given below:
        
 .. code-block:: JS
@@ -257,7 +276,7 @@ In this example we stream live data of location status from the drone using topi
 
    });
  
-.. image:: /_static/Images/web2.png
+.. image:: /_static/Images/web3.png
   :height: 400px
   :width: 650px
   :align: center
@@ -357,7 +376,7 @@ Following are the components for this application :
 
 
 
-1) Here we create a simple button using the Ionic component ‘Button’. The html code for which is as follows:
+1) Here we create a simple button using the Ionic component ‘Button’. The HTML code for which is as follows:
 
 .. code-block:: HTML
 
@@ -432,15 +451,27 @@ In this example we request location status from the drone using topic Local Posi
 .. code-block:: HTML
        
     <div class="item">
-    <div class="row">
-    <div class="col col-25 col-offset-10">X</div>
-    <div class="col col-50 col-offset-25" id="posx"></div>
+    	<div class="row">
+    		<div class="col col-20 col-offset-10">X</div>
+    		<div class="col col-65 col-offset-20" id="posx"></div>
+    	</div>
     </div>
+    <div class="item">
+    	<div class="row">
+    		<div class="col col-20 col-offset-10">Y</div>
+    		<div class="col col-65 col-offset-20" id="posy"></div>
+    	</div>
     </div>
-    ……….
+    <div class="item">
+    	<div class="row">
+    		<div class="col col-20 col-offset-10">Z</div>
+    		<div class="col col-65 col-offset-20" id="posz"></div>
+    	</div>
+    </div>
+    
 
 
-2) We have also used the Ionic grid component in order to arrange the elements of the list.
+2) We have also used the Ionic Grid component in order to arrange the elements of the list.
 3) Before you can stream data the namespace and websocket have to be set. Use the code given below:
        
 .. code-block:: JS
@@ -452,7 +483,7 @@ In this example we request location status from the drone using topic Local Posi
     url: "http://"+ip+"/ros/get_global_namespace"
 
 
-4) And for initializing websocket use the following code snippet:
+4) And for initializing websocket use the following code snippet: 
        
 .. code-block:: JS
        
@@ -485,13 +516,13 @@ In this example we request location status from the drone using topic Local Posi
    });
     
    
-.. image:: /_static/Images/pic3.png
+.. image:: /_static/Images/pic4.png
   :height: 400px
   :width: 250px
   :align: center   
 
 
-.. note:: Please note that you will have to change the IP address in the JS file to the IP address of the device you run FlytSim on. This is required so that data can be recieved on any external device that you have connected.
+.. note:: Please note that you will have to change the IP address in the JS file to the IP address of the device you run FlytSim on. This is required so that data can be received on any external device that you have connected.
 
 
 
@@ -509,4 +540,4 @@ In this example we request location status from the drone using topic Local Posi
 
 .. _Ionic components: http://ionicframework.com/docs/components/
 
-.. _GitHub repository: https://github.com/navstik/flytsample
+.. _GitHub repository: https://github.com/navstik/flytsamples
