@@ -18,24 +18,22 @@ Commands
 These are the list of available APIs for sending commands to the vehicle.
 
 * Arm (:ref:`onboard<Arm_onboard>`) (:ref:`REST<Arm_REST>`)
-* Disarm
-* Takeoff
-* Land
-* Position Hold/Loiter/Hover
-* Position Setpoint
-* Velocity Setpoint
-* Attitude Setpoint
+* Disarm (:ref:`onboard<Disarm_onboard>`) (:ref:`REST<Arm_REST>`)
+* Takeoff (:ref:`onboard<TakeOff_onboard>`) (:ref:`REST<Arm_REST>`)
+* Land (:ref:`onboard<Land_onboard>`) (:ref:`REST<Arm_REST>`)
+* Position Hold/Loiter/Hover (:ref:`onboard<Arm_onboard>`) (:ref:`REST<Arm_REST>`)
+* Position Setpoint (:ref:`onboard<Arm_onboard>`) (:ref:`REST<Arm_REST>`)
+* Velocity Setpoint (:ref:`onboard<Arm_onboard>`) (:ref:`REST<Arm_REST>`)
+* Attitude Setpoint (:ref:`onboard<Arm_onboard>`) (:ref:`REST<Arm_REST>`)
+* Execute Onboard CPP/Python Script (:ref:`onboard<Arm_onboard>`) (:ref:`REST<Arm_REST>`)
 * Waypoint Handling
 
-  - Send List
-  - Get List 
-  - Clear List
-  - Jump to specific waypoint number
-  - Pause
-  - Execute/Resume               
-
-* Execute Onboard CPP/Python Script
-
+  - Send Waypoints
+  - Get Waypoints 
+  - Clear Waypoints
+  - Jump to a specific Waypoint
+  - Pause Waypoints
+  - Execute/Resume Waypoints
 
 Access Telemetry Data
 """""""""""""""""""""
@@ -44,13 +42,13 @@ These are the list of available APIs for accessing telemetry data from the vehic
 
 * Attitude
 
-  - Euler
-  - Quaternion
+  - Euler (:ref:`onboard<Arm_onboard>`) (:ref:`REST<Arm_REST>`)
+  - Quaternion (:ref:`onboard<Arm_onboard>`) (:ref:`REST<Arm_REST>`)
 
 * Position
 
-  - Local NED Frame
-  - Global LLA Frame
+  - Local NED Frame (:ref:`onboard<Arm_onboard>`) (:ref:`REST<Arm_REST>`)
+  - Global LLA Frame (:ref:`onboard<Arm_onboard>`) (:ref:`REST<Arm_REST>`)
 
 .. * Vehicle Status
 
@@ -61,17 +59,15 @@ Parameter Handling APIs
 ^^^^^^^^^^^^^^^^^^^^^^^
 
 These APIs help you in tweaking system parameters.
-This FlytAPI documentation is under construction!!!
 
-.. * /get_global_namespace
-.. * /global_namespace/param/param_create
-.. * /global_namespace/param/param_delete
-.. * /global_namespace/param/param_get
-.. * /global_namespace/param/param_get_all
-.. * /global_namespace/param/param_reset
-.. * /global_namespace/param/param_save
-.. * /global_namespace/param/param_load
-.. * /global_namespace/param/param_set
+* Get Global Namespace
+* Param Create
+* Param Set
+* Param Get
+* Param Get_all
+* Param Delete
+* Param Save
+* Param Load
 
 
 
@@ -81,12 +77,14 @@ Setup APIs
 These APIs help you in setting up your vehicle.
 This FlytAPI documentation is under construction!!!
 
-.. * /global_namespace/setup/actuator_testing
-.. * /global_namespace/setup/autopilot_reboot
-.. * /global_namespace/setup/esc_calibration
-.. * /global_namespace/setup/is_authenticated
-.. * /global_namespace/setup/is_pkg_activated
-.. * /global_namespace/setup/module_calibration
+* Sensor Calibration
+* ESC Calibration
+* RC Calibration
+* Actuator Testing
+* Autopilot Reboot
+
+.. * is_authenticated
+.. * is_pkg_activated
 
 Vision APIs
 ^^^^^^^^^^^
@@ -97,11 +95,11 @@ This FlytAPI documentation is under construction!!!
 .. * /global_namespace/capture_camera
 .. * /global_namespace/capture_camera_stop
 
-Cloud APIs
-^^^^^^^^^^
+.. Cloud APIs
+.. ^^^^^^^^^^
 
-These APIs makes your vehicle connect to cloud.
-This FlytAPI documentation is under construction!!!
+.. These APIs makes your vehicle connect to cloud.
+.. This FlytAPI documentation is under construction!!!
 
 
 

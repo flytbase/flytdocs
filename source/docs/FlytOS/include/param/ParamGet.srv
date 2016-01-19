@@ -1,0 +1,5 @@
+string param_id
+---
+core_api/ParamInfo param_info
+bool success
+string message

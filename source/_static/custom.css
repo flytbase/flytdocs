@@ -440,3 +440,14 @@ img {
 	margin-bottom: 2em;
 	margin-top: 2em;
 }
+
+code {
+    padding: 0px !important;
+    color: #E74944 !important;
+    background-color: #FFF !important;
+    border-radius: 4px !important;
+    font-family: "Open Sans",sans-serif !important;
+}
+code.descname, code.descclassname {
+    font-size: 1.0em;
+}
