@@ -51,8 +51,8 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     line-height: 1.1;
     color: #000;
 		letter-spacing: -1px !important;
-    margin-top: 41px !important;
-    margin-bottom: 20.5px !important;
+    margin-top: 1em !important;
+    margin-bottom: 0.5em !important;
 }
 
 html {
@@ -434,4 +434,20 @@ article, aside, details, figcaption, figure, footer, header, hgroup, nav, sectio
 }
 .rst-content .tip .admonition-title, .rst-content .hint .admonition-title, .tip .alert .alert-info, .hint .alert .alert-info{
     background: #1ABC9C none repeat scroll 0% 0%;
+}
+
+img {
+	margin-bottom: 2em;
+	margin-top: 2em;
+}
+
+code {
+    padding: 0px !important;
+    color: #E74944 !important;
+    background-color: #FFF !important;
+    border-radius: 4px !important;
+    font-family: "Open Sans",sans-serif !important;
+}
+code.descname, code.descclassname {
+    font-size: 1.0em;
 }

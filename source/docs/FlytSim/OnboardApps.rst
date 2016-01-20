@@ -14,6 +14,12 @@ Demo App 1
 
 This demo app makes the robot takeoff, move in a square trajectory of side length 5m and land once the entire mission is over. 
 
+Below is a demo `youtube video <https://www.youtube.com/watch?v=z36zvRfn58U&feature=youtu.be>`_ of the same app.
+
+..  youtube:: z36zvRfn58U
+    :aspect: 16:9
+    :width: 100%
+
 CPP - Execution
 """""""""""""""
 
@@ -288,11 +294,11 @@ Python
 
 To install your app into /Flyt/FlytApps/Onboard/install space, so that your Android/Web App could execute it remotely, make your python script executable::
 
-	$ sudo chmod +x <my_first_python_app>
+	$ sudo chmod +x <my_first_python_app>.py
 
 and copy this script to mentioned location::
 
-	$ sudo cp <my_first_python_app> /Flyt/FlytApps/Onboard/install/
+	$ sudo cp <my_first_python_app>.py /Flyt/FlytApps/Onboard/install/
 
 
 
@@ -306,3 +312,5 @@ and copy this script to mentioned location::
 
 
 .. _github link: https://github.com/navstik/flytsamples
+
+

@@ -1,0 +1,5 @@
+#Request : NULL
+#Response : return success=true if command is successful
+
+---
+bool success

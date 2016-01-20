@@ -31,7 +31,7 @@ on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'sphinx.ext.autodoc'
+    'sphinx.ext.autodoc','sphinxcontrib.youtube'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -131,15 +131,17 @@ html_theme_options = {
     # Note the "1" or "True" value above as the third argument to indicate
     # an arbitrary url.
     # 'navbar_links': [
-    #     ("Examples", "examples"),
-    #     ("Link", "http://example.com", True),
+    #     ("FLYTBASE", "http://flytbase.com/", True),
+    #     ("Forums", "http://forums.flytbase.com", True),
     # ],
     'navbar_links': [
-        ("Index", 'genindex'),
+        ("HOME", 'index'),
+        ("FLYTBASE", "http://flytbase.com/", True),
+        ("FORUMS", "http://forums.flytbase.com", True),
     ],
 
     # Render the next and previous page links in navbar. (Default: true)
-    'navbar_sidebarrel': True,
+    'navbar_sidebarrel': False,
 
     # Render the current pages TOC in the navbar. (Default: true)
     'navbar_pagenav': False,

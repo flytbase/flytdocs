@@ -15,10 +15,10 @@ To launch FlytSim, run this command in the terminal.
 
 	$ $(rospack find core_api)/scripts/start_flytOS.sh --sitl
 
-.. note:: For first time Gazebo users, Gazebo might take some time to launch. Be Patient!!!
+.. note:: For first time Gazebo users, Gazebo might take some time to launch. Be Patient!
 
 
-The above command would launch ROS and Gazebo. A quadrotor model-Iris will be automatically spawned for you to start executing your app. You can use FlytAPIs in your command line to do some simple maneuvers. For ex.,
+The above command would launch ROS and Gazebo. A quadrotor model-Iris will be automatically spawned for you to start executing your app. You can use FlytAPIs in your command line to do some simple maneuvers. For example,
 
 .. code-block:: bash
 

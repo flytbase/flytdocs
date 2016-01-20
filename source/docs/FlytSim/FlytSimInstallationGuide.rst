@@ -62,4 +62,4 @@ Currently, efforts are being put to make FlytSim source code available in github
 
 .. _ROS - Indigo: http://wiki.ros.org/indigo/Installation/Ubuntu
 .. _this: https://github.com/ethz-asl/rotors_simulator/wiki/Gazebo-and-Gazebo-Ros-Installation
-.. _FlytSim Download: http://flytbase.com/flytsim/
+.. _FlytSim Download: http://flytbase.com/flytos/

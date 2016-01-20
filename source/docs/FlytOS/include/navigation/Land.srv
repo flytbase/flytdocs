@@ -1,0 +1,5 @@
+#Request : NULL
+#Response : return success=true if Land command sent successfully to autopilot
+
+---
+bool success
