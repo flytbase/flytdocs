@@ -314,8 +314,8 @@ Steps to Create New Project for Mobile App:
 Follow the steps below to get create a mobile app : 
 
 #. Launch IntelliJ IDEA and click on create new project.
-#. Select Static Web in the new window on the left side.
-#. Make sure Static Web is selected on the right and click on next.
+#. Select **Static Web** in the new window on the left side.
+#. Make sure **PhoneGap/Cordova App** is selected on the right and click on next.
 #. Fill up details of your project viz. Project Name and Project Location. Click on Finish.
 #. New project opens up. You can create/edit your HTML, CSS and JS/Jquery files here.
 
@@ -331,14 +331,9 @@ To use these components in your app, the Ionic libraries have to be included in 
 #. ionic.bundle.min.js
 #. fonts file
 
-Also include eventemitter2.min.js and then roslib.js in your HTML pages. Follow the steps below to include these files in your project:
-
-#. Clone the sample project from the `GitHub repository`_.
-#. Go to the directory where the project is saved.
-#. Go to the directory flytsamples.
-#. Inside Android apps open the project folder.
-#. From the JS folder copy eventemitter.js and roslib.js and import them to your project in IntelliJ IDEA.
-
+Also include eventemitter2.min.js and then roslib.js in your HTML pages. 
+<script type="text/javascript" src="http://cdn.robotwebtools.org/EventEmitter2/current/eventemitter2.min.js"></script>
+<script type="text/javascript" src="http://cdn.robotwebtools.org/roslibjs/current/roslib.min.js"></script>
 
 
 Building and Running the Project:
@@ -364,10 +359,10 @@ Sample Mobile Application
 =========================
 
 
-Now that we have built a Web app for the drone, we can also build an Android application by converting this Web app using Cordova. This application too allows you to trigger an on-board script that sends command to your drone to trace a square and receive live data from it.
+In the earlier section we had built a Web app for the drone, we can also build an Android/iOS application by converting this Web app using Cordova. This application allows you to trigger an on-board script from a mobile that sends command to your drone to trace a square and receive live data from it.
 
 
-Just like in the Web app an on-board script is executed here as well to make the drone navigate in a particular manner. The command for executing this on-board script is given by the user through the Android  application.
+Just like in the Web app an on-board script is executed here as well to make the drone navigate in a particular manner. 
 
 
 
@@ -404,7 +399,7 @@ Following are the components for this application :
     data: JSON.stringify(msgdata),
     url: "http://"+ip+"/ros/"+namespace+"/navigation/exec_script"
 
-   The above mentioned code allows you to execute the on-board script with default square dimension. We now see how to use user defined square dimension to do the same.			
+The above mentioned code allows you to execute the on-board script with default square dimension. We now see how to use user defined square dimension to do the same.			
   			
 
 
@@ -524,7 +519,7 @@ In this example we request location status from the drone using topic Local Posi
   :align: center   
 
 
-.. note:: Please note that you will have to change the IP address in the JS file to the IP address of the device you run FlytSim on. This is required so that data can be received on any external device that you have connected.
+.. note:: Please note that you will have to change the IP address in the FlytDemo JS file to the IP address of the device you run FlytSim on. This is required so that data can be received on any external device that you have connected.
 
 
 
