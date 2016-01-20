@@ -61,7 +61,7 @@ CPP
 Python
 """"""
 
-.. py:function:: class navigation.arm()
+.. py:function:: navigation.arm()
 		
    :return: 0 if the vehicle gets ARMED, else returns 1.
 
@@ -119,7 +119,7 @@ CPP
 Python
 """"""
 
-.. py:function:: class navigation.disarm()
+.. py:function:: navigation.disarm()
 		
    :return: 0 if the vehicle gets DISARMED, else returns 1.
 
@@ -178,7 +178,7 @@ CPP
 Python
 """"""
  
-.. py:function:: class navigation.take_off(takeoff_alt = 5.0)
+.. py:function:: navigation.take_off(takeoff_alt = 5.0)
 		
    :param takeoff_alt: TakeOff Altitude in meters with default value of 5.0
    :return: 0 if the vehicle reaches takeoff_alt before timeout=30sec, else returns 1.
@@ -237,8 +237,82 @@ CPP
 Python
 """"""
  
-.. py:function:: class navigation.land()
+.. py:function:: navigation.land()
 		
+   :return: 0 if the land command is successfully sent to the vehicle, else returns 1.
+
+*Usage:*
+
+.. code-block:: Python
+
+    from flyt_python import api
+    nav = api.navigation() 
+    nav.land()
+
+.. _Position_Setpoint_onboard:
+
+**Position Setpoint**
+^^^^^^^^^^^^^^^^^^^^^
+
+This API sends position setpoint command to the autopilot. Additionally, you can send yaw setpoint (*yaw_valid flag must be set true*) to the vehicle as well. Some abstract features have been added, such as tolerance/error-radius, synchronous/asynchronous mode, sending setpoints relative to current position (*relative flag must be set true*). 
+
+.. tip:: Asynchronous mode - The API call would return as soon as the command has been sent to the autopilot, irrespective of whether the vehicle has reached the given setpoint or not.
+
+.. tip:: Synchronous mode - The API call would wait for the function to return, which happens when either the position setpoint is reached or timeout=30secs is over.
+
+ROS
+"""
+
+*Service Name:* /flytsim/navigation/position_set
+
+*Service Type:* core_api/PositionSet, below is its description
+
+.. literalinclude:: include/navigation/PositionSet.srv
+   :language: xml
+   :tab-width: 2
+
+*Usage:*
+
+.. code-block:: bash
+    
+    rosservice call /flytsim/navigation/position_set "twist:
+      header:
+        seq: 0
+        stamp: {secs: 0, nsecs: 0}
+        frame_id: ''
+      twist:
+        linear: {x: 5.0, y: 1.0, z: -2.0}
+        angular: {x: 0.0, y: 0.0, z: 0.5}
+    tolerance: 0.0
+    async: false
+    relative: false
+    yaw_valid: true
+    setpoint_type: 0"
+    
+
+CPP
+"""
+
+.. cpp:function:: int Navigation::position_set(float x, float y, float z, float yaw_setpoint, float tolerance, bool relative, bool async, bool yaw_valid)
+   
+   :param x,y,z: Position Setpoint in NED-Frame
+   :param yaw_setpoint:  
+   :return: 0 if the land command is successfully sent to the vehicle, else returns 1.
+
+*Usage:*
+
+.. code-block:: CPP
+
+    #include <core_script_bridge/navigation_bridge.h>
+
+    Navigation nav;
+    nav.land();
+
+Python
+""""""
+ 
+.. py:function:: navigation.land()
+    
    :return: 0 if the land command is successfully sent to the vehicle, else returns 1.
 
 *Usage:*

@@ -21,10 +21,10 @@ These are the list of available APIs for sending commands to the vehicle.
 * Disarm (:ref:`onboard<Disarm_onboard>`) (:ref:`REST<Arm_REST>`)
 * Takeoff (:ref:`onboard<TakeOff_onboard>`) (:ref:`REST<Arm_REST>`)
 * Land (:ref:`onboard<Land_onboard>`) (:ref:`REST<Arm_REST>`)
-* Position Hold/Loiter/Hover (:ref:`onboard<Arm_onboard>`) (:ref:`REST<Arm_REST>`)
 * Position Setpoint (:ref:`onboard<Arm_onboard>`) (:ref:`REST<Arm_REST>`)
 * Velocity Setpoint (:ref:`onboard<Arm_onboard>`) (:ref:`REST<Arm_REST>`)
 * Attitude Setpoint (:ref:`onboard<Arm_onboard>`) (:ref:`REST<Arm_REST>`)
+* Position Hold/Loiter/Hover (:ref:`onboard<Arm_onboard>`) (:ref:`REST<Arm_REST>`)
 * Execute Onboard CPP/Python Script (:ref:`onboard<Arm_onboard>`) (:ref:`REST<Arm_REST>`)
 * Waypoint Handling
 
