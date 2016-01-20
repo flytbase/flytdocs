@@ -1,1 +1,1 @@
-sphinxcontrib-youtube
+sphinxcontrib.youtube
