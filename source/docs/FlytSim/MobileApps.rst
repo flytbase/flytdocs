@@ -38,25 +38,28 @@ Development Environment Setup
 
 For a quick start, you can follow the steps given below to install Ionic, Cordova and IntelliJ IDEA :
 
-.. note:: Node.js, Ionic and IntelliJ IDEA have to be installed for the creation of both Web and Mobile apps.
 
-
-
-#. Please install Node.js v4 (Node.js v5 does not work at the moment with Ionic). To install node.js go to this `link`_. 
+#. Please install Node.js v4 (Node.js v5 does not work at the moment with Ionic). To install node.js go to this `link`_.
    
 
-#. To install the latest Ionic and Cordova use the following command:                                                                    
-   $ npm install -g cordova ionic
+#. To install the latest Ionic and Cordova use the following command:
+   ``$ npm install -g cordova ionic``
+
 
 #. Follow the Android and iOS platform guides to install required platform dependencies (SDKs).
-
-   .. note:: iOS development requires Mac OS X. iOS simulator through the Ionic CLI requires the ios-sim npm package, which can be installed with the command sudo npm -g install ios-sim.
-
+   
+   .. note:: **Follow this step for Mobile app development only.** iOS development requires Mac OS X. iOS simulator through the Ionic CLI requires the ios-sim npm package, which can be installed with the command sudo npm -g install ios-sim.
+   
+   
 
 
 #. IntelliJ IDEA also requires JDK 7. To install JDK 7 go to `this link`_.
 
 #. Go to the `link here`_ to install IntelliJ IDEA.
+
+
+
+
 
 
 
@@ -89,16 +92,12 @@ To use these components in your app, the Ionic libraries have to be included in 
 #. ionic.bundle.min.js
 #. fonts file
 
-Also include eventemitter2.min.js and then roslib.js in your HTML pages. Follow the steps below to include these files in your project:
+Also include eventemitter2.min.js and then roslib.js in your HTML pages. 
 
-#. Clone the sample project from the `GitHub repository`_.
-#. Go to the directory where the project is saved.
-#. Go to the directory flytsamples.
-#. Inside Android apps open the project folder.
-#. From the JS folder copy eventemitter.js and roslib.js and import them to your project in IntelliJ IDEA.
+.. code-block:: HTML
 
-
-.. note:: The source code for the sample web/mobile apps is available in github in above mentioned repository for your reference.
+    <script type="text/javascript" src="http://cdn.robotwebtools.org/EventEmitter2/current/eventemitter2.min.js"></script>
+    <script type="text/javascript" src="http://cdn.robotwebtools.org/roslibjs/current/roslib.min.js"></script>
 
 
 
@@ -122,6 +121,9 @@ You can build and run the app using IntelliJ IDEA in a browser. Follow the steps
 
 Sample Web Application
 ======================
+
+.. note:: The source code for the sample web/mobile apps is available in github in above mentioned repository for your reference.
+
 
 
 Following is a simple demonstration of how to build a Web application for your drone. This application allows you to trigger an on-board script that sends commands to your drone to trace a square of user defined dimension. We will also see how to stream live data from your drone.
@@ -161,7 +163,7 @@ Following are the components for this application :
     data: JSON.stringify(msgdata),
     url: "http://"+ip+"/ros/"+namespace+"/navigation/exec_script"
 
-   The above mentioned code allows you to execute the on-board script with default square dimension. We now see how to use user defined square dimension to do the same.
+The above mentioned code allows you to execute the on-board script with default square dimension. We now see how to use user defined square dimension to do the same.
 			
 						
   			
@@ -284,7 +286,7 @@ In this example we stream live data of location status from the drone using topi
 
 
 
-.. note:: Please note that you will have to change the IP address in the JS file to the IP address of the device you run FlytSim on. This is required so that data can be received on any external device that you have connected.
+.. note:: Please note that you will have to change the IP address in the FlytDemo_web JS file to the IP address of the device you run FlytSim on. This is required so that data can be received on any external device that you have connected.
 
 
 
