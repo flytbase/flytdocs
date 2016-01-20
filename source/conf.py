@@ -21,6 +21,7 @@ on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #sys.path.insert(0, os.path.abspath('.'))
+sys.path.append(os.path.abspath('sphinxcontrib'))
 # -- General configuration ------------------------------------------------
 
 # If your documentation needs a minimal Sphinx version, state it here.
@@ -30,7 +31,7 @@ on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'sphinx.ext.autodoc','sphinxcontrib.youtube'
+    'sphinx.ext.autodoc','youtube'
 ]
 #
 # Add any paths that contain templates here, relative to this directory.
