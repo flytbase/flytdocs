@@ -14,6 +14,10 @@ Demo App 1
 
 This demo app makes the robot takeoff, move in a square trajectory of side length 5m and land once the entire mission is over. 
 
+..  youtube:: z36zvRfn58U
+    :aspect: 16:9
+    :width: 100%
+
 CPP - Execution
 """""""""""""""
 
@@ -306,3 +310,5 @@ and copy this script to mentioned location::
 
 
 .. _github link: https://github.com/navstik/flytsamples
+
+

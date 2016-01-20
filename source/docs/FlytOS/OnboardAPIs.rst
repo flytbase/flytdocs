@@ -321,16 +321,6 @@ Python
 
 
 
-
-
-
-
-
-
-
-
-
-
 .. .. warning:: fwffefefe
 
 .. .. tip:: cqfeqe
@@ -348,22 +338,4 @@ Python
 .. .. caution:: ceceqevqev
 
 .. .. attention:: cqcqevcqe
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
