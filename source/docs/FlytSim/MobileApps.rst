@@ -161,7 +161,7 @@ Following are the components for this application :
     data: JSON.stringify(msgdata),
     url: "http://"+ip+"/ros/"+namespace+"/navigation/exec_script"
 
-   The above mentioned code allows you to execute the on-board script with default square dimension. We now see how to use user defined square dimension to do the same.
+The above mentioned code allows you to execute the on-board script with default square dimension. We now see how to use user defined square dimension to do the same.
 			
 						
   			
@@ -284,7 +284,7 @@ In this example we stream live data of location status from the drone using topi
 
 
 
-.. note:: Please note that you will have to change the IP address in the JS file to the IP address of the device you run FlytSim on. This is required so that data can be received on any external device that you have connected.
+.. note:: Please note that you will have to change the IP address in the FlytDemo_web JS file to the IP address of the device you run FlytSim on. This is required so that data can be received on any external device that you have connected.
 
 
 
