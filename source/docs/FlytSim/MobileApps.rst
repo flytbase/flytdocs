@@ -332,8 +332,11 @@ To use these components in your app, the Ionic libraries have to be included in 
 #. fonts file
 
 Also include eventemitter2.min.js and then roslib.js in your HTML pages. 
-<script type="text/javascript" src="http://cdn.robotwebtools.org/EventEmitter2/current/eventemitter2.min.js"></script>
-<script type="text/javascript" src="http://cdn.robotwebtools.org/roslibjs/current/roslib.min.js"></script>
+
+.. code-block:: HTML
+
+	<script type="text/javascript" src="http://cdn.robotwebtools.org/EventEmitter2/current/eventemitter2.min.js"></script>
+	<script type="text/javascript" src="http://cdn.robotwebtools.org/roslibjs/current/roslib.min.js"></script>
 
 
 Building and Running the Project:
