@@ -257,7 +257,7 @@ Python
 **Position Setpoint**
 ^^^^^^^^^^^^^^^^^^^^^
 
-This API sends position setpoint command to the autopilot. Additionally, you can send yaw setpoint (*yaw_valid flag must be set true*) to the vehicle as well. Some abstract features have been added, such as tolerance/error-radius, synchronous/asynchronous mode, sending setpoints relative to current position (*relative flag must be set true*). 
+This API sends position setpoint command to the autopilot. Additionally, you can send yaw setpoint (*yaw_valid flag must be set true*) to the vehicle as well. Some abstract features have been added, such as tolerance/acceptance-radius, synchronous/asynchronous mode, sending setpoints relative to current position (*relative flag must be set true*). 
 
 .. tip:: Asynchronous mode - The API call would return as soon as the command has been sent to the autopilot, irrespective of whether the vehicle has reached the given setpoint or not.
 
@@ -284,14 +284,104 @@ ROS
         stamp: {secs: 0, nsecs: 0}
         frame_id: ''
       twist:
-        linear: {x: 5.0, y: 1.0, z: -2.0}
+        linear: {x: 1.0, y: 3.5, z: -5.0}
         angular: {x: 0.0, y: 0.0, z: 0.5}
     tolerance: 0.0
     async: false
     relative: false
     yaw_valid: true
     setpoint_type: 0"
+
+    #sends (x,y,z)=(1.0,3.5,-5.0), yaw=0.12, tolerance=1.0m, relative=false, async=false, yaw_valid=true
+    #default value of tolerance=1.0m if left at 0
     
+
+CPP
+"""
+
+.. cpp:function:: int position_set(float x, float y, float z, float yaw_setpoint=0, float tolerance=0, bool relative=false, bool async=false, bool yaw_valid=false)
+   
+   :param x,y,z: Position Setpoint in NED-Frame
+   :param yaw_setpoint: Yaw Setpoint in radians
+   :param yaw_valid: Must be set to true, if yaw setpoint is provided
+   :param tolerance: Acceptance radius in meters, default value=1.0m
+   :param relative: If true, position setpoints relative to current position is sent
+   :param async: If true, asynchronous mode is set
+   :return: For async=true, returns 0 if the command is successfully sent to the vehicle, else returns 1. For async=false, returns 0 if the vehicle reaches given setpoint before timeout=30secs, else returns 1.
+
+*Usage:*
+
+.. code-block:: CPP
+
+    #include <core_script_bridge/navigation_bridge.h>
+
+    Navigation nav;
+    nav.position_set(1.0, 3.5, -5.0, 0.12, 5.0, false, false, true);
+    #sends (x,y,z)=(1.0,3.5,-5.0), yaw=0.12, tolerance=5.0m, relative=false, async=false, yaw_valid=true
+
+Python
+""""""
+ 
+.. py:function:: navigation.position_set(self, x, y, z, yaw=0.0, tolerance=0.0, relative=False, async=False, yaw_valid=False)
+    
+   :param x,y,z: Position Setpoint in NED-Frame
+   :param float yaw_setpoint: Yaw Setpoint in radians
+   :param bool yaw_valid: Must be set to true, if yaw setpoint is provided
+   :param float tolerance: Acceptance radius in meters, default value=1.0m
+   :param bool relative: If true, position setpoints relative to current position is sent
+   :param bool async: If true, asynchronous mode is set
+   :return: 0 if the land command is successfully sent to the vehicle, else returns 1.
+
+*Usage:*
+
+.. code-block:: Python
+
+    from flyt_python import api
+    nav = api.navigation() 
+    nav.position_set(1.0, 3.5, -5.0, 0.12, 5.0, false, false, true);
+    #sends (x,y,z)=(1.0,3.5,-5.0), yaw=0.12, tolerance=5.0m, relative=false, async=false, yaw_valid=true
+
+.. _Velocity_Setpoint_onboard:
+
+**Velocity Setpoint**
+^^^^^^^^^^^^^^^^^^^^^
+
+This API sends velocity setpoint command to the autopilot. Additionally, you can send yaw_rate setpoint (*yaw_rate_valid flag must be set true*) to the vehicle as well. Some abstract features have been added, such as tolerance/acceptance-radius, synchronous/asynchronous mode, sending setpoints relative to current velocity (*relative flag must be set true*). 
+
+.. tip:: Asynchronous mode - The API call would return as soon as the command has been sent to the autopilot, irrespective of whether the vehicle has reached the given setpoint or not.
+
+.. tip:: Synchronous mode - The API call would wait for the function to return, which happens when either the velocity setpoint is reached or timeout=30secs is over.
+
+ROS
+"""
+
+*Service Name:* /flytsim/navigation/velocity_set
+
+*Service Type:* core_api/VelocitySet, below is its description
+
+.. literalinclude:: include/navigation/VelocitySet.srv
+   :language: xml
+   :tab-width: 2
+
+*Usage:*
+
+.. code-block:: bash
+    
+		rosservice call /flytsim/navigation/velocity_set "twist:
+		  header:
+		    seq: 0
+		    stamp: {secs: 0, nsecs: 0}
+		    frame_id: ''
+		  twist:
+		    linear: {x: 0.5, y: 0.2, z: -0.1}
+		    angular: {x: 0.0, y: 0.0, z: 0.1}
+		tolerance: 0
+		async: false
+		relative: false
+		yaw_rate_valid: true" 
+
+    #sends (vx,vy,vz)=(0.5,0.2,-0.1), yaw_rate=0.1, tolerance=1.0m/s, relative=false, async=false, yaw_rate_valid=true
+    #default value of tolerance=1.0m/s if left at 0
 
 CPP
 """
@@ -322,11 +412,11 @@ Python
 .. py:function:: navigation.position_set(self, x, y, z, yaw=0.0, tolerance=0.0, relative=False, async=False, yaw_valid=False)
     
    :param x,y,z: Position Setpoint in NED-Frame
-   :param yaw_setpoint: Yaw Setpoint in radians
-   :param yaw_valid: Must be set to true, if yaw setpoint is provided
-   :param tolerance: Acceptance radius in meters
-   :param relative: If true, position setpoints relative to current position is sent
-   :param async: If true, asynchronous mode is set
+   :param float yaw_setpoint: Yaw Setpoint in radians
+   :param bool yaw_valid: Must be set to true, if yaw setpoint is provided
+   :param float tolerance: Acceptance radius in meters
+   :param bool relative: If true, position setpoints relative to current position is sent
+   :param bool async: If true, asynchronous mode is set
    :return: 0 if the land command is successfully sent to the vehicle, else returns 1.
 
 *Usage:*
@@ -335,8 +425,8 @@ Python
 
     from flyt_python import api
     nav = api.navigation() 
-    nav.land()
-
+    nav.position_set(1.0, 3.5, -5.0, 0.12, 5.0, false, false, true);
+    #sends (x,y,z)=(1.0,3.5,-5.0), yaw=0.12, tolerance=5.0m, relative=false, async=false, yaw_valid=true
 
 .. .. function:: format_exception(etype, value, tb[, limit=None])
 
@@ -352,19 +442,6 @@ Python
 
 .. rosservice call /flytsim/navigation/position_hold "{}"
 
-.. rosservice call /flytsim/navigation/position_set "twist:
-..   header:
-..     seq: 0
-..     stamp: {secs: 0, nsecs: 0}
-..     frame_id: ''
-..   twist:
-..     linear: {x: 0.0, y: 0.0, z: 0.0}
-..     angular: {x: 0.0, y: 0.0, z: 0.0}
-.. tolerance: 0.0
-.. async: false
-.. relative: false
-.. yaw_valid: false
-.. setpoint_type: 0"
 
 .. rosservice call /flytsim/navigation/velocity_set "twist:
 ..   header:
