@@ -6,7 +6,7 @@ FlytAPI - onboard
 =================
 
 
-FlytAPIs have been extended from ROS to CPP, Python, REST and Websocket. This document describes all the available onboard(ROS/CPP/Python)FlytAPIs in details.
+FlytAPIs have been extended from ROS to CPP, Python, REST and Websocket. This document describes all the available onboard(ROS/CPP/Python) FlytAPIs in details.
 
 .. caution:: This guide is under active development.
 
