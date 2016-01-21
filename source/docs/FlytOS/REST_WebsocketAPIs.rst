@@ -5,13 +5,14 @@
 FlytAPI - REST/Websocket
 ========================
 
-This document is the REST/Websocket FlytAPI reference for FlytOS/FlytSim.
+FlytAPIs have been extended from ROS to REST and Websocket. This document describes all the available REST/Websocket FlytAPIs in details.
+
+.. caution:: This guide is under active development.
 
 Navigation APIs
 ---------------
 
-Now let's talk about Navigation APIs in detail.
-FlytAPIs have been extended from ROS to CPP, Python, REST and websocket. For each of the following APIs, detailed documentation for each of the above is followed.
+These APIs allows you to have navigational control over your vehicle, and also provides vehicle telemetry data for further processing.
 
 .. _Arm_REST:
 

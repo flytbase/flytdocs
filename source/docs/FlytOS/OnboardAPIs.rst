@@ -8,6 +8,9 @@ FlytAPI - onboard
 
 FlytAPIs have been extended from ROS to CPP, Python, REST and Websocket. This document describes all the available onboard(ROS/CPP/Python)FlytAPIs in details.
 
+.. caution:: This guide is under active development.
+
+
 Navigation APIs
 ---------------
 
@@ -61,7 +64,7 @@ CPP
 Python
 """"""
 
-.. py:function:: navigation.arm()
+.. py:function:: navigation.arm(self)
 		
    :return: 0 if the vehicle gets ARMED, else returns 1.
 
@@ -119,7 +122,7 @@ CPP
 Python
 """"""
 
-.. py:function:: navigation.disarm()
+.. py:function:: navigation.disarm(self)
 		
    :return: 0 if the vehicle gets DISARMED, else returns 1.
 
@@ -178,7 +181,7 @@ CPP
 Python
 """"""
  
-.. py:function:: navigation.take_off(takeoff_alt = 5.0)
+.. py:function:: navigation.take_off(self, takeoff_alt = 5.0)
 		
    :param takeoff_alt: TakeOff Altitude in meters with default value of 5.0
    :return: 0 if the vehicle reaches takeoff_alt before timeout=30sec, else returns 1.
@@ -237,7 +240,7 @@ CPP
 Python
 """"""
  
-.. py:function:: navigation.land()
+.. py:function:: navigation.land(self)
 		
    :return: 0 if the land command is successfully sent to the vehicle, else returns 1.
 
@@ -293,11 +296,15 @@ ROS
 CPP
 """
 
-.. cpp:function:: int Navigation::position_set(float x, float y, float z, float yaw_setpoint, float tolerance, bool relative, bool async, bool yaw_valid)
+.. cpp:function:: int position_set(float x, float y, float z, float yaw_setpoint=0, float tolerance=0, bool relative=false, bool async=false, bool yaw_valid=false)
    
    :param x,y,z: Position Setpoint in NED-Frame
-   :param yaw_setpoint:  
-   :return: 0 if the land command is successfully sent to the vehicle, else returns 1.
+   :param yaw_setpoint: Yaw Setpoint in radians
+   :param yaw_valid: Must be set to true, if yaw setpoint is provided
+   :param tolerance: Acceptance radius in meters
+   :param relative: If true, position setpoints relative to current position is sent
+   :param async: If true, asynchronous mode is set
+   :return: For async=true, returns 0 if the command is successfully sent to the vehicle, else returns 1. For async=false, returns 0 if the vehicle reaches given setpoint before timeout=30secs, else returns 1.
 
 *Usage:*
 
@@ -306,13 +313,20 @@ CPP
     #include <core_script_bridge/navigation_bridge.h>
 
     Navigation nav;
-    nav.land();
+    nav.position_set(1.0, 3.5, -5.0, 0.12, 5.0, false, false, true);
+    #sends (x,y,z)=(1.0,3.5,-5.0), yaw=0.12, tolerance=5.0m, relative=false, async=false, yaw_valid=true
 
 Python
 """"""
  
-.. py:function:: navigation.land()
+.. py:function:: navigation.position_set(self, x, y, z, yaw=0.0, tolerance=0.0, relative=False, async=False, yaw_valid=False)
     
+   :param x,y,z: Position Setpoint in NED-Frame
+   :param yaw_setpoint: Yaw Setpoint in radians
+   :param yaw_valid: Must be set to true, if yaw setpoint is provided
+   :param tolerance: Acceptance radius in meters
+   :param relative: If true, position setpoints relative to current position is sent
+   :param async: If true, asynchronous mode is set
    :return: 0 if the land command is successfully sent to the vehicle, else returns 1.
 
 *Usage:*
