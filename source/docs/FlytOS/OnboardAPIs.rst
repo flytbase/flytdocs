@@ -299,7 +299,7 @@ ROS
 CPP
 """
 
-.. cpp:function:: int position_set(float x, float y, float z, float yaw_setpoint=0, float tolerance=0, bool relative=false, bool async=false, bool yaw_valid=false)
+.. cpp:function:: int Navigation::position_set(float x, float y, float z, float yaw_setpoint=0, float tolerance=0, bool relative=false, bool async=false, bool yaw_valid=false)
    
    :param x,y,z: Position Setpoint in NED-Frame
    :param yaw_setpoint: Yaw Setpoint in radians
@@ -324,7 +324,7 @@ Python
  
 .. py:function:: navigation.position_set(self, x, y, z, yaw=0.0, tolerance=0.0, relative=False, async=False, yaw_valid=False)
     
-   :param x,y,z: Position Setpoint in NED-Frame
+   :param float x,y,z: Position Setpoint in NED-Frame
    :param float yaw_setpoint: Yaw Setpoint in radians
    :param bool yaw_valid: Must be set to true, if yaw setpoint is provided
    :param float tolerance: Acceptance radius in meters, default value=1.0m
@@ -367,18 +367,18 @@ ROS
 
 .. code-block:: bash
     
-		rosservice call /flytsim/navigation/velocity_set "twist:
-		  header:
-		    seq: 0
-		    stamp: {secs: 0, nsecs: 0}
-		    frame_id: ''
-		  twist:
-		    linear: {x: 0.5, y: 0.2, z: -0.1}
-		    angular: {x: 0.0, y: 0.0, z: 0.1}
-		tolerance: 0
-		async: false
-		relative: false
-		yaw_rate_valid: true" 
+    rosservice call /flytsim/navigation/velocity_set "twist:
+      header:
+        seq: 0
+        stamp: {secs: 0, nsecs: 0}
+        frame_id: ''
+      twist:
+        linear: {x: 0.5, y: 0.2, z: -0.1}
+        angular: {x: 0.0, y: 0.0, z: 0.1}
+    tolerance: 0
+    async: false
+    relative: false
+    yaw_rate_valid: true"                   
 
     #sends (vx,vy,vz)=(0.5,0.2,-0.1), yaw_rate=0.1, tolerance=1.0m/s, relative=false, async=false, yaw_rate_valid=true
     #default value of tolerance=1.0m/s if left at 0
