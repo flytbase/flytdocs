@@ -75,6 +75,8 @@ Flyting your Drone
 Mounting and Orientation
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
+
+
 * **Drone and FlytPOD Orientation:**
 
 Make sure to mount on to the Drone in such a way that the head of the FlytPOD is aligned with the heading of the drone. Following image shows various types of platforms with possible heading information.
@@ -121,35 +123,35 @@ Platform specific
   
 * **Fixed Wing:**
 
-.. image:: /_static/Images/Picture1.png
+.. image:: /_static/Images/a.png
 	:height: 300px
 	:width: 300px
-	:align: center
+	:align: left
 
-.. image:: /_static/Images/Picture2.png
-	:height: 300px
-	:width: 300px
-	:align: center
+.. image:: /_static/Images/b.png
+	:height: 250px
+	:width: 250px
+	:align: right
 
-.. image:: /_static/Images/Picture3.png
-	:height: 300px
+.. image:: /_static/Images/c.png
+	:height: 350px
 	:width: 300px
-	:align: center
+	:align: left
 
-.. image:: /_static/Images/Picture4.png
-	:height: 300px
-	:width: 300px
-	:align: center
+.. image:: /_static/Images/d.png
+	:height: 250px
+	:width: 250px
+	:align: right
 
-.. image:: /_static/Images/Picture5.png
+.. image:: /_static/Images/e.png
 	:height: 300px
 	:width: 300px
-	:align: center
+	:align: left
 
-.. image:: /_static/Images/Picture6.png
+.. image:: /_static/Images/f.png
 	:height: 300px
 	:width: 300px
-	:align: center
+	:align: right
 
 .. image:: /_static/Images/Picture7.png
 	:height: 300px
