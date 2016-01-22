@@ -39,10 +39,10 @@ Development Environment Setup
 For a quick start, you can follow the steps given below to install Ionic, Cordova and IntelliJ IDEA :
 
 
-#. Please install Node.js v4 (Node.js v5 does not work at the moment with Ionic). To install node.js go to this `link`_.
+#. Please install Node.js v4 (Node.js v5 does not work at the moment with Ionic). To install node.js go to this `link`_. This will aslo install the node packade manager npm.
    
 
-#. To install the latest Ionic and Cordova use the following command:
+#. Using npm install the latest Ionic and Cordova:
    ``$ npm install -g cordova ionic``
 
 
@@ -53,7 +53,7 @@ For a quick start, you can follow the steps given below to install Ionic, Cordov
    
 
 
-#. IntelliJ IDEA also requires JDK 7. To install JDK 7 go to `this link`_.
+#. IntelliJ IDEA also requires JDK 1.6 or higher. To install JDK 7 go to `this link`_.
 
 #. Go to the `link here`_ to install IntelliJ IDEA.
 
