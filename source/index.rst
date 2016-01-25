@@ -36,6 +36,7 @@ Checkout and participate in our `forums`_ and interact with the community sharin
    docs/FlytSim/FlytSimLaunch.rst
    docs/FlytSim/OnboardApps.rst
    docs/FlytSim/MobileApps.rst
+   docs/FlytSim/Quickstart.rst
 
 .. toctree::
    :maxdepth: 2
