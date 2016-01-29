@@ -34,12 +34,13 @@
 .. * Power wall adapter
 
 
-*****************************
 Setup and Power Up of FlytPOD
-*****************************
+=============================
 
-Initial Configuration
-=====================
+Onboard Router Configuration
+----------------------------
+
+
 
 
 
@@ -47,16 +48,13 @@ Initial Configuration
 
 
 
-
-
-
 1. Power up the device using the provided wall adapter or battery.
 
 
 
-2. Next you will have to connect to the FlytPOD_wifi network using the password FlytPOD123. 
+2. Next you will have to connect to the FlytPOD_wifi network using the password FlytPOD123. By default, the onboard router is configured in AP mode. To reconfigure it in client mode, follow this documentation. (The documentaion is under construction).
    
-   .. note:: It may take a few seconds for the wifi network to appear. For advanced settings go to advanced wifi setup.(tutorial)
+..   .. note:: It may take a few seconds for the wifi network to appear. For advanced settings go to advanced wifi setup.(tutorial)
    
    
 
@@ -79,10 +77,13 @@ Initial Configuration
 
 
 
-
+Integrating FlytPOD with the airframe
+-------------------------------------
 
 Mounting and Orientation
-========================
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+
 
 
 
@@ -91,9 +92,23 @@ Mounting and Orientation
 
 * **Drone and FlytPOD Orientation:**
 
-FyltPOD should be mounted on the Drone in such a way that the head of the FlytPOD is aligned with the heading of the drone. Following images show various types of platforms with possible heading information.
+FlytPOD should be mounted in such a way that the forward direction of the FlytPOD is aligned with the heading of the drone.
 
-.. tip:: You can decide to give the drone a different heading. For this change the orientation parameter in the calbration tab in FlytConsole.
+.. tip:: You can choose to mount the FlytPOD in a different direction. For this, change the Autopilot Orientation in the Sensor calbration tab in FlytConsole.
+
+
+.. figure:: /_static/Images/Orientation.png
+	:align: center
+	:height: 400px
+	:width: 500px
+	
+	Orientation 
+
+
+
+
+
+
 
 
 * **Mount points:**
@@ -101,24 +116,23 @@ FyltPOD should be mounted on the Drone in such a way that the head of the FlytPO
 You can use M3 screws for mounting the FlytPOD onto the Drone. Image shows the mount holes available.
 
 .. figure:: /_static/Images/Mountholes.png
-	:height: 400px
-	:width: 600px
 	:align: center
-
+	 
 	Mount Holes
 
 
 Motor Connections
-=================
+^^^^^^^^^^^^^^^^^
+
+
 
 Multicopters
 ++++++++++++
 
  
-**According to your platform connect upto 8 motors (ESCs) to the PWM output channel:**                                     
-Following image shows the motors numbered on various platforms according to their position. Plugin the Signal cable from the corresponding ESC in exactly the same PWM output channel. e.g. Motor 3 on your platform should be connected to PWM out 3 channel.
+According to your platform connect upto 8 motors (ESCs) to the PWM output channel. Following image shows the motors numbered on various platforms according to their position. Plugin the Signal cable from the corresponding ESC in exactly the same PWM output channel. e.g. Motor 3 on your platform should be connected to PWM out 3 channel.
 
-.. image:: /_static/Images/Quad.png
+.. image:: /_static/Images/quad.png
 		:height: 450px
 		:width: 900px
 		:align: center
@@ -127,7 +141,7 @@ Following image shows the motors numbered on various platforms according to thei
 
 	
 
-.. image:: /_static/Images/Hex.png
+.. image:: /_static/Images/hex.png
 		:height: 450px
 		:width: 900px
 		:align: center
@@ -136,7 +150,7 @@ Following image shows the motors numbered on various platforms according to thei
 
 	
 
-.. image:: /_static/Images/Oct.png
+.. image:: /_static/Images/oct.png
 		:height: 450px
 		:width: 900px
 		:align: center
@@ -152,23 +166,29 @@ Click here for more information regarding `Multicopters`_.
 Fixed Wing
 ++++++++++
 
+Click here for more information regarding `Fixed wings/Planes`_.
 
 
-For information regarding fixed wings/planes go to the following `link`_ 
+
 
 
 
 VTOL
 ++++
 
-For more information regarding VTOL `click here`_.
+Click here for more information regarding `VTOL`_.
+
+
 
 
 
 .. _click here: https://pixhawk.org/platforms/vtol/start
 
+
 External GPS-MAG Mounting
-=========================
+^^^^^^^^^^^^^^^^^^^^^^^^^
+ 
+
 
 
 External GPS-MAG can be connected to FlytPOD through the connector provided on the side. Default port to be used is GPS-MAG 1. Use of a Standoff is recommended in order to avoid interference. Make sure to mount it in such a way that drone heading and GPS-MAG board heading match.
@@ -178,16 +198,12 @@ External GPS-MAG can be connected to FlytPOD through the connector provided on t
 
 
 
+Connecting VI Sensor
+^^^^^^^^^^^^^^^^^^^^
 
-.. figure:: /_static/Images/Orientation.png
-	:height: 450px
-	:width: 470px
-	:align: center
 
-	Orientation 
-	   
-**Connecting VI sensor**
-As shown in image You need to Connect Battery to the connector labelled ‘Power IN’(Not Now), ESC’s to the ‘ESC out’, Flytpod to the ‘flytpod power and ‘VI Sens’ to the slot on flytpod for VI sensor.
+
+As shown in image You need to Connect Battery to the connector labelled ‘Power IN’, ESC’s to the ‘ESC out’, Flytpod to the ‘flytpod power and ‘VI Sens’ to the slot on flytpod for VI sensor.
 
 
 .. figure:: /_static/Images/PowerModule.png
@@ -198,24 +214,24 @@ As shown in image You need to Connect Battery to the connector labelled ‘Power
 	PowerModule
 
 
+RC receiver
+^^^^^^^^^^^
 
-**RC receiver:**
-   
-   RC receiver is powered through ESC output only. (If your ESC doest not give 5V output then make sure to power receiver separately).
+RC receiver is powered through ESC output only. (If your ESC doest not give 5V output then make sure to power receiver separately).
 
 
-   a. PPM : PPM input from RC receiver. Channel 1 on RC port acts as PPM input when param PWM_PPM_SEL = 1 which can be changed from   flytconsole.
+a. PPM : PPM input from RC receiver. Channel 1 on RC port acts as PPM input when param PWM_PPM_SEL = 1 which can be changed from   flytconsole.
       
-      .. note:: By default PPM mode is enabled.
+   .. note:: By default PPM mode is enabled.
   
 
-   b. PWM: 8x PWM channels available for connection to RC.Channel 1 to 8 on RC port act as PWM input when param PWM_PPM_SEL = 0. You can change this in FlytConsole.
+b. PWM: 8x PWM channels available for connection to RC.Channel 1 to 8 on RC port act as PWM input when param PWM_PPM_SEL = 0. You can change this in FlytConsole.
    
-   c. SPEK:  Spektrum
-   
-   d. SBUS:
+c. SPEK
+
+d. SBUS
       
-      .. warning:: Before you power up your device make sure no props are attached to the motors.
+   .. warning:: Before you power up your device make sure no props are attached to the motors.
       
    
    
@@ -252,22 +268,22 @@ As shown in image You need to Connect Battery to the connector labelled ‘Power
 
 
 
-FlytPOD power/bring up
-======================
+.. FlytPOD power/bring up
+.. ======================
 
 
-* Power up FlytPOD using the the battery.
+.. * Power up FlytPOD using the the battery.
   
 
-* Once FlytPOD is powered, check the following:
+.. * Once FlytPOD is powered, check the following:
   
 
-1. Expected status: RGB LED Fast flashing red light
-2. Buzzer Beeps: ?
+.. 1. Expected status: RGB LED Fast flashing red light
+.. 2. Buzzer Beeps: ?
 
 
 
-.. note:: In case the device behaves differently check out the forum link…(forum)
+.. .. note:: In case the device behaves differently check out the forum link…(forum)
 
 
 .. FlytConsole
@@ -346,11 +362,11 @@ FlytPOD power/bring up
 
 
    
-.. _link: https://pixhawk.org/platforms/planes/start
+.. _Fixed wings/Planes: https://pixhawk.org/platforms/planes/start
 
 
    
-.. _click here: https://pixhawk.org/platforms/vtol/start
+.. _VTOL: https://pixhawk.org/platforms/vtol/start
 
 .. _Multicopters: https://pixhawk.org/platforms/multicopters/start
 

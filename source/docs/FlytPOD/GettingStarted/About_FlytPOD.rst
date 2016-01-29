@@ -1,16 +1,24 @@
 
-*************
+
+
 About FlytPOD
-*************
+=============
+
+FlytPOD acts as the brain which controls your drone. The device consists of navigation sensors, communication system, payload interfaces.
+
+
+.. image:: /_static/Images/flytpod.png
+  	:align: right
+  	:width: 400px
+  	:height: 400px
 
 
 
 
-Acts as the brain which controls your drone. The device consists of flight computer, navigation sensors and communication system.
+FlytKit Contents
+----------------
 
 
-Flytkit Contents
-================
 
 The contents of FlytKit include: 
 
@@ -21,3 +29,19 @@ The contents of FlytKit include:
 * External GPS-MAG module
 * Power board
 * Power wall adapter
+
+
+
+FlytPOD Peripherals
+-------------------
+
+
+.. image:: /_static/Images/pic1.png
+  	:align: center
+
+.. image:: /_static/Images/sidevs.png
+	:align: center
+	:height: 350px
+	:width: 1500px
+	
+
