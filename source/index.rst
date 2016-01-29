@@ -53,7 +53,8 @@ Checkout and participate in our `forums`_ and interact with the community sharin
     :hidden:
     :caption: FlytPOD Documentation
 	
-    .. docs/FlytPOD/GettingStarted/Quickstart.rst
+    docs/FlytPOD/GettingStarted/About_FlytPOD.rst
+    docs/FlytPOD/GettingStarted/Quickstart.rst
 
    
 

@@ -1,12 +1,14 @@
 
-***********
+
+
+
 FlytConsole
-***********
+===========
 
 
 
-1. To launch FlytConsole go to  https://flytpod:9090/flytconsole.
-2. Once FlytConsole launches you are greeted by the Dashboard . The Dashboard displays the Wifi, Battery and GPS and other widgets that 	 give you the current status of your drone.
+1. To launch FlytConsole `click here`_.  
+2. Once FlytConsole launches you are greeted by the Dashboard. The Dashboard displays the Wifi, Battery and GPS and other widgets that 	 give you the current status of your drone.
 3. To begin configuring your drone, first go to config. Here you have to select the frame of your drone. You are provided with several		 pre defined options of drone configurations. These configurations are further subdivided based on the make of the drone. Depending 		 upon the actual frame of your drone ,pick the frame in FyltConsole and apply. After this FlytPOD will reboot( FlytConsole will work).
 
    .. note:: Before you select your frame make sure the ESC is not connected to the supply.
@@ -61,10 +63,17 @@ FlytConsole
       8. Select the type of receiver if you cannot see the data for RC.
       9. To read the description of modes and state machine go to (link to internal details page in docs.flytbase.com)	
 		
-6. With above things set, now gracefully reboot the +back to be ready to fly.
+6. With above settings done, reboot the autopilot to be ready to fly.
 7. Now you are ready to fly.
 8. It is recommended to use the RC when testing it for the first time.
 9. If the RC is not connected, flytpod will go to API_Mode by default. Use API_mode switch to control drone from RC.
 10. Before you arm the flytPOD make sure that the propeller position is correct i.e. anticlockwise and clockwise propellers are mounted on the right motors.
 11. Even if you  fly in API mode have a RC pilot ready to take control in case of emergency.
 12. To know more about Using Flytconsole while flying your drone go to..(link) and learn how to get waypoints ,operate GCS ,Gain Tuning, 	 	Wifi and Calibration and Parameter settings.
+
+
+
+
+
+
+.. _click here: flytpod:9090/flytconsole
