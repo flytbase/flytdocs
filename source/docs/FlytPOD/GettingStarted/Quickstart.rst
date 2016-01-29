@@ -34,8 +34,8 @@
 .. * Power wall adapter
 
 
-Setup and Power Up of FlytPOD
-=============================
+FlytPOD - Setup
+===============
 
 
 .. caution:: This guide is under active development.
