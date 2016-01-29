@@ -36,7 +36,7 @@ Checkout and participate in our `forums`_ and interact with the community sharin
    docs/FlytSim/FlytSimLaunch.rst
    docs/FlytSim/OnboardApps.rst
    docs/FlytSim/MobileApps.rst
-   docs/FlytSim/Quickstart.rst
+   
 
 .. toctree::
    :maxdepth: 2
@@ -48,13 +48,12 @@ Checkout and participate in our `forums`_ and interact with the community sharin
    docs/FlytOS/OnboardAPIs.rst
    docs/FlytOS/REST_WebsocketAPIs.rst
 
-.. .. toctree::
-..    :maxdepth: 2
-..    :hidden:
-..    :caption: FlytPOD Documentation
+.. toctree::
+    :maxdepth: 2
+    :hidden:
+    :caption: FlytPOD Documentation
 	
-..    docs/GettingStarted/Getting_started.rst
-..    docs/FlytInternals/Flyt_internals.rst
+    .. docs/FlytPOD/GettingStarted/Quickstart.rst
 
    
 
