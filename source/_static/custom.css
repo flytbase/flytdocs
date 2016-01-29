@@ -3,7 +3,7 @@
 }
 
 .navbar-nav {
-    margin-left: 8% !important;
+    margin-left: 11% !important;
 }
 
 .navbar-brand {
@@ -12,7 +12,7 @@
   height: 45px !important;
   text-indent: -9999px;
   padding: 0 !important;
-  margin-left: -10.0% !important;
+  margin-left: -15% !important;
   margin-top: 4%;	
   background: transparent url("FlytLogos/flyt_logo_white_small.png") no-repeat 0px 5px !important;
 }
