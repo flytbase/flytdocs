@@ -43,34 +43,11 @@ FlytPOD - Setup
 Onboard Router Configuration
 ----------------------------
 
-
-
-
-
-.. note:: Initial personalization is optional but we recommended you do this the first time you use the device. Drone is not necessary for this part of the setup.
-
-
+.. .. note:: Initial personalization is optional but we recommended you do this the first time you use the device. Drone is not necessary for this part of the setup.
 
 1. Power up the device using the provided wall adapter or battery.
 
-
-
 2. Next you will have to connect to the FlytPOD_wifi network using the password FlytPOD123. By default, the onboard router is configured in AP mode. To reconfigure it in client mode, follow this documentation. (The documentaion is under construction).
-   
-..   .. note:: It may take a few seconds for the wifi network to appear. For advanced settings go to advanced wifi setup.(tutorial)
-   
-   
-
-.. 3. Once connected, go to `FlytConsole`_.
-   
-..    .. warning:: If for some reason the above link does not work, try replacing "flytpod" with FlytPOD's IP. If you are using your own router then check your router's page for active DHCP clients.
-
-
-
-
-.. .. 4. Login using default credentials. username, password 
-
-.. 4. You can personalize your FlytPOD by setting up the Namespace. 
 
 3. Before proceeding to the steps for Drone integration shut down FlytPOD by pressing its power switch as shown in the image and remove 		the power cable.
 
