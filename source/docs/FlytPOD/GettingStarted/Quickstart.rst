@@ -37,6 +37,9 @@
 Setup and Power Up of FlytPOD
 =============================
 
+
+.. caution:: This guide is under active development.
+
 Onboard Router Configuration
 ----------------------------
 
