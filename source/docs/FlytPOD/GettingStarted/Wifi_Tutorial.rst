@@ -67,7 +67,7 @@ For this tutorial, you would need a Wi-Fi capable device(laptop/PC) through whic
      
    Once done, click on the **Submit button** at the buttom of the page.
 
-.. image:: /_static/Images/create_interface.png
+   .. image:: /_static/Images/create_interface.png
 	:align: center
 
    As you submit your setings, ``Interfaces - Relay`` window will open up. Under ``Common Configuration`` section, ensure that ``Relay between networks`` lan and wlan checkboxes are checked/enabled.
@@ -127,19 +127,24 @@ To Reset or Load the Factory settings:
 a) First connect the HDMI cable, keyboard, mouse to FlytPOD.
 b) Connect to Ethernet connection. Then from terminal, ssh root@openwrt
     
-       
+   
+
+
+
 .. image:: /_static/Images/root@openWRT.png
-	:align: center
+   :align: center
 
 
+ 
 Password is :123 
+ 
 
-c) Once you got the openwrt terminal, issue command  “firstboot && reboot”
+c) Once you got the openwrt terminal, issue command  “firstboot && reboot”.
 d) Wait for approx. 1 min to reboot it completely.
 e) After that you will see the module is in AP mode which has created its own network with SSID : FlytPOD_wifi.
 f) Then follow steps i to vii to configure it in client mode.
 	   
-OR
+   OR
 
 2. **From the web gui**
 
