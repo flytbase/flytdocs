@@ -17,18 +17,19 @@ To launch FlytSim, run this command in the terminal.
 
 .. note:: For first time Gazebo users, Gazebo might take some time to launch. Be Patient!
 
+If you get this error: ``Error: package 'core_api' not found``, source your bashrc.
 
 The above command would launch ROS and Gazebo. A quadrotor model-Iris will be automatically spawned for you to start executing your app. You can use FlytAPIs in your command line to do some simple maneuvers. For example,
 
 .. code-block:: bash
 
 	#To make the vehicle take off at its spot, execute this command in your terminal. 
-	$ rosservice call /flytpod/navigation/take_off "takeoff_alt: 2.0"
+	$ rosservice call /flytsim/navigation/take_off "takeoff_alt: 2.0"
 
 .. code-block:: bash
 
 	#To send a position setpoint to the vehicle in NED frame, execute this command in your terminal.
-	rosservice call /flytpod/navigation/position_set "twist:
+	rosservice call /flytsim/navigation/position_set "twist:
 	 header:
 	   seq: 0
 	   stamp: {secs: 0, nsecs: 0}
