@@ -55,6 +55,7 @@ Checkout and participate in our `forums`_ and interact with the community sharin
 	
     docs/FlytPOD/GettingStarted/About_FlytPOD.rst
     docs/FlytPOD/GettingStarted/Quickstart.rst
+    docs/FlytPOD/GettingStarted/RouterSetup.rst
 
    
 
