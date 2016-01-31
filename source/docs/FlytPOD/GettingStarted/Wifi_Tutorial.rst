@@ -12,15 +12,13 @@ For this tutorial, you would need a Wi-Fi capable device(laptop/PC) through whic
 
 2. As mentioned before, by default the wifi module is configured in AP Mode, with ``SSID: FlytPOD_wifi``. Join the FlytPOD_wifi network from your laptop/PC device. The default ``password`` of the router is ``FlytPOD123``. Access the OpenWrt login page from your browser using the ``IP address: 192.168.1.1`` and click on the ``Administration`` tab which is at the right side top corner of the webpage. OpenWRT configuration wizard GUI will prompt for username: *root* and password: *123*.
 
-.. image:: /_static/Images/wifi1.png
+.. image:: /_static/Images/Authorization.png
 	:align: center
 
        
 3. Select ``Network->Interfaces->LAN->Edit`` option. Under ``Common Configuration`` section, go to ``General Setup`` tab. Select ``Protocol`` as ``Static address``. Change the IPv4 static address from 192.168.1.1 to 192.168.1.254 (In case of failure, it will be required in Troubleshooting). The skeleton of this IP must match that of STEP 1 of this tutorial. Make sure that the specified IP address does not conflict with the IP addresses assigned by the Main Router to other devices in its Network. 
 
-   .. image:: /_static/Images/wifi1.png
-  	:height: 400px
-  	:width: 600px
+   .. image:: /_static/Images/common_config.png
   	:align: center
 
    Now go to ``Physical Settings`` tab under the same ``Common Configuration`` section and change the following:
@@ -28,17 +26,13 @@ For this tutorial, you would need a Wi-Fi capable device(laptop/PC) through whic
    * Uncheck the Bridge Interfaces option.
    * Set the Interface to “VLAN Interface: “eth0.1” (lan)” as shown in the following image.
 
-   .. image:: /_static/Images/Interfaces.png
-	:height: 400px
-	:width: 600px
+   .. image:: /_static/Images/interfacelan.png
 	:align: center
 
 
    In the same page, under ``DHCP Server`` section check the checkbox for ``Ignore Interface`` to disable DHCP.
 
-   .. image:: /_static/Images/wifi3.png
-	:height: 200px
-	:width: 600px
+   .. image:: /_static/Images/DHCP_server.png
 	:align: center
 
 
@@ -54,13 +48,16 @@ For this tutorial, you would need a Wi-Fi capable device(laptop/PC) through whic
 
    Once done, click on the **Submit button** at the buttom of the page.
 
-   .. image:: /_static/Images/wifi4.png
-	:height: 400px
-	:width: 600px
+   .. image:: /_static/Images/join_nw_settings.png
 	:align: center
 
    Once submitted, select ``Network->Interfaces->WLAN->Edit`` option and update ``Hostname to send when requesting DHCP`` to ``FlytPOD``.
    
+   .. image:: /_static/Images/wlan.png
+   
+   
+
+
    Once done, click on the **Save button** at the bottom of the page.
 
 5. Now to create a Relay Bridge between LAN and WLAN Client, select ``Network->Interfaces`` option. Click on ``Add new interface...`` option and Create Interface as:
@@ -70,26 +67,20 @@ For this tutorial, you would need a Wi-Fi capable device(laptop/PC) through whic
      
    Once done, click on the **Submit button** at the buttom of the page.
 
-.. image:: /_static/Images/wifi5.png
-	:height: 400px
-	:width: 600px
+.. image:: /_static/Images/create_interface.png
 	:align: center
 
    As you submit your setings, ``Interfaces - Relay`` window will open up. Under ``Common Configuration`` section, ensure that ``Relay between networks`` lan and wlan checkboxes are checked/enabled.
 
    Once done, click on the **Save button** at the bottom of the page.
 
-   .. image:: /_static/Images/wifi6.png
-	:height: 400px
-	:width: 600px
+   .. image:: /_static/Images/interface_relay.png
 	:align: center
 
 
 6. Select ``Network->Interfaces`` option and check whether all interfaces are configured properly as shown in the following picture.
    
-   .. image:: /_static/Images/Interface_overv.png
-	:height: 400px
-	:width: 600px
+   .. image:: /_static/Images/interface_over.png
 	:align: center
 
 7. You have succesfully configured FlytPOD router in *client mode*. To make the changes permanent, click on the ``Unsaved Changes : **`` option on the top right corner of webpage and press ``Save & Apply`` button at the bottom. 
@@ -118,9 +109,7 @@ b. password: 123
 **Save & Apply the settings.**
      
 
-.. image:: /_static/Images/Interface_overv.png
-	:height: 400px
-	:width: 600px
+.. image:: /_static/Images/SSH_access.png
 	:align: center
 
 
@@ -139,9 +128,7 @@ a) First connect the HDMI cable, keyboard, mouse to FlytPOD.
 b) Connect to Ethernet connection. Then from terminal, ssh root@openwrt
     
        
-.. image:: /_static/Images/Reset.png
-	:height: 400px
-	:width: 600px
+.. image:: /_static/Images/root@openWRT.png
 	:align: center
 
 

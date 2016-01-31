@@ -1,14 +1,11 @@
 
-
-
-
 FlytConsole
 ===========
 
 
 
 1. To launch FlytConsole `click here`_.  
-2. Once FlytConsole launches you are greeted by the Dashboard . The Dashboard displays the  Battery, GPS, namespace and other widgets that give you the current status of your drone.
+2. Once FlytConsole launches you are greeted by the Dashboard. The Dashboard displays the Battery,GPS,namespace and other widgets that give you the current status of your drone.
 
    .. note:: Before you select your frame make sure the ESC is not connected to the supply.
   
@@ -49,7 +46,7 @@ FlytConsole
 
    a) **Sensor Calibration:**
    
-      Sensor calibration is a must before you fly the drone. You need to calibrate magnetometer everytime you change the flying field. If your autopilot orientation is not same as that of your vehicle, update AUTOPILOT_ORIETATION parameter accordingly. Similarly, If your external magnetometers’ orientation differ from FlytPOD's heading, update EXT_MAG_ROTATION paramter.
+      Sensor calibration is a must before you fly the drone. You need to calibrate magnetometer everytime you change the flying field. If your autopilot orientation is not same as that of your vehicle, update AUTOPILOT_ORIENTATION parameter accordingly. Similarly, If your external magnetometers’ orientation differ from FlytPOD's heading, update EXT_MAG_ROTATION paramter.
       Please follow the steps given in FlytConsole. List of calibrations to be done.
 
       1. Accelerometer Calibration
