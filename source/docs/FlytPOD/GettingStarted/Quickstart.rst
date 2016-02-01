@@ -47,7 +47,7 @@ Onboard Router Configuration
 
 1. Power up the device using the provided wall adapter or battery.
 
-2. Next you will have to connect to the FlytPOD_wifi network using the password FlytPOD123. By default, the onboard router is configured in AP mode. To reconfigure it in client mode, follow this documentation. (The documentaion is under construction).
+2. Next you will have to connect to the FlytPOD_wifi network using the passphrase FlytPOD123. By default, the onboard router is configured in AP mode. To reconfigure it in client mode, follow :ref:`this<configuring wifi module in client mode>` documentation.
 
 3. Before proceeding to the steps for Drone integration shut down FlytPOD by pressing its power switch as shown in the image and remove 		the power cable.
 
