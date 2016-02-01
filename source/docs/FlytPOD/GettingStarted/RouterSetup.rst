@@ -18,7 +18,7 @@ For this tutorial, you would need a WiFi capable device(laptop/PC) through which
 
 2. As mentioned before, by default the WiFi module is configured in AP Mode, with ``SSID: FlytPOD_wifi``. Join the FlytPOD_wifi network from your laptop/PC device. The default ``passphrase`` of the router is ``FlytPOD123``. Access the OpenWrt login page from your browser using the ``IP address: 192.168.1.1`` and click on the ``Administration`` tab which is at the right side top corner of the webpage. OpenWRT configuration wizard GUI will prompt for username: *root* and password: *123*.
 
-.. image:: /_static/Images/Authorization.png
+   .. image:: /_static/Images/Authorization.png
 	:align: center
 
        
