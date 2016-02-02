@@ -51,7 +51,7 @@ Onboard Router Configuration
 
 3. Before proceeding to the steps for Drone integration shut down FlytPOD by pressing its power switch as shown in the image and remove 		the power cable.
 
-.. image:: /_static/Images/pic1.png
+.. .. image:: /_static/Images/pic1.png
 
 
 
@@ -77,7 +77,7 @@ FlytPOD should be mounted in such a way that the forward direction of the FlytPO
 .. tip:: You can choose to mount the FlytPOD in a different direction. For this, change the Autopilot Orientation in the Sensor calbration tab in FlytConsole.
 
 
-.. figure:: /_static/Images/Orientation.png
+.. figure:: /_static/Images/xyz.png
 	:align: center
 	:height: 400px
 	:width: 500px
