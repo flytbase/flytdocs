@@ -79,16 +79,9 @@ FlytPOD should be mounted in such a way that the forward direction of the FlytPO
 
 .. figure:: /_static/Images/xyz.png
 	:align: center
-	:height: 400px
-	:width: 500px
+	:scale: 50 %
 	
 	Orientation 
-
-
-
-
-
-
 
 
 * **Mount points:**
@@ -97,6 +90,7 @@ You can use M3 screws for mounting the FlytPOD onto the Drone. Image shows the m
 
 .. figure:: /_static/Images/mount_holes.png
 	:align: center
+	:scale: 50 %
 	 
 	Mount Holes
 

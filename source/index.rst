@@ -35,7 +35,7 @@ Checkout and participate in our `forums`_ and interact with the community sharin
    docs/FlytSim/FlytSimInstallationGuide.rst
    docs/FlytSim/FlytSimLaunch.rst
    docs/FlytSim/OnboardApps.rst
-   docs/FlytSim/MobileApps.rst
+   docs/FlytSim/Web_MobileApps.rst
    
 
 .. toctree::

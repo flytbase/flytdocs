@@ -5,8 +5,8 @@ FlytPOD - Router Setup
 
 .. _configuring wifi module in client mode:
 
-Configuring WiFi Module in Client Mode
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Configuring WiFi Module From AP to Client Mode
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
 The FlytPOD has built-in WiFi router module. FlytPOD has hard-wired connection to the LAN port of this module.The Module can be configured in AP Mode or in Client Mode depending upon the application. Not both modes at a time. By default, at the time of shipping, the router is configured in AP Mode.  
@@ -94,8 +94,8 @@ For this tutorial, you would need a WiFi capable device(laptop/PC) through which
 
 8. As you complete STEP 7, FlytPOD_wifi network would become unavailable. Ideally, FlytPOD should be assigned a new IP by your Home/Main Router. To find out the new IP, you have the following two options: 
 
-   a) ``METHOD 1``: Connect to your Home/Main router, open its login page and check its ``DHCP Client list``. Verify that a device named ``FlytPOD`` is listed there and note down the IP assigned to it. If this is not true, then the router needs a reboot. Reboot FlytPOD using the Power Switch.
-   b) ``METHOD 2``: Connect a monitor via HDMI cable, keyboard and mouse to FlytPOD. Access the terminal, and fire ``ifconfig`` command. Find out the assigned IP. If IP is NOT assigned, you must connect to FlytPOD router from FlytPOD's browser using the Static IP that you configured in STEP 3, in default case, it will be 192.168.3.254. Click on the Administration tab. OpenWRT configuration wizard GUI will prompt for username: *root* and password: *123*. Select ``System->Reboot->Perform reboot`` option.
+   a) ``METHOD 1``: Connect to your Home/Main router, open its login page and check its ``DHCP Client list``. Verify that a device named ``FlytPOD`` is listed there and note down the IP assigned. If this is not true, try rebooting and if it still doesn't work then go to :ref:`Troubleshooting Guide<Troubleshooting Guide>`.
+   b) ``METHOD 2``: Connect a monitor via HDMI cable, keyboard and mouse to FlytPOD. Access the terminal, and fire ``ifconfig`` command. Find out the assigned IP. If IP is NOT assigned, try rebooting and if it still doesn't work then go to :ref:`Troubleshooting Guide<Troubleshooting Guide>`.
 
 
 9. By default ``SSH access`` is disabled in Client mode. To enable it, you have to connect a monitor via HDMI cable, keyboard and mouse to FlytPOD. 
@@ -108,7 +108,7 @@ For this tutorial, you would need a WiFi capable device(laptop/PC) through which
    .. image:: /_static/Images/SSH_access.png
 	:align: center
 
-
+.. _Troubleshooting Guide: 
 
 Troubleshooting Guide
 ^^^^^^^^^^^^^^^^^^^^^

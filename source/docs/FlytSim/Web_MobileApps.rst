@@ -7,20 +7,20 @@ Web and Mobile Apps
 Introduction
 ============
 
-This document deals with the instructions and step by step guide for creating Web and Mobile apps for your Drone. The Web apps can be developed using HTML, CSS and JS, however in the case of Mobile apps there are two ways of doing so. The conventional way is to build a mobile app in JAVA using IDEs such as Eclipse or Android Studio. The other way of going about creating mobile apps is to reuse the Web app code i.e a simple HTML,CSS and JS project and convert that into a mobile app using frameworks such as Cordova and Phonegap. This allows for sharing the same codebase for creating cross-platform mobile apps.
+This document deals with the instructions and step by step guide for creating Web and Mobile apps for your Drone. The Web apps can be developed using HTML, CSS and JS, however in the case of Mobile apps there are two ways of doing so. The conventional way is to build a mobile app in JAVA using IDEs such as Eclipse or Android Studio. The other way of going about creating mobile apps is to reuse the Web app code i.e a simple HTML, CSS and JS project and convert that into a mobile app using frameworks such as Cordova and Phonegap. This allows for sharing the same codebase for creating cross-platform mobile apps.
 
 
 Here we will delve into the second approach: developing a web app with HTML, CSS, JS/Jquery and Cordova engine. These apps will allow you to remotely monitor and command your drone. You will also see how to get custom data from the Drone on your app.
   
 
-The IDE that we have selected for this project is Intellij Idea. The GUI and the client side coding is done in HTML, CSS and JS/Jquery
+The IDE that we have selected for this project is IntelliJ Idea. The GUI and the client side coding is done in HTML, CSS and JS/Jquery
 then reusing the code to create mobile apps using Ionic as the front end framework for both Web and Mobile apps.
 
 
 Front end Framework
 ^^^^^^^^^^^^^^^^^^^
 
-Ionic is free and open source and offers a library of mobile optimized HTML, CSS and JS components, reusable and customizable UI elements and other tools for building highly interactive mobile apps.We will be using Ionic for the front end development of Web apps since we will be converting these Web apps into Mobile apps later in this tutorial.Ionic uses Cordova engine which is a mobile development framework that uses web technologies for cross platform app development. You can refer to Ionic `getting started`_ guide for further instructions and to make yourself familiarized with the Ionic framework. For details about Cordova, you can look at their documentation `here`_.
+Ionic is free, open source and offers a library of mobile optimized HTML, CSS and JS components, reusable and customizable UI elements and other tools for building highly interactive mobile apps.We will be using Ionic for the front end development of Web apps since we will be converting these Web apps into Mobile apps later in this tutorial. Ionic uses Cordova engine which is a mobile development framework that uses web technologies for cross platform app development. You can refer to Ionic `getting started`_ guide for further instructions and to make yourself familiarized with the Ionic framework. For details about Cordova, you can look at their documentation `here`_.
 
 
 .. note:: There are many other Web and Mobile app front end frameworks available. You can use any framework that you are comfortable with. The UI of an app may have to be designed separately for web and mobile for platform specific optimizations.
@@ -29,31 +29,37 @@ Ionic is free and open source and offers a library of mobile optimized HTML, CSS
 IDE
 ^^^
 
-The IDE that we have used here is IntelliJ IDEA. There are many other options available so feel free to use one that you are comfortable with. IntelliJ IDEA supports Ionic( Front end framework) and allows you to create Phonegap/Cordova projects. Since we will be using both these softwares, make sure the IDE that you use supports them. For more information on IntelliJ IDEA `click here`_.
+The IDE that we have used here is IntelliJ IDEA. There are many other options available so feel free to use one that you are comfortable with. IntelliJ IDEA supports Ionic (Front end framework) and allows you to create Phonegap/Cordova projects. Since we will be using both these softwares, make sure the IDE that you use supports them. For more information on IntelliJ IDEA `click here`_.
 
 
 
 Development Environment Setup
 =============================
 
-For a quick start, you can follow the steps given below to install Ionic, Cordova and IntelliJ IDEA :
+For a quick start, you can follow the steps given below to install Ionic, Cordova and IntelliJ IDEA:
 
 
-#. Please install Node.js v4 (Node.js v5 does not work at the moment with Ionic). To install node.js go to this `link`_. This will aslo install the node packade manager npm.
+#. Please install Node.js v4 (Node.js v5 does not work at the moment with Ionic). To install node.js go to this `link`_. This will also install the node package manager npm.
    
 
-#. Using npm install the latest Ionic and Cordova:
-   ``$ npm install -g cordova ionic``
+#. Using npm install the latest Ionic and Cordova::
+
+   $ sudo npm install -g cordova ionic
 
 
 #. Follow the Android and iOS platform guides to install required platform dependencies (SDKs).
    
-   .. note:: **Follow this step for Mobile app development only.** iOS development requires Mac OS X. iOS simulator through the Ionic CLI requires the ios-sim npm package, which can be installed with the command sudo npm -g install ios-sim.
+   .. note:: **Follow this step for Mobile app development only.** iOS development requires Mac OS X. iOS simulator through the Ionic CLI requires the ios-sim npm package, which can be installed with the command ``sudo npm -g install ios-sim``.
    
    
 
 
-#. IntelliJ IDEA also requires JDK 1.6 or higher. To install JDK 7 go to `this link`_.
+#. IntelliJ IDEA also requires JDK 1.6 or higher. To install JDK 7 go to `this link`_. 
+
+.. in above point, may be the link could be for oracle jdk binary---> following https://www.digitalocean.com/community/tutorials/how-to-install-java-on-ubuntu-with-apt-get
+
+.. this should be above jdk....if oracle jdk7 not install...android studio wont be installed.
+
 
 #. Go to the `link here`_ to install IntelliJ IDEA.
 
@@ -405,13 +411,13 @@ Following are the components for this application :
 The above mentioned code allows you to execute the on-board script with default square dimension. We now see how to use user defined square dimension to do the same.			
   			
 
+.. change this pic
 
 
-
-.. image:: /_static/Images/pic1.png
-  :height: 200px
-  :width: 250px
-  :align: center
+.. .. image:: /_static/Images/pic1.png
+..   :height: 200px
+..   :width: 250px
+..   :align: center
         
 
 
