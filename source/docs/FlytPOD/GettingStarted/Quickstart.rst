@@ -112,6 +112,9 @@ Multicopters
  
 According to your platform connect upto 8 motors (ESCs) to the PWM output channel. Following image shows the motors numbered on various platforms according to their position. Plugin the Signal cable from the corresponding ESC in exactly the same PWM output channel. e.g. Motor 3 on your platform should be connected to PWM out 3 channel.
 
+Get more information on `Multicopters`_.
+
+
 .. image:: /_static/Images/quad.png
 		:height: 450px
 		:width: 900px
@@ -136,7 +139,6 @@ According to your platform connect upto 8 motors (ESCs) to the PWM output channe
 		:align: center
 
 
-Click here for more information regarding `Multicopters`_.
 
 
 
@@ -146,7 +148,7 @@ Click here for more information regarding `Multicopters`_.
 Fixed Wing
 ++++++++++
 
-Click here for more information regarding `Fixed wings/Planes`_.
+Get more information on `Fixed wings/Planes`_.
 
 
 
@@ -156,7 +158,7 @@ Click here for more information regarding `Fixed wings/Planes`_.
 VTOL
 ++++
 
-Click here for more information regarding `VTOL`_.
+Get more more information on`VTOL`_.
 
 
 
