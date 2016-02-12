@@ -70,7 +70,7 @@ Mounting and Orientation
 
 .. warning:: Make sure neither your Drone nor the FlytPOD are powered before you proceed.
 
-* **Drone and FlytPOD Orientation:**
+* **Drone and FlytPOD Orientation**
 
 FlytPOD should be mounted in such a way that the front of the FlytPOD is aligned with the heading of the drone.
 
@@ -84,7 +84,7 @@ FlytPOD should be mounted in such a way that the front of the FlytPOD is aligned
 	FlytPOD Orientation 
 
 
-* **Mount points:**
+* **Mount points**
 
 You can use M3 screws for mounting the FlytPOD onto the Drone. Image shows the mount holes available.
 
@@ -323,7 +323,7 @@ Following are the steps to configure FlytPOD with FlytConsole:
 8. If the RC is not connected, FlytPOD will go to API_Mode by default. Use API_mode switch to control drone from RC.
 9. Before you arm the FlytPOD make sure that the position of the propellers is correct i.e. anticlockwise and clockwise propellers are mounted on the right motors.
     
-    .. warning:: Have a RC pilot ready to take control even if you are flying in API mode in case of emergency.
+.. warning:: Have a RC pilot ready to take control even if you are flying in API mode in case of emergency.
 
 .. To know more about Using Flytconsole while flying your drone go to..(link) and learn how to get waypoints ,operate GCS ,Gain Tuning, 	 	Calibration and Parameter settings.
 
