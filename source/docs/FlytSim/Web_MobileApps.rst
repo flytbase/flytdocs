@@ -47,7 +47,7 @@ For a quick start, you can follow the steps given below to install Ionic, Cordov
    $ sudo npm install -g cordova ionic
 
 
-#. Follow the Android and iOS platform guides to install required platform dependencies (SDKs).
+#. Follow the `Android`_ and `iOS`_ platform guides to install required platform dependencies (SDKs).
    
    .. note:: **Follow this step for Mobile app development only.** iOS development requires Mac OS X. iOS simulator through the Ionic CLI requires the ios-sim npm package, which can be installed with the command ``sudo npm -g install ios-sim``.
    
@@ -55,6 +55,13 @@ For a quick start, you can follow the steps given below to install Ionic, Cordov
 
 
 #. IntelliJ IDEA also requires JDK 1.6 or higher. To install JDK 7 go to `this link`_. 
+   
+
+   .. important:: Please install JDK before installing Android Studio or Android SDK Tools. 
+   
+   
+   
+   
 
 .. in above point, may be the link could be for oracle jdk binary---> following https://www.digitalocean.com/community/tutorials/how-to-install-java-on-ubuntu-with-apt-get
 
@@ -143,39 +150,60 @@ Following are the components for this application :
 
 
 
-1) Here we create a simple button using the Ionic component ‘Button’. The HTML code for which is as follows:
+1) Here we create a simple button using the Ionic component ‘Button’. This button when clicked executes the on-board script which makes the drone trace a square. The HTML code for which is as follows:
 
 .. code-block:: HTML
 
     <button class="button button-block button-positive" id="square">
-    Execute Square
+    	Execute Square
     </button>
        
        
 
 
-2) This button when clicked executes the on-board script which makes the drone trace a square.
+2) Connection status needs to be checked. For this a REST call has to be made. If this is successful we get the namespace data and this can be used for making other REST calls and connecting to Web Scoket.
+	
+.. code-block:: JS
+       
+    $.ajax({
+    	type: "POST",
+    	dataType: "json",
+    	data: JSON.stringify(msgdata),
+    	url: "http://"+ip+"/ros/get_global_namespace"
+    	success: function(data){
+          if(data.success){
+              namespace=data.param_info.param_value;
+            }
+    });
+
 3) The JS code that calls the on-board script is as follows:
        
 .. code-block:: JS
        
     $("#square").click(function(){
-    var msgdata={};
-    msgdata["app_name"]="app2";
-    msgdata["arguments"]="3";
-    $.ajax({
-    type: "POST",
-    dataType: "json",
-    data: JSON.stringify(msgdata),
-    url: "http://"+ip+"/ros/"+namespace+"/navigation/exec_script"
+    	var msgdata={};
+    	msgdata["app_name"]="app2";
+    	msgdata["arguments"]="3";
+
+
+    	$.ajax({
+    		type: "POST",
+    		dataType: "json",
+    		data: JSON.stringify(msgdata),
+    		url: "http://"+ip+"/ros/"+namespace+"/navigation/exec_script",
+    		success: function(data){
+    			console.log(data);
+    		}
+    	});
+    });
+
+	
 
 The above mentioned code allows you to execute the on-board script with default square dimension. We now see how to use user defined square dimension to do the same.
 			
 						
   			
-.. image:: /_static/Images/web0.png
-  :height: 400px
-  :width: 650px
+.. image:: /_static/Images/web_button.png
   :align: center
 
 
@@ -194,14 +222,12 @@ The above mentioned code allows you to execute the on-board script with default 
 .. code-block:: HTML
        
     <label class="item item-input">
-    <input type="text" placeholder="Enter Square Dimension" id="dimension">
+    	<input type="text" placeholder="Enter Square Dimension" id="dimension">
     </label>
        
 
 
-.. image:: /_static/Images/web1.png
-  :height: 400px
-  :width: 650px
+.. image:: /_static/Images/web_square_dim.png
   :align: center
 
     
@@ -212,7 +238,7 @@ The above mentioned code allows you to execute the on-board script with default 
 
 **Live data streaming from drone:**
    
-In this example we stream live data of location status from the drone using topic Local Position.
+In this example we stream live data of location status from the drone by subscribing to topic Local Position.
 
 1) First create a list using the code given below. Ionic provides a collection of lists that can be used.
        
@@ -241,52 +267,47 @@ In this example we stream live data of location status from the drone using topi
 
 
 2) We have also used the Ionic Grid component in order to arrange the elements of the list.
-3) Before you can stream data the namespace and websocket have to be set. Use the code given below:
-       
-.. code-block:: JS
-       
-    $.ajax({
-    type: "POST",
-    dataType: "json",
-    data: JSON.stringify(msgdata),
-    url: "http://"+ip+"/ros/get_global_namespace"
 
 
-4) And for initializing websocket use the following code snippet:
+
+3) For initializing websocket use the following code snippet. This is done to stream live data from the drone.
 
 .. code-block:: JS
 
     var ros = new ROSLIB.Ros({
     url : 'ws://'+ip+'/websocket'
-    });               ros.on('connection', function() {
+    });               
+    ros.on('connection', function() {
     console.log('Connected to websocket server.');
-    });               ros.on('error', function(error) {
+    });               
+    ros.on('error', function(error) {
     console.log('Error connecting to websocket server: ', error);
-    });               ros.on('close', function() {
+    });               
+    ros.on('close', function() {
     console.log('Connection to websocket server closed.');
     });
 
 
-5) The JS to initialize Local Position topic and to subscribe to it is as follows. The data is being displayed in the HTML list:
+4) The REST call used to fetch the namespace in previous steps is used here to subscribe to topics to get the live stream of data.
+   Follow the code below to do so:
        
 .. code-block:: JS
        
    var listenerLocalPosition = new ROSLIB.Topic({
-   ros :ros,
-   name : '/'+namespace+'/mavros/local_position/local',
-   messageType : 'geometry_msgs/TwistStamped',
-   throttle_rate: 200
+   	ros :ros,
+   	name : '/'+namespace+'/mavros/local_position/local',
+  	 	messageType : 'geometry_msgs/TwistStamped',
+   	throttle_rate: 200
    });
+
    listenerLocalPosition.subscribe(function(message) {
-   $("#posx").html(message.twist.linear.x);
-   $("#posy").html(message.twist.linear.y);
-   $("#posz").html(message.twist.linear.z);
+   	$("#posx").html(message.twist.linear.x);
+   	$("#posy").html(message.twist.linear.y);
+   	$("#posz").html(message.twist.linear.z);
 
    });
  
-.. image:: /_static/Images/web3.png
-  :height: 400px
-  :width: 650px
+.. image:: /_static/Images/web_square_app.png
   :align: center
 
 
@@ -382,7 +403,7 @@ Following are the components for this application :
 
 
 
-1) Here we create a simple button using the Ionic component ‘Button’. The HTML code for which is as follows:
+1) Here we create a simple button using the Ionic component ‘Button’. This button when clicked executes the on-board script which makes the drone form a square. The HTML code for which is as follows.
 
 .. code-block:: HTML
 
@@ -393,31 +414,52 @@ Following are the components for this application :
        
 
 
-2) This button when clicked executes the on-board script which makes the drone form a square.
+2) Connection status needs to be checked. For this a REST call has to be made. If this is successful we get the namespace data and this can be used for making other REST calls and connecting to Web Scoket.
+   
+.. code-block:: JS
+       
+    $.ajax({
+    	type: "POST",
+    	dataType: "json",
+    	data: JSON.stringify(msgdata),
+    	url: "http://"+ip+"/ros/get_global_namespace"
+    	success: function(data){
+          if(data.success){
+              namespace=data.param_info.param_value;
+            }
+    });
+
 3) The JS code that calls the on-board script is as follows:
        
 .. code-block:: JS
        
     $("#square").click(function(){
-    var msgdata={};
-    msgdata["app_name"]="app2";
-    msgdata["arguments"]="3";
-    $.ajax({
-    type: "POST",
-    dataType: "json",
-    data: JSON.stringify(msgdata),
-    url: "http://"+ip+"/ros/"+namespace+"/navigation/exec_script"
+    	var msgdata={};
+    	msgdata["app_name"]="app2";
+    	msgdata["arguments"]="3";
+
+
+    	$.ajax({
+    		type: "POST",
+    		dataType: "json",
+    		data: JSON.stringify(msgdata),
+    		url: "http://"+ip+"/ros/"+namespace+"/navigation/exec_script",
+    		success: function(data){
+    			console.log(data);
+    		}
+    	});
+    });
 
 The above mentioned code allows you to execute the on-board script with default square dimension. We now see how to use user defined square dimension to do the same.			
   			
 
-.. change this pic
 
 
-.. .. image:: /_static/Images/pic1.png
-..   :height: 200px
-..   :width: 250px
-..   :align: center
+
+.. image:: /_static/Images/Button.png
+  :height: 200px
+  :width: 250px
+  :align: center
         
 
 
@@ -441,7 +483,7 @@ The above mentioned code allows you to execute the on-board script with default 
    
    
    
-.. image:: /_static/Images/pic2.png
+.. image:: /_static/Images/Square_dim.png
   :height: 200px
   :width: 250px
   :align: center
@@ -478,51 +520,48 @@ In this example we request location status from the drone using topic Local Posi
 
 
 2) We have also used the Ionic Grid component in order to arrange the elements of the list.
-3) Before you can stream data the namespace and websocket have to be set. Use the code given below:
-       
-.. code-block:: JS
-       
-    $.ajax({
-    type: "POST",
-    dataType: "json",
-    data: JSON.stringify(msgdata),
-    url: "http://"+ip+"/ros/get_global_namespace"
 
 
-4) And for initializing websocket use the following code snippet: 
+
+3) For initializing websocket use the following code snippet. This is done to stream live data from the drone. 
        
 .. code-block:: JS
        
     var ros = new ROSLIB.Ros({
     url : 'ws://'+ip+'/websocket'
-    });               ros.on('connection', function() {
+    });               
+    ros.on('connection', function() {
     console.log('Connected to websocket server.');
-    });               ros.on('error', function(error) {
+    });               
+    ros.on('error', function(error) {
     console.log('Error connecting to websocket server: ', error);
-    });               ros.on('close', function() {
+    });               
+    ros.on('close', function() {
     console.log('Connection to websocket server closed.');
     });
 
 
-5) The JS to initialize Local Position topic and to subscribe to it is as follows. The data is being displayed in the HTML list:
+4) The REST call used to fetch the namespace in previous steps is used here to subscribe to topics to get the live stream of data.
+   Follow the code below to do so:
        
 .. code-block:: JS
        
    var listenerLocalPosition = new ROSLIB.Topic({
-   ros :ros,
-   name : '/'+namespace+'/mavros/local_position/local',
-   messageType : 'geometry_msgs/TwistStamped',
-   throttle_rate: 200
+   	ros :ros,
+   	name : '/'+namespace+'/mavros/local_position/local',
+   	messageType : 'geometry_msgs/TwistStamped',
+   	throttle_rate: 200
    });
+
    listenerLocalPosition.subscribe(function(message) {
-   $("#posx").html(message.twist.linear.x);
-   $("#posy").html(message.twist.linear.y);
-   $("#posz").html(message.twist.linear.z);
+   	$("#posx").html(message.twist.linear.x);
+   	$("#posy").html(message.twist.linear.y);
+   	$("#posz").html(message.twist.linear.z);
 
    });
     
    
-.. image:: /_static/Images/pic4.png
+.. image:: /_static/Images/Square_app.png
   :height: 400px
   :width: 250px
   :align: center   
@@ -540,10 +579,14 @@ In this example we request location status from the drone using topic Local Posi
 
 .. _link: https://nodejs.org/en/download/
 
-.. _this link: http://docs.oracle.com/javase/7/docs/webnotes/install/index.html 
+.. _this link: https://www.digitalocean.com/community/tutorials/how-to-install-java-on-ubuntu-with-apt-get 
 
 .. _link here: https://www.jetbrains.com/idea/download
 
 .. _Ionic components: http://ionicframework.com/docs/components/
 
 .. _GitHub repository: https://github.com/navstik/flytsamples
+
+.. _Android: http://cordova.apache.org/docs/en/5.1.1/guide/platforms/android/index.html
+
+.. _ios: http://cordova.apache.org/docs/en/5.1.1/guide/platforms/ios/index.html
