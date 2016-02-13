@@ -24,7 +24,7 @@ The contents of FlytKit include:
 
 * FlytPOD
 * MicroSD (8 GB) for data-logging
-* MicroSD (32 GB) preloaded with FlytOS v1.0.1
+* MicroSD (32 GB) preloaded with FlytOS
 * 2x WiFi antenna
 * External GPS-MAG module
 * Power board
