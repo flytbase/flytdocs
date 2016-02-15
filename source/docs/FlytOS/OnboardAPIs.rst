@@ -2,7 +2,7 @@
 
 .. _onboard_api_reference:
 
-FlytAPI - onboard
+FlytAPI - Onboard
 =================
 
 

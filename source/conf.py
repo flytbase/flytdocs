@@ -23,6 +23,11 @@ on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 #sys.path.insert(0, os.path.abspath('.'))
 sys.path.append(os.path.abspath('_extensions/sphinxcontrib'))
 
+images_config = dict(
+    backend='LightBox2',
+    default_image_width='100px'
+)
+
 # -- General configuration ------------------------------------------------
 
 # If your documentation needs a minimal Sphinx version, state it here.
@@ -32,7 +37,7 @@ sys.path.append(os.path.abspath('_extensions/sphinxcontrib'))
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'sphinx.ext.autodoc','youtube'
+    'sphinx.ext.autodoc','youtube','sphinxcontrib.images'
 ]
 #
 # Add any paths that contain templates here, relative to this directory.
