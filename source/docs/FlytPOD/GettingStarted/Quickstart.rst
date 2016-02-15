@@ -38,7 +38,11 @@ FlytPOD - Setup
 ===============
 
 
-.. caution:: This guide is under active development.
+.. important:: This guide is under active development.
+
+
+
+
 
 Onboard Router Configuration
 ----------------------------
@@ -47,7 +51,7 @@ Onboard Router Configuration
 
 1. Power up the device using the provided wall adapter or battery.
 
-2. Next you will have to connect to the FlytPOD_wifi network using the passphrase FlytPOD123. By default, the onboard router is configured in AP mode. To reconfigure it in client mode, follow :ref:`this<configuring wifi module in client mode>` documentation.
+2. Next you will have to connect to the FlytPOD_wifi network using the password FlytPOD123. By default, the onboard router is configured in AP mode. To reconfigure it in client mode, follow :ref:`this<configuring wifi module in client mode>` documentation.
 
 3. Before proceeding to the steps for Drone integration shut down FlytPOD by pressing its power switch as shown in the image and remove 		the power cable.
 
@@ -143,9 +147,7 @@ Click `here <http://pixhawk.org/platforms/multicopters/start>`_ for more informa
 Fixed Wing
 ++++++++++
 
-Get more information on `Fixed wings/Planes`_.
-
-.. Click `here <https://pixhawk.org/platforms/planes/start>`_ for more information on Fixed Wing.
+Click `here <https://pixhawk.org/platforms/planes/start>`_ for more information on Fixed Wing.
 
 
 
@@ -154,9 +156,7 @@ Get more information on `Fixed wings/Planes`_.
 VTOL
 ++++
 
-Get more more information on `VTOL`_.
-
-.. Click `here <https://pixhawk.org/platforms/vtol/start>`_ for more information on VTOL.
+Click `here <https://pixhawk.org/platforms/vtol/start>`_ for more information on VTOL.
 
 
 
@@ -171,9 +171,10 @@ External GPS-MAG Mounting
 
 
 
-External GPS-MAG can be connected to FlytPOD through the connector provided on the side. Port availble for use is GPS-MAG 1. GPS-MAG 2 is reserved for future development. Use of a Standoff is recommended in order to avoid interference. Make sure to mount it in such a way that drone heading and GPS-MAG board heading match.
+External GPS-MAG can be connected to FlytPOD through the connector provided on the side. Port availble for this is GPS-MAG 1. Use of a Standoff is recommended in order to avoid interference. Make sure to mount it in such a way that drone heading and GPS-MAG board heading match.
 
-.. note:: If you want to place GPS-MAG board on your drone in any other fashion than shown in above diagram then you’ll have to follow extra steps during sensor calibration in flytconsole.
+.. note:: * Of the two ports provided, GPS-MAG 1 must be used for connecting external GPS-MAG as GPS-MAG 2 is reserved for future       development
+          * If you want to place GPS-MAG board on your drone in any other fashion than shown in above diagram then you’ll have to follow extra steps during sensor calibration in flytconsole.
 
 
 
