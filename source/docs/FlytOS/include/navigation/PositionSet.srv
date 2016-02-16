@@ -11,6 +11,7 @@ float32 tolerance
 bool async
 bool relative
 bool yaw_valid
+bool body_frame
 int8 setpoint_type
 ---
 bool success

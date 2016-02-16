@@ -2,10 +2,13 @@
 
 .. _list-of-APIs:
 
-List of APIs
-------------
+FlytAPI - List
+--------------
 
 This document lists out all the available FlytAPIs.
+
+.. caution:: This guide is under active development.
+
 
 Navigation APIs
 ^^^^^^^^^^^^^^^
@@ -21,11 +24,11 @@ These are the list of available APIs for sending commands to the vehicle.
 * Disarm (:ref:`onboard<Disarm_onboard>`) (:ref:`REST<Arm_REST>`)
 * Takeoff (:ref:`onboard<TakeOff_onboard>`) (:ref:`REST<Arm_REST>`)
 * Land (:ref:`onboard<Land_onboard>`) (:ref:`REST<Arm_REST>`)
-* Position Setpoint (:ref:`onboard<Arm_onboard>`) (:ref:`REST<Arm_REST>`)
-* Velocity Setpoint (:ref:`onboard<Arm_onboard>`) (:ref:`REST<Arm_REST>`)
-* Attitude Setpoint (:ref:`onboard<Arm_onboard>`) (:ref:`REST<Arm_REST>`)
-* Position Hold/Loiter/Hover (:ref:`onboard<Arm_onboard>`) (:ref:`REST<Arm_REST>`)
-* Execute Onboard CPP/Python Script (:ref:`onboard<Arm_onboard>`) (:ref:`REST<Arm_REST>`)
+* Position Setpoint (:ref:`onboard<Position_Setpoint_onboard>`) (:ref:`REST<Arm_REST>`)
+* Velocity Setpoint (:ref:`onboard<Velocity_Setpoint_onboard>`) (:ref:`REST<Arm_REST>`)
+* Attitude Setpoint (:ref:`onboard<Attitude_Setpoint_onboard>`) (:ref:`REST<Arm_REST>`)
+* Position Hold/Loiter/Hover (:ref:`onboard<Position_Hold_onboard>`) (:ref:`REST<Arm_REST>`)
+* Execute Onboard CPP/Python Script (:ref:`onboard<Exec_Script_onboard>`) (:ref:`REST<Arm_REST>`)
 * Waypoint Handling
 
   - Send Waypoints

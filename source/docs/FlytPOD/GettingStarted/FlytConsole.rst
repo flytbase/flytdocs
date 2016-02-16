@@ -15,7 +15,7 @@ The various components included in FlytConsole are as follows:
 Dashboard
 """""""""
 
-Once FlytConsole launches you are greeted by the Dashboard. The Dashboard displays the Connection status, Battery,GPS and Vehicle status, Frame type and other widgets that give you the current status of your drone.
+Once FlytConsole launches you are greeted by the Dashboard. The Dashboard displays the Connection status, Battery monitor, GPS status, Frame type and other widgets that give you the current status of your drone.
 
 .. .. note:: Before you select your frame make sure the ESC is not connected to the supply.
 
@@ -40,9 +40,7 @@ Frame Select
 
 In Frame Select you can select the frame-type of your drone. You are provided with several predefined options of multi-copter and fixed wing configurations. These configurations are further subdivided based on the make of the drone.
 
-Depending upon the actual frame of your drone ,select the frame and click apply. After this FlytPOD will reboot however,FlytConsole will continue working.
-
-
+Depending upon the actual frame of your drone ,select the frame and click apply. After this FlytPOD will reboot however, FlytConsole will continue working.
 
 
 Motor Configuration

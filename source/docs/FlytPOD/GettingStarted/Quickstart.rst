@@ -198,15 +198,15 @@ As shown in image You need to Connect Battery to the connector labelled ‘Power
 RC receiver
 ^^^^^^^^^^^
 
-RC receiver is powered through ESC output only. (If your ESC doest not give 5V output then make sure to power receiver separately).
+RC receiver is powered through ESC output only. (If your ESC does not give 5V output then make sure to power RC receiver separately).
 
 
-a. PPM: PPM input from RC receiver. Channel 1 on RC port acts as PPM input when param PWM_PPM_SEL = 1 which can be changed from   FlytConsole.
+a. PPM: RC receiver in PPM mode. Channel 1 on RC port acts as PPM input when param PWM_PPM_SEL = 1 which can be changed from FlytConsole.
       
    .. note:: By default PPM mode is enabled.
   
 
-b. PWM: 8x PWM channels available for connection to RC.Channel 1 to 8 on RC port act as PWM input when param PWM_PPM_SEL = 0. You can change this in FlytConsole.
+b. PWM: RC receiver in PWM mode. Channel 1 to 8 on RC port act as 8xPWM input when param PWM_PPM_SEL = 0 which can be changed from FlytConsole.
    
 c. SPEK
 

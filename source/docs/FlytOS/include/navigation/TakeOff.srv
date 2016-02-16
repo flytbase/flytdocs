@@ -1,5 +1,5 @@
 #Request : expects take off altitude in metres
-#Response : returns success=true is takeoff altitude is reached
+#Respose : returns success=true if takeoff altitude is reached
 
 float32 takeoff_alt
 ---

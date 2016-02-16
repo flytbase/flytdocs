@@ -18,12 +18,12 @@ These APIs allows you to have navigational control over your vehicle, and also p
 
 .. _Arm_onboard:
 
-**ARM**
+**Arm**
 ^^^^^^^
 
 .. danger:: This command might turn on the motors if their ESCs are powered up.
 
-This API arms the vehicle, passes controller outputs to the mixer.
+This API arms the vehicle, passes controller outputs to the mixer. Usage of `TakeOff<TakeOff_onboard>` is preferred.
 
 ROS
 """
@@ -140,7 +140,7 @@ Python
 **TakeOff**
 ^^^^^^^^^^^
 
-This API sends takeoff command to the autopilot. The API accepts *takeoff_alt* argument, which specifies the TakeOff height in meters above the current positon. It must always be a positive quantity.
+This API arms the vehicle(if it is disarmed) and sends takeoff command to the autopilot. The API accepts *takeoff_alt* argument, which specifies the TakeOff height in meters above the current position. It must always be a positive quantity. 
 
 .. note:: This API runs in synchronous mode, which means the API call won't return unless either the provided `takeoff_alt` is achieved or timeout(30secs) called.
 
@@ -257,7 +257,9 @@ Python
 **Position Setpoint**
 ^^^^^^^^^^^^^^^^^^^^^
 
-This API sends position setpoint command to the autopilot. Additionally, you can send yaw setpoint (*yaw_valid flag must be set true*) to the vehicle as well. Some abstract features have been added, such as tolerance/acceptance-radius, synchronous/asynchronous mode, sending setpoints relative to current position (*relative flag must be set true*). 
+This API sends position setpoint command to the autopilot. Additionally, you can send yaw setpoint (*yaw_valid flag must be set true*) to the vehicle as well. Some abstract features have been added, such as tolerance/acceptance-radius, synchronous/asynchronous mode, sending setpoints relative to current position (*relative flag must be set true*), sending setpoints relative to current body frame (*body_frame flag must be set true*). 
+
+.. note:: You can either set ``body_frame`` or ``relative`` flag. If both are set, ``body_frame`` takes precedence.
 
 .. tip:: Asynchronous mode - The API call would return as soon as the command has been sent to the autopilot, irrespective of whether the vehicle has reached the given setpoint or not.
 
@@ -290,23 +292,26 @@ ROS
     async: false
     relative: false
     yaw_valid: true
+    body_frame: false
     setpoint_type: 0"
 
-    #sends (x,y,z)=(1.0,3.5,-5.0), yaw=0.12, tolerance=1.0m, relative=false, async=false, yaw_valid=true
+    #sends (x,y,z)=(1.0,3.5,-5.0)(m), yaw=0.12rad, relative=false, async=false, yaw_valid=true, body_frame=false
     #default value of tolerance=1.0m if left at 0
+    #in general, setpoint_type should be left at 0
     
 
 CPP
 """
 
-.. cpp:function:: int Navigation::position_set(float x, float y, float z, float yaw_setpoint=0, float tolerance=0, bool relative=false, bool async=false, bool yaw_valid=false)
-   
-   :param x,y,z: Position Setpoint in NED-Frame
-   :param yaw_setpoint: Yaw Setpoint in radians
+.. cpp:function:: int Navigation::position_set(float x, float y, float z, float yaw=0, float tolerance=0, bool relative=false, bool async=false, bool yaw_valid=false, bool body_frame=false)
+
+   :param x,y,z: Position Setpoint in NED-Frame (in body-frame if body_frame=true)
+   :param yaw: Yaw Setpoint in radians
    :param yaw_valid: Must be set to true, if yaw setpoint is provided
    :param tolerance: Acceptance radius in meters, default value=1.0m
    :param relative: If true, position setpoints relative to current position is sent
    :param async: If true, asynchronous mode is set
+   :param body_frame: If true, position setpoints are relative with respect to body frame
    :return: For async=true, returns 0 if the command is successfully sent to the vehicle, else returns 1. For async=false, returns 0 if the vehicle reaches given setpoint before timeout=30secs, else returns 1.
 
 *Usage:*
@@ -316,20 +321,21 @@ CPP
     #include <core_script_bridge/navigation_bridge.h>
 
     Navigation nav;
-    nav.position_set(1.0, 3.5, -5.0, 0.12, 5.0, false, false, true);
-    #sends (x,y,z)=(1.0,3.5,-5.0), yaw=0.12, tolerance=5.0m, relative=false, async=false, yaw_valid=true
+    nav.position_set(1.0, 3.5, -5.0, 0.12, 5.0, false, false, true, false);
+    #sends (x,y,z)=(1.0,3.5,-5.0)(m), yaw=0.12rad, tolerance=5.0m, relative=false, async=false, yaw_valid=true, body_frame=false
 
 Python
 """"""
  
-.. py:function:: navigation.position_set(self, x, y, z, yaw=0.0, tolerance=0.0, relative=False, async=False, yaw_valid=False)
+.. py:function:: navigation.position_set(self, x, y, z, yaw=0.0, tolerance=0.0, relative=False, async=False, yaw_valid=False, body_frame=False)
     
-   :param float x,y,z: Position Setpoint in NED-Frame
+   :param float x,y,z: Position Setpoint in NED-Frame (in body-frame if body_frame=true)
    :param float yaw_setpoint: Yaw Setpoint in radians
    :param bool yaw_valid: Must be set to true, if yaw setpoint is provided
    :param float tolerance: Acceptance radius in meters, default value=1.0m
    :param bool relative: If true, position setpoints relative to current position is sent
    :param bool async: If true, asynchronous mode is set
+   :param body_frame: If true, position setpoints are relative with respect to body frame
    :return: 0 if the land command is successfully sent to the vehicle, else returns 1.
 
 *Usage:*
@@ -338,15 +344,17 @@ Python
 
     from flyt_python import api
     nav = api.navigation() 
-    nav.position_set(1.0, 3.5, -5.0, 0.12, 5.0, false, false, true);
-    #sends (x,y,z)=(1.0,3.5,-5.0), yaw=0.12, tolerance=5.0m, relative=false, async=false, yaw_valid=true
+    nav.position_set(1.0, 3.5, -5.0, 0.12, 5.0, false, false, true, false)
+    #sends (x,y,z)=(1.0,3.5,-5.0)(m), yaw=0.12rad, tolerance=5.0m, relative=false, async=false, yaw_valid=true, body_frame=false
 
 .. _Velocity_Setpoint_onboard:
 
 **Velocity Setpoint**
 ^^^^^^^^^^^^^^^^^^^^^
 
-This API sends velocity setpoint command to the autopilot. Additionally, you can send yaw_rate setpoint (*yaw_rate_valid flag must be set true*) to the vehicle as well. Some abstract features have been added, such as tolerance/acceptance-radius, synchronous/asynchronous mode, sending setpoints relative to current velocity (*relative flag must be set true*). 
+This API sends velocity setpoint command to the autopilot. Additionally, you can send yaw_rate setpoint (*yaw_rate_valid flag must be set true*) to the vehicle as well. Some abstract features have been added, such as tolerance/acceptance-radius, synchronous/asynchronous mode, sending setpoints relative to current velocity (*relative flag must be set true*), sending setpoints relative to current body frame (*body_frame flag must be set true*). 
+
+.. note:: You can either set ``body_frame`` or ``relative`` flag. If both are set, ``body_frame`` takes precedence.
 
 .. tip:: Asynchronous mode - The API call would return as soon as the command has been sent to the autopilot, irrespective of whether the vehicle has reached the given setpoint or not.
 
@@ -378,22 +386,24 @@ ROS
     tolerance: 0
     async: false
     relative: false
-    yaw_rate_valid: true"                   
+    yaw_rate_valid: true
+    body_frame: false"                   
 
-    #sends (vx,vy,vz)=(0.5,0.2,-0.1), yaw_rate=0.1, tolerance=1.0m/s, relative=false, async=false, yaw_rate_valid=true
+    #sends (vx,vy,vz)=(0.5,0.2,-0.1)(m/s), yaw_rate=0.1rad/s,  relative=false, async=false, yaw_rate_valid=true, body_frame=false
     #default value of tolerance=1.0m/s if left at 0
 
 CPP
 """
 
-.. cpp:function:: int position_set(float x, float y, float z, float yaw_setpoint=0, float tolerance=0, bool relative=false, bool async=false, bool yaw_valid=false)
-   
-   :param x,y,z: Position Setpoint in NED-Frame
-   :param yaw_setpoint: Yaw Setpoint in radians
-   :param yaw_valid: Must be set to true, if yaw setpoint is provided
-   :param tolerance: Acceptance radius in meters
-   :param relative: If true, position setpoints relative to current position is sent
+.. cpp:function:: int Navigation::velocity_set(float vx, float vy, float vz, float yaw_rate=0, float tolerance=0, bool relative=false, bool async=false, bool yaw_rate_valid=false, bool body_frame=false)
+
+   :param vx,vy,vz: Velocity Setpoint in NED-Frame (in body-frame if body_frame=true)
+   :param yaw_rate: Yaw_rate Setpoint in radians/sec
+   :param yaw_rate_valid: Must be set to true, if yaw_rate setpoint is provided
+   :param tolerance: Acceptance radius in meters/s, default value=1.0m/s
+   :param relative: If true, velocity setpoints relative to current position is sent
    :param async: If true, asynchronous mode is set
+   :param body_frame: If true, velocity setpoints are with respect to body frame
    :return: For async=true, returns 0 if the command is successfully sent to the vehicle, else returns 1. For async=false, returns 0 if the vehicle reaches given setpoint before timeout=30secs, else returns 1.
 
 *Usage:*
@@ -403,21 +413,22 @@ CPP
     #include <core_script_bridge/navigation_bridge.h>
 
     Navigation nav;
-    nav.position_set(1.0, 3.5, -5.0, 0.12, 5.0, false, false, true);
-    #sends (x,y,z)=(1.0,3.5,-5.0), yaw=0.12, tolerance=5.0m, relative=false, async=false, yaw_valid=true
+    nav.velocity_set(1.0, 0.5, -1.0, 0.12, 0.5, false, false, true, false);
+    #sends (vx,vy,vz)=(1.0,0.5,-1.0)(m/s), yaw_rate=0.12rad/s, tolerance=0.5m/s, relative=false, async=false, yaw_rate_valid=true, body_frame=false
 
 Python
 """"""
  
-.. py:function:: navigation.position_set(self, x, y, z, yaw=0.0, tolerance=0.0, relative=False, async=False, yaw_valid=False)
+.. py:function:: navigation.velocity_set(self, vx, vy, vz, yaw_rate=0.0, tolerance=0.0, relative=False, async=False, yaw_rate_valid=False, body_frame=False)
     
-   :param x,y,z: Position Setpoint in NED-Frame
-   :param float yaw_setpoint: Yaw Setpoint in radians
-   :param bool yaw_valid: Must be set to true, if yaw setpoint is provided
-   :param float tolerance: Acceptance radius in meters
-   :param bool relative: If true, position setpoints relative to current position is sent
-   :param bool async: If true, asynchronous mode is set
-   :return: 0 if the land command is successfully sent to the vehicle, else returns 1.
+   :param vx,vy,vz: Velocity Setpoint in NED-Frame (in body-frame if body_frame=true)
+   :param yaw_rate: Yaw_rate Setpoint in radians/sec
+   :param yaw_rate_valid: Must be set to true, if yaw_rate setpoint is provided
+   :param tolerance: Acceptance radius in meters/s, default value=1.0m/s
+   :param relative: If true, velocity setpoints relative to current position is sent
+   :param async: If true, asynchronous mode is set
+   :param body_frame: If true, velocity setpoints are with respect to body frame
+   :return: For async=true, returns 0 if the command is successfully sent to the vehicle, else returns 1. For async=false, returns 0 if the vehicle reaches given setpoint before timeout=30secs, else returns 1.
 
 *Usage:*
 
@@ -425,57 +436,245 @@ Python
 
     from flyt_python import api
     nav = api.navigation() 
-    nav.position_set(1.0, 3.5, -5.0, 0.12, 5.0, false, false, true);
-    #sends (x,y,z)=(1.0,3.5,-5.0), yaw=0.12, tolerance=5.0m, relative=false, async=false, yaw_valid=true
+    nav.velocity_set(1.0, 0.5, -1.0, 0.12, 0.5, false, false, true, false)
+    #sends (vx,vy,vz)=(1.0,0.5,-1.0)(m/s), yaw_rate=0.12rad/s, tolerance=0.5m/s, relative=false, async=false, yaw_rate_valid=true, body_frame=false
 
-.. .. function:: format_exception(etype, value, tb[, limit=None])
+.. _Attitude_Setpoint_onboard:
 
-..    Format the exception with a traceback.
+**Attitude Setpoint**
+^^^^^^^^^^^^^^^^^^^^^
 
-..    :param etype: exception type
-..    :param value: exception value
-..    :param tb: traceback object
-..    :param limit: maximum number of stack frames to show
-..    :type limit: integer or None
-..    :rtype: list of strings
+.. caution:: This is an advanced API and must be used iff its absolutely necessary. Incorrect use will destabilize the vehicle.
+
+This API sends attitude setpoint command to the autopilot. You must send roll, pitch, yaw and thrust setpoints at regular intervals to keep the vehicle stable.
 
 
-.. rosservice call /flytsim/navigation/position_hold "{}"
+ROS
+"""
+
+*Service Name:* /flytsim/navigation/attitude_set
+
+*Service Type:* core_api/AttitudeSet, below is its description
+
+.. literalinclude:: include/navigation/AttitudeSet.srv
+   :language: xml
+   :tab-width: 2
+
+*Usage:*
+
+.. code-block:: bash
+    
+    rosservice call /flytsim/navigation/attitude_set "pose:
+      header:
+        seq: 0
+        stamp:
+          secs: 0
+          nsecs: 0
+        frame_id: ''
+      twist:
+        linear:
+          x: 0.0
+          y: 0.0
+          z: 0.0
+        angular:
+          x: 0.0
+          y: 0.0
+          z: 0.3
+    thrust: 650.0"                  
+
+    #sends (roll,pitch,yaw)=(0.0,0.0,0.3)(rad), thrust = 650 (N)
+
+CPP
+"""
+
+.. cpp:function:: int Navigation::attitude_set(float roll, float pitch, float yaw, float thrust)
+
+   :param roll,pitch,yaw: Attitude Setpoints in radians
+   :param thrust: Thrust Setpoint in Newtons
+   :return: returns 1 if the command is successfully sent to the vehicle
+
+*Usage:*
+
+.. code-block:: CPP
+
+    #include <core_script_bridge/navigation_bridge.h>
+
+    Navigation nav;
+    nav.attitude_set(0.0, 0.0, -0.8, 660);
+    #sends (roll,pitch,yaw)=(0.0,0.0,0.8)(rad), thrust=660N
+
+Python
+""""""
+ 
+.. py:function:: navigation.attitude_set(self, roll, pitch, yaw, thrust)
+    
+   :param roll,pitch,yaw: Attitude Setpoints in radians
+   :param thrust: Thrust Setpoint in Newtons
+   :return: returns 1 if the command is successfully sent to the vehicle
+
+*Usage:*
+
+.. code-block:: Python
+
+    from flyt_python import api
+    nav = api.navigation() 
+    nav.attitude_set(0.0, 0.0, -0.8, 660)
+    #sends (roll,pitch,yaw)=(0.0,0.0,0.8)(rad), thrust=660N
 
 
-.. rosservice call /flytsim/navigation/velocity_set "twist:
-..   header:
-..     seq: 0
-..     stamp: {secs: 0, nsecs: 0}
-..     frame_id: ''
-..   twist:
-..     linear: {x: 0.0, y: 0.0, z: 0.0}
-..     angular: {x: 0.0, y: 0.0, z: 0.0}
-.. tolerance: 0.0
-.. async: false
-.. relative: false
-.. yaw_rate_valid: false" 
+.. _Position_Hold_onboard:
 
-.. rosservice call /flytsim/navigation/attitude_set "pose:
-..   header:
-..     seq: 0
-..     stamp:
-..       secs: 0
-..       nsecs: 0
-..     frame_id: ''
-..   twist:
-..     linear:
-..       x: 0.0
-..       y: 0.0
-..       z: 0.0
-..     angular:
-..       x: 0.0
-..       y: 0.0
-..       z: 0.0
-.. thrust: 0.0"
+**Position Hold/Loiter/Hover**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. rosservice call /flytsim/navigation/exec_script "app_name: ''
-.. arguments: ''" 
+This API sends current position of vehicle as position setpoint. 
+
+
+ROS
+"""
+
+*Service Name:* /flytsim/navigation/position_hold
+
+*Service Type:* core_api/PositionHold, below is its description
+
+.. literalinclude:: include/navigation/PositionHold.srv
+   :language: xml
+   :tab-width: 2
+
+*Usage:*
+
+.. code-block:: bash
+    
+    rosservice call /flytsim/navigation/position_hold "{}"                  
+
+
+CPP
+"""
+
+.. cpp:function:: int Navigation::position_hold()
+
+   :return: returns 1 if the command is successfully sent to the vehicle
+
+*Usage:*
+
+.. code-block:: CPP
+
+    #include <core_script_bridge/navigation_bridge.h>
+
+    Navigation nav;
+    nav.position_hold();
+
+Python
+""""""
+ 
+.. py:function:: navigation.position_hold(self)
+    
+   :return: returns 1 if the command is successfully sent to the vehicle
+
+*Usage:*
+
+.. code-block:: Python
+
+    from flyt_python import api
+    nav = api.navigation() 
+    nav.position_hold()
+
+
+.. _Exec_Script_onboard:
+
+**Execute Onboard CPP/Python Script**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+This API triggers execution of CPP/Python onboard scripts which are available in the FlytOS install space (/flyt/flytapps/onboard/install)
+
+
+ROS
+"""
+
+*Service Name:* /flytsim/navigation/exec_script
+
+*Service Type:* core_api/ExecScript, below is its description
+
+.. literalinclude:: include/navigation/ExecScript.srv
+   :language: xml
+   :tab-width: 2
+
+*Usage:*
+
+.. code-block:: bash
+    
+    rosservice call /flytsim/navigation/exec_script "{}"                  
+
+
+CPP
+"""
+
+No CPP API is available for execution of onboard scripts.
+
+Python
+""""""
+
+No Python API is available for execution of onboard scripts.
+
+
+.. _Waypoint_Handling_onboard:
+
+**Waypoint Handling**
+^^^^^^^^^^^^^^^^^^^^^
+
+For waypoint handling following FlytAPIs have been made available.
+
+
+.. ROS
+.. """
+
+.. *Service Name:* /flytsim/navigation/position_hold
+
+.. *Service Type:* core_api/PositionHold, below is its description
+
+.. .. literalinclude:: include/navigation/PositionHold.srv
+..    :language: xml
+..    :tab-width: 2
+
+.. *Usage:*
+
+.. .. code-block:: bash
+    
+..     rosservice call /flytsim/navigation/position_hold "{}"                  
+
+
+.. CPP
+.. """
+
+.. .. cpp:function:: int Navigation::position_hold()
+
+..    :return: returns 1 if the command is successfully sent to the vehicle
+
+.. *Usage:*
+
+.. .. code-block:: CPP
+
+..     #include <core_script_bridge/navigation_bridge.h>
+
+..     Navigation nav;
+..     nav.position_hold();
+
+.. Python
+.. """"""
+ 
+.. .. py:function:: navigation.position_hold(self)
+    
+..    :return: returns 1 if the command is successfully sent to the vehicle
+
+.. *Usage:*
+
+.. .. code-block:: Python
+
+..     from flyt_python import api
+..     nav = api.navigation() 
+..     nav.position_hold()
+
+
 
 
 .. rostopic echo /flytsim/mavros/imu/data
@@ -486,21 +685,4 @@ Python
 
 
 
-.. .. warning:: fwffefefe
-
-.. .. tip:: cqfeqe
-
-.. .. note:: ccqeceqe
-
-.. .. important:: cqecqecq
-
-.. .. hint:: ecqcceqe
-
-.. .. error:: cqcqecqecq
-
-.. .. danger:: cqecqecqe
-
-.. .. caution:: ceceqevqev
-
-.. .. attention:: cqcqevcqe
 

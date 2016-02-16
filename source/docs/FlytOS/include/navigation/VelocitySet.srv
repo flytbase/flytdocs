@@ -7,5 +7,6 @@ float32 tolerance
 bool async
 bool relative
 bool yaw_rate_valid
+bool body_frame
 ---
 bool success
