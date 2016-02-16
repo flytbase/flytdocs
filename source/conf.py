@@ -35,10 +35,10 @@ extensions = [
     'sphinx.ext.autodoc','youtube','images'
 ]
 
-images_config = dict(
-    backend='LightBox2',
-    default_image_width='100px'
-)
+# images_config = dict(
+#     backend='LightBox2',
+#     default_image_width='100px'
+# )
 #
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
