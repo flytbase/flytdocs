@@ -33,7 +33,7 @@ sys.path.append(os.path.abspath('_extensions/sphinxcontrib'))
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'sphinx.ext.autodoc','youtube12'
+    'sphinx.ext.autodoc','youtube'
 ]
 
 # images_config = dict(
