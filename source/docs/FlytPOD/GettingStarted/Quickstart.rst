@@ -224,7 +224,7 @@ Configuring FlytPOD with FlytConsole
 
 In the above steps we saw how to configure the Onboard Router and how to integrate FlytPOD to your drone. After finishing the hardware configurations, you can now move on to FlytConsole.
 
-..  To learn more about FlytConsole, look at the `FlytConsole documentation`_.
+To learn more about FlytConsole, look at the `FlytConsole documentation`_.
 
 .. intro and link to about FlytConsole
 
@@ -364,7 +364,7 @@ Following are the steps to configure FlytPOD with FlytConsole:
 
 
 
-.. _FlytConsole documentation: http://
+.. _FlytConsole documentation: http://docs.flytbase.com/docs/FlytPOD/GettingStarted/About_FlytConsole.html
 
 
 
