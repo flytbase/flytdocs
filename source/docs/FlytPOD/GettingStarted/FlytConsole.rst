@@ -1,6 +1,6 @@
 
-FlytConsole
-===========
+FlytConsole Widgets
+===================
 
 .. important:: This site is under active development.
 
@@ -8,7 +8,7 @@ FlytConsole
 
 .. 1. To launch FlytConsole enter this address http://"enter ip address here" :9090.
 
-FlytConsole is a web application that gives you an interface to configure your drone with Flyt. 
+.. FlytConsole is a web application that gives you an interface to configure your drone with Flyt. 
 
 The various components included in FlytConsole are as follows:
 
@@ -31,33 +31,36 @@ Frame Select
 """"""""""""
 
 
-.. figure:: /_static/Images/frame_select.png
+.. figure:: /_static/Images/frameSelect.png
 	:align: center
 	:scale: 50 %
 	
-	Frame Select  
+	Select the airframe type for your drone in Frame Select
 
 
-In Frame Select you can select the frame-type of your drone. You are provided with several predefined options of multi-copter and fixed wing configurations. These configurations are further subdivided based on the make of the drone.
+Frame Select allows you to select the airframe-type of your drone. You are provided with several predefined options of multi-copter and fixed wing configurations. These configurations are further subdivided based on the make of the drone.
 
-Depending upon the actual frame of your drone ,select the frame and click apply. After this FlytPOD will reboot however, FlytConsole will continue working.
+Depending upon the actual frame of your drone, select the airframe and click on Save and Reboot to reboot FlytPOD. 
+
+
+.. note:: Only FlytPOD will reboot after clicking on Save and Reboot. FlytConsole is not rebooted and will continue working. 
+
+
+
+
 
 
 Motor Configuration
 """""""""""""""""""
 
 
-In Motor Configuration you can calibrate the ESCs and test the motors.
+Motor Configuration lets you calibrate the ESCs and test the motors attached to your drone.
 
 ESC Calibration
 +++++++++++++++
 
 
-.. figure:: /_static/Images/ESC_calibration.png
-	:align: center
-	:scale: 50 %
-	
-	ESC Calibration  
+
 
    
 .. .. warning:: Make sure no propellers are attached to the motors before you proceed with ESC calibration.
@@ -71,13 +74,19 @@ ESC Calibration requires the following fields to be filled:
 2. Max PWM Value
 3. Number of Actuators
          
-The min and max PWM values are the expected values from the FlytPOD to the ESCs. If the expected values are different from the values set in the fields above, the drone will behave differently. Number of actuators is the number of motors depending upon the frame selected by you in Frame Select. FlytConsole consists of some predefined default values that can be changed. 
+The min and max PWM values are the expected values from the FlytPOD to the ESCs. If the expected values are different from the values set in the fields above, the drone will behave differently. Number of actuators is the number of motors depending upon the airframe selected by you in Frame Select. FlytConsole consists of some predefined default values that can be changed. 
 
-Once you have set the min, max and number of actuators, click on Start Calibration. You will see a message saying 'Calibration started'. This marks the start of Stage 1 of ESC Calibration. Disconnect the power from the ESCs and click on Next.  
+.. figure:: /_static/Images/escCalibration.png
+	:align: center
+	:scale: 50 %
+	
+	Min PWM values, Max PWM Values and Number of Actuators to be filled for ESC Calibration
 
-As soon as the EScs are powered they receive a high PWM value to get into the Calibration mode. This is stage 2. There is also a window for time duration(in seconds). The ESCs will receive high PWM value for this time duration set by you. After the time out the ESCs will automatically receive low PWM value and thus stage 3 begins. You can also disable it so you can manually lower it down by clicking on next.
+Once you have set the min, max and number of actuators, click on Start Calibration. You will see a message saying 'Calibration started'. This marks the start of Stage 1 of ESC Calibration. Disconnect the power from the ESCs and click on Next. 
 
-In stage 3 , wait for the timer to finish. You can enter this stage manually by disabling the Automatic PWM high time in seconds.
+Stage 2 involves setting the time duration(in seconds) for the PWM high time in stage 3. After this connect the power to the ESCs and click on next. 
+
+After the time out the ESCs will automatically receive low PWM value. This is stage 3.You can enter this stage manually by disabling the Automatic PWM high time in seconds and click on next.
 
 Stage 4 marks the end of ESC Calibration. Click on Finish.  
 
@@ -85,7 +94,7 @@ Stage 4 marks the end of ESC Calibration. Click on Finish.
 .. important:: * Not all ESC’s need range calibration. Please consult your ESC user documentation before you do it.
      				* Also this is a one-time setup which is NOT required to be done again until you change one or more of your ESC’s.
      				* Please follow the FlytConsole instructions.
-     				* It is recommended that you use the default values for minimum and maximum PWM values and for the number of Actuators.
+     				* It is recommended that you use the default values for minimum and maximum PWM values and the default number of Actuators.
 
 .. .. important:: * Not all ESC’s need range calibration. Please consult your ESC user documentation before you do it.
 ..      				* Also this is a one-time setup which is NOT required to be done again until you change one or more of your ESC’s.
@@ -108,7 +117,7 @@ Stage 4 marks the end of ESC Calibration. Click on Finish.
 Motor Testing
 +++++++++++++
 
-.. figure:: /_static/Images/motor_testing.png
+.. figure:: /_static/Images/motorTesting.png
 	:align: center
 	:scale: 50 %
 	
@@ -116,7 +125,7 @@ Motor Testing
 
    
 
-FlytConsole allows you to test the direction of rotation of your motors on your drone. In Motor testing you can do this by clicking on the respective motor that you want to test. Once you click on the motor, it will start rotating and you can check whether the direction of rotation is correct or not. Every adjacent motor to current one should rotate in the opposite direction. 
+FlytConsole allows you to test the direction of rotation of your motors attached to your drone. In Motor testing you can do this by clicking on the respective motor that you want to test. Once you click on the motor, it will start rotating and you can check whether the direction of rotation is correct or not. Every adjacent motor to current one should rotate in the opposite direction. 
 
 .. important:: * You need to power the ESCs for this.
      				* In case your motor rotates in the incorrect direction, you can swap any two of the ESC cables going to the motor and make the motor rotate in the desired direction.
@@ -133,14 +142,14 @@ Sensor Calibration
 ++++++++++++++++++
 
 
-.. figure:: /_static/Images/sensor_calibration.png
+.. figure:: /_static/Images/sensorCalibration.png
 	:align: center
 	:scale: 50 %
 	
 	Sensor Calibration  
 
    
-Sensor calibration is of utmost importance before you fly your drone. You need to calibrate magnetometer every time you change the flying field. If your autopilot orientation is not the same as that of your vehicle, update AUTOPILOT_ORIENTATION parameter accordingly. Similarly, if your external magnetometer's orientation differs from FlytPOD's heading, update EXT_MAG_ROTATION parameter.
+Sensor calibration is of utmost importance before you fly your drone. You need to calibrate magnetometer every time you change the flying field. If your autopilot orientation is not the same as that of your drone, update AUTOPILOT ORIENTATION parameter accordingly. Similarly, if your external magnetometer's orientation differs from FlytPOD's heading, update EXT MAG ROTATION parameter.
    
 The other sensors to be calibrated for correct attitude are given below:
 
@@ -154,16 +163,16 @@ The other sensors to be calibrated for correct attitude are given below:
 
 
 **Accelerometer Calibration**
-Hold the device steady in all the six directions( x, -x, y, -y, z, -z) for sometime. You will be notified when the current orientation is detected and calibration begins for that orientation. Keep steady till you are notified to change to a new direction.
+Hold the drone steady in all the six directions( x, -x, y, -y, z, -z) for sometime. You will be notified when the current orientation is detected and when calibration begins for that orientation. Keep steady till you are notified to change to a new direction.
 
 **Gyroscope Calibration**
-Keep the device steady without movement in a single state till the calibration ends. You will be notified when the calibration ends.
+Keep the drone steady without movement in a single state till the calibration ends. You will be notified when the calibration ends.
 
 **Magnetometer Calibration**
-This is similar to Accelerometer Calibration with an additional step of rotating the system in vertical axis in every orientation thereby covering all six directions.
+This is similar to Accelerometer Calibration with an additional step of rotating the drone in vertical axis in every orientation thereby covering all six directions.
 
 **Level calibration**
-Keep the device steady in flat position on a leveled surface or the floor.
+Keep the drone steady in flat position on a leveled surface on the floor.
 
 Parameters need to be saved and autopilot is to be rebooted by clicking on the Reboot button.
    
@@ -172,7 +181,7 @@ Parameters need to be saved and autopilot is to be rebooted by clicking on the R
 RC Calibration
 ++++++++++++++
       
-.. figure:: /_static/Images/RC_calibration.png
+.. figure:: /_static/Images/rcCalibration.png
 	:align: center
 	:scale: 50 %
 	
@@ -200,7 +209,7 @@ Following is a list of pin positions for the next few steps:
 
 .. note:: Hold in these positions for a few seconds till you get a message feedback.
 
-Once this is done map RC modes to three way switch channel and manual override to a switch channel in lower half of the page and set their thresholds.
+Once this is done map RC modes to three way switch channel and manual override to a switch channel in the lower half of the page and set their thresholds.
 	
 	
 .. important:: * Flyt can be used without RC, but we recommend having an emergency RC pilot ready in case something goes wrong.
@@ -209,16 +218,16 @@ Once this is done map RC modes to three way switch channel and manual override t
 					* A three way switch for testing with RC modes.
 					* A two way switch for Manual override.
 					* A two way optional switch for Return to Launch mode.
-					* Please follow instructions in FlytConsole. 
+					* Please follow the instructions in FlytConsole. 
    				
 
-Autopilot has to be rebooted after this.
 
-.. figure:: /_static/Images/save_reboot.png
+
+.. figure:: /_static/Images/rcCalibration2.png
 	:align: center
 	:scale: 50 %
 	
-	Save and Reboot      
+	Threshold Setters     
 
 .. 8. Select the type of receiver if you cannot see the data for RC.
       
@@ -230,10 +239,10 @@ Gain Tuning
 Gain tuning page consists of basic and advanced settings.
 
 **Basic**
-These are the mostly used gains that require to be tuned depending upon the attitude control response of the autopilot.
+These are the gains that are mostly used and require to be tuned depending upon the attitude control response of the autopilot.
 
 
-.. figure:: /_static/Images/GainTune_basic.png
+.. figure:: /_static/Images/gainsBasic.png
 	:align: center
 	:scale: 50 %
 	
@@ -244,7 +253,7 @@ These are the mostly used gains that require to be tuned depending upon the atti
 **Advanced**
 These are all parameters used throughout FlytOS. These can be changed if at all they need to be changed.
 
-.. figure:: /_static/Images/GainTune_advanced.png
+.. figure:: /_static/Images/gainsAdvanced.png
 	:align: center
 	:scale: 50 %
 	
@@ -261,6 +270,13 @@ GCS
  
 After completing all the above mentioned settings you are now ready to fly and test the basic navigation capabilities provided by the GCS.
    
+
+.. figure:: /_static/Images/gcs.png
+	:align: center
+	:scale: 50 %
+	
+	GCS  
+
 
 The functionality of GCS can be divided into three parts:
 
@@ -285,15 +301,24 @@ The functionality of GCS can be divided into three parts:
 
 **Flyt Inspector**
 
-Flyt Inspector streams live data from the drone. Following data is streamed from the drone:
+Flyt Inspector streams live data from the drone.
+
+
+.. figure:: /_static/Images/flightInspector.png
+	:align: center
+	:scale: 50 %
+	
+	Flight Inspector  
+
+
+Following data is streamed from the drone:
 
 1. Battery - gives the voltage and current consumed by the FlytPOD.
 2. GPS - gives the current latitude, longitude and altitude of the drone.
 3. IMU - gives the current attitude with respect to NED.
 4. Local Position - gives the position of the drone with respect to the home position.
-5. HUD - gives the orientation of the drone.
-6. MAG - 3 axis magnetometer provides the magnetic field along all three axes.
-7. RC IN - gives the input value received by FlytPOD because of RC.
+5. MAG - 3 axis magnetometer provides the magnetic field along all three axes.
+6. RC IN - gives the input value received by FlytPOD because of RC.
 
 
 
