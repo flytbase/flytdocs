@@ -51,9 +51,9 @@ Checkout and participate in our `forums`_ and interact with the community sharin
     :hidden:
     :caption: FlytConsole Documentation
   
-    docs/FlytPOD/GettingStarted/About_FlytPOD.rst
-    docs/FlytPOD/GettingStarted/Quickstart.rst
-    docs/FlytPOD/GettingStarted/RouterSetup.rst
+    docs/FlytPOD/GettingStarted/About_FlytConsole.rst
+    docs/FlytPOD/GettingStarted/FlytConsole.rst 
+
 
    
 .. toctree::
