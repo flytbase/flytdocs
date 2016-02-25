@@ -1,7 +1,7 @@
-.. _flytos_install_update:
+.. _flytos_install_guide:
 
-FlytOS - Installation and Update
-================================
+FlytOS - Installation Guide
+===========================
 
 Currently FlytOS has been tested on two platforms: :ref:`FlytPOD<about flytpod>` and '`Pixhawk`_ + `ODROID-XU4`_'. Developers are encouraged to try FlytOS on 'Pixhawk + other ARM based companion computers'. 
 

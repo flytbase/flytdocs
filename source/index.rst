@@ -32,7 +32,8 @@ Checkout and participate in our `forums`_ and interact with the community sharin
    :caption: FlytOS Documentation
 	
    docs/FlytOS/FlytOS.rst
-   docs/FlytOS/FlytOS_install_update.rst
+   docs/FlytOS/FlytOS_install.rst
+   docs/FlytOS/FlytOSLaunch.rst
    docs/FlytOS/ListOfAPIs.rst
    docs/FlytOS/OnboardAPIs.rst
    docs/FlytOS/REST_WebsocketAPIs.rst
