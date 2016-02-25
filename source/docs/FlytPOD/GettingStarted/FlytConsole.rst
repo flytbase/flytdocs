@@ -17,6 +17,13 @@ Dashboard
 
 Once FlytConsole launches you are greeted by the Dashboard. The Dashboard displays the Connection status, Battery monitor, GPS status, Frame type and other widgets that give you the current status of your drone.
 
+
+.. figure:: /_static/Images/Dashboard.png
+	:align: center
+	:scale: 50 %
+	
+	Dashboard displaying the various Widgets
+
 .. .. note:: Before you select your frame make sure the ESC is not connected to the supply.
 
 .. .. note:: Before you proceed make sure you are connected to FlytPOD.
@@ -35,7 +42,7 @@ Frame Select
 	:align: center
 	:scale: 50 %
 	
-	Select the airframe type for your drone in Frame Select
+	Frame Select displaying different airframes
 
 
 Frame Select allows you to select the airframe-type of your drone. You are provided with several predefined options of multi-copter and fixed wing configurations. These configurations are further subdivided based on the make of the drone.
@@ -80,7 +87,7 @@ The min and max PWM values are the expected values from the FlytPOD to the ESCs.
 	:align: center
 	:scale: 50 %
 	
-	Min PWM values, Max PWM Values and Number of Actuators to be filled for ESC Calibration
+	Min PWM values, Max PWM Values and Number of Actuators for ESC Calibration
 
 Once you have set the min, max and number of actuators, click on Start Calibration. You will see a message saying 'Calibration started'. This marks the start of Stage 1 of ESC Calibration. Disconnect the power from the ESCs and click on Next. 
 
@@ -121,7 +128,7 @@ Motor Testing
 	:align: center
 	:scale: 50 %
 	
-	Motor Testing  
+	Motor Testing for the airframe selected
 
    
 
@@ -146,7 +153,7 @@ Sensor Calibration
 	:align: center
 	:scale: 50 %
 	
-	Sensor Calibration  
+	Sensor Calibration comprising of Accel, Gyro, Mag and Level Calibration  
 
    
 Sensor calibration is of utmost importance before you fly your drone. You need to calibrate magnetometer every time you change the flying field. If your autopilot orientation is not the same as that of your drone, update AUTOPILOT ORIENTATION parameter accordingly. Similarly, if your external magnetometer's orientation differs from FlytPOD's heading, update EXT MAG ROTATION parameter.
@@ -185,7 +192,7 @@ RC Calibration
 	:align: center
 	:scale: 50 %
 	
-	RC Calibration  
+	Radio Controller Calibration
 
    
 Connect the Throttle, Roll, Pitch and Yaw to the respective RC channels. Also, set the Threshold for two way manual override and three way RC mode switches and their channels.
@@ -246,7 +253,7 @@ These are the gains that are mostly used and require to be tuned depending upon 
 	:align: center
 	:scale: 50 %
 	
-	Gain Tuning Basic Settings  
+	Basic Settings for Gain Tuning  
 
 
 
@@ -257,7 +264,7 @@ These are all parameters used throughout FlytOS. These can be changed if at all 
 	:align: center
 	:scale: 50 %
 	
-	Gain Tuning Advanced Settings  
+	Advanced Settings for Gain Tuning  
 
 
 
@@ -275,7 +282,7 @@ After completing all the above mentioned settings you are now ready to fly and t
 	:align: center
 	:scale: 50 %
 	
-	GCS  
+	Basic navigation through GCS 
 
 
 The functionality of GCS can be divided into three parts:
