@@ -58,7 +58,7 @@ Firmware Setup
     
     .. code-block:: bash
 
-			$ sudo dpkg -i <path to install file>/FlytOSv0.3-1.deb
+			$ sudo dpkg -i <path to debian package location>/FlytOSv0.3-1.deb
 
 .. _flytos update:
 
@@ -75,7 +75,7 @@ Download the FlytOSv0.x-y.deb file from `FlytOS Download`_ page. Once downloaded
     
 .. code-block:: bash
 
-   $ sudo dpkg -i <path to install file>/FlytOSv0.x-y.deb 		#fill in the v0.x-y with the correct version number.
+   $ sudo dpkg -i <path to debian package location>/FlytOSv0.x-y.deb 		#fill in the v0.x-y with the correct version number.
 
 
 
