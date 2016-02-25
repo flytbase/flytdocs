@@ -27,7 +27,7 @@ The source code of this app is located at */Flyt/FlytApps/Onboard/src/DemoApp1* 
 
 .. code-block:: bash
 
-    $ /Flyt/FlytApps/Onbo;;;;;;;;;;kokkokokoooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooookkokokokkooard/install/demoapp1 
+    $ /Flyt/FlytApps/Onboard/install/demoapp1 
 
 CPP - Code
 """"""""""
