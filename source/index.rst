@@ -24,19 +24,7 @@ This documentation gives all the inputs to get you started with Flyt. You can le
 
 Checkout and participate in our `forums`_ and interact with the community sharing your use cases, feedback and anything you need help with. You can always reach out to us for any issues at support@flytbase.com. 
 
-.. _documentation:
-
-.. toctree::
-   :maxdepth: 2
-   :hidden:
-   :caption: FlytSim Documentation
-   
-   docs/FlytSim/FlytSim.rst
-   docs/FlytSim/FlytSimInstallationGuide.rst
-   docs/FlytSim/FlytSimLaunch.rst
-   docs/FlytSim/OnboardApps.rst
-   docs/FlytSim/Web_MobileApps.rst
-   
+.. _documentation:  
 
 .. toctree::
    :maxdepth: 2
@@ -44,6 +32,7 @@ Checkout and participate in our `forums`_ and interact with the community sharin
    :caption: FlytOS Documentation
 	
    docs/FlytOS/FlytOS.rst
+   docs/FlytOS/FlytOS_install_update.rst
    docs/FlytOS/ListOfAPIs.rst
    docs/FlytOS/OnboardAPIs.rst
    docs/FlytOS/REST_WebsocketAPIs.rst
@@ -57,8 +46,27 @@ Checkout and participate in our `forums`_ and interact with the community sharin
     docs/FlytPOD/GettingStarted/Quickstart.rst
     docs/FlytPOD/GettingStarted/RouterSetup.rst
 
-   
+.. toctree::
+    :maxdepth: 2
+    :hidden:
+    :caption: FlytConsole Documentation
+  
+    docs/FlytPOD/GettingStarted/About_FlytPOD.rst
+    docs/FlytPOD/GettingStarted/Quickstart.rst
+    docs/FlytPOD/GettingStarted/RouterSetup.rst
 
+   
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+   :caption: FlytSim Documentation
+   
+   docs/FlytSim/FlytSim.rst
+   docs/FlytSim/FlytSimInstallationGuide.rst
+   docs/FlytSim/FlytSimLaunch.rst
+   docs/FlytSim/OnboardApps.rst
+   docs/FlytSim/Web_MobileApps.rst
+ 
 .. docs/GettingStarted/Getting_started_index.rst
 .. docs/FlytInternals/Flyt_internals_index.rst
 .. docs/API/API_index.rst
