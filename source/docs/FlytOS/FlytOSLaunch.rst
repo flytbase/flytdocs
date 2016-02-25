@@ -1,7 +1,7 @@
 .. _flytos basics:
 
-FlytOS Basics
-=============
+FlytOS - Basics
+===============
 
 .. _launch flytos:
 
