@@ -3,8 +3,9 @@
 FlytOS - Installation and Update
 ================================
 
-Currently FlytOS has been tested on two platforms: :ref:`FlytPOD<about flytpod>` and '`Pixhawk`_ + `ODROID-XU4`_'. Developers are welcomed to try FlytOS on 'Pixhawk + other ARM based companion computers'. 
+Currently FlytOS has been tested on two platforms: :ref:`FlytPOD<about flytpod>` and '`Pixhawk`_ + `ODROID-XU4`_'. Developers are encouraged to try FlytOS on 'Pixhawk + other ARM based companion computers'. 
 
+.. _flytos install:
 
 FlytOS - Installation
 ---------------------
@@ -12,8 +13,7 @@ FlytOS - Installation
 FlytPOD
 ^^^^^^^
 
-FlytOS comes pre-installed in FlytPOD. To update your firmware, please go to FlytOS-update<link> section.
-
+FlytOS comes pre-installed in FlytPOD. To update your firmware, please go to :ref:`FlytOS-update<flytos update>` section.
 
 Pixhawk + ODROID-XU4
 ^^^^^^^^^^^^^^^^^^^^
@@ -34,18 +34,16 @@ Hardware Setup
 Firmware Setup
 """"""""""""""
 
-Pixhawk Firmware
-++++++++++++++++
+**Pixhawk Firmware**
 
 * **[Recommended]** *Using Binaries* - Download and install the latest stable PX4 firmware release using QGC. 
-* *Build from source* - Clone the PX4 stable branch, build and install on Pixhawk.
+* *Build from source* - Clone the PX4 stable branch, build and install on Pixhawk.			
   
-FlytOS on ODROID-XU4
-++++++++++++++++++++
+**FlytOS on ODROID-XU4**
 
-* **[Recommended]** *Using FlytImage* - Download the FlytImage <link> on your local machine. This image comes pre-installed with FlytOS. Do Not forget to update your FlytOS, as the pre-installed firmware would be old. Follow this<link> guide to install the image on ODROID's SD/eMMC card.
+* **[Recommended]** *Using FlytImage* - Download the `FlytImage`_ on your local machine. This image comes pre-installed with FlytOS. Do Not forget to update your FlytOS, as the pre-installed package would be old. Follow `this <http://odroid.com/dokuwiki/doku.php?id=en:odroid_flashing_tools>`_ guide to install the image on ODROID's SD/eMMC card.
 
-* *Using FlytOS Debian Package* - FlytOS debian package for armhf architecture is also available to install if you dont want to use FlytImage. 
+* *Using FlytOS Debian Package* - FlytOS debian package for armhf architecture is also available for installation.
 
   - But, before doing that, install the following dependencies on ODROID:
 
@@ -54,23 +52,26 @@ FlytOS on ODROID-XU4
       
       .. code-block:: bash
 
-			$ sudo apt-get install ros-indigo-rosbridge-suite	python-serial	install python-flask python-wtforms	python-sqlalchemy python-concurrent.futures
-  - Go to the `FlytOS download`_ page. Download the FlytOSv0.3-1.deb file. Once downloaded, run the following command in your terminal to install FlytOS.
+			$ sudo apt-get install ros-indigo-rosbridge-suite python-serial python-flask python-wtforms python-sqlalchemy python-concurrent.futures
+
+  - Download the FlytOSv0.3-1.deb file from `FlytOS Download`_ page. Once downloaded, run the following command in your terminal to install FlytOS.
     
     .. code-block:: bash
 
 			$ sudo dpkg -i <path to install file>/FlytOSv0.3-1.deb
 
+.. _flytos update:
+
 FlytOS - Update
 ---------------
 
-FlytOS versions with bug fixes and additional features are released in regular intervals. To check the version of installed FlytOS in your system, issue the following command in your terminal.
+FlytOS versions with bug fixes and additional features are released at regular intervals. To check the version of installed FlytOS in your system, issue the following command in your terminal.
 
 .. code-block:: bash
 
 	 $ sudo dpkg -s flytcore
 
-Go to the `FlytOS download`_ page. Download the FlytOSv0.x-y.deb file. Once downloaded, run the following command in your terminal to install FlytOS.
+Download the FlytOSv0.x-y.deb file from `FlytOS Download`_ page. Once downloaded, run the following command in your terminal to update FlytOS.
     
 .. code-block:: bash
 
@@ -79,6 +80,7 @@ Go to the `FlytOS download`_ page. Download the FlytOSv0.x-y.deb file. Once down
 
 
 .. _ROS - Indigo: http://wiki.ros.org/indigo/Installation/Ubuntu
-.. _FlytOS Download: http://flytbase.com/flytos/
+.. _FlytOS Download: http://docs.flytbase.com/docs/FlytOS/FlytOS.html
 .. _Pixhawk: https://pixhawk.org/choice
 .. _ODROID-XU4: http://www.hardkernel.com/main/products/prdt_info.php
+.. _FlytImage: http://docs.flytbase.com/docs/FlytOS/FlytOS.html

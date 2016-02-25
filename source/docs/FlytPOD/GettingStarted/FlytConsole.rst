@@ -1,3 +1,4 @@
+.. _flytconsole widgets:
 
 FlytConsole Widgets
 ===================
