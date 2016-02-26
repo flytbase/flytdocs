@@ -59,7 +59,7 @@ Firmware Setup
     
     .. code-block:: bash
 
-			$ sudo dpkg -i <path to debian package location>/FlytOSv0.3-1.deb
+			$ sudo dpkg -i <path to debian package location>/flytOS_0.3-1_armhf.deb
 
 .. _flytos update:
 
@@ -84,4 +84,5 @@ Download the FlytOSv0.x-y.deb file from `FlytOS Download`_ page. Once downloaded
 .. _FlytOS Download: http://docs.flytbase.com/docs/FlytOS/FlytOS.html
 .. _Pixhawk: https://pixhawk.org/choice
 .. _ODROID-XU4: http://www.hardkernel.com/main/products/prdt_info.php
-.. _FlytImage: http://docs.flytbase.com/docs/FlytOS/FlytOS.html
+.. .. _FlytImage: http://docs.flytbase.com/docs/FlytOS/FlytOS.html
+.. _FlytImage: http://docs.flytbase.com/FlytOS#download
