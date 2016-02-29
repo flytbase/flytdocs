@@ -42,6 +42,7 @@ Firmware Setup
 **FlytOS on ODROID-XU4**
 
 * **[Recommended]** *Using FlytImage* - Download the `FlytImage`_ on your local machine. This image comes pre-installed with FlytOS. Do Not forget to update your FlytOS, as the pre-installed package would be old. Follow `this <http://odroid.com/dokuwiki/doku.php?id=en:odroid_flashing_tools>`_ guide to install the image on ODROID's SD/eMMC card.
+* After installing the image on the ODROID's SD/eMMC card, launch the ODROID Utility App on the desktop. Enter the FlytPOD's password(flytpod) at the prompt. Select the fourth option i.e Resize your root partition and reboot the system.
 
 * *Using FlytOS Debian Package* - FlytOS debian package for armhf architecture is also available for installation.
 
@@ -58,7 +59,7 @@ Firmware Setup
     
     .. code-block:: bash
 
-			$ sudo dpkg -i <path to debian package location>/FlytOSv0.3-1.deb
+			$ sudo dpkg -i <path to debian package location>/flytOS_0.3-1_armhf.deb
 
 .. _flytos update:
 
@@ -83,4 +84,5 @@ Download the FlytOSv0.x-y.deb file from `FlytOS Download`_ page. Once downloaded
 .. _FlytOS Download: http://flytbase.com/flytos/
 .. _Pixhawk: https://pixhawk.org/choice
 .. _ODROID-XU4: http://www.hardkernel.com/main/products/prdt_info.php
-.. _FlytImage: http://docs.flytbase.com/docs/FlytOS/FlytOS.html
+.. .. _FlytImage: http://docs.flytbase.com/docs/FlytOS/FlytOS.html
+.. _FlytImage: http://www.flytbase.com/flytos/#download
