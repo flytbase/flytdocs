@@ -80,7 +80,7 @@ Download the FlytOSv0.x-y.deb file from `FlytOS Download`_ page. Once downloaded
 
 
 .. _ROS - Indigo: http://wiki.ros.org/indigo/Installation/Ubuntu
-.. _FlytOS Download: http://docs.flytbase.com/docs/FlytOS/FlytOS.html
+.. _FlytOS Download: http://flytbase.com/flytos/
 .. _Pixhawk: https://pixhawk.org/choice
 .. _ODROID-XU4: http://www.hardkernel.com/main/products/prdt_info.php
 .. _FlytImage: http://docs.flytbase.com/docs/FlytOS/FlytOS.html
