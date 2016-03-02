@@ -15,7 +15,7 @@ To launch FlytOS, run this command in the terminal.
 
 	$ $(rospack find core_api)/scripts/start_flytOS.sh 
 
-If you get this error: ``Error: package 'core_api' not found``, source your bashrc.
+If you get this error: ``Error: package 'core_api' not found``, source your /etc/bash.bashrc.
 
 You can use FlytAPIs in your command line to do some simple maneuvers. For example,
 
