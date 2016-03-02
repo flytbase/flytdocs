@@ -11,6 +11,12 @@ The apps developed with FlytAPIs can talk to compatible drone/autopilot as well 
 
 |br|
 
+..  youtube:: CZFVWDN5Gcc
+    :aspect: 16:9
+    :width: 100%
+
+|br|
+
    
 .. |br| raw:: html
 
