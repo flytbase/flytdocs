@@ -59,20 +59,13 @@ For a quick start, you can follow the steps given below to install Ionic, Cordov
 
    .. important:: Please install JDK before installing Android Studio or Android SDK Tools. 
    
-   
-   
-   
-
-.. in above point, may be the link could be for oracle jdk binary---> following https://www.digitalocean.com/community/tutorials/how-to-install-java-on-ubuntu-with-apt-get
-
-.. this should be above jdk....if oracle jdk7 not install...android studio wont be installed.
-
 
 #. Go to the `link here`_ to install IntelliJ IDEA.
 
 
+.. in above point, may be the link could be for oracle jdk binary---> following https://www.digitalocean.com/community/tutorials/how-to-install-java-on-ubuntu-with-apt-get
 
-
+.. this should be above jdk....if oracle jdk7 not install...android studio wont be installed.
 
 
 
