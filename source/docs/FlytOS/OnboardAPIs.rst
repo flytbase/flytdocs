@@ -23,7 +23,8 @@ These APIs allows you to have navigational control over your vehicle, and also p
 
 .. danger:: This command might turn on the motors if their ESCs are powered up.
 
-This API arms the vehicle, passes controller outputs to the mixer. Usage of `TakeOff<TakeOff_onboard>` is preferred.
+This API arms the vehicle, passes controller outputs to the mixer. Usage of `TakeOff <TakeOff_onboard>`_ is preferred.
+
 
 ROS
 """

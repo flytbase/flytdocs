@@ -54,7 +54,7 @@ Firmware Setup
 
 			$ sudo apt-get install ros-indigo-rosbridge-suite python-serial python-flask python-wtforms python-sqlalchemy python-concurrent.futures
 
-  - Download the FlytOSv0.3-1.deb file from `FlytOS Download`_ page. Once downloaded, run the following command in your terminal to install FlytOS.
+  - Download the flytOS_0.3-1_armhf.deb file from `FlytOS Download`_ page. Once downloaded, run the following command in your terminal to install FlytOS.
     
     .. code-block:: bash
 
@@ -71,16 +71,15 @@ FlytOS versions with bug fixes and additional features are released at regular i
 
 	 $ sudo dpkg -s flytcore
 
-Download the FlytOSv0.x-y.deb file from `FlytOS Download`_ page. Once downloaded, run the following command in your terminal to update FlytOS.
+Download the flytOS_0.x-y_armhf.deb file from `FlytOS Download`_ page. Once downloaded, run the following command in your terminal to update FlytOS.
     
 .. code-block:: bash
 
-   $ sudo dpkg -i <path to debian package location>/FlytOSv0.x-y.deb 		#fill in the v0.x-y with the correct version number.
+   $ sudo dpkg -i <path to debian package location>/flytOS_0.x-y_armhf.deb 		#fill in the v0.x-y with the correct version number
 
 
 .. _ROS - Indigo: http://wiki.ros.org/indigo/Installation/Ubuntu
 .. _FlytOS Download: http://flytbase.com/flytos/
 .. _Pixhawk: https://pixhawk.org/choice
 .. _ODROID-XU4: http://www.hardkernel.com/main/products/prdt_info.php
-.. .. _FlytImage: http://docs.flytbase.com/docs/FlytOS/FlytOS.html
 .. _FlytImage: http://www.flytbase.com/flytos/#download
