@@ -19,7 +19,7 @@ These APIs allows you to have navigational control over your vehicle, and also p
 Namespace
 ^^^^^^^^^
 
-This namespace is a part of the url for all other rest calls and websocket connection.This has to be the first rest call before any other rest call or web socket connection.
+This namespace is a part of the url for all other rest calls and websocket connection. This has to be the first rest call before any other rest call or web socket connection.
 
 REST
 """"
@@ -628,10 +628,10 @@ REST
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 
 
-Websocket Initiallisation
+Websocket Initializations
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Websocket needs to be initialised once in every session. It requires additional libraries: event.emitter.js and roslib.js to be included in case of web based client.
+Websocket needs to be initialized once in every session. It requires additional libraries: event.emitter.js and roslib.js to be included in case of web based client.
 
 Socket
 """"""
@@ -741,21 +741,7 @@ Socket
 |                              | |                                                                                                                                                                |
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-.. .. warning:: fwffefefe
 
- .. .. tip:: cqfeqe
-
-.. .. note:: ccqeceqe
-
-.. .. important:: cqecqecq
-
-.. .. hint:: ecqcceqe
-
-.. .. error:: cqcqecqecq
-
-.. .. caution:: ceceqevqev
-
-.. .. attention:: cqcqevcqe
 
 
 
