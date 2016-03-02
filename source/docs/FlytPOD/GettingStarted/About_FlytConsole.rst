@@ -17,7 +17,7 @@ FlytConsole is a web application that gives you an interface to configure your d
 
 .. figure:: /_static/Images/Dashboard.png
 	:align: center
-	:scale: 50 %
+	
 
 
 
