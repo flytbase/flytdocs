@@ -21,7 +21,12 @@ Pixhawk + ODROID-XU4
 Hardware Setup
 """"""""""""""
 
-<link to video>
+Below is a hardware setup `youtube video <https://www.youtube.com/watch?v=B40pE02bjJI>`_ for Pixhawk + ODROID-XU4.
+
+..  youtube:: B40pE02bjJI
+    :aspect: 16:9
+    :width: 100%
+
 
 * FlytOS needs telemetry data from autopilot(Pixhawk). Connect Pixhawk Telem2 port to ODROID-XU4. There are many ways to do that as the setup video suggests:
 
