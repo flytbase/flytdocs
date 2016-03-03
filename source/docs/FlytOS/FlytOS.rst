@@ -18,7 +18,7 @@ FlytOS comes preloaded with FlytPOD. Alternately, it is also available for downl
 
 The apps developed with FlytAPIs can talk to compatible drone/autopilot as well as can be tested in a virtual ROS/Gazebo environment using FlytSim. The vision of FlytOS is to provide a standard language for the drone developers to talk to their drones.
 
-.. figure:: /_static/Images/FlytOSArch.png
+.. figure:: /_static/Images/FlytOSArch_withbg.png
 	:align: center
 	:scale: 100 %
 
