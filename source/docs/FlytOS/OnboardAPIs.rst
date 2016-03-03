@@ -10,7 +10,7 @@ FlytAPIs have been extended from ROS to CPP, Python, REST and Websocket. This do
 
 .. caution:: This guide is under active development.
 
-All ROS-based FlytAPIs begin with a fixed namespace. Use :ref:`Get Namespace<get_namespace>` to find out its value. One must replace <namespace> in all the following APIs with the previously obtained value.
+All ROS-based FlytAPIs begin with a fixed namespace. Use :ref:`Get Namespace<get_namespace_onboard>` to find out its value. One must replace <namespace> in all the following APIs with the previously obtained value.
 
 .. _get_namespace_onboard:
 
