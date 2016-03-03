@@ -69,6 +69,16 @@ Checkout and participate in our `forums`_ and interact with the community sharin
 .. toctree::
    :maxdepth: 2
    :hidden:
+   :caption: FlytAPI Documentation
+  
+   docs/FlytOS/ListOfAPIs.rst
+   docs/FlytOS/OnboardAPIs.rst
+   docs/FlytOS/REST_WebsocketAPIs.rst
+
+
+.. toctree::
+   :maxdepth: 2
+   :hidden:
    :caption: FlytApps Documentation
    
    docs/FlytApps/OnboardApps.rst
