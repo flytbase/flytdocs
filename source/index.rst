@@ -71,9 +71,9 @@ Checkout and participate in our `forums`_ and interact with the community sharin
    :hidden:
    :caption: FlytAPI Documentation
   
-   docs/FlytOS/ListOfAPIs.rst
-   docs/FlytOS/OnboardAPIs.rst
-   docs/FlytOS/REST_WebsocketAPIs.rst
+   docs/FlytAPI/ListOfAPIs.rst
+   docs/FlytAPI/OnboardAPIs.rst
+   docs/FlytAPI/REST_WebsocketAPIs.rst
 
 
 .. toctree::
