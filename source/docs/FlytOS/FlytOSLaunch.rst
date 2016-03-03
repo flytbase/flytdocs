@@ -8,14 +8,15 @@ FlytOS - Basics
 Launch FlytOS
 -------------
 
-Once you have installed **FlytOS**, you are ready to build your own apps and test it out on the pixhawk.
+Once you have installed **FlytOS**, you are ready to build your own apps and test it out on the pixhawk. If you have installed FlytImage, FlytOS would be launched automatically at every system bootup. To prevent this behaviour, comment the following line in ``/etc/rc.local`` file. 
+
 To launch FlytOS, run this command in the terminal.
 
 .. code-block:: bash
 
 	$ $(rospack find core_api)/scripts/start_flytOS.sh 
 
-If you get this error: ``Error: package 'core_api' not found``, source your /etc/bash.bashrc.
+.. important:: If you get this error: ``Error: package 'core_api' not found``, source your $HOME/.bashrc file.
 
 You can use FlytAPIs in your command line to do some simple maneuvers. For example,
 
@@ -38,8 +39,8 @@ You can use FlytAPIs in your command line to do some simple maneuvers. For examp
 	tolerance: 0.0
 	async: false
 	relative: false
-	body_frame: false
-	yaw_valid: false"
+	yaw_valid: false
+	body_frame: false"
 
 
 To know more about such commands, please refer to :ref:`FlytAPIs<list-of-APIs>` for more details.	

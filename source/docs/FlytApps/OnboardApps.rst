@@ -270,13 +270,13 @@ CPP
 ---
 
 * After compiling your <my_first_cpp_app> project, your executable <my_first_cpp_app> will be created inside <build> directory.
-* If FlytSim is not launched, launch FlytSim using :ref:`this<launch flytsim>` command.
+* If FlytOS/FlytSim is not launched, launch :ref:`FlytOS <launch flytos>` or :ref:`FlytSim <launch flytsim>`.
 * Execute your <my_first_cpp_app> cpp executable from terminal. 
 
 Python
 ------
 
-* If FlytSim is not launched, launch FlytSim using :ref:`this<launch flytsim>` command.
+* If FlytOS/FlytSim is not launched, launch :ref:`FlytOS <launch flytos>` or :ref:`FlytSim <launch flytsim>`.
 * Execute your <my_first_python_app>.py python script from terminal. 
 
 Install custom app
