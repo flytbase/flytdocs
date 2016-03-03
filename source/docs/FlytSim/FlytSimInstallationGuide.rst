@@ -38,6 +38,13 @@ To install FlytSim binaries,
 
 			$ chmod +x <path to install script>/flytsim_install.sh
 
+* Before proceeding further, add the following two lines at the end of your $HOME/.bashrc file.
+    
+    .. code-block:: bash
+
+      export PYTHONPATH=$PYTHONPATH:/flyt/flytapps
+      source /flyt/flytos/flytcore/setup.bash
+
 * Install FlytSim by executing the install script with **sudo** privileges.
 
   .. code-block:: bash

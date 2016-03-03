@@ -17,7 +17,7 @@ To launch FlytSim, run this command in the terminal.
 
 .. note:: For first time Gazebo users, Gazebo might take some time to launch. Be Patient!
 
-If you get this error: ``Error: package 'core_api' not found``, source your bashrc.
+.. important:: If you get this error: ``Error: package 'core_api' not found``, source your $HOME/.bashrc file.
 
 The above command would launch ROS and Gazebo. A quadrotor model-Iris will be automatically spawned for you to start executing your app. You can use FlytAPIs in your command line to do some simple maneuvers. For example,
 
@@ -41,7 +41,7 @@ The above command would launch ROS and Gazebo. A quadrotor model-Iris will be au
 	async: false
 	relative: false
 	yaw_valid: false
-	setpoint_type: 0"
+	body_frame: false"
 
 .. caution:: Gazebo runs in ENU frame, hence the above setpoints given in NED Frame would be transformed to ENU Frame by Gazebo.
 

@@ -1,4 +1,4 @@
-.. _flytsim onboard app:
+.. _onboard app:
 
 Onboard App
 ===========
@@ -6,15 +6,15 @@ Onboard App
 Execute built-in Demo Apps
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-FlytSim package comes with Demo apps which can be executed to do simple navigation tasks. Currently, CPP and Python based FlytAPIs are available, hence DemoApps for both CPP and Python have been provided.
-All the sample apps can be found at our `github link`_.
+FlytOS comes with pre-installed Demo apps which can be executed to do simple navigation tasks. Currently, for onboard scripting, CPP and Python based FlytAPIs are available, hence DemoApps for both CPP and Python have been provided.
+All the sample applications can be found at our `github link`_.
 
 Demo App 1
 ----------
 
 This demo app makes the robot takeoff, move in a square trajectory of side length 5m and land once the entire mission is over. 
 
-Below is a demo `youtube video <https://www.youtube.com/watch?v=z36zvRfn58U&feature=youtu.be>`_ of the same app.
+Below is a demo `youtube video <https://www.youtube.com/watch?v=z36zvRfn58U&feature=youtu.be>`_ of the same app when run on :ref:`FlytSim <flytsim>`.
 
 ..  youtube:: z36zvRfn58U
     :aspect: 16:9
@@ -23,11 +23,11 @@ Below is a demo `youtube video <https://www.youtube.com/watch?v=z36zvRfn58U&feat
 CPP - Execution
 """""""""""""""
 
-The source code of this app is located at */Flyt/FlytApps/Onboard/src/DemoApp1* and its executable *demoapp1* is at */Flyt/FlytApps/Onboard/install*. To execute this app run the following command in your terminal.
+The source code of this app is located at */flyt/flytapps/onboard/src/demoapp1* and its executable *demoapp1* is at */flyt/flytapps/onboard/install*. To execute this app run the following command in your terminal.
 
 .. code-block:: bash
 
-    $ /Flyt/FlytApps/Onboard/install/demoapp1 
+    $ /flyt/flytapps/onboard/install/demoapp1 
 
 CPP - Code
 """"""""""
@@ -53,7 +53,7 @@ CPP - Code Explained
 	   :tab-width: 2
 	   :lines: 4
 
-* TakeOff command could be sent to vehicle with relative takeoff altitude in metres as argument. Over here the takeoff altitude is 3m.
+* TakeOff command could be sent to vehicle with relative takeoff altitude in meters as argument. Over here the takeoff altitude is 3m.
 
   .. literalinclude:: include/demoapp1.cpp
 	   :language: c
@@ -62,7 +62,7 @@ CPP - Code Explained
 
   .. caution:: You must ensure to call takeoff() before sending any other position setpoints. takeoff() inherently calls arm(), hence calling arm() directly also arms the vehicle and makes it responsive towards next setpoint commands.
 
-* Position Setpoints could be sent to the vehicle with (x,y,z) in metres in Local-NED Frame as argument. 
+* Position Setpoints could be sent to the vehicle with (x,y,z) in meters in Local-NED Frame as argument. 
 
   .. literalinclude:: include/demoapp1.cpp
 	   :language: cpp
@@ -81,11 +81,11 @@ CPP - Code Explained
 Python - Execution
 """"""""""""""""""
 
-The source code *demoapp1.py* of this app is located at */Flyt/FlytApps/Onboard/install*. To execute this app run the following command in your terminal.
+The source code *demoapp1.py* of this app is located at */flyt/flytapps/onboard/install*. To execute this app run the following command in your terminal.
 
 .. code-block:: bash
 
-    $ python /Flyt/FlytApps/Onboard/install/demoapp1.py
+    $ python /flyt/flytapps/onboard/install/demoapp1.py
 
 Python - Code
 """""""""""""
@@ -131,11 +131,11 @@ This demo app makes the robot takeoff, move in a square trajectory of side lengt
 CPP - Execution
 """""""""""""""
 
-The source code of this app is located at */Flyt/FlytApps/Onboard/src/DemoApp2* and its executable *demoapp2* is at */Flyt/FlytApps/Onboard/install*. To execute this app run the following command in your terminal.
+The source code of this app is located at */flyt/flytapps/onboard/src/demoapp2* and its executable *demoapp2* is at */flyt/flytapps/onboard/install*. To execute this app run the following command in your terminal.
 
 .. code-block:: bash
 
-    $ /Flyt/FlytApps/Onboard/install/demoapp2 3
+    $ /flyt/flytapps/onboard/install/demoapp2 3
     # here '3' is passed as an argument, one could send any other float value.
 
 CPP - Code
@@ -148,11 +148,11 @@ CPP - Code
 Python - Execution
 """"""""""""""""""
 
-The source code *demoapp2.py* of this app is located at */Flyt/FlytApps/Onboard/install*. To execute this app run the following command in your terminal.
+The source code *demoapp2.py* of this app is located at */flyt/flytapps/onboard/install*. To execute this app run the following command in your terminal.
 
 .. code-block:: bash
 
-    $ python /Flyt/FlytApps/Onboard/install/demoapp2.py 3
+    $ python /flyt/flytapps/onboard/install/demoapp2.py 3
     # here '3' is passed as an argument, one could send any other float value. 
 
 Python - Code
@@ -234,7 +234,7 @@ CMakeLists.txt - Explained
 	   :tab-width: 2
 	   :lines: 11-12
 
-*	Add the following install command to install your created <my_first_cpp_app> executable target to install space - /Flyt/FlytApps/Onboard/install. This would allow web/mobile apps to execute your installed scripts remotely.
+*	Add the following install command to install your created <my_first_cpp_app> executable target to install space - /flyt/flytapps/onboard/install. This would allow web/mobile apps to execute your installed scripts remotely.
 
 	.. literalinclude:: include/CMakeLists.txt
 	   :language: cmake
@@ -285,30 +285,20 @@ Install custom app
 CPP
 ---
 
-To install your app into /Flyt/FlytApps/Onboard/install space, so that your Android/Web App could execute it remotely, run this command in your terminal::
+To install your app into /flyt/flytapps/onboard/install space, so that your Android/Web App could execute it remotely, run this command in your terminal::
 
 	$ sudo cmake -DCOMPONENT=Runtime -P cmake_install.cmake
 
 Python
 ------
 
-To install your app into /Flyt/FlytApps/Onboard/install space, so that your Android/Web App could execute it remotely, make your python script executable::
+To install your app into /flyt/flytapps/onboard/install space, so that your Android/Web App could execute it remotely, make your python script executable::
 
 	$ sudo chmod +x <my_first_python_app>.py
 
 and copy this script to mentioned location::
 
-	$ sudo cp <my_first_python_app>.py /Flyt/FlytApps/Onboard/install/
-
-
-
-.. Edit or create your own custom models
-.. ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. .. note:: This section is for advanced users
-
-.. * model urdf files are available in <this path>
-.. * users could edit or create their own model files
+	$ sudo cp <my_first_python_app>.py /flyt/flytapps/onboard/install/
 
 
 .. _github link: https://github.com/navstik/flytsamples

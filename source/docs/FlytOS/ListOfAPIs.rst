@@ -63,7 +63,6 @@ Parameter Handling APIs
 
 These APIs help you in tweaking system parameters.
 
-* Get Global Namespace
 * Param Create
 * Param Set
 * Param Get

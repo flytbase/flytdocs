@@ -64,9 +64,9 @@ Firmware Setup
       
       .. code-block:: bash
 
-			$ sudo apt-get install ros-indigo-rosbridge-suite python-serial python-flask python-wtforms python-sqlalchemy python-concurrent.futures
+			$ sudo apt-get install ros-indigo-rosbridge-suite ros-indigo-control-toolbox python-serial python-flask python-wtforms python-sqlalchemy python-concurrent.futures 
 
-  - Before proceeding further, add the following two lines at the end of your ~/.bashrc file.
+  - Before proceeding further, add the following two lines at the end of your $HOME/.bashrc file.
     
     .. code-block:: bash
 
