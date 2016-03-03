@@ -20,7 +20,7 @@ The apps developed with FlytAPIs can talk to compatible drone/autopilot as well 
 
 .. figure:: /_static/Images/FlytOSArch_withbg.png
 	:align: center
-	:scale: 100 %
+	:scale: 60 %
 
 	FlytOS Architecture Diagram
 
