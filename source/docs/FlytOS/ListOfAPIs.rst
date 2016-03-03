@@ -13,7 +13,7 @@ This document lists out all the available FlytAPIs.
 Get Namespace
 ^^^^^^^^^^^^^
 
-All FlytAPIs begin with a fixed namespace. Use this (:ref:`onboard<get_namespace_onboard>`) (:ref:`REST<Arm_REST>`) API to find out its value. 
+All FlytAPIs begin with a fixed namespace. Use this API - :ref:`onboard<get_namespace_onboard>` / :ref:`REST<Arm_REST>` to find out its value. 
 
 
 Navigation APIs

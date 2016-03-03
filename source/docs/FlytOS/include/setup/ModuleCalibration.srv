@@ -1,3 +1,4 @@
+uint8 STOP = 0
 uint8 ACCELEROMETER = 1
 uint8 GYROSCOPE = 2
 uint8 MAGNETOMETER = 3

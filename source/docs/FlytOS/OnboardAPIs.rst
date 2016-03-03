@@ -6,11 +6,11 @@ FlytAPI - Onboard
 =================
 
 
-FlytAPIs have been extended from ROS to CPP, Python, REST and Websocket. This document describes all the available onboard(ROS/CPP/Python) FlytAPIs in details.
-
 .. caution:: This guide is under active development.
 
-All ROS-based FlytAPIs begin with a fixed namespace. Use :ref:`Get Namespace<get_namespace_onboard>` to find out its value. One must replace <namespace> in all the following APIs with the previously obtained value.
+FlytAPIs have been extended from ROS to CPP, Python, REST and Websocket. This document describes all the available onboard(ROS/CPP/Python) FlytAPIs in details.
+
+.. important:: All ROS-based FlytAPIs begin with a fixed namespace. Use :ref:`Get Namespace<get_namespace_onboard>` to find out its value. One must replace <namespace> in all the following APIs with the previously obtained value.
 
 .. _get_namespace_onboard:
 
@@ -243,13 +243,14 @@ ROS
 
 .. code-block:: bash
 
-    rosservice call /<namespace>/navigation/land "{}" 
+    rosservice call /<namespace>/navigation/land "async: false"
 
 CPP
 """
 
-.. cpp:function:: int Navigation::land(void)
+.. cpp:function:: int Navigation::land(bool async = true)
 	 
+   :param async: If true, asynchronous mode is set
    :return: 0 if the land command is successfully sent to the vehicle, else returns 1.
 
 *Usage:*
@@ -259,13 +260,14 @@ CPP
     #include <core_script_bridge/navigation_bridge.h>
 
     Navigation nav;
-    nav.land();
+    nav.land(true);
 
 Python
 """"""
  
-.. py:function:: navigation.land(self)
+.. py:function:: navigation.land(self, async=True)
 		
+   :param async: If true, asynchronous mode is set
    :return: 0 if the land command is successfully sent to the vehicle, else returns 1.
 
 *Usage:*
@@ -274,7 +276,7 @@ Python
 
     from flyt_python import api
     nav = api.navigation() 
-    nav.land()
+    nav.land(True)
 
 .. _Position_Setpoint_onboard:
 
@@ -316,13 +318,10 @@ ROS
     async: false
     relative: false
     yaw_valid: true
-    body_frame: false
-    setpoint_type: 0"
+    body_frame: false"
 
     #sends (x,y,z)=(1.0,3.5,-5.0)(m), yaw=0.12rad, relative=false, async=false, yaw_valid=true, body_frame=false
-    #default value of tolerance=1.0m if left at 0
-    #in general, setpoint_type should be left at 0
-    
+    #default value of tolerance=1.0m if left at 0    
 
 CPP
 """
