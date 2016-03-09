@@ -450,3 +450,9 @@ code {
 code.descname, code.descclassname {
     font-size: 1.0em;
 }
+
+hr {
+    margin-top: 4em !important;
+    margin-bottom: 1.5em !important;
+    border-top: 5px solid #e74944 !important;
+}

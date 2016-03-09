@@ -20,6 +20,14 @@ Below is a demo `youtube video <https://www.youtube.com/watch?v=z36zvRfn58U&feat
     :aspect: 16:9
     :width: 100%
 
+Below is a demo `youtube video <https://www.youtube.com/watch?v=lwKZXkzkM80>`_ of the same app when run on :ref:`FlytPOD <about flytpod>`.
+
+..  youtube:: lwKZXkzkM80
+    :aspect: 16:9
+    :width: 100%
+
+
+
 CPP - Execution
 """""""""""""""
 

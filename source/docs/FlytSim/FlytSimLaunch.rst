@@ -54,7 +54,7 @@ To kill this instance of FlytSim, run this command in your terminal.
 
 .. code-block:: bash
 
-	$ $(rospack find core_api)/scripts/kill_flytOS.sh --sitl
+	$ $(rospack find core_api)/scripts/kill_flytOS.sh
 
 
 

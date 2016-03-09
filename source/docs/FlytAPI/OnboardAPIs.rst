@@ -12,6 +12,8 @@ FlytAPIs have been extended from ROS to CPP, Python, REST and Websocket. This do
 
 .. important:: All ROS-based FlytAPIs begin with a fixed namespace. Use :ref:`Get Namespace<get_namespace_onboard>` to find out its value. One must replace <namespace> in all the following APIs with the previously obtained value.
 
+----
+
 .. _get_namespace_onboard:
 
 Get Namespace
@@ -33,6 +35,9 @@ This API returns the namespace under which FlytOS is running. By default, namesp
 
     rosservice call /get_global_namespace
     #the value of namespace is returned in 'param_value'
+
+----
+
 
 Navigation APIs
 ---------------
@@ -100,6 +105,9 @@ Python
     nav = api.navigation() 
     nav.arm()
 
+----
+
+
 .. _Disarm_onboard:
 
 **Disarm**
@@ -158,6 +166,7 @@ Python
     nav = api.navigation() 
     nav.disarm()
 
+----
 
 .. _TakeOff_onboard:
 
@@ -218,6 +227,8 @@ Python
     nav = api.navigation() 
     nav.take_off(3.0)
 
+----
+
 
 .. _Land_onboard:
 
@@ -277,6 +288,8 @@ Python
     from flyt_python import api
     nav = api.navigation() 
     nav.land(True)
+
+----
 
 .. _Position_Setpoint_onboard:
 
@@ -370,6 +383,8 @@ Python
     nav.position_set(1.0, 3.5, -5.0, 0.12, 5.0, false, false, true, false)
     #sends (x,y,z)=(1.0,3.5,-5.0)(m), yaw=0.12rad, tolerance=5.0m, relative=false, async=false, yaw_valid=true, body_frame=false
 
+----
+
 .. _Velocity_Setpoint_onboard:
 
 **Velocity Setpoint**
@@ -462,6 +477,8 @@ Python
     nav.velocity_set(1.0, 0.5, -1.0, 0.12, 0.5, false, false, true, false)
     #sends (vx,vy,vz)=(1.0,0.5,-1.0)(m/s), yaw_rate=0.12rad/s, tolerance=0.5m/s, relative=false, async=false, yaw_rate_valid=true, body_frame=false
 
+----
+
 .. _Attitude_Setpoint_onboard:
 
 **Attitude Setpoint**
@@ -545,6 +562,8 @@ Python
     #sends (roll,pitch,yaw)=(0.0,0.0,0.8)(rad), thrust=660N
 
 
+----
+
 .. _Position_Hold_onboard:
 
 **Position Hold/Loiter/Hover**
@@ -602,6 +621,7 @@ Python
     nav = api.navigation() 
     nav.position_hold()
 
+----
 
 .. _Exec_Script_onboard:
 
@@ -638,6 +658,8 @@ Python
 """"""
 
 No Python API is available for execution of onboard scripts.
+
+----
 
 
 .. _Waypoint_Handling_onboard:
