@@ -32,12 +32,6 @@ To install FlytSim binaries,
 	   :language: bash
 	   :tab-width: 4
 
-* Make the install script executable.
-
-  .. code-block:: bash
-
-			$ chmod +x <path to install script>/flytsim_install.sh
-
 * Before proceeding further, add the following two lines at the end of your $HOME/.bashrc file.
     
   .. code-block:: bash
@@ -45,11 +39,18 @@ To install FlytSim binaries,
      export PYTHONPATH=$PYTHONPATH:/flyt/flytapps
      source /flyt/flytos/flytcore/setup.bash
 
+* Go to the directory where you extracted flytsimv0.x.zip. 
+* Make the install script executable.
+
+  .. code-block:: bash
+
+			$ chmod +x flytsim_install.sh
+
 * Install FlytSim by executing the install script with **sudo** privileges.
 
   .. code-block:: bash
 
-			$ sudo <path to install script>/flytsim_install.sh
+			$ sudo ./flytsim_install.sh
 
 * Just in case you see any dependency issues cropping up in your screen **other than that of Gazebo2** while executing the install script, kindly run the following command and execute the install script again.
   	

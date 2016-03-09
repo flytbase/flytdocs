@@ -9,15 +9,15 @@ Launch FlytSim
 --------------
 
 Once you have installed **FlytSim**, you are ready to build your own apps and run it out on the simulation software.
-To launch FlytSim, run this command in the terminal.
+To launch FlytSim, run this command in the **new** terminal.
 
 .. code-block:: bash
 
 	$ $(rospack find core_api)/scripts/start_flytOS.sh --sitl
 
-.. note:: For first time Gazebo users, Gazebo might take some time to launch. Be Patient!
+.. caution:: If you get this error: ``Error: package 'core_api' not found``, source your $HOME/.bashrc file or launch FlytSim in new terminal.
 
-.. important:: If you get this error: ``Error: package 'core_api' not found``, source your $HOME/.bashrc file.
+.. note:: For first time Gazebo users, Gazebo might take some time to launch. Be Patient!
 
 The above command would launch ROS and Gazebo. A quadrotor model-Iris will be automatically spawned for you to start executing your app. You can use FlytAPIs in your command line to do some simple maneuvers. For example,
 
