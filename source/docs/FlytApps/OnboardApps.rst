@@ -9,6 +9,13 @@ Execute built-in Demo Apps
 FlytOS comes with pre-installed Demo apps which can be executed to do simple navigation tasks. Currently, for onboard scripting, CPP and Python based FlytAPIs are available, hence DemoApps for both CPP and Python have been provided.
 All the sample applications can be found at our `github link`_.
 
+Below is a demo `youtube video <https://www.youtube.com/watch?v=rKUt884XtNg>`_ about how to execute a built-in demo-app in FlytSim.
+
+..  youtube:: rKUt884XtNg
+    :aspect: 16:9
+    :width: 100%
+
+
 Demo App 1
 ----------
 
