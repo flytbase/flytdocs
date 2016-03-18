@@ -64,7 +64,7 @@ Firmware Setup
       
       .. code-block:: bash
 
-			$ sudo apt-get install ros-indigo-rosbridge-suite ros-indigo-control-toolbox python-serial python-flask python-wtforms python-sqlalchemy python-concurrent.futures 
+			$ sudo apt-get install ros-indigo-usb-cam ros-indigo-rosbridge-suite ros-indigo-control-toolbox python-serial python-flask python-wtforms python-sqlalchemy python-concurrent.futures 
 
   - Before proceeding further, add the following two lines at the end of your $HOME/.bashrc file.
     
@@ -73,11 +73,11 @@ Firmware Setup
       export PYTHONPATH=$PYTHONPATH:/flyt/flytapps
       source /flyt/flytos/flytcore/setup.bash
 
-  - Download the flytOS_0.3-1_armhf.deb file from `FlytOS Download`_ page. Once downloaded, run the following command in your terminal to install FlytOS.
+  - Download the flytOS_0.3-3_armhf.deb file from `FlytOS Download`_ page. Once downloaded, run the following command in your terminal to install FlytOS.
     
     .. code-block:: bash
 
-			$ sudo dpkg -i <path to debian package location>/flytOS_0.3-1_armhf.deb
+			$ sudo dpkg -i <path to debian package location>/flytOS_0.3-3_armhf.deb
 
 .. _flytos update:
 
