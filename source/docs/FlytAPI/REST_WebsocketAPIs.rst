@@ -71,7 +71,7 @@ REST
 
 
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| URL                          | | http://<ip>/ros/navigation/arm                                                                                     |
+| URL                          | | http://<ip>/ros/<namespace>/navigation/arm                                                                         |
 |                              | | <ip>: IP of the flytpod in the network along with port                                                             |
 |                              | |     eg: 192.168.x.xxx:9090                                                                                         |
 |                              | | <namespace>: Name of the flytpod (default: flytpod) which is required for every rest call and can be               |
@@ -96,7 +96,7 @@ REST
 | CALL                         | |     type: "POST",                                                                                                  |
 |                              | |     dataType: "json",                                                                                              |
 |                              | |     data: JSON.stringify(msgdata),                                                                                 |
-|                              | |     url: "http://<ip>/ros/navigation/arm",                                                                         |
+|                              | |     url: "http://<ip>/ros/<namespace>/navigation/arm",                                                             |
 |                              | |     success: function(data){                                                                                       |
 |                              | |         console.log(data);                                                                                         |
 |                              | |     }                                                                                                              |
@@ -115,7 +115,7 @@ REST
 
 
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| URL                          | | http://<ip>/ros/navigation/disarm                                                                                  |
+| URL                          | | http://<ip>/ros/<namespace>/navigation/disarm                                                                                  |
 |                              | | <ip>: IP of the flytpod in the network along with port                                                             |
 |                              | |     eg: 192.168.x.xxx:9090                                                                                         |
 |                              | | <namespace>: Name of the flytpod (default: flytpod) which is required for every rest call and can be               |
@@ -140,7 +140,7 @@ REST
 | CALL                         | |     type: "POST",                                                                                                  |
 |                              | |     dataType: "json",                                                                                              |
 |                              | |     data: JSON.stringify(msgdata),                                                                                 |
-|                              | |     url: "http://<ip>/ros/navigation/disarm",                                                                      |
+|                              | |     url: "http://<ip>/ros/<namespace>/navigation/disarm",                                                                      |
 |                              | |     success: function(data){                                                                                       |
 |                              | |         console.log(data);                                                                                         |
 |                              | |     }                                                                                                              |
@@ -278,7 +278,6 @@ REST
 | SAMPLE                       | | $.ajax({                                                                                                           |
 | CALL                         | |     type: "POST",                                                                                                  |
 |                              | |     dataType: "json",                                                                                              |
-|                              | |     data: JSON.stringify(msgdata),                                                                                 |
 |                              | |     url: "http://<ip>/ros/navigation/position_hold",                                                               |
 |                              | |     success: function(data){                                                                                       |
 |                              | |         console.log(data);                                                                                         |
@@ -625,6 +624,100 @@ REST
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 | NOTE                         | | app_name: The name of the script to be executed.                                                                   |
 |                              | | arguments: List of arguments required by the script sent in a single string seperated by spaces.                   |
++------------------------------+----------------------------------------------------------------------------------------------------------------------+
+
+Video Streaming APIs
+---------------------
+
+List Video Streams
+^^^^^^^^^^^^^^^^^^^
+
+This command gets the list of video streams available from the FlytOS.
+
+REST
+""""
+
+
++------------------------------+----------------------------------------------------------------------------------------------------------------------+
+| URL                          | | http://<ip>/list_streams                                                                                           |
+|                              | | <ip>: IP of the flytpod in the network along with port                                                             |
+|                              | |     eg: 192.168.x.xxx:8080                                                                                         |
++------------------------------+----------------------------------------------------------------------------------------------------------------------+
+| METHOD                       | GET , POST                                                                                                           |
++------------------------------+----------------------------------------------------------------------------------------------------------------------+
+| DATA PARAMS                  | | Content type: application/JSON                                                                                     |
+|                              | | {}                                                                                                                 |
++------------------------------+----------------------------------------------------------------------------------------------------------------------+
+| SUCCESS                      | | Code: 200                                                                                                          |
+| RESPONSE                     | | Content: {                                                                                                         | 
+|                              | |             stream1:<link to stream1> ,                                                                            |
+|                              | |             stream2:<link to stream2> ,                                                                            |
+|                              | |             stream3:<link to stream3> ,                                                                            |
+|                              | |                    .                                                                                               |
+|                              | |                    .                                                                                               |
+|                              | |             }                                                                                                      |
+|                              | | }                                                                                                                  |
++------------------------------+----------------------------------------------------------------------------------------------------------------------+
+| ERROR                        | | Code: 404                                                                                                          |
+| RESPONSE                     | | resource not found                                                                                                 |
++------------------------------+----------------------------------------------------------------------------------------------------------------------+
+| SAMPLE                       | | $.ajax({                                                                                                           |
+| CALL                         | |        type: "GET",                                                                                                |
+|                              | |        dataType: "json",                                                                                           |
+|                              | |        data: JSON.stringify(msgdata),                                                                              |
+|                              | |        url: "http://<ip>/ros/list_streams",                                                                        |
+|                              | |        success: function(data){                                                                                    |
+|                              | |                console.log(data);                                                                                  |
+|                              | |        }                                                                                                           |
+|                              | | )};                                                                                                                |
++------------------------------+----------------------------------------------------------------------------------------------------------------------+
+| NOTE                         | | Please keep an eye out for the port. this api has a different port : 8080 .                                        |
++------------------------------+----------------------------------------------------------------------------------------------------------------------+
+
+
+Stream video
+^^^^^^^^^^^^^
+
+This command gets you the video stream for the particular link.
+
+REST
+""""
+
+
++------------------------------+----------------------------------------------------------------------------------------------------------------------+
+| URL                          | | http://<ip>/list_streams                                                                                           |
+|                              | | <ip>: IP of the flytpod in the network along with port                                                             |
+|                              | |     eg: 192.168.x.xxx:8080                                                                                         |
++------------------------------+----------------------------------------------------------------------------------------------------------------------+
+| METHOD                       | GET , POST                                                                                                           |
++------------------------------+----------------------------------------------------------------------------------------------------------------------+
+| DATA PARAMS                  | | Content type: application/JSON                                                                                     |
+|                              | | {}                                                                                                                 |
++------------------------------+----------------------------------------------------------------------------------------------------------------------+
+| SUCCESS                      | | Code: 200                                                                                                          |
+| RESPONSE                     | | Content: {                                                                                                         | 
+|                              | |             stream1:<link to stream1> ,                                                                            |
+|                              | |             stream2:<link to stream2> ,                                                                            |
+|                              | |             stream3:<link to stream3> ,                                                                            |
+|                              | |                    .                                                                                               |
+|                              | |                    .                                                                                               |
+|                              | |             }                                                                                                      |
+|                              | | }                                                                                                                  |
++------------------------------+----------------------------------------------------------------------------------------------------------------------+
+| ERROR                        | | Code: 404                                                                                                          |
+| RESPONSE                     | | resource not found                                                                                                 |
++------------------------------+----------------------------------------------------------------------------------------------------------------------+
+| SAMPLE                       | | $.ajax({                                                                                                           |
+| CALL                         | |        type: "GET",                                                                                                |
+|                              | |        dataType: "json",                                                                                           |
+|                              | |        data: JSON.stringify(msgdata),                                                                              |
+|                              | |        url: "http://<ip>/ros/list_streams",                                                                        |
+|                              | |        success: function(data){                                                                                    |
+|                              | |                console.log(data);                                                                                  |
+|                              | |        }                                                                                                           |
+|                              | | )};                                                                                                                |
++------------------------------+----------------------------------------------------------------------------------------------------------------------+
+| NOTE                         | | Please keep an eye out for the port. this api has a different port : 8080 .                                        |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 
 
