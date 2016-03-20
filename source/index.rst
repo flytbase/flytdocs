@@ -67,6 +67,8 @@ Checkout and participate in our `forums`_ and interact with the community sharin
    docs/FlytSim/FlytSimLaunch.rst
    docs/FlytSim/OnboardApps.rst
    docs/FlytSim/Web_MobileApps.rst
+   docs/FlytSim/MobileApps.rst
+   docs/FlytSim/WebApps.rst
  
 .. docs/GettingStarted/Getting_started_index.rst
 .. docs/FlytInternals/Flyt_internals_index.rst
