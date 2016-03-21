@@ -4,17 +4,12 @@ Mobile App Development
 **********************
 
 
-Creating and Running a Mobile Application Project
-=================================================
+
+Create a new Project
+====================
 
 
 
-
-
-
-
-Steps to Create New Project for Mobile App:
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. note:: Most of the steps involved in creating a Mobile app are similar to that of a Web app except that you will have to select PhoneGap/Cordova Project instead of Static Web while creating a new project.
 
@@ -46,8 +41,10 @@ Also include eventemitter2.min.js and then roslib.js in your HTML pages.
 	<script type="text/javascript" src="http://cdn.robotwebtools.org/roslibjs/current/roslib.min.js"></script>
 
 
-Building and Running the Project:
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Building and running the project
+================================
+
+
 
 You can build and run the app using IntelliJ IDEA in either a browser based emulator or load the app on your mobile device.
 

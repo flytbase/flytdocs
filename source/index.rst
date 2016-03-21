@@ -62,13 +62,6 @@ Checkout and participate in our `forums`_ and interact with the community sharin
    docs/FlytSim/FlytSim.rst
    docs/FlytSim/FlytSimInstallationGuide.rst
    docs/FlytSim/FlytSimLaunch.rst
-<<<<<<< HEAD
-   docs/FlytSim/OnboardApps.rst
-   docs/FlytSim/Web_MobileApps.rst
-   docs/FlytSim/MobileApps.rst
-   docs/FlytSim/WebApps.rst
- 
-=======
 
 .. toctree::
    :maxdepth: 2
@@ -87,8 +80,10 @@ Checkout and participate in our `forums`_ and interact with the community sharin
    
    docs/FlytApps/OnboardApps.rst
    docs/FlytApps/Web_MobileApps.rst
+   docs/FlytApps/WebApps.rst
+   docs/FlytApps/MobileApps.rst
+   
 
->>>>>>> 4ab535b288b56cdb36f27cd08f407d094807af5f
 .. docs/GettingStarted/Getting_started_index.rst
 .. docs/FlytInternals/Flyt_internals_index.rst
 .. docs/API/API_index.rst

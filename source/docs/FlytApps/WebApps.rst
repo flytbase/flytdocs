@@ -4,16 +4,13 @@ Web App development
 *******************
 
 
-Creating and Running a Web Application Project
-==============================================
-
-
+Create a New Project
+====================
 
 Once all components are setup, you can begin app development by creating a new project in IntelliJ IDEA.
 
 
-Steps to Create New Project for Web App:
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 
 #. Launch IntelliJ IDEA and click on **create new project**.
 #. Select **Static Web** in the new window on the left side.
@@ -42,10 +39,11 @@ Also include eventemitter2.min.js and then roslib.js in your HTML pages.
 
 
 
+Building and Running the Project
+================================
 
 
-Building and Running the Project:
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 
 You can build and run the app using IntelliJ IDEA in a browser. Follow the steps below to do so:
 
