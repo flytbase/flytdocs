@@ -31,8 +31,8 @@ REST
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 | METHOD                       | GET , POST                                                                                                           |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| DATA PARAMS                  | | data: JSON.stringify(msgdata)                                                                                      |
-|                              | | msgdata={}                                                                                                         |
+| DATA PARAMS                  | | Content: application/JSON                                                                                          |
+|                              | | {}                                                                                                                 |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 | SUCCESS                      | | Code: 200                                                                                                          |
 | RESPONSE                     | | Content: {                                                                                                         | 
@@ -47,15 +47,17 @@ REST
 | ERROR                        | | Code: 404                                                                                                          |
 | RESPONSE                     | | resource not found                                                                                                 |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| SAMPLE                       | | $.ajax({                                                                                                           |
-| CALL                         | |     type: "POST",                                                                                                  |
-|                              | |     dataType: "json",                                                                                              |
-|                              | |     data: JSON.stringify(msgdata),                                                                                 |
-|                              | |     url: "http://<ip>/ros/get_global_namespace",                                                                   |
-|                              | |     success: function(data){                                                                                       |
-|                              | |         console.log(data);                                                                                         |
-|                              | |     }                                                                                                              |
-|                              | | });                                                                                                                |
+| SAMPLE                       |  .. code-block:: python                                                                                              |
+| CALL                         |                                                                                                                      |
+|                              |          $.ajax({                                                                                                    |
+|                              |          type: "POST",                                                                                               |
+|                              |          dataType: "json",                                                                                           |
+|                              |          data: JSON.stringify(msgdata),                                                                              |
+|                              |          url: "http://<ip>/ros/get_global_namespace",                                                                |
+|                              |          success: function(data){                                                                                    |
+|                              |              console.log(data);                                                                                      |
+|                              |          }                                                                                                           |
+|                              |      });                                                                                                             |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 
 .. _Arm_REST:
@@ -78,8 +80,8 @@ REST
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 | METHOD                       | GET , POST                                                                                                           |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| DATA PARAMS                  | | data: JSON.stringify(msgdata)                                                                                      |
-|                              | | msgdata={}                                                                                                         |
+| DATA PARAMS                  | | Content: application/JSON                                                                                          |
+|                              | | {}                                                                                                                 |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 | SUCCESS                      | | Code: 200                                                                                                          |
 | RESPONSE                     | | Content: {                                                                                                         | 
@@ -91,15 +93,17 @@ REST
 | ERROR                        | | Code: 404                                                                                                          |
 | RESPONSE                     | | resource not found                                                                                                 |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| SAMPLE                       | | $.ajax({                                                                                                           |
-| CALL                         | |     type: "POST",                                                                                                  |
-|                              | |     dataType: "json",                                                                                              |
-|                              | |     data: JSON.stringify(msgdata),                                                                                 |
-|                              | |     url: "http://<ip>/ros/<namespace>/navigation/arm",                                                             |
-|                              | |     success: function(data){                                                                                       |
-|                              | |         console.log(data);                                                                                         |
-|                              | |     }                                                                                                              |
-|                              | | });                                                                                                                |
+| SAMPLE                       |  .. code-block:: python                                                                                              |
+| CALL                         |                                                                                                                      |
+|                              |       $.ajax({                                                                                                       |
+|                              |            type: "POST",                                                                                             |
+|                              |            dataType: "json",                                                                                         |
+|                              |            data: JSON.stringify(msgdata),                                                                            |
+|                              |            url: "http://<ip>/ros/<namespace>/navigation/arm",                                                        |
+|                              |            success: function(data){                                                                                  |
+|                              |                console.log(data);                                                                                    |
+|                              |            }                                                                                                         |
+|                              |        });                                                                                                           |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 
 
@@ -115,7 +119,7 @@ REST
 
 
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| URL                          | | http://<ip>/ros/<namespace>/navigation/disarm                                                                                  |
+| URL                          | | http://<ip>/ros/<namespace>/navigation/disarm                                                                      |
 |                              | | <ip>: IP of the flytpod in the network along with port                                                             |
 |                              | |     eg: 192.168.x.xxx:9090                                                                                         |
 |                              | | <namespace>: Name of the flytpod (default: flytpod) which is required for every rest call and can be               |
@@ -123,8 +127,8 @@ REST
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 | METHOD                       | GET , POST                                                                                                           |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| DATA PARAMS                  | | data: JSON.stringify(msgdata)                                                                                      |
-|                              | | msgdata={}                                                                                                         |
+| DATA PARAMS                  | | Content: application/JSON                                                                                          |
+|                              | | {}                                                                                                                 |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 | SUCCESS                      | | Code: 200                                                                                                          |
 | RESPONSE                     | | Content: {                                                                                                         | 
@@ -136,15 +140,17 @@ REST
 | ERROR                        | | Code: 404                                                                                                          |
 | RESPONSE                     | | resource not found                                                                                                 |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| SAMPLE                       | | $.ajax({                                                                                                           |
-| CALL                         | |     type: "POST",                                                                                                  |
-|                              | |     dataType: "json",                                                                                              |
-|                              | |     data: JSON.stringify(msgdata),                                                                                 |
-|                              | |     url: "http://<ip>/ros/<namespace>/navigation/disarm",                                                                      |
-|                              | |     success: function(data){                                                                                       |
-|                              | |         console.log(data);                                                                                         |
-|                              | |     }                                                                                                              |
-|                              | | });                                                                                                                |
+| SAMPLE                       |  .. code-block:: python                                                                                              |
+| CALL                         |                                                                                                                      |
+|                              |       $.ajax({                                                                                                       |
+|                              |           type: "POST",                                                                                              |
+|                              |           dataType: "json",                                                                                          |
+|                              |           data: JSON.stringify(msgdata),                                                                             |
+|                              |           url: "http://<ip>/ros/<namespace>/navigation/disarm",                                                      |
+|                              |           success: function(data){                                                                                   |
+|                              |               console.log(data);                                                                                     |
+|                              |           }                                                                                                          |
+|                              |       });                                                                                                            |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 
 .. _TakeOff_REST:
@@ -159,7 +165,7 @@ REST
 
 
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| URL                          | | http://<ip>/ros/navigation/take_off                                                                                |
+| URL                          | | http://<ip>/ros/<namespace>/navigation/take_off                                                                    |
 |                              | | <ip>: IP of the flytpod in the network along with port                                                             |
 |                              | |     eg: 192.168.x.xxx:9090                                                                                         |
 |                              | | <namespace>: Name of the flytpod (default: flytpod) which is required for every rest call and can be               |
@@ -167,8 +173,8 @@ REST
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 | METHOD                       | GET , POST                                                                                                           |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| DATA PARAMS                  | | data: JSON.stringify(msgdata)                                                                                      |
-|                              | | msgdata={                                                                                                          |
+| DATA PARAMS                  | | Content: application/JSON                                                                                          |
+|                              | | {                                                                                                                  |
 |                              | |     takeoff_alt : [numeric : float]                                                                                |
 |                              | | }                                                                                                                  |
 |                              | |                                                                                                                    |
@@ -187,17 +193,19 @@ REST
 | ERROR                        | | Code: 404                                                                                                          |
 | RESPONSE                     | | resource not found                                                                                                 |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| SAMPLE                       | | var msgdata={};                                                                                                    |
-| CALL                         | | msgdata["takeoff_alt"]=4.00;                                                                                       |
-|                              | | $.ajax({                                                                                                           |
-|                              | |     type: "POST",                                                                                                  |
-|                              | |     dataType: "json",                                                                                              |
-|                              | |     data: JSON.stringify(msgdata),                                                                                 |
-|                              | |     url: "http://<ip>/ros/"+namespace+"/navigation/take_off",                                                      |
-|                              | |     success: function(data){                                                                                       |
-|                              | |         console.log(data);                                                                                         |
-|                              | |     }                                                                                                              |
-|                              | | });                                                                                                                |
+| SAMPLE                       |  .. code-block:: python                                                                                              |
+| CALL                         |                                                                                                                      |
+|                              |       var msgdata={};                                                                                                |
+|                              |       msgdata["takeoff_alt"]=4.00;                                                                                   |
+|                              |       $.ajax({                                                                                                       |
+|                              |           type: "POST",                                                                                              |
+|                              |           dataType: "json",                                                                                          |
+|                              |           data: JSON.stringify(msgdata),                                                                             |
+|                              |           url: "http://<ip>/ros/"+namespace+"/navigation/take_off",                                                  |
+|                              |           success: function(data){                                                                                   |
+|                              |               console.log(data);                                                                                     |
+|                              |           }                                                                                                          |
+|                              |       });                                                                                                            |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 
 
@@ -213,7 +221,7 @@ REST
 
 
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| URL                          | | http://<ip>/ros/navigation/land                                                                                    |
+| URL                          | | http://<ip>/ros/<namespace>/navigation/land                                                                        |
 |                              | | <ip>: IP of the flytpod in the network along with port                                                             |
 |                              | |     eg: 192.168.x.xxx:9090                                                                                         |
 |                              | | <namespace>: Name of the flytpod (default: flytpod) which is required for every rest call and can be               |
@@ -221,8 +229,8 @@ REST
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 | METHOD                       | GET , POST                                                                                                           |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| DATA PARAMS                  | | data: JSON.stringify(msgdata)                                                                                      |
-|                              | | msgdata={}                                                                                                         |
+| DATA PARAMS                  | | Content: application/JSON                                                                                          |
+|                              | | {}                                                                                                                 |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 | SUCCESS                      | | Code: 200                                                                                                          |
 | RESPONSE                     | | Content: {                                                                                                         | 
@@ -234,23 +242,25 @@ REST
 | ERROR                        | | Code: 404                                                                                                          |
 | RESPONSE                     | | resource not found                                                                                                 |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| SAMPLE                       | | $.ajax({                                                                                                           |
-| CALL                         | |     type: "POST",                                                                                                  |
-|                              | |     dataType: "json",                                                                                              |
-|                              | |     data: JSON.stringify(msgdata),                                                                                 |
-|                              | |     url: "http://<ip>/ros/navigation/land",                                                                        |
-|                              | |     success: function(data){                                                                                       |
-|                              | |         console.log(data);                                                                                         |
-|                              | |     }                                                                                                              |
-|                              | | });                                                                                                                |
+| SAMPLE                       |  .. code-block:: python                                                                                              |
+| CALL                         |                                                                                                                      |
+|                              |       $.ajax({                                                                                                       |
+|                              |           type: "POST",                                                                                              |
+|                              |           dataType: "json",                                                                                          |
+|                              |           data: JSON.stringify(msgdata),                                                                             |
+|                              |           url: "http://<ip>/ros/navigation/land",                                                                    |
+|                              |           success: function(data){                                                                                   |
+|                              |               console.log(data);                                                                                     |
+|                              |           }                                                                                                          |
+|                              |       });                                                                                                            |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 
 
 
 .. _Position_Hold_REST:
 
-Hover
-^^^^^
+Position hold
+^^^^^^^^^^^^^^^
 
 This command commands the vehicle to hover at the current location. It overrides any previous mission being carried out and starts hovering.
 
@@ -259,7 +269,7 @@ REST
 
 
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| URL                          | | http://<ip>/ros/navigation/position_hold                                                                           |
+| URL                          | | http://<ip>/ros/<namespace>/navigation/position_hold                                                               |
 |                              | | <ip>: IP of the flytpod in the network along with port                                                             |
 |                              | |     eg: 192.168.x.xxx:9090                                                                                         |
 |                              | | <namespace>: Name of the flytpod (default: flytpod) which is required for every rest call and can be               |
@@ -267,8 +277,8 @@ REST
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 | METHOD                       | GET , POST                                                                                                           |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| DATA PARAMS                  | | data: JSON.stringify(msgdata)                                                                                      |
-|                              | | msgdata={}                                                                                                         |
+| DATA PARAMS                  | | Content: application/JSON                                                                                          |
+|                              | | {}                                                                                                                 |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 | SUCCESS                      | | Code: 200                                                                                                          |
 | RESPONSE                     | | Content: {                                                                                                         | 
@@ -280,14 +290,16 @@ REST
 | ERROR                        | | Code: 404                                                                                                          |
 | RESPONSE                     | | resource not found                                                                                                 |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| SAMPLE                       | | $.ajax({                                                                                                           |
-| CALL                         | |     type: "POST",                                                                                                  |
-|                              | |     dataType: "json",                                                                                              |
-|                              | |     url: "http://<ip>/ros/navigation/position_hold",                                                               |
-|                              | |     success: function(data){                                                                                       |
-|                              | |         console.log(data);                                                                                         |
-|                              | |     }                                                                                                              |
-|                              | | });                                                                                                                |
+| SAMPLE                       |  .. code-block:: python                                                                                              |
+| CALL                         |                                                                                                                      |
+|                              |       $.ajax({                                                                                                       |
+|                              |           type: "POST",                                                                                              |
+|                              |           dataType: "json",                                                                                          |
+|                              |           url: "http://<ip>/ros/navigation/position_hold",                                                           |
+|                              |           success: function(data){                                                                                   |
+|                              |               console.log(data);                                                                                     |
+|                              |           }                                                                                                          |
+|                              |       });                                                                                                            |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 
 .. _Position_Setpoint_REST:
@@ -302,7 +314,7 @@ REST
 
 
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| URL                          | | http://<ip>/ros/navigation/position_set                                                                            |
+| URL                          | | http://<ip>/ros/<namespace>/navigation/position_set                                                                |
 |                              | | <ip>: IP of the flytpod in the network along with port                                                             |
 |                              | |     eg: 192.168.x.xxx:9090                                                                                         |
 |                              | | <namespace>: Name of the flytpod (default: flytpod) which is required for every rest call and can be               |
@@ -310,8 +322,8 @@ REST
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 | METHOD                       | GET , POST                                                                                                           |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| DATA PARAMS                  | | data: JSON.stringify(msgdata)                                                                                      |
-|                              | | msgdata={                                                                                                          |
+| DATA PARAMS                  | | Content: application/JSON                                                                                          |
+|                              | | {                                                                                                                  |
 |                              | |     twist:{                                                                                                        |
 |                              | |         twist:{                                                                                                    |
 |                              | |             linear:{                                                                                               |
@@ -332,7 +344,7 @@ REST
 |                              | |                                                                                                                    |
 |                              | | Example                                                                                                            |
 |                              | |                                                                                                                    |
-|                              | | msgdata={                                                                                                          |
+|                              | | {                                                                                                                  |
 |                              | |     twist:{                                                                                                        |
 |                              | |         twist:{                                                                                                    |
 |                              | |             linear:{                                                                                               |
@@ -361,29 +373,31 @@ REST
 | ERROR                        | | Code: 404                                                                                                          |
 | RESPONSE                     | | resource not found                                                                                                 |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| SAMPLE                       | | var  msgdata={};                                                                                                   |
-| CALL                         | | msgdata["twist"]={};                                                                                               |
-|                              | | msgdata.twist["twist"]={};                                                                                         |
-|                              | | masdata.twist.twist["linear"]={};                                                                                  |
-|                              | | msgdata.twist.twist.linear["x"]=2.00;                                                                              |
-|                              | | msgdata.twist.twist.linear["y"]=3.00;                                                                              |
-|                              | | msgdata.twist.twist.linear["z"]=-1.00;                                                                             |
-|                              | | msgdata.twist.twist["angular"]={};                                                                                 |
-|                              | | msgdata.twist.twist.angular["z"]=1.00;                                                                             |
-|                              | | msgdata["tolerance"]=2.00;                                                                                         |
-|                              | | msgdata["async"]=true;                                                                                             |
-|                              | | msgdata["relative"]=false;                                                                                         |
-|                              | | msgdata["yaw_valid"]=true;                                                                                         |
-|                              | |                                                                                                                    |
-|                              | | $.ajax({                                                                                                           |
-|                              | |        type: "GET",                                                                                                |
-|                              | |        dataType: "json",                                                                                           |
-|                              | |        data: JSON.stringify(msgdata),                                                                              |
-|                              | |        url: "http://<ip>/ros/<namespace>/navigation/position_set",                                                 |
-|                              | |        success: function(data){                                                                                    |
-|                              | |                console.log(data);                                                                                  |
-|                              | |        }                                                                                                           |
-|                              | | )};                                                                                                                |
+| SAMPLE                       |  .. code-block:: python                                                                                              |
+| CALL                         |                                                                                                                      |
+|                              |       var  msgdata={};                                                                                               |
+|                              |       msgdata["twist"]={};                                                                                           |
+|                              |       msgdata.twist["twist"]={};                                                                                     |
+|                              |       masdata.twist.twist["linear"]={};                                                                              |
+|                              |       msgdata.twist.twist.linear["x"]=2.00;                                                                          |
+|                              |       msgdata.twist.twist.linear["y"]=3.00;                                                                          |
+|                              |       msgdata.twist.twist.linear["z"]=-1.00;                                                                         |
+|                              |       msgdata.twist.twist["angular"]={};                                                                             |
+|                              |       msgdata.twist.twist.angular["z"]=1.00;                                                                         |
+|                              |       msgdata["tolerance"]=2.00;                                                                                     |
+|                              |       msgdata["async"]=true;                                                                                         |
+|                              |       msgdata["relative"]=false;                                                                                     |
+|                              |       msgdata["yaw_valid"]=true;                                                                                     |
+|                              |                                                                                                                      |
+|                              |       $.ajax({                                                                                                       |
+|                              |           type: "POST",                                                                                              |
+|                              |           dataType: "json",                                                                                          |
+|                              |           data: JSON.stringify(msgdata),                                                                             |
+|                              |           url: "http://<ip>/ros/<namespace>/navigation/position_set",                                                |
+|                              |           success: function(data){                                                                                   |
+|                              |                  console.log(data);                                                                                  |
+|                              |           }                                                                                                          |
+|                              |       };                                                                                                             |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 | NOTE                         | | linear: x ,y,z : xyz local position coordinates with respect to NED                                                |
 |                              | | angular: z  : used for heading when yaw_valid set to true                                                          |
@@ -406,7 +420,7 @@ REST
 
 
 +------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| URL                          | | http://<ip>/ros/navigation/velocity_set                                                                                                                       |
+| URL                          | | http://<ip>/ros/<namespace>/navigation/velocity_set                                                                                                           |
 |                              | | <ip>: IP of the flytpod in the network along with port                                                                                                        |
 |                              | |     eg: 192.168.x.xxx:9090                                                                                                                                    |
 |                              | | <namespace>: Name of the flytpod (default: flytpod) which is required for every rest call and can be                                                          |
@@ -414,8 +428,8 @@ REST
 +------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | METHOD                       | GET , POST                                                                                                                                                      |
 +------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| DATA PARAMS                  | | data: JSON.stringify(msgdata)                                                                                                                                 |
-|                              | | msgdata={                                                                                                                                                     |
+| DATA PARAMS                  | | Content: application/JSON                                                                                                                                     |
+|                              | | {                                                                                                                                                             |
 |                              | |     twist:{                                                                                                                                                   |
 |                              | |         twist:{                                                                                                                                               |
 |                              | |             linear:{                                                                                                                                          |
@@ -436,7 +450,7 @@ REST
 |                              | |                                                                                                                                                               |
 |                              | | Example                                                                                                                                                       |
 |                              | |                                                                                                                                                               |
-|                              | | msgdata={                                                                                                                                                     |
+|                              | | {                                                                                                                                                             |
 |                              | |     twist:{                                                                                                                                                   |
 |                              | |         twist:{                                                                                                                                               |
 |                              | |             linear:{                                                                                                                                          |
@@ -465,29 +479,31 @@ REST
 | ERROR                        | | Code: 404                                                                                                                                                     |
 | RESPONSE                     | | resource not found                                                                                                                                            |
 +------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| SAMPLE                       | | var  msgdata={};                                                                                                                                              |
-| CALL                         | | msgdata["twist"]={};                                                                                                                                          |
-|                              | | msgdata.twist["twist"]={};                                                                                                                                    |
-|                              | | masdata.twist.twist["linear"]={};                                                                                                                             |
-|                              | | msgdata.twist.twist.linear["x"]=2.00;                                                                                                                         |
-|                              | | msgdata.twist.twist.linear["y"]=3.00;                                                                                                                         |
-|                              | | msgdata.twist.twist.linear["z"]=-1.00;                                                                                                                        |
-|                              | | msgdata.twist.twist["angular"]={};                                                                                                                            |
-|                              | | msgdata.twist.twist.angular["z"]=1.00;                                                                                                                        |
-|                              | | msgdata["tolerance"]=2.00;                                                                                                                                    |
-|                              | | msgdata["async"]=true;                                                                                                                                        |
-|                              | | msgdata["relative"]=false;                                                                                                                                    |
-|                              | | msgdata["yaw_valid"]=true;                                                                                                                                    |
-|                              | |                                                                                                                                                               |
-|                              | | $.ajax({                                                                                                                                                      |
-|                              | |        type: "GET",                                                                                                                                           |
-|                              | |        dataType: "json",                                                                                                                                      |
-|                              | |        data: JSON.stringify(msgdata),                                                                                                                         |
-|                              | |        url: "http://<ip>/ros/<namespace>/navigation/velocity_set",                                                                                            |
-|                              | |        success: function(data){                                                                                                                               |
-|                              | |                console.log(data);                                                                                                                             |
-|                              | |        }                                                                                                                                                      |
-|                              | | )};                                                                                                                                                           |
+| SAMPLE                       |  .. code-block:: python                                                                                                                                         |
+| CALL                         |                                                                                                                                                                 |
+|                              |       var  msgdata={};                                                                                                                                          |
+|                              |       msgdata["twist"]={};                                                                                                                                      |
+|                              |       msgdata.twist["twist"]={};                                                                                                                                |
+|                              |       masdata.twist.twist["linear"]={};                                                                                                                         |
+|                              |       msgdata.twist.twist.linear["x"]=2.00;                                                                                                                     |
+|                              |       msgdata.twist.twist.linear["y"]=3.00;                                                                                                                     |
+|                              |       msgdata.twist.twist.linear["z"]=-1.00;                                                                                                                    |
+|                              |       msgdata.twist.twist["angular"]={};                                                                                                                        |
+|                              |       msgdata.twist.twist.angular["z"]=1.00;                                                                                                                    |
+|                              |       msgdata["tolerance"]=2.00;                                                                                                                                |
+|                              |       msgdata["async"]=true;                                                                                                                                    |
+|                              |       msgdata["relative"]=false;                                                                                                                                |
+|                              |       msgdata["yaw_valid"]=true;                                                                                                                                |
+|                              |                                                                                                                                                                 |
+|                              |       $.ajax({                                                                                                                                                  |
+|                              |              type: "POST",                                                                                                                                      |
+|                              |              dataType: "json",                                                                                                                                  |
+|                              |              data: JSON.stringify(msgdata),                                                                                                                     |
+|                              |              url: "http://<ip>/ros/<namespace>/navigation/velocity_set",                                                                                        |
+|                              |              success: function(data){                                                                                                                           |
+|                              |                  console.log(data);                                                                                                                             |
+|                              |              }                                                                                                                                                  |
+|                              |       )};                                                                                                                                                       |
 +------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | NOTE                         | | linear: x,y,z : xyz local position coordinates with respect to NED                                                                                            |
 |                              | | angular: z  : used for heading when yaw_valid set to true                                                                                                     |
@@ -509,7 +525,7 @@ REST
 
 
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| URL                          | | http://<ip>/ros/navigation/attitude_set                                                                            |
+| URL                          | | http://<ip>/ros/<namespace>/navigation/attitude_set                                                                |
 |                              | | <ip>: IP of the flytpod in the network along with port                                                             |
 |                              | |     eg: 192.168.x.xxx:9090                                                                                         |
 |                              | | <namespace>: Name of the flytpod (default: flytpod) which is required for every rest call and can be               |
@@ -517,8 +533,8 @@ REST
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 | METHOD                       | GET , POST                                                                                                           |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| DATA PARAMS                  | | data: JSON.stringify(msgdata)                                                                                      |
-|                              | | msgdata={                                                                                                          |
+| DATA PARAMS                  | | Content: application/JSON                                                                                          |
+|                              | | {                                                                                                                  |
 |                              | |     twist:{                                                                                                        |
 |                              | |         twist:{                                                                                                    |
 |                              | |             angular:{                                                                                              |
@@ -533,7 +549,7 @@ REST
 |                              | |                                                                                                                    |
 |                              | | Example                                                                                                            |
 |                              | |                                                                                                                    |
-|                              | | msgdata={                                                                                                          |
+|                              | | {                                                                                                                  |
 |                              | |     twist:{                                                                                                        |
 |                              | |         twist:{                                                                                                    |
 |                              | |             linear:{                                                                                               |
@@ -556,24 +572,26 @@ REST
 | ERROR                        | | Code: 404                                                                                                          |
 | RESPONSE                     | | resource not found                                                                                                 |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| SAMPLE                       | | var  msgdata={};                                                                                                   |
-| CALL                         | | msgdata["twist"]={};                                                                                               |
-|                              | | msgdata.twist["twist"]={};                                                                                         |
-|                              | | masdata.twist.twist["angular"]={};                                                                                 |
-|                              | | msgdata.twist.twist.angular["x"]=2.00;                                                                             |
-|                              | | msgdata.twist.twist.angular["y"]=3.00;                                                                             |
-|                              | | msgdata.twist.twist.angular["z"]=-1.00;                                                                            |
-|                              | | msgdata["thrust"]=600.00;                                                                                          |
-|                              | |                                                                                                                    |
-|                              | | $.ajax({                                                                                                           |
-|                              | |        type: "GET",                                                                                                |
-|                              | |        dataType: "json",                                                                                           |
-|                              | |        data: JSON.stringify(msgdata),                                                                              |
-|                              | |        url: "http://<ip>/ros/<namespace>/navigation/attitude_set",                                                 |
-|                              | |        success: function(data){                                                                                    |
-|                              | |                console.log(data);                                                                                  |
-|                              | |        }                                                                                                           |
-|                              | | )};                                                                                                                |
+| SAMPLE                       |  .. code-block:: python                                                                                              |
+| CALL                         |                                                                                                                      |
+|                              |       var  msgdata={};                                                                                               |
+|                              |       msgdata["twist"]={};                                                                                           |
+|                              |       msgdata.twist["twist"]={};                                                                                     |
+|                              |       masdata.twist.twist["angular"]={};                                                                             |
+|                              |       msgdata.twist.twist.angular["x"]=2.00;                                                                         |
+|                              |       msgdata.twist.twist.angular["y"]=3.00;                                                                         |
+|                              |       msgdata.twist.twist.angular["z"]=-1.00;                                                                        |
+|                              |       msgdata["thrust"]=600.00;                                                                                      |
+|                              |                                                                                                                      |
+|                              |       $.ajax({                                                                                                       |
+|                              |              type: "POST",                                                                                           |
+|                              |              dataType: "json",                                                                                       |
+|                              |              data: JSON.stringify(msgdata),                                                                          |
+|                              |              url: "http://<ip>/ros/<namespace>/navigation/attitude_set",                                             |
+|                              |              success: function(data){                                                                                |
+|                              |                  console.log(data);                                                                                  |
+|                              |              }                                                                                                       |
+|                              |        )};                                                                                                           |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 | NOTE                         | | angular: x,y,z : roll, pitch, yaw values for attitude setpoint.                                                    |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
@@ -590,7 +608,7 @@ REST
 
 
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| URL                          | | http://<ip>/ros/navigation/exec_script                                                                             |
+| URL                          | | http://<ip>/ros/<namespace>/navigation/exec_script                                                                 |
 |                              | | <ip>: IP of the flytpod in the network along with port                                                             |
 |                              | |     eg: 192.168.x.xxx:9090                                                                                         |
 |                              | | <namespace>: Name of the flytpod (default: flytpod) which is required for every rest call and can be               |
@@ -598,15 +616,15 @@ REST
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 | METHOD                       | GET , POST                                                                                                           |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| DATA PARAMS                  | | data: JSON.stringify(msgdata)                                                                                      |
-|                              | | msgdata={                                                                                                          |
+| DATA PARAMS                  | | Content: application/JSON                                                                                          |
+|                              | | {                                                                                                                  |
 |                              | |     app_name: [String],                                                                                            |
 |                              | |     arguments: [String]                                                                                            |
 |                              | | }                                                                                                                  |
 |                              | |                                                                                                                    |
 |                              | | Example                                                                                                            |
 |                              | |                                                                                                                    |
-|                              | | msgdata={                                                                                                          |
+|                              | | {                                                                                                                  |
 |                              | |     app_name: "app12",                                                                                             |
 |                              | |     arguments: "2 45 4 run"                                                                                        |
 |                              | | }                                                                                                                  |
@@ -621,19 +639,21 @@ REST
 | ERROR                        | | Code: 404                                                                                                          |
 | RESPONSE                     | | resource not found                                                                                                 |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| SAMPLE                       | | var  msgdata={};                                                                                                   |
-| CALL                         | | msgdata["app_name"]= "app12";                                                                                      |
-|                              | | msgdata["arguments"]= "2 45 4 run";                                                                                |
-|                              | |                                                                                                                    |
-|                              | | $.ajax({                                                                                                           |
-|                              | |        type: "GET",                                                                                                |
-|                              | |        dataType: "json",                                                                                           |
-|                              | |        data: JSON.stringify(msgdata),                                                                              |
-|                              | |        url: "http://<ip>/ros/<namespace>/navigation/exec_script",                                                  |
-|                              | |        success: function(data){                                                                                    |
-|                              | |                console.log(data);                                                                                  |
-|                              | |        }                                                                                                           |
-|                              | | )};                                                                                                                |
+| SAMPLE                       |  .. code-block:: python                                                                                              |
+| CALL                         |                                                                                                                      |
+|                              |       var  msgdata={};                                                                                               |
+|                              |       msgdata["app_name"]= "app12";                                                                                  |
+|                              |       msgdata["arguments"]= "2 45 4 run";                                                                            |
+|                              |                                                                                                                      |
+|                              |       $.ajax({                                                                                                       |
+|                              |              type: "POST",                                                                                           |
+|                              |              dataType: "json",                                                                                       |
+|                              |              data: JSON.stringify(msgdata),                                                                          |
+|                              |              url: "http://<ip>/ros/<namespace>/navigation/exec_script",                                              |
+|                              |              success: function(data){                                                                                |
+|                              |                  console.log(data);                                                                                  |
+|                              |              }                                                                                                       |
+|                              |       )};                                                                                                            |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 | NOTE                         | | app_name: The name of the script to be executed.                                                                   |
 |                              | | arguments: List of arguments required by the script sent in a single string seperated by spaces.                   |
@@ -674,22 +694,24 @@ REST
 | ERROR                        | | Code: 404                                                                                                          |
 | RESPONSE                     | | resource not found                                                                                                 |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| SAMPLE                       | | $.ajax({                                                                                                           |
-| CALL                         | |        type: "GET",                                                                                                |
-|                              | |        dataType: "json",                                                                                           |
-|                              | |        data: JSON.stringify(msgdata),                                                                              |
-|                              | |        url: "http://<ip>/ros/list_streams",                                                                        |
-|                              | |        success: function(data){                                                                                    |
-|                              | |                console.log(data);                                                                                  |
-|                              | |        }                                                                                                           |
-|                              | | )};                                                                                                                |
+| SAMPLE                       |  .. code-block:: python                                                                                              |
+| CALL                         |                                                                                                                      |
+|                              |       $.ajax({                                                                                                       |
+|                              |           type: "POST",                                                                                              |
+|                              |           dataType: "json",                                                                                          |
+|                              |           data: JSON.stringify(msgdata),                                                                             |
+|                              |           url: "http://<ip>/ros/list_streams",                                                                       |
+|                              |           success: function(data){                                                                                   |
+|                              |                  console.log(data);                                                                                  |
+|                              |           }                                                                                                          |
+|                              |       )};                                                                                                            |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 | NOTE                         | | Please keep an eye out for the port. this api has a different port : 8080 .                                        |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 
 
-Stream video
-^^^^^^^^^^^^^
+Start video stream
+^^^^^^^^^^^^^^^^^^^
 
 This command gets you the video stream for the particular link.
 
@@ -709,16 +731,68 @@ REST
 |                              | |  width:                                                                                                            |
 |                              | |  height:                                                                                                           |
 |                              | |  quality:                                                                                                          |
+|                              | |  quality:                                                                                                          |
+|                              | |  rate: 1|2|3....                                                                                                   |
+|                              | |                                                                                                                    |
+|                              | |  rate:1 will send out every frame, 2 will send out every second frame, 3 every third and so on..                   |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 | ERROR                        | | Code: 404                                                                                                          |
 | RESPONSE                     | | resource not found                                                                                                 |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| SAMPLE                       | |                                                                                                                    |
-| CALL                         | | <img src=URL />                                                                                                    |
+| SAMPLE                       |  .. code-block:: python                                                                                              |
+| CALL                         |                                                                                                                      |
+|                              |      <img src=URL />                                                                                                 |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 | NOTE                         | | Please keep an eye out for the port. this api has a different port : 8080 .                                        |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 
+Stop video stream
+^^^^^^^^^^^^^^^^^^^
+
+This command stops the video stream for the particular link to your ip.
+
+
++------------------------------+----------------------------------------------------------------------------------------------------------------------+
+| NOTE                         | | In HTML setting the src="" of the <img> tag should stop the  streaming                                             |
+|                              | | or PLace the <img> tag in a <div> and set the div-html="" deleting the <img> tag completely.                       |
++------------------------------+----------------------------------------------------------------------------------------------------------------------+
+
+Snapshot
+^^^^^^^^^
+
+This command gets you a latest snapshot of the specified video streaming topic.
+
+REST
+""""
+
+
++------------------------------+----------------------------------------------------------------------------------------------------------------------+
+| URL                          | | http://<ip>/snapshot?topic=<topic name>                                                                            |
+|                              | | <ip>: IP of the flytpod in the network along with port                                                             |
+|                              | |     eg: 192.168.x.xxx:8080                                                                                         |
+|                              | | <topic name>: name of the topic of the particular stream                                                           |
++------------------------------+----------------------------------------------------------------------------------------------------------------------+
+| METHOD                       | GET , POST                                                                                                           |
++------------------------------+----------------------------------------------------------------------------------------------------------------------+
+| DATA PARAMS                  | | Query string                                                                                                       |
+|                              | |  width:                                                                                                            |
+|                              | |  height:                                                                                                           |
+|                              | |  quality:                                                                                                          |
++------------------------------+----------------------------------------------------------------------------------------------------------------------+
+| ERROR                        | | Code: 404                                                                                                          |
+| RESPONSE                     | | resource not found                                                                                                 |
++------------------------------+----------------------------------------------------------------------------------------------------------------------+
+| SAMPLE                       |  .. code-block:: python                                                                                              |
+| CALL                         |                                                                                                                      |
+|                              |      <img src=URL />                                                                                                 |
++------------------------------+----------------------------------------------------------------------------------------------------------------------+
+| NOTE                         | | Please keep an eye out for the port. this api has a different port : 8080 .                                        |
+|                              | | To get new images everytime make sure you add a system time as variables to the link because if the actual link    |
+|                              | | doesnt change the browser gets the old image from cache instead of querying from the server.                       |
++------------------------------+----------------------------------------------------------------------------------------------------------------------+
+
+Telemetry APIs
+---------------
 
 Websocket Initializations
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -734,22 +808,24 @@ Socket
 |                              | | <ip>: IP of the flytpod in the network along with port                                                             |
 |                              | |     eg: 192.168.x.xxx:9090                                                                                         |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| SAMPLE                       | | var  ros= new ROSLIB.Ros({                                                                                         |
-| CALL                         | |     url : 'ws://<ip>/websocket'                                                                                    |
-|                              | | });                                                                                                                |
-|                              | |                                                                                                                    |
-|                              | | ros.on('connection', function() {                                                                                  |
-|                              | |     console.log('Connected to websocket server.');                                                                 |
-|                              | |  });                                                                                                               |
-|                              | |                                                                                                                    |
-|                              | | ros.on('error', function() {                                                                                       |
-|                              | |     console.log('Error connecting to websocket server.', error);                                                   |
-|                              | |  });                                                                                                               |
-|                              | |                                                                                                                    |
-|                              | | ros.on('close', function() {                                                                                       |
-|                              | |     console.log('Connection to websocket server closed.');                                                         |
-|                              | |  });                                                                                                               |
-|                              | |                                                                                                                    |
+| SAMPLE                       |  .. code-block:: python                                                                                              |
+| CALL                         |                                                                                                                      |
+|                              |       var  ros= new ROSLIB.Ros({                                                                                     |
+|                              |            url : 'ws://<ip>/websocket'                                                                               |
+|                              |       });                                                                                                            |
+|                              |                                                                                                                      |
+|                              |       ros.on('connection', function() {                                                                              |
+|                              |           console.log('Connected to websocket server.');                                                             |
+|                              |       });                                                                                                            |
+|                              |                                                                                                                      |
+|                              |       ros.on('error', function() {                                                                                   |
+|                              |           console.log('Error connecting to websocket server.', error);                                               |
+|                              |       });                                                                                                            |
+|                              |                                                                                                                      |
+|                              |       ros.on('close', function() {                                                                                   |
+|                              |           console.log('Connection to websocket server closed.');                                                     |
+|                              |       });                                                                                                            |
+|                              |                                                                                                                      |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 
 .. _Attitude_Quat_REST:
@@ -765,28 +841,32 @@ Socket
 
 
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| INITIALISATION               | | var listenerImu = new ROSLIB.Topic({                                                                                                                           |
-| SAMPLE                       | |     ros :ros,                                                                                                                                                  |
-|                              | |     name : '/<namespace>/mavros/imu/data',                                                                                                                     |
-|                              | |     messageType : 'sensor_msgs/Imu',                                                                                                                           |
-|                              | |     throttle_rate: 200                                                                                                                                         |
-|                              | | });                                                                                                                                                            |
-|                              | |                                                                                                                                                                |
-|                              | | <namespace>: Name of the flytpod (default: flytpod) which is required for every socket subscription and can be fetched from get namespace rest call.           |
+| INITIALISATION               |  .. code-block:: python                                                                                                                                          |
+| SAMPLE                       |                                                                                                                                                                  |
+|                              |       var listenerImu = new ROSLIB.Topic({                                                                                                                       |
+|                              |           ros :ros,                                                                                                                                              |
+|                              |           name : '/<namespace>/mavros/imu/data',                                                                                                                 |
+|                              |           messageType : 'sensor_msgs/Imu',                                                                                                                       |
+|                              |           throttle_rate: 200                                                                                                                                     |
+|                              |       });                                                                                                                                                        |
+|                              |                                                                                                                                                                  |
+|                              |  <namespace>: Name of the flytpod (default: flytpod) which is required for every socket subscription and can be fetched from get namespace rest call.            |
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| SUBSCRIPTION                 | | listenerImu.subscribe(function(message) {                                                                                                                      |
-| SAMPLE                       | |     console.log(message.orientation.x);                                                                                                                        |
-|                              | |     console.log(message.orientation.y);                                                                                                                        |
-|                              | |     console.log(message.orientation.z);                                                                                                                        |
-|                              | |     console.log(message.orientation.w);                                                                                                                        |
-|                              | |     console.log(message.angular_velocity.x);                                                                                                                   |
-|                              | |     console.log(message.angular_velocity.y);                                                                                                                   |
-|                              | |     console.log(message.angular_velocity.z);                                                                                                                   |
-|                              | |     console.log(message.linear_acceleration.x);                                                                                                                |
-|                              | |     console.log(message.linear_acceleration.y);                                                                                                                |
-|                              | |     console.log(message.linear_acceleration.z);                                                                                                                |
-|                              | | });                                                                                                                                                            |
-|                              | |                                                                                                                                                                |
+| SUBSCRIPTION                 |   .. code-block:: python                                                                                                                                         |
+| SAMPLE                       |                                                                                                                                                                  |
+|                              |       listenerImu.subscribe(function(message) {                                                                                                                  |
+|                              |           console.log(message.orientation.x);                                                                                                                    |
+|                              |           console.log(message.orientation.y);                                                                                                                    |
+|                              |           console.log(message.orientation.z);                                                                                                                    |
+|                              |           console.log(message.orientation.w);                                                                                                                    |
+|                              |           console.log(message.angular_velocity.x);                                                                                                               |
+|                              |           console.log(message.angular_velocity.y);                                                                                                               |
+|                              |           console.log(message.angular_velocity.z);                                                                                                               |
+|                              |           console.log(message.linear_acceleration.x);                                                                                                            |
+|                              |           console.log(message.linear_acceleration.y);                                                                                                            |
+|                              |           console.log(message.linear_acceleration.z);                                                                                                            |
+|                              |       });                                                                                                                                                        |
+|                              |                                                                                                                                                                  |
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | NOTES                        | | ros: Pointed to the ros object created in the initialization of a web socket connection                                                                        |
 |                              | | name: Requires the name of the topic which gives out the required data.                                                                                        |
@@ -807,24 +887,28 @@ Socket
 
 
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| INITIALISATION               | | var listenerLocalPosition = new ROSLIB.Topic({                                                                                                                 |
-| SAMPLE                       | |     ros :ros,                                                                                                                                                  |
-|                              | |     name : '/<namespace>/mavros/local_position/local',                                                                                                         |
-|                              | |     messageType : 'geometry_msgs/TwistStamped',                                                                                                                |
-|                              | |     throttle_rate: 200                                                                                                                                         |
-|                              | | });                                                                                                                                                            |
-|                              | |                                                                                                                                                                |
-|                              | | <namespace>: Name of the flytpod (default: flytpod) which is required for every socket subscription and can be fetched from get namespace rest call.           |
+| INITIALISATION               |  .. code-block:: python                                                                                                                                          |
+| SAMPLE                       |                                                                                                                                                                  |
+|                              |       var listenerLocalPosition = new ROSLIB.Topic({                                                                                                             |
+|                              |           ros :ros,                                                                                                                                              |
+|                              |           name : '/<namespace>/mavros/local_position/local',                                                                                                     |
+|                              |           messageType : 'geometry_msgs/TwistStamped',                                                                                                            |
+|                              |           throttle_rate: 200                                                                                                                                     |
+|                              |       });                                                                                                                                                        |
+|                              |                                                                                                                                                                  |
+|                              |  <namespace>: Name of the flytpod (default: flytpod) which is required for every socket subscription and can be fetched from get namespace rest call.            |
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| SUBSCRIPTION                 | | listenerImu.subscribe(function(message) {                                                                                                                      |
-| SAMPLE                       | |     console.log(message.twist.linear.x);                                                                                                                       |
-|                              | |     console.log(message.twist.linear.y);                                                                                                                       |
-|                              | |     console.log(message.twist.linear.z);                                                                                                                       |
-|                              | |     console.log(message.twist.angular.x);                                                                                                                      |
-|                              | |     console.log(message.twist.angular.y);                                                                                                                      |
-|                              | |     console.log(message.twist.angular.z);                                                                                                                      |
-|                              | | });                                                                                                                                                            |
-|                              | |                                                                                                                                                                |
+| SUBSCRIPTION                 |  .. code-block:: python                                                                                                                                          |
+| SAMPLE                       |                                                                                                                                                                  |
+|                              |      listenerImu.subscribe(function(message) {                                                                                                                   |
+|                              |          console.log(message.twist.linear.x);                                                                                                                    |
+|                              |          console.log(message.twist.linear.y);                                                                                                                    |
+|                              |          console.log(message.twist.linear.z);                                                                                                                    |
+|                              |          console.log(message.twist.angular.x);                                                                                                                   |
+|                              |          console.log(message.twist.angular.y);                                                                                                                   |
+|                              |          console.log(message.twist.angular.z);                                                                                                                   |
+|                              |      });                                                                                                                                                         |
+|                              |                                                                                                                                                                  |
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | NOTES                        | | ros: Pointed to the ros object created in the initialization of a web socket connection                                                                        |
 |                              | | name: Requires the name of the topic which gives out the required data.                                                                                        |
