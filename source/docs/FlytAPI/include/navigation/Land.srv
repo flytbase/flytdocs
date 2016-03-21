@@ -1,5 +1,6 @@
-#Request : NULL
+#Request : expects async variable to be set/reset
 #Response : return success=true if Land command sent successfully to autopilot
 
+bool async
 ---
 bool success

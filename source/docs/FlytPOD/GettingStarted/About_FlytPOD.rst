@@ -7,6 +7,14 @@ About FlytPOD
 FlytPOD acts as the brain which controls your drone. The device consists of navigation sensors, communication system and payload interfaces.
 
 
+Below is an introductory `youtube video <https://www.youtube.com/watch?v=BWaecLy8G10>`_ about FlytPOD internals.
+
+..  youtube:: BWaecLy8G10
+    :aspect: 16:9
+    :width: 100%
+
+
+
 .. image:: /_static/Images/flytpod.png
   	:align: right
   	:width: 400px

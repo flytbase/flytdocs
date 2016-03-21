@@ -14,12 +14,11 @@ Navigation APIs
 
 These APIs allows you to have navigational control over your vehicle, and also provides vehicle telemetry data for further processing.
 
-.. _Arm_REST:
 
 Namespace
 ^^^^^^^^^
 
-This namespace is a part of the url for all other rest calls and websocket connection.This has to be the first rest call before any other rest call or web socket connection.
+This namespace is a part of the url for all other rest calls and websocket connection. This has to be the first rest call before any other rest call or web socket connection.
 
 REST
 """"
@@ -59,7 +58,7 @@ REST
 |                              | | });                                                                                                                |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 
-
+.. _Arm_REST:
 
 Arm
 ^^^
@@ -71,7 +70,7 @@ REST
 
 
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| URL                          | | http://<ip>/ros/navigation/arm                                                                                     |
+| URL                          | | http://<ip>/ros/<namespace>/navigation/arm                                                                         |
 |                              | | <ip>: IP of the flytpod in the network along with port                                                             |
 |                              | |     eg: 192.168.x.xxx:9090                                                                                         |
 |                              | | <namespace>: Name of the flytpod (default: flytpod) which is required for every rest call and can be               |
@@ -96,7 +95,7 @@ REST
 | CALL                         | |     type: "POST",                                                                                                  |
 |                              | |     dataType: "json",                                                                                              |
 |                              | |     data: JSON.stringify(msgdata),                                                                                 |
-|                              | |     url: "http://<ip>/ros/navigation/arm",                                                                         |
+|                              | |     url: "http://<ip>/ros/<namespace>/navigation/arm",                                                             |
 |                              | |     success: function(data){                                                                                       |
 |                              | |         console.log(data);                                                                                         |
 |                              | |     }                                                                                                              |
@@ -104,6 +103,7 @@ REST
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 
 
+.. _Disarm_REST:
 
 Disarm
 ^^^^^^
@@ -115,7 +115,7 @@ REST
 
 
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| URL                          | | http://<ip>/ros/navigation/disarm                                                                                  |
+| URL                          | | http://<ip>/ros/<namespace>/navigation/disarm                                                                                  |
 |                              | | <ip>: IP of the flytpod in the network along with port                                                             |
 |                              | |     eg: 192.168.x.xxx:9090                                                                                         |
 |                              | | <namespace>: Name of the flytpod (default: flytpod) which is required for every rest call and can be               |
@@ -140,13 +140,14 @@ REST
 | CALL                         | |     type: "POST",                                                                                                  |
 |                              | |     dataType: "json",                                                                                              |
 |                              | |     data: JSON.stringify(msgdata),                                                                                 |
-|                              | |     url: "http://<ip>/ros/navigation/disarm",                                                                      |
+|                              | |     url: "http://<ip>/ros/<namespace>/navigation/disarm",                                                                      |
 |                              | |     success: function(data){                                                                                       |
 |                              | |         console.log(data);                                                                                         |
 |                              | |     }                                                                                                              |
 |                              | | });                                                                                                                |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 
+.. _TakeOff_REST:
 
 Takeoff
 ^^^^^^^
@@ -200,6 +201,7 @@ REST
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 
 
+.. _Land_REST:
 
 Land
 ^^^^
@@ -244,6 +246,9 @@ REST
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 
 
+
+.. _Position_Hold_REST:
+
 Hover
 ^^^^^
 
@@ -278,7 +283,6 @@ REST
 | SAMPLE                       | | $.ajax({                                                                                                           |
 | CALL                         | |     type: "POST",                                                                                                  |
 |                              | |     dataType: "json",                                                                                              |
-|                              | |     data: JSON.stringify(msgdata),                                                                                 |
 |                              | |     url: "http://<ip>/ros/navigation/position_hold",                                                               |
 |                              | |     success: function(data){                                                                                       |
 |                              | |         console.log(data);                                                                                         |
@@ -286,6 +290,7 @@ REST
 |                              | | });                                                                                                                |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 
+.. _Position_Setpoint_REST:
 
 Position Setpoint
 ^^^^^^^^^^^^^^^^^
@@ -388,6 +393,9 @@ REST
 |                              | | yaw_valid: Decides whether to use angular: z value for deciding the setpoint heading or just use default heading.  |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 
+
+.. _Velocity_Setpoint_REST:
+
 Velocity Setpoint
 ^^^^^^^^^^^^^^^^^
 
@@ -488,6 +496,9 @@ REST
 |                              | | yaw_valid: Decides whether to use angular: z value for deciding the setpoint heading or just use default heading.                                             |
 +------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
+
+.. _Attitude_Setpoint_REST:
+
 Attitude Setpoint
 ^^^^^^^^^^^^^^^^^
 
@@ -567,6 +578,7 @@ REST
 | NOTE                         | | angular: x,y,z : roll, pitch, yaw values for attitude setpoint.                                                    |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 
+.. _Exec_Script_REST:
 
 Execute Script
 ^^^^^^^^^^^^^^
@@ -627,11 +639,91 @@ REST
 |                              | | arguments: List of arguments required by the script sent in a single string seperated by spaces.                   |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 
+Video Streaming APIs
+---------------------
 
-Websocket Initiallisation
+List Video Streams
+^^^^^^^^^^^^^^^^^^^
+
+This command gets the list of video streams available from the FlytOS.
+
+REST
+""""
+
+
++------------------------------+----------------------------------------------------------------------------------------------------------------------+
+| URL                          | | http://<ip>/list_streams                                                                                           |
+|                              | | <ip>: IP of the flytpod in the network along with port                                                             |
+|                              | |     eg: 192.168.x.xxx:8080                                                                                         |
++------------------------------+----------------------------------------------------------------------------------------------------------------------+
+| METHOD                       | GET , POST                                                                                                           |
++------------------------------+----------------------------------------------------------------------------------------------------------------------+
+| DATA PARAMS                  | | Content type: application/JSON                                                                                     |
+|                              | | {}                                                                                                                 |
++------------------------------+----------------------------------------------------------------------------------------------------------------------+
+| SUCCESS                      | | Code: 200                                                                                                          |
+| RESPONSE                     | | Content: {                                                                                                         | 
+|                              | |             stream1:<link to stream1> ,                                                                            |
+|                              | |             stream2:<link to stream2> ,                                                                            |
+|                              | |             stream3:<link to stream3> ,                                                                            |
+|                              | |                    .                                                                                               |
+|                              | |                    .                                                                                               |
+|                              | |             }                                                                                                      |
+|                              | | }                                                                                                                  |
++------------------------------+----------------------------------------------------------------------------------------------------------------------+
+| ERROR                        | | Code: 404                                                                                                          |
+| RESPONSE                     | | resource not found                                                                                                 |
++------------------------------+----------------------------------------------------------------------------------------------------------------------+
+| SAMPLE                       | | $.ajax({                                                                                                           |
+| CALL                         | |        type: "GET",                                                                                                |
+|                              | |        dataType: "json",                                                                                           |
+|                              | |        data: JSON.stringify(msgdata),                                                                              |
+|                              | |        url: "http://<ip>/ros/list_streams",                                                                        |
+|                              | |        success: function(data){                                                                                    |
+|                              | |                console.log(data);                                                                                  |
+|                              | |        }                                                                                                           |
+|                              | | )};                                                                                                                |
++------------------------------+----------------------------------------------------------------------------------------------------------------------+
+| NOTE                         | | Please keep an eye out for the port. this api has a different port : 8080 .                                        |
++------------------------------+----------------------------------------------------------------------------------------------------------------------+
+
+
+Stream video
+^^^^^^^^^^^^^
+
+This command gets you the video stream for the particular link.
+
+REST
+""""
+
+
++------------------------------+----------------------------------------------------------------------------------------------------------------------+
+| URL                          | | http://<ip>/stream?topic=<topic name>                                                                              |
+|                              | | <ip>: IP of the flytpod in the network along with port                                                             |
+|                              | |     eg: 192.168.x.xxx:8080                                                                                         |
+|                              | | <topic name>: name of the topic of the particular stream                                                           |
++------------------------------+----------------------------------------------------------------------------------------------------------------------+
+| METHOD                       | GET , POST                                                                                                           |
++------------------------------+----------------------------------------------------------------------------------------------------------------------+
+| DATA PARAMS                  | | Query string                                                                                                       |
+|                              | |  width:                                                                                                            |
+|                              | |  height:                                                                                                           |
+|                              | |  quality:                                                                                                          |
++------------------------------+----------------------------------------------------------------------------------------------------------------------+
+| ERROR                        | | Code: 404                                                                                                          |
+| RESPONSE                     | | resource not found                                                                                                 |
++------------------------------+----------------------------------------------------------------------------------------------------------------------+
+| SAMPLE                       | |                                                                                                                    |
+| CALL                         | | <img src=URL />                                                                                                    |
++------------------------------+----------------------------------------------------------------------------------------------------------------------+
+| NOTE                         | | Please keep an eye out for the port. this api has a different port : 8080 .                                        |
++------------------------------+----------------------------------------------------------------------------------------------------------------------+
+
+
+Websocket Initializations
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Websocket needs to be initialised once in every session. It requires additional libraries: event.emitter.js and roslib.js to be included in case of web based client.
+Websocket needs to be initialized once in every session. It requires additional libraries: event.emitter.js and roslib.js to be included in case of web based client.
 
 Socket
 """"""
@@ -660,7 +752,7 @@ Socket
 |                              | |                                                                                                                    |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 
-
+.. _Attitude_Quat_REST:
 
 
 Attitude data
@@ -703,7 +795,7 @@ Socket
 |                              | |                                                                                                                                                                |
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-
+.. _LPOS_REST:
 
 Local Position data
 ^^^^^^^^^^^^^^^^^^^
@@ -741,21 +833,7 @@ Socket
 |                              | |                                                                                                                                                                |
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-.. .. warning:: fwffefefe
 
- .. .. tip:: cqfeqe
-
-.. .. note:: ccqeceqe
-
-.. .. important:: cqecqecq
-
-.. .. hint:: ecqcceqe
-
-.. .. error:: cqcqecqecq
-
-.. .. caution:: ceceqevqev
-
-.. .. attention:: cqcqevcqe
 
 
 

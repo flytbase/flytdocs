@@ -6,9 +6,37 @@ FlytAPI - Onboard
 =================
 
 
+.. caution:: This guide is under active development.
+
 FlytAPIs have been extended from ROS to CPP, Python, REST and Websocket. This document describes all the available onboard(ROS/CPP/Python) FlytAPIs in details.
 
-.. caution:: This guide is under active development.
+.. important:: All ROS-based FlytAPIs begin with a fixed namespace. Use :ref:`Get Namespace<get_namespace_onboard>` to find out its value. One must replace <namespace> in all the following APIs with the previously obtained value.
+
+----
+
+.. _get_namespace_onboard:
+
+Get Namespace
+-------------
+
+This API returns the namespace under which FlytOS is running. By default, namespace is set to ``flytpod`` for FlytOS and ``flytsim`` for FlytSim. This API is only available in ROS as CPP/Python APIs do not need this information.
+
+*Service Name:* /get_global_namespace
+
+*Service Type:* core_api/ParamGetGlobalNamespace, below is its description
+
+.. literalinclude:: include/param/ParamGetGlobalNamespace.srv
+   :language: xml
+   :tab-width: 2
+
+*Usage:*
+
+.. code-block:: bash
+
+    rosservice call /get_global_namespace
+    #the value of namespace is returned in 'param_value'
+
+----
 
 
 Navigation APIs
@@ -23,13 +51,13 @@ These APIs allows you to have navigational control over your vehicle, and also p
 
 .. danger:: This command might turn on the motors if their ESCs are powered up.
 
-This API arms the vehicle, passes controller outputs to the mixer. Usage of `TakeOff <TakeOff_onboard>`_ is preferred.
+This API arms the vehicle, passes controller outputs to the mixer. Usage of :ref:`Takeoff<TakeOff_onboard>` is preferred.
 
 
 ROS
 """
 
-*Service Name:* /flytsim/navigation/arm
+*Service Name:* /<namespace>/navigation/arm
 
 *Service Type:* core_api/Arm, below is its description
 
@@ -41,7 +69,7 @@ ROS
 
 .. code-block:: bash
 
-    rosservice call /flytsim/navigation/arm {}
+    rosservice call /<namespace>/navigation/arm {}
 
 CPP
 """
@@ -77,6 +105,9 @@ Python
     nav = api.navigation() 
     nav.arm()
 
+----
+
+
 .. _Disarm_onboard:
 
 **Disarm**
@@ -87,7 +118,7 @@ This API disarms the vehicle, disconnects controller outputs from the mixer.
 ROS
 """
 
-*Service Name:* /flytsim/navigation/disarm
+*Service Name:* /<namespace>/navigation/disarm
 
 *Service Type:* core_api/Disarm, below is its description
 
@@ -99,7 +130,7 @@ ROS
 
 .. code-block:: bash
 
-    rosservice call /flytsim/navigation/disarm {}
+    rosservice call /<namespace>/navigation/disarm {}
 
 CPP
 """
@@ -135,6 +166,7 @@ Python
     nav = api.navigation() 
     nav.disarm()
 
+----
 
 .. _TakeOff_onboard:
 
@@ -148,7 +180,7 @@ This API arms the vehicle(if it is disarmed) and sends takeoff command to the au
 ROS
 """
 
-*Service Name:* /flytsim/navigation/take_off
+*Service Name:* /<namespace>/navigation/take_off
 
 *Service Type:* core_api/TakeOff, below is its description
 
@@ -160,7 +192,7 @@ ROS
 
 .. code-block:: bash
 
-    rosservice call /flytsim/navigation/take_off "takeoff_alt: 3.0"
+    rosservice call /<namespace>/navigation/take_off "takeoff_alt: 3.0"
 
 CPP
 """
@@ -195,6 +227,8 @@ Python
     nav = api.navigation() 
     nav.take_off(3.0)
 
+----
+
 
 .. _Land_onboard:
 
@@ -208,7 +242,7 @@ This API sends land command to the autopilot. Currently, you cannot send arbitra
 ROS
 """
 
-*Service Name:* /flytsim/navigation/land
+*Service Name:* /<namespace>/navigation/land
 
 *Service Type:* core_api/Land, below is its description
 
@@ -220,13 +254,14 @@ ROS
 
 .. code-block:: bash
 
-    rosservice call /flytsim/navigation/land "{}" 
+    rosservice call /<namespace>/navigation/land "async: false"
 
 CPP
 """
 
-.. cpp:function:: int Navigation::land(void)
+.. cpp:function:: int Navigation::land(bool async = true)
 	 
+   :param async: If true, asynchronous mode is set
    :return: 0 if the land command is successfully sent to the vehicle, else returns 1.
 
 *Usage:*
@@ -236,13 +271,14 @@ CPP
     #include <core_script_bridge/navigation_bridge.h>
 
     Navigation nav;
-    nav.land();
+    nav.land(true);
 
 Python
 """"""
  
-.. py:function:: navigation.land(self)
+.. py:function:: navigation.land(self, async=True)
 		
+   :param async: If true, asynchronous mode is set
    :return: 0 if the land command is successfully sent to the vehicle, else returns 1.
 
 *Usage:*
@@ -251,7 +287,9 @@ Python
 
     from flyt_python import api
     nav = api.navigation() 
-    nav.land()
+    nav.land(True)
+
+----
 
 .. _Position_Setpoint_onboard:
 
@@ -269,7 +307,7 @@ This API sends position setpoint command to the autopilot. Additionally, you can
 ROS
 """
 
-*Service Name:* /flytsim/navigation/position_set
+*Service Name:* /<namespace>/navigation/position_set
 
 *Service Type:* core_api/PositionSet, below is its description
 
@@ -281,7 +319,7 @@ ROS
 
 .. code-block:: bash
     
-    rosservice call /flytsim/navigation/position_set "twist:
+    rosservice call /<namespace>/navigation/position_set "twist:
       header:
         seq: 0
         stamp: {secs: 0, nsecs: 0}
@@ -293,13 +331,10 @@ ROS
     async: false
     relative: false
     yaw_valid: true
-    body_frame: false
-    setpoint_type: 0"
+    body_frame: false"
 
     #sends (x,y,z)=(1.0,3.5,-5.0)(m), yaw=0.12rad, relative=false, async=false, yaw_valid=true, body_frame=false
-    #default value of tolerance=1.0m if left at 0
-    #in general, setpoint_type should be left at 0
-    
+    #default value of tolerance=1.0m if left at 0    
 
 CPP
 """
@@ -348,6 +383,8 @@ Python
     nav.position_set(1.0, 3.5, -5.0, 0.12, 5.0, false, false, true, false)
     #sends (x,y,z)=(1.0,3.5,-5.0)(m), yaw=0.12rad, tolerance=5.0m, relative=false, async=false, yaw_valid=true, body_frame=false
 
+----
+
 .. _Velocity_Setpoint_onboard:
 
 **Velocity Setpoint**
@@ -364,7 +401,7 @@ This API sends velocity setpoint command to the autopilot. Additionally, you can
 ROS
 """
 
-*Service Name:* /flytsim/navigation/velocity_set
+*Service Name:* /<namespace>/navigation/velocity_set
 
 *Service Type:* core_api/VelocitySet, below is its description
 
@@ -376,7 +413,7 @@ ROS
 
 .. code-block:: bash
     
-    rosservice call /flytsim/navigation/velocity_set "twist:
+    rosservice call /<namespace>/navigation/velocity_set "twist:
       header:
         seq: 0
         stamp: {secs: 0, nsecs: 0}
@@ -440,6 +477,8 @@ Python
     nav.velocity_set(1.0, 0.5, -1.0, 0.12, 0.5, false, false, true, false)
     #sends (vx,vy,vz)=(1.0,0.5,-1.0)(m/s), yaw_rate=0.12rad/s, tolerance=0.5m/s, relative=false, async=false, yaw_rate_valid=true, body_frame=false
 
+----
+
 .. _Attitude_Setpoint_onboard:
 
 **Attitude Setpoint**
@@ -453,7 +492,7 @@ This API sends attitude setpoint command to the autopilot. You must send roll, p
 ROS
 """
 
-*Service Name:* /flytsim/navigation/attitude_set
+*Service Name:* /<namespace>/navigation/attitude_set
 
 *Service Type:* core_api/AttitudeSet, below is its description
 
@@ -465,7 +504,7 @@ ROS
 
 .. code-block:: bash
     
-    rosservice call /flytsim/navigation/attitude_set "pose:
+    rosservice call /<namespace>/navigation/attitude_set "pose:
       header:
         seq: 0
         stamp:
@@ -523,6 +562,8 @@ Python
     #sends (roll,pitch,yaw)=(0.0,0.0,0.8)(rad), thrust=660N
 
 
+----
+
 .. _Position_Hold_onboard:
 
 **Position Hold/Loiter/Hover**
@@ -534,7 +575,7 @@ This API sends current position of vehicle as position setpoint.
 ROS
 """
 
-*Service Name:* /flytsim/navigation/position_hold
+*Service Name:* /<namespace>/navigation/position_hold
 
 *Service Type:* core_api/PositionHold, below is its description
 
@@ -546,7 +587,7 @@ ROS
 
 .. code-block:: bash
     
-    rosservice call /flytsim/navigation/position_hold "{}"                  
+    rosservice call /<namespace>/navigation/position_hold "{}"                  
 
 
 CPP
@@ -580,6 +621,7 @@ Python
     nav = api.navigation() 
     nav.position_hold()
 
+----
 
 .. _Exec_Script_onboard:
 
@@ -592,7 +634,7 @@ This API triggers execution of CPP/Python onboard scripts which are available in
 ROS
 """
 
-*Service Name:* /flytsim/navigation/exec_script
+*Service Name:* /<namespace>/navigation/exec_script
 
 *Service Type:* core_api/ExecScript, below is its description
 
@@ -604,7 +646,7 @@ ROS
 
 .. code-block:: bash
     
-    rosservice call /flytsim/navigation/exec_script "{}"                  
+    rosservice call /<namespace>/navigation/exec_script "{}"                  
 
 
 CPP
@@ -616,6 +658,8 @@ Python
 """"""
 
 No Python API is available for execution of onboard scripts.
+
+----
 
 
 .. _Waypoint_Handling_onboard:
@@ -629,7 +673,7 @@ For waypoint handling following FlytAPIs have been made available.
 .. ROS
 .. """
 
-.. *Service Name:* /flytsim/navigation/position_hold
+.. *Service Name:* /<namespace>/navigation/position_hold
 
 .. *Service Type:* core_api/PositionHold, below is its description
 
@@ -641,7 +685,7 @@ For waypoint handling following FlytAPIs have been made available.
 
 .. .. code-block:: bash
     
-..     rosservice call /flytsim/navigation/position_hold "{}"                  
+..     rosservice call /<namespace>/navigation/position_hold "{}"                  
 
 
 .. CPP
@@ -678,10 +722,10 @@ For waypoint handling following FlytAPIs have been made available.
 
 
 
-.. rostopic echo /flytsim/mavros/imu/data
-.. rostopic echo /flytsim/mavros/imu/data_euler
-.. rostopic echo /flytsim/mavros/local_position/local
-.. rostopic echo /flytsim/mavros/global_position/global
+.. rostopic echo /<namespace>/mavros/imu/data
+.. rostopic echo /<namespace>/mavros/imu/data_euler
+.. rostopic echo /<namespace>/mavros/local_position/local
+.. rostopic echo /<namespace>/mavros/global_position/global
 
 
 
