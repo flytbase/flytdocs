@@ -31,8 +31,8 @@ REST
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 | METHOD                       | GET , POST                                                                                                           |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| DATA PARAMS                  | | data: JSON.stringify(msgdata)                                                                                      |
-|                              | | msgdata={}                                                                                                         |
+| DATA PARAMS                  | | Content: application/JSON                                                                                          |
+|                              | | {}                                                                                                                 |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 | SUCCESS                      | | Code: 200                                                                                                          |
 | RESPONSE                     | | Content: {                                                                                                         | 
@@ -47,15 +47,16 @@ REST
 | ERROR                        | | Code: 404                                                                                                          |
 | RESPONSE                     | | resource not found                                                                                                 |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| SAMPLE                       | | $.ajax({                                                                                                           |
-| CALL                         | |     type: "POST",                                                                                                  |
-|                              | |     dataType: "json",                                                                                              |
-|                              | |     data: JSON.stringify(msgdata),                                                                                 |
-|                              | |     url: "http://<ip>/ros/get_global_namespace",                                                                   |
-|                              | |     success: function(data){                                                                                       |
-|                              | |         console.log(data);                                                                                         |
-|                              | |     }                                                                                                              |
-|                              | | });                                                                                                                |
+| SAMPLE                       | |                                                                                                                    |
+| CALL                         | |         $.ajax({                                                                                                   |
+|                              | |         type: "POST",                                                                                              |
+|                              | |         dataType: "json",                                                                                          |
+|                              | |         data: JSON.stringify(msgdata),                                                                             |
+|                              | |         url: "http://<ip>/ros/get_global_namespace",                                                               |
+|                              | |         success: function(data){                                                                                   |
+|                              | |             console.log(data);                                                                                     |
+|                              | |         }                                                                                                          |
+|                              | |     });                                                                                                            |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 
 .. _Arm_REST:
@@ -78,8 +79,8 @@ REST
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 | METHOD                       | GET , POST                                                                                                           |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| DATA PARAMS                  | | data: JSON.stringify(msgdata)                                                                                      |
-|                              | | msgdata={}                                                                                                         |
+| DATA PARAMS                  | | Content: application/JSON                                                                                          |
+|                              | | {}                                                                                                                 |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 | SUCCESS                      | | Code: 200                                                                                                          |
 | RESPONSE                     | | Content: {                                                                                                         | 
@@ -115,7 +116,7 @@ REST
 
 
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| URL                          | | http://<ip>/ros/<namespace>/navigation/disarm                                                                                  |
+| URL                          | | http://<ip>/ros/<namespace>/navigation/disarm                                                                      |
 |                              | | <ip>: IP of the flytpod in the network along with port                                                             |
 |                              | |     eg: 192.168.x.xxx:9090                                                                                         |
 |                              | | <namespace>: Name of the flytpod (default: flytpod) which is required for every rest call and can be               |
@@ -123,8 +124,8 @@ REST
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 | METHOD                       | GET , POST                                                                                                           |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| DATA PARAMS                  | | data: JSON.stringify(msgdata)                                                                                      |
-|                              | | msgdata={}                                                                                                         |
+| DATA PARAMS                  | | Content: application/JSON                                                                                          |
+|                              | | {}                                                                                                                 |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 | SUCCESS                      | | Code: 200                                                                                                          |
 | RESPONSE                     | | Content: {                                                                                                         | 
@@ -140,7 +141,7 @@ REST
 | CALL                         | |     type: "POST",                                                                                                  |
 |                              | |     dataType: "json",                                                                                              |
 |                              | |     data: JSON.stringify(msgdata),                                                                                 |
-|                              | |     url: "http://<ip>/ros/<namespace>/navigation/disarm",                                                                      |
+|                              | |     url: "http://<ip>/ros/<namespace>/navigation/disarm",                                                          |
 |                              | |     success: function(data){                                                                                       |
 |                              | |         console.log(data);                                                                                         |
 |                              | |     }                                                                                                              |
@@ -159,7 +160,7 @@ REST
 
 
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| URL                          | | http://<ip>/ros/navigation/take_off                                                                                |
+| URL                          | | http://<ip>/ros/<namespace>/navigation/take_off                                                                    |
 |                              | | <ip>: IP of the flytpod in the network along with port                                                             |
 |                              | |     eg: 192.168.x.xxx:9090                                                                                         |
 |                              | | <namespace>: Name of the flytpod (default: flytpod) which is required for every rest call and can be               |
@@ -167,8 +168,8 @@ REST
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 | METHOD                       | GET , POST                                                                                                           |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| DATA PARAMS                  | | data: JSON.stringify(msgdata)                                                                                      |
-|                              | | msgdata={                                                                                                          |
+| DATA PARAMS                  | | Content: application/JSON                                                                                          |
+|                              | | {                                                                                                                  |
 |                              | |     takeoff_alt : [numeric : float]                                                                                |
 |                              | | }                                                                                                                  |
 |                              | |                                                                                                                    |
@@ -213,7 +214,7 @@ REST
 
 
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| URL                          | | http://<ip>/ros/navigation/land                                                                                    |
+| URL                          | | http://<ip>/ros/<namespace>/navigation/land                                                                        |
 |                              | | <ip>: IP of the flytpod in the network along with port                                                             |
 |                              | |     eg: 192.168.x.xxx:9090                                                                                         |
 |                              | | <namespace>: Name of the flytpod (default: flytpod) which is required for every rest call and can be               |
@@ -221,8 +222,8 @@ REST
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 | METHOD                       | GET , POST                                                                                                           |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| DATA PARAMS                  | | data: JSON.stringify(msgdata)                                                                                      |
-|                              | | msgdata={}                                                                                                         |
+| DATA PARAMS                  | | Content: application/JSON                                                                                          |
+|                              | | {}                                                                                                                 |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 | SUCCESS                      | | Code: 200                                                                                                          |
 | RESPONSE                     | | Content: {                                                                                                         | 
@@ -249,8 +250,8 @@ REST
 
 .. _Position_Hold_REST:
 
-Hover
-^^^^^
+Position hold
+^^^^^^^^^^^^^^^
 
 This command commands the vehicle to hover at the current location. It overrides any previous mission being carried out and starts hovering.
 
@@ -259,7 +260,7 @@ REST
 
 
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| URL                          | | http://<ip>/ros/navigation/position_hold                                                                           |
+| URL                          | | http://<ip>/ros/<namespace>/navigation/position_hold                                                               |
 |                              | | <ip>: IP of the flytpod in the network along with port                                                             |
 |                              | |     eg: 192.168.x.xxx:9090                                                                                         |
 |                              | | <namespace>: Name of the flytpod (default: flytpod) which is required for every rest call and can be               |
@@ -267,8 +268,8 @@ REST
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 | METHOD                       | GET , POST                                                                                                           |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| DATA PARAMS                  | | data: JSON.stringify(msgdata)                                                                                      |
-|                              | | msgdata={}                                                                                                         |
+| DATA PARAMS                  | | Content: application/JSON                                                                                          |
+|                              | | {}                                                                                                                 |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 | SUCCESS                      | | Code: 200                                                                                                          |
 | RESPONSE                     | | Content: {                                                                                                         | 
@@ -302,7 +303,7 @@ REST
 
 
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| URL                          | | http://<ip>/ros/navigation/position_set                                                                            |
+| URL                          | | http://<ip>/ros/<namespace>/navigation/position_set                                                                |
 |                              | | <ip>: IP of the flytpod in the network along with port                                                             |
 |                              | |     eg: 192.168.x.xxx:9090                                                                                         |
 |                              | | <namespace>: Name of the flytpod (default: flytpod) which is required for every rest call and can be               |
@@ -310,8 +311,8 @@ REST
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 | METHOD                       | GET , POST                                                                                                           |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| DATA PARAMS                  | | data: JSON.stringify(msgdata)                                                                                      |
-|                              | | msgdata={                                                                                                          |
+| DATA PARAMS                  | | Content: application/JSON                                                                                          |
+|                              | | {                                                                                                                  |
 |                              | |     twist:{                                                                                                        |
 |                              | |         twist:{                                                                                                    |
 |                              | |             linear:{                                                                                               |
@@ -376,7 +377,7 @@ REST
 |                              | | msgdata["yaw_valid"]=true;                                                                                         |
 |                              | |                                                                                                                    |
 |                              | | $.ajax({                                                                                                           |
-|                              | |        type: "GET",                                                                                                |
+|                              | |        type: "POST",                                                                                               |
 |                              | |        dataType: "json",                                                                                           |
 |                              | |        data: JSON.stringify(msgdata),                                                                              |
 |                              | |        url: "http://<ip>/ros/<namespace>/navigation/position_set",                                                 |
@@ -406,7 +407,7 @@ REST
 
 
 +------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| URL                          | | http://<ip>/ros/navigation/velocity_set                                                                                                                       |
+| URL                          | | http://<ip>/ros/<namespace>/navigation/velocity_set                                                                                                           |
 |                              | | <ip>: IP of the flytpod in the network along with port                                                                                                        |
 |                              | |     eg: 192.168.x.xxx:9090                                                                                                                                    |
 |                              | | <namespace>: Name of the flytpod (default: flytpod) which is required for every rest call and can be                                                          |
@@ -414,8 +415,8 @@ REST
 +------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | METHOD                       | GET , POST                                                                                                                                                      |
 +------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| DATA PARAMS                  | | data: JSON.stringify(msgdata)                                                                                                                                 |
-|                              | | msgdata={                                                                                                                                                     |
+| DATA PARAMS                  | | Content: application/JSON                                                                                                                                     |
+|                              | | {                                                                                                                                                             |
 |                              | |     twist:{                                                                                                                                                   |
 |                              | |         twist:{                                                                                                                                               |
 |                              | |             linear:{                                                                                                                                          |
@@ -480,7 +481,7 @@ REST
 |                              | | msgdata["yaw_valid"]=true;                                                                                                                                    |
 |                              | |                                                                                                                                                               |
 |                              | | $.ajax({                                                                                                                                                      |
-|                              | |        type: "GET",                                                                                                                                           |
+|                              | |        type: "POST",                                                                                                                                          |
 |                              | |        dataType: "json",                                                                                                                                      |
 |                              | |        data: JSON.stringify(msgdata),                                                                                                                         |
 |                              | |        url: "http://<ip>/ros/<namespace>/navigation/velocity_set",                                                                                            |
@@ -509,7 +510,7 @@ REST
 
 
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| URL                          | | http://<ip>/ros/navigation/attitude_set                                                                            |
+| URL                          | | http://<ip>/ros/<namespace>/navigation/attitude_set                                                                |
 |                              | | <ip>: IP of the flytpod in the network along with port                                                             |
 |                              | |     eg: 192.168.x.xxx:9090                                                                                         |
 |                              | | <namespace>: Name of the flytpod (default: flytpod) which is required for every rest call and can be               |
@@ -517,8 +518,8 @@ REST
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 | METHOD                       | GET , POST                                                                                                           |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| DATA PARAMS                  | | data: JSON.stringify(msgdata)                                                                                      |
-|                              | | msgdata={                                                                                                          |
+| DATA PARAMS                  | | Content: application/JSON                                                                                          |
+|                              | | {                                                                                                                  |
 |                              | |     twist:{                                                                                                        |
 |                              | |         twist:{                                                                                                    |
 |                              | |             angular:{                                                                                              |
@@ -566,7 +567,7 @@ REST
 |                              | | msgdata["thrust"]=600.00;                                                                                          |
 |                              | |                                                                                                                    |
 |                              | | $.ajax({                                                                                                           |
-|                              | |        type: "GET",                                                                                                |
+|                              | |        type: "POST",                                                                                               |
 |                              | |        dataType: "json",                                                                                           |
 |                              | |        data: JSON.stringify(msgdata),                                                                              |
 |                              | |        url: "http://<ip>/ros/<namespace>/navigation/attitude_set",                                                 |
@@ -590,7 +591,7 @@ REST
 
 
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| URL                          | | http://<ip>/ros/navigation/exec_script                                                                             |
+| URL                          | | http://<ip>/ros/<namespace>/navigation/exec_script                                                                 |
 |                              | | <ip>: IP of the flytpod in the network along with port                                                             |
 |                              | |     eg: 192.168.x.xxx:9090                                                                                         |
 |                              | | <namespace>: Name of the flytpod (default: flytpod) which is required for every rest call and can be               |
@@ -598,8 +599,8 @@ REST
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 | METHOD                       | GET , POST                                                                                                           |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| DATA PARAMS                  | | data: JSON.stringify(msgdata)                                                                                      |
-|                              | | msgdata={                                                                                                          |
+| DATA PARAMS                  | | Content: application/JSON                                                                                          |
+|                              | | {                                                                                                                  |
 |                              | |     app_name: [String],                                                                                            |
 |                              | |     arguments: [String]                                                                                            |
 |                              | | }                                                                                                                  |
@@ -626,7 +627,7 @@ REST
 |                              | | msgdata["arguments"]= "2 45 4 run";                                                                                |
 |                              | |                                                                                                                    |
 |                              | | $.ajax({                                                                                                           |
-|                              | |        type: "GET",                                                                                                |
+|                              | |        type: "POST",                                                                                               |
 |                              | |        dataType: "json",                                                                                           |
 |                              | |        data: JSON.stringify(msgdata),                                                                              |
 |                              | |        url: "http://<ip>/ros/<namespace>/navigation/exec_script",                                                  |
@@ -675,7 +676,7 @@ REST
 | RESPONSE                     | | resource not found                                                                                                 |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 | SAMPLE                       | | $.ajax({                                                                                                           |
-| CALL                         | |        type: "GET",                                                                                                |
+| CALL                         | |        type: "POST",                                                                                               |
 |                              | |        dataType: "json",                                                                                           |
 |                              | |        data: JSON.stringify(msgdata),                                                                              |
 |                              | |        url: "http://<ip>/ros/list_streams",                                                                        |
@@ -688,8 +689,8 @@ REST
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 
 
-Stream video
-^^^^^^^^^^^^^
+Start video stream
+^^^^^^^^^^^^^^^^^^^
 
 This command gets you the video stream for the particular link.
 
@@ -709,6 +710,10 @@ REST
 |                              | |  width:                                                                                                            |
 |                              | |  height:                                                                                                           |
 |                              | |  quality:                                                                                                          |
+|                              | |  quality:                                                                                                          |
+|                              | |  rate: 1|2|3....                                                                                                   |
+|                              | |                                                                                                                    |
+|                              | |  rate:1 will send out every frame, 2 will send out every second frame, 3 every third and so on..                   |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 | ERROR                        | | Code: 404                                                                                                          |
 | RESPONSE                     | | resource not found                                                                                                 |
@@ -719,6 +724,52 @@ REST
 | NOTE                         | | Please keep an eye out for the port. this api has a different port : 8080 .                                        |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 
+Stop video stream
+^^^^^^^^^^^^^^^^^^^
+
+This command stops the video stream for the particular link to your ip.
+
+
++------------------------------+----------------------------------------------------------------------------------------------------------------------+
+| NOTE                         | | In HTML setting the src="" of the <img> tag should stop the  streaming                                             |
+|                              | | or PLace the <img> tag in a <div> and set the div-html="" deleting the <img> tag completely.                       |
++------------------------------+----------------------------------------------------------------------------------------------------------------------+
+
+Snapshot
+^^^^^^^^^
+
+This command gets you a latest snapshot of the specified video streaming topic.
+
+REST
+""""
+
+
++------------------------------+----------------------------------------------------------------------------------------------------------------------+
+| URL                          | | http://<ip>/snapshot?topic=<topic name>                                                                            |
+|                              | | <ip>: IP of the flytpod in the network along with port                                                             |
+|                              | |     eg: 192.168.x.xxx:8080                                                                                         |
+|                              | | <topic name>: name of the topic of the particular stream                                                           |
++------------------------------+----------------------------------------------------------------------------------------------------------------------+
+| METHOD                       | GET , POST                                                                                                           |
++------------------------------+----------------------------------------------------------------------------------------------------------------------+
+| DATA PARAMS                  | | Query string                                                                                                       |
+|                              | |  width:                                                                                                            |
+|                              | |  height:                                                                                                           |
+|                              | |  quality:                                                                                                          |
++------------------------------+----------------------------------------------------------------------------------------------------------------------+
+| ERROR                        | | Code: 404                                                                                                          |
+| RESPONSE                     | | resource not found                                                                                                 |
++------------------------------+----------------------------------------------------------------------------------------------------------------------+
+| SAMPLE                       | |                                                                                                                    |
+| CALL                         | | <img src=URL />                                                                                                    |
++------------------------------+----------------------------------------------------------------------------------------------------------------------+
+| NOTE                         | | Please keep an eye out for the port. this api has a different port : 8080 .                                        |
+|                              | | To get new images everytime make sure you add a system time as variables to the link because if the actual link    |
+|                              | | doesnt change the browser gets the old image from cache instead of querying from the server.                       |
++------------------------------+----------------------------------------------------------------------------------------------------------------------+
+
+Telemetry APIs
+---------------
 
 Websocket Initializations
 ^^^^^^^^^^^^^^^^^^^^^^^^^
