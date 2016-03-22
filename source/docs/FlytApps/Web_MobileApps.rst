@@ -17,6 +17,20 @@ The IDE that we have selected for this project is IntelliJ Idea. The GUI and the
 then reusing the code to create mobile apps using Ionic as the front end framework for both Web and Mobile apps.
 
 
+.. figure:: /_static/Images/Web_mobile_blockdiagram.png
+	:align: center
+	
+	 
+	Flow diagram of Web/Mobile application development
+
+  
+
+
+
+
+
+
+
 Front end Framework
 ^^^^^^^^^^^^^^^^^^^
 
