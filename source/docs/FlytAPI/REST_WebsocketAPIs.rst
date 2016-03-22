@@ -201,7 +201,7 @@ REST
 |                              |           type: "POST",                                                                                              |
 |                              |           dataType: "json",                                                                                          |
 |                              |           data: JSON.stringify(msgdata),                                                                             |
-|                              |           url: "http://<ip>/ros/<namespace>/navigation/take_off",                                                  |
+|                              |           url: "http://<ip>/ros/<namespace>/navigation/take_off",                                                    |
 |                              |           success: function(data){                                                                                   |
 |                              |               console.log(data);                                                                                     |
 |                              |           }                                                                                                          |
@@ -248,7 +248,7 @@ REST
 |                              |           type: "POST",                                                                                              |
 |                              |           dataType: "json",                                                                                          |
 |                              |           data: JSON.stringify(msgdata),                                                                             |
-|                              |           url: "http://<ip>/ros/<namespace>/navigation/land",                                                                    |
+|                              |           url: "http://<ip>/ros/<namespace>/navigation/land",                                                        |
 |                              |           success: function(data){                                                                                   |
 |                              |               console.log(data);                                                                                     |
 |                              |           }                                                                                                          |
@@ -295,7 +295,7 @@ REST
 |                              |       $.ajax({                                                                                                       |
 |                              |           type: "POST",                                                                                              |
 |                              |           dataType: "json",                                                                                          |
-|                              |           url: "http://<ip>/ros/<namespace>/navigation/position_hold",                                                           |
+|                              |           url: "http://<ip>/ros/<namespace>/navigation/position_hold",                                               |
 |                              |           success: function(data){                                                                                   |
 |                              |               console.log(data);                                                                                     |
 |                              |           }                                                                                                          |
