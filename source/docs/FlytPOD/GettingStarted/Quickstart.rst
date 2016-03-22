@@ -188,8 +188,6 @@ As shown in image You need to Connect Battery to the connector labelled ‘Power
 
 
 .. figure:: /_static/Images/PowerModule.png
-	:height: 500px
-	:width: 700px
 	:align: center
 	
 	PowerModule

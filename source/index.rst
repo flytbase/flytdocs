@@ -80,6 +80,9 @@ Checkout and participate in our `forums`_ and interact with the community sharin
    
    docs/FlytApps/OnboardApps.rst
    docs/FlytApps/Web_MobileApps.rst
+   docs/FlytApps/WebApps.rst
+   docs/FlytApps/MobileApps.rst
+   
 
 .. docs/GettingStarted/Getting_started_index.rst
 .. docs/FlytInternals/Flyt_internals_index.rst
