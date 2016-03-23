@@ -313,99 +313,103 @@ REST
 """"
 
 
-+------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| URL                          | | http://<ip>/ros/<namespace>/navigation/position_set                                                                |
-|                              | | <ip>: IP of the flytpod in the network along with port                                                             |
-|                              | |     eg: 192.168.x.xxx:9090                                                                                         |
-|                              | | <namespace>: Name of the flytpod (default: flytpod) which is required for every rest call and can be               |
-|                              | |     fetched from get namespace rest call.                                                                          |
-+------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| METHOD                       | GET , POST                                                                                                           |
-+------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| DATA PARAMS                  | | Content: application/JSON                                                                                          |
-|                              | | {                                                                                                                  |
-|                              | |     twist:{                                                                                                        |
-|                              | |         twist:{                                                                                                    |
-|                              | |             linear:{                                                                                               |
-|                              | |                 x: [numeric : float],                                                                              |
-|                              | |                 y: [numeric : float],                                                                              |
-|                              | |                 z: [numeric : float]                                                                               |
-|                              | |             },                                                                                                     |
-|                              | |             angular:{                                                                                              |
-|                              | |                 z: [numeric : float]                                                                               |
-|                              | |             }                                                                                                      |
-|                              | |         }                                                                                                          |
-|                              | |     },                                                                                                             |
-|                              | |     tolerance:  [numeric : float],                                                                                 |
-|                              | |     async:      [boolean],                                                                                         |
-|                              | |     relative:   [boolean],                                                                                         |
-|                              | |     yaw_valid : [boolean]                                                                                          |
-|                              | | }                                                                                                                  |
-|                              | |                                                                                                                    |
-|                              | | Example                                                                                                            |
-|                              | |                                                                                                                    |
-|                              | | {                                                                                                                  |
-|                              | |     twist:{                                                                                                        |
-|                              | |         twist:{                                                                                                    |
-|                              | |             linear:{                                                                                               |
-|                              | |                 x: 2.00,                                                                                           |
-|                              | |                 y: 3.00,                                                                                           |
-|                              | |                 z: -1.00                                                                                           |
-|                              | |             },                                                                                                     |
-|                              | |             angular:{                                                                                              |
-|                              | |                 z : 1.0                                                                                            |
-|                              | |             }                                                                                                      |
-|                              | |         }                                                                                                          |
-|                              | |     },                                                                                                             |
-|                              | |     tolerance: 2.00,                                                                                               |
-|                              | |     async: true,                                                                                                   |
-|                              | |     relative: false,                                                                                               |
-|                              | |     yaw_valid: true                                                                                                |
-|                              | | }                                                                                                                  |
-+------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| SUCCESS                      | | Code: 200                                                                                                          |
-| RESPONSE                     | | Content: {                                                                                                         | 
-|                              | |     success : true / false,                                                                                        |
-|                              | | }                                                                                                                  |
-|                              | | true:  command accepted by system and the drone starts to move towards the defined location.                       |
-|                              | | false: command rejected by system and system continues with existing mission.                                      |
-+------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| ERROR                        | | Code: 404                                                                                                          |
-| RESPONSE                     | | resource not found                                                                                                 |
-+------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| SAMPLE                       |  .. code-block:: python                                                                                              |
-| CALL                         |                                                                                                                      |
-|                              |       var  msgdata={};                                                                                               |
-|                              |       msgdata["twist"]={};                                                                                           |
-|                              |       msgdata.twist["twist"]={};                                                                                     |
-|                              |       masdata.twist.twist["linear"]={};                                                                              |
-|                              |       msgdata.twist.twist.linear["x"]=2.00;                                                                          |
-|                              |       msgdata.twist.twist.linear["y"]=3.00;                                                                          |
-|                              |       msgdata.twist.twist.linear["z"]=-1.00;                                                                         |
-|                              |       msgdata.twist.twist["angular"]={};                                                                             |
-|                              |       msgdata.twist.twist.angular["z"]=1.00;                                                                         |
-|                              |       msgdata["tolerance"]=2.00;                                                                                     |
-|                              |       msgdata["async"]=true;                                                                                         |
-|                              |       msgdata["relative"]=false;                                                                                     |
-|                              |       msgdata["yaw_valid"]=true;                                                                                     |
-|                              |                                                                                                                      |
-|                              |       $.ajax({                                                                                                       |
-|                              |           type: "POST",                                                                                              |
-|                              |           dataType: "json",                                                                                          |
-|                              |           data: JSON.stringify(msgdata),                                                                             |
-|                              |           url: "http://<ip>/ros/<namespace>/navigation/position_set",                                                |
-|                              |           success: function(data){                                                                                   |
-|                              |                  console.log(data);                                                                                  |
-|                              |           }                                                                                                          |
-|                              |       };                                                                                                             |
-+------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| NOTE                         | | linear: x ,y,z : xyz local position coordinates with respect to NED                                                |
-|                              | | angular: z  : used for heading when yaw_valid set to true                                                          |
-|                              | | tolerance: The radial value within which the setpoint is considered reached                                        |
-|                              | | relative: Decides whether the give xyz coordination are supposed to be taken relative to the current location      |
-|                              | |     or relative to origin.                                                                                         |
-|                              | | yaw_valid: Decides whether to use angular: z value for deciding the setpoint heading or just use default heading.  |
-+------------------------------+----------------------------------------------------------------------------------------------------------------------+
++------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| URL                          | | http://<ip>/ros/<namespace>/navigation/position_set                                                                                                           |
+|                              | | <ip>: IP of the flytpod in the network along with port                                                                                                        |
+|                              | |     eg: 192.168.x.xxx:9090                                                                                                                                    |
+|                              | | <namespace>: Name of the flytpod (default: flytpod) which is required for every rest call and can be                                                          |
+|                              | |     fetched from get namespace rest call.                                                                                                                     |
++------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| METHOD                       | GET , POST                                                                                                                                                      |
++------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| DATA PARAMS                  | | Content: application/JSON                                                                                                                                     |
+|                              | | {                                                                                                                                                             |
+|                              | |     twist:{                                                                                                                                                   |
+|                              | |         twist:{                                                                                                                                               |
+|                              | |             linear:{                                                                                                                                          |
+|                              | |                 x: [numeric : float],                                                                                                                         |
+|                              | |                 y: [numeric : float],                                                                                                                         |
+|                              | |                 z: [numeric : float]                                                                                                                          |
+|                              | |             },                                                                                                                                                |
+|                              | |             angular:{                                                                                                                                         |
+|                              | |                 z: [numeric : float]                                                                                                                          |
+|                              | |             }                                                                                                                                                 |
+|                              | |         }                                                                                                                                                     |
+|                              | |     },                                                                                                                                                        |
+|                              | |     tolerance:  [numeric : float],                                                                                                                            |
+|                              | |     async:      [boolean],                                                                                                                                    |
+|                              | |     relative:   [boolean],                                                                                                                                    |
+|                              | |     yaw_valid : [boolean],                                                                                                                                    |
+|                              | |     body_frame : [boolean]                                                                                                                                    |
+|                              | | }                                                                                                                                                             |
+|                              | |                                                                                                                                                               |
+|                              | | Example                                                                                                                                                       |
+|                              | |                                                                                                                                                               |
+|                              | | {                                                                                                                                                             |
+|                              | |     twist:{                                                                                                                                                   |
+|                              | |         twist:{                                                                                                                                               |
+|                              | |             linear:{                                                                                                                                          |
+|                              | |                 x: 2.00,                                                                                                                                      |
+|                              | |                 y: 3.00,                                                                                                                                      |
+|                              | |                 z: -1.00                                                                                                                                      |
+|                              | |             },                                                                                                                                                |
+|                              | |             angular:{                                                                                                                                         |
+|                              | |                 z : 1.0                                                                                                                                       |
+|                              | |             }                                                                                                                                                 |
+|                              | |         }                                                                                                                                                     |
+|                              | |     },                                                                                                                                                        |
+|                              | |     tolerance: 2.00,                                                                                                                                          |
+|                              | |     async: true,                                                                                                                                              |
+|                              | |     relative: false,                                                                                                                                          |
+|                              | |     yaw_valid: true,                                                                                                                                          |
+|                              | |     body_frame : false                                                                                                                                        |
+|                              | | }                                                                                                                                                             |
++------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| SUCCESS                      | | Code: 200                                                                                                                                                     |
+| RESPONSE                     | | Content: {                                                                                                                                                    | 
+|                              | |     success : true / false,                                                                                                                                   |
+|                              | | }                                                                                                                                                             |
+|                              | | true:  command accepted by system and the drone starts to move towards the defined location.                                                                  |
+|                              | | false: command rejected by system and system continues with existing mission.                                                                                 |
++------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ERROR                        | | Code: 404                                                                                                                                                     |
+| RESPONSE                     | | resource not found                                                                                                                                            |
++------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| SAMPLE                       |  .. code-block:: python                                                                                                                                         |
+| CALL                         |                                                                                                                                                                 |
+|                              |       var  msgdata={};                                                                                                                                          |
+|                              |       msgdata["twist"]={};                                                                                                                                      |
+|                              |       msgdata.twist["twist"]={};                                                                                                                                |
+|                              |       masdata.twist.twist["linear"]={};                                                                                                                         |
+|                              |       msgdata.twist.twist.linear["x"]=2.00;                                                                                                                     |
+|                              |       msgdata.twist.twist.linear["y"]=3.00;                                                                                                                     |
+|                              |       msgdata.twist.twist.linear["z"]=-1.00;                                                                                                                    |
+|                              |       msgdata.twist.twist["angular"]={};                                                                                                                        |
+|                              |       msgdata.twist.twist.angular["z"]=1.00;                                                                                                                    |
+|                              |       msgdata["tolerance"]=2.00;                                                                                                                                |
+|                              |       msgdata["async"]=true;                                                                                                                                    |
+|                              |       msgdata["relative"]=false;                                                                                                                                |
+|                              |       msgdata["yaw_valid"]=true;                                                                                                                                |
+|                              |       msgdata["body_frame"]=false;                                                                                                                              |
+|                              |                                                                                                                                                                 |
+|                              |       $.ajax({                                                                                                                                                  |
+|                              |           type: "POST",                                                                                                                                         |
+|                              |           dataType: "json",                                                                                                                                     |
+|                              |           data: JSON.stringify(msgdata),                                                                                                                        |
+|                              |           url: "http://<ip>/ros/<namespace>/navigation/position_set",                                                                                           |
+|                              |           success: function(data){                                                                                                                              |
+|                              |                  console.log(data);                                                                                                                             |
+|                              |           }                                                                                                                                                     |
+|                              |       };                                                                                                                                                        |
++------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| NOTE                         | | linear: x ,y,z : xyz local position coordinates with respect to NED                                                                                           |
+|                              | | angular: z  : used for heading when yaw_valid set to true                                                                                                     |
+|                              | | tolerance: The radial value within which the setpoint is considered reached                                                                                   |
+|                              | | relative: Decides whether the given xyz coordinates are supposed to be taken relative to the current location                                                 |
+|                              | |     or relative to origin.                                                                                                                                    |
+|                              | | yaw_valid: Decides whether to use angular: z value for deciding the setpoint heading or just use default heading.                                             |
+|                              | | body_frame: Decides whether to apply the setpoints with respect to NED frame (false) or with respect to body frame (true).                                    |
++------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 .. _Velocity_Setpoint_REST:
@@ -445,7 +449,8 @@ REST
 |                              | |     tolerance:  [numeric : float],                                                                                                                            |
 |                              | |     async:      [boolean],                                                                                                                                    |
 |                              | |     relative:   [boolean],                                                                                                                                    |
-|                              | |     yaw_valid : [boolean]                                                                                                                                     |
+|                              | |     yaw_rate_valid : [boolean],                                                                                                                               |
+|                              | |     body_frame :[boolean]                                                                                                                                     |
 |                              | | }                                                                                                                                                             |
 |                              | |                                                                                                                                                               |
 |                              | | Example                                                                                                                                                       |
@@ -466,7 +471,8 @@ REST
 |                              | |     tolerance: 2.00,                                                                                                                                          |
 |                              | |     async: true,                                                                                                                                              |
 |                              | |     relative: false,                                                                                                                                          |
-|                              | |     yaw_valid: true                                                                                                                                           |
+|                              | |     yaw_rate_valid: true,                                                                                                                                     |
+|                              | |     body_frame :false                                                                                                                                         |
 |                              | | }                                                                                                                                                             |
 +------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | SUCCESS                      | | Code: 200                                                                                                                                                     |
@@ -493,7 +499,8 @@ REST
 |                              |       msgdata["tolerance"]=2.00;                                                                                                                                |
 |                              |       msgdata["async"]=true;                                                                                                                                    |
 |                              |       msgdata["relative"]=false;                                                                                                                                |
-|                              |       msgdata["yaw_valid"]=true;                                                                                                                                |
+|                              |       msgdata["yaw_rate_valid"]=true;                                                                                                                           |
+|                              |       msgdata["body_frame"]=false;                                                                                                                              |
 |                              |                                                                                                                                                                 |
 |                              |       $.ajax({                                                                                                                                                  |
 |                              |              type: "POST",                                                                                                                                      |
@@ -505,11 +512,12 @@ REST
 |                              |              }                                                                                                                                                  |
 |                              |       )};                                                                                                                                                       |
 +------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| NOTE                         | | linear: x,y,z : xyz local position coordinates with respect to NED                                                                                            |
-|                              | | angular: z  : used for heading when yaw_valid set to true                                                                                                     |
+| NOTE                         | | linear: x,y,z : xyz velocity setpoints with respect to NED                                                                                                    |
+|                              | | angular: z  : used for heading change velocity when yaw_valid set to true                                                                                     |
 |                              | | tolerance: The range with respect to set velocity, within which the setpoint is considered reached                                                            |
-|                              | | relative: Decides whether the given xyz coordination are supposed to be taken relative to the current location or relative to origin.                         |
-|                              | | yaw_valid: Decides whether to use angular: z value for deciding the setpoint heading or just use default heading.                                             |
+|                              | | relative: Decides whether the given xyz velocity setpoints are supposed to be taken relative to the current velocity .                                        |
+|                              | | yaw_rate_valid: Decides whether to use angular: z value for deciding the heading change velocity or just use default heading.                                 |
+|                              | | body_frame: Decides whether to apply the setpoints with respect to NED frame (false) or with respect to body frame (true).                                    |
 +------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
