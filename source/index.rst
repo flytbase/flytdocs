@@ -76,7 +76,7 @@ Checkout and participate in our `forums`_ and interact with the community sharin
 .. toctree::
    :maxdepth: 2
    :hidden:
-   :caption: FlytApps Documentation
+   :caption: FlytApps Tutorials
    
    docs/FlytApps/OnboardApps.rst
    docs/FlytApps/Web_MobileApps.rst
