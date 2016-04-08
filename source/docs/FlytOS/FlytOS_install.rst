@@ -79,6 +79,12 @@ Firmware Setup
 
 			$ sudo dpkg -i <path to debian package location>/flytOS_0.3-3_armhf.deb
 
+  - Just in case you see any dependency issues cropping up in your screen **other than that of Gazebo2** while executing the install script, kindly run the following command and execute the previous command again.
+    
+    .. code-block:: bash
+
+        $ sudo apt-get -f install 
+
 .. _flytos update:
 
 FlytOS - Update
