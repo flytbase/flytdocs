@@ -49,8 +49,8 @@ Checkout and participate in our `forums`_ and interact with the community sharin
     :hidden:
     :caption: FlytConsole Documentation
   
-    docs/FlytPOD/GettingStarted/About_FlytConsole.rst
-    docs/FlytPOD/GettingStarted/FlytConsole.rst 
+    docs/FlytConsole/About_FlytConsole.rst
+    docs/FlytConsole/FlytConsole.rst 
 
 
    
