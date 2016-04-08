@@ -103,6 +103,10 @@ Vision APIs
 These APIs provide image capture API and some image processing APIs.
 This FlytAPI documentation is under construction!!!
 
+* List Video Streams
+* Start/Stop Video Stream
+* Capture Snapshot
+
 .. * /global_namespace/capture_camera
 .. * /global_namespace/capture_camera_stop
 
