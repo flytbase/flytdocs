@@ -73,7 +73,7 @@ First kill any running FlytOS instance.
 
 To launch FlytOS with UDP bridge, replace <your-ip> and <your-port> with your local GCS system ip and port(use default 14550) in the following command.
 
-$(rospack find core_api)/scripts/start_flytOS_withUDP.sh udp://0.0.0.0:14555@<your-ip>:<your-port> --checkudp 
+$(rospack find core_api)/scripts/start_flytOS_withUDP.sh udp://0.0.0.0:14555@<your-ip>:<your-port> ---checkudp 
 
 For example, if FlytPOD's local ip is 192.168.1.5 and that of your system running GCS is 192.168.1.10 then following command will start mavlink on GCS system's port number 14550.
 
