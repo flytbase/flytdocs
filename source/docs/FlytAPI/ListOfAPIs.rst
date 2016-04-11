@@ -38,12 +38,12 @@ These are the list of available APIs for sending commands to the vehicle.
 * Execute Onboard CPP/Python Script (:ref:`onboard<Exec_Script_onboard>`) (:ref:`REST<Exec_Script_REST>`)
 * Waypoint Handling 
 
-  - Send Waypoints
-  - Get Waypoints 
-  - Clear Waypoints
+  - Set Waypoints (:ref:`REST<Set_Waypoints_REST>`)
+  - Get Waypoints (:ref:`REST<Get_Waypoints_REST>`)
+  - Clear Waypoints (:ref:`REST<Clear_Waypoints_REST>`)
   - Jump to a specific Waypoint
-  - Pause Waypoints
-  - Execute/Resume Waypoints
+  - Pause Waypoints (:ref:`REST<Pause_Waypoints_REST>`)
+  - Execute/Resume Waypoints (:ref:`REST<Execute_Waypoints_REST>`)
 
 Access Telemetry Data
 """""""""""""""""""""
@@ -53,11 +53,11 @@ These are the list of available APIs for accessing telemetry data from the vehic
 * Vehicle Attitude
 
   - Euler 
-  - Quaternion 
+  - Quaternion (:ref:`REST<Attitude_Quat_REST>`)
 
 * Vehicle Position
 
-  - Local NED Frame 
+  - Local NED Frame (:ref:`REST<LPOS_REST>`)
   - Global LLA Frame 
 
 * Raw IMU Sensor 
@@ -105,9 +105,10 @@ This FlytAPI documentation is under construction!!!
 
 * Video Streaming/Capture
 
-  - List Video Streams 
-  - Start/Stop Video Stream 
-  - Capture Snapshot 
+  - List Video Streams (:ref:`REST<List_Stream_REST>`)
+  - Start Video Stream (:ref:`REST<Start_Stream_REST>`)
+  - Stop Video Stream (:ref:`REST<Stop_Stream_REST>`)
+  - Capture/Snapshot (:ref:`REST<Capture_Stream_REST>`)
 
 * Object Detection/Tracking
 
@@ -125,25 +126,6 @@ This FlytAPI documentation is under construction!!!
 .. These APIs makes your vehicle connect to cloud.
 .. This FlytAPI documentation is under construction!!!
 
-
-
-.. .. warning:: fwffefefe
-
-.. .. tip:: cqfeqe
-
-.. .. note:: ccqeceqe
-
-.. .. important:: cqecqecq
-
-.. .. hint:: ecqcceqe
-
-.. .. error:: cqcqecqecq
-
-.. .. danger:: cqecqecqe
-
-.. .. caution:: ceceqevqev
-
-.. .. attention:: cqcqevcqe
 
 
 
