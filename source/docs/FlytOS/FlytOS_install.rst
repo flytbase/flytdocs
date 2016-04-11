@@ -42,8 +42,8 @@ Firmware Setup
 
 **Pixhawk Firmware**
 
-* **[Recommended]** *Using Binaries* - Download and install the latest stable PX4 firmware release using QGC or any other means. 
-* *Build from source* - Clone the PX4 stable branch, build and install on Pixhawk.			
+* **[Recommended]** *Using Binaries* - Download and install the latest stable PX4/APM firmware release using QGC or any other means. 
+* *Build from source* - Clone the PX4/APM stable branch, build and install on Pixhawk.			
   
 **FlytOS on ODROID-XU4**
 
@@ -73,11 +73,11 @@ Firmware Setup
       export PYTHONPATH=$PYTHONPATH:/flyt/flytapps
       source /flyt/flytos/flytcore/setup.bash
 
-  - Download the flytOS_0.3-3_armhf.deb file from `FlytOS Download`_ page. Once downloaded, run the following command in your terminal to install FlytOS.
+  - Download the flytOS_0.4-1_armhf.deb file from `FlytOS Download`_ page. Once downloaded, run the following command in your terminal to install FlytOS.
     
     .. code-block:: bash
 
-			$ sudo dpkg -i <path to debian package location>/flytOS_0.3-3_armhf.deb
+			$ sudo dpkg -i <path to debian package location>/flytOS_0.4-1_armhf.deb
 
   - Just in case you see any dependency issues cropping up in your screen **other than that of Gazebo2** while executing the install script, kindly run the following command and execute the previous command again.
     

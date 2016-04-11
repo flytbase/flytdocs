@@ -9,7 +9,6 @@ FlytAPIs have been extended from ROS to REST and Websocket. This document descri
 
 .. caution:: This guide is under active development.
 
-----
 
 Navigation APIs
 ---------------
