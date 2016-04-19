@@ -15,6 +15,11 @@ FlytSim is based on Gazebo2 which comes in packaged with ROS Indigo. If in case,
 
 .. But if you want to upgrade your Gazebo version, follow the steps mentioned in `this`_ tutorial. 
 
+.. _FlytSim Installation:
+
+FlytSim - Installation
+----------------------
+
 We have provided the following two approaches for installing FlytSim:
 
 * `FlytSim binaries - the preferred approach`_
