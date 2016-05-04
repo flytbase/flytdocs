@@ -228,7 +228,13 @@ To learn more about FlytConsole, look at the `FlytConsole documentation`_.
 
 Following are the steps to configure FlytPOD with FlytConsole:
 
-1. To launch FlytConsole go to this address ``http://<enter FlytPOD's ip address>:9090/flytconsole``.
+1. To launch FlytConsole go to this address ``http://flytpod:9090/flytconsole`` 
+
+
+   .. important:: In case the above url does not work replace 'flytpod' with flytpod's ip address.
+ 
+  
+	
 
 
    .. .. note:: Before you select your frame make sure the ESC is not connected to the supply.
