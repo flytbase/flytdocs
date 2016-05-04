@@ -9,10 +9,16 @@ Before you can start off with installing FlytSim, make sure you fulfill all the 
 * Intel 64 bit architecture
 * Linux - Ubuntu 14.04
 * `ROS - Indigo`_
+* `OpenCV 2.4`_ (for vision/video streaming APIs)
   
 FlytSim is based on Gazebo2 which comes in packaged with ROS Indigo. If in case, you have an upgraded version of Gazebo, please install Gazebo2 before moving ahead in this tutorial. In future, we will add support for upgraded versions of Gazebo as well. 
 
 .. But if you want to upgrade your Gazebo version, follow the steps mentioned in `this`_ tutorial. 
+
+.. _FlytSim Installation:
+
+FlytSim - Installation
+----------------------
 
 We have provided the following two approaches for installing FlytSim:
 
@@ -75,6 +81,24 @@ Build FlytSim from source
 Currently, efforts are being put to make FlytSim source code available in github.
 
 
+.. _FlytSim update:
+
+FlytSim - Update
+----------------
+
+FlytSim versions with bug fixes and additional features are released at regular intervals. To check the version of installed FlytSim in your system, issue the following command in your terminal.
+
+.. code-block:: bash
+
+   $ sudo dpkg -s flytsim
+
+Go to the `FlytSim download`_ page. Download the flytsimv0.x.zip file. Once downloaded, unzip the file to find *flytsim_0.x-y_amd64.deb* which is the FlytSim debian package. To update FlytSim, go to the directory where you extracted flytsimv0.x.zip and run the following command in your terminal.
+    
+.. code-block:: bash
+
+   $ sudo ./flytsim_install.sh
+
 .. _ROS - Indigo: http://wiki.ros.org/indigo/Installation/Ubuntu
 .. _this: https://github.com/ethz-asl/rotors_simulator/wiki/Gazebo-and-Gazebo-Ros-Installation
 .. _FlytSim Download: http://www.flytbase.com/flytos/#flytsim_3d
+.. _OpenCV 2.4: http://docs.opencv.org/2.4/doc/tutorials/introduction/linux_install/linux_install.html

@@ -30,38 +30,41 @@ These are the list of available APIs for sending commands to the vehicle.
 * Disarm (:ref:`onboard<Disarm_onboard>`) (:ref:`REST<Disarm_REST>`)
 * Takeoff (:ref:`onboard<TakeOff_onboard>`) (:ref:`REST<TakeOff_REST>`)
 * Land (:ref:`onboard<Land_onboard>`) (:ref:`REST<Land_REST>`)
-* Position Setpoint (:ref:`onboard<Position_Setpoint_onboard>`) (:ref:`REST<Position_Setpoint_REST>`)
+* Local Position Setpoint (:ref:`onboard<Position_Setpoint_onboard>`) (:ref:`REST<Position_Setpoint_REST>`)
+* Global Position Setpoint
 * Velocity Setpoint (:ref:`onboard<Velocity_Setpoint_onboard>`) (:ref:`REST<Velocity_Setpoint_REST>`)
 * Attitude Setpoint (:ref:`onboard<Attitude_Setpoint_onboard>`) (:ref:`REST<Attitude_Setpoint_REST>`)
 * Position Hold/Loiter/Hover (:ref:`onboard<Position_Hold_onboard>`) (:ref:`REST<Position_Hold_REST>`)
 * Execute Onboard CPP/Python Script (:ref:`onboard<Exec_Script_onboard>`) (:ref:`REST<Exec_Script_REST>`)
-* Waypoint Handling
+* Waypoint Handling 
 
-  - Send Waypoints
-  - Get Waypoints 
-  - Clear Waypoints
+  - Set Waypoints (:ref:`REST<Set_Waypoints_REST>`)
+  - Get Waypoints (:ref:`REST<Get_Waypoints_REST>`)
+  - Clear Waypoints (:ref:`REST<Clear_Waypoints_REST>`)
   - Jump to a specific Waypoint
-  - Pause Waypoints
-  - Execute/Resume Waypoints
+  - Pause Waypoints (:ref:`REST<Pause_Waypoints_REST>`)
+  - Execute/Resume Waypoints (:ref:`REST<Execute_Waypoints_REST>`)
 
 Access Telemetry Data
 """""""""""""""""""""
 
 These are the list of available APIs for accessing telemetry data from the vehicle.
 
-* Attitude
+* Vehicle Attitude
 
-  - Euler (:ref:`onboard<Arm_onboard>`) (:ref:`REST<Arm_REST>`)
-  - Quaternion (:ref:`onboard<Arm_onboard>`) (:ref:`REST<Attitude_Quat_REST>`)
+  - Euler 
+  - Quaternion (:ref:`REST<Attitude_Quat_REST>`)
 
-* Position
+* Vehicle Position
 
-  - Local NED Frame (:ref:`onboard<Arm_onboard>`) (:ref:`REST<LPOS_REST>`)
-  - Global LLA Frame (:ref:`onboard<Arm_onboard>`) (:ref:`REST<Arm_REST>`)
+  - Local NED Frame (:ref:`REST<LPOS_REST>`)
+  - Global LLA Frame 
 
-.. * Vehicle Status
-
-.. * Battery Status
+* Raw IMU Sensor 
+* Raw GPS 
+* Raw RC Channels
+* Vehicle State
+* Battery Status
  
 
 Parameter Handling APIs
@@ -72,7 +75,7 @@ These APIs help you in tweaking system parameters.
 * Param Create
 * Param Set
 * Param Get
-* Param Get_all
+* Param Get All
 * Param Delete
 * Param Save
 * Param Load
@@ -100,6 +103,20 @@ Vision APIs
 These APIs provide image capture API and some image processing APIs.
 This FlytAPI documentation is under construction!!!
 
+* Video Streaming/Capture
+
+  - List Video Streams (:ref:`REST<List_Stream_REST>`)
+  - Start Video Stream (:ref:`REST<Start_Stream_REST>`)
+  - Stop Video Stream (:ref:`REST<Stop_Stream_REST>`)
+  - Capture/Snapshot (:ref:`REST<Capture_Stream_REST>`)
+
+* Object Detection/Tracking
+
+  - Select Detect/Track Mode 
+  - Start/Stop Tracking Object  
+  - Get Centroid of Object
+  - Follow Object
+
 .. * /global_namespace/capture_camera
 .. * /global_namespace/capture_camera_stop
 
@@ -109,25 +126,6 @@ This FlytAPI documentation is under construction!!!
 .. These APIs makes your vehicle connect to cloud.
 .. This FlytAPI documentation is under construction!!!
 
-
-
-.. .. warning:: fwffefefe
-
-.. .. tip:: cqfeqe
-
-.. .. note:: ccqeceqe
-
-.. .. important:: cqecqecq
-
-.. .. hint:: ecqcceqe
-
-.. .. error:: cqcqecqecq
-
-.. .. danger:: cqecqecqe
-
-.. .. caution:: ceceqevqev
-
-.. .. attention:: cqcqevcqe
 
 
 

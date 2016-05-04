@@ -16,6 +16,12 @@ To launch FlytOS, run this command in the terminal.
 
 	$ $(rospack find core_api)/scripts/start_flytOS.sh 
 
+In case you are using APM on Pixhawk, launch FlytOS using the following script.
+
+.. code-block:: bash
+
+	$ $(rospack find core_api)/scripts/start_flytOS_apm.sh 
+
 .. important:: If you get this error: ``Error: package 'core_api' not found``, source your $HOME/.bashrc file.
 
 You can use FlytAPIs in your command line to do some simple maneuvers. For example,
