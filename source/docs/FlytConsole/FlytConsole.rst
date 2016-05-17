@@ -11,12 +11,23 @@ FlytConsole Widgets
 
 .. FlytConsole is a web application that gives you an interface to configure your drone with Flyt. 
 
-The various components included in FlytConsole are as follows:
+
+Wifi Connection
+"""""""""""""""
+
+Before you proceed connect to the FlytPOD_wifi network password for which is FlytPOD123. By default, the onboard router is configured in AP mode. Learn to reconfigure the router in client mode :ref:`here<configuring wifi module in client mode>`.
+
+Go to ``http://flytpod:9090/flytconsole`` to launch FlytConsole. 
+
+
+   .. important:: In case the above url does not work replace 'flytpod' with flytpod's ip address.
+
+.. The various components included in FlytConsole are as follows:
 
 Dashboard
 """""""""
 
-Once FlytConsole launches you are greeted by the Dashboard. The Dashboard displays the Connection status, Battery monitor, GPS status, Frame type and other widgets that give you the current status of your drone.
+Upon launch you are greeted by the Dashboard. The Dashboard displays the Connection status, Battery monitor, GPS status, Frame type and other widgets that give you the current status of your drone.
 
 
 .. figure:: /_static/Images/Dashboard.png
@@ -35,6 +46,9 @@ Once FlytConsole launches you are greeted by the Dashboard. The Dashboard displa
 	
 	FlytPOD Orientation   
 
+.. _Frame_select:
+
+
 Frame Select
 """"""""""""
 
@@ -48,21 +62,19 @@ Frame Select
 
 Frame Select allows you to select the airframe-type of your drone. You are provided with several predefined options of multi-copter and fixed wing configurations. These configurations are further subdivided based on the make of the drone.
 
-Depending upon the actual frame of your drone, select the airframe and click on Save and Reboot to reboot FlytPOD. 
-
-
-.. note:: Only FlytPOD will reboot after clicking on Save and Reboot. FlytConsole is not rebooted and will continue working. 
+Depending upon the actual frame of your drone, select the airframe and click on Save and Reboot to reboot FlytOS.
 
 
 
-
-
+.. _Motor_config:
 
 Motor Configuration
 """""""""""""""""""
 
 
 Motor Configuration lets you calibrate the ESCs and test the motors attached to your drone.
+
+.. _ESC_calibration:
 
 ESC Calibration
 +++++++++++++++
@@ -90,7 +102,9 @@ The min and max PWM values are the expected values from the FlytPOD to the ESCs.
 	
 	Min PWM values, Max PWM Values and Number of Actuators for ESC Calibration
 
-Once you have set the min, max and number of actuators, click on Start Calibration. You will see a message saying 'Calibration started'. This marks the start of Stage 1 of ESC Calibration. Disconnect the power from the ESCs and click on Next. 
+Once you have set the min, max and number of actuators, click on Start Calibration. You will see a message saying **'Calibration started'**. This marks the start of Stage 1 of ESC Calibration. Disconnect the power from the ESCs and click on Next. 
+
+
 
 Stage 2 involves setting the time duration(in seconds) for the PWM high time in stage 3. After this connect the power to the ESCs and click on next. 
 
@@ -101,7 +115,6 @@ Stage 4 marks the end of ESC Calibration. Click on Finish.
    
 .. important:: * Not all ESC’s need range calibration. Please consult your ESC user documentation before you do it.
      				* Also this is a one-time setup which is NOT required to be done again until you change one or more of your ESC’s.
-     				* Please follow the FlytConsole instructions.
      				* It is recommended that you use the default values for minimum and maximum PWM values and the default number of Actuators.
 
 .. .. important:: * Not all ESC’s need range calibration. Please consult your ESC user documentation before you do it.
@@ -122,6 +135,8 @@ Stage 4 marks the end of ESC Calibration. Click on Finish.
 
       .. After ESC Calibration, the next thing to be done is Motor Testing.
 
+.. _Motor_test:
+
 Motor Testing
 +++++++++++++
 
@@ -133,18 +148,25 @@ Motor Testing
 
    
 
-FlytConsole allows you to test the direction of rotation of your motors attached to your drone. In Motor testing you can do this by clicking on the respective motor that you want to test. Once you click on the motor, it will start rotating and you can check whether the direction of rotation is correct or not. Every adjacent motor to current one should rotate in the opposite direction. 
+FlytConsole allows you to test the direction of rotation of your motors attached to your drone. In Motor testing you can do this by clicking on the respective motor that you want to test. Once you click on the motor, it will start rotating and you can check whether the direction of rotation is correct or not.
 
 .. important:: * You need to power the ESCs for this.
      				* In case your motor rotates in the incorrect direction, you can swap any two of the ESC cables going to the motor and make the motor rotate in the desired direction.
-     				* If the incorrect motor is rotating, switch PWM wires going to the ESCs from the controller to the right channel.
+     				* If the incorrect motor is rotating, switch PWM output wires going to the ESCs from the controller to the right channel.
      				* If none of the motors rotate, check the connections again.
      					  
 
 There is also a provision for setting the time of rotation for the motors.
 
+
+
+.. _Calibration:
+
 Calibration
 """""""""""
+
+.. _Sensor_calibration:
+
 
 Sensor Calibration
 ++++++++++++++++++
@@ -157,7 +179,7 @@ Sensor Calibration
 	Sensor Calibration comprising of Accel, Gyro, Mag and Level Calibration  
 
    
-Sensor calibration is of utmost importance before you fly your drone. You need to calibrate magnetometer every time you change the flying field. If your autopilot orientation is not the same as that of your drone, update AUTOPILOT ORIENTATION parameter accordingly. Similarly, if your external magnetometer's orientation differs from FlytPOD's heading, update EXT MAG ROTATION parameter.
+Sensor calibration is of utmost importance before you fly your drone. You need to calibrate magnetometer every time you change the flying field. If your autopilot orientation is not the same as that of your drone, update **AUTOPILOT ORIENTATION** parameter accordingly. Similarly, if your external magnetometer's orientation differs from FlytPOD's heading, update **EXT MAG ROTATION** parameter.
    
 The other sensors to be calibrated for correct attitude are given below:
 
@@ -184,6 +206,8 @@ Keep the drone steady in flat position on a leveled surface on the floor.
 
 Parameters need to be saved and autopilot is to be rebooted by clicking on the Reboot button.
    
+
+.. _RC_calibration:
    
 
 RC Calibration
@@ -240,6 +264,10 @@ Once this is done map RC modes to three way switch channel and manual override t
 .. 8. Select the type of receiver if you cannot see the data for RC.
       
 .. 9. To read the description of modes and state machine go to (link to internal details page in docs.flytbase.com)	
+
+
+
+.. _Gain_tuning:
 
 Gain Tuning
 """""""""""
