@@ -37,12 +37,12 @@ REST
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 | SUCCESS                      | | Code: 200                                                                                                          |
 | RESPONSE                     | | Content: {                                                                                                         | 
-|                              | |     success : true / false,                                                                                        |
+|                              | |     success : [Boolean]                                                                                            |
 |                              | |     param_info:{                                                                                                   |
 |                              | |         param_value: [String]                                                                                      |
 |                              | |     }                                                                                                              |
 |                              | | }                                                                                                                  |
-|                              | | true:  command accepted by system and returns namespace                                                            |
+|                              | | success: true:  command accepted by system , false: command rejected by system.                                    |
 |                              | | param_info: the namespace value                                                                                    |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 | ERROR                        | | Code: 404                                                                                                          |
@@ -88,10 +88,9 @@ REST
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 | SUCCESS                      | | Code: 200                                                                                                          |
 | RESPONSE                     | | Content: {                                                                                                         | 
-|                              | |     success : true / false,                                                                                        |
+|                              | |     success : [Boolean]                                                                                            |
 |                              | | }                                                                                                                  |
-|                              | | true:  command accepted by system and system arms.                                                                 |
-|                              | | false: command rejected by system and system remains disarmed.                                                     |
+|                              | | success: true:  command accepted by system , false: command rejected by system.                                    |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 | ERROR                        | | Code: 404                                                                                                          |
 | RESPONSE                     | | resource not found                                                                                                 |
@@ -136,10 +135,9 @@ REST
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 | SUCCESS                      | | Code: 200                                                                                                          |
 | RESPONSE                     | | Content: {                                                                                                         | 
-|                              | |     success : true / false,                                                                                        |
+|                              | |     success : [Boolean]                                                                                            |
 |                              | | }                                                                                                                  |
-|                              | | true:  command accepted by system and system disarms.                                                              |
-|                              | | false: command rejected by system and system remains armed.                                                        |
+|                              | | success: true:  command accepted by system , false: command rejected by system.                                    |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 | ERROR                        | | Code: 404                                                                                                          |
 | RESPONSE                     | | resource not found                                                                                                 |
@@ -181,7 +179,7 @@ REST
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 | DATA PARAMS                  | | Content: application/JSON                                                                                          |
 |                              | | {                                                                                                                  |
-|                              | |     takeoff_alt : [numeric : float]                                                                                |
+|                              | |     takeoff_alt : [Float]                                                                                          |
 |                              | | }                                                                                                                  |
 |                              | |                                                                                                                    |
 |                              | | Example:                                                                                                           |
@@ -191,10 +189,9 @@ REST
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 | SUCCESS                      | | Code: 200                                                                                                          |
 | RESPONSE                     | | Content: {                                                                                                         | 
-|                              | |     success : true / false,                                                                                        |
+|                              | |     success : [Boolean]                                                                                            |
 |                              | | }                                                                                                                  |
-|                              | | true:  command accepted by system and the drone takes off.                                                         |
-|                              | | false: command rejected by system and system remains as it is.                                                     |
+|                              | | success: true:  command accepted by system , false: command rejected by system.                                    |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 | ERROR                        | | Code: 404                                                                                                          |
 | RESPONSE                     | | resource not found                                                                                                 |
@@ -241,10 +238,9 @@ REST
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 | SUCCESS                      | | Code: 200                                                                                                          |
 | RESPONSE                     | | Content: {                                                                                                         | 
-|                              | |     success : true / false,                                                                                        |
+|                              | |     success : [Boolean]                                                                                            |
 |                              | | }                                                                                                                  |
-|                              | | true:  command accepted by system and the drone lands.                                                             |
-|                              | | false: command rejected by system and system continues with current mission.                                       |
+|                              | | success: true:  command accepted by system , false: command rejected by system.                                    |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 | ERROR                        | | Code: 404                                                                                                          |
 | RESPONSE                     | | resource not found                                                                                                 |
@@ -290,10 +286,9 @@ REST
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 | SUCCESS                      | | Code: 200                                                                                                          |
 | RESPONSE                     | | Content: {                                                                                                         | 
-|                              | |     success : true / false,                                                                                        |
+|                              | |     success : [Boolean]                                                                                            |
 |                              | | }                                                                                                                  |
-|                              | | true:  command accepted by system and the drone hovering at a location.                                            |
-|                              | | false: command rejected by system and system continues with current mission.                                       |
+|                              | | success: true:  command accepted by system , false: command rejected by system.                                    |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 | ERROR                        | | Code: 404                                                                                                          |
 | RESPONSE                     | | resource not found                                                                                                 |
@@ -337,20 +332,20 @@ REST
 |                              | |     twist:{                                                                                                                                                   |
 |                              | |         twist:{                                                                                                                                               |
 |                              | |             linear:{                                                                                                                                          |
-|                              | |                 x: [numeric : float],                                                                                                                         |
-|                              | |                 y: [numeric : float],                                                                                                                         |
-|                              | |                 z: [numeric : float]                                                                                                                          |
+|                              | |                 x: [Float],                                                                                                                                   |
+|                              | |                 y: [Float],                                                                                                                                   |
+|                              | |                 z: [Float]                                                                                                                                    |
 |                              | |             },                                                                                                                                                |
 |                              | |             angular:{                                                                                                                                         |
-|                              | |                 z: [numeric : float]                                                                                                                          |
+|                              | |                 z: [Float]                                                                                                                                    |
 |                              | |             }                                                                                                                                                 |
 |                              | |         }                                                                                                                                                     |
 |                              | |     },                                                                                                                                                        |
-|                              | |     tolerance:  [numeric : float],                                                                                                                            |
-|                              | |     async:      [boolean],                                                                                                                                    |
-|                              | |     relative:   [boolean],                                                                                                                                    |
-|                              | |     yaw_valid : [boolean],                                                                                                                                    |
-|                              | |     body_frame : [boolean]                                                                                                                                    |
+|                              | |     tolerance:  [Float],                                                                                                                                      |
+|                              | |     async:      [Boolean],                                                                                                                                    |
+|                              | |     relative:   [Boolean],                                                                                                                                    |
+|                              | |     yaw_valid : [Boolean],                                                                                                                                    |
+|                              | |     body_frame : [Boolean]                                                                                                                                    |
 |                              | | }                                                                                                                                                             |
 |                              | |                                                                                                                                                               |
 |                              | | Example                                                                                                                                                       |
@@ -384,10 +379,9 @@ REST
 +------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | SUCCESS                      | | Code: 200                                                                                                                                                     |
 | RESPONSE                     | | Content: {                                                                                                                                                    | 
-|                              | |     success : true / false,                                                                                                                                   |
+|                              | |     success : [Boolean],                                                                                                                                      |
 |                              | | }                                                                                                                                                             |
-|                              | | true:  command accepted by system and the drone starts to move towards the defined location.                                                                  |
-|                              | | false: command rejected by system and system continues with existing mission.                                                                                 |
+|                              | | success: true:  command accepted by system , false: command rejected by system.                                                                               |
 +------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | ERROR                        | | Code: 404                                                                                                                                                     |
 | RESPONSE                     | | resource not found                                                                                                                                            |
@@ -447,20 +441,20 @@ REST
 |                              | |     twist:{                                                                                                                                                   |
 |                              | |         twist:{                                                                                                                                               |
 |                              | |             linear:{                                                                                                                                          |
-|                              | |                 x: [numeric : float],                                                                                                                         |
-|                              | |                 y: [numeric : float],                                                                                                                         |
-|                              | |                 z: [numeric : float]                                                                                                                          |
+|                              | |                 x: [Float],                                                                                                                                   |
+|                              | |                 y: [Float],                                                                                                                                   |
+|                              | |                 z: [Float]                                                                                                                                    |
 |                              | |             },                                                                                                                                                |
 |                              | |             angular:{                                                                                                                                         |
-|                              | |                 z: [numeric : float]                                                                                                                          |
+|                              | |                 z: [Float]                                                                                                                                    |
 |                              | |             }                                                                                                                                                 |
 |                              | |         }                                                                                                                                                     |
 |                              | |     },                                                                                                                                                        |
-|                              | |     tolerance:  [numeric : float],                                                                                                                            |
-|                              | |     async:      [boolean],                                                                                                                                    |
-|                              | |     relative:   [boolean],                                                                                                                                    |
-|                              | |     yaw_rate_valid : [boolean],                                                                                                                               |
-|                              | |     body_frame :[boolean]                                                                                                                                     |
+|                              | |     tolerance:  [Float],                                                                                                                                      |
+|                              | |     async:      [Boolean],                                                                                                                                    |
+|                              | |     relative:   [Boolean],                                                                                                                                    |
+|                              | |     yaw_rate_valid : [Boolean],                                                                                                                               |
+|                              | |     body_frame :[Boolean]                                                                                                                                     |
 |                              | | }                                                                                                                                                             |
 |                              | |                                                                                                                                                               |
 |                              | | Example                                                                                                                                                       |
@@ -493,10 +487,9 @@ REST
 +------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | SUCCESS                      | | Code: 200                                                                                                                                                     |
 | RESPONSE                     | | Content: {                                                                                                                                                    |
-|                              | |     success : true / false,                                                                                                                                   |
+|                              | |     success : [Boolean],                                                                                                                                      |
 |                              | | }                                                                                                                                                             |
-|                              | | true:  command accepted by system and the drone starts to move to to attain the set velocity.                                                                 |
-|                              | | false: command rejected by system and system continues with existing mission.                                                                                 |
+|                              | | success: true:  command accepted by system , false: command rejected by system.                                                                               |
 +------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | ERROR                        | | Code: 404                                                                                                                                                     |
 | RESPONSE                     | | resource not found                                                                                                                                            |
@@ -556,13 +549,13 @@ REST
 |                              | |     twist:{                                                                                                        |
 |                              | |         twist:{                                                                                                    |
 |                              | |             angular:{                                                                                              |
-|                              | |                 x: [numeric : float],                                                                              |
-|                              | |                 y: [numeric : float],                                                                              |
-|                              | |                 z: [numeric : float]                                                                               |
+|                              | |                 x: [Float],                                                                                        |
+|                              | |                 y: [Float],                                                                                        |
+|                              | |                 z: [Float]                                                                                         |
 |                              | |             }                                                                                                      |
 |                              | |         }                                                                                                          |
 |                              | |     },                                                                                                             |
-|                              | |     thrust:  [numeric : float]                                                                                     |
+|                              | |     thrust:  [Float]                                                                                               |
 |                              | | }                                                                                                                  |
 |                              | |                                                                                                                    |
 |                              | | Example                                                                                                            |
@@ -583,10 +576,9 @@ REST
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 | SUCCESS                      | | Code: 200                                                                                                          |
 | RESPONSE                     | | Content: {                                                                                                         | 
-|                              | |     success : true / false,                                                                                        |
+|                              | |     success : [Boolean],                                                                                           |
 |                              | | }                                                                                                                  |
-|                              | | true:  command accepted by system and the drone starts to move to to attain the given velocity.                    |
-|                              | | false: command rejected by system and system continues with existing mission.                                      |
+|                              | | success: true:  command accepted by system , false: command rejected by system.                                    |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 | ERROR                        | | Code: 404                                                                                                          |
 | RESPONSE                     | | resource not found                                                                                                 |
@@ -652,10 +644,9 @@ REST
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 | SUCCESS                      | | Code: 200                                                                                                          |
 | RESPONSE                     | | Content: {                                                                                                         | 
-|                              | |     success : true / false,                                                                                        |
+|                              | |     success : [Boolean],                                                                                           |
 |                              | | }                                                                                                                  |
-|                              | | true:  command accepted by system and the drone starts executing the script.                                       |
-|                              | | false: command rejected by system and system continues with existing mission.                                      |
+|                              | | success: true:  command accepted by system , false: command rejected by system.                                    |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 | ERROR                        | | Code: 404                                                                                                          |
 | RESPONSE                     | | resource not found                                                                                                 |
@@ -707,13 +698,13 @@ REST
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
 | SUCCESS                      | | Code: 200                                                                                                                        |
 | RESPONSE                     | | Content: {                                                                                                                       | 
-|                              | |     success : [Bool],                                                                                                            |
+|                              | |     success : [Boolean],                                                                                                         |
 |                              | |     wp_recieved : [Int],                                                                                                         |
 |                              | |     waypoints: [{                                                                                                                |
 |                              | |          frame : [Int] 0/1/2/3/4,                                                                                                |
 |                              | |          command : [Int] 16/17/18/19/20/21/22,                                                                                   |
-|                              | |          is_current : [Bool],                                                                                                    |
-|                              | |          autocontinue : [Bool],                                                                                                  |
+|                              | |          is_current : [Boolean],                                                                                                 |
+|                              | |          autocontinue : [Boolean],                                                                                               |
 |                              | |          param1 : [Float],                                                                                                       |
 |                              | |          param2 : [Float],                                                                                                       |
 |                              | |          param3 : [Float],                                                                                                       |
@@ -783,8 +774,8 @@ REST
 |                              | | [{                                                                                                                               |
 |                              | |          frame : [Int] 0/1/2/3/4,                                                                                                |
 |                              | |          command : [Int] 16/17/18/19/20/21/22,                                                                                   |
-|                              | |          is_current : [Bool],                                                                                                    |
-|                              | |          autocontinue : [Bool],                                                                                                  |
+|                              | |          is_current : [Boolean],                                                                                                 |
+|                              | |          autocontinue : [Boolean],                                                                                               |
 |                              | |          param1 : [Float],                                                                                                       |
 |                              | |          param2 : [Float],                                                                                                       |
 |                              | |          param3 : [Float],                                                                                                       |
@@ -824,7 +815,7 @@ REST
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
 | SUCCESS                      | | Code: 200                                                                                                                        |
 | RESPONSE                     | | Content: {                                                                                                                       | 
-|                              | |     success : [Bool],                                                                                                            |
+|                              | |     success : [Boolean]                                                                                                          |
 |                              | | }                                                                                                                                |
 |                              | | success: true:  command accepted by system , false: command rejected by system.                                                  |
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
@@ -888,7 +879,7 @@ REST
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
 | SUCCESS                      | | Code: 200                                                                                                                        |
 | RESPONSE                     | | Content: {                                                                                                                       | 
-|                              | |     success : [Bool],                                                                                                            |
+|                              | |     success : [Boolean]                                                                                                          |
 |                              | | }                                                                                                                                |
 |                              | | success: true:  command accepted by system , false: command rejected by system.                                                  |
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
@@ -940,7 +931,7 @@ REST
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
 | SUCCESS                      | | Code: 200                                                                                                                        |
 | RESPONSE                     | | Content: {                                                                                                                       | 
-|                              | |     success : [Bool],                                                                                                            |
+|                              | |     success : [Boolean],                                                                                                         |
 |                              | | }                                                                                                                                |
 |                              | | success: true:  command accepted by system , false: command rejected by system.                                                  |
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
@@ -992,7 +983,7 @@ REST
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
 | SUCCESS                      | | Code: 200                                                                                                                        |
 | RESPONSE                     | | Content: {                                                                                                                       | 
-|                              | |     success : [Bool],                                                                                                            |
+|                              | |     success : [Boolean],                                                                                                         |
 |                              | | }                                                                                                                                |
 |                              | | success: true:  command accepted by system , false: command rejected by system.                                                  |
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
@@ -1039,7 +1030,7 @@ REST
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 | METHOD                       | GET , POST                                                                                                           |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| DATA PARAMS                  | | Content type: application/JSON                                                                                     |
+| DATA PARAMS                  | | Content: application/JSON                                                                                          |
 |                              | | {}                                                                                                                 |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 | SUCCESS                      | | Code: 200                                                                                                          |
@@ -1202,6 +1193,8 @@ Socket
 |                              |                                                                                                                      |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 
+----
+
 .. _Attitude_Quat_REST:
 
 
@@ -1249,6 +1242,8 @@ Socket
 |                              | |                                                                                                                                                                |
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
+----
+
 .. _LPOS_REST:
 
 Local Position data
@@ -1291,3 +1286,282 @@ Socket
 |                              | |                                                                                                                                                                |
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
+----
+
+Parameter Handling APIs
+------------------------
+
+Parameter Set
+^^^^^^^^^^^^^^
+
+This command sets parameters in FlytOS. 
+
+REST
+""""
+
+
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| URL                          | | http://<ip>/ros/<namespace>/param/param_set                                                                                            |
+|                              | | <ip>: IP of the flytpod in the network along with port                                                                                 |
+|                              | |     eg: 192.168.x.xxx:9090                                                                                                             |
+|                              | | <namespace>: Name of the flytpod (default: flytpod) which is required for every rest call                                              |
+|                              | |     and can be fetched from get namespace rest call.                                                                                   |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| METHOD                       | GET , POST                                                                                                                               |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| DATA PARAMS                  | | Content: application/JSON                                                                                                              |
+|                              | | {                                                                                                                                      |
+|                              | |      param_info:{                                                                                                                      |
+|                              | |                        param_id: [String],                                                                                             |
+|                              | |                        param_value: [String]                                                                                           |
+|                              | |                 }                                                                                                                      |
+|                              | | }                                                                                                                                      |
+|                              | |                                                                                                                                        |
+|                              | |  Example                                                                                                                               |
+|                              | | {                                                                                                                                      |
+|                              | |      param_info:{                                                                                                                      |
+|                              | |                        param_id: "RTL_ALT",                                                                                            |
+|                              | |                        param_value: "5.0"                                                                                              |
+|                              | |                 }                                                                                                                      |
+|                              | | }                                                                                                                                      |
+|                              | | param_id: Name of the parameter to be set.                                                                                             |
+|                              | | param_value: Value of the parameter to be set. Should be in string.                                                                    |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| SUCCESS                      | | Code: 200                                                                                                                              |
+| RESPONSE                     | | Content: {                                                                                                                             | 
+|                              | |     success : [Boolean]                                                                                                                |
+|                              | | }                                                                                                                                      |
+|                              | | success:  Tells whether the command is accepted or rejected by system.                                                                 |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| ERROR                        | | Code: 404                                                                                                                              |
+| RESPONSE                     | | resource not found                                                                                                                     |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| SAMPLE                       |  .. code-block:: python                                                                                                                  |
+| CALL                         |                                                                                                                                          |
+|                              |       var msgdata={};                                                                                                                    |
+|                              |       msgdata["param_info"]={};                                                                                                          |
+|                              |       msgdata.param_info["param_id"]="RTL_ALT";                                                                                          |
+|                              |       msgdata.param_info["param_value"]="5.0";                                                                                           |
+|                              |       $.ajax({                                                                                                                           |
+|                              |           type: "POST",                                                                                                                  |
+|                              |           dataType: "json",                                                                                                              |
+|                              |           data: JSON.stringify(msgdata),                                                                                                 |
+|                              |           url: "http://<ip>/ros/<namespace>/param/param_set",                                                                            |
+|                              |           success: function(data){                                                                                                       |
+|                              |                  console.log(data);                                                                                                      |
+|                              |           }                                                                                                                              |
+|                              |       )};                                                                                                                                |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| NOTE                         | | The changes made by set-param are lost in reboot. Use the save-param api after set-param to retain changes on reboot.                  |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+
+----
+
+Parameter Get All
+^^^^^^^^^^^^^^^^^^
+
+This command gets all parameters from FlytOS. 
+
+REST
+""""
+
+
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| URL                          | | http://<ip>/ros/<namespace>/param/param_get_all                                                                                        |
+|                              | | <ip>: IP of the flytpod in the network along with port                                                                                 |
+|                              | |     eg: 192.168.x.xxx:9090                                                                                                             |
+|                              | | <namespace>: Name of the flytpod (default: flytpod) which is required for every rest call                                              |
+|                              | |     and can be fetched from get namespace rest call.                                                                                   |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| METHOD                       | GET , POST                                                                                                                               |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| DATA PARAMS                  | | Content: application/JSON                                                                                                              |
+|                              | | {}                                                                                                                                     |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| SUCCESS                      | | Code: 200                                                                                                                              |
+| RESPONSE                     | | Content: {                                                                                                                             |
+|                              | |               success : [Boolean],                                                                                                     |
+|                              | |               param_list: [{   param_id: [String],                                                                                     |
+|                              | |                                param_value: [String]                                                                                   |
+|                              | |                            },                                                                                                          |
+|                              | |                            {   param_id: [String],                                                                                     |
+|                              | |                                param_value: [String]                                                                                   |
+|                              | |                            },                                                                                                          |
+|                              | |                            {   param_id: [String],                                                                                     |
+|                              | |                                param_value: [String]                                                                                   |
+|                              | |                            },{},{},....]                                                                                               |
+|                              | | }                                                                                                                                      |
+|                              | |                                                                                                                                        |
+|                              | | success:  Tells whether the command is accepted or rejected by system.                                                                 |
+|                              | | param_list: Array of parameters with ids and respective values.                                                                        |
+|                              | | param_id: Name of the parameter.                                                                                                       |
+|                              | | param_value: Value of the parameter.                                                                                                   |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| ERROR                        | | Code: 404                                                                                                                              |
+| RESPONSE                     | | resource not found                                                                                                                     |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| SAMPLE                       |  .. code-block:: python                                                                                                                  |
+| CALL                         |                                                                                                                                          |
+|                              |       var msgdata={};                                                                                                                    |
+|                              |       $.ajax({                                                                                                                           |
+|                              |           type: "POST",                                                                                                                  |
+|                              |           dataType: "json",                                                                                                              |
+|                              |           data: JSON.stringify(msgdata),                                                                                                 |
+|                              |           url: "http://<ip>/ros/<namespace>/param/param_get_all",                                                                        |
+|                              |           success: function(data){                                                                                                       |
+|                              |                  console.log(data);                                                                                                      |
+|                              |           }                                                                                                                              |
+|                              |       )};                                                                                                                                |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+----
+
+
+Parameter Get
+^^^^^^^^^^^^^^
+
+This command gets a particular parameter from FlytOS. 
+
+REST
+""""
+
+
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| URL                          | | http://<ip>/ros/<namespace>/param/param_set                                                                                            |
+|                              | | <ip>: IP of the flytpod in the network along with port                                                                                 |
+|                              | |     eg: 192.168.x.xxx:9090                                                                                                             |
+|                              | | <namespace>: Name of the flytpod (default: flytpod) which is required for every rest call                                              |
+|                              | |     and can be fetched from get namespace rest call.                                                                                   |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| METHOD                       | GET , POST                                                                                                                               |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| DATA PARAMS                  | | Content: application/JSON                                                                                                              |
+|                              | | {                                                                                                                                      |
+|                              | |      param_id: [String]                                                                                                                |
+|                              | | }                                                                                                                                      |
+|                              | |                                                                                                                                        |
+|                              | |  Example                                                                                                                               |
+|                              | | {                                                                                                                                      |
+|                              | |      param_id: "RTL_ALT"                                                                                                               |
+|                              | | }                                                                                                                                      |
+|                              | | param_id: Name of the parameter to be fetched.                                                                                         |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| SUCCESS                      | | Code: 200                                                                                                                              |
+| RESPONSE                     | | Content: {                                                                                                                             | 
+|                              | |     success : [Boolean],                                                                                                               |
+|                              | |     param_info:{   param_value:[String]      }                                                                                         |
+|                              | | }                                                                                                                                      |
+|                              | | success:  Tells whether the command is accepted or rejected by system.                                                                 |
+|                              | | param_value: It carries the value of the parameter to be fetched.                                                                      |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| ERROR                        | | Code: 404                                                                                                                              |
+| RESPONSE                     | | resource not found                                                                                                                     |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| SAMPLE                       |  .. code-block:: python                                                                                                                  |
+| CALL                         |                                                                                                                                          |
+|                              |       var msgdata={};                                                                                                                    |
+|                              |       msgdata["param_id"]="RTL_ALT";                                                                                                     |
+|                              |       $.ajax({                                                                                                                           |
+|                              |           type: "POST",                                                                                                                  |
+|                              |           dataType: "json",                                                                                                              |
+|                              |           data: JSON.stringify(msgdata),                                                                                                 |
+|                              |           url: "http://<ip>/ros/<namespace>/param/param_get",                                                                            |
+|                              |           success: function(data){                                                                                                       |
+|                              |                  console.log(data.param_info.param_value);                                                                               |
+|                              |           }                                                                                                                              |
+|                              |       )};                                                                                                                                |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+----
+
+Parameter Save
+^^^^^^^^^^^^^^^
+
+This command Saves all parameters in FlytOS with changes still reflected on next reboot. 
+
+REST
+""""
+
+
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| URL                          | | http://<ip>/ros/<namespace>/param/param_save                                                                                           |
+|                              | | <ip>: IP of the flytpod in the network along with port                                                                                 |
+|                              | |     eg: 192.168.x.xxx:9090                                                                                                             |
+|                              | | <namespace>: Name of the flytpod (default: flytpod) which is required for every rest call                                              |
+|                              | |     and can be fetched from get namespace rest call.                                                                                   |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| METHOD                       | GET , POST                                                                                                                               |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| DATA PARAMS                  | | Content: application/JSON                                                                                                              |
+|                              | | {}                                                                                                                                     |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| SUCCESS                      | | Code: 200                                                                                                                              |
+| RESPONSE                     | | Content: {                                                                                                                             |
+|                              | |               success : [Boolean],                                                                                                     |
+|                              | | }                                                                                                                                      |
+|                              | |                                                                                                                                        |
+|                              | | success:  Tells whether the command is accepted or rejected by system.                                                                 |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| ERROR                        | | Code: 404                                                                                                                              |
+| RESPONSE                     | | resource not found                                                                                                                     |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| SAMPLE                       |  .. code-block:: python                                                                                                                  |
+| CALL                         |                                                                                                                                          |
+|                              |       var msgdata={};                                                                                                                    |
+|                              |       $.ajax({                                                                                                                           |
+|                              |           type: "POST",                                                                                                                  |
+|                              |           dataType: "json",                                                                                                              |
+|                              |           data: JSON.stringify(msgdata),                                                                                                 |
+|                              |           url: "http://<ip>/ros/<namespace>/param/param_save",                                                                           |
+|                              |           success: function(data){                                                                                                       |
+|                              |                  console.log(data);                                                                                                      |
+|                              |           }                                                                                                                              |
+|                              |       )};                                                                                                                                |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+
+----
+
+Parameter Load
+^^^^^^^^^^^^^^^
+
+This command loads parameters on to the FlytOS if a new parameter file is uploaded to the FlytOS through Flytconsole. 
+
+REST
+""""
+
+
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| URL                          | | http://<ip>/ros/<namespace>/param/param_load                                                                                           |
+|                              | | <ip>: IP of the flytpod in the network along with port                                                                                 |
+|                              | |     eg: 192.168.x.xxx:9090                                                                                                             |
+|                              | | <namespace>: Name of the flytpod (default: flytpod) which is required for every rest call                                              |
+|                              | |     and can be fetched from get namespace rest call.                                                                                   |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| METHOD                       | GET , POST                                                                                                                               |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| DATA PARAMS                  | | Content: application/JSON                                                                                                              |
+|                              | | {}                                                                                                                                     |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| SUCCESS                      | | Code: 200                                                                                                                              |
+| RESPONSE                     | | Content: {                                                                                                                             |
+|                              | |               success : [Boolean],                                                                                                     |
+|                              | | }                                                                                                                                      |
+|                              | |                                                                                                                                        |
+|                              | | success:  Tells whether the command is accepted or rejected by system.                                                                 |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| ERROR                        | | Code: 404                                                                                                                              |
+| RESPONSE                     | | resource not found                                                                                                                     |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| SAMPLE                       |  .. code-block:: python                                                                                                                  |
+| CALL                         |                                                                                                                                          |
+|                              |       var msgdata={};                                                                                                                    |
+|                              |       $.ajax({                                                                                                                           |
+|                              |           type: "POST",                                                                                                                  |
+|                              |           dataType: "json",                                                                                                              |
+|                              |           data: JSON.stringify(msgdata),                                                                                                 |
+|                              |           url: "http://<ip>/ros/<namespace>/param/param_load",                                                                           |
+|                              |           success: function(data){                                                                                                       |
+|                              |                  console.log(data);                                                                                                      |
+|                              |           }                                                                                                                              |
+|                              |       )};                                                                                                                                |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+
+----
