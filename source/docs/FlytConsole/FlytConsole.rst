@@ -1,7 +1,7 @@
 .. _flytconsole widgets:
 
-FlytConsole-Widgets
-===================
+FlytConsole - Widgets
+=====================
 
 .. important:: This site is under active development.
 

@@ -23,7 +23,7 @@ Hardware Specifications
 1. Power Button
 ^^^^^^^^^^^^^^^
 
-Use the power button at the top left corner of the I/O panel to turn off FlytPOD. Please be patient while the system shuts down. The RGB LED turns to amber color upon shutting down.
+Press the power button at the top left corner of the I/O panel to turn off FlytPOD. Please be patient while the system shuts down. The RGB LED turns to amber color upon shutting down.
 
 .. note:: It may take a few seconds for the system to shut down completely.
   
@@ -51,7 +51,7 @@ Below are the ports available for external sensors and payload interface.
   
 
 
-To know how to use these ports contact us at ``admin@navstik.org``.
+To know how to use these interfaces contact us at ``admin@navstik.org``.
 
 .. .. image:: /_static/Images/external_sensors.png
 .. 		:align: center
@@ -76,7 +76,7 @@ Receiver signal strength.
 
 5. RGB LED
 ^^^^^^^^^^
-The LED represents the vehicle state.
+The RGB LED represents the vehicle state.
 
 
 .. .. image:: /_static/Images/rgbled.png
@@ -101,7 +101,7 @@ Below are the various color patterns that the RGB LED exhibits along with their 
 
 6. Programmable LEDs
 ^^^^^^^^^^^^^^^^^^^^
-LEDs are available for user to programme.
+LEDs are available for user to program.
 
 
 7. Gimbal
@@ -111,14 +111,14 @@ Dedicated 4 PWM output channels for your Gimbal.
 
 8. Safety and Buzzer
 ^^^^^^^^^^^^^^^^^^^^
-External safety switch and buzzer switch.
+External safety switch and buzzer switch. (Safety switch has not yet been configured).
 
 
 9. RC Receiver Interface
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-PPM and PWM Channels
-""""""""""""""""""""
+PPM/PWM Channels
+""""""""""""""""
 PPM/8xPWM channels for RC Input. Connect the ground, power, and signal wires to the RC.
 
 
@@ -128,9 +128,9 @@ PPM/8xPWM channels for RC Input. Connect the ground, power, and signal wires to 
 .. 		:align: center
 .. 		:scale: 50%
 
-SBUS and SPEK
+SBUS/SPEKTRUM
 """""""""""""
-SBUS(fatuba) and for a Spektrum DSM, DSM2, or DSM-X Satellite RC receiver, connect to the SPKT/DSM port.
+SBUS(fatuba) connects to SBUS port and for a Spektrum DSM, DSM2, or DSM-X Satellite RC receiver, connect to the SPEK port.
 
 .. .. image:: /_static/Images/sbusspek1.png
 .. 		:align: center
@@ -158,13 +158,13 @@ Connect up to two external GPS-MAG sensors for redundancy and accuracy.
 
 14. Micro SD
 ^^^^^^^^^^^^
-FlytOS Micro SD slot.
+32 GB Micro SD card which consists the FlytOS image.
 
 
 
 15. Power Input
 ^^^^^^^^^^^^^^^
-5V to 4A input for FlytPOD.
+5V/4A input for FlytPOD.
 
 
 
@@ -176,7 +176,7 @@ Monitor battery status and issue low battery warnings, available flight time lef
 
 17. Micro SD
 ^^^^^^^^^^^^
-Used for onboard data logging.
+8 GB Micro SD card used for onboard data logging.
 
 
 
