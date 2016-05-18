@@ -3,8 +3,8 @@
 
 
 
-FlytPOD-Peripherals
-===================
+FlytPOD - Peripherals
+=====================
 
 .. important:: This site is under active development.
 
