@@ -11,11 +11,12 @@ FlytConsole Widgets
 
 .. FlytConsole is a web application that gives you an interface to configure your drone with Flyt. 
 
+.. _Onboard_Router_Configuration:
 
-Wifi Connection
-"""""""""""""""
+How to connect to FlytConsole
+"""""""""""""""""""""""""""""
 
-Before you proceed connect to the FlytPOD_wifi network password for which is FlytPOD123. By default, the onboard router is configured in AP mode. Learn to reconfigure the router in client mode :ref:`here<configuring wifi module in client mode>`.
+Before you proceed connect to the FlytPOD_wifi network password for which is FlytPOD123. By default, the onboard router is configured in AP mode. In case the onboard router is configured in Client mode, you will not be able to connect to the FlytPOD_wifi. Learn to configure the router in client mode :ref:`here<configuring wifi module in client mode>`.
 
 Go to ``http://flytpod:9090/flytconsole`` to launch FlytConsole. 
 
@@ -148,7 +149,7 @@ Motor Testing
 
    
 
-FlytConsole allows you to test the direction of rotation of your motors attached to your drone. In Motor testing you can do this by clicking on the respective motor that you want to test. Once you click on the motor, it will start rotating and you can check whether the direction of rotation is correct or not.
+FlytConsole allows you to test the direction of rotation of your motors attached to your drone. In Motor testing you can do this by clicking on the respective motor that you want to test. Once you click on the motor, it will start rotating and you can check whether the direction of rotation of the corresponding motor on your drone is correct or not.
 
 .. important:: * You need to power the ESCs for this.
      				* In case your motor rotates in the incorrect direction, you can swap any two of the ESC cables going to the motor and make the motor rotate in the desired direction.
@@ -269,10 +270,11 @@ Once this is done map RC modes to three way switch channel and manual override t
 
 .. _Gain_tuning:
 
-Gain Tuning
-"""""""""""
+Parameter Manager
+"""""""""""""""""
 
-Gain tuning page consists of basic and advanced settings.
+Parameter manager consists of Gain tuning and advanced settings.
+
 
 **Basic**
 These are the gains that are mostly used and require to be tuned depending upon the attitude control response of the autopilot.
@@ -282,7 +284,7 @@ These are the gains that are mostly used and require to be tuned depending upon 
 	:align: center
 	:scale: 50 %
 	
-	Basic Settings for Gain Tuning  
+	Basic Gain Tuning  
 
 
 
@@ -293,11 +295,11 @@ These are all parameters used throughout FlytOS. These can be changed if at all 
 	:align: center
 	:scale: 50 %
 	
-	Advanced Settings for Gain Tuning  
+	Advanced Settings  
 
 
 
-Once this is done you need to save the parameters.
+Once this is done, save the parameters.
 
 
 
@@ -330,10 +332,10 @@ The functionality of GCS can be divided into three parts:
 
 **Basic Functions for commanding the drone**
 
-1. TAKE OFF - arms the drone and makes it hover at a defined height.
+1. TAKE OFF - arms the drone and makes it hover at a height.
 2. LAND - commands the drone to land.
 3. DISARM - disarms the drone.
-4. HOVER - mixer output is passed to the ESCs.
+4. HOVER - makes the drone hover at its current location.
 
 **Flyt Inspector**
 
@@ -353,8 +355,7 @@ Following data is streamed from the drone:
 2. GPS - gives the current latitude, longitude and altitude of the drone.
 3. IMU - gives the current attitude with respect to NED.
 4. Local Position - gives the position of the drone with respect to the home position.
-5. MAG - 3 axis magnetometer provides the magnetic field along all three axes.
-6. RC IN - gives the input value received by FlytPOD because of RC.
+5. RC IN - gives the input value received by FlytPOD because of RC.
 
 
 

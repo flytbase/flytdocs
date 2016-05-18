@@ -51,15 +51,11 @@ Onboard Router Configuration
 
 * Power up the device using the provided wall adapter or battery.
 
-* Next connect to the FlytPOD_wifi network password for which is FlytPOD123. By default, the onboard router is configured in AP mode. Learn to reconfigure the router in client mode :ref:`here<configuring wifi module in client mode>`.
+* Next connect to the FlytPOD_wifi network password for which is FlytPOD123. By default, the onboard router is configured in AP mode. In case the onboard router is configured in Client mode, you will not be able to connect to the FlytPOD_wifi. Learn to configure the router in client mode :ref:`here<configuring wifi module in client mode>`.
 
-* Before proceeding to the steps for drone integration shut down FlytPOD by pressing its power switch as shown in the image and remove the power cable.
+* Before proceeding to the steps for drone integration shut down FlytPOD by pressing its power switch and remove the power cable.
 
-.. figure:: /_static/Images/powerswitch.png
- :align: center
- :scale: 50%
 
- SBUS and SPEK
 
 .. ..insert power switch image here
 
@@ -82,6 +78,8 @@ Mounting and Orientation
 * **Drone and FlytPOD Orientation**
 
 FlytPOD should be mounted in such a way that the front of the FlytPOD is aligned with the heading of the drone. The front of the FlytPOD is the x -axis as shown in the diagram below. 
+
+.. if in someother orientation then change autopilot orientation parameter.
 
 * **Mount points**
 
@@ -125,7 +123,17 @@ Multicopters
 ++++++++++++
 
  
-According to your platform connect upto 8 motors (ESCs) to the PWM output channel. Following image shows the motors numbered on various platforms according to their position. Plugin the Signal cable from the corresponding ESC in exactly the same PWM output channel. e.g. Motor 3 on your platform should be connected to PWM out 3 channel.
+According to your platform connect upto 8 motors (ESCs) to the PWM output channel. 
+
+.. figure:: /_static/Images/pwm2.png
+ :align: center
+ :scale: 50%
+   
+ PWM Channel
+
+
+
+Following image shows the motors numbered on various platforms according to their position. Plugin the Signal cable from the corresponding ESC in exactly the same PWM output channel. e.g. Motor 3 on your platform should be connected to PWM out 3 channel.
 
 Click `here <http://pixhawk.org/platforms/multicopters/start>`_ for more information on Multicopters.
 
@@ -187,11 +195,11 @@ External GPS-MAG Mounting
 
 
 
-External GPS-MAG can be connected to FlytPOD through the connector provided on the side. Port availble for this is GPS-MAG 1. Use of a Standoff is recommended in order to avoid interference. Make sure to mount it in such a way that drone heading and GPS-MAG board heading match.
+External GPS-MAG can be connected to FlytPOD through the connector provided on the side. Port available for this is GPS-MAG 1. Use of a Standoff is recommended in order to avoid interference. Make sure to mount it in such a way that FlytPOD heading is alligned with the GPS-MAG board heading.
 
-.. note:: * Of the two ports provided, GPS-MAG 1 must be used for connecting external GPS-MAG as GPS-MAG 2 is reserved for future       development
-          * If you want to place GPS-MAG board on your drone in any other fashion than shown in above diagram then you’ll have to follow extra steps during sensor calibration in flytconsole.
-
+.. note:: * Of the two ports provided, GPS-MAG 1 must be used for connecting external GPS-MAG as GPS-MAG 2 is reserved for future       development.
+          
+.. * If you want to place GPS-MAG board on your drone in any other fashion than shown in above diagram then you’ll have to follow extra steps during sensor calibration in flytconsole.
 
 
 
@@ -228,23 +236,19 @@ RC receiver is powered through ESC output. (If your ESC does not give 5V output 
      
 .. note:: By default PPM mode is enabled.
    
-   
+
   
 
 * PWM: RC receiver in PWM mode. Channel 1 to 8 on RC port act as 8xPWM input when param PWM_PPM_SEL = 0 which can be changed from FlytConsole.
   
 
-.. important:: It is recommended to use PPM/PWM for RC Input. For using SBUS/SPEK please contact us.
+
 
 
   
-.. figure:: /_static/Images/pwm2.png
- :align: center
- :scale: 50%
+
    
- PWM Channel
-   
-* SPEK
+* SPEKTRUM: For a Spektrum DSM, DSM2, or DSM-X Satellite RC receiver, connect to the SPKT/DSM port.
 
 * SBUS
   
@@ -252,9 +256,9 @@ RC receiver is powered through ESC output. (If your ESC does not give 5V output 
  :align: center
  :scale: 50%
 
- SBUS and SPEK
+ SBUS and SPEKTRUM
     
-
+.. important:: It is recommended to use PPM/PWM for RC Input. For using SBUS/SPEK please contact us.
 
 .. warning:: Before you power up your device make sure no props are attached to the motors.
       
@@ -265,7 +269,9 @@ RC receiver is powered through ESC output. (If your ESC does not give 5V output 
 Configuring FlytPOD with FlytConsole
 ------------------------------------
 
-FlytConsole provides you with an interface to configure, calibrate, monitor, command and control your drone using FlytPOD.
+FlytConsole provides you with an interface to configure, calibrate, monitor, command and control your drone.
+
+
 
 
 Follow the documentation on `FlytConsole widgets`_ to know more about how FlytConsole operates. 
@@ -279,6 +285,7 @@ Follow the documentation on `FlytConsole widgets`_ to know more about how FlytCo
 
 .. intro and link to about FlytConsole
 
+Connect to the FlytPOD_wifi. Learn how to :ref:`here<Onboard_Router_Configuration>`.
 
 
 1. Go to ``http://flytpod:9090/flytconsole`` to launch FlytConsole. 
@@ -416,14 +423,18 @@ Follow the documentation on `FlytConsole widgets`_ to know more about how FlytCo
 You are now ready to fly.
 
 
+
+
+
 Points of Caution
 -----------------
 
-
-
-
 Please keep in mind a few points of caution.
 
+Before Power up
+^^^^^^^^^^^^^^^
+Make sure
+"""""""""
 * Frame should be intact.
 * Motors are tightly fixed and are facing upwards.
 * All the propellers are in good shape (without cuts and deformations) and are tightly fixed.
@@ -432,17 +443,50 @@ Please keep in mind a few points of caution.
 * Radio and PWM connectors are solid and tight.
 * Motors and propellers are orderly.
 * Transmitter is switched on.
+ 
+
+
+Before You Take-off
+^^^^^^^^^^^^^^^^^^^
+Make sure
+"""""""""
+
+* Battery is charged.
+* Low voltage alarm is set.
+* Telemetry i working.
+* Attitude is correct at ground level.
+* All rdio channels are clear.
+* Parameters are correctly loaded.
   
 
+Do the following
+""""""""""""""""
+* Rotate UAV 360 degrees and check if Mag is correct.
+* Arm motors and check if they are rotating in the correct direction.
+* Take a small lift off and check if altitude is not drifting in GCS.
+* While disarmed, check that mode switches are working.
+* Hold UAV in hand, give 50% throttle and check for vibrations.
+
+
+For Manual Flight
+^^^^^^^^^^^^^^^^^
+Do the following
+""""""""""""""""
+* Fix a mark or some clue for direction of the vehicle. It should be visible from far.
+* Get the exact direction of geographical north (Mag reads magntic north).
+* Have a fellow give you details of attitude, location,heading during flight.
+* Make sure you know operations of every mode.
+* Take a good look at the surroundings. The area should be clear of buildings, trees, people and other obstacles.
 
 
 .. * It is recommended to use the RC when testing for the first time.
 .. * If the RC is not connected, FlytPOD will go to API_Mode by default. Use API_mode switch to control drone from RC.
 .. * Before you arm the FlytPOD make sure that the position of the propellers is correct i.e. anticlockwise and clockwise propellers are mounted on the right motors.
 
-.. important:: * It is recommended to use the RC when testing for the first time.
-               * If the RC is not connected, FlytPOD will go to API_Mode by default. Use API_mode switch to control drone from RC.
-               * Before you arm the FlytPOD make sure that the position of the propellers is correct i.e. anticlockwise and clockwise propellers are mounted on the right motors.
+.. caution:: * It is recommended to use the RC while testing for the first time.
+             * If the RC is not connected, FlytPOD will go to API_Mode by default otherwise use API_mode switch to control drone using the RC.
+             * Before you arm the FlytPOD make sure that the position of the propellers is correct i.e. anticlockwise and clockwise propellers are mounted on the right motors.
+
 
 
 

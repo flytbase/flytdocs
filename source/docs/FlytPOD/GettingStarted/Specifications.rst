@@ -13,8 +13,7 @@ FlytPOD Peripherals
   	:align: center
 
 .. image:: /_static/Images/sideviews.png
-	:height: 330px
-	:width: 1500px
+	:scale: 35%
 	
 
 
@@ -179,8 +178,8 @@ Connect USB camera, 3G/4G dongle and other payloads.
 
 
 
-Technical Specifications
-^^^^^^^^^^^^^^^^^^^^^^^^
+8. Technical Specifications
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. image:: /_static/Images/techspec.png
 		:align: center
