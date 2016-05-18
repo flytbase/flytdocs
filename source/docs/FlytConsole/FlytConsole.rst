@@ -1,6 +1,6 @@
 .. _flytconsole widgets:
 
-FlytConsole Widgets
+FlytConsole-Widgets
 ===================
 
 .. important:: This site is under active development.
@@ -16,7 +16,7 @@ FlytConsole Widgets
 How to connect to FlytConsole
 """""""""""""""""""""""""""""
 
-Factory default mode of FlytPOD is access point mode(AP Mode) in which case connect to FlytPOD_wifi network the defualt password for which is FlytPOD123. However if you have reconfigured the router in client mode then check FlytPOD's IP address in your home router's client list.
+Factory default mode of FlytPOD is access point mode(AP Mode) in which case connect to FlytPOD_wifi network the default password for which is FlytPOD123. However if you have reconfigured the router in client mode then check FlytPOD's IP address in your home router's client list.
 
 If you are in client mode FlytPOD_wifi will cease to exist.
 
@@ -24,7 +24,7 @@ If you are in client mode FlytPOD_wifi will cease to exist.
 Go to ``http://flytpod:9090/flytconsole`` on your web browser to launch FlytConsole. 
 
 
-.. important:: In case the above url does not work replace 'flytpod' with flytpod's IP address.
+.. important:: In case the above URL does not work replace 'flytpod' with FlytPOD's IP address.
 
 .. The various components included in FlytConsole are as follows:
 
