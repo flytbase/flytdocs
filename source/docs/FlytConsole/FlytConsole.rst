@@ -11,17 +11,20 @@ FlytConsole Widgets
 
 .. FlytConsole is a web application that gives you an interface to configure your drone with Flyt. 
 
-.. _Onboard_Router_Configuration:
+.. _FlytConsole_launch:
 
 How to connect to FlytConsole
 """""""""""""""""""""""""""""
 
-Before you proceed connect to the FlytPOD_wifi network password for which is FlytPOD123. By default, the onboard router is configured in AP mode. In case the onboard router is configured in Client mode, you will not be able to connect to the FlytPOD_wifi. Learn to configure the router in client mode :ref:`here<configuring wifi module in client mode>`.
+Factory default mode of FlytPOD is access point mode(AP Mode) in which case connect to FlytPOD_wifi network the defualt password for which is FlytPOD123. However if you have reconfigured the router in client mode then check FlytPOD's IP address in your home router's client list.
 
-Go to ``http://flytpod:9090/flytconsole`` to launch FlytConsole. 
+If you are in client mode FlytPOD_wifi will cease to exist.
 
 
-   .. important:: In case the above url does not work replace 'flytpod' with flytpod's ip address.
+Go to ``http://flytpod:9090/flytconsole`` on your web browser to launch FlytConsole. 
+
+
+.. important:: In case the above url does not work replace 'flytpod' with flytpod's IP address.
 
 .. The various components included in FlytConsole are as follows:
 
