@@ -6,7 +6,7 @@
 FlytPOD - Peripherals
 =====================
 
-.. important:: This site is under active development.
+.. important:: This page is under active development.
 
 Hardware Specifications
 -----------------------
@@ -23,9 +23,9 @@ Hardware Specifications
 1. Power Button
 ^^^^^^^^^^^^^^^
 
-Press the power button at the top left corner of the I/O panel to turn off FlytPOD. Please be patient while the system shuts down. The RGB LED turns to amber color upon shutting down.
+Press the power button at the top left corner of the I/O panel to turn off FlytPOD. The RGB LED turns to amber upon shutting down.
 
-.. note:: It may take a few seconds for the system to shut down completely.
+.. note:: Please be patient while the system shuts down. It may take a few seconds for the system to shut down completely.
   
       
 
@@ -45,7 +45,7 @@ Below are the ports available for external sensors and payload interface.
 * 2xI2C
 * 1xUSART
 * 1xCAN
-* LIDAR/SONAR
+* LiDAR/SONAR
 * 2xADC
 * 2XGPIO  
   
@@ -101,7 +101,7 @@ Below are the various color patterns that the RGB LED exhibits along with their 
 
 6. Programmable LEDs
 ^^^^^^^^^^^^^^^^^^^^
-LEDs are available for user to program.
+LEDs are available are user-programmable.
 
 
 7. Gimbal
@@ -111,7 +111,7 @@ Dedicated 4 PWM output channels for your Gimbal.
 
 8. Safety and Buzzer
 ^^^^^^^^^^^^^^^^^^^^
-External safety switch and buzzer switch. (Safety switch has not yet been configured).
+External safety switch and buzzer. (Safety switch has not yet been configured).
 
 
 9. RC Receiver Interface
