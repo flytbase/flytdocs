@@ -16,7 +16,7 @@ FlytConsole - Widgets
 How to connect to FlytConsole
 """""""""""""""""""""""""""""
 
-Factory default mode of FlytPOD is access point mode(AP Mode) in which case connect to FlytPOD_wifi network the default password for which is FlytPOD123. However if you have reconfigured the router in client mode then check FlytPOD's IP address in your home router's client list.
+Factory default mode of FlytPOD is access point mode(AP Mode) in which case connect to FlytPOD_wifi network the default password for which is FlytPOD123. However if you have reconfigured the router in client mode then connect to your home wifi network.
 
 If you are in client mode FlytPOD_wifi will cease to exist.
 
