@@ -26,7 +26,7 @@ Checkout and participate in our `forums`_ and interact with the community sharin
 .. toctree::
    :maxdepth: 2
    :hidden:
-   :caption: FlytOS Documentation
+   :caption: FlytOS
 	
    docs/FlytOS/FlytOS.rst
    docs/FlytOS/FlytOS_install.rst
@@ -35,7 +35,7 @@ Checkout and participate in our `forums`_ and interact with the community sharin
 .. toctree::
     :maxdepth: 2
     :hidden:
-    :caption: FlytPOD Documentation
+    :caption: FlytPOD
 	
     docs/FlytPOD/GettingStarted/About_FlytPOD.rst
     docs/FlytPOD/GettingStarted/FlytPOD_Peripherals.rst
@@ -47,7 +47,7 @@ Checkout and participate in our `forums`_ and interact with the community sharin
 .. toctree::
     :maxdepth: 2
     :hidden:
-    :caption: FlytConsole Documentation
+    :caption: FlytConsole
   
     docs/FlytConsole/About_FlytConsole.rst
     docs/FlytConsole/FlytConsole.rst 
@@ -57,7 +57,7 @@ Checkout and participate in our `forums`_ and interact with the community sharin
 .. toctree::
    :maxdepth: 2
    :hidden:
-   :caption: FlytSim Documentation
+   :caption: FlytSim
    
    docs/FlytSim/FlytSim.rst
    docs/FlytSim/FlytSimInstallationGuide.rst
@@ -66,7 +66,7 @@ Checkout and participate in our `forums`_ and interact with the community sharin
 .. toctree::
    :maxdepth: 2
    :hidden:
-   :caption: FlytAPI Documentation
+   :caption: FlytAPI
   
    docs/FlytAPI/ListOfAPIs.rst
    docs/FlytAPI/OnboardAPIs.rst

@@ -85,6 +85,9 @@ Firmware Setup
 
         $ sudo apt-get -f install 
 
+  - Check for ``Congratulations! FlytOS installation completed`` message at the end.
+
+
 .. _flytos update:
 
 FlytOS - Update
