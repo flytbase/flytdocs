@@ -38,8 +38,8 @@ Checkout and participate in our `forums`_ and interact with the community sharin
     :caption: FlytPOD Documentation
 	
     docs/FlytPOD/GettingStarted/About_FlytPOD.rst
-    docs/FlytPOD/GettingStarted/Specifications.rst
-    docs/FlytPOD/GettingStarted/Quickstart.rst
+    docs/FlytPOD/GettingStarted/FlytPOD_Peripherals.rst
+    docs/FlytPOD/GettingStarted/FlytPOD_Quickstart.rst
     docs/FlytPOD/GettingStarted/RouterSetup.rst
     
 
