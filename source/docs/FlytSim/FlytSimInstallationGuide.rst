@@ -71,6 +71,8 @@ To install FlytSim binaries,
 
 	  	$ sudo apt-get -f install 
 
+* Check for ``Congratulations! FlytSim installation completed`` message at the end.
+
 * If versions other than Gazebo2 is installed in your system, you might encounter dependency issue for Gazebo2. We are working to provide support for higher versions of Gazebo as well. Till then, please install Gazebo2 in your system, before running the install script again. 
 
 .. _Build FlytSim from source:

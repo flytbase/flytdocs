@@ -134,7 +134,7 @@ nav.wy-nav-side {
     width: 25%;
     overflow: hidden;
     min-height: 100%;
-    background: #343131 none repeat scroll 0% 0%;
+    background: #151515 none repeat scroll 0% 0%;
     z-index: 200;
 }
 
@@ -154,8 +154,8 @@ nav.wy-nav-side {
     display: block;
     font-weight: bold;
     text-transform: uppercase;
-    font-size: 90% !important;
-    color: #888;
+    font-size: 95% !important;
+    color: #DDD;
     white-space: nowrap;
 }
 
@@ -436,8 +436,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, nav, sectio
 }
 
 img {
-	margin-bottom: 2em;
-	margin-top: 2em;
+	margin-bottom: 0.5em;
+	margin-top: 0.5em;
 }
 
 code {
