@@ -40,16 +40,16 @@ The contents of FlytKit include:
 .. * MicroSD (32 GB) preloaded with FlytOS
 
 
-FlytPOD Peripherals
--------------------
+.. FlytPOD Peripherals
+.. -------------------
 
 
-.. image:: /_static/Images/pic1.png
-  	:align: center
+.. .. image:: /_static/Images/pic1.png
+..   	:align: center
 
-.. image:: /_static/Images/sidevs.png
-	:align: center
-	:height: 350px
-	:width: 1500px
+.. .. image:: /_static/Images/sidevs.png
+.. 	:align: center
+.. 	:height: 350px
+.. 	:width: 1500px
 	
 
