@@ -436,8 +436,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, nav, sectio
 }
 
 img {
-	margin-bottom: 2em;
-	margin-top: 2em;
+	margin-bottom: 0.5em;
+	margin-top: 0.5em;
 }
 
 code {
