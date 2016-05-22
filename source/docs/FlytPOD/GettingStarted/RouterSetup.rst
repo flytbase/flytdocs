@@ -1,14 +1,14 @@
 .. _flytpod router setup:
 
 
-FlytPOD - Router 
-================
+FlytPOD - Wifi Setup 
+====================
 
 .. .. _configuring wifi module in client mode:
 
 
-Breif introduction of Router
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Breif introduction of HotSpot and Client Modes
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Flytpod has inbuilt powerful 2.4 GHz wifi router, which can be set into Hotspot/AP or Client mode.
 
@@ -21,19 +21,22 @@ Flytpod creates a wifi access point to which your mobile devices can connect. Fl
 Flytpod connects to available university, home wifi network. Your wifi network should have internet connectivity in order for the FytPOD to access the internet.
 
 
-Configuring WiFi Module
-^^^^^^^^^^^^^^^^^^^^^^^
+.. Configuring WiFi Module
+.. ^^^^^^^^^^^^^^^^^^^^^^^
 
-The wifi module can be configured in two ways viz.
+.. The wifi module can be configured in two ways viz.
 
-* Using FlytConsole
-* Using Router GUI
+.. * Using FlytConsole
+.. * Using Router GUI
 
 
-Using FlytConsole
-"""""""""""""""""
+.. Using FlytConsole
+.. """""""""""""""""
 
-**Changing the Wifi Mode:**
+Changing the Wifi Mode
+^^^^^^^^^^^^^^^^^^^^^^
+
+.. **Changing the Wifi Mode:**
 
 1. Power on FlyPOD using the battery or wall adapter.
 2. Connect to flytpod_wifi network.
@@ -74,107 +77,107 @@ In client mode you might have to replace ``flytpod`` with the IP address of Flyt
 
 
 
-Using Router GUI
-""""""""""""""""
+.. Using Router GUI
+.. """"""""""""""""
 
-The FlytPOD has built-in WiFi router module. FlytPOD has hard-wired connection to the LAN port of this module.The Module can be configured in AP Mode or in Client Mode depending upon the application. Not both modes at a time. By default, at the time of shipping, the router is configured in AP Mode.  
+.. The FlytPOD has built-in WiFi router module. FlytPOD has hard-wired connection to the LAN port of this module.The Module can be configured in AP Mode or in Client Mode depending upon the application. Not both modes at a time. By default, at the time of shipping, the router is configured in AP Mode.  
 
-This tutorial deals with configuring the router in Client mode.
-For this tutorial, you would need a WiFi capable device(laptop/PC) through which you would configure the in-built router.
+.. This tutorial deals with configuring the router in Client mode.
+.. For this tutorial, you would need a WiFi capable device(laptop/PC) through which you would configure the in-built router.
 
-1. Join your Home/Main Router Network using your device. Get the IP address assigned to your device by Main Router. Use ``ifconfig`` or ``ipconfig`` for Linux and Windows OS respectively. Note down your IP address details as they would be required for configuration purposes. In this tutorial we would assume that the IP address of your device(laptop/PC) is ``192.168.3.xxx``, please remember ``192.168.3``.
+.. 1. Join your Home/Main Router Network using your device. Get the IP address assigned to your device by Main Router. Use ``ifconfig`` or ``ipconfig`` for Linux and Windows OS respectively. Note down your IP address details as they would be required for configuration purposes. In this tutorial we would assume that the IP address of your device(laptop/PC) is ``192.168.3.xxx``, please remember ``192.168.3``.
 
-2. As mentioned before, by default the WiFi module is configured in AP Mode, with ``SSID: FlytPOD_wifi``. Join the FlytPOD_wifi network from your laptop/PC device. The default ``password`` of the router is ``FlytPOD123``. Access the OpenWrt login page from your browser using the ``IP address: 192.168.1.1`` and click on the ``Administration`` tab which is at the right side top corner of the webpage. OpenWRT configuration wizard GUI will prompt for username: *root* and password: *123*.
+.. 2. As mentioned before, by default the WiFi module is configured in AP Mode, with ``SSID: FlytPOD_wifi``. Join the FlytPOD_wifi network from your laptop/PC device. The default ``password`` of the router is ``FlytPOD123``. Access the OpenWrt login page from your browser using the ``IP address: 192.168.1.1`` and click on the ``Administration`` tab which is at the right side top corner of the webpage. OpenWRT configuration wizard GUI will prompt for username: *root* and password: *123*.
 
-   .. image:: /_static/Images/Authorization.png
-	:align: center
+..    .. image:: /_static/Images/Authorization.png
+.. 	:align: center
 
        
-3. Select ``Network->Interfaces->LAN->Edit`` option. Under ``Common Configuration`` section, go to ``General Setup`` tab. Select ``Protocol`` as ``Static address``. Change the IPv4 static address from 192.168.1.1 to ``192.168.3.254`` (In case of failure, it will be required in Troubleshooting). The skeleton of this IP must match that of STEP 1 of this tutorial. Make sure that the specified IP address does not conflict with the IP addresses assigned by the Main Router to other devices in its Network. 
+.. 3. Select ``Network->Interfaces->LAN->Edit`` option. Under ``Common Configuration`` section, go to ``General Setup`` tab. Select ``Protocol`` as ``Static address``. Change the IPv4 static address from 192.168.1.1 to ``192.168.3.254`` (In case of failure, it will be required in Troubleshooting). The skeleton of this IP must match that of STEP 1 of this tutorial. Make sure that the specified IP address does not conflict with the IP addresses assigned by the Main Router to other devices in its Network. 
 
-   .. image:: /_static/Images/common_config.png
-  	:align: center
+..    .. image:: /_static/Images/common_config.png
+..   	:align: center
 
-   Now go to ``Physical Settings`` tab under the same ``Common Configuration`` section and change the following:
+..    Now go to ``Physical Settings`` tab under the same ``Common Configuration`` section and change the following:
 
-   * Uncheck the Bridge Interfaces option.
-   * Set the Interface to “VLAN Interface: “eth0.1” (lan)” as shown in the following image.
+..    * Uncheck the Bridge Interfaces option.
+..    * Set the Interface to “VLAN Interface: “eth0.1” (lan)” as shown in the following image.
 
-   .. image:: /_static/Images/interfacelan.png
-	:align: center
-
-
-   In the same page, under ``DHCP Server`` section check the check-box for ``Ignore Interface`` to disable DHCP.
-
-   .. image:: /_static/Images/DHCP_server.png
-	:align: center
+..    .. image:: /_static/Images/interfacelan.png
+.. 	:align: center
 
 
-   Once done, click on the **Save button** at the bottom of the page.
+..    In the same page, under ``DHCP Server`` section check the check-box for ``Ignore Interface`` to disable DHCP.
 
-   .. caution:: Do Not select Save and Apply button. The same instruction follows till the end of this tutorial. Save and Apply should only be pressed once all the relevant changes have been made.
+..    .. image:: /_static/Images/DHCP_server.png
+.. 	:align: center
 
-4. To configure the WiFi Settings, select ``Network->wifi`` option, scan for the available WiFi networks. Join your Home/Main Router’s network. Update the following fields according to your Home/Main Router’s settings.
 
-   - WPA passphrase: <password of your Home/Main Router>
-   - Change the name of network from ``wwan`` to ``wlan``
-   - Set Firewall zone to ``lan``.
+..    Once done, click on the **Save button** at the bottom of the page.
 
-   Once done, click on the **Submit button** at the bottom of the page.
+..    .. caution:: Do Not select Save and Apply button. The same instruction follows till the end of this tutorial. Save and Apply should only be pressed once all the relevant changes have been made.
 
-   .. image:: /_static/Images/join_nw_settings.png
-	:align: center
+.. 4. To configure the WiFi Settings, select ``Network->wifi`` option, scan for the available WiFi networks. Join your Home/Main Router’s network. Update the following fields according to your Home/Main Router’s settings.
 
-   Once submitted, select ``Network->Interfaces->WLAN->Edit`` option and update ``Hostname to send when requesting DHCP`` to ``FlytPOD``.
+..    - WPA passphrase: <password of your Home/Main Router>
+..    - Change the name of network from ``wwan`` to ``wlan``
+..    - Set Firewall zone to ``lan``.
+
+..    Once done, click on the **Submit button** at the bottom of the page.
+
+..    .. image:: /_static/Images/join_nw_settings.png
+.. 	:align: center
+
+..    Once submitted, select ``Network->Interfaces->WLAN->Edit`` option and update ``Hostname to send when requesting DHCP`` to ``FlytPOD``.
    
-   .. image:: /_static/Images/wlan.png
+..    .. image:: /_static/Images/wlan.png
    
    
 
 
-   Once done, click on the **Save button** at the bottom of the page.
+..    Once done, click on the **Save button** at the bottom of the page.
 
-5. Now to create a Relay Bridge between LAN and WLAN Client, select ``Network->Interfaces`` option. Click on ``Add new interface...`` option and Create Interface as:
+.. 5. Now to create a Relay Bridge between LAN and WLAN Client, select ``Network->Interfaces`` option. Click on ``Add new interface...`` option and Create Interface as:
    
-   * Name of the new interface: relay
-   * protocol of the new interface: Relay Bridge
+..    * Name of the new interface: relay
+..    * protocol of the new interface: Relay Bridge
      
-   Once done, click on the **Submit button** at the bottom of the page.
+..    Once done, click on the **Submit button** at the bottom of the page.
 
-   .. image:: /_static/Images/create_interface.png
-	:align: center
+..    .. image:: /_static/Images/create_interface.png
+.. 	:align: center
 
-   As you submit your settings, ``Interfaces - Relay`` window will open up. Under ``Common Configuration`` section, ensure that ``Relay between networks`` lan and wlan check-boxes are checked/enabled.
+..    As you submit your settings, ``Interfaces - Relay`` window will open up. Under ``Common Configuration`` section, ensure that ``Relay between networks`` lan and wlan check-boxes are checked/enabled.
 
-   Once done, click on the **Save button** at the bottom of the page.
+..    Once done, click on the **Save button** at the bottom of the page.
 
-   .. image:: /_static/Images/interface_relay.png
-	:align: center
+..    .. image:: /_static/Images/interface_relay.png
+.. 	:align: center
 
 
-6. Select ``Network->Interfaces`` option and check whether all interfaces are configured properly as shown in the following picture.
+.. 6. Select ``Network->Interfaces`` option and check whether all interfaces are configured properly as shown in the following picture.
    
-   .. image:: /_static/Images/interface_over.png
-	:align: center
+..    .. image:: /_static/Images/interface_over.png
+.. 	:align: center
 
-7. You have successfully configured FlytPOD router in *client mode*. To make the changes permanent, click on the ``Unsaved Changes`` option on the top right corner of webpage and press ``Save & Apply`` button at the bottom. 
-
-
-8. As you complete STEP 7, FlytPOD_wifi network would become unavailable. Ideally, FlytPOD should be assigned a new IP by your Home/Main Router. To find out the new IP, you have the following two options: 
-
-   a) ``METHOD 1``: Connect to your Home/Main router, open its login page and check its ``DHCP Client list``. Verify that a device named ``FlytPOD`` is listed there and note down the IP assigned. If this is not true, try rebooting and if it still doesn't work then go to :ref:`Troubleshooting Guide<Troubleshooting Guide>`.
-   b) ``METHOD 2``: Connect a monitor via HDMI cable, keyboard and mouse to FlytPOD. Access the terminal, and fire ``ifconfig`` command. Find out the assigned IP. If IP is NOT assigned, try rebooting and if it still doesn't work then go to :ref:`Troubleshooting Guide<Troubleshooting Guide>`.
+.. 7. You have successfully configured FlytPOD router in *client mode*. To make the changes permanent, click on the ``Unsaved Changes`` option on the top right corner of webpage and press ``Save & Apply`` button at the bottom. 
 
 
-9. By default ``SSH access`` is disabled in Client mode. To enable it, you have to connect a monitor via HDMI cable, keyboard and mouse to FlytPOD. 
+.. 8. As you complete STEP 7, FlytPOD_wifi network would become unavailable. Ideally, FlytPOD should be assigned a new IP by your Home/Main Router. To find out the new IP, you have the following two options: 
 
-   a) Connect to FlytPOD router from FlytPOD's browser using the Static IP that you configured in STEP 3, in case you have followed this tutorial, it will be 192.168.3.254. Click on the Administration tab. OpenWRT configuration wizard GUI will prompt for username: *root* and password: *123*.
-   b) Select ``System->Administration`` option, and update ``SSH Access`` as shown in the following picture.
+..    a) ``METHOD 1``: Connect to your Home/Main router, open its login page and check its ``DHCP Client list``. Verify that a device named ``FlytPOD`` is listed there and note down the IP assigned. If this is not true, try rebooting and if it still doesn't work then go to :ref:`Troubleshooting Guide<Troubleshooting Guide>`.
+..    b) ``METHOD 2``: Connect a monitor via HDMI cable, keyboard and mouse to FlytPOD. Access the terminal, and fire ``ifconfig`` command. Find out the assigned IP. If IP is NOT assigned, try rebooting and if it still doesn't work then go to :ref:`Troubleshooting Guide<Troubleshooting Guide>`.
+
+
+.. 9. By default ``SSH access`` is disabled in Client mode. To enable it, you have to connect a monitor via HDMI cable, keyboard and mouse to FlytPOD. 
+
+..    a) Connect to FlytPOD router from FlytPOD's browser using the Static IP that you configured in STEP 3, in case you have followed this tutorial, it will be 192.168.3.254. Click on the Administration tab. OpenWRT configuration wizard GUI will prompt for username: *root* and password: *123*.
+..    b) Select ``System->Administration`` option, and update ``SSH Access`` as shown in the following picture.
      
-   Once done, click on the **Save & Apply button** at the bottom of the page.
+..    Once done, click on the **Save & Apply button** at the bottom of the page.
 
-   .. image:: /_static/Images/SSH_access.png
-	:align: center
+..    .. image:: /_static/Images/SSH_access.png
+.. 	:align: center
 
 
 
