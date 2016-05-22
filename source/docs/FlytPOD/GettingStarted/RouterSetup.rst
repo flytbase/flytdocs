@@ -183,29 +183,29 @@ In client mode you might have to replace ``flytpod`` with the IP address of Flyt
 
 
 
-.. _Troubleshooting Guide: 
+.. .. _Troubleshooting Guide: 
 
-Troubleshooting Guide
-^^^^^^^^^^^^^^^^^^^^^
+.. Troubleshooting Guide
+.. ^^^^^^^^^^^^^^^^^^^^^
 
-Reset router/Load Factory settings
-""""""""""""""""""""""""""""""""""
+.. Reset router/Load Factory settings
+.. """"""""""""""""""""""""""""""""""
 
-1. Connect a monitor via HDMI cable, keyboard and mouse to FlytPOD.
-2. You can use one of the following three methods to reset your router (we recommend the first approach using UART):
+.. 1. Connect a monitor via HDMI cable, keyboard and mouse to FlytPOD.
+.. 2. You can use one of the following three methods to reset your router (we recommend the first approach using UART):
 
-   a) ``Method 1 (using UART)``: From terminal, open OpenWrt terminal by issuing ``sudo minicom -D /dev/ttySAC2 -b 57600`` in the terminal. Enter ``flytpod`` if asked for password. In the OpenWrt terminal, issue command ``firstboot && reboot``. Wait for about a minute to let the router reboot itself. Once rebooting is done, FlytPOD router gets configured in AP mode with ``SSID: FlytPOD_wifi`` and ``password: FlytPOD123``.
+..    a) ``Method 1 (using UART)``: From terminal, open OpenWrt terminal by issuing ``sudo minicom -D /dev/ttySAC2 -b 57600`` in the terminal. Enter ``flytpod`` if asked for password. In the OpenWrt terminal, issue command ``firstboot && reboot``. Wait for about a minute to let the router reboot itself. Once rebooting is done, FlytPOD router gets configured in AP mode with ``SSID: FlytPOD_wifi`` and ``password: FlytPOD123``.
 
-   .. image:: /_static/Images/root@openWRTcrop.png
-	:align: center
+..    .. image:: /_static/Images/root@openWRTcrop.png
+.. 	:align: center
  
-   b) ``Method 2 (using terminal)``: From terminal, issue ``ifconfig`` command. If IP is not assigned, even after rebooting the FlytPOD, then assign manual IP (192.168.3.253) to FlytPOD wired connection and use a Subnet Mask (255.255.255.0). Connect to Ethernet connection. From terminal, issue ``ssh root@openwrt`` command. Enter ``123`` as password. In the OpenWrt terminal, issue command ``firstboot && reboot``. Wait for about a minute to let the router reboot itself. Once rebooting is done, FlytPOD router gets configured in AP mode with ``SSID: FlytPOD_wifi`` and ``password: FlytPOD123``.
+..    b) ``Method 2 (using terminal)``: From terminal, issue ``ifconfig`` command. If IP is not assigned, even after rebooting the FlytPOD, then assign manual IP (192.168.3.253) to FlytPOD wired connection and use a Subnet Mask (255.255.255.0). Connect to Ethernet connection. From terminal, issue ``ssh root@openwrt`` command. Enter ``123`` as password. In the OpenWrt terminal, issue command ``firstboot && reboot``. Wait for about a minute to let the router reboot itself. Once rebooting is done, FlytPOD router gets configured in AP mode with ``SSID: FlytPOD_wifi`` and ``password: FlytPOD123``.
 
-   .. image:: /_static/Images/root@openWRT.png
-	:align: center
+..    .. image:: /_static/Images/root@openWRT.png
+.. 	:align: center
  
 
-   c) ``Method 3 (using web-gui)``: From terminal, issue ``ifconfig`` command. If IP is not assigned, even after rebooting the FlytPOD, then assign manual IP (192.168.3.253) to FlytPOD wired connection and use a Subnet Mask (255.255.255.0). Connect to Ethernet connection. Connect to router from browser using IP address configured earlier in the previous step 3. i.e. 192.168.3.254. Click on the Administration tab. OpenWRT configuration wizard GUI will prompt for username: *root* and password: *123*. Select ``System->Flash Firmware->perform reset`` option. Wait for about a minute to let the router reboot itself. Once rebooting is done, FlytPOD router gets configured in AP mode with ``SSID: FlytPOD_wifi`` and ``password: FlytPOD123``.
+..    c) ``Method 3 (using web-gui)``: From terminal, issue ``ifconfig`` command. If IP is not assigned, even after rebooting the FlytPOD, then assign manual IP (192.168.3.253) to FlytPOD wired connection and use a Subnet Mask (255.255.255.0). Connect to Ethernet connection. Connect to router from browser using IP address configured earlier in the previous step 3. i.e. 192.168.3.254. Click on the Administration tab. OpenWRT configuration wizard GUI will prompt for username: *root* and password: *123*. Select ``System->Flash Firmware->perform reset`` option. Wait for about a minute to let the router reboot itself. Once rebooting is done, FlytPOD router gets configured in AP mode with ``SSID: FlytPOD_wifi`` and ``password: FlytPOD123``.
 
 .. Upgrading the firmware
 .. ^^^^^^^^^^^^^^^^^^^^^^
