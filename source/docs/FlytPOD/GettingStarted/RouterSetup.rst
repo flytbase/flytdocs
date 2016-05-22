@@ -50,9 +50,7 @@ Changing the Wifi Mode
 4. Select hotspot/AP or client mode.
 5. Select proper encryption option for hotspot/AP mode and set a password.
 6. In client mode click on the button to scan for available networks. It takes nearly 10 seconds. Select the network that you want to connect to. Enter the password and click on connect.
-7. After clicking on connect in hotspot or client mode you should wait for 2 minutes and then shutdown FlytPOD by pressing the power switch on the back panel for 4 seconds.
-
-After shutdown is complete (fan stopped) remove the power cable and then power it up again. FlytPOD should now be in the new configured mode.
+7. After clicking on connect in hotspot or client mode you should wait for 2 minutes and then shutdown FlytPOD by pressing the power switch on the back panel for 4 seconds. After shutdown is complete (fan stopped) remove the power cable and then power it up again. FlytPOD should now be in the new configured mode.
 
 8. If the mode changes are not successful then FlytPOD will automatically reset itself to default mode viz. Hotspot with SSID: flytpod_wifi and password: shipped with FlytPOD.
 
