@@ -51,7 +51,7 @@ Onboard Router Configuration
 
 * Power up the device using the provided wall adapter or battery.
 
-* Next connect to the FlytPOD_wifi network password for which is FlytPOD123. By default, the onboard router is configured in AP mode. In case the onboard router is configured in Client mode, you will not be able to connect to the FlytPOD_wifi. Learn to configure the router in client mode :ref:`here<configuring wifi module in client mode>`.
+* Next connect to the FlytPOD_wifi network password for which is FlytPOD123. By default, the onboard router is configured in AP mode. In case the onboard router is configured in Client mode, you will not be able to connect to the FlytPOD_wifi. Learn to configure the router in client mode :ref:`here<flytpod router setup>`.
 
 * Before proceeding to the steps for drone integration shut down FlytPOD by pressing its power switch and remove the power cable.
 

@@ -1,12 +1,81 @@
 .. _flytpod router setup:
 
-FlytPOD - Router Setup
-======================
 
-.. _configuring wifi module in client mode:
+FlytPOD - Router 
+================
 
-Configuring WiFi Module From AP to Client Mode
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. .. _configuring wifi module in client mode:
+
+
+Breif introduction of Router
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Flytpod has inbuilt powerful 2.4 GHz wifi router, which can be set into Hotspot/AP or Client mode.
+
+**HotSpot Mode**
+
+Flytpod creates a wifi access point to which your mobile devices can connect. FlytPOD ships with this default mode. Please note that in this mode FlytPOD can not access the internet. Hence, automatic updates, maps in flytconsole will not work when flytpod is operating in hotspot mode.
+
+**Client Mode**
+
+Flytpod connects to available university, home wifi network. Your wifi network should have internet connectivity in order for the FytPOD to access the internet.
+
+
+Configuring WiFi Module
+^^^^^^^^^^^^^^^^^^^^^^^
+
+The wifi module can be configured in two ways viz.
+
+* Using FlytConsole
+* Using Router GUI
+
+
+Using FlytConsole
+"""""""""""""""""
+
+**Changing the Wifi Mode:**
+
+1. Power on FlyPOD using the battery or wall adapter.
+2. Connect to flytpod_wifi network.
+   
+   .. important:: * By default Flytpod is configured into hotspot/AP mode.
+   					* Default SSID: flytpod_wifi.
+   					* Default password: Please check the flyer shipped with FlytPOD.
+   					
+
+3. Launch FlytConsole in the web browser using the url ``flytpod:9090/flytconsole``. Go to the options menu in the top right corner and select wifi setup.
+4. Select hotspot/AP or client mode.
+5. Select proper encryption option for hotspot/AP mode and set a password.
+6. In client mode click on the button to scan for available networks. It takes nearly 10 seconds. Select the network that you want to connect to. Enter the password and click on connect.
+7. After clicking on connect in hotspot or client mode you should wait for 2 minutes and then shutdown FlytPOD by pressing the power switch on the back panel for 4 seconds.
+
+After shutdown is complete (fan stopped) remove the power cable and then power it up again. FlytPOD should now be in the new configured mode.
+
+8. If the mode changes are not successful then FlytPOD will automatically reset itself to default mode viz. Hotspot with SSID: flytpod_wifi and password: shipped with FlytPOD.
+
+
+
+.. 3. Launch FlytConsole in the web browser using the url ``flytpod:9090/flytconsole ``. Go to the options menu in the top right corner and select wifi setup.
+.. 4. Select hotspot/AP or client mode.
+.. 5. Select proper encryption option for hotspot/AP mode and set a password.
+.. 6. In client mode click on the button to scan for available networks. It takes nearly 10 seconds. Select the network that you want to connect to. Enter the password and click on connect.
+.. 7. After clicking on connect in hotspot or client mode you should wait for 2 minutes and then shutdown flytpod by pressing the power switch on the back panel for 4 seconds.
+..  After shutdown is complete (fan stopped) remove the power cable and then power it again. FlytPOD should now be in the new configured mode.
+.. 8. If the mode changes are not successful then FlytPOD will automatically reset itself to default mode viz. Hotspot with ssid: flytpod_wifi and password: shipped with FlytPOD.
+
+
+In hotspot mode you can access FlytConsole at ``flytpod:9090/flytconsole``.
+
+In client mode you might have to replace ``flytpod`` with the IP address of FlytPOD which you can find through your router page by looking for connected client with the name 'flytpod'.
+
+
+.. note:: Another client with name 'FlytWRT' would be connected as well, but that is of no use.
+
+
+
+
+Using Router GUI
+""""""""""""""""
 
 The FlytPOD has built-in WiFi router module. FlytPOD has hard-wired connection to the LAN port of this module.The Module can be configured in AP Mode or in Client Mode depending upon the application. Not both modes at a time. By default, at the time of shipping, the router is configured in AP Mode.  
 
@@ -107,13 +176,17 @@ For this tutorial, you would need a WiFi capable device(laptop/PC) through which
    .. image:: /_static/Images/SSH_access.png
 	:align: center
 
+
+
+
+
 .. _Troubleshooting Guide: 
 
 Troubleshooting Guide
 ^^^^^^^^^^^^^^^^^^^^^
 
 Reset router/Load Factory settings
-++++++++++++++++++++++++++++++++++
+""""""""""""""""""""""""""""""""""
 
 1. Connect a monitor via HDMI cable, keyboard and mouse to FlytPOD.
 2. You can use one of the following three methods to reset your router (we recommend the first approach using UART):
