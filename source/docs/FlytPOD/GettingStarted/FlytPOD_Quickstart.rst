@@ -51,7 +51,7 @@ Onboard Router Configuration
 
 * Power up the device using the provided wall adapter or battery.
 
-* Next connect to the FlytPOD_wifi network password for which is FlytPOD123. By default, the onboard router is configured in AP mode. In case the onboard router is configured in Client mode, you will not be able to connect to the FlytPOD_wifi. Learn to configure the router in client mode :ref:`here<flytpod router setup>`.
+* Next connect to the flytpod_wifi network password for which is FlytPOD123. By default, the onboard router is configured in AP mode. In case the onboard router is configured in Client mode, you will not be able to connect to the FlytPOD_wifi. Learn to configure the router in client mode :ref:`here<flytpod router setup>`.
 
 * Before proceeding to the steps for drone integration shut down FlytPOD by pressing its power switch and remove the power cable.
 
@@ -133,7 +133,7 @@ According to your platform connect up to 8 motors (ESCs) to the PWM output chann
 
 
 
-Following image shows the motors numbered on various platforms according to their position. Plug-in the Signal cable from the corresponding ESC in exactly the same PWM output channel. e.g. Motor 3 on your platform should be connected to PWM out 3 channel.
+Following image shows the motors numbered on various platforms according to their position. Plug-in the signal cable from the corresponding ESC in exactly the same PWM output channel. e.g. Motor 3 on your platform should be connected to PWM out 3 channel.
 
 Click `here <http://pixhawk.org/platforms/multicopters/start>`_ for more information on Multicopters.
 
@@ -427,7 +427,7 @@ You are now ready to fly.
 
 
 
-
+.. _Points of Caution:
 
 Points of Caution
 -----------------

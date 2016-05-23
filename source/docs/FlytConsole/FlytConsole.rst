@@ -13,18 +13,18 @@ FlytConsole - Widgets
 
 .. _FlytConsole_launch:
 
-How to connect to FlytConsole
-"""""""""""""""""""""""""""""
+Connect to FlytConsole
+""""""""""""""""""""""
 
-Factory default mode of FlytPOD is access point mode(AP Mode) in which case connect to FlytPOD_wifi network the default password for which is FlytPOD123. However if you have reconfigured the router in client mode then connect to your home wifi network.
+Factory default mode of FlytPOD is access point mode(AP Mode) in which case connect to ``flytpod_wifi`` network the default password for which is ``FlytPOD123``. However if you have reconfigured the router in client mode then connect to your home wifi network.
 
-If you are in client mode FlytPOD_wifi will cease to exist.
+If you are in client mode flytpod_wifi will cease to exist.
 
 
 Go to ``http://flytpod:9090/flytconsole`` on your web browser to launch FlytConsole. 
 
 
-.. important:: In case the above URL does not work replace 'flytpod' with FlytPOD's IP address.
+.. important:: In case the above URL does not work replace ``flytpod`` with ``FlytPOD's IP address``.
 
 .. The various components included in FlytConsole are as follows:
 
@@ -35,7 +35,7 @@ Upon launch you are greeted by the Dashboard. The Dashboard displays the Connect
 
 
 .. figure:: /_static/Images/Dashboard.png
-	:align: center
+	:align: center 
 	:scale: 50 %
 	
 	Dashboard displaying the various Widgets
@@ -66,7 +66,7 @@ Frame Select
 
 Frame Select allows you to select the airframe-type of your drone. You are provided with several predefined options of multi-copter and fixed wing configurations. These configurations are further subdivided based on the make of the drone.
 
-Depending upon the actual frame of your drone, select the airframe and click on Save and Reboot to reboot FlytOS.
+Depending upon the actual frame of your drone, select the airframe and click on **Save and Reboot** to reboot FlytOS.
 
 
 
@@ -106,15 +106,29 @@ The min and max PWM values are the expected values from the FlytPOD to the ESCs.
 	
 	Min PWM values, Max PWM Values and Number of Actuators for ESC Calibration
 
-Once you have set the min, max and number of actuators, click on Start Calibration. You will see a message saying **'Calibration started'**. This marks the start of Stage 1 of ESC Calibration. Disconnect the power from the ESCs and click on Next. 
+Once you have set the ``Min PWM values , Max PWM values and Number of Actuators`` click on **Start Calibration**. You will see a message saying ``Calibration started``. This marks the start of Stage 1 of ESC Calibration. Disconnect the power from the ESCs and click on **Next**. 
+
+.. figure:: /_static/Images/stage1esc.png
+	:align: center
+	:scale: 50 %
+
+	Stage 1 
+
+Stage 2 involves setting the time duration(in seconds) for the PWM high time in stage 3. After this connect the power to the ESCs and click on **Next**. 
+
+.. figure:: /_static/Images/stage2esc.png
+	:align: center
+	:scale: 50 %
+
+After the time out the ESCs will automatically receive low PWM value. This is stage 3.You can enter this stage manually by disabling the Automatic PWM high time in seconds and click on **Next**.
+
+Stage 4 marks the end of ESC Calibration. Click on **Finish**.  
+
+.. figure:: /_static/Images/stage3esc.png
+	:align: center
+	:scale: 50 %
 
 
-
-Stage 2 involves setting the time duration(in seconds) for the PWM high time in stage 3. After this connect the power to the ESCs and click on next. 
-
-After the time out the ESCs will automatically receive low PWM value. This is stage 3.You can enter this stage manually by disabling the Automatic PWM high time in seconds and click on next.
-
-Stage 4 marks the end of ESC Calibration. Click on Finish.  
 
    
 .. important:: * Not all ESC’s need range calibration. Please consult your ESC user documentation before you do it.
@@ -183,9 +197,9 @@ Sensor Calibration
 	Sensor Calibration comprising of Accel, Gyro, Mag and Level Calibration  
 
    
-Sensor calibration is of utmost importance before you fly your drone. You need to calibrate magnetometer every time you change the flying field. If your autopilot orientation is not the same as that of your drone, update **AUTOPILOT ORIENTATION** parameter accordingly. Similarly, if your external magnetometer's orientation differs from FlytPOD's heading, update **EXT MAG ROTATION** parameter.
-   
-The other sensors to be calibrated for correct attitude are given below:
+
+
+Sensor calibration is of utmost importance before you fly your drone. The sensors to be calibrated for correct attitude are given below:
 
 
 .. 1. Accelerometer Calibration 
@@ -197,19 +211,73 @@ The other sensors to be calibrated for correct attitude are given below:
 
 
 **Accelerometer Calibration**
+
+Set the ``AUTOPILOT ORIENTATION`` if the orientation of the frame and FlytPOD are different.
+Click on **Start Accel Calibration** to begin.
+
+.. figure:: /_static/Images/accelcalib.png
+	:align: center
+	:scale: 50 %
+
 Hold the drone steady in all the six directions( x, -x, y, -y, z, -z) for sometime. You will be notified when the current orientation is detected and when calibration begins for that orientation. Keep steady till you are notified to change to a new direction.
 
+.. figure:: /_static/Images/accelcalib1.png
+	:align: center
+	:scale: 50 %
+
+
+
 **Gyroscope Calibration**
+
+Set the ``AUTOPILOT ORIENTATION`` if the orientation of the frame and FlytPOD are different.
+click on **Start Gyro Calibration** to begin.
+
+.. figure:: /_static/Images/gyrocalib.png
+	:align: center
+	:scale: 50 %
+
 Keep the drone steady without movement in a single state till the calibration ends. You will be notified when the calibration ends.
 
+.. figure:: /_static/Images/gyrocalib1.png
+	:align: center
+	:scale: 50 %
+
 **Magnetometer Calibration**
-This is similar to Accelerometer Calibration with an additional step of rotating the drone in vertical axis in every orientation thereby covering all six directions.
+
+Set the ``AUTOPILOT ORIENTATION`` if the orientation of the frame and FlytPOD are different.
+Click on **Start Mag Calibration** to begin.
+
+.. figure:: /_static/Images/magcalib.png
+	:align: center
+	:scale: 50 %
+
+
+You need to calibrate magnetometer every time you change the flying field. If your autopilot orientation is not the same as that of your drone, update ``AUTOPILOT ORIENTATION`` parameter accordingly. Similarly, if your external magnetometer's orientation differs from FlytPOD's heading, update ``EXT MAG ROTATION`` parameter.
+This is similar to Accelerometer Calibration with an additional step of rotating the drone in vertical axis in every orientation
+thereby covering all six directions.
+
+.. figure:: /_static/Images/magcalib1.png
+	:align: center
+	:scale: 50 %
 
 **Level calibration**
+
+Set the ``AUTOPILOT ORIENTATION`` if the orientation of the frame and FlytPOD are different.
+Click on **Start Level calibration** to begin.
+
+.. figure:: /_static/Images/levelcalib.png
+	:align: center
+	:scale: 50 %
+
 Keep the drone steady in flat position on a leveled surface on the floor.
 
-Parameters need to be saved and autopilot is to be rebooted by clicking on the Reboot button.
-   
+.. figure:: /_static/Images/levelcalib1.png
+	:align: center
+	:scale: 50 %
+
+Save the parameters and reboot the autopilot by clicking on **Reboot**.
+
+
 
 .. _RC_calibration:
    
@@ -226,7 +294,8 @@ RC Calibration
    
 Connect the Throttle, Roll, Pitch and Yaw to the respective RC channels. Also, set the Threshold for two way manual override and three way RC mode switches and their channels.
 
-Once you click on Start you are told to lower the throttle switch all the way down and reset all the transmitter trims to center. After this click on Next.
+Once you click on **Start** you are told to lower the throttle switch all the way down and reset all the transmitter trims to center. After this click on **Next**.
+
 
 Following is a list of pin positions for the next few steps:
 
@@ -276,10 +345,11 @@ Once this is done map RC modes to three way switch channel and manual override t
 Parameter Manager
 """""""""""""""""
 
-Parameter manager consists of Gain tuning and advanced settings.
+Parameter manager consists of Gain tuning and Advanced settings.
 
 
 **Basic**
+
 These are the gains that are mostly used and require to be tuned depending upon the attitude control response of the autopilot.
 
 
@@ -292,6 +362,7 @@ These are the gains that are mostly used and require to be tuned depending upon 
 
 
 **Advanced**
+
 These are all parameters used throughout FlytOS. These can be changed if at all they need to be changed.
 
 .. figure:: /_static/Images/gainsAdvanced.png
@@ -308,7 +379,7 @@ Once this is done, save the parameters.
 
 GCS
 """
- 
+
 After completing all the above mentioned settings you are now ready to fly and test the basic navigation capabilities provided by the GCS.
    
 
@@ -321,6 +392,8 @@ After completing all the above mentioned settings you are now ready to fly and t
 
 The functionality of GCS can be divided into three parts:
 
+
+
 **Set mission for your drone**
 
 1. Get Waypoints - shows you the current mission.
@@ -332,13 +405,15 @@ The functionality of GCS can be divided into three parts:
 
 
 
-
 **Basic Functions for commanding the drone**
 
 1. TAKE OFF - arms the drone and makes it hover at a height.
 2. LAND - commands the drone to land.
 3. DISARM - disarms the drone.
 4. HOVER - makes the drone hover at its current location.
+
+
+
 
 **Flyt Inspector**
 
@@ -360,9 +435,7 @@ Following data is streamed from the drone:
 4. Local Position - gives the position of the drone with respect to the home position.
 5. RC IN - gives the input value received by FlytPOD because of RC.
 
-
-
-You are now ready to fly.
+You have now finished configuration. Please follow the :ref:`Points of Caution<Points of Caution>` mentioned in FlytPOD Setup before you fly.
 
 
 .. It is recommended to use the RC when testing for the first time.
