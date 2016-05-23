@@ -1,34 +1,34 @@
 .. _flytpod router setup:
 
 
-FlytPOD - Wifi Setup 
+FlytPOD - WiFi Setup 
 ====================
 
-.. .. _configuring wifi module in client mode:
+.. .. _configuring WiFi module in client mode:
 
 
-Breif introduction of HotSpot and Client Modes
+Brief introduction of HotSpot and Client Modes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Flytpod has inbuilt powerful 2.4 GHz wifi router, which can be set into Hotspot/AP or Client mode.
+Flytpod has inbuilt powerful 2.4 GHz WiFi router, which can be set into Hotspot/AP or Client mode.
 
 
 
 **HotSpot Mode**
 
-Flytpod creates a wifi access point to which your mobile devices can connect. FlytPOD ships with this default mode. Please note that in this mode FlytPOD can not access the internet. Hence, automatic updates, maps in flytconsole will not work when flytpod is operating in hotspot mode.
+Flytpod creates a WiFi access point to which your mobile devices can connect. FlytPOD ships with this default mode. Please note that in this mode FlytPOD can not access the Internet. Hence, automatic updates, maps in FlytConsole will not work when FlytPOD is operating in hotspot mode.
 
 
 
 **Client Mode**
 
-Flytpod connects to available university, home wifi network. Your wifi network should have internet connectivity in order for the FytPOD to access the internet.
+Flytpod connects to available university, home WiFi network. Your WiFi network should have Internet connectivity in order for FytPOD to access the Internet.
 
 
 .. Configuring WiFi Module
 .. ^^^^^^^^^^^^^^^^^^^^^^^
 
-.. The wifi module can be configured in two ways viz.
+.. The WiFi module can be configured in two ways viz.
 
 .. * Using FlytConsole
 .. * Using Router GUI
@@ -37,10 +37,10 @@ Flytpod connects to available university, home wifi network. Your wifi network s
 .. Using FlytConsole
 .. """""""""""""""""
 
-Changing the Wifi Mode
+Changing the WiFi Mode
 ^^^^^^^^^^^^^^^^^^^^^^
 
-.. **Changing the Wifi Mode:**
+.. **Changing the WiFi Mode:**
 
 1. Power on FlyPOD using the battery or wall adapter.
 2. Connect to flytpod_wifi network.
@@ -50,13 +50,13 @@ Changing the Wifi Mode
    					* Default password: Please check the flyer shipped with FlytPOD.
    					
 
-3. Launch FlytConsole in the web browser using the url ``flytpod:9090/flytconsole``. Go to the options menu in the top right corner and select wifi setup.
+3. Launch FlytConsole in the web browser using the URL ``flytpod:9090/flytconsole``. Go to the options menu in the top right corner and select WiFi setup.
 
 .. figure:: /_static/Images/wifioptions.png
 	:align: center
 	:scale: 50 %
 	
-	Wifi Settings
+	WiFi Settings
 
 
 
