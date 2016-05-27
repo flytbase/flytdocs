@@ -42,7 +42,10 @@ Checkout and participate in our `forums`_ and interact with the community sharin
     docs/FlytPOD/GettingStarted/FlytPOD_Quickstart.rst
     docs/FlytPOD/GettingStarted/First_principles.rst
     docs/FlytPOD/GettingStarted/First_flight.rst
+    docs/FlytPOD/GettingStarted/Safety_instructions.rst
     docs/FlytPOD/GettingStarted/RouterSetup.rst
+
+
     
 
 

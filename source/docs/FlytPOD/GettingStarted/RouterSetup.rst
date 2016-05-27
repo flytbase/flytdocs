@@ -105,6 +105,8 @@ Changing the WiFi Mode
 Troubleshooting
 ^^^^^^^^^^^^^^^
 
+.. * In case you cannot reach FlytPOD 
+
 If you have forgottoen password or your settings are not useful further then you can reset the wifi to default.
 
 1. Connect monitor, keyboard, mouse to flytpod. Plug Flytpod using wall adapter/battery. 

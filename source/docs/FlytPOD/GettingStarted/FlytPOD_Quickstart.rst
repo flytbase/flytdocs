@@ -34,8 +34,8 @@
 .. * Power wall adapter
 
 
-FlytPOD - Getting Started
-=========================
+Getting Started
+===============
 
 
 .. important:: This guide is under active development.
@@ -152,7 +152,7 @@ FlytPOD - Getting Started
 
 16. Open the FlytConsole in your laptop using URL: ``flytpod:9090/flytconsole``. 
     
-    .. note:: If above URL does not work then there might be some issue with your router's DNS. Please refer to the :ref:`WiFi Section<flytpod router setup>` for troubleshooting.
+    .. note:: If above URL does not work then there might be some issue with your router's DNS. Please refer to the :ref:`WiFi Section<FlytPOD router setup>` for troubleshooting.
 
 17. In FlytConsole go to **Frame Select** section in the left side-menu.
  
@@ -252,11 +252,13 @@ FlytPOD - Getting Started
    
     Click :ref:`here<Gain_tuning>` to know more about Gain tuning.
 
-34. Congratulations!!!! You are done with the setup. 
+34. Congratulations !!! You have successfully configured FlytPOD with your drone. You are now ready to fly.
 35. At this stage the RGB LED should be breathing blue. Assuming that you have the props removed, try to ARM system and test radio commands. 
 36. You can check if the response of pitch and roll commands is as desirable.
 37. Now you can connect any additional sensors to FlytPOD.
-38. Enjoy! 
+38. Please go through the :ref:`First principles of flying<First_Principles>` and :ref:`First flight with FlytPOD<First_Flight>` sections before you proceed with flying your drone.
+39. Make sure you understand all the :ref:`Safety guidelines<Safety_Guidelines>` before you fly.
+ 
 
 
 

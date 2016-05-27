@@ -3,7 +3,7 @@
 
 
 
-Connections and Exapnsion Ports
+Connections and Expansion Ports
 ===============================
 
 .. important:: This page is under active development.
@@ -68,11 +68,11 @@ Columns described From left to right.
 .. * 5V, -           :   5V output, Gnd from Flytpod for external Sensors.
  
 
-.. note:: In some beta kits the I2C1 and I2C2 pins were labelled wrong. These are the correct labels for all flytpods.
+.. note:: In some beta kits the I2C1 and I2C2 pins were labeled wrong. These are the correct labels for all FlytPODs.
 
 
 
-.. Note that: In some beta kits the I2C1 and I2C2 pins were labelled wrong. These are the correct labels for all flytpods.
+.. Note that: In some beta kits the I2C1 and I2C2 pins were labeled wrong. These are the correct labels for all flytpods.
 
 To know how to use these interfaces contact us at ``admin@navstik.org``.
 
@@ -84,7 +84,7 @@ To know how to use these interfaces contact us at ``admin@navstik.org``.
 3. PWM Output Port
 ^^^^^^^^^^^^^^^^^^
 
-8 pwm output channels. Plug ESC signal pins in the respective PWM output channels.
+8 PWM output channels. Plug ESC signal pins in the respective PWM output channels.
 
 .. .. image:: /_static/Images/pwm2.png
 .. 		:align: center
@@ -112,11 +112,11 @@ Below are the various color patterns that the RGB LED exhibits along with their 
 
 * Breathing Blue - Standby
 
-* Breathing Green - Standby and GPS / px4flow ready.
+* Breathing Green - Standby and GPS / Px4flow ready.
 
-* Solid Blue - Armed and No GPS lock / px4flow available. 
+* Solid Blue - Armed and No GPS lock / Px4flow available. 
 
-* Solid Green - Armed and GPS lock / px4flow available.
+* Solid Green - Armed and GPS lock / Px4flow available.
 
 * Breathing Red - Configuration Error
 
@@ -155,7 +155,7 @@ External safety switch and buzzer. (Safety switch has not yet been configured).
 PPM/PWM Channels
 """"""""""""""""
 PPM/8xPWM channels for RC Input. Connect the ground, power, and signal wires to the RC.
-Choose between PPM, PWM from rc configuration in Flytconsole.
+Choose between PPM, PWM from RC configuration in FlytConsole.
 
 
 
@@ -165,7 +165,7 @@ Choose between PPM, PWM from rc configuration in Flytconsole.
 
 SBUS/SPEKTRUM
 """""""""""""
-SBUS(fatuba) connects to SBUS port and for a Spektrum DSM, DSM2, or DSM-X Satellite RC receiver, connect to the SPEK port.
+SBUS(fatuba) connects to SBUS port and for a SPEKTRUM, DSM, DSM2, or DSM-X Satellite RC receiver, connect to the SPEK port.
 
 .. .. image:: /_static/Images/sbusspek1.png
 .. 		:align: center
@@ -176,8 +176,8 @@ SBUS(fatuba) connects to SBUS port and for a Spektrum DSM, DSM2, or DSM-X Satell
 
 10. WiFi Status LED
 ^^^^^^^^^^^^^^^^^^^
-Solid : Wifi booting.
-Random Blink: Wifi data transmission indicator. 
+Solid : WiFi booting.
+Random Blink: WiFi data transmission indicator. 
 
 11. System Health LED
 ^^^^^^^^^^^^^^^^^^^^^
@@ -310,7 +310,7 @@ Radio Receiver
      
 .. note:: By default PPM mode is enabled.
 
-* SPEKTRUM: For a Spektrum DSM, DSM2, or DSM-X Satellite RC receiver, connect to the SPKT/DSM port.
+* SPEKTRUM: For a SPEKTRUM, DSM, DSM2, or DSM-X Satellite RC receiver, connect to the SPKT/DSM port.
 
 * SBUS
   
