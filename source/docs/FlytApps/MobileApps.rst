@@ -3,10 +3,11 @@
 Mobile App Development
 **********************
 
-
+Android App- HTML,CSS,JS (Cordova)
+==================================
 
 Create a new Project
-====================
+--------------------
 
 
 
@@ -42,7 +43,7 @@ Also include eventemitter2.min.js and then roslib.js in your HTML pages.
 
 
 Building and running the project
-================================
+---------------------------------
 
 
 
@@ -63,7 +64,7 @@ You can build and run the app using IntelliJ IDEA in either a browser based emul
 
 
 Sample Mobile Application
-=========================
+--------------------------
 
 
 In the earlier section we had built a Web app for the drone, we can also build an Android/iOS application by converting this Web app using Cordova. This application allows you to trigger an on-board script from a mobile that sends command to your drone to trace a square and receive live data from it.
@@ -245,6 +246,16 @@ In this example we request location status from the drone using topic Local Posi
 
 
 .. note:: Please note that you will have to change the IP address in the FlytDemo JS file to the IP address of the device you run FlytSim on. This is required so that data can be received on any external device that you have connected.
+
+
+Android App- Java (Android-Studio)
+==================================
+
+There are two ways to go forward with building java Android App which talks to FlytPOD.:
+
+#. Using Flyt-Andoid-SDK
+#. Integrating flyt-android-library in your Android Studio project.
+
 
 
 .. _Ionic components: http://ionicframework.com/docs/components/
