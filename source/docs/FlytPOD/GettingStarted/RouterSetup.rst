@@ -1,8 +1,8 @@
 .. _flytpod router setup:
 
 
-FlytPOD - WiFi Setup 
-====================
+WiFi Setup 
+==========
 
 .. .. _configuring WiFi module in client mode:
 
