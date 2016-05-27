@@ -155,7 +155,7 @@ nav.wy-nav-side {
     font-weight: bold;
     text-transform: uppercase;
     font-size: 95% !important;
-    color: #DDD;
+    color: #EE3C39;
     white-space: nowrap;
 }
 
@@ -437,7 +437,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, nav, sectio
 
 img {
 	margin-bottom: 0.5em;
-	margin-top: 100em;
+	margin-top: 0.5em;
 }
 
 code {

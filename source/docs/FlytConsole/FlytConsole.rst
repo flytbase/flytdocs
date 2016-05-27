@@ -212,8 +212,7 @@ Sensor calibration is of utmost importance before you fly your drone. The sensor
 
 **Accelerometer Calibration**
 
-Set the ``AUTOPILOT ORIENTATION`` if the orientation of the frame and FlytPOD are different.
-Click on **Start Accel Calibration** to begin.
+Set the ``AUTOPILOT ORIENTATION`` if the orientation of the frame and FlytPOD are different. Click on **Start Accel Calibration** to begin.
 
 .. figure:: /_static/Images/accelcalib.png
 	:align: center
@@ -229,8 +228,7 @@ Hold the drone steady in all the six directions( x, -x, y, -y, z, -z) for someti
 
 **Gyroscope Calibration**
 
-Set the ``AUTOPILOT ORIENTATION`` if the orientation of the frame and FlytPOD are different.
-click on **Start Gyro Calibration** to begin.
+Set the ``AUTOPILOT ORIENTATION`` if the orientation of the frame and FlytPOD are different. Click on **Start Gyro Calibration** to begin.
 
 .. figure:: /_static/Images/gyrocalib.png
 	:align: center
@@ -244,8 +242,7 @@ Keep the drone steady without movement in a single state till the calibration en
 
 **Magnetometer Calibration**
 
-Set the ``AUTOPILOT ORIENTATION`` if the orientation of the frame and FlytPOD are different.
-Click on **Start Mag Calibration** to begin.
+Set the ``AUTOPILOT ORIENTATION`` if the orientation of the frame and FlytPOD are different. Click on **Start Mag Calibration** to begin.
 
 .. figure:: /_static/Images/magcalib.png
 	:align: center
@@ -262,8 +259,7 @@ thereby covering all six directions.
 
 **Level calibration**
 
-Set the ``AUTOPILOT ORIENTATION`` if the orientation of the frame and FlytPOD are different.
-Click on **Start Level calibration** to begin.
+Set the ``AUTOPILOT ORIENTATION`` if the orientation of the frame and FlytPOD are different. Click on **Start Level calibration** to begin.
 
 .. figure:: /_static/Images/levelcalib.png
 	:align: center

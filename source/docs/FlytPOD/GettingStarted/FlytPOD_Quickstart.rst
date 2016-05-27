@@ -34,8 +34,8 @@
 .. * Power wall adapter
 
 
-FlytPOD - Setup
-===============
+FlytPOD - Getting Started
+=========================
 
 
 .. important:: This guide is under active development.
@@ -44,58 +44,63 @@ FlytPOD - Setup
 
 
 
-Onboard Router Configuration
-----------------------------
+1. Unboxing Flytkit
+ 
+   The FlytKit Includes: 
 
-.. .. note:: Initial personalization is optional but we recommended you do this the first time you use the device. Drone is not necessary for this part of the setup.
+   * FlytPOD
+   * 2 x High Gain 6 dBm WiFi antenna
+   * External GPS-MAG module
+   * Power Module
+   * Wall adapter
+   * MicroSD (8 GB) for data-logging
+   * MicroSD (32 GB) preloaded with FlytOS
+   * FlytPOD flyer with default WiFi password.
 
-* Power up the device using the provided wall adapter or battery.
+   Make sure your FlytKit contains all the above mentioned components.
 
-* Next connect to the flytpod_wifi network password for which is FlytPOD123. By default, the onboard router is configured in AP mode. In case the onboard router is configured in Client mode, you will not be able to connect to the FlytPOD_wifi. Learn to configure the router in client mode :ref:`here<flytpod router setup>`.
+2. Configure / Protect FlytPOD WiFi:
 
-* Before proceeding to the steps for drone integration shut down FlytPOD by pressing its power switch and remove the power cable.
+   * Plug and tighten antennas on FlytPOD.
+   * Power on FlytPOD using wall adapter. The RGB led should start breathing red. (Don't worry about it now.) 
+   * On you laptop connect to the WiFi network ``FlytPOD_wifi`` with password provided in the flyer shipped with FlytKit.
+   * In your laptop browser launch FlytConsole using URL: ``flytpod:9090/flytconsole``.
+   * You can configure FlytPOD WiFi in hotspot or client mode. For automatic updates and Google maps to work, you need to connect FlytPOD  to your existing home/university WiFi network using client mode. 
+   * Detailed instructions for WiFi setup are given here.
+   * Power off FlytPOD by pressing the power button on the back panel for 3 secs. Within few seconds RGB LED should turn amber. 
+ 
+   .. note:: Note that next time you start FlytPOD it will take some time for the RGB led to start up. This behavior will repeat every time you do a graceful shutdown as described above. 
 
 
 
 .. ..insert power switch image here
 
+3. Mount FlytPOD on airframe
+
+   * Make sure neither ESCs nor the FlytPOD are powered before you proceed.
+
+   * Drone and FlytPOD Orientation
+
+     FlytPOD should be mounted in such a way that the front of the FlytPOD is aligned with the heading of the drone. The front of the FlytPOD is the x-axis as shown in the diagram below. 
+
+   .. if in some other orientation then change autopilot orientation parameter.
+
+   * Mount points
+
+     You can use M3 screws for mounting the FlytPOD onto the Drone. Image below shows the mount holes available. 
+     FlytPOD has internal vibration damping mechanism, still for better performance you can use dampening mounts.
 
 
-
-Integrating FlytPOD with the airframe
--------------------------------------
-
-Mounting and Orientation
-^^^^^^^^^^^^^^^^^^^^^^^^
+   .. tip:: You can choose to mount the FlytPOD in a different direction. For this, change the Autopilot Orientation in the Sensor calibration tab in FlytConsole.
 
 
-
-
-
-
-.. warning:: Make sure neither your Drone nor the FlytPOD are powered before you proceed.
-
-* **Drone and FlytPOD Orientation**
-
-FlytPOD should be mounted in such a way that the front of the FlytPOD is aligned with the heading of the drone. The front of the FlytPOD is the x-axis as shown in the diagram below. 
-
-.. if in some other orientation then change autopilot orientation parameter.
-
-* **Mount points**
-
-You can use M3 screws for mounting the FlytPOD onto the Drone. Image below shows the mount holes available.
-
-
-.. tip:: You can choose to mount the FlytPOD in a different direction. For this, change the Autopilot Orientation in the Sensor calbration tab in FlytConsole.
-
-
-.. figure:: /_static/Images/xyz_mountholes.jpg
-	:align: center
-	:scale: 30%
+   .. figure:: /_static/Images/xyz_mountholes.jpg
+	   :align: center
+	   :scale: 30%
 	
 	
 	
-	FlytPOD Orientation and Mount holes 
+	   FlytPOD Orientation and Mount holes 
 
 .. .. figure:: /_static/Images/xyz.png
 .. 	:align: left
@@ -113,385 +118,219 @@ You can use M3 screws for mounting the FlytPOD onto the Drone. Image below shows
 
 
 
+4. Mount GPS-MAG, Power Module, Lidar, Camera, Px4flow, etc. Do not connect anything to FlytPOD yet.
+5. Connect GPS-MAG as described :ref:`here<GPS_Mag>`.
+6. Connect ESC / motor signal pins of your frame as described :ref:`here<PWM_Output>`.
+7. Connect RC receiver as described :ref:`here<RC_Receiver>`.
+8. Do not connect any extra sensors / payload yet.
+9. Plug in power connector and VI sensor connector from power module into FlytPOD as described :ref:`here<Power_Module>`.
+10. Do not connect power module to ESC input yet.
+
+    .. important:: Remove propellers from all the motors.
 
-Motor Connections
-^^^^^^^^^^^^^^^^^
-
-
-
-Multicopters
-++++++++++++
-
- 
-According to your platform connect up to 8 motors (ESCs) to the PWM output channel. 
-
-.. figure:: /_static/Images/pwm_op.png
- :align: center
- :scale: 50%
-   
- PWM Channel
-
-
-
-Following image shows the motors numbered on various platforms according to their position. Plug-in the signal cable from the corresponding ESC in exactly the same PWM output channel. e.g. Motor 3 on your platform should be connected to PWM out 3 channel.
-
-Click `here <http://pixhawk.org/platforms/multicopters/start>`_ for more information on Multicopters.
-
-
-
-.. image:: /_static/Images/frames.jpg
-		:align: center
-		:scale: 30%
-
-		
-
-	
-
-.. .. image:: /_static/Images/hex.png
-.. 		:height: 450px
-.. 		:width: 900px
-.. 		:align: center
-
-		
-
-	
-
-.. .. image:: /_static/Images/oct.png
-.. 		:height: 450px
-.. 		:width: 900px
-.. 		:align: center
-
-
-
-
-
-
-
-
-Fixed Wing
-++++++++++
-
-Click `here <https://pixhawk.org/platforms/planes/start>`_ for information on Fixed Wing.
-
-
-
-
-
-VTOL
-++++
-
-Click `here <https://pixhawk.org/platforms/vtol/start>`_ for information on VTOL.
-
-
-
-
-
-.. .. _click here: https://pixhawk.org/platforms/vtol/start
-
-
-External GPS-MAG Mounting
-^^^^^^^^^^^^^^^^^^^^^^^^^
- 
-
-
-
-External GPS-MAG can be connected to FlytPOD through the connector provided on the side. Port available for this is GPS-MAG 1. Use of a Standoff is recommended in order to avoid interference. Make sure to mount it in such a way that FlytPOD heading is aligned with the GPS-MAG board heading.
-
-.. note:: * Of the two ports provided, GPS-MAG 1 must be used for connecting external GPS-MAG as GPS-MAG 2 is reserved for future       development.
-          
-.. * If you want to place GPS-MAG board on your drone in any other fashion than shown in above diagram then you’ll have to follow extra steps during sensor calibration in flytconsole.
-
-
-
-Power Module Connections
-^^^^^^^^^^^^^^^^^^^^^^^^
-
-
-Connect the power module to the appropriate ports in the FlytPOD as shown in the image. 
-
-
-
-.. figure:: /_static/Images/PowerModule.png
-	:align: center
-	:scale: 30%
-	
-	PowerModule
-
-
-RC receiver
-^^^^^^^^^^^
-
-RC receiver is powered through ESC output. (If your ESC does not give 5V output then make sure to power RC receiver separately).
-
-
-* PPM: RC receiver in PPM mode. Channel 1 on RC port acts as PPM input when param PWM_PPM_SEL = 1 which can be changed from FlytConsole.
-  
-
- 
-     
-.. note:: By default PPM mode is enabled.
-   
-
-  
-
-* PWM: RC receiver in PWM mode. Channel 1 to 8 on RC port act as 8xPWM input when param PWM_PPM_SEL = 0 which can be changed from FlytConsole.
-  
-.. figure:: /_static/Images/ppm_pwm.png
- :align: center
- :scale: 50%
- 
-
- PPM and PWM RC Input Channels
-
-
-
-  
-
-   
-* SPEKTRUM: For a Spektrum DSM, DSM2, or DSM-X Satellite RC receiver, connect to the SPKT/DSM port.
-
-* SBUS
-  
-.. figure:: /_static/Images/sbus_spek.png
- :align: center
- :scale: 50%
-
- SBUS and SPEKTRUM RC Input Ports
     
-.. important:: It is recommended to use PPM/PWM for RC Input. For using SBUS/SPEK please contact us at ``admin@navstik.org``.
-
-.. .. warning:: Before you power up your device make sure no props are attached to the motors.
-      
-   
-   
-
-
-Configuring FlytPOD with FlytConsole
-------------------------------------
-
-FlytConsole provides you with an interface to configure, calibrate, monitor, command and control your drone.
-
-
-
-
-Follow the documentation on `FlytConsole widgets`_ to know more about how FlytConsole operates. 
-
-
-
-
-
-
-.. To learn more about FlytConsole, look at the `FlytConsole documentation`_.
-
-.. intro and link to about FlytConsole
-
-.. Connect to the FlytPOD_wifi. Learn how to :ref:`here<Onboard_Router_Configuration>`.
-
-
-1. Launch FlytConsole. Click :ref:`here<FlytConsole_launch>` to read about the process.
-
-
-.. Go to ``http://flytpod:9090/flytconsole`` to launch FlytConsole. 
-
-
-..   .. important:: * In case the above url does not work replace 'flytpod' with flytpod's ip address.
-..                  * Before you proceed check your connection status in FlytConsole. 
- 
-  
-	
-
-
-   .. .. note:: Before you select your frame make sure the ESC is not connected to the supply.
-
-   .. .. note:: Before you proceed check your connection status in FlytConsole. 
-  
     
 
-2. Once in FlytConsole, go to **Frame Select** in the left side bar. Depending upon the actual frame of your drone, select the frame and click on **Save and Reboot**. 
-   
+.. .. important:: Remove all the propellers from the motors.
 
-   Click :ref:`here<Frame_select>` to know more about Frame Select.
+
+
+
  
-   
 
+.. .. warning:: Remove all the propellers from the motors.
 
-   .. After this FlytPOD will reboot (FlytConsole will continue working).
+11. Make sure that you have removed all the propellers.
 
-   
+12. Make sure that you have not connected power module to ESC power input.
 
-3. Next go to **Motor Config**. Here you will be calibrating the ESCs and testing the motors.
+13. Connect Battery (10V to 28V) to the power module as described :ref:`here<Power_Module>`.
 
-   .. warning:: Make sure no propellers are attached to the motors before you proceed with ESC calibration.
+14. The FlytPOD should boot up now. The RGB LED might take time to turn blue or red if you had done graceful shutdown last time.
 
-   .. Click :ref:`here<Motor_config>` to know more about Motor Configuration.
+15. After a minute when blue WiFi LED starts blinking, connect to WiFi. If you have setup FlytPOD WiFi in client mode, then wait for the FlytPOD to connect to your router.
 
+16. Open the FlytConsole in your laptop using URL: ``flytpod:9090/flytconsole``. 
+    
+    .. note:: If above URL does not work then there might be some issue with your router's DNS. Please refer to the :ref:`WiFi Section<flytpod router setup>` for troubleshooting.
 
-   a) **ESC Calibration**
-      
-      .. important:: * Not all ESC’s need range calibration. Please consult your ESC user documentation before you do it.
-      					* Also this is a one-time setup which is NOT required to be done again until you change one or more of your ESC’s.
-      					
-      
-      
+17. In FlytConsole go to **Frame Select** section in the left side-menu.
+ 
+18. Select appropriate frame and click on **Save and Reboot**.
+ 
+19. FlytCosole will take few seconds to reconnect. WiFi network will not be disconnected during this reboot.
+ 
+20. Once the 'connected' button on the top panel turns green, go to **Calibration** section in the left side-menu.
 
-      Use of default Min PWM value, Max PWM value and Number of actuators is recommended. Click on Start Calibration after completing the settings.
+21. **Sensor Calibration**: Sensor calibration is of utmost importance before you fly the drone. You need to calibrate magnetometer every time you change the flying field. If your autopilot orientation is not the same as that of your vehicle, update **AUTOPILOT ORIENTATION** parameter accordingly. Similarly, if your external magnetometer's orientation differs from FlytPOD's heading, update **EXT MAG ROTATION** parameter.
+    
 
+    Please follow the steps given in FlytConsole. The sensors to be calibrated for correct attitude are given below:
 
-      Click :ref:`here<ESC_calibration>` to know more about ESC Calibration.
-
-
-      After ESC Calibration, the next thing to be done is Motor Testing.
-
-
-
-   b) **Motor Testing**
-      
+    * Accelerometer Calibration
+    * Gyroscope Calibration
+    * Magnetometer Calibration
+    * Level Calibration
      
 
-      .. note:: You need to power the ESCs for this.
-          
 
-      You can test the direction of rotation and order of the motors here. Click on the motors to make them rotate and check the direction of rotation of the corresponding motor on your vehicle.
+    Click on **Save and Reboot** once you finish Sensor Calibration and are ready to move on to RC Calibration.
 
+    Once the FlytPOD is connected back check the level in HUD on Dashboard of FlytConsole. Make sure that it is reflecting the level and rotations correctly.
 
-      Click :ref:`here<Motor_test>` to know more about Motor testing.
+    Click :ref:`here<Sensor_calibration>` to know more about Sensor Calibration.
 
+22. After FlytConsole is reconnected, it's time to configure the motors.
 
-      .. note:: In case your motors rotate in the incorrect direction, you can swap the ESC cables and make the motors rotate in the desired direction.
+    .. warning:: Make sure no propellers are attached to the motors before you proceed with ESC calibration.
 
-
+23. The RGB LED should be breathing blue or green now. For more info on RGB LED patterns click :ref:`here<RGB_LED>`.
+    If it is flashing red then check if you have properly connected GPS-MAG module.
+24. Power on the ESCs through power module as described :ref:`here<Power_Module>`.
+25. Generally your motors should play a tone, but don't worry if they do not.  
+26. Next go to **Motor Config** in left side-menu. Here you will be calibrating the ESCs and testing the motors.
+27. Select **ESC Calibration** in top menu.
       
-
-      .. Please follow the instructions given on FlytConsole to know more about motor testing.
-      
-4. After motor configuration its now time to calibrate your Sensors and RC. Go to **Calibration**. 
-   
-   .. Click :ref:`here<Calibration>` to know more about Sensor and RC Calibration.
+    .. important:: * Not all ESC’s need range calibration. Please consult your ESC user documentation before you do it. 
+      * Also this is a one-time setup which is NOT required to be done again until you change one or more of your ESC’s.
 
 
-   a) **Sensor Calibration**
-   
-      Sensor calibration is of utmost importance before you fly the drone. You need to calibrate magnetometer every time you change the flying field. If your autopilot orientation is not the same as that of your vehicle, update **AUTOPILOT ORIENTATION** parameter accordingly. Similarly, if your external magnetometer's orientation differs from FlytPOD's heading, update **EXT MAG ROTATION** parameter.
-      Please follow the steps given in FlytConsole. The sensors to be calibrated for correct attitude are given below:
 
-      1. Accelerometer Calibration
-      2. Gyroscope Calibration
-      3. Magnetometer Calibration
-      4. Level Calibration
-         
-      Click on **Save and Reboot** once you finish Sensor Calibration and are ready to move on to RC Calibration.
+                     
       
       
 
+    Use of default Min PWM value, Max PWM value and Number of actuators is recommended. Click on **Start Calibration** after completing the settings.
 
-      Click :ref:`here<Sensor_calibration>` to know more about Sensor Calibration.
 
+    Click :ref:`here<ESC_calibration>` to know more about ESC Calibration.
+
+28. After finishing ESC Calibration gracefully shutdown the FlytPOD and remove the Battery.
+29. Power the FlytPOD and ESCs back on before you move to the next steps. 
+30. Select **Motor testing** in top-menu of FlytConsole's **Motor Config** page.
+     
       
-   b) **RC Calibration**
-      
-      .. important:: Flyt can be used without RC, but we recommend having an emergency RC pilot ready in case something goes wrong.
-      
-      
-      Following are the prerequisites for RC Calibration:
+    .. warning:: No propellers please during setup!
     
-      1. You need a minimum six channel radio to use with Flyt.
-      2. Four channels for roll, pitch, yaw and throttle.
-      3. A three way switch for testing with RC modes.
-      4. A two way switch for Manual override.
-      5. A two way optional switch for Return to Launch mode.
-      6. Please follow instructions in FlytConsole.
-         
-      Reboot the autopilot after this by clicking on **Save and Reboot**.
+
+    You can test the direction of rotation and order of the motors here. Click on the motors to make them rotate and check the direction of rotation of the corresponding motor on your vehicle.
 
 
-      Click :ref:`here<RC_calibration>` to know more about RC Calibration.
+    Click :ref:`here<Motor_test>` to know more about Motor testing.
 
 
+    .. note:: In case your motors rotate in the incorrect direction, you can swap the ESC cables and make the motors rotate in the desired direction.
 
-      .. 7. Select the type of receiver if you cannot see the data for RC.
+31. Select **RC Calibration** in left side-menu.
+
+    .. .. warning:: Again, No props please, during setup!
+
+32. Turn on your RC Transmitter. Check if the receiver is working.
+
+    .. note:: PWM, PPM receiver are powered through ESC supply. If your RC is not getting powered then you should check ESC supply and whether your ESCs output 5V. In case your ESCs don't have BEC then power on the receiver using some other supply. Do not draw supply for RC receiver from 5V output of FlytPOD. 
       
-      .. 9. To read the description of modes and state machine go to (link to internal details page in docs.flytbase.com)
+    Following are the prerequisites for RC Calibration:
+    
+    * You need a minimum six channel radio to use with Flyt.
+    * Four channels for roll, pitch, yaw and throttle.
+    * A three way switch for testing with RC modes.
+    * A two way switch for Manual override.
+    * A two way optional switch for Return to Launch mode.
+    * Please follow instructions in FlytConsole.
+         
+    Reboot the autopilot after this by clicking on **Save and Reboot**.
 
-      .. gains part	
-		
-.. 6. With the above settings done, you now have to reboot the autopilot.
+    .. warning::  If you find that motors start rotating after clicking 'Save and reboot' then immediately power off everything and report to us.  
 
-5. After Sensor and RC calibration, Gains have to be tuned to control the autopilot attitude and position control. Click on **Gains Tuning**. You can choose to use the default settings for Gains tuning.
+    Click :ref:`here<RC_calibration>` to know more about RC Calibration.
+
+
+
+
+
+33. After Sensor and RC calibration, Gains have to be tuned to control the autopilot attitude and position control. Click on **Gains Tuning**. You can choose to use the default settings for Gains tuning.
    
-   
+    Click :ref:`here<Gain_tuning>` to know more about Gain tuning.
 
-   Click :ref:`here<Gain_tuning>` to know more about Gain tuning.
-
-
-You are now ready to fly.
-
-
-
-.. _Points of Caution:
-
-Points of Caution
------------------
-
-Please keep in mind the below mentioned points.
-
-Before Power up
-^^^^^^^^^^^^^^^
-
-**Make sure**
+34. Congratulations!!!! You are done with the setup. 
+35. At this stage the RGB LED should be breathing blue. Assuming that you have the props removed, try to ARM system and test radio commands. 
+36. You can check if the response of pitch and roll commands is as desirable.
+37. Now you can connect any additional sensors to FlytPOD.
+38. Enjoy! 
 
 
-* Frame should be intact.
-* Motors are tightly fixed and are facing upwards.
-* All the propellers are in good shape (without cuts and deformations) and are tightly fixed.
-* Motors are rotating smoothly.
-* There are no loose wires.
-* Radio and PWM connectors are solid and tight.
-* Motors and propellers are orderly.
-* Transmitter is switched on.
+
+
+
+
+
+
+.. .. _Points of Caution:
+
+.. Points of Caution
+.. -----------------
+
+.. Please keep in mind the below mentioned points.
+
+.. Before Power up
+.. ^^^^^^^^^^^^^^^
+
+.. **Make sure**
+
+
+.. * Frame should be intact.
+.. * Motors are tightly fixed and are facing upwards.
+.. * All the propellers are in good shape (without cuts and deformations) and are tightly fixed.
+.. * Motors are rotating smoothly.
+.. * There are no loose wires.
+.. * Radio and PWM connectors are solid and tight.
+.. * Motors and propellers are orderly.
+.. * Transmitter is switched on.
  
 
 
-Before You Take-off
-^^^^^^^^^^^^^^^^^^^
+.. Before You Take-off
+.. ^^^^^^^^^^^^^^^^^^^
 
-**Make sure**
+.. **Make sure**
 
-* Battery is charged.
-* Low voltage alarm is set.
-* Telemetry i working.
-* Attitude is correct at ground level.
-* All radio channels are clear.
-* Parameters are correctly loaded.
+.. * Battery is charged.
+.. * Low voltage alarm is set.
+.. * Telemetry i working.
+.. * Attitude is correct at ground level.
+.. * All radio channels are clear.
+.. * Parameters are correctly loaded.
   
-**Do the following**
+.. **Do the following**
 
-* Rotate UAV 360 degrees and check if Mag is correct.
-* Arm motors and check if they are rotating in the correct direction.
-* Take a small lift off and check if altitude is not drifting in GCS.
-* While disarmed, check that mode switches are working.
-* Hold UAV in hand, give 50% throttle and check for vibrations.
-
-
-For Manual Flight
-^^^^^^^^^^^^^^^^^
-
-**Do the following**
+.. * Rotate UAV 360 degrees and check if Mag is correct.
+.. * Arm motors and check if they are rotating in the correct direction.
+.. * Take a small lift off and check if altitude is not drifting in GCS.
+.. * While disarmed, check that mode switches are working.
+.. * Hold UAV in hand, give 50% throttle and check for vibrations.
 
 
-* Fix a mark or some clue for direction of the vehicle. It should be visible from far.
-* Get the exact direction of geographical north (Mag reads magnetic north).
-* Have a fellow give you details of attitude, location,heading during flight.
-* Make sure you know operations of every mode.
-* Take a good look at the surroundings. The area should be clear of buildings, trees, people and other obstacles.
+.. For Manual Flight
+.. ^^^^^^^^^^^^^^^^^
+
+.. **Do the following**
 
 
-.. * It is recommended to use the RC when testing for the first time.
-.. * If the RC is not connected, FlytPOD will go to API_Mode by default. Use API_mode switch to control drone from RC.
-.. * Before you arm the FlytPOD make sure that the position of the propellers is correct i.e. anticlockwise and clockwise propellers are mounted on the right motors.
+.. * Fix a mark or some clue for direction of the vehicle. It should be visible from far.
+.. * Get the exact direction of geographical north (Mag reads magnetic north).
+.. * Have a fellow give you details of attitude, location,heading during flight.
+.. * Make sure you know operations of every mode.
+.. * Take a good look at the surroundings. The area should be clear of buildings, trees, people and other obstacles.
 
-.. caution:: * It is recommended to use the RC while testing for the first time.
-             * If the RC is not connected, FlytPOD will go to API_Mode by default otherwise use API_mode switch to control drone using the RC.
-             * Before you arm the FlytPOD make sure that the position of the propellers is correct i.e. anticlockwise and clockwise propellers are mounted on the right motors.
+
+.. .. * It is recommended to use the RC when testing for the first time.
+.. .. * If the RC is not connected, FlytPOD will go to API_Mode by default. Use API_mode switch to control drone from RC.
+.. .. * Before you arm the FlytPOD make sure that the position of the propellers is correct i.e. anticlockwise and clockwise propellers are mounted on the right motors.
+
+.. .. caution:: * It is recommended to use the RC while testing for the first time.
+..              * If the RC is not connected, FlytPOD will go to API_Mode by default otherwise use API_mode switch to control drone using the RC.
+..              * Before you arm the FlytPOD make sure that the position of the propellers is correct i.e. anticlockwise and clockwise propellers are mounted on the right motors.
+..              * Have a RC pilot ready to take control even if you are flying in API mode in case of emergency.
 
 
 
@@ -500,7 +339,7 @@ For Manual Flight
 .. 8. If the RC is not connected, FlytPOD will go to API_Mode by default. Use API_mode switch to control drone from RC.
 .. 9. Before you arm the FlytPOD make sure that the position of the propellers is correct i.e. anticlockwise and clockwise propellers are mounted on the right motors.
     
-.. warning:: Have a RC pilot ready to take control even if you are flying in API mode in case of emergency.
+.. .. warning:: Have a RC pilot ready to take control even if you are flying in API mode in case of emergency.
 
 .. To know more about Using Flytconsole while flying your drone go to..(link) and learn how to get waypoints ,operate GCS ,Gain Tuning, 	 	Calibration and Parameter settings.
   .. important:: * It is recommended to use the RC when testing for the first time.
