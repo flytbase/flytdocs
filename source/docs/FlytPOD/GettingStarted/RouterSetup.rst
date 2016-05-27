@@ -105,14 +105,19 @@ Changing the WiFi Mode
 Troubleshooting
 ^^^^^^^^^^^^^^^
 
-.. * In case you cannot reach FlytPOD 
+1. **Cannot reach FlytPOD** 
+  
+   a. In hotspot mode you can access FlytConsole at ``flytpod:9090/flytconsole``.
+   b. In client mode you might have to replace ``flytpod`` with the IP address of FlytPOD which you can find through your router page by looking for connected client with the name* 'flytpod'.
 
-If you have forgottoen password or your settings are not useful further then you can reset the wifi to default.
+2. **Forgot Password**
+  
+   If you have forgottoen password or your settings are not useful further then you can reset the wifi to default.
 
-1. Connect monitor, keyboard, mouse to flytpod. Plug Flytpod using wall adapter/battery. 
-2. Open firefox browser in flytpod UI.
-3. Open FlytConsole using this URL ``localhost:9090/flytconsole``.
-4. You can follow steps given above to configure WiFi into AP or Client mode with new password.
+   a. Connect monitor, keyboard, mouse to flytpod. Plug Flytpod using wall adapter/battery. 
+   b. Open firefox browser in flytpod UI.
+   c. Open FlytConsole using this URL ``localhost:9090/flytconsole``.
+   d. You can follow steps given above to configure WiFi into AP or Client mode with new password.
 
 
 .. In hotspot mode you can access FlytConsole at ``flytpod:9090/flytconsole``.
