@@ -248,14 +248,14 @@ In this example we request location status from the drone using topic Local Posi
 .. note:: Please note that you will have to change the IP address in the FlytDemo JS file to the IP address of the device you run FlytSim on. This is required so that data can be received on any external device that you have connected.
 
 
-Android App- Java (Android-Studio)
-==================================
+Android App - Java (Android-Studio)
+===================================
 
 
-Flyt-Android SDK
-----------------
+Flyt - Android SDK
+------------------
 
-a. Here you are required to download the Flyt-Android-SDK based on Android Studio from 'here ' and build your app using it.
+a. Here you are required to download the Flyt-Android-SDK based on Android Studio from `here <https://s3-us-west-2.amazonaws.com/flytos/FlytSDK/Flyt-Android-SDKv0.1.zip>`_ and build your app using it.
 b. The SDK has all the required libraries for making REST calls and a websocket connection to FlytPOD already integrated in it.
 c. The mainActivity in it shows a sample of how a REST call and a WebSocket call is to be made.
 d. Sample REST call to fetch namespace of the flytpod

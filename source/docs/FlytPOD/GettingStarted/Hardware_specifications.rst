@@ -76,6 +76,7 @@ Columns described From left to right.
 
 To know how to use these interfaces contact us at ``admin@navstik.org``.
 
+
 .. .. image:: /_static/Images/external_sensors.png
 .. 		:align: center
 .. 		:scale: 30%
