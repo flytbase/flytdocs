@@ -144,7 +144,7 @@ If you have any other version of Gazebo, then go through the following steps to 
 
    $ wget -O /tmp/gazebo6_install.sh http://osrf-distributions.s3.amazonaws.com/gazebo/gazebo6_install.sh; sudo sh /tmp/gazebo6_install.sh
 
-   Alternatively, one could refer to the Gazebo6 official installation page.
+   Alternatively, one could refer to the `Gazebo6 official installation page`_.
 
 * Install Gazebo6 ROS-pkgs
   Execute the following command in your terminal.
@@ -158,3 +158,4 @@ If you have any other version of Gazebo, then go through the following steps to 
 .. _this: https://github.com/ethz-asl/rotors_simulator/wiki/Gazebo-and-Gazebo-Ros-Installation
 .. _FlytSim Download: http://www.flytbase.com/flytos/#flytsim_3d
 .. _OpenCV 2.4: http://docs.opencv.org/2.4/doc/tutorials/introduction/linux_install/linux_install.html
+.. _Gazebo6 official installation page: 

@@ -99,6 +99,12 @@ FlytOS versions with bug fixes and additional features are released at regular i
 
 	 $ sudo dpkg -s flytcore
 
+Its better to again check for FlytOS dependencies just in case, the list is updated. Issue the following commands in your terminal with *sudo* permission.
+
+  .. literalinclude:: include/flytos_dependency.sh
+     :language: bash
+     :tab-width: 4 
+
 Download the flytOS_0.x-y_armhf.deb file from `FlytOS Download`_ page. Once downloaded, run the following command in your terminal to update FlytOS.
     
 .. code-block:: bash
