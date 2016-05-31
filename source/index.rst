@@ -29,7 +29,7 @@ Checkout and participate in our `forums`_ and interact with the community sharin
    :caption: FlytOS
 	
    docs/FlytOS/FlytOS.rst
-   docs/FlytOS/FlytOS_install.rst
+   docs/FlytOS/FlytOSInstallationGuide.rst
    docs/FlytOS/FlytOSLaunch.rst
 
 .. toctree::
@@ -67,6 +67,7 @@ Checkout and participate in our `forums`_ and interact with the community sharin
    docs/FlytSim/FlytSim.rst
    docs/FlytSim/FlytSimInstallationGuide.rst
    docs/FlytSim/FlytSimLaunch.rst
+   docs/FlytSim/FlytSimTroubleshooting.rst
 
 .. toctree::
    :maxdepth: 2

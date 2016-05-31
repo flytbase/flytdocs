@@ -431,7 +431,7 @@ Following data is streamed from the drone:
 4. Local Position - gives the position of the drone with respect to the home position.
 5. RC IN - gives the input value received by FlytPOD because of RC.
 
-You have now finished configuration. Please follow the :ref:`Points of Caution<Points of Caution>` mentioned in FlytPOD Setup before you fly.
+You have now finished configuration. Please follow the :ref:`Points of Caution<Points of Caution>` mentioned in FlytPOD Setup before you fly. |click_here|
 
 
 .. It is recommended to use the RC when testing for the first time.
