@@ -13,7 +13,7 @@ To launch FlytSim, run this command in the **new** terminal.
 
 .. code-block:: bash
 
-	$ $(rospack find core_api)/scripts/start_flytOS.sh --sitl
+	$ sudo $(rospack find core_api)/scripts/start_flytOS.sh --sitl
 
 .. caution:: If you get this error: ``Error: package 'core_api' not found``, source your $HOME/.bashrc file or launch FlytSim in new terminal.
 
@@ -54,7 +54,7 @@ To kill this instance of FlytSim, run this command in your terminal.
 
 .. code-block:: bash
 
-	$ $(rospack find core_api)/scripts/kill_flytOS.sh
+	$ sudo $(rospack find core_api)/scripts/kill_flytOS.sh
 
 
 

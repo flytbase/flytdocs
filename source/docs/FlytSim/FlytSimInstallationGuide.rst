@@ -46,7 +46,7 @@ To install FlytSim binaries,
 	   :language: bash
 	   :tab-width: 4
 
-* Before proceeding further, add the following two lines at the end of your $HOME/.bashrc file.
+* Before proceeding further, add the following three lines at the end of your $HOME/.bashrc file.
     
   .. code-block:: bash
 
