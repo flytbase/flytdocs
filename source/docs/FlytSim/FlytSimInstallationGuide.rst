@@ -10,7 +10,7 @@ Before you can start off with installing FlytSim, make sure you fulfill all the 
 * Linux - Ubuntu 14.04
 * `ROS - Indigo`_
 * `OpenCV 2.4`_ (for vision/video streaming APIs)
-* Gazebo6
+* `Gazebo6 <Gazebo6 Installation_>`_
   
 FlytSim is based on Gazebo6 which is different from Gazebo2 which come pre-packaged with ROS Indigo. If in case, you have a different version of Gazebo, please install Gazebo6 before moving ahead in this tutorial. Failing to install the right version can render the simulation inoperational. In future, if need be, we might add support for other versions of Gazebo as well. 
 
@@ -102,9 +102,10 @@ Go to the `FlytSim download`_ page. Download the flytsimv0.x.zip file. Once down
 
    $ sudo ./flytsim_install.sh
 
+.. _Gazebo6 Installation:
 
-Gazebo Installation
--------------------
+Gazebo6 Installation
+--------------------
 
 FlytSim requires Gazebo6 to be installed in your device. To find out the version of Gazebo installed in your system, issue the following command in your terminal.
 
@@ -130,6 +131,7 @@ If you have Gazebo6 installed, you should get the following output.
 If you have any other version of Gazebo, then go through the following steps to install Gazebo6.
 
 * Uninstall current Gazebo
+  
   You must uninstall your current Gazebo before installing Gazebo6. Issue the following command in your terminal.
 
 .. code-block:: bash
@@ -138,15 +140,17 @@ If you have any other version of Gazebo, then go through the following steps to 
    $ sudo apt-get remove gazebox
 
 * Install Gazebo6
-	Execute the following command in your terminal.
+  
+  Execute the following command in your terminal.
 
-  .. code-block:: bash
+.. code-block:: bash
 
    $ wget -O /tmp/gazebo6_install.sh http://osrf-distributions.s3.amazonaws.com/gazebo/gazebo6_install.sh; sudo sh /tmp/gazebo6_install.sh
 
-   Alternatively, one could refer to the `Gazebo6 official installation page`_.
+Alternatively, one could also refer to the `Gazebo6 official installation page`_.
 
 * Install Gazebo6 ROS-pkgs
+  
   Execute the following command in your terminal.
 
   .. code-block:: bash
@@ -158,4 +162,4 @@ If you have any other version of Gazebo, then go through the following steps to 
 .. _this: https://github.com/ethz-asl/rotors_simulator/wiki/Gazebo-and-Gazebo-Ros-Installation
 .. _FlytSim Download: http://www.flytbase.com/flytos/#flytsim_3d
 .. _OpenCV 2.4: http://docs.opencv.org/2.4/doc/tutorials/introduction/linux_install/linux_install.html
-.. _Gazebo6 official installation page: 
+.. _Gazebo6 official installation page: http://gazebosim.org/tutorials?cat=install&tut=install_ubuntu&ver=6.0
