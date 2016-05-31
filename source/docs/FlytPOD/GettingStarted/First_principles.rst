@@ -22,7 +22,7 @@ First Principles: Flying with Flyt
 
 9. For automatic arm in Takeoff command from FlytOS (onboard scripts / mobile apps / FlytConsole) to work, FlytPOD has to be put in OFFBOARD/API mode.
 
-10. To know more about state machine drop a mail at srv@navstik.org
+10. To know more about state machine drop a mail at admin@navstik.org
 
 11. FlytPOD can be powered through main power connector only. ESC can not supply power to flytpod. However on back io panel pins marked with '+' are given for powering payloads with ESC 5V output. e.g. RC receiver, lidar, etc. 
 
