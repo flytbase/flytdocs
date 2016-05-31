@@ -26,8 +26,9 @@ Below is an introductory `youtube video <https://www.youtube.com/watch?v=BWaecLy
 Technical Specifications
 ------------------------
 
-.. image:: /_static/Images/techspec.png
+.. image:: /_static/Images/techspec.jpg
  :align: center
+ 
 
 
 

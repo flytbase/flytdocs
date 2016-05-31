@@ -45,9 +45,9 @@ Columns described From left to right.
 (Net: top_pin, bottom_pin : Description)
 
 
-.. image:: /_static/Images/exsensor.png
+.. image:: /_static/Images/exsensors.jpg
 		:align: center
-		:scale: 50%
+		:scale: 90%
 
 .. * 3V3, -          :   3.3 V output, Gnd from FlytPOD for external sensors.
 .. * GP1, GP2        :   GPIO 1 and GPIO 2 on odroid GPIO 30 pin connector. Pin GPX1.2, GPX1.3   
