@@ -8,14 +8,14 @@ Connections and Expansion Ports
 
 .. important:: This page is under active development.
 
-Exapansion Panel 
-----------------
+Expansion Panel
+---------------
 
 
-.. image:: /_static/Images/iopannel.png
+.. image:: /_static/Images/iopannel.jpg
   	:align: center
 
-.. image:: /_static/Images/sideviews.png
+.. image:: /_static/Images/sideviews.jpg
 	:scale: 35%
 	:align: center
 	
@@ -24,7 +24,7 @@ Exapansion Panel
 1. Power Button
 ^^^^^^^^^^^^^^^
 
-Pressing the power button for 3 sec turns off FlytPOD. The RGB LED turns to amber upon shutting down. After that you can remove power supply.
+Gently pressing the power button turns off FlytPOD. The RGB LED turns to amber upon shutting down. After that you can remove power supply. You can switch on FlytPOD again by pressing the Power button for 1 second.
 
 .. note:: Please be patient while the system shuts down. It may take a few seconds for the system to shut down completely.
   
@@ -254,7 +254,7 @@ Servo Output / PWM output
 
 According to your platform connect up to 8 motors (ESCs) to the PWM output channel. 
 
-.. figure:: /_static/Images/pwm_op.png
+.. figure:: /_static/Images/pwm_op.jpg
  :align: center
  :scale: 50%
    
@@ -294,7 +294,7 @@ Radio Receiver
 
 * PWM: RC receiver in PWM mode. Channel 1 to 8 on RC port act as 8xPWM input when param PWM_PPM_SEL = 0 which can be changed from FlytConsole.
   
-.. figure:: /_static/Images/ppm_pwm.png
+.. figure:: /_static/Images/ppm_pwm.jpg
  :align: center
  :scale: 50%
  
@@ -312,7 +312,7 @@ Radio Receiver
 
 * SBUS
   
-.. figure:: /_static/Images/sbus_spek.png
+.. figure:: /_static/Images/sbus_spek.jpg
  :align: center
  :scale: 50%
 
@@ -342,7 +342,7 @@ Connect the power module to the appropriate ports in the FlytPOD as shown in the
 
 
 
-.. figure:: /_static/Images/PowerModule.png
+.. figure:: /_static/Images/PowerModule.jpg
 	:align: center
 	:scale: 30%
 	
@@ -352,6 +352,47 @@ Connect the power module to the appropriate ports in the FlytPOD as shown in the
 
 LiDAR-lite V2
 ^^^^^^^^^^^^^
+
+Below are two methods for connecting LiDAR-lite to FlytPOD.
+
+* PWM Input
+  
+  Please follow the table below to make the required connections.
+
+.. image:: /_static/Images/LiDARpins.jpg
+  	:align: center
+  	:scale: 70%
+
+.. figure:: /_static/Images/lidarpins.jpg
+	:align: center
+	:scale: 50%
+	
+	LiDAR Pins
+
+* I2C Bus
+
+
+
+.. figure:: /_static/Images/i2cpins.jpg
+	:align: center
+	:scale: 50%
+	
+	I2C Pins
+
+
+Telemetry
+^^^^^^^^^
+
+
+
+.. figure:: /_static/Images/telemetrypins.png
+	:align: center
+	:scale: 50%
+	
+	Telemetry pins
+
+
+
 
 
 
