@@ -41,13 +41,13 @@ Pressing the power button for 3 sec turns off FlytPOD. The RGB LED turns to ambe
 
 Below are the ports available for external sensors and payload interface.
 
-Columns described From left to right. 
-(Net: top_pin, bottom_pin : Description)
+.. Columns described From left to right. 
+.. (Net: top_pin, bottom_pin : Description)
 
 
 .. image:: /_static/Images/exsensors.jpg
 		:align: center
-		:scale: 90%
+		:scale: 80%
 
 .. * 3V3, -          :   3.3 V output, Gnd from FlytPOD for external sensors.
 .. * GP1, GP2        :   GPIO 1 and GPIO 2 on odroid GPIO 30 pin connector. Pin GPX1.2, GPX1.3   
@@ -194,10 +194,10 @@ Solid red: Supply working.
 Connect up to two external GPS-MAG sensors for redundancy and accuracy.
 GPS-MAG1 is the primary port. You need at least one GPS-MAG module for stable flight. 
 
-14. Micro SD
-^^^^^^^^^^^^
-32 GB Micro SD card with FlytOS image.
 
+14. VI Sensor Input
+^^^^^^^^^^^^^^^^^^^
+Monitor battery status and issue low battery warnings, available flight time left.
 
 
 15. Power Input
@@ -205,17 +205,14 @@ GPS-MAG1 is the primary port. You need at least one GPS-MAG module for stable fl
 5V @ 4A input for FlytPOD.
 
 
-
-16. VI Sensor Input 
-^^^^^^^^^^^^^^^^^^^
-Monitor battery status and issue low battery warnings, available flight time left.
-
+16. Micro SD
+^^^^^^^^^^^^
+32 GB Micro SD card with FlytOS image.
 
 
 17. Micro SD
 ^^^^^^^^^^^^
 8 GB Micro SD card used for onboard data logging.
-
 
 
 18. USB Port
@@ -227,7 +224,7 @@ Connect USB camera, 3G/4G dongle and other payloads.
 
 
 
-Peripherals 
+Peripherals
 -----------
 
 
@@ -352,12 +349,21 @@ Connect the power module to the appropriate ports in the FlytPOD as shown in the
 	PowerModule
 
 
+
+LiDAR-lite V2
+^^^^^^^^^^^^^
+
+
+
+
+
+
 Buzzer
 ^^^^^^
 Lidarlite Laser Rangefinder
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Px4flow
-^^^^^^^^
+Px4FLOW
+^^^^^^^
 USB Camera
 ^^^^^^^^^^^
 HDMI output
