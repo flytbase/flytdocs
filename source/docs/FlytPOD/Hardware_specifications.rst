@@ -359,23 +359,25 @@ Below are two methods for connecting LiDAR-lite to FlytPOD.
   
   Please follow the table below to make the required connections.
 
-.. image:: /_static/Images/LiDARpins.jpg
+.. image:: /_static/Images/lidarpinstable.jpg
   	:align: center
-  	:scale: 70%
+  	:scale: 80%
 
-.. figure:: /_static/Images/lidarpins.jpg
+.. figure:: /_static/Images/uartpins.jpg
 	:align: center
-	:scale: 50%
+	:scale: 80%
 	
 	LiDAR Pins
 
 * I2C Bus
+  
+  Connect LiDAR-lite I2C wires to I2C-2 port as shown below.
 
 
 
-.. figure:: /_static/Images/i2cpins.jpg
+.. figure:: /_static/Images/i2cbus.jpg
 	:align: center
-	:scale: 50%
+	:scale: 80%
 	
 	I2C Pins
 
@@ -383,11 +385,11 @@ Below are two methods for connecting LiDAR-lite to FlytPOD.
 Telemetry
 ^^^^^^^^^
 
+Connect your Telemetry module to the Telemetry port(Rx and Tx) as shown below for QGroundControl and APMplanner. MAVlink available at baud rate 57600.
 
-
-.. figure:: /_static/Images/telemetrypins.png
+.. figure:: /_static/Images/telemetry.jpg
 	:align: center
-	:scale: 50%
+	:scale: 80%
 	
 	Telemetry pins
 
