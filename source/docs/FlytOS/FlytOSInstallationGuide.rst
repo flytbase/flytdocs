@@ -105,11 +105,18 @@ Its better to again check for FlytOS dependencies just in case, the list is upda
    :language: bash
    :tab-width: 4   
 
-Download the flytOS_0.x-y_armhf.deb file from `FlytOS Download`_ page. Once downloaded, run the following command in your terminal to update FlytOS.
+Download the flytOS_0.x-y_armhf.zip file from `FlytOS Download`_ page. Once downloaded, extract the contents of the zip file. Update the autopilot firmware, by running the following command.
+
+.. code-block:: bash
+
+   $ sudo $(rospack find core_api)/scripts/firmware_upgrade_usart.sh <path to debian package location>/nuttx-navstik-v1-default.flyt
+
+Once the update is complete, run the following command in your terminal to update FlytOS.
     
 .. code-block:: bash
 
    $ sudo dpkg -i <path to debian package location>/flytOS_0.x-y_armhf.deb 		#fill in the v0.x-y with the correct version number
+
 
 
 .. |br| raw:: html

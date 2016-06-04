@@ -14,13 +14,13 @@ To launch FlytOS, run this command in the terminal.
 
 .. code-block:: bash
 
-	$ $(rospack find core_api)/scripts/start_flytOS.sh 
+	$ sudo $(rospack find core_api)/scripts/start_flytOS.sh 
 
 In case you are using APM on Pixhawk, launch FlytOS using the following script.
 
 .. code-block:: bash
 
-	$ $(rospack find core_api)/scripts/start_flytOS_apm.sh 
+	$ sudo $(rospack find core_api)/scripts/start_flytOS_apm.sh 
 
 .. important:: If you get this error: ``Error: package 'core_api' not found``, source your $HOME/.bashrc file.
 
@@ -58,7 +58,7 @@ To kill this instance of FlytOS, run this command in your terminal.
 
 .. code-block:: bash
 
-	$ $(rospack find core_api)/scripts/kill_flytOS.sh 
+	$ sudo $(rospack find core_api)/scripts/kill_flytOS.sh 
 
 
 Using QGCS/Mission Planner with FlytOS
@@ -68,12 +68,12 @@ First kill any running FlytOS instance.
 
 .. code-block:: bash
 
-	$ $(rospack find core_api)/scripts/kill_flytOS.sh 
+	$ sudo $(rospack find core_api)/scripts/kill_flytOS.sh 
 
 
 To launch FlytOS with UDP bridge, replace <your-ip> and <your-port> with your local GCS system ip and port(use default 14550) in the following command.
 
-$(rospack find core_api)/scripts/start_flytOS_withUDP.sh udp://0.0.0.0:14555@<your-ip>:<your-port> --checkudp 
+sudo $(rospack find core_api)/scripts/start_flytOS_withUDP.sh udp://0.0.0.0:14555@<your-ip>:<your-port> --checkudp 
 
 For example, if FlytPOD's local ip is 192.168.1.5 and that of your system running GCS is 192.168.1.10 then following command will start mavlink on GCS system's port number 14550.
 
@@ -82,7 +82,7 @@ For example, if FlytPOD's local ip is 192.168.1.5 and that of your system runnin
 
 .. code-block:: bash
 
-	$ $(rospack find core_api)/scripts/start_flytOS_withUDP.sh udp://0.0.0.0:14555@192.168.1.10:14550 --checkudp
+	$ sudo $(rospack find core_api)/scripts/start_flytOS_withUDP.sh udp://0.0.0.0:14555@192.168.1.10:14550 --checkudp
 
 
 To autostart GCS UDP bridge on every startup, edit /etc/rc.local file.
