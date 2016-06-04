@@ -8,14 +8,14 @@ Connections and Expansion Ports
 
 .. important:: This page is under active development.
 
-Exapansion Panel 
-----------------
+Expansion Panel
+---------------
 
 
-.. image:: /_static/Images/iopannel.png
+.. image:: /_static/Images/iopannel.jpg
   	:align: center
 
-.. image:: /_static/Images/sideviews.png
+.. image:: /_static/Images/sideviews.jpg
 	:scale: 35%
 	:align: center
 	
@@ -24,7 +24,7 @@ Exapansion Panel
 1. Power Button
 ^^^^^^^^^^^^^^^
 
-Pressing the power button for 3 sec turns off FlytPOD. The RGB LED turns to amber upon shutting down. After that you can remove power supply.
+Gently pressing the power button turns off FlytPOD. The RGB LED turns to amber upon shutting down. After that you can remove power supply. You can switch on FlytPOD again by pressing the Power button for 1 second.
 
 .. note:: Please be patient while the system shuts down. It may take a few seconds for the system to shut down completely.
   
@@ -41,13 +41,13 @@ Pressing the power button for 3 sec turns off FlytPOD. The RGB LED turns to ambe
 
 Below are the ports available for external sensors and payload interface.
 
-Columns described From left to right. 
-(Net: top_pin, bottom_pin : Description)
+.. Columns described From left to right. 
+.. (Net: top_pin, bottom_pin : Description)
 
 
-.. image:: /_static/Images/exsensor.png
+.. image:: /_static/Images/exsensors.jpg
 		:align: center
-		:scale: 50%
+		:scale: 80%
 
 .. * 3V3, -          :   3.3 V output, Gnd from FlytPOD for external sensors.
 .. * GP1, GP2        :   GPIO 1 and GPIO 2 on odroid GPIO 30 pin connector. Pin GPX1.2, GPX1.3   
@@ -194,10 +194,10 @@ Solid red: Supply working.
 Connect up to two external GPS-MAG sensors for redundancy and accuracy.
 GPS-MAG1 is the primary port. You need at least one GPS-MAG module for stable flight. 
 
-14. Micro SD
-^^^^^^^^^^^^
-32 GB Micro SD card with FlytOS image.
 
+14. VI Sensor Input
+^^^^^^^^^^^^^^^^^^^
+Monitor battery status and issue low battery warnings, available flight time left.
 
 
 15. Power Input
@@ -205,17 +205,14 @@ GPS-MAG1 is the primary port. You need at least one GPS-MAG module for stable fl
 5V @ 4A input for FlytPOD.
 
 
-
-16. VI Sensor Input 
-^^^^^^^^^^^^^^^^^^^
-Monitor battery status and issue low battery warnings, available flight time left.
-
+16. Micro SD
+^^^^^^^^^^^^
+32 GB Micro SD card with FlytOS image.
 
 
 17. Micro SD
 ^^^^^^^^^^^^
 8 GB Micro SD card used for onboard data logging.
-
 
 
 18. USB Port
@@ -227,7 +224,7 @@ Connect USB camera, 3G/4G dongle and other payloads.
 
 
 
-Peripherals 
+Peripherals
 -----------
 
 
@@ -257,7 +254,7 @@ Servo Output / PWM output
 
 According to your platform connect up to 8 motors (ESCs) to the PWM output channel. 
 
-.. figure:: /_static/Images/pwm_op.png
+.. figure:: /_static/Images/pwm_op.jpg
  :align: center
  :scale: 50%
    
@@ -297,7 +294,7 @@ Radio Receiver
 
 * PWM: RC receiver in PWM mode. Channel 1 to 8 on RC port act as 8xPWM input when param PWM_PPM_SEL = 0 which can be changed from FlytConsole.
   
-.. figure:: /_static/Images/ppm_pwm.png
+.. figure:: /_static/Images/ppm_pwm.jpg
  :align: center
  :scale: 50%
  
@@ -315,7 +312,7 @@ Radio Receiver
 
 * SBUS
   
-.. figure:: /_static/Images/sbus_spek.png
+.. figure:: /_static/Images/sbus_spek.jpg
  :align: center
  :scale: 50%
 
@@ -345,19 +342,71 @@ Connect the power module to the appropriate ports in the FlytPOD as shown in the
 
 
 
-.. figure:: /_static/Images/PowerModule.png
+.. figure:: /_static/Images/PowerModule.jpg
 	:align: center
 	:scale: 30%
 	
 	PowerModule
 
 
+
+LiDAR-lite V2
+^^^^^^^^^^^^^
+
+Below are two methods for connecting LiDAR-lite to FlytPOD.
+
+* PWM Input
+  
+  Please follow the table below to make the required connections.
+
+.. image:: /_static/Images/lidarpinstable.jpg
+  	:align: center
+  	:scale: 80%
+
+.. figure:: /_static/Images/uartpins.jpg
+	:align: center
+	:scale: 80%
+	
+	LiDAR Pins
+
+* I2C Bus
+  
+  Connect LiDAR-lite I2C wires to I2C-2 port as shown below.
+
+
+
+.. figure:: /_static/Images/i2cbus.jpg
+	:align: center
+	:scale: 80%
+	
+	I2C Pins
+
+
+Telemetry
+^^^^^^^^^
+
+Connect your Telemetry module to the Telemetry port(Rx and Tx) as shown below for QGroundControl and APMplanner. MAVlink available at baud rate 57600.
+
+.. figure:: /_static/Images/telemetry.jpg
+	:align: center
+	:scale: 80%
+	
+	Telemetry pins
+
+
+
+
+
+
+
+
+
 Buzzer
 ^^^^^^
 Lidarlite Laser Rangefinder
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Px4flow
-^^^^^^^^
+Px4FLOW
+^^^^^^^
 USB Camera
 ^^^^^^^^^^^
 HDMI output

@@ -37,13 +37,13 @@ Checkout and participate in our `forums`_ and interact with the community sharin
     :hidden:
     :caption: FlytPOD
 	
-    docs/FlytPOD/GettingStarted/About_FlytPOD.rst
-    docs/FlytPOD/GettingStarted/Hardware_specifications.rst
-    docs/FlytPOD/GettingStarted/FlytPOD_Quickstart.rst
-    docs/FlytPOD/GettingStarted/First_principles.rst
-    docs/FlytPOD/GettingStarted/First_flight.rst
-    docs/FlytPOD/GettingStarted/Safety_instructions.rst
-    docs/FlytPOD/GettingStarted/RouterSetup.rst
+    docs/FlytPOD/About_FlytPOD.rst
+    docs/FlytPOD/Hardware_specifications.rst
+    docs/FlytPOD/FlytPOD_Quickstart.rst
+    docs/FlytPOD/First_principles.rst
+    docs/FlytPOD/First_flight.rst
+    docs/FlytPOD/Safety_instructions.rst
+    docs/FlytPOD/RouterSetup.rst
 
 
     

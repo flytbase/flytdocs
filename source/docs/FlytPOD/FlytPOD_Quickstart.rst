@@ -63,11 +63,11 @@ Getting Started
 
    * Plug and tighten antennas on FlytPOD.
    * Power on FlytPOD using wall adapter. The RGB led should start breathing red. (Don't worry about it now.) 
-   * On you laptop connect to the WiFi network ``FlytPOD_wifi`` with password provided in the flyer shipped with FlytKit.
+   * On you laptop connect to the WiFi network ``FlytPOD_wifi`` the password for which is ``FlytPOD123``. To set a new password and SSID follow the instructions given in :ref:`WiFi Setup<flytpod router setup>`.
    * In your laptop browser launch FlytConsole using URL: ``flytpod:9090/flytconsole``.
    * You can configure FlytPOD WiFi in hotspot or client mode. For automatic updates and Google maps to work, you need to connect FlytPOD  to your existing home/university WiFi network using client mode. 
    * Detailed instructions for WiFi setup are given :ref:`here<flytpod router setup>`.
-   * Power off FlytPOD by pressing the power button on the back panel for 3 secs. Within few seconds RGB LED should turn amber. 
+   * Power off FlytPOD by pressing the power button on the back panel for 3 secs. Within few seconds RGB LED should turn amber.
  
    .. note:: Note that next time you start FlytPOD it will take some time for the RGB led to start up. This behavior will repeat every time you do a graceful shutdown as described above. 
 
