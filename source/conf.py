@@ -299,10 +299,10 @@ htmlhelp_basename = 'FlytDocs'
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
-#latex_documents = [
-#   (master_doc, 'FlytDocs.tex', u'FlytDocs',
-#    u'sharvashish\\_das', 'manual'),
-# ]
+latex_documents = [
+   (master_doc, 'FlytDocs.tex', u'FlytDocs',
+    u'sharvashish\\_das', 'manual'),
+ ]
 
 # The name of an image file (relative to this directory) to place at the top of
 # the title page.
