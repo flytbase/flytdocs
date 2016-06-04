@@ -282,7 +282,7 @@ htmlhelp_basename = 'FlytDocs'
 
 # -- Options for LaTeX output ---------------------------------------------
 
-#latex_elements = {
+latex_elements = {
 # The paper size ('letterpaper' or 'a4paper').
 #'papersize': 'letterpaper',
 
@@ -294,7 +294,7 @@ htmlhelp_basename = 'FlytDocs'
 
 # Latex figure (float) alignment
 #'figure_align': 'htbp',
-#}
+}
 
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,
