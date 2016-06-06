@@ -29,7 +29,7 @@ Checkout and participate in our `forums`_ and interact with the community sharin
    :caption: FlytOS
 	
    docs/FlytOS/FlytOS.rst
-   docs/FlytOS/FlytOS_install.rst
+   docs/FlytOS/FlytOSInstallationGuide.rst
    docs/FlytOS/FlytOSLaunch.rst
 
 .. toctree::
@@ -37,10 +37,15 @@ Checkout and participate in our `forums`_ and interact with the community sharin
     :hidden:
     :caption: FlytPOD
 	
-    docs/FlytPOD/GettingStarted/About_FlytPOD.rst
-    docs/FlytPOD/GettingStarted/FlytPOD_Peripherals.rst
-    docs/FlytPOD/GettingStarted/FlytPOD_Quickstart.rst
-    docs/FlytPOD/GettingStarted/RouterSetup.rst
+    docs/FlytPOD/About_FlytPOD.rst
+    docs/FlytPOD/Hardware_specifications.rst
+    docs/FlytPOD/FlytPOD_Quickstart.rst
+    docs/FlytPOD/First_principles.rst
+    docs/FlytPOD/First_flight.rst
+    docs/FlytPOD/Safety_instructions.rst
+    docs/FlytPOD/RouterSetup.rst
+
+
     
 
 
@@ -62,6 +67,7 @@ Checkout and participate in our `forums`_ and interact with the community sharin
    docs/FlytSim/FlytSim.rst
    docs/FlytSim/FlytSimInstallationGuide.rst
    docs/FlytSim/FlytSimLaunch.rst
+   docs/FlytSim/FlytSimTroubleshooting.rst
 
 .. toctree::
    :maxdepth: 2

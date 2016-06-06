@@ -1,4 +1,4 @@
-.. _flytsim:
+.. _flytsim_about:
 
 About FlytSim
 =============

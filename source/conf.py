@@ -300,9 +300,9 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-  (master_doc, 'FlytDocs.tex', u'FlytDocs',
-   u'sharvashish\\_das', 'manual'),
-]
+   (master_doc, 'FlytDocs.tex', u'FlytDocs',
+    u'sharvashish\\_das', 'manual'),
+ ]
 
 # The name of an image file (relative to this directory) to place at the top of
 # the title page.

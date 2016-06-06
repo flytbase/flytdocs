@@ -10,8 +10,9 @@ Before you can start off with installing FlytSim, make sure you fulfill all the 
 * Linux - Ubuntu 14.04
 * `ROS - Indigo`_
 * `OpenCV 2.4`_ (for vision/video streaming APIs)
+* `Gazebo6 <Gazebo6 Installation_>`_
   
-FlytSim is based on Gazebo2 which comes in packaged with ROS Indigo. If in case, you have an upgraded version of Gazebo, please install Gazebo2 before moving ahead in this tutorial. In future, we will add support for upgraded versions of Gazebo as well. 
+FlytSim is based on Gazebo6 which is different from Gazebo2 which come pre-packaged with ROS Indigo. If in case, you have a different version of Gazebo, please install Gazebo6 before moving ahead in this tutorial. Failing to install the right version can render the simulation inoperational. In future, if need be, we might add support for other versions of Gazebo as well. 
 
 .. But if you want to upgrade your Gazebo version, follow the steps mentioned in `this`_ tutorial. 
 
@@ -45,12 +46,13 @@ To install FlytSim binaries,
 	   :language: bash
 	   :tab-width: 4
 
-* Before proceeding further, add the following two lines at the end of your $HOME/.bashrc file.
+* Before proceeding further, add the following three lines at the end of your $HOME/.bashrc file.
     
   .. code-block:: bash
 
      export PYTHONPATH=$PYTHONPATH:/flyt/flytapps
      source /flyt/flytos/flytcore/setup.bash
+     export GAZEBO_MODEL_PATH=${GAZEBO_MODEL_PATH}:$(rospack find sitl_gazebo)/models
 
 * Go to the directory where you extracted flytsimv0.x.zip. 
 * Make the install script executable.
@@ -65,7 +67,7 @@ To install FlytSim binaries,
 
 			$ sudo ./flytsim_install.sh
 
-* Just in case you see any dependency issues cropping up in your screen **other than that of Gazebo2** while executing the install script, kindly run the following command and execute the install script again.
+* Just in case you see any dependency issues cropping up in your screen **other than that of Gazebo6** while executing the install script, kindly run the following command and execute the install script again.
   	
   .. code-block:: bash
 
@@ -73,14 +75,14 @@ To install FlytSim binaries,
 
 * Check for ``Congratulations! FlytSim installation completed`` message at the end.
 
-* If versions other than Gazebo2 is installed in your system, you might encounter dependency issue for Gazebo2. We are working to provide support for higher versions of Gazebo as well. Till then, please install Gazebo2 in your system, before running the install script again. 
+* If versions other than Gazebo6 is installed in your system, you might encounter dependency issues related to Gazebo6. We are working to provide support for other versions of Gazebo as well. Till then, please install Gazebo6 in your system, before running the install script again. 
 
 .. _Build FlytSim from source:
 
 Build FlytSim from source
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Currently, efforts are being put to make FlytSim source code available in github.
+In future, FlytSim source code could be made available in github.
 
 
 .. _FlytSim update:
@@ -100,7 +102,64 @@ Go to the `FlytSim download`_ page. Download the flytsimv0.x.zip file. Once down
 
    $ sudo ./flytsim_install.sh
 
+.. _Gazebo6 Installation:
+
+Gazebo6 Installation
+--------------------
+
+FlytSim requires Gazebo6 to be installed in your device. To find out the version of Gazebo installed in your system, issue the following command in your terminal.
+
+.. code-block:: bash
+
+   $ gazebo -v
+
+If you have Gazebo6 installed, you should get the following output.
+
+.. code-block:: bash
+
+   Gazebo multi-robot simulator, version 6.6.0
+   Copyright (C) 2012-2015 Open Source Robotics Foundation.
+   Released under the Apache 2 License.
+   http://gazebosim.org
+
+
+   Gazebo multi-robot simulator, version 6.6.0
+   Copyright (C) 2012-2015 Open Source Robotics Foundation.
+   Released under the Apache 2 License.
+   http://gazebosim.org
+
+If you have any other version of Gazebo, then go through the following steps to install Gazebo6.
+
+* Uninstall current Gazebo
+  
+  You must uninstall your current Gazebo before installing Gazebo6. Issue the following command in your terminal.
+
+.. code-block:: bash
+
+   #replace gazebox by the current version. For example, if you have Gazebo2, issue sudo apt-get remove gazebo2
+   $ sudo apt-get remove gazebox
+
+* Install Gazebo6
+  
+  Execute the following command in your terminal.
+
+.. code-block:: bash
+
+   $ wget -O /tmp/gazebo6_install.sh http://osrf-distributions.s3.amazonaws.com/gazebo/gazebo6_install.sh; sudo sh /tmp/gazebo6_install.sh
+
+Alternatively, one could also refer to the `Gazebo6 official installation page`_.
+
+* Install Gazebo6 ROS-pkgs
+  
+  Execute the following command in your terminal.
+
+  .. code-block:: bash
+
+   $ sudo apt-get install ros-indigo-gazebo6-*
+
+
 .. _ROS - Indigo: http://wiki.ros.org/indigo/Installation/Ubuntu
 .. _this: https://github.com/ethz-asl/rotors_simulator/wiki/Gazebo-and-Gazebo-Ros-Installation
 .. _FlytSim Download: http://www.flytbase.com/flytos/#flytsim_3d
 .. _OpenCV 2.4: http://docs.opencv.org/2.4/doc/tutorials/introduction/linux_install/linux_install.html
+.. _Gazebo6 official installation page: http://gazebosim.org/tutorials?cat=install&tut=install_ubuntu&ver=6.0

@@ -212,8 +212,7 @@ Sensor calibration is of utmost importance before you fly your drone. The sensor
 
 **Accelerometer Calibration**
 
-Set the ``AUTOPILOT ORIENTATION`` if the orientation of the frame and FlytPOD are different.
-Click on **Start Accel Calibration** to begin.
+Set the ``AUTOPILOT ORIENTATION`` if the orientation of the frame and FlytPOD are different. Click on **Start Accel Calibration** to begin.
 
 .. figure:: /_static/Images/accelcalib.png
 	:align: center
@@ -229,8 +228,7 @@ Hold the drone steady in all the six directions( x, -x, y, -y, z, -z) for someti
 
 **Gyroscope Calibration**
 
-Set the ``AUTOPILOT ORIENTATION`` if the orientation of the frame and FlytPOD are different.
-click on **Start Gyro Calibration** to begin.
+Set the ``AUTOPILOT ORIENTATION`` if the orientation of the frame and FlytPOD are different. Click on **Start Gyro Calibration** to begin.
 
 .. figure:: /_static/Images/gyrocalib.png
 	:align: center
@@ -244,8 +242,7 @@ Keep the drone steady without movement in a single state till the calibration en
 
 **Magnetometer Calibration**
 
-Set the ``AUTOPILOT ORIENTATION`` if the orientation of the frame and FlytPOD are different.
-Click on **Start Mag Calibration** to begin.
+Set the ``AUTOPILOT ORIENTATION`` if the orientation of the frame and FlytPOD are different. Click on **Start Mag Calibration** to begin.
 
 .. figure:: /_static/Images/magcalib.png
 	:align: center
@@ -262,8 +259,7 @@ thereby covering all six directions.
 
 **Level calibration**
 
-Set the ``AUTOPILOT ORIENTATION`` if the orientation of the frame and FlytPOD are different.
-Click on **Start Level calibration** to begin.
+Set the ``AUTOPILOT ORIENTATION`` if the orientation of the frame and FlytPOD are different. Click on **Start Level calibration** to begin.
 
 .. figure:: /_static/Images/levelcalib.png
 	:align: center
@@ -435,7 +431,7 @@ Following data is streamed from the drone:
 4. Local Position - gives the position of the drone with respect to the home position.
 5. RC IN - gives the input value received by FlytPOD because of RC.
 
-You have now finished configuration. Please follow the :ref:`Points of Caution<Points of Caution>` mentioned in FlytPOD Setup before you fly.
+You have now finished configuration. Please go through the :ref:`First principles of flying<First_Principles>` and :ref:`First flight with FlytPOD<First_Flight>` sections before you proceed with flying your drone and make sure you understand all the :ref:`Safety guidelines<Safety_Guidelines>`.
 
 
 .. It is recommended to use the RC when testing for the first time.
@@ -446,8 +442,8 @@ You have now finished configuration. Please follow the :ref:`Points of Caution<P
 
 .. To know more about Using Flytconsole while flying your drone go to..(link) and learn how to get waypoints ,operate GCS ,Gain Tuning, 	 	Calibration and Parameter settings.
 
+.. |click_here|
 
+.. .. |click_here| raw:: html
 
-.. |click_here| raw:: html
-
-   <a href="flytpod:9090/flytconsole" target="_blank">click here</a>
+..    <a href="flytpod:9090/flytconsole" target="_blank">click here</a>

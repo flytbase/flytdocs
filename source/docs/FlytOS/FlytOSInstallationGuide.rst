@@ -60,11 +60,11 @@ Firmware Setup
   - But, before doing that, install the following dependencies first:
 
     + `ROS - Indigo`_
-    + Other dependencies - Run the following command in your terminal.
+    + Other dependencies - Run the following commands in your terminal.
       
-      .. code-block:: bash
-
-			$ sudo apt-get install ros-indigo-usb-cam ros-indigo-rosbridge-suite ros-indigo-control-toolbox python-serial python-flask python-wtforms python-sqlalchemy python-concurrent.futures 
+  .. literalinclude:: include/flytos_dependency.sh
+     :language: bash
+     :tab-width: 4 
 
   - Before proceeding further, add the following two lines at the end of your $HOME/.bashrc file.
     
@@ -73,13 +73,13 @@ Firmware Setup
       export PYTHONPATH=$PYTHONPATH:/flyt/flytapps
       source /flyt/flytos/flytcore/setup.bash
 
-  - Download the flytOS_0.4-1_armhf.deb file from `FlytOS Download`_ page. Once downloaded, run the following command in your terminal to install FlytOS.
+  - Download the flytOS_0.x-y_armhf.deb file from `FlytOS Download`_ page. Once downloaded, run the following command in your terminal to install FlytOS.
     
     .. code-block:: bash
 
-			$ sudo dpkg -i <path to debian package location>/flytOS_0.4-1_armhf.deb
+			$ sudo dpkg -i <path to debian package location>/flytOS_0.x-y_armhf.deb
 
-  - Just in case you see any dependency issues cropping up in your screen **other than that of Gazebo2** while executing the install script, kindly run the following command and execute the previous command again.
+  - Just in case you see any dependency issues cropping up in your screen while executing the install script, kindly run the following command and execute the previous command again.
     
     .. code-block:: bash
 
@@ -99,11 +99,24 @@ FlytOS versions with bug fixes and additional features are released at regular i
 
 	 $ sudo dpkg -s flytcore
 
-Download the flytOS_0.x-y_armhf.deb file from `FlytOS Download`_ page. Once downloaded, run the following command in your terminal to update FlytOS.
+Its better to again check for FlytOS dependencies just in case, the list is updated. Issue the following commands in your terminal with *sudo* permission.
+
+.. literalinclude:: include/flytos_dependency.sh
+   :language: bash
+   :tab-width: 4   
+
+Download the flytOS_0.x-y_armhf.zip file from `FlytOS Download`_ page. Once downloaded, extract the contents of the zip file. Update the autopilot firmware, by running the following command.
+
+.. code-block:: bash
+
+   $ sudo $(rospack find core_api)/scripts/firmware_upgrade_usart.sh <path to debian package location>/nuttx-navstik-v1-default.flyt
+
+Once the update is complete, run the following command in your terminal to update FlytOS.
     
 .. code-block:: bash
 
    $ sudo dpkg -i <path to debian package location>/flytOS_0.x-y_armhf.deb 		#fill in the v0.x-y with the correct version number
+
 
 
 .. |br| raw:: html

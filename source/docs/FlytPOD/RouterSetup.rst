@@ -1,8 +1,8 @@
 .. _flytpod router setup:
 
 
-FlytPOD - WiFi Setup 
-====================
+WiFi Setup 
+==========
 
 .. .. _configuring WiFi module in client mode:
 
@@ -10,19 +10,19 @@ FlytPOD - WiFi Setup
 Brief introduction of HotSpot and Client Modes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Flytpod has inbuilt powerful 2.4 GHz WiFi router, which can be set into Hotspot/AP or Client mode.
+FlytPOD has inbuilt powerful 2.4 GHz WiFi router, which can be set into Hotspot/AP or Client mode.
 
 
 
-**HotSpot Mode**
+**HotSpot/AP Mode**
 
-Flytpod creates a WiFi access point to which your mobile devices can connect. FlytPOD ships with this default mode. Please note that in this mode FlytPOD can not access the Internet. Hence, automatic updates, maps in FlytConsole will not work when FlytPOD is operating in hotspot mode.
+FlytPOD creates a WiFi access point to which your mobile devices can connect. FlytPOD ships with this default mode. Please note that in this mode FlytPOD can not access the Internet. Hence, automatic updates, maps in FlytConsole will not work when FlytPOD is operating in Hotspot/AP mode.
 
 
 
 **Client Mode**
 
-Flytpod connects to available university, home WiFi network. Your WiFi network should have Internet connectivity in order for FytPOD to access the Internet.
+FlytPOD connects to available university, home WiFi network. Your WiFi network should have Internet connectivity in order for FytPOD to access the Internet.
 
 
 .. Configuring WiFi Module
@@ -45,7 +45,7 @@ Changing the WiFi Mode
 1. Power on FlyPOD using the battery or wall adapter.
 2. Connect to flytpod_wifi network.
    
-   .. important:: * By default Flytpod is configured into hotspot/AP mode.
+   .. important:: * By default FlytPOD is configured into Hotspot/AP mode.
    					* Default SSID: flytpod_wifi.
    					* Default password: Please check the flyer shipped with FlytPOD.
    					
@@ -60,7 +60,7 @@ Changing the WiFi Mode
 
 
 
-4. Select hotspot/AP or client mode.
+4. Select Hotspot/AP or client mode.
 
 .. figure:: /_static/Images/APMode.png
 	:align: center
@@ -75,9 +75,9 @@ Changing the WiFi Mode
 	Client Mode
 
 
-5. Select proper encryption option for hotspot/AP mode and set a password.
+5. Select proper encryption option for Hotspot/AP mode and set a password.
 6. In client mode click on the button to scan for available networks. It takes nearly 10 seconds. Select the network that you want to connect to. Enter the password and click on connect.
-7. After clicking on connect in hotspot or client mode you should wait for 2 minutes and then shutdown FlytPOD by pressing the power switch on the back panel for 4 seconds. After shutdown is complete (fan stopped) remove the power cable and then power it up again. FlytPOD should now be in the new configured mode.
+7. After clicking on connect in Hotspot or client mode you should wait for 2 minutes and then shutdown FlytPOD by pressing the power switch on the back panel for 4 seconds. After shutdown is complete (fan stopped) remove the power cable and then power it up again. FlytPOD should now be in the new configured mode.
 
 8. If the mode changes are not successful then FlytPOD will automatically reset itself to default mode viz. Hotspot with SSID: flytpod_wifi and password: shipped with FlytPOD.
 
@@ -93,8 +93,26 @@ Changing the WiFi Mode
 
 
 .. note:: * In hotspot mode you can access FlytConsole at ``flytpod:9090/flytconsole``.
-			 * In client mode you might have to replace ``flytpod`` with the IP address of FlytPOD which you can find through your router page by looking for connected client with the name* 'flytpod'.
+			 * In client mode you might have to replace ``flytpod`` with the IP address of FlytPOD which you can find through your router page by looking for connected client with the name 'flytpod'. Another client with name 'FlytWRT' would be connected as well but that is of no use.
 
+
+
+Troubleshooting
+^^^^^^^^^^^^^^^
+
+1. **Cannot reach FlytPOD** 
+  
+   a. In hotspot mode you can access FlytConsole at ``flytpod:9090/flytconsole``.
+   b. In client mode you might have to replace ``flytpod`` with the IP address of FlytPOD which you can find through your router page by looking for connected client with the name* 'flytpod'.
+
+2. **Forgot Password**
+  
+   If you have forgottoen password or your settings are not useful further then you can reset the wifi to default.
+
+   a. Connect monitor, keyboard, mouse to flytpod. Plug Flytpod using wall adapter/battery. 
+   b. Open firefox browser in flytpod UI.
+   c. Open FlytConsole using this URL ``localhost:9090/flytconsole``.
+   d. You can follow steps given above to configure WiFi into AP or Client mode with new password.
 
 
 .. In hotspot mode you can access FlytConsole at ``flytpod:9090/flytconsole``.
@@ -102,15 +120,45 @@ Changing the WiFi Mode
 .. In client mode you might have to replace ``flytpod`` with the IP address of FlytPOD which you can find through your router page by looking for connected client with the name 'flytpod'.
 
 
-*Another client with name 'FlytWRT' would be connected as well, but that is of no use.
 
 
 
 
-.. Using Router GUI
-.. """"""""""""""""
 
-.. The FlytPOD has built-in WiFi router module. FlytPOD has hard-wired connection to the LAN port of this module.The Module can be configured in AP Mode or in Client Mode depending upon the application. Not both modes at a time. By default, at the time of shipping, the router is configured in AP Mode.  
+
+Please follow the steps below only if you are an advanced user.
+
+For advanced users
+""""""""""""""""""
+
+The FlytPOD has built-in OpenWRT powered WiFi router. Internally it is connected with the main computer on Ethernet. The Module can be configured in AP Mode or in Client Mode depending upon the application. Router is using relayd for client mode operation.
+
+In case the Flytconsole wifi setup is not sufficient for you then you can access OpenWRT router directly. There are two methods available.
+
+**Access Router**
+
+1) Accessing router LUCI web page from flytpod at IP 192.168.1.1 (in ap mode) or 10.0.0.1 (in client mode). 
+The ``default username: root`` and ``password: 123``.
+
+2) Access serial console to OpenWRT router on flytpod. ``Port: /dev/ttySAC2`` ``Baudrate: 57600``
+This console is accessible from FlytPOD and you can use minicom.
+
+``sudo minicom -D /dev/ttySAC2 -b 57600``
+
+.. More about using relayd for client connections on this link https://wiki.openwrt.org/doc/recipes/relayclient
+
+`Click here`_ to know more about using relayd for client connections.
+
+
+
+**Reset the router**
+
+From serial console:
+
+
+Firstboot && reboot.
+
+
 
 .. This tutorial deals with configuring the router in Client mode.
 .. For this tutorial, you would need a WiFi capable device(laptop/PC) through which you would configure the in-built router.
@@ -221,7 +269,6 @@ Changing the WiFi Mode
 .. Reset router/Load Factory settings
 .. """"""""""""""""""""""""""""""""""
 
-.. 1. Connect a monitor via HDMI cable, keyboard and mouse to FlytPOD.
 .. 2. You can use one of the following three methods to reset your router (we recommend the first approach using UART):
 
 ..    a) ``Method 1 (using UART)``: From terminal, open OpenWrt terminal by issuing ``sudo minicom -D /dev/ttySAC2 -b 57600`` in the terminal. Enter ``flytpod`` if asked for password. In the OpenWrt terminal, issue command ``firstboot && reboot``. Wait for about a minute to let the router reboot itself. Once rebooting is done, FlytPOD router gets configured in AP mode with ``SSID: FlytPOD_wifi`` and ``password: FlytPOD123``.
@@ -241,10 +288,11 @@ Changing the WiFi Mode
 
 
 
-.. Upgrading the firmware
-.. ^^^^^^^^^^^^^^^^^^^^^^
+.. .. Upgrading the firmware
+.. .. ^^^^^^^^^^^^^^^^^^^^^^
 
-.. 1. Join the FlytPOD_wifi network from your laptop/mobile device.
-.. 2. And then access the module from Host browser using IP address: 192.168.1.1
-.. 3. Directly Flash new Firmware Image menu will come then specify the binary(provided by NavStik) file location and then click on the “flash image” and follow the steps.
+.. .. 1. Join the FlytPOD_wifi network from your laptop/mobile device.
+.. .. 2. And then access the module from Host browser using IP address: 192.168.1.1
+.. .. 3. Directly Flash new Firmware Image menu will come then specify the binary(provided by NavStik) file location and then click on the “flash image” and follow the steps.
 
+.. _Click here: https://wiki.openwrt.org/doc/recipes/relayclient
