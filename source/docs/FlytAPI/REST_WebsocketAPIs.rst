@@ -1463,7 +1463,7 @@ REST
 |                              | | }                                                                                                                                |
 |                              | | current: Current consumption in Amperes.                                                                                         |
 |                              | | voltage: Current voltage in Volts.                                                                                               |
-|                              | | remaining: Time of flight remaining in.                                                                                          |
+|                              | | remaining: Time of flight remaining.                                                                                             |
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
 | ERROR                        | | Code: 404                                                                                                                        |
 | RESPONSE                     | | resource not found                                                                                                               |
