@@ -242,4 +242,58 @@ In this example we stream live data of location status from the drone by subscri
 .. note:: Please note that you will have to change the IP address in the FlytDemo_web JS file to the IP address of the device you run FlytSim on. This is required so that data can be received on any external device that you have connected.
 
 
+
+
+
+Deploying Web App Onboard
+=============================
+
+Once you have built your Web app, you are ready to deploy it Onboard. These are the steps to be followed.
+
+1) Go into the folder Flyt/flytapps/web.
+2) Create a folder for your Web app, eg sampleApp.
+3) Inside th samplApp folder create a folder named static and paste the contents of your Web app folder inside this folder.
+4) Create an empty document named __init__.py and views.py alongside static folder.
+5) Open the views.py file and write the following code:
+
+.. code-block:: python
+
+    from flask import Blueprint, render_template
+
+    sampleApp = Blueprint('sampleApp', __name__,static_folder='static')
+
+    @sampleApp.route('/')
+    def timeline():
+      return sampleApp.send_static_file('index.html')
+      #index.html is the page that is rendered when your custom webapp is fired.
+
+
+
+6) Now come back to Flyt/flytapps/web and add an entry for your sampleApp in apps.py file.
+
+.. code-block:: python
+
+    from flask import Blueprint, render_template, Flask
+
+    from .flytconsole.views import flytconsole
+    from .flytvision.views import flytvision
+    from .demoapp1.views import demoapp1
+    from .demomarker.views import demomarker
+    from .apriltagsdemo.views import apriltagsdemo
+    from .joystick.views import joystick
+    from .sampleApp.views import sampleApp
+
+    def register( main_app ):
+      main_app.register_blueprint(flytconsole,url_prefix='/flytconsole')
+      main_app.register_blueprint(flytvision,url_prefix='/flytvision')
+      main_app.register_blueprint(demoapp1,url_prefix='/demoapp1')
+      main_app.register_blueprint(demomarker,url_prefix='/demomarker')
+      main_app.register_blueprint(apriltagsdemo,url_prefix='/april')
+      main_app.register_blueprint(joystick,url_prefix='/joystick')
+      main_app.register_blueprint(sampleApp,url_prefix='/sampleApp')
+
+
+
+7) Now restart the FlytOS and your web app will be served at www.flytpod:9090/sampleApp .
+
 .. _Ionic components: http://ionicframework.com/docs/components/
