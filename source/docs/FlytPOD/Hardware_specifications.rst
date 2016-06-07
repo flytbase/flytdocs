@@ -254,9 +254,9 @@ Servo Output / PWM output
 
 According to your platform connect up to 8 motors (ESCs) to the PWM output channel. 
 
-.. figure:: /_static/Images/pwm_op.jpg
+.. figure:: /_static/Images/statusLEDs.jpg
  :align: center
- :scale: 50%
+ :scale: 12%
    
  PWM Channel
    
@@ -350,8 +350,8 @@ Connect the power module to the appropriate ports in the FlytPOD as shown in the
 
 
 
-LiDAR-lite V2
-^^^^^^^^^^^^^
+LiDAR-lite V2 Laser Rangefinder
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Below are two methods for connecting LiDAR-lite to FlytPOD.
 
@@ -363,9 +363,9 @@ Below are two methods for connecting LiDAR-lite to FlytPOD.
   	:align: center
   	:scale: 80%
 
-.. figure:: /_static/Images/uartpins.jpg
+.. figure:: /_static/Images/lidar1.jpg
 	:align: center
-	:scale: 80%
+	:scale: 12%
 	
 	LiDAR Pins
 
@@ -375,9 +375,9 @@ Below are two methods for connecting LiDAR-lite to FlytPOD.
 
 
 
-.. figure:: /_static/Images/i2cbus.jpg
+.. figure:: /_static/Images/lidar2.jpg
 	:align: center
-	:scale: 80%
+	:scale: 12%
 	
 	I2C Pins
 
@@ -385,11 +385,11 @@ Below are two methods for connecting LiDAR-lite to FlytPOD.
 Telemetry
 ^^^^^^^^^
 
-Connect your Telemetry module to the Telemetry port(Rx and Tx) as shown below for QGroundControl and APMplanner. MAVlink available at baud rate 57600.
+Connect your Telemetry module to the Telemetry port(Rx and Tx) as shown below for QGroundControl. MAVLink available at baud rate 57600.
 
-.. figure:: /_static/Images/telemetry.jpg
+.. figure:: /_static/Images/lidar3.jpg
 	:align: center
-	:scale: 80%
+	:scale: 12%
 	
 	Telemetry pins
 
@@ -403,8 +403,6 @@ Connect your Telemetry module to the Telemetry port(Rx and Tx) as shown below fo
 
 Buzzer
 ^^^^^^
-Lidarlite Laser Rangefinder
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Px4FLOW
 ^^^^^^^
 USB Camera
