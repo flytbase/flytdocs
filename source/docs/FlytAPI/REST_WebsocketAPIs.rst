@@ -1375,7 +1375,7 @@ Socket
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | SUBSCRIPTION                 |  .. code-block:: python                                                                                                                                          |
 | SAMPLE                       |                                                                                                                                                                  |
-|                              |      listenerImu.subscribe(function(message) {                                                                                                                   |
+|                              |      listenerLocalPosition.subscribe(function(message) {                                                                                                         |
 |                              |          console.log(message.twist.linear.x);                                                                                                                    |
 |                              |          console.log(message.twist.linear.y);                                                                                                                    |
 |                              |          console.log(message.twist.linear.z);                                                                                                                    |
@@ -1391,6 +1391,95 @@ Socket
 |                              | | throttle_rate: Sets the rate at which callbacks are called in miliseconds.                                                                                     |
 |                              | |                                                                                                                                                                |
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+----
+
+Battery Status
+^^^^^^^^^^^^^^
+
+Fetches real time battery status at required rate. To be done after initialization of websocket.
+
+Socket
+""""""
+
+
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| INITIALISATION               |  .. code-block:: python                                                                                                                                          |
+| SAMPLE                       |                                                                                                                                                                  |
+|                              |       var listenerBatteryStatus = new ROSLIB.Topic({                                                                                                             |
+|                              |           ros :ros,                                                                                                                                              |
+|                              |           name : '/<namespace>/mavros/battery',                                                                                                                  |
+|                              |           messageType : 'mavros_msgs/BatteryStatus',                                                                                                             |
+|                              |           throttle_rate: 200                                                                                                                                     |
+|                              |        });                                                                                                                                                       |
+|                              |                                                                                                                                                                  |
+|                              |           listenerBatteryStatus.subscribe(function(message) {                                                                                                    |
+|                              |                                                                                                                                                                  |
+|                              |               $('#voltage').text(round(message.voltage,2));                                                                                                      |
+|                              |               $('#current').text(round(message.current,2));                                                                                                      |
+|                              |              $('#remaining').text(round(message.remaining,2));                                                                                                   |
+|                              |                                                                                                                                                                  |
+|                              |                                                                                                                                                                  |
+|                              |  <namespace>: Name of the flytpod (default: flytpod) which is required for every socket subscription and can be fetched from get namespace rest call.            |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| SUBSCRIPTION                 |  .. code-block:: python                                                                                                                                          |
+| SAMPLE                       |                                                                                                                                                                  |
+|                              |      listenerBatteryStatus.subscribe(function(message) {                                                                                                         |
+|                              |          console.log(message.voltage);                                                                                                                           |
+|                              |          console.log(message.current);                                                                                                                           |
+|                              |          console.log(message.remaining);                                                                                                                         |
+|                              |      });                                                                                                                                                         |
+|                              |                                                                                                                                                                  |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| NOTES                        | | ros: Pointed to the ros object created in the initialization of a web socket connection                                                                        |
+|                              | | name: Requires the name of the topic which gives out the required data.                                                                                        |
+|                              | | messageType: Set the type of predefined data structure used to deliver the required local position data.                                                       |
+|                              | | throttle_rate: Sets the rate at which callbacks are called in miliseconds.                                                                                     |
+|                              | |                                                                                                                                                                |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+REST
+""""
+
+
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
+| URL                          | | http://<ip>/ros/<namespace>/mavros/battery                                                                                       |
+|                              | | <ip>: IP of the flytpod in the network along with port                                                                           |
+|                              | |     eg: 192.168.x.xxx:9090                                                                                                       |
+|                              | | <namespace>: Name of the flytpod (default: flytpod) which is required for every rest call and can be                             |
+|                              | |     fetched from get namespace rest call.                                                                                        |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
+| METHOD                       | GET                                                                                                                                |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
+| DATA PARAMS                  | | Content: application/JSON                                                                                                        |
+|                              | | {}                                                                                                                               |
+|                              | |                                                                                                                                  |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
+| SUCCESS                      | | Code: 200                                                                                                                        |
+| RESPONSE                     | | Content: {                                                                                                                       | 
+|                              | |     current : [Float],                                                                                                           |
+|                              | |     voltage : [Float],                                                                                                           |
+|                              | |     remaining : [Float],                                                                                                         |
+|                              | | }                                                                                                                                |
+|                              | | current: Current consumption in Amperes.                                                                                         |
+|                              | | voltage: Current voltage in Volts.                                                                                               |
+|                              | | remaining: Percentage of battery remaining.                                                                                      |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
+| ERROR                        | | Code: 404                                                                                                                        |
+| RESPONSE                     | | resource not found                                                                                                               |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
+| SAMPLE                       |  .. code-block:: python                                                                                                            |              
+| CALL                         |                                                                                                                                    |
+|                              |                                                                                                                                    |
+|                              |       $.ajax({                                                                                                                     |
+|                              |              type: "GET",                                                                                                          |
+|                              |              dataType: "json",                                                                                                     |
+|                              |              url: "http://<ip>/ros/<namespace>/mavros/battery",                                                                    |
+|                              |              success: function(data){                                                                                              |
+|                              |                  console.log(data);                                                                                                |
+|                              |              }                                                                                                                     |
+|                              |       )};                                                                                                                          |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
 
 ----
 

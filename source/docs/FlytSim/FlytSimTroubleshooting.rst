@@ -8,7 +8,7 @@ FlytSim Troubleshooting
 Errors
 ------
 
-* *package 'core_api' not found*
+* **package 'core_api' not found**
   
   Check whether the following lines have been added to your $HOME/.bashrc file 
     
@@ -20,7 +20,7 @@ Errors
 
   Once checked/added, source your $HOME/.bashrc file or launch FlytSim in new terminal
 
-* *Unable to find uri[model://iris]*
+* **Unable to find uri[model://iris]**
   
   Check whether the following lines have been added to your $HOME/.bashrc file 
     
@@ -32,7 +32,7 @@ Errors
 
   Once checked/added, source your $HOME/.bashrc file or launch FlytSim in new terminal
 
-* ImportError: No module named web.apps
+* **ImportError: No module named web.apps**
 
   Check whether the following lines have been added to your $HOME/.bashrc file 
     
@@ -44,19 +44,19 @@ Errors
 
   Once checked/added, source your $HOME/.bashrc file or launch FlytSim in new terminal
 
-* *touch: cannot touch ‘/flyt/flytos/flytcore/share/sitl_gazebo/posix/rootfs/eeprom/parameters’: Permission denied* 
+* **touch: cannot touch ‘/flyt/flytos/flytcore/share/sitl_gazebo/posix/rootfs/eeprom/parameters’: Permission denied** 
   
   Launch FlytSIM with **sudo** permission.
 
-* *FCU: ERROR: Operation not permitted* 
+* **FCU: ERROR: Operation not permitted** 
   
   Launch FlytSIM with **sudo** permission.
 
-* *IOError: [Errno 13] Permission denied: '/flyt/flytos/flytcore/share/core_api/param_files/flyt_params.yaml'*
+* **IOError: [Errno 13] Permission denied: '/flyt/flytos/flytcore/share/core_api/param_files/flyt_params.yaml'**
   
   Launch FlytSIM with **sudo** permission.
 
-* ResourceNotFound: gazebo_ros
+* **ResourceNotFound: gazebo_ros**
   
   Execute the following command in your terminal.
 
