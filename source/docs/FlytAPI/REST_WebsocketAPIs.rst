@@ -1159,6 +1159,15 @@ REST
 Object Tracking APIs
 ---------------------
 
+.. important:: The Object Tracking module does not start automatically when you start FlytOS, it needs to be launched seperately using the following command.
+
+.. code-block:: bash 
+
+  	$ roslaunch vision_apps object_tracking.launch global_namespace:=<namespace>
+  	#<namespace> : Name of the flytpod (default: flytpod) which is required for 
+  	#              every socket subscription and can be fetched from get namespace rest call.
+
+
 
 Detect-Track Mode Selection
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1208,6 +1217,15 @@ Detection by Shape - Circle
 
 Detection by TLD
 ^^^^^^^^^^^^^^^^
+
+.. important:: To use the TLD option you need download and compile FlytOpenTLD 3D from `here <https://github.com/flytbase/flyt_open_tld_3d>`_. And launch it by running the command. 
+
+.. code-block:: bash 
+
+  	$ roslaunch open_tld_3d open_tld_3d.launch global_namespace:=<namespace>
+  	#<namespace> : Name of the flytpod (default: flytpod) which is required for every
+  	#              socket subscription and can be fetched from get namespace rest call.
+
 
 +------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | PARAMETERS                   | | ob_track_tld_learning_disabled, ob_track_tld_detector_disabled, ob_track_tld_new_object, ob_track_tld_clear_model, ob_track_tld_import_model, ob_track_tld_export_model                         |
