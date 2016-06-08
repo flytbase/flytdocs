@@ -248,7 +248,7 @@ In this example we stream live data of location status from the drone by subscri
 Deploying Web App Onboard
 =============================
 
-Once you have built your Web app, you are ready to deploy it Onboard. These are the steps to be followed.
+Once you have built your Web app, you are ready to deploy it Onboard. FlytOS uses lightweight Flask microframework for onboard web apps. Custom user apps can be added as blueprints as shown below. You can write a complete app with server side code in Python and Static content with HTML, CSS, JS. These are the steps to be followed.
 
 1) Go into the folder /flyt/flytapps/web.
 2) Create a folder for your Web app, eg sampleApp.
