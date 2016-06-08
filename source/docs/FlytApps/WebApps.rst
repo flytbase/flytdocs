@@ -250,7 +250,7 @@ Deploying Web App Onboard
 
 Once you have built your Web app, you are ready to deploy it Onboard. These are the steps to be followed.
 
-1) Go into the folder Flyt/flytapps/web.
+1) Go into the folder /flyt/flytapps/web.
 2) Create a folder for your Web app, eg sampleApp.
 3) Inside th samplApp folder create a folder named static and paste the contents of your Web app folder inside this folder.
 4) Create an empty document named __init__.py and views.py alongside static folder.
@@ -269,7 +269,7 @@ Once you have built your Web app, you are ready to deploy it Onboard. These are 
 
 
 
-6) Now come back to Flyt/flytapps/web and add an entry for your sampleApp in apps.py file.
+6) Now come back to /flyt/flytapps/web and add an entry for your sampleApp in apps.py file.
 
 .. code-block:: python
 
