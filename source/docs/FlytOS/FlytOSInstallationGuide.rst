@@ -59,7 +59,9 @@ Firmware Setup
 
   - But, before doing that, install the following dependencies first:
 
+    + Linux - Ubuntu 14.04
     + `ROS - Indigo`_
+    + `OpenCV 2.4`_ (for vision/video streaming APIs)
     + Other dependencies - Run the following commands in your terminal.
       
   .. literalinclude:: include/flytos_dependency.sh
@@ -128,3 +130,4 @@ Once the update is complete, run the following command in your terminal to updat
 .. _Pixhawk: https://pixhawk.org/choice
 .. _ODROID-XU4: http://www.hardkernel.com/main/products/prdt_info.php
 .. _FlytImage: http://www.flytbase.com/flytos/#download
+.. _OpenCV 2.4: http://docs.opencv.org/2.4/doc/tutorials/introduction/linux_install/linux_install.html

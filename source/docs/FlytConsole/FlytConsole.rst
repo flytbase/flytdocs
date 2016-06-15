@@ -271,8 +271,6 @@ Keep the drone steady in flat position on a leveled surface on the floor.
 	:align: center
 	:scale: 50 %
 
-Save the parameters and reboot the autopilot by clicking on **Reboot**.
-
 
 
 .. _RC_calibration:
