@@ -471,7 +471,7 @@ tr:nth-child(even) {
     background-color: #fff;
 }
 tr:nth-child(odd) {
-   background-color: #ffffe6;
+   background-color: #eee;
 }
 
 

@@ -468,10 +468,10 @@ table td, table tr {
 }
 
 tr:nth-child(even) {
-    background-color: #fff;
+    background-color: #e6e6ff;
 }
 tr:nth-child(odd) {
-   background-color: #eee;
+   background-color: #ccccff;
 }
 
 
