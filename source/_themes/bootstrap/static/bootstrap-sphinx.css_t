@@ -64,10 +64,6 @@ table {
   border: 0;
 }
 
-table td, table th {
-  border: 1px solid black;
-}
-
 .highlighttable .code pre {
     font-size: 12px;
 }

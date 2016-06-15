@@ -460,10 +460,10 @@ hr {
 
 
 table td, table tr {
-  border: 2px solid gray;
-  border-top: 2px solid gray;
+  border: 1px solid gray;
+  /*border-top: 2px solid gray;
   border-right: 2px solid gray;
-  border-left: 2px solid gray;
+  border-left: 2px solid gray; */
   background-color: #ffffe6;	
 }
 
