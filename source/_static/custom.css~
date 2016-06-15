@@ -155,7 +155,7 @@ nav.wy-nav-side {
     font-weight: bold;
     text-transform: uppercase;
     font-size: 95% !important;
-    color: #EE3C39;
+    color: #F33;
     white-space: nowrap;
 }
 
@@ -456,3 +456,12 @@ hr {
     margin-bottom: 1.5em !important;
     border-top: 5px solid #e74944 !important;
 }
+
+
+
+table td, table tr {
+  border: 1px solid black;
+  border-top: 10px solid black;
+}
+
+
