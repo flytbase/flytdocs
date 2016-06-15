@@ -463,10 +463,15 @@ table td, table tr {
   border: 2px solid gray;
   /*border-top: 2px solid gray;
   border-right: 2px solid gray;
-  border-left: 2px solid gray; */
-  background-color: #ffffe6;	
+  border-left: 2px solid gray; 
+  background-color: #ffffe6;	*/
 }
 
-
+tr:nth-child(even) {
+    background-color: #fff;
+}
+tr:nth-child(odd) {
+   background-color: #eee;
+}
 
 
