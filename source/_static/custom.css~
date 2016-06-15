@@ -461,7 +461,8 @@ hr {
 
 table td, table tr {
   border: 1px solid black;
-  border-top: 10px solid black;
+  border-top: 5px solid black;
+  border-bottom: 5px solid black
 }
 
 
