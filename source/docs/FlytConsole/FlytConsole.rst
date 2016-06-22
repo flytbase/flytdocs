@@ -75,6 +75,9 @@ Depending upon the actual frame of your drone, select the airframe and click on 
 Motor Configuration
 """""""""""""""""""
 
+.. note:: Motor Configuration widget is compatible with only FlytPOD.
+
+
 
 Motor Configuration lets you calibrate the ESCs and test the motors attached to your drone.
 
@@ -270,8 +273,6 @@ Keep the drone steady in flat position on a leveled surface on the floor.
 .. figure:: /_static/Images/levelcalib1.png
 	:align: center
 	:scale: 50 %
-
-Save the parameters and reboot the autopilot by clicking on **Reboot**.
 
 
 
