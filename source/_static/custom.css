@@ -1,3 +1,8 @@
+.navbar {
+  font-size: 15px !important;
+  font-family: "Oswald",sans-serif !important;
+  font-weight: 600 !important;
+}
 .navbar-nav > li > .dropdown-menu {
   padding: 10px
 }
