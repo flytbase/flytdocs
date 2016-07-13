@@ -15,7 +15,7 @@ Below are a few flying essentials that the on-field operations team should be aw
 
 5. Before switching to ``OFFBOARD/API`` mode make sure you have GPS Fix. FlytPOD can switch to ``OFFBOARD/API`` mode even if GPS Fix is not available, but then vehicle may drift away. 
 
-6. In RC-Manual, ``RC-ALTCTL`` and ``RC-POSCTL`` modes, RC transmitter can control the vehicle.
+6. In ``RC-Manual``, ``RC-ALTCTL`` and ``RC-POSCTL`` modes, RC transmitter can control the vehicle.
 
 7. After switching to OFFBOARD/API mode, FlytOS takes control of the vehicle and holds position until any app tries to take control of the vehicle. For Auto-mission with FlytPOD you have to switch to OFFBOARD/API mode. You don't need to configure separate switch for AUTO-Mission.
 

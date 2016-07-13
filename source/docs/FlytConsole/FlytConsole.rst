@@ -443,7 +443,7 @@ You have now finished configuration. Please go through the :ref:`First principle
 
 .. To know more about Using Flytconsole while flying your drone go to..(link) and learn how to get waypoints ,operate GCS ,Gain Tuning, 	 	Calibration and Parameter settings.
 
-.. |click_here|
+.. .. |click_here|
 
 .. .. |click_here| raw:: html
 

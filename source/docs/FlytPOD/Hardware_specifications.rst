@@ -115,7 +115,7 @@ Below are the various color patterns that the RGB LED exhibits along with their 
 
 * Breathing Green - Standby and GPS / Px4flow ready.
 
-* Solid Blue - Armed and No GPS lock / Px4flow available. 
+* Solid Blue - Armed and No GPS lock / Px4flow quality poor. 
 
 * Solid Green - Armed and GPS lock / Px4flow available.
 
@@ -137,17 +137,20 @@ Below are the various color patterns that the RGB LED exhibits along with their 
 
 6. Programmable LEDs
 ^^^^^^^^^^^^^^^^^^^^
+
 User-programmable LEDs.
 
 
 7. Gimbal
 ^^^^^^^^^
+
 Dedicated 4 PWM output channels for your Gimbal.
 
 
 8. Safety and Buzzer
 ^^^^^^^^^^^^^^^^^^^^
-External safety switch and buzzer. (Safety switch has not yet been configured).
+
+External safety switch and buzzer. Safety switch has been disabled by default. To enable this feature, set ``CBRK_IO_SAFETY`` parameter from FlytConsole to 0 from its ``Parameter Manager`` widget.
 
 
 9. RC Receiver Interface
@@ -166,7 +169,7 @@ Choose between PPM, PWM from RC configuration in FlytConsole.
 
 SBUS/SPEKTRUM
 """""""""""""
-SBUS(fatuba) connects to SBUS port and for a SPEKTRUM, DSM, DSM2, or DSM-X Satellite RC receiver, connect to the SPEK port.
+SBUS(futaba) connects to SBUS port and for a SPEKTRUM, DSM, DSM2, or DSM-X Satellite RC receiver, connect to the SPEK port.
 
 .. .. image:: /_static/Images/sbusspek1.png
 .. 		:align: center
@@ -192,13 +195,12 @@ Solid red: Supply working.
 13. External GPS MAG Port
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 Connect up to two external GPS-MAG sensors for redundancy and accuracy.
-GPS-MAG1 is the primary port. You need at least one GPS-MAG module for stable flight. 
+GPS-MAG1 is the primary port. GPS-MAG2 port is reserved for now. You must attach the provided GPS-MAG module to this port for stable flight. 
 
 
 14. VI Sensor Input
 ^^^^^^^^^^^^^^^^^^^
-Monitor battery status and issue low battery warnings, available flight time left.
-
+The VI sensor output of `power module`_ must be connected to this port. This would enable FlytPOD to monitor battery status and issue low battery warnings.
 
 15. Power Input
 ^^^^^^^^^^^^^^^
@@ -212,7 +214,7 @@ Monitor battery status and issue low battery warnings, available flight time lef
 
 17. Micro SD
 ^^^^^^^^^^^^
-8 GB Micro SD card used for onboard data logging.
+8 GB Micro SD card used for autopilot data logging.
 
 
 18. USB Port
@@ -327,7 +329,7 @@ Radio Receiver
 GPS-Magnetometer
 ^^^^^^^^^^^^^^^^
 
-External GPS-MAG can be connected to FlytPOD through the connector provided on the side. Default port available for this is GPS-MAG 1. Use of a Standoff is recommended in order to avoid interference. Make sure to mount it in such a way that FlytPOD heading is aligned with the GPS-MAG board heading.
+External GPS-MAG can be connected to FlytPOD through the connector provided on the side. Default port available for this is GPS-MAG 1. GPS-MAG 2 is reserved for now. Use of a Standoff is recommended in order to avoid interference. Make sure to mount it in such a way that FlytPOD heading is aligned with the GPS-MAG board heading.
 
 .. note:: * Of the two ports provided, GPS-MAG 1 must be used for connecting external GPS-MAG as GPS-MAG 2 is reserved for future       development.
 
