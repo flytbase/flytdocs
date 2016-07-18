@@ -347,7 +347,7 @@ Flyt Sample Apps
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 * This sample app shows how to make REST calls. 
-* To try this app you can download the apk from `here <#>`_ or download the source code from `here <https://github.com/flytbase/flytsamples/tree/master/AndroidApps/Java-Apps/SampleApp1-REST>`_.
+* To try this app you can download the apk from `here <https://s3-us-west-2.amazonaws.com/flytos/SampleAndroidApk/FLYT-Sample-App1-Rest.apk>`_ or download the source code from `here <https://github.com/flytbase/flytsamples/tree/master/AndroidApps/Java-Apps/SampleApp1-REST>`_.
   
   .. image:: /_static/Images/flytAndroidSample1.png
   				:height: 500px
@@ -359,7 +359,7 @@ Flyt Sample Apps
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 * This sample app shows how to make WebSocket subscription for live streaming of data. 
-* To try this app you can download the apk from `here <#>`_ or download the source code from `here <https://github.com/flytbase/flytsamples/tree/master/AndroidApps/Java-Apps/SampleApp2-Socket>`_.
+* To try this app you can download the apk from `here <https://s3-us-west-2.amazonaws.com/flytos/SampleAndroidApk/FLYT-Sample-App2-Socket.apk>`_ or download the source code from `here <https://github.com/flytbase/flytsamples/tree/master/AndroidApps/Java-Apps/SampleApp2-Socket>`_.
   
   .. image:: /_static/Images/flytAndroidSample3.png
   				:height: 500px
@@ -371,7 +371,7 @@ Flyt Sample Apps
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 * This is a sample Joystick app to control the FlytPOD. 
-* To try this app you can download the apk from `here <#>`_ or download the source code from `here <https://github.com/flytbase/flytsamples/tree/master/AndroidApps/Java-Apps/SampleApp3-Joystick>`_.
+* To try this app you can download the apk from `here <https://s3-us-west-2.amazonaws.com/flytos/SampleAndroidApk/FLYT-Sample-App3-Joystick.apk>`_ or download the source code from `here <https://github.com/flytbase/flytsamples/tree/master/AndroidApps/Java-Apps/SampleApp3-Joystick>`_.
   
   .. image:: /_static/Images/flytAndroidSample2.png
   				:height: 300px
