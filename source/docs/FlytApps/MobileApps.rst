@@ -336,7 +336,49 @@ f. Sample websocket call to view roll pitch yaw of FlytPOD.
 
                   }catch(JSONException e){}
              }
-       });    
+       });  
+
+
+Flyt Sample Apps
+----------------
+
+
+1. Flyt Sample App 1 - REST
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+* This sample app shows how to make REST calls. 
+* To try this app you can download the apk from `here <https://s3-us-west-2.amazonaws.com/flytos/SampleAndroidApk/FLYT-Sample-App1-Rest.apk>`_ or download the source code from `here <https://github.com/flytbase/flytsamples/tree/master/AndroidApps/Java-Apps/SampleApp1-REST>`_.
+  
+  .. image:: /_static/Images/flytAndroidSample1.png
+  				:height: 500px
+  				:width: 300px
+  				:align: center
+
+ 
+2. Flyt Sample App 2 - Socket
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+* This sample app shows how to make WebSocket subscription for live streaming of data. 
+* To try this app you can download the apk from `here <https://s3-us-west-2.amazonaws.com/flytos/SampleAndroidApk/FLYT-Sample-App2-Socket.apk>`_ or download the source code from `here <https://github.com/flytbase/flytsamples/tree/master/AndroidApps/Java-Apps/SampleApp2-Socket>`_.
+  
+  .. image:: /_static/Images/flytAndroidSample3.png
+  				:height: 500px
+  				:width: 300px
+  				:align: center
+  
+
+3. Flyt Sample App 3 - Joystick
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+* This is a sample Joystick app to control the FlytPOD. 
+* To try this app you can download the apk from `here <https://s3-us-west-2.amazonaws.com/flytos/SampleAndroidApk/FLYT-Sample-App3-Joystick.apk>`_ or download the source code from `here <https://github.com/flytbase/flytsamples/tree/master/AndroidApps/Java-Apps/SampleApp3-Joystick>`_.
+  
+  .. image:: /_static/Images/flytAndroidSample2.png
+  				:height: 300px
+  				:width: 500px
+  				:align: center
+  				
+
 
 
 
