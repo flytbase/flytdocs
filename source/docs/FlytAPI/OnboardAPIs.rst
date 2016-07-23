@@ -278,7 +278,7 @@ Python
  
 .. py:function:: navigation.land(self, async=True)
 		
-   :param async: If true, asynchronous mode is set
+   :param async: If True, asynchronous mode is set
    :return: 0 if the land command is successfully sent to the vehicle, else returns 1.
 
 *Usage:*
@@ -365,13 +365,13 @@ Python
  
 .. py:function:: navigation.position_set(self, x, y, z, yaw=0.0, tolerance=0.0, relative=False, async=False, yaw_valid=False, body_frame=False)
     
-   :param float x,y,z: Position Setpoint in NED-Frame (in body-frame if body_frame=true)
+   :param float x,y,z: Position Setpoint in NED-Frame (in body-frame if body_frame=True)
    :param float yaw_setpoint: Yaw Setpoint in radians
-   :param bool yaw_valid: Must be set to true, if yaw setpoint is provided
+   :param bool yaw_valid: Must be set to True, if yaw setpoint is provided
    :param float tolerance: Acceptance radius in meters, default value=1.0m
-   :param bool relative: If true, position setpoints relative to current position is sent
-   :param bool async: If true, asynchronous mode is set
-   :param body_frame: If true, position setpoints are relative with respect to body frame
+   :param bool relative: If True, position setpoints relative to current position is sent
+   :param bool async: If True, asynchronous mode is set
+   :param body_frame: If True, position setpoints are relative with respect to body frame
    :return: 0 if the land command is successfully sent to the vehicle, else returns 1.
 
 *Usage:*
@@ -380,8 +380,8 @@ Python
 
     from flyt_python import api
     nav = api.navigation() 
-    nav.position_set(1.0, 3.5, -5.0, 0.12, 5.0, false, false, true, false)
-    #sends (x,y,z)=(1.0,3.5,-5.0)(m), yaw=0.12rad, tolerance=5.0m, relative=false, async=false, yaw_valid=true, body_frame=false
+    nav.position_set(1.0, 3.5, -5.0, 0.12, 5.0, False, False, True, False)
+    #sends (x,y,z)=(1.0,3.5,-5.0)(m), yaw=0.12rad, tolerance=5.0m, relative=False, async=False, yaw_valid=True, body_frame=False
 
 ----
 
@@ -459,14 +459,14 @@ Python
  
 .. py:function:: navigation.velocity_set(self, vx, vy, vz, yaw_rate=0.0, tolerance=0.0, relative=False, async=False, yaw_rate_valid=False, body_frame=False)
     
-   :param vx,vy,vz: Velocity Setpoint in NED-Frame (in body-frame if body_frame=true)
+   :param vx,vy,vz: Velocity Setpoint in NED-Frame (in body-frame if body_frame=True)
    :param yaw_rate: Yaw_rate Setpoint in radians/sec
-   :param yaw_rate_valid: Must be set to true, if yaw_rate setpoint is provided
+   :param yaw_rate_valid: Must be set to True, if yaw_rate setpoint is provided
    :param tolerance: Acceptance radius in meters/s, default value=1.0m/s
-   :param relative: If true, velocity setpoints relative to current position is sent
-   :param async: If true, asynchronous mode is set
-   :param body_frame: If true, velocity setpoints are with respect to body frame
-   :return: For async=true, returns 0 if the command is successfully sent to the vehicle, else returns 1. For async=false, returns 0 if the vehicle reaches given setpoint before timeout=30secs, else returns 1.
+   :param relative: If True, velocity setpoints relative to current position is sent
+   :param async: If True, asynchronous mode is set
+   :param body_frame: If True, velocity setpoints are with respect to body frame
+   :return: For async=True, returns 0 if the command is successfully sent to the vehicle, else returns 1. For async=False, returns 0 if the vehicle reaches given setpoint before timeout=30secs, else returns 1.
 
 *Usage:*
 
@@ -474,8 +474,8 @@ Python
 
     from flyt_python import api
     nav = api.navigation() 
-    nav.velocity_set(1.0, 0.5, -1.0, 0.12, 0.5, false, false, true, false)
-    #sends (vx,vy,vz)=(1.0,0.5,-1.0)(m/s), yaw_rate=0.12rad/s, tolerance=0.5m/s, relative=false, async=false, yaw_rate_valid=true, body_frame=false
+    nav.velocity_set(1.0, 0.5, -1.0, 0.12, 0.5, False, False, True, False)
+    #sends (vx,vy,vz)=(1.0,0.5,-1.0)(m/s), yaw_rate=0.12rad/s, tolerance=0.5m/s, relative=False, async=False, yaw_rate_valid=True, body_frame=False
 
 ----
 
