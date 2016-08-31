@@ -1431,13 +1431,6 @@ Socket
 |                              |           throttle_rate: 200                                                                                                                                     |
 |                              |        });                                                                                                                                                       |
 |                              |                                                                                                                                                                  |
-|                              |           listenerBatteryStatus.subscribe(function(message) {                                                                                                    |
-|                              |                                                                                                                                                                  |
-|                              |               $('#voltage').text(round(message.voltage,2));                                                                                                      |
-|                              |               $('#current').text(round(message.current,2));                                                                                                      |
-|                              |              $('#remaining').text(round(message.remaining,2));                                                                                                   |
-|                              |                                                                                                                                                                  |
-|                              |                                                                                                                                                                  |
 |                              |  <namespace>: Name of the flytpod (default: flytpod) which is required for every socket subscription and can be fetched from get namespace rest call.            |
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | SUBSCRIPTION                 |  .. code-block:: python                                                                                                                                          |
@@ -1451,7 +1444,7 @@ Socket
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | NOTES                        | | ros: Pointed to the ros object created in the initialization of a web socket connection                                                                        |
 |                              | | name: Requires the name of the topic which gives out the required data.                                                                                        |
-|                              | | messageType: Set the type of predefined data structure used to deliver the required local position data.                                                       |
+|                              | | messageType: Set the type of predefined data structure used to deliver the required battery data.                                                              |
 |                              | | throttle_rate: Sets the rate at which callbacks are called in miliseconds.                                                                                     |
 |                              | |                                                                                                                                                                |
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1493,6 +1486,198 @@ REST
 |                              |              type: "GET",                                                                                                          |
 |                              |              dataType: "json",                                                                                                     |
 |                              |              url: "http://<ip>/ros/<namespace>/mavros/battery",                                                                    |
+|                              |              success: function(data){                                                                                              |
+|                              |                  console.log(data);                                                                                                |
+|                              |              }                                                                                                                     |
+|                              |       )};                                                                                                                          |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
+
+----
+
+HUD
+^^^^
+
+Fetches real time HUD data at required rate. To be done after initialization of websocket.
+
+Socket
+""""""
+
+
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| INITIALISATION               |  .. code-block:: python                                                                                                                                          |
+| SAMPLE                       |                                                                                                                                                                  |
+|                              |       var listenerHUD = new ROSLIB.Topic({                                                                                                                       |
+|                              |           ros :ros,                                                                                                                                              |
+|                              |           name : '/<namespace>/mavros/vfr_hud',                                                                                                                  |
+|                              |           messageType : 'mavros_msgs/VFR_HUD',                                                                                                                   |
+|                              |           throttle_rate: 200                                                                                                                                     |
+|                              |        });                                                                                                                                                       |
+|                              |                                                                                                                                                                  |
+|                              |  <namespace>: Name of the flytpod (default: flytpod) which is required for every socket subscription and can be fetched from get namespace rest call.            |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| SUBSCRIPTION                 |  .. code-block:: python                                                                                                                                          |
+| SAMPLE                       |                                                                                                                                                                  |
+|                              |                                                                                                                                                                  |
+|                              |           listenerHUD.subscribe(function(message) {                                                                                                              |
+|                              |                                                                                                                                                                  |
+|                              |               $('#aspeed').text(message.airspeed);                                                                                                               |
+|                              |               $('#gspeed').text(message.groundspeed);                                                                                                            |
+|                              |               $('#head').text(message.heading);                                                                                                                  |
+|                              |               $('#hthrottle').text(message.throttle);                                                                                                            |
+|                              |               $('#halt').text(message.altitude);                                                                                                                 |
+|                              |               $('#hclimb').text(message.climb);                                                                                                                  |
+|                              |            });                                                                                                                                                   |
+|                              |                                                                                                                                                                  |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| NOTES                        | | ros: Pointed to the ros object created in the initialization of a web socket connection                                                                        |
+|                              | | name: Requires the name of the topic which gives out the required data.                                                                                        |
+|                              | | messageType: Set the type of predefined data structure used to deliver the required HUD data.                                                                  |
+|                              | | throttle_rate: Sets the rate at which callbacks are called in miliseconds.                                                                                     |
+|                              | |                                                                                                                                                                |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+REST
+""""
+
+
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
+| URL                          | | http://<ip>/ros/<namespace>/mavros/vfr_hud                                                                                       |
+|                              | | <ip>: IP of the flytpod in the network along with port                                                                           |
+|                              | |     eg: 192.168.x.xxx:9090                                                                                                       |
+|                              | | <namespace>: Name of the flytpod (default: flytpod) which is required for every rest call and can be                             |
+|                              | |     fetched from get namespace rest call.                                                                                        |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
+| METHOD                       | GET                                                                                                                                |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
+| DATA PARAMS                  | | Content: application/JSON                                                                                                        |
+|                              | | {}                                                                                                                               |
+|                              | |                                                                                                                                  |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
+| SUCCESS                      | | Code: 200                                                                                                                        |
+| RESPONSE                     | | Content: {                                                                                                                       | 
+|                              | |     airspeed : [Float],                                                                                                          |
+|                              | |     groundspeed : [Float],                                                                                                       |
+|                              | |     head : [Float],                                                                                                              |
+|                              | |     throttle : [Float],                                                                                                          |
+|                              | |     altitude : [Float],                                                                                                          |
+|                              | |     climb : [Float],                                                                                                             |
+|                              | | }                                                                                                                                |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
+| ERROR                        | | Code: 404                                                                                                                        |
+| RESPONSE                     | | resource not found                                                                                                               |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
+| SAMPLE                       |  .. code-block:: python                                                                                                            |              
+| CALL                         |                                                                                                                                    |
+|                              |                                                                                                                                    |
+|                              |       $.ajax({                                                                                                                     |
+|                              |              type: "GET",                                                                                                          |
+|                              |              dataType: "json",                                                                                                     |
+|                              |              url: "http://<ip>/ros/<namespace>/mavros/vfr_hud",                                                                    |
+|                              |              success: function(data){                                                                                              |
+|                              |                  console.log(data);                                                                                                |
+|                              |              }                                                                                                                     |
+|                              |       )};                                                                                                                          |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
+
+----
+
+Attitude
+^^^^^^^^
+
+Fetches real time attitude data at required rate. To be done after initialization of websocket.
+
+Socket
+""""""
+
+
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| INITIALISATION               |  .. code-block:: python                                                                                                                                          |
+| SAMPLE                       |                                                                                                                                                                  |
+|                              |       var listenerHUD = new ROSLIB.Topic({                                                                                                                       |
+|                              |           ros :ros,                                                                                                                                              |
+|                              |           name : '/<namespace>/mavros/imu/data_uler',                                                                                                            |
+|                              |           messageType : 'mavros_msgs/TwistStamped',                                                                                                              |
+|                              |           throttle_rate: 200                                                                                                                                     |
+|                              |        });                                                                                                                                                       |
+|                              |                                                                                                                                                                  |
+|                              |  <namespace>: Name of the flytpod (default: flytpod) which is required for every socket subscription and can be fetched from get namespace rest call.            |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| SUBSCRIPTION                 |  .. code-block:: python                                                                                                                                          |
+| SAMPLE                       |                                                                                                                                                                  |
+|                              |                                                                                                                                                                  |
+|                              |           listenerHUD.subscribe(function(message) {                                                                                                              |
+|                              |                                                                                                                                                                  |
+|                              |                  $('#roll').textround(message.twist.linear.x);                                                                                                   |
+|                              |                  $('#pitch').text(message.twist.linear.y);                                                                                                       |
+|                              |                  $('#yaw').text(message.twist.linear.z);                                                                                                         |
+|                              |                  $('#rollSpeed').text(message.twist.angular.x);                                                                                                  |
+|                              |                  $('#pitchSpeed').text(message.twist.angular.y);                                                                                                 |
+|                              |                  $('#yawSpeed').text(message.twist.angular.z);                                                                                                   |
+|                              |            });                                                                                                                                                   |
+|                              |                                                                                                                                                                  |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| NOTES                        | | ros: Pointed to the ros object created in the initialization of a web socket connection                                                                        |
+|                              | | name: Requires the name of the topic which gives out the required data.                                                                                        |
+|                              | | messageType: Set the type of predefined data structure used to deliver the required attitude data.                                                             |
+|                              | | throttle_rate: Sets the rate at which callbacks are called in miliseconds.                                                                                     |
+|                              | |                                                                                                                                                                |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+REST
+""""
+
+
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
+| URL                          | | http://<ip>/ros/<namespace>/mavros/imu/data_uler                                                                                 |
+|                              | | <ip>: IP of the flytpod in the network along with port                                                                           |
+|                              | |     eg: 192.168.x.xxx:9090                                                                                                       |
+|                              | | <namespace>: Name of the flytpod (default: flytpod) which is required for every rest call and can be                             |
+|                              | |     fetched from get namespace rest call.                                                                                        |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
+| METHOD                       | GET                                                                                                                                |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
+| DATA PARAMS                  | | Content: application/JSON                                                                                                        |
+|                              | | {}                                                                                                                               |
+|                              | |                                                                                                                                  |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
+| SUCCESS                      | | Code: 200                                                                                                                        |
+| RESPONSE                     | | Content: {                                                                                                                       |
+|                              | |     twist:{                                                                                                                      |
+|                              | |         twist:{                                                                                                                  |
+|                              | |             linear:{                                                                                                             |
+|                              | |                 x: [Float],                                                                                                      |
+|                              | |                 y: [Float],                                                                                                      |
+|                              | |                 z: [Float]                                                                                                       |
+|                              | |             },                                                                                                                   |
+|                              | |             angular:{                                                                                                            |
+|                              | |                 x: [Float],                                                                                                      |
+|                              | |                 y: [Float],                                                                                                      |
+|                              | |                 z: [Float]                                                                                                       |
+|                              | |             }                                                                                                                    |
+|                              | |         }                                                                                                                        |
+|                              | |     }                                                                                                                            |
+|                              | | }                                                                                                                                |
+|                              | |                                                                                                                                  |
+|                              | | linear: x: roll                                                                                                                  |
+|                              | |         y: pitch                                                                                                                 |
+|                              | |         z: yaw                                                                                                                   |
+|                              | | roll/pitch/yaw values in radians.                                                                                                |
+|                              | |                                                                                                                                  |
+|                              | | angular: x: rollspeed                                                                                                            |
+|                              | |          y: pitchspeed                                                                                                           |
+|                              | |          z: yawspeed                                                                                                             |
+|                              | | rollspeed/pitchspeed/yawspeed values in radians/sec.                                                                             |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
+| ERROR                        | | Code: 404                                                                                                                        |
+| RESPONSE                     | | resource not found                                                                                                               |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
+| SAMPLE                       |  .. code-block:: python                                                                                                            |              
+| CALL                         |                                                                                                                                    |
+|                              |                                                                                                                                    |
+|                              |       $.ajax({                                                                                                                     |
+|                              |              type: "GET",                                                                                                          |
+|                              |              dataType: "json",                                                                                                     |
+|                              |              url: "http://<ip>/ros/<namespace>/mavros/imu/data_uler",                                                              |
 |                              |              success: function(data){                                                                                              |
 |                              |                  console.log(data);                                                                                                |
 |                              |              }                                                                                                                     |
