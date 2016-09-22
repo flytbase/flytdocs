@@ -717,7 +717,7 @@ REST
 |                              | | success: true:  command accepted by system , false: command rejected by system.                                                  |
 |                              | | wp_recieved: Number of waypoints sent from the autopilot.                                                                        |
 |                              | | frame: 0:GLobal, 1:local NED, 2:Mission, 3:global relative alt(recommended), 4:local ENU.                                        |
-|                              | | command: 16:waypoint(recommended), 17:loiter, 18:loiter turns, 19: loiter time, 20: return to launch, 21: take-off, 22:land.     |
+|                              | | command: 16:waypoint(recommended), 17:loiter, 18:loiter turns, 19: loiter time, 20: return to launch, 21: land, 22:take-off.     |
 |                              | | is_current: true:to set the starting point of the mission(true for the first waypoint).                                          |
 |                              | | autocontinue: true:continues on to the next waypoint once the current waypoint is reached(recommended).                          |
 |                              | | param1: Time in seconds to stay at the waypoint.                                                                                 |
@@ -802,7 +802,7 @@ REST
 |                              | |      },{},{}...  ]                                                                                                               |
 |                              | | }                                                                                                                                |
 |                              | | frame: 0:GLobal, 1:local NED, 2:Mission, 3:global relative alt(recommended), 4:local ENU.                                        |
-|                              | | command: 16:waypoint(recommended), 17:loiter, 18:loiter turns, 19: loiter time, 20: return to launch, 21: take-off, 22:land.     |
+|                              | | command: 16:waypoint(recommended), 17:loiter, 18:loiter turns, 19: loiter time, 20: return to launch, 21: land, 22:take-off.     |
 |                              | | is_current: true:to set the starting point of the mission(true for the first waypoint).                                          |
 |                              | | autocontinue: true:continues on to the next waypoint once the current waypoint is reached(recommended).                          |
 |                              | | param1: Time in seconds to stay at the waypoint.                                                                                 |
