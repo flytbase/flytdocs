@@ -1423,7 +1423,7 @@ Socket
 """"""
 
 
-.. important:: Please make sure replace ws with wss and remove port in IP. 
+.. important:: Please make sure replace ws with wss and remove port in IP. Also provide a token by making a REST call for Token for websocket authentication.
 
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 | URL                          | | ws://<ip>/websocket                                                                                                |
