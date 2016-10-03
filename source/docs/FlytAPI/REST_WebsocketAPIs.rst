@@ -9,17 +9,79 @@ FlytAPIs have been extended from ROS to REST and Websocket. This document descri
 
 .. caution:: This guide is under active development.
 
+Authentication APIs
+--------------------
 
-Navigation APIs
----------------
+Be advised, the Authentication APIs are specifically for FlytPODs with authentication enabled in them and for FlytSim.
 
-These APIs allows you to have navigational control over your vehicle, and also provides vehicle telemetry data for further processing.
+Login/token
+^^^^^^^^^^^^
+
+This API is used for getting a valid token from FlytPOD or FlytSim. A valid token recieved from this call is sent in the header with any rest call for it to be accepted by the FlytPOD or FlytSim.
+
+
+REST
+""""
+
+
++------------------------------+----------------------------------------------------------------------------------------------------------------------+
+| URL                          | | https://<ip>/login                                                                                                 |
+|                              | | <ip>: IP of the flytpod in the network                                                                             |
+|                              | |     eg: 192.168.x.xxx   or flytsim.flytbase.com                                                                    |
++------------------------------+----------------------------------------------------------------------------------------------------------------------+
+| METHOD                       |  POST                                                                                                                |
++------------------------------+----------------------------------------------------------------------------------------------------------------------+
+| DATA PARAMS                  | | Content: application/JSON                                                                                          |
+|                              | | {                                                                                                                  |
+|                              | |      username:[String],                                                                                            |
+|                              | |      email: [String],                                                                                              |
+|                              | |      password: [String]                                                                                            |
+|                              | | }                                                                                                                  |
+|                              | | username: An existing username for the device being handled.                                                       |
+|                              | | email: Email with which the account was created / can also be supplied with the username.                          |
+|                              | | password: Valid password for the account.                                                                          |
++------------------------------+----------------------------------------------------------------------------------------------------------------------+
+| SUCCESS                      | | Code: 200                                                                                                          |
+| RESPONSE                     | | Content: {                                                                                                         | 
+|                              | |     response : {                                                                                                   |
+|                              | |          user: {                                                                                                   |
+|                              | |                  autentication_token : [String]                                                                    |
+|                              | |          }                                                                                                         |
+|                              | |     }                                                                                                              |
+|                              | | }                                                                                                                  |
+|                              | |                                                                                                                    |
+|                              | | authentication_token: token for making all the other rest calls.                                                   |
++------------------------------+----------------------------------------------------------------------------------------------------------------------+
+| ERROR                        | | Code: 404                                                                                                          |
+| RESPONSE                     | | resource not found                                                                                                 |
++------------------------------+----------------------------------------------------------------------------------------------------------------------+
+| SAMPLE                       |  .. code-block:: python                                                                                              |
+| CALL                         |                                                                                                                      |
+|                              |          var msgdata={};                                                                                             |
+|                              |          msgdata['username']=$("#username").val();                                                                   |
+|                              |          msgdata['email']=$("#username").val();                                                                      |
+|                              |          msgdata['password']=$("#password").val();                                                                   |
+|                              |          $.ajax({                                                                                                    |
+|                              |          type: "POST",                                                                                               |
+|                              |          dataType: "json",                                                                                           |
+|                              |          data: JSON.stringify(msgdata),                                                                              |
+|                              |          url: "https://<ip>/login",                                                                                  |
+|                              |          success: function(data){                                                                                    |
+|                              |              console.log(data.response.user.authentication_token);                                                   |
+|                              |          }                                                                                                           |
+|                              |      });                                                                                                             |
++------------------------------+----------------------------------------------------------------------------------------------------------------------+
+
+----
 
 
 Namespace
 ^^^^^^^^^
 
 This namespace is a part of the url for all other rest calls and websocket connection. This has to be the first rest call before any other rest call or web socket connection.
+In case of FlytSim you do not need to make this call, the username should be used as namespace.
+
+.. important:: Please make sure replace http with https and remove port in IP and add token in header of the REST call. 
 
 REST
 """"
@@ -53,8 +115,9 @@ REST
 |                              |          $.ajax({                                                                                                    |
 |                              |          type: "POST",                                                                                               |
 |                              |          dataType: "json",                                                                                           |
+|                              |          headers: { 'Authentication-Token': token },   \\optional , for authentication only                          |
 |                              |          data: JSON.stringify(msgdata),                                                                              |
-|                              |          url: "http://<ip>/ros/get_global_namespace",                                                                |
+|                              |          url: "http://<ip>/ros/get_global_namespace",    \\ change http to https for authentication                  |
 |                              |          success: function(data){                                                                                    |
 |                              |              console.log(data);                                                                                      |
 |                              |          }                                                                                                           |
@@ -63,12 +126,22 @@ REST
 
 ----
 
+
+
+Navigation APIs
+---------------
+
+These APIs allows you to have navigational control over your vehicle, and also provides vehicle telemetry data for further processing.
+
+
 .. _Arm_REST:
 
 Arm
 ^^^
 
 Arming the drone means you are ready to fly. In this mode the controller outputs are passed to the mixer.
+
+.. important:: Please make sure replace http with https and remove port in IP and add token in header of the REST call. 
 
 REST
 """"
@@ -99,9 +172,10 @@ REST
 | CALL                         |                                                                                                                      |
 |                              |       $.ajax({                                                                                                       |
 |                              |            type: "POST",                                                                                             |
+|                              |            headers: { 'Authentication-Token': token },   \\optional , for authentication only                        |
 |                              |            dataType: "json",                                                                                         |
 |                              |            data: JSON.stringify(msgdata),                                                                            |
-|                              |            url: "http://<ip>/ros/<namespace>/navigation/arm",                                                        |
+|                              |            url: "http://<ip>/ros/<namespace>/navigation/arm",    \\ change http to https for authentication          |
 |                              |            success: function(data){                                                                                  |
 |                              |                console.log(data);                                                                                    |
 |                              |            }                                                                                                         |
@@ -116,6 +190,8 @@ Disarm
 ^^^^^^
 
 Disarming the drone means you have finished flying and the drone can be handled and safe to approach. In disarmed state the drone does not react to any RC inputs given or mission execution commands.
+
+.. important:: Please make sure replace http with https and remove port in IP and add token in header of the REST call. 
 
 REST
 """"
@@ -147,8 +223,9 @@ REST
 |                              |       $.ajax({                                                                                                       |
 |                              |           type: "POST",                                                                                              |
 |                              |           dataType: "json",                                                                                          |
+|                              |           headers: { 'Authentication-Token': token },   \\optional , for authentication only                         |
 |                              |           data: JSON.stringify(msgdata),                                                                             |
-|                              |           url: "http://<ip>/ros/<namespace>/navigation/disarm",                                                      |
+|                              |           url: "http://<ip>/ros/<namespace>/navigation/disarm",   \\ change http to https for authentication         |
 |                              |           success: function(data){                                                                                   |
 |                              |               console.log(data);                                                                                     |
 |                              |           }                                                                                                          |
@@ -163,6 +240,9 @@ Takeoff
 ^^^^^^^
 
 Takeoff command arms the drone and the drone hovers at a given height. Height is provided as a parameter to this API call.
+
+
+.. important:: Please make sure replace http with https and remove port in IP and add token in header of the REST call. 
 
 REST
 """"
@@ -202,9 +282,10 @@ REST
 |                              |       msgdata["takeoff_alt"]=4.00;                                                                                   |
 |                              |       $.ajax({                                                                                                       |
 |                              |           type: "POST",                                                                                              |
+|                              |           headers: { 'Authentication-Token': token },   \\optional , for authentication only                         |
 |                              |           dataType: "json",                                                                                          |
 |                              |           data: JSON.stringify(msgdata),                                                                             |
-|                              |           url: "http://<ip>/ros/<namespace>/navigation/take_off",                                                    |
+|                              |           url: "http://<ip>/ros/<namespace>/navigation/take_off", \\ change http to https for authentication         |
 |                              |           success: function(data){                                                                                   |
 |                              |               console.log(data);                                                                                     |
 |                              |           }                                                                                                          |
@@ -219,6 +300,9 @@ Land
 ^^^^
 
 Land command brings th e drone down to the specified local coordinated. This does not disarm the system.
+
+
+.. important:: Please make sure replace http with https and remove port in IP and add token in header of the REST call. 
 
 REST
 """"
@@ -250,8 +334,9 @@ REST
 |                              |       $.ajax({                                                                                                       |
 |                              |           type: "POST",                                                                                              |
 |                              |           dataType: "json",                                                                                          |
+|                              |           headers: { 'Authentication-Token': token },   \\optional , for authentication only                         |
 |                              |           data: JSON.stringify(msgdata),                                                                             |
-|                              |           url: "http://<ip>/ros/<namespace>/navigation/land",                                                        |
+|                              |           url: "http://<ip>/ros/<namespace>/navigation/land",  \\ change http to https for authentication            |
 |                              |           success: function(data){                                                                                   |
 |                              |               console.log(data);                                                                                     |
 |                              |           }                                                                                                          |
@@ -267,6 +352,10 @@ Position hold
 ^^^^^^^^^^^^^^^
 
 This command commands the vehicle to hover at the current location. It overrides any previous mission being carried out and starts hovering.
+
+
+
+.. important:: Please make sure replace http with https and remove port in IP and add token in header of the REST call. 
 
 REST
 """"
@@ -298,7 +387,8 @@ REST
 |                              |       $.ajax({                                                                                                       |
 |                              |           type: "POST",                                                                                              |
 |                              |           dataType: "json",                                                                                          |
-|                              |           url: "http://<ip>/ros/<namespace>/navigation/position_hold",                                               |
+|                              |           headers: { 'Authentication-Token': token },   \\optional , for authentication only                         |
+|                              |           url: "http://<ip>/ros/<namespace>/navigation/position_hold",   \\ change http to https for authentication  |
 |                              |           success: function(data){                                                                                   |
 |                              |               console.log(data);                                                                                     |
 |                              |           }                                                                                                          |
@@ -313,6 +403,9 @@ Position Setpoint
 ^^^^^^^^^^^^^^^^^
 
 This command commands the vehicle to go to a specified location and hover. It overrides any previous mission being carried out and starts hovering.
+
+
+.. important:: Please make sure replace http with https and remove port in IP and add token in header of the REST call. 
 
 REST
 """"
@@ -406,8 +499,9 @@ REST
 |                              |       $.ajax({                                                                                                                                                  |
 |                              |           type: "POST",                                                                                                                                         |
 |                              |           dataType: "json",                                                                                                                                     |
+|                              |          headers: { 'Authentication-Token': token },   \\optional , for authentication only                                                                     |
 |                              |           data: JSON.stringify(msgdata),                                                                                                                        |
-|                              |           url: "http://<ip>/ros/<namespace>/navigation/position_set",                                                                                           |
+|                              |           url: "http://<ip>/ros/<namespace>/navigation/position_set",         \\ change http to https for authentication                                        |
 |                              |           success: function(data){                                                                                                                              |
 |                              |                  console.log(data);                                                                                                                             |
 |                              |           }                                                                                                                                                     |
@@ -422,6 +516,9 @@ Velocity Setpoint
 ^^^^^^^^^^^^^^^^^
 
 This command commands the vehicle to attain a specified velocity in the specified direction. It overrides any previous mission being carried out.
+
+
+.. important:: Please make sure replace http with https and remove port in IP and add token in header of the REST call. 
 
 REST
 """"
@@ -514,8 +611,9 @@ REST
 |                              |       $.ajax({                                                                                                                                                  |
 |                              |              type: "POST",                                                                                                                                      |
 |                              |              dataType: "json",                                                                                                                                  |
+|                              |              headers: { 'Authentication-Token': token },   \\optional , for authentication only                                                                 |
 |                              |              data: JSON.stringify(msgdata),                                                                                                                     |
-|                              |              url: "http://<ip>/ros/<namespace>/navigation/velocity_set",                                                                                        |
+|                              |              url: "http://<ip>/ros/<namespace>/navigation/velocity_set",      \\ change http to https for authentication                                        |
 |                              |              success: function(data){                                                                                                                           |
 |                              |                  console.log(data);                                                                                                                             |
 |                              |              }                                                                                                                                                  |
@@ -530,6 +628,9 @@ Attitude Setpoint
 ^^^^^^^^^^^^^^^^^
 
 This command commands the vehicle to attain a specified attitude. It overrides any previous mission being carried out.
+
+
+.. important:: Please make sure replace http with https and remove port in IP and add token in header of the REST call. 
 
 REST
 """"
@@ -597,8 +698,9 @@ REST
 |                              |       $.ajax({                                                                                                       |
 |                              |              type: "POST",                                                                                           |
 |                              |              dataType: "json",                                                                                       |
+|                              |              headers: { 'Authentication-Token': token },   \\optional , for authentication only                      |
 |                              |              data: JSON.stringify(msgdata),                                                                          |
-|                              |              url: "http://<ip>/ros/<namespace>/navigation/attitude_set",                                             |
+|                              |              url: "http://<ip>/ros/<namespace>/navigation/attitude_set",  \\ change http to https for authentication |
 |                              |              success: function(data){                                                                                |
 |                              |                  console.log(data);                                                                                  |
 |                              |              }                                                                                                       |
@@ -613,6 +715,9 @@ Execute Script
 ^^^^^^^^^^^^^^
 
 This command commands the vehicle to perform a predefined or user defined scripts when called with specific app name and its respective parameters. It overrides any previous mission being carried out.
+
+
+.. important:: Please make sure replace http with https and remove port in IP and add token in header of the REST call. 
 
 REST
 """"
@@ -659,9 +764,10 @@ REST
 |                              |                                                                                                                      |
 |                              |       $.ajax({                                                                                                       |
 |                              |              type: "POST",                                                                                           |
+|                              |              headers: { 'Authentication-Token': token },   \\optional , for authentication only                      |
 |                              |              dataType: "json",                                                                                       |
 |                              |              data: JSON.stringify(msgdata),                                                                          |
-|                              |              url: "http://<ip>/ros/<namespace>/navigation/exec_script",                                              |
+|                              |              url: "http://<ip>/ros/<namespace>/navigation/exec_script",  \\ change http to https for authentication  |
 |                              |              success: function(data){                                                                                |
 |                              |                  console.log(data);                                                                                  |
 |                              |              }                                                                                                       |
@@ -676,6 +782,9 @@ Get Waypoints
 ^^^^^^^^^^^^^^
 
 This command gets the current waypoint mission set on the autopilot.
+
+
+.. important:: Please make sure replace http with https and remove port in IP and add token in header of the REST call. 
 
 REST
 """"
@@ -738,8 +847,9 @@ REST
 |                              |       $.ajax({                                                                                                                     |
 |                              |              type: "POST",                                                                                                         |
 |                              |              dataType: "json",                                                                                                     |
+|                              |              headers: { 'Authentication-Token': token },   \\optional , for authentication only                                    |
 |                              |              data: JSON.stringify(msgdata),                                                                                        |
-|                              |              url: "http://<ip>/ros/<namespace>/navigation/waypoint_get",                                                           |
+|                              |              url: "http://<ip>/ros/<namespace>/navigation/waypoint_get",      \\ change http to https for authentication           |
 |                              |              success: function(data){                                                                                              |
 |                              |                  console.log(data);                                                                                                |
 |                              |              }                                                                                                                     |
@@ -756,6 +866,9 @@ Set Waypoints
 ^^^^^^^^^^^^^^
 
 This command gets the current waypoint mission set on the autopilot.
+
+
+.. important:: Please make sure replace http with https and remove port in IP and add token in header of the REST call. 
 
 REST
 """"
@@ -842,7 +955,8 @@ REST
 |                              |              type: "POST",                                                                                                         |
 |                              |              dataType: "json",                                                                                                     |
 |                              |              data: JSON.stringify(msgdata),                                                                                        |
-|                              |              url: "http://<ip>/ros/<namespace>/navigation/waypoint_set",                                                           |
+|                              |              headers: { 'Authentication-Token': token },   \\optional , for authentication only                                    |
+|                              |              url: "http://<ip>/ros/<namespace>/navigation/waypoint_set",        \\ change http to https for authentication         |
 |                              |              success: function(data){                                                                                              |
 |                              |                  console.log(data);                                                                                                |
 |                              |              }                                                                                                                     |
@@ -859,6 +973,9 @@ Execute Waypoints
 ^^^^^^^^^^^^^^^^^
 
 This command tells the autopilot to start executing the mission already set. 
+
+
+.. important:: Please make sure replace http with https and remove port in IP and add token in header of the REST call. 
 
 REST
 """"
@@ -893,8 +1010,9 @@ REST
 |                              |       $.ajax({                                                                                                                     |
 |                              |              type: "POST",                                                                                                         |
 |                              |              dataType: "json",                                                                                                     |
+|                              |              headers: { 'Authentication-Token': token },   \\optional , for authentication only                                    |
 |                              |              data: JSON.stringify(msgdata),                                                                                        |
-|                              |              url: "http://<ip>/ros/<namespace>/navigation/waypoint_execute",                                                       |
+|                              |              url: "http://<ip>/ros/<namespace>/navigation/waypoint_execute",     \\ change http to https for authentication        |
 |                              |              success: function(data){                                                                                              |
 |                              |                  console.log(data);                                                                                                |
 |                              |              }                                                                                                                     |
@@ -911,6 +1029,9 @@ Clear Waypoints
 ^^^^^^^^^^^^^^^
 
 This command clears the previously set mission. 
+
+
+.. important:: Please make sure replace http with https and remove port in IP and add token in header of the REST call. 
 
 REST
 """"
@@ -945,8 +1066,9 @@ REST
 |                              |       $.ajax({                                                                                                                     |
 |                              |              type: "POST",                                                                                                         |
 |                              |              dataType: "json",                                                                                                     |
+|                              |              headers: { 'Authentication-Token': token },   \\optional , for authentication only                                    |
 |                              |              data: JSON.stringify(msgdata),                                                                                        |
-|                              |              url: "http://<ip>/ros/<namespace>/navigation/waypoint_clear",                                                         |
+|                              |              url: "http://<ip>/ros/<namespace>/navigation/waypoint_clear",      \\ change http to https for authentication         |
 |                              |              success: function(data){                                                                                              |
 |                              |                  console.log(data);                                                                                                |
 |                              |              }                                                                                                                     |
@@ -963,6 +1085,9 @@ Pause Waypoints
 ^^^^^^^^^^^^^^^
 
 This command tells the autopilot to pause the execution of a waypoint mission and hold its current position and can be resumed on execute-waypoint rest call. 
+
+
+.. important:: Please make sure replace http with https and remove port in IP and add token in header of the REST call. 
 
 REST
 """"
@@ -997,8 +1122,9 @@ REST
 |                              |       $.ajax({                                                                                                                     |
 |                              |              type: "POST",                                                                                                         |
 |                              |              dataType: "json",                                                                                                     |
+|                              |              headers: { 'Authentication-Token': token },        \\optional , for authentication only                               |
 |                              |              data: JSON.stringify(msgdata),                                                                                        |
-|                              |              url: "http://<ip>/ros/<namespace>/navigation/waypoint_pause",                                                         |
+|                              |              url: "http://<ip>/ros/<namespace>/navigation/waypoint_pause",      \\ change http to https for authentication         |
 |                              |              success: function(data){                                                                                              |
 |                              |                  console.log(data);                                                                                                |
 |                              |              }                                                                                                                     |
@@ -1018,6 +1144,9 @@ List Video Streams
 ^^^^^^^^^^^^^^^^^^^
 
 This command gets the list of video streams available from the FlytOS.
+
+
+.. important:: Please make sure replace http with https and remove port in IP and add token in header of the REST call. 
 
 REST
 """"
@@ -1051,8 +1180,9 @@ REST
 |                              |       $.ajax({                                                                                                       |
 |                              |           type: "POST",                                                                                              |
 |                              |           dataType: "json",                                                                                          |
+|                              |           headers: { 'Authentication-Token': token },   \\optional , for authentication only                         |
 |                              |           data: JSON.stringify(msgdata),                                                                             |
-|                              |           url: "http://<ip>/ros/list_streams",                                                                       |
+|                              |           url: "http://<ip>/ros/list_streams",         \\ change http to https for authentication                    |
 |                              |           success: function(data){                                                                                   |
 |                              |                  console.log(data);                                                                                  |
 |                              |           }                                                                                                          |
@@ -1069,6 +1199,7 @@ Start video stream
 ^^^^^^^^^^^^^^^^^^^
 
 This command gets you the video stream for the particular link.
+
 
 REST
 """"
@@ -1292,6 +1423,8 @@ Socket
 """"""
 
 
+.. important:: Please make sure replace ws with wss and remove port in IP. 
+
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 | URL                          | | ws://<ip>/websocket                                                                                                |
 |                              | | <ip>: IP of the flytpod in the network along with port                                                             |
@@ -1314,6 +1447,15 @@ Socket
 |                              |       ros.on('close', function() {                                                                                   |
 |                              |           console.log('Connection to websocket server closed.');                                                     |
 |                              |       });                                                                                                            |
+|                              |                                                                                                                      |
+|                              |        // This part is optional. only required in case of authentication                                             |
+|                              |        var rauth = new ROSLIB.Message({                                                                              |
+|                              |              "op": "auth",                                                                                           |
+|                              |              "mac" : sessionStorage.getItem('token'),                                                                |
+|                              |                                                                                                                      |
+|                              |          });                                                                                                         |
+|                              |                                                                                                                      |
+|                              |        ros.authenticate(rauth);                                                                                      |
 |                              |                                                                                                                      |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 
@@ -1452,6 +1594,8 @@ Socket
 REST
 """"
 
+.. important:: Please make sure replace http with https and remove port in IP and add token in header of the REST call. 
+
 
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
 | URL                          | | http://<ip>/ros/<namespace>/mavros/battery                                                                                       |
@@ -1485,7 +1629,8 @@ REST
 |                              |       $.ajax({                                                                                                                     |
 |                              |              type: "GET",                                                                                                          |
 |                              |              dataType: "json",                                                                                                     |
-|                              |              url: "http://<ip>/ros/<namespace>/mavros/battery",                                                                    |
+|                              |              headers: { 'Authentication-Token': token },        \\optional , for authentication only                               |
+|                              |              url: "http://<ip>/ros/<namespace>/mavros/battery",    \\ change http to https for authentication                      |
 |                              |              success: function(data){                                                                                              |
 |                              |                  console.log(data);                                                                                                |
 |                              |              }                                                                                                                     |
@@ -1539,6 +1684,8 @@ Socket
 REST
 """"
 
+.. important:: Please make sure replace http with https and remove port in IP and add token in header of the REST call. 
+
 
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
 | URL                          | | http://<ip>/ros/<namespace>/mavros/vfr_hud                                                                                       |
@@ -1572,7 +1719,8 @@ REST
 |                              |       $.ajax({                                                                                                                     |
 |                              |              type: "GET",                                                                                                          |
 |                              |              dataType: "json",                                                                                                     |
-|                              |              url: "http://<ip>/ros/<namespace>/mavros/vfr_hud",                                                                    |
+|                              |              headers: { 'Authentication-Token': token },        \\optional , for authentication only                               |
+|                              |              url: "http://<ip>/ros/<namespace>/mavros/vfr_hud",       \\ change http to https for authentication                   |
 |                              |              success: function(data){                                                                                              |
 |                              |                  console.log(data);                                                                                                |
 |                              |              }                                                                                                                     |
@@ -1626,6 +1774,8 @@ Socket
 REST
 """"
 
+.. important:: Please make sure replace http with https and remove port in IP and add token in header of the REST call. 
+
 
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
 | URL                          | | http://<ip>/ros/<namespace>/mavros/imu/data_uler                                                                                 |
@@ -1677,7 +1827,8 @@ REST
 |                              |       $.ajax({                                                                                                                     |
 |                              |              type: "GET",                                                                                                          |
 |                              |              dataType: "json",                                                                                                     |
-|                              |              url: "http://<ip>/ros/<namespace>/mavros/imu/data_uler",                                                              |
+|                              |              headers: { 'Authentication-Token': token },        \\optional , for authentication only                               |
+|                              |              url: "http://<ip>/ros/<namespace>/mavros/imu/data_uler",         \\ change http to https for authentication           |
 |                              |              success: function(data){                                                                                              |
 |                              |                  console.log(data);                                                                                                |
 |                              |              }                                                                                                                     |
@@ -1693,6 +1844,9 @@ Parameter Set
 ^^^^^^^^^^^^^^
 
 This command sets parameters in FlytOS. 
+
+.. important:: Please make sure replace http with https and remove port in IP and add token in header of the REST call. 
+
 
 REST
 """"
@@ -1743,8 +1897,9 @@ REST
 |                              |       $.ajax({                                                                                                                           |
 |                              |           type: "POST",                                                                                                                  |
 |                              |           dataType: "json",                                                                                                              |
+|                              |           headers: { 'Authentication-Token': token },       \\optional , for authentication only                                         |
 |                              |           data: JSON.stringify(msgdata),                                                                                                 |
-|                              |           url: "http://<ip>/ros/<namespace>/param/param_set",                                                                            |
+|                              |           url: "http://<ip>/ros/<namespace>/param/param_set",               \\ change http to https for authentication                   |
 |                              |           success: function(data){                                                                                                       |
 |                              |                  console.log(data);                                                                                                      |
 |                              |           }                                                                                                                              |
@@ -1759,6 +1914,9 @@ Parameter Get All
 ^^^^^^^^^^^^^^^^^^
 
 This command gets all parameters from FlytOS. 
+
+.. important:: Please make sure replace http with https and remove port in IP and add token in header of the REST call. 
+
 
 REST
 """"
@@ -1804,8 +1962,9 @@ REST
 |                              |       $.ajax({                                                                                                                           |
 |                              |           type: "POST",                                                                                                                  |
 |                              |           dataType: "json",                                                                                                              |
+|                              |           headers: { 'Authentication-Token': token },       \\optional , for authentication only                                         |
 |                              |           data: JSON.stringify(msgdata),                                                                                                 |
-|                              |           url: "http://<ip>/ros/<namespace>/param/param_get_all",                                                                        |
+|                              |           url: "http://<ip>/ros/<namespace>/param/param_get_all",                        \\ change http to https for authentication      |
 |                              |           success: function(data){                                                                                                       |
 |                              |                  console.log(data);                                                                                                      |
 |                              |           }                                                                                                                              |
@@ -1819,6 +1978,9 @@ Parameter Get
 ^^^^^^^^^^^^^^
 
 This command gets a particular parameter from FlytOS. 
+
+.. important:: Please make sure replace http with https and remove port in IP and add token in header of the REST call. 
+
 
 REST
 """"
@@ -1862,8 +2024,9 @@ REST
 |                              |       $.ajax({                                                                                                                           |
 |                              |           type: "POST",                                                                                                                  |
 |                              |           dataType: "json",                                                                                                              |
+|                              |           headers: { 'Authentication-Token': token },        \\optional , for authentication only                                        |
 |                              |           data: JSON.stringify(msgdata),                                                                                                 |
-|                              |           url: "http://<ip>/ros/<namespace>/param/param_get",                                                                            |
+|                              |           url: "http://<ip>/ros/<namespace>/param/param_get",           \\ change http to https for authentication                       |
 |                              |           success: function(data){                                                                                                       |
 |                              |                  console.log(data.param_info.param_value);                                                                               |
 |                              |           }                                                                                                                              |
@@ -1876,6 +2039,9 @@ Parameter Save
 ^^^^^^^^^^^^^^^
 
 This command Saves all parameters in FlytOS with changes still reflected on next reboot. 
+
+.. important:: Please make sure replace http with https and remove port in IP and add token in header of the REST call. 
+
 
 REST
 """"
@@ -1909,8 +2075,9 @@ REST
 |                              |       $.ajax({                                                                                                                           |
 |                              |           type: "POST",                                                                                                                  |
 |                              |           dataType: "json",                                                                                                              |
+|                              |           headers: { 'Authentication-Token': token },        \\optional , for authentication only                                        |
 |                              |           data: JSON.stringify(msgdata),                                                                                                 |
-|                              |           url: "http://<ip>/ros/<namespace>/param/param_save",                                                                           |
+|                              |           url: "http://<ip>/ros/<namespace>/param/param_save",              \\ change http to https for authentication                   |
 |                              |           success: function(data){                                                                                                       |
 |                              |                  console.log(data);                                                                                                      |
 |                              |           }                                                                                                                              |
@@ -1923,6 +2090,9 @@ Parameter Load
 ^^^^^^^^^^^^^^^
 
 This command loads parameters on to the FlytOS if a new parameter file is uploaded to the FlytOS through Flytconsole. 
+
+.. important:: Please make sure replace http with https and remove port in IP and add token in header of the REST call. 
+
 
 REST
 """"
@@ -1956,8 +2126,9 @@ REST
 |                              |       $.ajax({                                                                                                                           |
 |                              |           type: "POST",                                                                                                                  |
 |                              |           dataType: "json",                                                                                                              |
+|                              |           headers: { 'Authentication-Token': token },        \\optional , for authentication only                                        |
 |                              |           data: JSON.stringify(msgdata),                                                                                                 |
-|                              |           url: "http://<ip>/ros/<namespace>/param/param_load",                                                                           |
+|                              |           url: "http://<ip>/ros/<namespace>/param/param_load",               \\ change http to https for authentication                  |
 |                              |           success: function(data){                                                                                                       |
 |                              |                  console.log(data);                                                                                                      |
 |                              |           }                                                                                                                              |
