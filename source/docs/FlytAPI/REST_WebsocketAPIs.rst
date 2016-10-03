@@ -1451,7 +1451,7 @@ Socket
 |                              |        // This part is optional. only required in case of authentication                                             |
 |                              |        var rauth = new ROSLIB.Message({                                                                              |
 |                              |              "op": "auth",                                                                                           |
-|                              |              "mac" : sessionStorage.getItem('token'),                                                                |
+|                              |              "mac" : token,                                                                                          |
 |                              |                                                                                                                      |
 |                              |          });                                                                                                         |
 |                              |                                                                                                                      |
