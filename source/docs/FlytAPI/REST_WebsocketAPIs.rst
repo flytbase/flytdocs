@@ -14,6 +14,8 @@ Authentication APIs
 
 Be advised, the Authentication APIs are specifically for FlytPODs with authentication enabled in them and for FlytSim.
 
+.. _Login_REST:
+
 Login/token
 ^^^^^^^^^^^^
 
@@ -74,6 +76,7 @@ REST
 
 ----
 
+.. _Namespace_REST:
 
 Namespace
 ^^^^^^^^^
@@ -1464,8 +1467,8 @@ Socket
 .. _Attitude_Quat_REST:
 
 
-Attitude data
-^^^^^^^^^^^^^
+Attitude Quaternion data
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 Fetches real time attitude data at required rate. To be done after initialization of websocket.
 
@@ -1508,7 +1511,183 @@ Socket
 |                              | |                                                                                                                                                                |
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
+REST
+""""
+
+.. important:: Please make sure replace http with https and remove port in IP and add token in header of the REST call. 
+
+
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
+| URL                          | | http://<ip>/ros/<namespace>/mavros/imu/data                                                                                      |
+|                              | | <ip>: IP of the flytpod in the network along with port                                                                           |
+|                              | |     eg: 192.168.x.xxx:9090                                                                                                       |
+|                              | | <namespace>: Name of the flytpod (default: flytpod) which is required for every rest call and can be                             |
+|                              | |     fetched from get namespace rest call.                                                                                        |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
+| METHOD                       | GET                                                                                                                                |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
+| DATA PARAMS                  | | Content: application/JSON                                                                                                        |
+|                              | | {}                                                                                                                               |
+|                              | |                                                                                                                                  |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
+| SUCCESS                      | | Code: 200                                                                                                                        |
+| RESPONSE                     | | Content: {                                                                                                                       |
+|                              | |     orientation:{                                                                                                                |
+|                              | |                 x: [Float],                                                                                                      |
+|                              | |                 y: [Float],                                                                                                      |
+|                              | |                 z: [Float]                                                                                                       |
+|                              | |                 w: [Float]                                                                                                       |
+|                              | |             },                                                                                                                   |
+|                              | |      angular_velocity:{                                                                                                          |
+|                              | |                 x: [Float],                                                                                                      |
+|                              | |                 y: [Float],                                                                                                      |
+|                              | |                 z: [Float]                                                                                                       |
+|                              | |             },                                                                                                                   |
+|                              | |      linear_acceleration:{                                                                                                       |
+|                              | |                 x: [Float],                                                                                                      |
+|                              | |                 y: [Float],                                                                                                      |
+|                              | |                 z: [Float]                                                                                                       |
+|                              | |             }                                                                                                                    |
+|                              | |         }                                                                                                                        |
+|                              | |     }                                                                                                                            |
+|                              | | }                                                                                                                                |
+|                              | |                                                                                                                                  |
+|                              | | linear_acceleration in meter/second/second                                                                                       |
+|                              | |                                                                                                                                  |
+|                              | | angular_velocity: x: rollspeed                                                                                                   |
+|                              | |          y: pitchspeed                                                                                                           |
+|                              | |          z: yawspeed                                                                                                             |
+|                              | | rollspeed/pitchspeed/yawspeed values in radians/sec.                                                                             |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
+| ERROR                        | | Code: 404                                                                                                                        |
+| RESPONSE                     | | resource not found                                                                                                               |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
+| SAMPLE                       |  .. code-block:: python                                                                                                            |              
+| CALL                         |                                                                                                                                    |
+|                              |                                                                                                                                    |
+|                              |       $.ajax({                                                                                                                     |
+|                              |              type: "GET",                                                                                                          |
+|                              |              dataType: "json",                                                                                                     |
+|                              |              headers: { 'Authentication-Token': token },        \\optional , for authentication only                               |
+|                              |              url: "http://<ip>/ros/<namespace>/mavros/imu/data_euler",         \\ change http to https for authentication          |
+|                              |              success: function(data){                                                                                              |
+|                              |                  console.log(data);                                                                                                |
+|                              |              }                                                                                                                     |
+|                              |       )};                                                                                                                          |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
+
+
 ----
+
+.. _Attitude_Euler_REST:
+
+
+Attitude Euler data
+^^^^^^^^^^^^^^^^^^^
+
+Fetches real time attitude data at required rate. To be done after initialization of websocket.
+
+Socket
+""""""
+
+
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| INITIALISATION               |  .. code-block:: python                                                                                                                                          |
+| SAMPLE                       |                                                                                                                                                                  |
+|                              |       var listenerAttitude = new ROSLIB.Topic({                                                                                                                  |
+|                              |           ros :ros,                                                                                                                                              |
+|                              |           name : '/<namespace>/mavros/imu/data_euler',                                                                                                           |
+|                              |           messageType : 'geometry_msgs/TwistStamped',                                                                                                            |
+|                              |           throttle_rate: 200                                                                                                                                     |
+|                              |        });                                                                                                                                                       |
+|                              |                                                                                                                                                                  |
+|                              |  <namespace>: Name of the flytpod (default: flytpod) which is required for every socket subscription and can be fetched from get namespace rest call.            |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| SUBSCRIPTION                 |  .. code-block:: python                                                                                                                                          |
+| SAMPLE                       |                                                                                                                                                                  |
+|                              |                                                                                                                                                                  |
+|                              |           listenerAttitude.subscribe(function(message) {                                                                                                         |
+|                              |                                                                                                                                                                  |
+|                              |                  $('#roll').textround(message.twist.linear.x);                                                                                                   |
+|                              |                  $('#pitch').text(message.twist.linear.y);                                                                                                       |
+|                              |                  $('#yaw').text(message.twist.linear.z);                                                                                                         |
+|                              |                  $('#rollSpeed').text(message.twist.angular.x);                                                                                                  |
+|                              |                  $('#pitchSpeed').text(message.twist.angular.y);                                                                                                 |
+|                              |                  $('#yawSpeed').text(message.twist.angular.z);                                                                                                   |
+|                              |            });                                                                                                                                                   |
+|                              |                                                                                                                                                                  |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| NOTES                        | | ros: Pointed to the ros object created in the initialization of a web socket connection                                                                        |
+|                              | | name: Requires the name of the topic which gives out the required data.                                                                                        |
+|                              | | messageType: Set the type of predefined data structure used to deliver the required attitude data.                                                             |
+|                              | | throttle_rate: Sets the rate at which callbacks are called in miliseconds.                                                                                     |
+|                              | |                                                                                                                                                                |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+REST
+""""
+
+.. important:: Please make sure replace http with https and remove port in IP and add token in header of the REST call. 
+
+
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
+| URL                          | | http://<ip>/ros/<namespace>/mavros/imu/data_euler                                                                                |
+|                              | | <ip>: IP of the flytpod in the network along with port                                                                           |
+|                              | |     eg: 192.168.x.xxx:9090                                                                                                       |
+|                              | | <namespace>: Name of the flytpod (default: flytpod) which is required for every rest call and can be                             |
+|                              | |     fetched from get namespace rest call.                                                                                        |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
+| METHOD                       | GET                                                                                                                                |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
+| DATA PARAMS                  | | Content: application/JSON                                                                                                        |
+|                              | | {}                                                                                                                               |
+|                              | |                                                                                                                                  |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
+| SUCCESS                      | | Code: 200                                                                                                                        |
+| RESPONSE                     | | Content: {                                                                                                                       |
+|                              | |         twist:{                                                                                                                  |
+|                              | |             linear:{                                                                                                             |
+|                              | |                 x: [Float],                                                                                                      |
+|                              | |                 y: [Float],                                                                                                      |
+|                              | |                 z: [Float]                                                                                                       |
+|                              | |             },                                                                                                                   |
+|                              | |             angular:{                                                                                                            |
+|                              | |                 x: [Float],                                                                                                      |
+|                              | |                 y: [Float],                                                                                                      |
+|                              | |                 z: [Float]                                                                                                       |
+|                              | |             }                                                                                                                    |
+|                              | |         }                                                                                                                        |
+|                              | | }                                                                                                                                |
+|                              | |                                                                                                                                  |
+|                              | | linear: x: roll                                                                                                                  |
+|                              | |         y: pitch                                                                                                                 |
+|                              | |         z: yaw                                                                                                                   |
+|                              | | roll/pitch/yaw values in radians.                                                                                                |
+|                              | |                                                                                                                                  |
+|                              | | angular: x: rollspeed                                                                                                            |
+|                              | |          y: pitchspeed                                                                                                           |
+|                              | |          z: yawspeed                                                                                                             |
+|                              | | rollspeed/pitchspeed/yawspeed values in radians/sec.                                                                             |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
+| ERROR                        | | Code: 404                                                                                                                        |
+| RESPONSE                     | | resource not found                                                                                                               |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
+| SAMPLE                       |  .. code-block:: python                                                                                                            |              
+| CALL                         |                                                                                                                                    |
+|                              |                                                                                                                                    |
+|                              |       $.ajax({                                                                                                                     |
+|                              |              type: "GET",                                                                                                          |
+|                              |              dataType: "json",                                                                                                     |
+|                              |              headers: { 'Authentication-Token': token },        \\optional , for authentication only                               |
+|                              |              url: "http://<ip>/ros/<namespace>/mavros/imu/data_euler",         \\ change http to https for authentication          |
+|                              |              success: function(data){                                                                                              |
+|                              |                  console.log(data);                                                                                                |
+|                              |              }                                                                                                                     |
+|                              |       )};                                                                                                                          |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
+
+----
+
 
 .. _LPOS_REST:
 
@@ -1553,6 +1732,8 @@ Socket
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 ----
+
+.. _Battery_REST:
 
 Battery Status
 ^^^^^^^^^^^^^^
@@ -1638,6 +1819,9 @@ REST
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
 
 ----
+
+
+.. _HUD_REST:
 
 HUD
 ^^^^
@@ -1729,116 +1913,11 @@ REST
 
 ----
 
-Attitude
-^^^^^^^^
-
-Fetches real time attitude data at required rate. To be done after initialization of websocket.
-
-Socket
-""""""
-
-
-+------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| INITIALISATION               |  .. code-block:: python                                                                                                                                          |
-| SAMPLE                       |                                                                                                                                                                  |
-|                              |       var listenerHUD = new ROSLIB.Topic({                                                                                                                       |
-|                              |           ros :ros,                                                                                                                                              |
-|                              |           name : '/<namespace>/mavros/imu/data_uler',                                                                                                            |
-|                              |           messageType : 'mavros_msgs/TwistStamped',                                                                                                              |
-|                              |           throttle_rate: 200                                                                                                                                     |
-|                              |        });                                                                                                                                                       |
-|                              |                                                                                                                                                                  |
-|                              |  <namespace>: Name of the flytpod (default: flytpod) which is required for every socket subscription and can be fetched from get namespace rest call.            |
-+------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| SUBSCRIPTION                 |  .. code-block:: python                                                                                                                                          |
-| SAMPLE                       |                                                                                                                                                                  |
-|                              |                                                                                                                                                                  |
-|                              |           listenerHUD.subscribe(function(message) {                                                                                                              |
-|                              |                                                                                                                                                                  |
-|                              |                  $('#roll').textround(message.twist.linear.x);                                                                                                   |
-|                              |                  $('#pitch').text(message.twist.linear.y);                                                                                                       |
-|                              |                  $('#yaw').text(message.twist.linear.z);                                                                                                         |
-|                              |                  $('#rollSpeed').text(message.twist.angular.x);                                                                                                  |
-|                              |                  $('#pitchSpeed').text(message.twist.angular.y);                                                                                                 |
-|                              |                  $('#yawSpeed').text(message.twist.angular.z);                                                                                                   |
-|                              |            });                                                                                                                                                   |
-|                              |                                                                                                                                                                  |
-+------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| NOTES                        | | ros: Pointed to the ros object created in the initialization of a web socket connection                                                                        |
-|                              | | name: Requires the name of the topic which gives out the required data.                                                                                        |
-|                              | | messageType: Set the type of predefined data structure used to deliver the required attitude data.                                                             |
-|                              | | throttle_rate: Sets the rate at which callbacks are called in miliseconds.                                                                                     |
-|                              | |                                                                                                                                                                |
-+------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-REST
-""""
-
-.. important:: Please make sure replace http with https and remove port in IP and add token in header of the REST call. 
-
-
-+------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
-| URL                          | | http://<ip>/ros/<namespace>/mavros/imu/data_uler                                                                                 |
-|                              | | <ip>: IP of the flytpod in the network along with port                                                                           |
-|                              | |     eg: 192.168.x.xxx:9090                                                                                                       |
-|                              | | <namespace>: Name of the flytpod (default: flytpod) which is required for every rest call and can be                             |
-|                              | |     fetched from get namespace rest call.                                                                                        |
-+------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
-| METHOD                       | GET                                                                                                                                |
-+------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
-| DATA PARAMS                  | | Content: application/JSON                                                                                                        |
-|                              | | {}                                                                                                                               |
-|                              | |                                                                                                                                  |
-+------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
-| SUCCESS                      | | Code: 200                                                                                                                        |
-| RESPONSE                     | | Content: {                                                                                                                       |
-|                              | |     twist:{                                                                                                                      |
-|                              | |         twist:{                                                                                                                  |
-|                              | |             linear:{                                                                                                             |
-|                              | |                 x: [Float],                                                                                                      |
-|                              | |                 y: [Float],                                                                                                      |
-|                              | |                 z: [Float]                                                                                                       |
-|                              | |             },                                                                                                                   |
-|                              | |             angular:{                                                                                                            |
-|                              | |                 x: [Float],                                                                                                      |
-|                              | |                 y: [Float],                                                                                                      |
-|                              | |                 z: [Float]                                                                                                       |
-|                              | |             }                                                                                                                    |
-|                              | |         }                                                                                                                        |
-|                              | |     }                                                                                                                            |
-|                              | | }                                                                                                                                |
-|                              | |                                                                                                                                  |
-|                              | | linear: x: roll                                                                                                                  |
-|                              | |         y: pitch                                                                                                                 |
-|                              | |         z: yaw                                                                                                                   |
-|                              | | roll/pitch/yaw values in radians.                                                                                                |
-|                              | |                                                                                                                                  |
-|                              | | angular: x: rollspeed                                                                                                            |
-|                              | |          y: pitchspeed                                                                                                           |
-|                              | |          z: yawspeed                                                                                                             |
-|                              | | rollspeed/pitchspeed/yawspeed values in radians/sec.                                                                             |
-+------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
-| ERROR                        | | Code: 404                                                                                                                        |
-| RESPONSE                     | | resource not found                                                                                                               |
-+------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
-| SAMPLE                       |  .. code-block:: python                                                                                                            |              
-| CALL                         |                                                                                                                                    |
-|                              |                                                                                                                                    |
-|                              |       $.ajax({                                                                                                                     |
-|                              |              type: "GET",                                                                                                          |
-|                              |              dataType: "json",                                                                                                     |
-|                              |              headers: { 'Authentication-Token': token },        \\optional , for authentication only                               |
-|                              |              url: "http://<ip>/ros/<namespace>/mavros/imu/data_uler",         \\ change http to https for authentication           |
-|                              |              success: function(data){                                                                                              |
-|                              |                  console.log(data);                                                                                                |
-|                              |              }                                                                                                                     |
-|                              |       )};                                                                                                                          |
-+------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
-
-----
-
 Parameter Handling APIs
 ------------------------
+
+
+.. _Param_set_REST:
 
 Parameter Set
 ^^^^^^^^^^^^^^
@@ -1910,6 +1989,8 @@ REST
 
 ----
 
+.. _Param_get_all_REST:
+
 Parameter Get All
 ^^^^^^^^^^^^^^^^^^
 
@@ -1973,6 +2054,7 @@ REST
 
 ----
 
+.. _Param_get_REST:
 
 Parameter Get
 ^^^^^^^^^^^^^^
@@ -2034,6 +2116,8 @@ REST
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
 
 ----
+.. _Param_set_REST:
+
 
 Parameter Save
 ^^^^^^^^^^^^^^^
@@ -2085,6 +2169,8 @@ REST
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
 
 ----
+
+.. _Param_load_REST:
 
 Parameter Load
 ^^^^^^^^^^^^^^^
