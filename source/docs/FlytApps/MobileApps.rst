@@ -255,7 +255,7 @@ Android App - Java (Android-Studio)
 Flyt - Android SDK
 ------------------
 
-a. Here you are required to download the Flyt-Android-SDK based on Android Studio by signing up `here <http://flytbase.com/flytpod>`_ and build your app using it.
+a. Here you are required to download the Flyt-Android-SDK based on Android Studio by signing up `here <http://flytbase.com/flytos#flytsdk>`_ and build your app using it.
 b. You will recieve the download links by mail, once you sign up.
 c. The SDK has all the required libraries for making REST calls and a websocket connection to FlytPOD already integrated in it.
 d. The mainActivity in it shows a sample of how a REST call and a WebSocket call is to be made.
