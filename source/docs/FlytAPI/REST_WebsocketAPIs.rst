@@ -1138,6 +1138,251 @@ REST
 
 ----
 
+
+
+Global Position Setpoint
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+This command commands the vehicle to go to specified geo coordinates and hover. It overrides any previous mission being carried out and starts hovering.
+
+
+.. important:: Please make sure replace http with https and remove port in IP and add token in header of the REST call. 
+
+REST
+""""
+
+
++------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| URL                          | | http://<ip>/ros/<namespace>/navigation/position_set_global                                                                                                    |
+|                              | | <ip>: IP of the flytpod in the network along with port                                                                                                        |
+|                              | |     eg: 192.168.x.xxx:9090                                                                                                                                    |
+|                              | | <namespace>: Name of the flytpod (default: flytpod) which is required for every rest call and can be                                                          |
+|                              | |     fetched from get namespace rest call.                                                                                                                     |
++------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| METHOD                       | GET , POST                                                                                                                                                      |
++------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| DATA PARAMS                  | | Content: application/JSON                                                                                                                                     |
+|                              | | {                                                                                                                                                             |
+|                              | |     twist:{                                                                                                                                                   |
+|                              | |         twist:{                                                                                                                                               |
+|                              | |             linear:{                                                                                                                                          |
+|                              | |                 x: [Float],                                                                                                                                   |
+|                              | |                 y: [Float],                                                                                                                                   |
+|                              | |                 z: [Float]                                                                                                                                    |
+|                              | |             },                                                                                                                                                |
+|                              | |             angular:{                                                                                                                                         |
+|                              | |                 z: [Float]                                                                                                                                    |
+|                              | |             }                                                                                                                                                 |
+|                              | |         }                                                                                                                                                     |
+|                              | |     },                                                                                                                                                        |
+|                              | |     tolerance:  [Float],                                                                                                                                      |
+|                              | |     async:      [Boolean],                                                                                                                                    |
+|                              | |     relative:   [Boolean],                                                                                                                                    |
+|                              | |     yaw_valid : [Boolean],                                                                                                                                    |
+|                              | |     body_frame : [Boolean]                                                                                                                                    |
+|                              | | }                                                                                                                                                             |
+|                              | |                                                                                                                                                               |
+|                              | | Example                                                                                                                                                       |
+|                              | |                                                                                                                                                               |
+|                              | | {                                                                                                                                                             |
+|                              | |     twist:{                                                                                                                                                   |
+|                              | |         twist:{                                                                                                                                               |
+|                              | |             linear:{                                                                                                                                          |
+|                              | |                 x: 2.00,                                                                                                                                      |
+|                              | |                 y: 3.00,                                                                                                                                      |
+|                              | |                 z: -1.00                                                                                                                                      |
+|                              | |             },                                                                                                                                                |
+|                              | |             angular:{                                                                                                                                         |
+|                              | |                 z : 1.0                                                                                                                                       |
+|                              | |             }                                                                                                                                                 |
+|                              | |         }                                                                                                                                                     |
+|                              | |     },                                                                                                                                                        |
+|                              | |     tolerance: 2.00,                                                                                                                                          |
+|                              | |     async: true,                                                                                                                                              |
+|                              | |     yaw_valid: true,                                                                                                                                          |
+|                              | |                                                                                                                                                               |
+|                              | |                                                                                                                                                               |
+|                              | | }                                                                                                                                                             |
+|                              | | linear: x ,y,z : xyz global position coordinates.                                                                                                             |
+|                              | | angular: z  : used for heading when yaw_valid set to true.                                                                                                    |
+|                              | | tolerance: The radial value within which the setpoint is considered reached.                                                                                  |
+|                              | | yaw_valid: Decides whether to use angular: z value for deciding the setpoint heading or just use default heading.                                             |
++------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| SUCCESS                      | | Code: 200                                                                                                                                                     |
+| RESPONSE                     | | Content: {                                                                                                                                                    | 
+|                              | |     success : [Boolean],                                                                                                                                      |
+|                              | | }                                                                                                                                                             |
+|                              | | success: true:  command accepted by system , false: command rejected by system.                                                                               |
++------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ERROR                        | | Code: 404                                                                                                                                                     |
+| RESPONSE                     | | resource not found                                                                                                                                            |
++------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| SAMPLE                       |  .. code-block:: python                                                                                                                                         |
+| CALL                         |                                                                                                                                                                 |
+|                              |       var  msgdata={};                                                                                                                                          |
+|                              |       msgdata["twist"]={};                                                                                                                                      |
+|                              |       msgdata.twist["twist"]={};                                                                                                                                |
+|                              |       masdata.twist.twist["linear"]={};                                                                                                                         |
+|                              |       msgdata.twist.twist.linear["x"]=2.00;                                                                                                                     |
+|                              |       msgdata.twist.twist.linear["y"]=3.00;                                                                                                                     |
+|                              |       msgdata.twist.twist.linear["z"]=-1.00;                                                                                                                    |
+|                              |       msgdata.twist.twist["angular"]={};                                                                                                                        |
+|                              |       msgdata.twist.twist.angular["z"]=1.00;                                                                                                                    |
+|                              |       msgdata["tolerance"]=2.00;                                                                                                                                |
+|                              |       msgdata["async"]=true;                                                                                                                                    |
+|                              |       msgdata["relative"]=false;                                                                                                                                |
+|                              |       msgdata["yaw_valid"]=true;                                                                                                                                |
+|                              |       msgdata["body_frame"]=false;                                                                                                                              |
+|                              |                                                                                                                                                                 |
+|                              |       $.ajax({                                                                                                                                                  |
+|                              |           type: "POST",                                                                                                                                         |
+|                              |           dataType: "json",                                                                                                                                     |
+|                              |           headers: { 'Authentication-Token': token },   \\optional , for authentication only                                                                    |
+|                              |           data: JSON.stringify(msgdata),                                                                                                                        |
+|                              |           url: "http://<ip>/ros/<namespace>/navigation/position_set_global",         \\ change http to https for authentication                                 |
+|                              |           success: function(data){                                                                                                                              |
+|                              |                  console.log(data);                                                                                                                             |
+|                              |           }                                                                                                                                                     |
+|                              |       };                                                                                                                                                        |
++------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+----
+
+Set Home
+^^^^^^^^
+
+This command sets the home position for the drone.
+
+
+.. important:: Please make sure replace http with https and remove port in IP and add token in header of the REST call. 
+
+REST
+""""
+
+
++------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| URL                          | | http://<ip>/ros/<namespace>/navigation/set_home                                                                                                               |
+|                              | | <ip>: IP of the flytpod in the network along with port                                                                                                        |
+|                              | |     eg: 192.168.x.xxx:9090                                                                                                                                    |
+|                              | | <namespace>: Name of the flytpod (default: flytpod) which is required for every rest call and can be                                                          |
+|                              | |     fetched from get namespace rest call.                                                                                                                     |
++------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| METHOD                       | GET , POST                                                                                                                                                      |
++------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| DATA PARAMS                  | | Content: application/JSON                                                                                                                                     |
+|                              | | {                                                                                                                                                             |
+|                              | |     lat:  [Float],                                                                                                                                            |
+|                              | |     lon:  [Float],                                                                                                                                            |
+|                              | |     alt:  [Float],                                                                                                                                            |
+|                              | |     set_current: [Boolean],                                                                                                                                   |
+|                              | | }                                                                                                                                                             |
+|                              | |                                                                                                                                                               |
+|                              | | Example                                                                                                                                                       |
+|                              | |                                                                                                                                                               |
+|                              | | {                                                                                                                                                             |
+|                              | |     lat: 2.00,                                                                                                                                                |
+|                              | |     lon: true,                                                                                                                                                |
+|                              | |     alt: true,                                                                                                                                                |
+|                              | |     set_current: ,                                                                                                                                            |
+|                              | |                                                                                                                                                               |
+|                              | | }                                                                                                                                                             |
+|                              | |  Lat: latitude coordinates of home.                                                                                                                           |
+|                              | | Lon: longititude coordinates of home.                                                                                                                         |
+|                              | | alt: altitude at which the vehicle will hover.                                                                                                                |
+|                              | | set_current:                                                                                                                                                  |
++------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| SUCCESS                      | | Code: 200                                                                                                                                                     |
+| RESPONSE                     | | Content: {                                                                                                                                                    | 
+|                              | |     success : [Boolean],                                                                                                                                      |
+|                              | | }                                                                                                                                                             |
+|                              | | success: true:  command accepted by system , false: command rejected by system.                                                                               |
++------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ERROR                        | | Code: 404                                                                                                                                                     |
+| RESPONSE                     | | resource not found                                                                                                                                            |
++------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| SAMPLE                       |  .. code-block:: python                                                                                                                                         |
+| CALL                         |                                                                                                                                                                 |
+|                              |       var  msgdata={};                                                                                                                                          |
+|                              |       msgdata["lat"]=2.00;                                                                                                                                      |
+|                              |       msgdata["lon"]=true;                                                                                                                                      |
+|                              |       msgdata["alt"]=false;                                                                                                                                     |
+|                              |       msgdata["set_current"]=true;                                                                                                                              |
+|                              |                                                                                                                                                                 |
+|                              |       $.ajax({                                                                                                                                                  |
+|                              |           type: "POST",                                                                                                                                         |
+|                              |           dataType: "json",                                                                                                                                     |
+|                              |           headers: { 'Authentication-Token': token },   \\optional , for authentication only                                                                    |
+|                              |           data: JSON.stringify(msgdata),                                                                                                                        |
+|                              |           url: "http://<ip>/ros/<namespace>/navigation/set_home",         \\ change http to https for authentication                                            |
+|                              |           success: function(data){                                                                                                                              |
+|                              |                  console.log(data);                                                                                                                             |
+|                              |           }                                                                                                                                                     |
+|                              |       };                                                                                                                                                        |
++------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+----
+
+Set Current Waypoint
+^^^^^^^^^^^^^^^^^^^^
+
+This command sets the current waypoint for the vehicle.
+
+
+.. important:: Please make sure replace http with https and remove port in IP and add token in header of the REST call. 
+
+REST
+""""
+
+
++------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| URL                          | | http://<ip>/ros/<namespace>/navigation/waypoint_set_current                                                                                                   |
+|                              | | <ip>: IP of the flytpod in the network along with port                                                                                                        |
+|                              | |     eg: 192.168.x.xxx:9090                                                                                                                                    |
+|                              | | <namespace>: Name of the flytpod (default: flytpod) which is required for every rest call and can be                                                          |
+|                              | |     fetched from get namespace rest call.                                                                                                                     |
++------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| METHOD                       | GET , POST                                                                                                                                                      |
++------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| DATA PARAMS                  | | Content: application/JSON                                                                                                                                     |
+|                              | | {                                                                                                                                                             |
+|                              | |     wp_seq:  [int]                                                                                                                                            |
+|                              | | }                                                                                                                                                             |
+|                              | |                                                                                                                                                               |
+|                              | | Example                                                                                                                                                       |
+|                              | |                                                                                                                                                               |
+|                              | | {                                                                                                                                                             |
+|                              | |     wp_seq: 2.00                                                                                                                                              |
+|                              | | }                                                                                                                                                             |
+|                              | | wp_seq: latitude coordinates of home.                                                                                                                         |
++------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| SUCCESS                      | | Code: 200                                                                                                                                                     |
+| RESPONSE                     | | Content: {                                                                                                                                                    | 
+|                              | |     success : [Boolean],                                                                                                                                      |
+|                              | | }                                                                                                                                                             |
+|                              | | success: true:  command accepted by system , false: command rejected by system.                                                                               |
++------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ERROR                        | | Code: 404                                                                                                                                                     |
+| RESPONSE                     | | resource not found                                                                                                                                            |
++------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| SAMPLE                       |  .. code-block:: python                                                                                                                                         |
+| CALL                         |                                                                                                                                                                 |
+|                              |       var  msgdata={};                                                                                                                                          |
+|                              |       msgdata["wp_seq"]=2.00;                                                                                                                                   |
+|                              |                                                                                                                                                                 |
+|                              |       $.ajax({                                                                                                                                                  |
+|                              |           type: "POST",                                                                                                                                         |
+|                              |           dataType: "json",                                                                                                                                     |
+|                              |           headers: { 'Authentication-Token': token },   \\optional , for authentication only                                                                    |
+|                              |           data: JSON.stringify(msgdata),                                                                                                                        |
+|                              |           url: "http://<ip>/ros/<namespace>/navigation/waypoint_set_current",         \\ change http to https for authentication                                |
+|                              |           success: function(data){                                                                                                                              |
+|                              |                  console.log(data);                                                                                                                             |
+|                              |           }                                                                                                                                                     |
+|                              |       };                                                                                                                                                        |
++------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+----
+
 Video Streaming APIs
 ---------------------
 
