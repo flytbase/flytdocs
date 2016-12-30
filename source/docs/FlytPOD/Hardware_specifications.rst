@@ -15,10 +15,12 @@ Expansion Panel
 .. image:: /_static/Images/iopannel.jpg
   	:align: center
 
-.. image:: /_static/Images/sideviews.jpg
-	:scale: 35%
-	:align: center
+.. .. image:: /_static/Images/sideviews.jpg
+.. 	:scale: 35%
+.. 	:align: center
 	
+.. image:: /_static/Images/FPsideviews.png
+	:align: center
 
 
 1. Power Button
@@ -194,9 +196,10 @@ Solid red: Supply working.
 
 13. External GPS MAG Port
 ^^^^^^^^^^^^^^^^^^^^^^^^^
-Connect up to two external GPS-MAG sensors for redundancy and accuracy.
-GPS-MAG1 is the primary port. GPS-MAG2 port is reserved for now. You must attach the provided GPS-MAG module to this port for stable flight. 
+Connect up to two external GPS-MAG sensors for redundancy and accuracy. 
+GPS-MAG1 is the primary port in FlytPOD. You must attach the provided GPS-MAG module to this port for stable flight.
 
+.. attention:: FlytPOD PRO comes with two GPS-MAG ports thus allowing you to connect two external GPS-MAG sensors. 
 
 14. VI Sensor Input
 ^^^^^^^^^^^^^^^^^^^
@@ -329,9 +332,11 @@ Radio Receiver
 GPS-Magnetometer
 ^^^^^^^^^^^^^^^^
 
-External GPS-MAG can be connected to FlytPOD through the connector provided on the side. Default port available for this is GPS-MAG 1. GPS-MAG 2 is reserved for now. Use of a Standoff is recommended in order to avoid interference. Make sure to mount it in such a way that FlytPOD heading is aligned with the GPS-MAG board heading.
+External GPS-MAG can be connected to FlytPOD through the connector provided on the side. Default port available for this is GPS-MAG 1 in FlytPOD. Use of a Standoff is recommended in order to avoid interference. Make sure to mount it in such a way that FlytPOD heading is aligned with the GPS-MAG board heading.
 
-.. note:: * Of the two ports provided, GPS-MAG 1 must be used for connecting external GPS-MAG as GPS-MAG 2 is reserved for future       development.
+.. attention:: FlytPOD PRO comes with two GPS-MAG ports. This offers a fail safe mechanism for reliable navigation.
+
+ .. .. note:: * Of the two ports provided, GPS-MAG 1 must be used for connecting external GPS-MAG as GPS-MAG 2 is reserved for future development.
 
 
 
