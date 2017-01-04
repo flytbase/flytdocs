@@ -71,36 +71,43 @@ b. *Using FlytOS Debian Package* - FlytOS debian package for armhf architecture 
 
    1) But, before doing that, install the following dependencies first:
 
-      * Linux - Ubuntu 14.04
-      * `ROS - Indigo`_
+      * Linux - Ubuntu 16.04
+      * `ROS - Kinetic`_ 
       * `OpenCV 2.4`_ (for vision/video streaming APIs)
-      * Other dependencies - Run the following commands in your terminal.
+      * Other dependencies - Run the following commands in your terminal with *sudo* permission.
            
       .. literalinclude:: include/flytos_dependency.sh
          :language: bash
          :tab-width: 4 
 
-   2) Before proceeding further, add the following two lines at the end of your $HOME/.bashrc file.
+   2) You have to update some kernel modules for video streaming to work properly. Run the following script as root or run each command with *sudo* permission
+    
+      .. literalinclude:: include/kernel_module_update.sh
+         :language: bash
+         :tab-width: 4 
+
+   3) Before proceeding further, add the following three lines at the end of your /etc/bash.bashrc file. Please note that you will need *sudo* permission to edit the file.
     
    .. code-block:: bash
-    
-       export PYTHONPATH=$PYTHONPATH:/flyt/flytapps
+       
+       source /opt/ros/kinetic/setup.bash
+       export PYTHONPATH=$PYTHONPATH:/flyt/flytapps:/flyt/userapps
        source /flyt/flytos/flytcore/setup.bash
-    
-   3) Download the flytOS_0.x-y_armhf.deb file from `FlytOS Download`_ page. Once downloaded, run the following command in your terminal to install FlytOS.
+
+   4) Download the flytOS_0.x-y_armhf.deb file from `FlytOS Download`_ page. Once downloaded, run the following command in your terminal to install FlytOS.
     
    .. code-block:: bash
    
        $ sudo dpkg -i <path to debian package location>/flytOS_0.x-y_armhf.deb
 
-   4) Just in case you see any dependency issues cropping up in your screen while executing the install script, kindly run the following command and execute the previous command again.
+
+   5) Just in case you see any dependency issues cropping up in your screen while executing the install script, kindly run the following command and execute the previous command again.
     
    .. code-block:: bash
     
        $ sudo apt-get -f install 
 
-
-   5) Check for ``Congratulations! FlytOS installation completed`` message at the end.
+   6) Check for ``Congratulations! FlytOS installation completed`` message at the end.
     
 
    .. i. But, before doing that, install the following dependencies first:
@@ -172,7 +179,7 @@ Once the update is complete, run the following command in your terminal to updat
 
    <br />
 
-.. _ROS - Indigo: http://wiki.ros.org/indigo/Installation/Ubuntu
+.. _ROS - Kinetic: http://wiki.ros.org/kinetic/Installation/Ubuntu
 .. _FlytOS Download: http://flytbase.com/flytos/#download
 .. _Pixhawk: https://pixhawk.org/choice
 .. _ODROID-XU4: http://www.hardkernel.com/main/products/prdt_info.php
