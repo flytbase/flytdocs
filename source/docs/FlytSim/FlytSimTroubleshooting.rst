@@ -16,7 +16,7 @@ Errors
 
      export PYTHONPATH=$PYTHONPATH:/flyt/flytapps
      source /flyt/flytos/flytcore/setup.bash
-     export GAZEBO_MODEL_PATH=${GAZEBO_MODEL_PATH}:$(rospack find sitl_gazebo)/models
+     source /flyt/flytos/flytcore/share/sitl_gazebo/setup.sh
 
   Once checked/added, source your $HOME/.bashrc file or launch FlytSim in new terminal
 
@@ -28,7 +28,7 @@ Errors
 
      export PYTHONPATH=$PYTHONPATH:/flyt/flytapps
      source /flyt/flytos/flytcore/setup.bash
-     export GAZEBO_MODEL_PATH=${GAZEBO_MODEL_PATH}:$(rospack find sitl_gazebo)/models
+     source /flyt/flytos/flytcore/share/sitl_gazebo/setup.sh
 
   Once checked/added, source your $HOME/.bashrc file or launch FlytSim in new terminal
 
@@ -40,7 +40,7 @@ Errors
 
      export PYTHONPATH=$PYTHONPATH:/flyt/flytapps
      source /flyt/flytos/flytcore/setup.bash
-     export GAZEBO_MODEL_PATH=${GAZEBO_MODEL_PATH}:$(rospack find sitl_gazebo)/models
+     source /flyt/flytos/flytcore/share/sitl_gazebo/setup.sh
 
   Once checked/added, source your $HOME/.bashrc file or launch FlytSim in new terminal
 
@@ -62,7 +62,7 @@ Errors
 
   .. code-block:: bash
 
-   $ sudo apt-get install ros-indigo-gazebo6-*
+   $ sudo apt-get install ros-indigo-gazebo7-*
   
 
 
@@ -72,6 +72,22 @@ FAQs
 ----
 
 * How to know my FlytSIM version?
+
+  Execute the following command in your terminal.
+
+  .. code-block:: bash
+
+   $ dpkg -s flytcore
+
 * How to know my Gazebo version?
-* How to update FlytSIM to the latest version?
-* When are new updates released?
+
+  Execute the following command in your terminal.
+
+  .. code-block:: bash
+
+   $ gazebo -v
+
+.. * How to update FlytSIM to the latest version?
+  
+  
+.. * When are new updates released?
