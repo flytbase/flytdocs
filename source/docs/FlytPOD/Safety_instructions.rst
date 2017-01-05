@@ -36,3 +36,6 @@ Safety Guidelines
 * Always keep FlytPOD updated. We are adding lot of security and safety modules and will be continuously releasing updates.
 * Please follow rules and regulations laid down by your local authority.
 
+.. note:: In case you are using Pixhawk, check out the `pre-flight checklist <http://ardupilot.org/copter/docs/flying-arducopter.html>`_ before you fly. 
+
+

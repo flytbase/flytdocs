@@ -199,7 +199,7 @@ Solid red: Supply working.
 Connect up to two external GPS-MAG sensors for redundancy and accuracy. 
 GPS-MAG1 is the primary port in FlytPOD. You must attach the provided GPS-MAG module to this port for stable flight.
 
-.. attention:: FlytPOD PRO comes with two GPS-MAG ports thus allowing you to connect two external GPS-MAG sensors. 
+.. attention:: FlytPOD PRO comes with two GPS-MAG ports thus allowing you to connect upto two external GPS-MAG sensors. 
 
 14. VI Sensor Input
 ^^^^^^^^^^^^^^^^^^^
