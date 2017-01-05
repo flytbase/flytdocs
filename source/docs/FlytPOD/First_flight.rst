@@ -14,7 +14,7 @@ First Flight with FlytPOD
    e. Once your basic gains are stable and vehicle is stabilizing well then go to ``Altctl Mode``. Height will be stabilized automatically. Without LIDAR or SONAR the height might drift within a meter.
    f. In ``altitude control mode`` throttle stick should be kept at middle to stay at current altitude. 
 
-3. Position hold: 
+3. Position hold:
   
    a. Position and height are stabilized in this mode.
    b. RGB LED should be green for this mode to work.
@@ -26,5 +26,8 @@ First Flight with FlytPOD
    b. RGB LED should be green for this mode to work.
    c. Make sure that Position control works before switching to offboard mode.
    d. Vehicle will start to hover at the same position after switching to offboard mode until you start using any other app. 
-   e. RC controller sticks will not work in this mode. Only offboard switch will work which should be kept handy for emergency  situations.
-   f. Try testing your first Flyt app :ref:`here<onboard app>`. 
+   e. RC controller sticks will not work in this mode. Only offboard switch will work which should be kept handy for emergency situations.
+   f. Try testing your first Flyt app :ref:`here<onboard app>`.
+
+.. note:: In case you are using Pixhawk, check out the `pre-flight checklist <http://ardupilot.org/copter/docs/flying-arducopter.html>`_ before you fly. 
+

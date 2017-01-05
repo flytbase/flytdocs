@@ -26,3 +26,5 @@ Below are a few flying essentials that the on-field operations team should be aw
 10. FlytPOD can be powered through main power connector only. The Autopilot can be powered independenty from the VI power and ESCs.
 
 11. FlytPOD has 3 power rails marked as '5V', '3V3' and '+'. On IO panel, pins marked as '5V' and '3V3' output 5V and 3.3V and can be used to power payloads. Pins marked as '+' are powered through ESCs. 
+
+.. note:: In case you are using Pixhawk, check out the `pre-flight checklist <http://ardupilot.org/copter/docs/flying-arducopter.html>`_ before you fly.

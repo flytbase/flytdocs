@@ -1,4 +1,4 @@
-.. Getting Started with Flyt
+ .. Getting Started with Flyt
 .. -------------------------
 
 
@@ -49,15 +49,20 @@ Getting Started
    The FlytKit Includes: 
 
    * FlytPOD
-   * 2 x High Gain 6 dBm WiFi antenna
+   * 2 x High Gain 6 dBi WiFi antenna
    * External GPS-MAG module
    * Power Module
    * Wall adapter
    * MicroSD (8 GB) for data-logging
    * MicroSD (32 GB) preloaded with FlytOS
    * FlytPOD flyer with default WiFi password.
+   * GPS Standoff
 
    Make sure your FlytKit contains all the above mentioned components.
+   
+   .. note:: FlytPOD PRO comes with 2 x External GPS-MAG modules and a 32 GB built-in EMMC card.
+   
+   
 
 2. Configure / Protect FlytPOD WiFi:
 
