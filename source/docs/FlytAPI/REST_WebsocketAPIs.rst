@@ -10,14 +10,14 @@ FlytAPIs have been extended from ROS to REST and Websocket. This document descri
 .. caution:: This guide is under active development.
 
 Authentication APIs
---------------------
+-------------------
 
 Be advised, the Authentication APIs are specifically for FlytPODs with authentication enabled in them and for FlytSim.
 
 .. _Login_REST:
 
 Login/token
-^^^^^^^^^^^^
+^^^^^^^^^^^
 
 This API is used for getting a valid token from FlytPOD or FlytSim. A valid token recieved from this call is sent in the header with any rest call for it to be accepted by the FlytPOD or FlytSim.
 
@@ -352,7 +352,7 @@ REST
 .. _Position_Hold_REST:
 
 Position hold
-^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^
 
 This command commands the vehicle to hover at the current location. It overrides any previous mission being carried out and starts hovering.
 
@@ -782,7 +782,7 @@ REST
 .. _Get_Waypoints_REST:
 
 Get Waypoints
-^^^^^^^^^^^^^^
+^^^^^^^^^^^^^
 
 This command gets the current waypoint mission set on the autopilot.
 
@@ -866,7 +866,7 @@ REST
 .. _Set_Waypoints_REST:
 
 Set Waypoints
-^^^^^^^^^^^^^^
+^^^^^^^^^^^^^
 
 This command gets the current waypoint mission set on the autopilot.
 
@@ -1138,7 +1138,7 @@ REST
 
 ----
 
-
+.. _Global_Position_Setpoint_REST:
 
 Global Position Setpoint
 ^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1188,8 +1188,8 @@ REST
 |                              | |     twist:{                                                                                                                                                   |
 |                              | |         twist:{                                                                                                                                               |
 |                              | |             linear:{                                                                                                                                          |
-|                              | |                 x: 18.594061,                                                                                                                                      |
-|                              | |                 y: 73.911037,                                                                                                                                      |
+|                              | |                 x: 18.594061,                                                                                                                                 |
+|                              | |                 y: 73.911037,                                                                                                                                 |
 |                              | |                 z: -1.00                                                                                                                                      |
 |                              | |             },                                                                                                                                                |
 |                              | |             angular:{                                                                                                                                         |
@@ -1239,7 +1239,7 @@ REST
 |                              |           dataType: "json",                                                                                                                                     |
 |                              |           headers: { 'Authentication-Token': token },   \\optional , for authentication only                                                                    |
 |                              |           data: JSON.stringify(msgdata),                                                                                                                        |
-|                              |           url: "http://<ip>/ros/<namespace>/navigation/position_set_global",    \\ change http to https for authentication                                 |
+|                              |           url: "http://<ip>/ros/<namespace>/navigation/position_set_global",    \\ change http to https for authentication                                      |
 |                              |           success: function(data){                                                                                                                              |
 |                              |                  console.log(data);                                                                                                                             |
 |                              |           }                                                                                                                                                     |
@@ -1247,6 +1247,8 @@ REST
 +------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 ----
+
+.. _Set_Home_REST:
 
 Set Home
 ^^^^^^^^
@@ -1322,6 +1324,8 @@ REST
 
 ----
 
+.. _Set_Current_Waypoint_REST:
+
 Set Current Waypoint
 ^^^^^^^^^^^^^^^^^^^^
 
@@ -1384,12 +1388,12 @@ REST
 ----
 
 Video Streaming APIs
----------------------
+--------------------
 
 .. _List_Stream_REST:
 
 List Video Streams
-^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^
 
 This command gets the list of video streams available from the FlytOS.
 
@@ -1444,7 +1448,7 @@ REST
 .. _Start_Stream_REST:
 
 Start video stream
-^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^
 
 This command gets you the video stream for the particular link.
 
@@ -1485,7 +1489,7 @@ REST
 .. _Stop_Stream_REST:
 
 Stop video stream
-^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^
 
 This command stops the video stream for the particular link to your ip.
 
@@ -1500,7 +1504,7 @@ This command stops the video stream for the particular link to your ip.
 .. _Capture_Stream_REST:
 
 Snapshot
-^^^^^^^^^
+^^^^^^^^
 
 This command gets you a latest snapshot of the specified video streaming topic.
 
@@ -1536,7 +1540,7 @@ REST
 ----
 
 Object Tracking APIs
----------------------
+--------------------
 
 .. important:: The Object Tracking module does not start automatically when you start FlytOS, it needs to be launched seperately using the following command.
 
@@ -1549,7 +1553,7 @@ Object Tracking APIs
 
 
 Detect-Track Mode Selection
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 | PARAMETERS                   | | ob_track_mode                                                                                                      |
@@ -2069,7 +2073,7 @@ REST
 .. _HUD_REST:
 
 HUD
-^^^^
+^^^
 
 Fetches real time HUD data at required rate. To be done after initialization of websocket.
 
@@ -2159,13 +2163,13 @@ REST
 ----
 
 Parameter Handling APIs
-------------------------
+-----------------------
 
 
 .. _Param_set_REST:
 
 Parameter Set
-^^^^^^^^^^^^^^
+^^^^^^^^^^^^^
 
 This command sets parameters in FlytOS. 
 
@@ -2237,7 +2241,7 @@ REST
 .. _Param_get_all_REST:
 
 Parameter Get All
-^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^
 
 This command gets all parameters from FlytOS. 
 
@@ -2302,7 +2306,7 @@ REST
 .. _Param_get_REST:
 
 Parameter Get
-^^^^^^^^^^^^^^
+^^^^^^^^^^^^^
 
 This command gets a particular parameter from FlytOS. 
 
@@ -2361,11 +2365,12 @@ REST
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
 
 ----
-.. _Param_set_REST:
+
+.. _Param_save_REST:
 
 
 Parameter Save
-^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^
 
 This command Saves all parameters in FlytOS with changes still reflected on next reboot. 
 
@@ -2418,7 +2423,7 @@ REST
 .. _Param_load_REST:
 
 Parameter Load
-^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^
 
 This command loads parameters on to the FlytOS if a new parameter file is uploaded to the FlytOS through Flytconsole. 
 
@@ -2467,6 +2472,8 @@ REST
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
 
 ----
+
+.. _Param_create_REST:
 
 Parameter Create
 ^^^^^^^^^^^^^^^^
@@ -2537,6 +2544,8 @@ REST
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
 
 ----
+
+.. _Param_delete_REST:
 
 Parameter Delete
 ^^^^^^^^^^^^^^^^
@@ -2630,7 +2639,7 @@ REST
 |                              | | {}                                                                                                                                     |
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
 | SUCCESS                      | | Code: 200                                                                                                                              |
-| RESPONSE                     | | Content: {                                                                                                                             | 
+| RESPONSE                     | | Content: {                                                                                                                             |
 |                              | |     success : [Boolean]                                                                                                                |
 |                              | | }                                                                                                                                      |
 |                              | | success:  Tells whether the command is accepted or rejected by system.                                                                 |
@@ -2663,6 +2672,8 @@ REST
 Setup APIs
 ----------
 
+.. _Setup_actuator_testing:
+
 Actuator Testing
 ^^^^^^^^^^^^^^^^
 
@@ -2685,14 +2696,13 @@ This command tests the actuators in FlytOS.
 |                              | |                                                                                                                                        |
 |                              | | Example                                                                                                                                |
 |                              | | {                                                                                                                                      |
-|                              | | 		actuator_id: " ",                                                                                                                  |
+|                              | |     actuator_id: " ",                                                                                                                  |
 |                              | |     time_s: " "                                                                                                                        |
 |                              | | }                                                                                                                                      |
 |                              | | actuator_id: The id of the actuator                                                                                                    |
-|                              | |                                                                                                                                        |
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
 | SUCCESS                      | | Code: 200                                                                                                                              |
-| RESPONSE                     | | Content: {                                                                                                                             | 
+| RESPONSE                     | | Content: {                                                                                                                             |
 |                              | |     success : [Boolean]                                                                                                                |
 |                              | | }                                                                                                                                      |
 |                              | | success:  Tells whether the command is accepted or rejected by system.                                                                 |
@@ -2721,5 +2731,124 @@ This command tests the actuators in FlytOS.
 
 ----
 
+ESC Calibration
+^^^^^^^^^^^^^^^
 
+.. _Setup_esc_calibration:
+
+This command calibrates the ESCs in FlytOS.
+
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| URL                          | | http://<ip>/ros/<namespace>/setup/esc_calibration                                                                                      |
+|                              | | <ip>: IP of the flytpod in the network along with port                                                                                 |
+|                              | |     eg: 192.168.x.xxx:9090                                                                                                             |
+|                              | | <namespace>: Name of the flytpod (default: flytpod) which is required for every rest call                                              |
+|                              | |     and can be fetched from get namespace rest call.                                                                                   |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| METHOD                       | GET , POST                                                                                                                               |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| DATA PARAMS                  | | Content: application/JSON                                                                                                              |
+|                              | | {                                                                                                                                      |
+|                              | |     pwm_min: [float32],                                                                                                                |
+|                              | |     pwm_max: [float32],                                                                                                                |
+|                              | |     num_of_actuators: [int8],                                                                                                          |
+|                              | |     calibration_state: [int8]                                                                                                          |
+|                              | | }                                                                                                                                      |
+|                              | |                                                                                                                                        |
+|                              | | Example                                                                                                                                |
+|                              | | {                                                                                                                                      |
+|                              | |     pwm_min: ,                                                                                                                         |
+|                              | |     pwm_max: ,                                                                                                                         |
+|                              | |     num_of_actuators: ,                                                                                                                |
+|                              | |     calibration_state:                                                                                                                 |
+|                              | | }                                                                                                                                      |
+|                              | | pwm_min:                                                                                                                               |
+|                              | | pwm_max:                                                                                                                               |
+|                              | | num_of_actuators:                                                                                                                      |
+|                              | | calibration_state:                                                                                                                     |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| SUCCESS                      | | Code: 200                                                                                                                              |
+| RESPONSE                     | | Content: {                                                                                                                             |
+|                              | |     success : [Boolean]                                                                                                                |
+|                              | | }                                                                                                                                      |
+|                              | | success:  Tells whether the command is accepted or rejected by system.                                                                 |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| ERROR                        | | Code: 404                                                                                                                              |
+| RESPONSE                     | | resource not found                                                                                                                     |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| SAMPLE                       |  .. code-block:: python                                                                                                                  |
+| CALL                         |                                                                                                                                          |
+|                              |       var msgdata={};                                                                                                                    |
+|                              |       msgdata["param_info"]={};                                                                                                          |
+|                              |       msgdata.param_info["param_id"]="RTL_ALT";                                                                                          |
+|                              |       $.ajax({                                                                                                                           |
+|                              |           type: "POST",                                                                                                                  |
+|                              |           dataType: "json",                                                                                                              |
+|                              |           headers: { 'Authentication-Token': token },       \\optional , for authentication only                                         |
+|                              |           data: JSON.stringify(msgdata),                                                                                                 |
+|                              |           url: "http://<ip>/ros/<namespace>/setup/esc_clibration",               \\ change http to https for authentication              |
+|                              |           success: function(data){                                                                                                       |
+|                              |                  console.log(data);                                                                                                      |
+|                              |           }                                                                                                                              |
+|                              |       )};                                                                                                                                |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| NOTE                         | | The changes made by set-param are lost in reboot. Use the save-param api after set-param to retain changes on reboot.                  |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+
+----
+
+Module Calibration
+^^^^^^^^^^^^^^^^^^
+
+.. _Setup_module_calibration:
+
+This command calibrates the ESCs in FlytOS.
+
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| URL                          | | http://<ip>/ros/<namespace>/setup/module_calibration                                                                                   |
+|                              | | <ip>: IP of the flytpod in the network along with port                                                                                 |
+|                              | |     eg: 192.168.x.xxx:9090                                                                                                             |
+|                              | | <namespace>: Name of the flytpod (default: flytpod) which is required for every rest call                                              |
+|                              | |     and can be fetched from get namespace rest call.                                                                                   |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| METHOD                       | GET , POST                                                                                                                               |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| DATA PARAMS                  | | Content: application/JSON                                                                                                              |
+|                              | | {                                                                                                                                      |
+|                              | |     module_calibrate: [int8]                                                                                                           |
+|                              | | }                                                                                                                                      |
+|                              | |                                                                                                                                        |
+|                              | | Example                                                                                                                                |
+|                              | | {                                                                                                                                      |
+|                              | |     module_calibrate:                                                                                                                  | 
+|                              | | }                                                                                                                                      |
+|                              | | module_calibrate:                                                                                                                      |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| SUCCESS                      | | Code: 200                                                                                                                              |
+| RESPONSE                     | | Content: {                                                                                                                             |
+|                              | |     success : [Boolean]                                                                                                                |
+|                              | | }                                                                                                                                      |
+|                              | | success:  Tells whether the command is accepted or rejected by system.                                                                 |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| ERROR                        | | Code: 404                                                                                                                              |
+| RESPONSE                     | | resource not found                                                                                                                     |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| SAMPLE                       |  .. code-block:: python                                                                                                                  |
+| CALL                         |                                                                                                                                          |
+|                              |       var msgdata={};                                                                                                                    |
+|                              |       msgdata["param_info"]={};                                                                                                          |
+|                              |       msgdata.param_info["param_id"]="RTL_ALT";                                                                                          |
+|                              |       $.ajax({                                                                                                                           |
+|                              |           type: "POST",                                                                                                                  |
+|                              |           dataType: "json",                                                                                                              |
+|                              |           headers: { 'Authentication-Token': token },       \\optional , for authentication only                                         |
+|                              |           data: JSON.stringify(msgdata),                                                                                                 |
+|                              |           url: "http://<ip>/ros/<namespace>/setup/module_clibration",               \\ change http to https for authentication           |
+|                              |           success: function(data){                                                                                                       |
+|                              |                  console.log(data);                                                                                                      |
+|                              |           }                                                                                                                              |
+|                              |       )};                                                                                                                                |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| NOTE                         | | The changes made by set-param are lost in reboot. Use the save-param api after set-param to retain changes on reboot.                  |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
 
