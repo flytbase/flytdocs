@@ -1188,8 +1188,8 @@ REST
 |                              | |     twist:{                                                                                                                                                   |
 |                              | |         twist:{                                                                                                                                               |
 |                              | |             linear:{                                                                                                                                          |
-|                              | |                 x: 2.00,                                                                                                                                      |
-|                              | |                 y: 3.00,                                                                                                                                      |
+|                              | |                 x: 18.594061,                                                                                                                                      |
+|                              | |                 y: 73.911037,                                                                                                                                      |
 |                              | |                 z: -1.00                                                                                                                                      |
 |                              | |             },                                                                                                                                                |
 |                              | |             angular:{                                                                                                                                         |
@@ -1239,7 +1239,7 @@ REST
 |                              |           dataType: "json",                                                                                                                                     |
 |                              |           headers: { 'Authentication-Token': token },   \\optional , for authentication only                                                                    |
 |                              |           data: JSON.stringify(msgdata),                                                                                                                        |
-|                              |           url: "http://<ip>/ros/<namespace>/navigation/position_set_global",         \\ change http to https for authentication                                 |
+|                              |           url: "http://<ip>/ros/<namespace>/navigation/position_set_global",    \\ change http to https for authentication                                 |
 |                              |           success: function(data){                                                                                                                              |
 |                              |                  console.log(data);                                                                                                                             |
 |                              |           }                                                                                                                                                     |
@@ -2201,7 +2201,7 @@ REST
 |                              | |                 }                                                                                                                      |
 |                              | | }                                                                                                                                      |
 |                              | | param_id: Name of the parameter to be set.                                                                                             |
-|                              | | param_value: Value of the parameter to be set. Should be in string.                                                                    |
+|                              | | param_value: Value of the parameter to be set. Should be of type string.                                                               |
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
 | SUCCESS                      | | Code: 200                                                                                                                              |
 | RESPONSE                     | | Content: {                                                                                                                             | 
@@ -2314,7 +2314,7 @@ REST
 
 
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
-| URL                          | | http://<ip>/ros/<namespace>/param/param_set                                                                                            |
+| URL                          | | http://<ip>/ros/<namespace>/param/param_get                                                                                            |
 |                              | | <ip>: IP of the flytpod in the network along with port                                                                                 |
 |                              | |     eg: 192.168.x.xxx:9090                                                                                                             |
 |                              | | <namespace>: Name of the flytpod (default: flytpod) which is required for every rest call                                              |
@@ -2466,6 +2466,260 @@ REST
 |                              |       )};                                                                                                                                |
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
 
+----
+
+Parameter Create
+^^^^^^^^^^^^^^^^
+
+This command creates parameters in FlytOS. 
+
+.. important:: Please make sure to replace http with https and remove port in IP and add token in header of the REST call. 
+
+
+REST
+""""
+
+
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| URL                          | | http://<ip>/ros/<namespace>/param/param_create                                                                                         |
+|                              | | <ip>: IP of the flytpod in the network along with port                                                                                 |
+|                              | |     eg: 192.168.x.xxx:9090                                                                                                             |
+|                              | | <namespace>: Name of the flytpod (default: flytpod) which is required for every rest call                                              |
+|                              | |     and can be fetched from get namespace rest call.                                                                                   |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| METHOD                       | GET , POST                                                                                                                               |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| DATA PARAMS                  | | Content: application/JSON                                                                                                              |
+|                              | | {                                                                                                                                      |
+|                              | |      param_info:{                                                                                                                      |
+|                              | |                        param_id: [String],                                                                                             |
+|                              | |                        param_value: [String]                                                                                           |
+|                              | |                 }                                                                                                                      |
+|                              | | }                                                                                                                                      |
+|                              | |                                                                                                                                        |
+|                              | |  Example                                                                                                                               |
+|                              | | {                                                                                                                                      |
+|                              | |      param_info:{                                                                                                                      |
+|                              | |                        param_id: "RTL_ALT",                                                                                            |
+|                              | |                        param_value: "5.0"                                                                                              |
+|                              | |                 }                                                                                                                      |
+|                              | | }                                                                                                                                      |
+|                              | | param_id: Name of the parameter to be created.                                                                                         |
+|                              | | param_value: Value of the parameter to be created. Should be of type string.                                                           |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| SUCCESS                      | | Code: 200                                                                                                                              |
+| RESPONSE                     | | Content: {                                                                                                                             | 
+|                              | |     success : [Boolean]                                                                                                                |
+|                              | | }                                                                                                                                      |
+|                              | | success:  Tells whether the command is accepted or rejected by system.                                                                 |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| ERROR                        | | Code: 404                                                                                                                              |
+| RESPONSE                     | | resource not found                                                                                                                     |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| SAMPLE                       |  .. code-block:: python                                                                                                                  |
+| CALL                         |                                                                                                                                          |
+|                              |       var msgdata={};                                                                                                                    |
+|                              |       msgdata["param_info"]={};                                                                                                          |
+|                              |       msgdata.param_info["param_id"]="RTL_ALT";                                                                                          |
+|                              |       msgdata.param_info["param_value"]="5.0";                                                                                           |
+|                              |       $.ajax({                                                                                                                           |
+|                              |           type: "POST",                                                                                                                  |
+|                              |           dataType: "json",                                                                                                              |
+|                              |           headers: { 'Authentication-Token': token },       \\optional , for authentication only                                         |
+|                              |           data: JSON.stringify(msgdata),                                                                                                 |
+|                              |           url: "http://<ip>/ros/<namespace>/param/param_create",               \\ change http to https for authentication                |
+|                              |           success: function(data){                                                                                                       |
+|                              |                  console.log(data);                                                                                                      |
+|                              |           }                                                                                                                              |
+|                              |       )};                                                                                                                                |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| NOTE                         | | The changes made by set-param are lost in reboot. Use the save-param api after set-param to retain changes on reboot.                  |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+
+----
+
+Parameter Delete
+^^^^^^^^^^^^^^^^
+
+This command deletes the parameters in FlytOS. 
+
+.. important:: Please make sure replace http with https and remove port in IP and add token in header of the REST call. 
+
+
+REST
+""""
+
+
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| URL                          | | http://<ip>/ros/<namespace>/param/param_delete                                                                                         |
+|                              | | <ip>: IP of the flytpod in the network along with port                                                                                 |
+|                              | |     eg: 192.168.x.xxx:9090                                                                                                             |
+|                              | | <namespace>: Name of the flytpod (default: flytpod) which is required for every rest call                                              |
+|                              | |     and can be fetched from get namespace rest call.                                                                                   |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| METHOD                       | GET , POST                                                                                                                               |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| DATA PARAMS                  | | Content: application/JSON                                                                                                              |
+|                              | | {                                                                                                                                      |
+|                              | |                                                                                                                                        |
+|                              | |     param_id: [String]                                                                                                                 |
+|                              | |                                                                                                                                        |
+|                              | | }                                                                                                                                      |
+|                              | |                                                                                                                                        |
+|                              | |  Example                                                                                                                               |
+|                              | | {                                                                                                                                      |
+|                              | |                                                                                                                                        |
+|                              | |     param_id: "RTL_ALT"                                                                                                                |
+|                              | |                                                                                                                                        |
+|                              | | }                                                                                                                                      |
+|                              | |                                                                                                                                        |
+|                              | | param_id: Name of the parameter to be deleted.                                                                                         |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| SUCCESS                      | | Code: 200                                                                                                                              |
+| RESPONSE                     | | Content: {                                                                                                                             | 
+|                              | |     success : [Boolean]                                                                                                                |
+|                              | | }                                                                                                                                      |
+|                              | | success:  Tells whether the command is accepted or rejected by system.                                                                 |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| ERROR                        | | Code: 404                                                                                                                              |
+| RESPONSE                     | | resource not found                                                                                                                     |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| SAMPLE                       |  .. code-block:: python                                                                                                                  |
+| CALL                         |                                                                                                                                          |
+|                              |       var msgdata={};                                                                                                                    |
+|                              |       msgdata["param_info"]={};                                                                                                          |
+|                              |       msgdata.param_info["param_id"]="RTL_ALT";                                                                                          |
+|                              |       $.ajax({                                                                                                                           |
+|                              |           type: "POST",                                                                                                                  |
+|                              |           dataType: "json",                                                                                                              |
+|                              |           headers: { 'Authentication-Token': token },       \\optional , for authentication only                                         |
+|                              |           data: JSON.stringify(msgdata),                                                                                                 |
+|                              |           url: "http://<ip>/ros/<namespace>/param/param_delete",               \\ change http to https for authentication                |
+|                              |           success: function(data){                                                                                                       |
+|                              |                  console.log(data);                                                                                                      |
+|                              |           }                                                                                                                              |
+|                              |       )};                                                                                                                                |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| NOTE                         | | The changes made by set-param are lost in reboot. Use the save-param api after set-param to retain changes on reboot.                  |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+
+----
+
+Parameter Reset
+^^^^^^^^^^^^^^^
+
+This command resets the parameters in FlytOS. 
+
+.. important:: Please make sure replace http with https and remove port in IP and add token in header of the REST call. 
+
+
+REST
+""""
+
+
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| URL                          | | http://<ip>/ros/<namespace>/param/param_reset                                                                                          |
+|                              | | <ip>: IP of the flytpod in the network along with port                                                                                 |
+|                              | |     eg: 192.168.x.xxx:9090                                                                                                             |
+|                              | | <namespace>: Name of the flytpod (default: flytpod) which is required for every rest call                                              |
+|                              | |     and can be fetched from get namespace rest call.                                                                                   |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| METHOD                       | GET , POST                                                                                                                               |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| DATA PARAMS                  | | Content: application/JSON                                                                                                              |
+|                              | | {}                                                                                                                                     |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| SUCCESS                      | | Code: 200                                                                                                                              |
+| RESPONSE                     | | Content: {                                                                                                                             | 
+|                              | |     success : [Boolean]                                                                                                                |
+|                              | | }                                                                                                                                      |
+|                              | | success:  Tells whether the command is accepted or rejected by system.                                                                 |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| ERROR                        | | Code: 404                                                                                                                              |
+| RESPONSE                     | | resource not found                                                                                                                     |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| SAMPLE                       |  .. code-block:: python                                                                                                                  |
+| CALL                         |                                                                                                                                          |
+|                              |       var msgdata={};                                                                                                                    |
+|                              |       msgdata["param_info"]={};                                                                                                          |
+|                              |       msgdata.param_info["param_id"]="RTL_ALT";                                                                                          |
+|                              |       $.ajax({                                                                                                                           |
+|                              |           type: "POST",                                                                                                                  |
+|                              |           dataType: "json",                                                                                                              |
+|                              |           headers: { 'Authentication-Token': token },       \\optional , for authentication only                                         |
+|                              |           data: JSON.stringify(msgdata),                                                                                                 |
+|                              |           url: "http://<ip>/ros/<namespace>/param/param_reset",               \\ change http to https for authentication                 |
+|                              |           success: function(data){                                                                                                       |
+|                              |                  console.log(data);                                                                                                      |
+|                              |           }                                                                                                                              |
+|                              |       )};                                                                                                                                |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| NOTE                         | | The changes made by set-param are lost in reboot. Use the save-param api after set-param to retain changes on reboot.                  |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+
+----
+
+
+Setup APIs
+----------
+
+Actuator Testing
+^^^^^^^^^^^^^^^^
+
+This command tests the actuators in FlytOS.
+
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| URL                          | | http://<ip>/ros/<namespace>/setup/actuator_testing                                                                                     |
+|                              | | <ip>: IP of the flytpod in the network along with port                                                                                 |
+|                              | |     eg: 192.168.x.xxx:9090                                                                                                             |
+|                              | | <namespace>: Name of the flytpod (default: flytpod) which is required for every rest call                                              |
+|                              | |     and can be fetched from get namespace rest call.                                                                                   |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| METHOD                       | GET , POST                                                                                                                               |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| DATA PARAMS                  | | Content: application/JSON                                                                                                              |
+|                              | | {                                                                                                                                      |
+|                              | |     actuator_id: [uint8],                                                                                                              |
+|                              | |     time_s: [float32]                                                                                                                  |
+|                              | | }                                                                                                                                      |
+|                              | |                                                                                                                                        |
+|                              | | Example                                                                                                                                |
+|                              | | {                                                                                                                                      |
+|                              | | 		actuator_id: " ",                                                                                                                  |
+|                              | |     time_s: " "                                                                                                                        |
+|                              | | }                                                                                                                                      |
+|                              | | actuator_id: The id of the actuator                                                                                                    |
+|                              | |                                                                                                                                        |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| SUCCESS                      | | Code: 200                                                                                                                              |
+| RESPONSE                     | | Content: {                                                                                                                             | 
+|                              | |     success : [Boolean]                                                                                                                |
+|                              | | }                                                                                                                                      |
+|                              | | success:  Tells whether the command is accepted or rejected by system.                                                                 |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| ERROR                        | | Code: 404                                                                                                                              |
+| RESPONSE                     | | resource not found                                                                                                                     |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| SAMPLE                       |  .. code-block:: python                                                                                                                  |
+| CALL                         |                                                                                                                                          |
+|                              |       var msgdata={};                                                                                                                    |
+|                              |       msgdata["param_info"]={};                                                                                                          |
+|                              |       msgdata.param_info["param_id"]="RTL_ALT";                                                                                          |
+|                              |       $.ajax({                                                                                                                           |
+|                              |           type: "POST",                                                                                                                  |
+|                              |           dataType: "json",                                                                                                              |
+|                              |           headers: { 'Authentication-Token': token },       \\optional , for authentication only                                         |
+|                              |           data: JSON.stringify(msgdata),                                                                                                 |
+|                              |           url: "http://<ip>/ros/<namespace>/setup/actuator_testing",               \\ change http to https for authentication            |
+|                              |           success: function(data){                                                                                                       |
+|                              |                  console.log(data);                                                                                                      |
+|                              |           }                                                                                                                              |
+|                              |       )};                                                                                                                                |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| NOTE                         | | The changes made by set-param are lost in reboot. Use the save-param api after set-param to retain changes on reboot.                  |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+
+----
 
 
 
