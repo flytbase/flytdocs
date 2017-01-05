@@ -11,6 +11,7 @@ apt-get update
 ln -s /usr/src/linux-headers-$(uname -r)/ /lib/modules/$(uname -r)/build
 sed -i 's/#define CONFIG_NEED_MACH_MEMORY_H 1/\/\/#define CONFIG_NEED_MACH_MEMORY_H 1/g' /lib/modules/$(uname -r)/build/include/generated/autoconf.h
 sed -i '$a \\n#define CONFIG_ARCH_MULTIPLATFORM 1\n' /lib/modules/$(uname -r)/build/include/generated/autoconf.h
+make && make install
 cd ..
 rm -rf v4l2loopback/
 
