@@ -28,9 +28,9 @@ Checkout and participate in our `forums`_ and interact with the community sharin
    :hidden:
    :caption: FlytOS
 	
-   docs/FlytOS/FlightComputer.rst
    docs/FlytOS/FlytOS.rst
    docs/FlytOS/FlytOSInstallationGuide.rst
+   docs/FlytOS/FlightComputer.rst
    docs/FlytOS/FlytOSLaunch.rst
 
 .. toctree::

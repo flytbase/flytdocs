@@ -57,7 +57,7 @@ REST
 | ERROR                        | | Code: 404                                                                                                          |
 | RESPONSE                     | | resource not found                                                                                                 |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| SAMPLE                       |  .. code-block:: python                                                                                              |
+| SAMPLE                       |  .. code-block:: rest                                                                                                |
 | CALL                         |                                                                                                                      |
 |                              |          var msgdata={};                                                                                             |
 |                              |          msgdata['username']=$("#username").val();                                                                   |
@@ -113,7 +113,7 @@ REST
 | ERROR                        | | Code: 404                                                                                                          |
 | RESPONSE                     | | resource not found                                                                                                 |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| SAMPLE                       |  .. code-block:: python                                                                                              |
+| SAMPLE                       |  .. code-block:: rest                                                                                                |
 | CALL                         |                                                                                                                      |
 |                              |          $.ajax({                                                                                                    |
 |                              |          type: "POST",                                                                                               |
@@ -171,7 +171,7 @@ REST
 | ERROR                        | | Code: 404                                                                                                          |
 | RESPONSE                     | | resource not found                                                                                                 |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| SAMPLE                       |  .. code-block:: python                                                                                              |
+| SAMPLE                       |  .. code-block:: rest                                                                                                |
 | CALL                         |                                                                                                                      |
 |                              |       $.ajax({                                                                                                       |
 |                              |            type: "POST",                                                                                             |
@@ -221,7 +221,7 @@ REST
 | ERROR                        | | Code: 404                                                                                                          |
 | RESPONSE                     | | resource not found                                                                                                 |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| SAMPLE                       |  .. code-block:: python                                                                                              |
+| SAMPLE                       |  .. code-block:: rest                                                                                                |
 | CALL                         |                                                                                                                      |
 |                              |       $.ajax({                                                                                                       |
 |                              |           type: "POST",                                                                                              |
@@ -279,7 +279,7 @@ REST
 | ERROR                        | | Code: 404                                                                                                          |
 | RESPONSE                     | | resource not found                                                                                                 |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| SAMPLE                       |  .. code-block:: python                                                                                              |
+| SAMPLE                       |  .. code-block:: rest                                                                                                |
 | CALL                         |                                                                                                                      |
 |                              |       var msgdata={};                                                                                                |
 |                              |       msgdata["takeoff_alt"]=4.00;                                                                                   |
@@ -332,7 +332,7 @@ REST
 | ERROR                        | | Code: 404                                                                                                          |
 | RESPONSE                     | | resource not found                                                                                                 |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| SAMPLE                       |  .. code-block:: python                                                                                              |
+| SAMPLE                       |  .. code-block:: rest                                                                                                |
 | CALL                         |                                                                                                                      |
 |                              |       $.ajax({                                                                                                       |
 |                              |           type: "POST",                                                                                              |
@@ -385,7 +385,7 @@ REST
 | ERROR                        | | Code: 404                                                                                                          |
 | RESPONSE                     | | resource not found                                                                                                 |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| SAMPLE                       |  .. code-block:: python                                                                                              |
+| SAMPLE                       |  .. code-block:: rest                                                                                                |
 | CALL                         |                                                                                                                      |
 |                              |       $.ajax({                                                                                                       |
 |                              |           type: "POST",                                                                                              |
@@ -482,7 +482,7 @@ REST
 | ERROR                        | | Code: 404                                                                                                                                                     |
 | RESPONSE                     | | resource not found                                                                                                                                            |
 +------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| SAMPLE                       |  .. code-block:: python                                                                                                                                         |
+| SAMPLE                       |  .. code-block:: rest                                                                                                                                           |
 | CALL                         |                                                                                                                                                                 |
 |                              |       var  msgdata={};                                                                                                                                          |
 |                              |       msgdata["twist"]={};                                                                                                                                      |
@@ -594,7 +594,7 @@ REST
 | ERROR                        | | Code: 404                                                                                                                                                     |
 | RESPONSE                     | | resource not found                                                                                                                                            |
 +------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| SAMPLE                       |  .. code-block:: python                                                                                                                                         |
+| SAMPLE                       |  .. code-block:: rest                                                                                                                                           |
 | CALL                         |                                                                                                                                                                 |
 |                              |       var  msgdata={};                                                                                                                                          |
 |                              |       msgdata["twist"]={};                                                                                                                                      |
@@ -687,7 +687,7 @@ REST
 | ERROR                        | | Code: 404                                                                                                          |
 | RESPONSE                     | | resource not found                                                                                                 |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| SAMPLE                       |  .. code-block:: python                                                                                              |
+| SAMPLE                       |  .. code-block:: rest                                                                                                |
 | CALL                         |                                                                                                                      |
 |                              |       var  msgdata={};                                                                                               |
 |                              |       msgdata["twist"]={};                                                                                           |
@@ -759,7 +759,7 @@ REST
 | ERROR                        | | Code: 404                                                                                                          |
 | RESPONSE                     | | resource not found                                                                                                 |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| SAMPLE                       |  .. code-block:: python                                                                                              |
+| SAMPLE                       |  .. code-block:: rest                                                                                                |
 | CALL                         |                                                                                                                      |
 |                              |       var  msgdata={};                                                                                               |
 |                              |       msgdata["app_name"]= "app12";                                                                                  |
@@ -843,7 +843,7 @@ REST
 | ERROR                        | | Code: 404                                                                                                                        |
 | RESPONSE                     | | resource not found                                                                                                               |
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
-| SAMPLE                       |  .. code-block:: python                                                                                                            |              
+| SAMPLE                       |  .. code-block:: rest                                                                                                              |              
 | CALL                         |                                                                                                                                    |
 |                              |       var  msgdata={};                                                                                                             |
 |                              |                                                                                                                                    |
@@ -938,7 +938,7 @@ REST
 | ERROR                        | | Code: 404                                                                                                                        |
 | RESPONSE                     | | resource not found                                                                                                               |
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
-| SAMPLE                       |  .. code-block:: python                                                                                                            |              
+| SAMPLE                       |  .. code-block:: rest                                                                                                              |              
 | CALL                         |                                                                                                                                    |
 |                              |       var  msgdata=[];                                                                                                             |
 |                              |       msgdata[1]={};                                                                                                               |
@@ -1006,7 +1006,7 @@ REST
 | ERROR                        | | Code: 404                                                                                                                        |
 | RESPONSE                     | | resource not found                                                                                                               |
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
-| SAMPLE                       |  .. code-block:: python                                                                                                            |              
+| SAMPLE                       |  .. code-block:: rest                                                                                                              |              
 | CALL                         |                                                                                                                                    |
 |                              |       var  msgdata={};                                                                                                             |
 |                              |                                                                                                                                    |
@@ -1062,7 +1062,7 @@ REST
 | ERROR                        | | Code: 404                                                                                                                        |
 | RESPONSE                     | | resource not found                                                                                                               |
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
-| SAMPLE                       |  .. code-block:: python                                                                                                            |              
+| SAMPLE                       |  .. code-block:: rest                                                                                                              |              
 | CALL                         |                                                                                                                                    |
 |                              |       var  msgdata={};                                                                                                             |
 |                              |                                                                                                                                    |
@@ -1118,7 +1118,7 @@ REST
 | ERROR                        | | Code: 404                                                                                                                        |
 | RESPONSE                     | | resource not found                                                                                                               |
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
-| SAMPLE                       |  .. code-block:: python                                                                                                            |              
+| SAMPLE                       |  .. code-block:: rest                                                                                                              |              
 | CALL                         |                                                                                                                                    |
 |                              |       var  msgdata={};                                                                                                             |
 |                              |                                                                                                                                    |
@@ -1217,7 +1217,7 @@ REST
 | ERROR                        | | Code: 404                                                                                                                                                     |
 | RESPONSE                     | | resource not found                                                                                                                                            |
 +------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| SAMPLE                       |  .. code-block:: python                                                                                                                                         |
+| SAMPLE                       |  .. code-block:: rest                                                                                                                                           |
 | CALL                         |                                                                                                                                                                 |
 |                              |       var  msgdata={};                                                                                                                                          |
 |                              |       msgdata["twist"]={};                                                                                                                                      |
@@ -1302,7 +1302,7 @@ REST
 | ERROR                        | | Code: 404                                                                                                                                                     |
 | RESPONSE                     | | resource not found                                                                                                                                            |
 +------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| SAMPLE                       |  .. code-block:: python                                                                                                                                         |
+| SAMPLE                       |  .. code-block:: rest                                                                                                                                           |
 | CALL                         |                                                                                                                                                                 |
 |                              |       var  msgdata={};                                                                                                                                          |
 |                              |       msgdata["lat"]=2.00;                                                                                                                                      |
@@ -1368,7 +1368,7 @@ REST
 | ERROR                        | | Code: 404                                                                                                                                                     |
 | RESPONSE                     | | resource not found                                                                                                                                            |
 +------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| SAMPLE                       |  .. code-block:: python                                                                                                                                         |
+| SAMPLE                       |  .. code-block:: rest                                                                                                                                           |
 | CALL                         |                                                                                                                                                                 |
 |                              |       var  msgdata={};                                                                                                                                          |
 |                              |       msgdata["wp_seq"]=2.00;                                                                                                                                   |
@@ -1427,7 +1427,7 @@ REST
 | ERROR                        | | Code: 404                                                                                                          |
 | RESPONSE                     | | resource not found                                                                                                 |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| SAMPLE                       |  .. code-block:: python                                                                                              |
+| SAMPLE                       |  .. code-block:: rest                                                                                                |
 | CALL                         |                                                                                                                      |
 |                              |       $.ajax({                                                                                                       |
 |                              |           type: "POST",                                                                                              |
@@ -1477,7 +1477,7 @@ REST
 | ERROR                        | | Code: 404                                                                                                          |
 | RESPONSE                     | | resource not found                                                                                                 |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| SAMPLE                       |  .. code-block:: python                                                                                              |
+| SAMPLE                       |  .. code-block:: rest                                                                                                |
 | CALL                         |                                                                                                                      |
 |                              |      <img src=URL />                                                                                                 |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
@@ -1528,7 +1528,7 @@ REST
 | ERROR                        | | Code: 404                                                                                                          |
 | RESPONSE                     | | resource not found                                                                                                 |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| SAMPLE                       |  .. code-block:: python                                                                                              |
+| SAMPLE                       |  .. code-block:: rest                                                                                                |
 | CALL                         |                                                                                                                      |
 |                              |      <img src=URL />                                                                                                 |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
@@ -1682,7 +1682,7 @@ Socket
 |                              | | <ip>: IP of the flytpod in the network along with port                                                             |
 |                              | |     eg: 192.168.x.xxx:9090                                                                                         |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| SAMPLE                       |  .. code-block:: python                                                                                              |
+| SAMPLE                       |  .. code-block:: rest                                                                                                |
 | CALL                         |                                                                                                                      |
 |                              |       var  ros= new ROSLIB.Ros({                                                                                     |
 |                              |            url : 'ws://<ip>/websocket'                                                                               |
@@ -1726,7 +1726,7 @@ Socket
 
 
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| INITIALISATION               |  .. code-block:: python                                                                                                                                          |
+| INITIALISATION               |  .. code-block:: rest                                                                                                                                            |
 | SAMPLE                       |                                                                                                                                                                  |
 |                              |       var listenerImu = new ROSLIB.Topic({                                                                                                                       |
 |                              |           ros :ros,                                                                                                                                              |
@@ -1737,7 +1737,7 @@ Socket
 |                              |                                                                                                                                                                  |
 |                              |  <namespace>: Name of the flytpod (default: flytpod) which is required for every socket subscription and can be fetched from get namespace rest call.            |
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| SUBSCRIPTION                 |   .. code-block:: python                                                                                                                                         |
+| SUBSCRIPTION                 |   .. code-block:: rest                                                                                                                                           |
 | SAMPLE                       |                                                                                                                                                                  |
 |                              |       listenerImu.subscribe(function(message) {                                                                                                                  |
 |                              |           console.log(message.orientation.x);                                                                                                                    |
@@ -1811,7 +1811,7 @@ REST
 | ERROR                        | | Code: 404                                                                                                                        |
 | RESPONSE                     | | resource not found                                                                                                               |
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
-| SAMPLE                       |  .. code-block:: python                                                                                                            |              
+| SAMPLE                       |  .. code-block:: rest                                                                                                              |              
 | CALL                         |                                                                                                                                    |
 |                              |                                                                                                                                    |
 |                              |       $.ajax({                                                                                                                     |
@@ -1841,7 +1841,7 @@ Socket
 
 
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| INITIALISATION               |  .. code-block:: python                                                                                                                                          |
+| INITIALISATION               |  .. code-block:: rest                                                                                                                                            |
 | SAMPLE                       |                                                                                                                                                                  |
 |                              |       var listenerAttitude = new ROSLIB.Topic({                                                                                                                  |
 |                              |           ros :ros,                                                                                                                                              |
@@ -1852,7 +1852,7 @@ Socket
 |                              |                                                                                                                                                                  |
 |                              |  <namespace>: Name of the flytpod (default: flytpod) which is required for every socket subscription and can be fetched from get namespace rest call.            |
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| SUBSCRIPTION                 |  .. code-block:: python                                                                                                                                          |
+| SUBSCRIPTION                 |  .. code-block:: rest                                                                                                                                            |
 | SAMPLE                       |                                                                                                                                                                  |
 |                              |                                                                                                                                                                  |
 |                              |           listenerAttitude.subscribe(function(message) {                                                                                                         |
@@ -1921,7 +1921,7 @@ REST
 | ERROR                        | | Code: 404                                                                                                                        |
 | RESPONSE                     | | resource not found                                                                                                               |
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
-| SAMPLE                       |  .. code-block:: python                                                                                                            |              
+| SAMPLE                       |  .. code-block:: rest                                                                                                              |              
 | CALL                         |                                                                                                                                    |
 |                              |                                                                                                                                    |
 |                              |       $.ajax({                                                                                                                     |
@@ -1950,7 +1950,7 @@ Socket
 
 
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| INITIALISATION               |  .. code-block:: python                                                                                                                                          |
+| INITIALISATION               |  .. code-block:: rest                                                                                                                                            |
 | SAMPLE                       |                                                                                                                                                                  |
 |                              |       var listenerLocalPosition = new ROSLIB.Topic({                                                                                                             |
 |                              |           ros :ros,                                                                                                                                              |
@@ -1961,7 +1961,7 @@ Socket
 |                              |                                                                                                                                                                  |
 |                              |  <namespace>: Name of the flytpod (default: flytpod) which is required for every socket subscription and can be fetched from get namespace rest call.            |
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| SUBSCRIPTION                 |  .. code-block:: python                                                                                                                                          |
+| SUBSCRIPTION                 |  .. code-block:: rest                                                                                                                                            |
 | SAMPLE                       |                                                                                                                                                                  |
 |                              |      listenerLocalPosition.subscribe(function(message) {                                                                                                         |
 |                              |          console.log(message.twist.linear.x);                                                                                                                    |
@@ -1994,7 +1994,7 @@ Socket
 
 
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| INITIALISATION               |  .. code-block:: python                                                                                                                                          |
+| INITIALISATION               |  .. code-block:: rest                                                                                                                                            |
 | SAMPLE                       |                                                                                                                                                                  |
 |                              |       var listenerBatteryStatus = new ROSLIB.Topic({                                                                                                             |
 |                              |           ros :ros,                                                                                                                                              |
@@ -2005,7 +2005,7 @@ Socket
 |                              |                                                                                                                                                                  |
 |                              |  <namespace>: Name of the flytpod (default: flytpod) which is required for every socket subscription and can be fetched from get namespace rest call.            |
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| SUBSCRIPTION                 |  .. code-block:: python                                                                                                                                          |
+| SUBSCRIPTION                 |  .. code-block:: rest                                                                                                                                            |
 | SAMPLE                       |                                                                                                                                                                  |
 |                              |      listenerBatteryStatus.subscribe(function(message) {                                                                                                         |
 |                              |          console.log(message.voltage);                                                                                                                           |
@@ -2053,7 +2053,7 @@ REST
 | ERROR                        | | Code: 404                                                                                                                        |
 | RESPONSE                     | | resource not found                                                                                                               |
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
-| SAMPLE                       |  .. code-block:: python                                                                                                            |              
+| SAMPLE                       |  .. code-block:: rest                                                                                                              |              
 | CALL                         |                                                                                                                                    |
 |                              |                                                                                                                                    |
 |                              |       $.ajax({                                                                                                                     |
@@ -2082,7 +2082,7 @@ Socket
 
 
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| INITIALISATION               |  .. code-block:: python                                                                                                                                          |
+| INITIALISATION               |  .. code-block:: rest                                                                                                                                            |
 | SAMPLE                       |                                                                                                                                                                  |
 |                              |       var listenerHUD = new ROSLIB.Topic({                                                                                                                       |
 |                              |           ros :ros,                                                                                                                                              |
@@ -2093,7 +2093,7 @@ Socket
 |                              |                                                                                                                                                                  |
 |                              |  <namespace>: Name of the flytpod (default: flytpod) which is required for every socket subscription and can be fetched from get namespace rest call.            |
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| SUBSCRIPTION                 |  .. code-block:: python                                                                                                                                          |
+| SUBSCRIPTION                 |  .. code-block:: rest                                                                                                                                            |
 | SAMPLE                       |                                                                                                                                                                  |
 |                              |                                                                                                                                                                  |
 |                              |           listenerHUD.subscribe(function(message) {                                                                                                              |
@@ -2146,7 +2146,7 @@ REST
 | ERROR                        | | Code: 404                                                                                                                        |
 | RESPONSE                     | | resource not found                                                                                                               |
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
-| SAMPLE                       |  .. code-block:: python                                                                                                            |              
+| SAMPLE                       |  .. code-block:: rest                                                                                                              |              
 | CALL                         |                                                                                                                                    |
 |                              |                                                                                                                                    |
 |                              |       $.ajax({                                                                                                                     |
@@ -2216,7 +2216,7 @@ REST
 | ERROR                        | | Code: 404                                                                                                                              |
 | RESPONSE                     | | resource not found                                                                                                                     |
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
-| SAMPLE                       |  .. code-block:: python                                                                                                                  |
+| SAMPLE                       |  .. code-block:: rest                                                                                                                    |
 | CALL                         |                                                                                                                                          |
 |                              |       var msgdata={};                                                                                                                    |
 |                              |       msgdata["param_info"]={};                                                                                                          |
@@ -2286,7 +2286,7 @@ REST
 | ERROR                        | | Code: 404                                                                                                                              |
 | RESPONSE                     | | resource not found                                                                                                                     |
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
-| SAMPLE                       |  .. code-block:: python                                                                                                                  |
+| SAMPLE                       |  .. code-block:: rest                                                                                                                    |
 | CALL                         |                                                                                                                                          |
 |                              |       var msgdata={};                                                                                                                    |
 |                              |       $.ajax({                                                                                                                           |
@@ -2348,7 +2348,7 @@ REST
 | ERROR                        | | Code: 404                                                                                                                              |
 | RESPONSE                     | | resource not found                                                                                                                     |
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
-| SAMPLE                       |  .. code-block:: python                                                                                                                  |
+| SAMPLE                       |  .. code-block:: rest                                                                                                                    |
 | CALL                         |                                                                                                                                          |
 |                              |       var msgdata={};                                                                                                                    |
 |                              |       msgdata["param_id"]="RTL_ALT";                                                                                                     |
@@ -2403,7 +2403,7 @@ REST
 | ERROR                        | | Code: 404                                                                                                                              |
 | RESPONSE                     | | resource not found                                                                                                                     |
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
-| SAMPLE                       |  .. code-block:: python                                                                                                                  |
+| SAMPLE                       |  .. code-block:: rest                                                                                                                    |
 | CALL                         |                                                                                                                                          |
 |                              |       var msgdata={};                                                                                                                    |
 |                              |       $.ajax({                                                                                                                           |
@@ -2456,7 +2456,7 @@ REST
 | ERROR                        | | Code: 404                                                                                                                              |
 | RESPONSE                     | | resource not found                                                                                                                     |
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
-| SAMPLE                       |  .. code-block:: python                                                                                                                  |
+| SAMPLE                       |  .. code-block:: rest                                                                                                                    |
 | CALL                         |                                                                                                                                          |
 |                              |       var msgdata={};                                                                                                                    |
 |                              |       $.ajax({                                                                                                                           |
@@ -2523,7 +2523,7 @@ REST
 | ERROR                        | | Code: 404                                                                                                                              |
 | RESPONSE                     | | resource not found                                                                                                                     |
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
-| SAMPLE                       |  .. code-block:: python                                                                                                                  |
+| SAMPLE                       |  .. code-block:: rest                                                                                                                    |
 | CALL                         |                                                                                                                                          |
 |                              |       var msgdata={};                                                                                                                    |
 |                              |       msgdata["param_info"]={};                                                                                                          |
@@ -2593,7 +2593,7 @@ REST
 | ERROR                        | | Code: 404                                                                                                                              |
 | RESPONSE                     | | resource not found                                                                                                                     |
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
-| SAMPLE                       |  .. code-block:: python                                                                                                                  |
+| SAMPLE                       |  .. code-block:: rest                                                                                                                    |
 | CALL                         |                                                                                                                                          |
 |                              |       var msgdata={};                                                                                                                    |
 |                              |       msgdata["param_info"]={};                                                                                                          |
@@ -2647,7 +2647,7 @@ REST
 | ERROR                        | | Code: 404                                                                                                                              |
 | RESPONSE                     | | resource not found                                                                                                                     |
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
-| SAMPLE                       |  .. code-block:: python                                                                                                                  |
+| SAMPLE                       |  .. code-block:: rest                                                                                                                    |
 | CALL                         |                                                                                                                                          |
 |                              |       var msgdata={};                                                                                                                    |
 |                              |       msgdata["param_info"]={};                                                                                                          |
@@ -2710,7 +2710,7 @@ This command tests the actuators in FlytOS.
 | ERROR                        | | Code: 404                                                                                                                              |
 | RESPONSE                     | | resource not found                                                                                                                     |
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
-| SAMPLE                       |  .. code-block:: python                                                                                                                  |
+| SAMPLE                       |  .. code-block:: rest                                                                                                                    |
 | CALL                         |                                                                                                                                          |
 |                              |       var msgdata={};                                                                                                                    |
 |                              |       msgdata["param_info"]={};                                                                                                          |
@@ -2776,7 +2776,7 @@ This command calibrates the ESCs in FlytOS.
 | ERROR                        | | Code: 404                                                                                                                              |
 | RESPONSE                     | | resource not found                                                                                                                     |
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
-| SAMPLE                       |  .. code-block:: python                                                                                                                  |
+| SAMPLE                       |  .. code-block:: rest                                                                                                                    |
 | CALL                         |                                                                                                                                          |
 |                              |       var msgdata={};                                                                                                                    |
 |                              |       msgdata["param_info"]={};                                                                                                          |
@@ -2833,7 +2833,7 @@ This command calibrates the ESCs in FlytOS.
 | ERROR                        | | Code: 404                                                                                                                              |
 | RESPONSE                     | | resource not found                                                                                                                     |
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
-| SAMPLE                       |  .. code-block:: python                                                                                                                  |
+| SAMPLE                       |  .. code-block:: rest                                                                                                                    |
 | CALL                         |                                                                                                                                          |
 |                              |       var msgdata={};                                                                                                                    |
 |                              |       msgdata["param_info"]={};                                                                                                          |

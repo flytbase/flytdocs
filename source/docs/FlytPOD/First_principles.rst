@@ -11,9 +11,9 @@ Below are a few flying essentials that the on-field operations team should be aw
 
 3. Vehicle can arm or disarm only in manual mode. Be careful when you are trying to disarm in any mode other than manual, it would not simply disarm until you switch to manual mode. 
 
-4. FlytPOD will reject ``RC-ALTCTL`` and ``RC-POSCTL`` mode if GPS Fix is not available. 
+4. FlytPOD will reject ``RC-ALTCTL`` mode if GPS Fix is not available. 
 
-5. Before switching to ``OFFBOARD/API`` mode make sure you have GPS Fix.
+5. Before switching to ``OFFBOARD/API`` mode make sure you have GPS Fix. FlytPOD can switch to OFFBOARD/API mode even if GPS Fix is not available, but then vehicle may drift away.
 
 6. In ``RC-Manual``, ``RC-ALTCTL`` and ``RC-POSCTL`` modes, RC transmitter can control the vehicle.
 

@@ -1,4 +1,4 @@
- .. Getting Started with Flyt
+.. Getting Started with Flyt
 .. -------------------------
 
 

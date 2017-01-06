@@ -1,8 +1,5 @@
 .. _FlytPOD_specifications:
 
-
-
-
 Connections and Expansion Ports
 ===============================
 
