@@ -335,6 +335,11 @@ External GPS-MAG can be connected to FlytPOD through the connector provided on t
 
  .. .. note:: * Of the two ports provided, GPS-MAG 1 must be used for connecting external GPS-MAG as GPS-MAG 2 is reserved for future development.
 
+.. figure:: /_static/Images/Gpsmag.png
+ :align: center
+ :scale: 65%
+ 
+ External GPS-MAG ports 
 
 
 .. _Power_Module:
