@@ -7,15 +7,15 @@ About FlytPOD
 FlytPOD
 -------
 
-FlytPOD is next generation autopilot for drones. It has inbuilt powerful application processor which runs FlytOS- a drone application development platform. FlytPOD runs trusted Px4 autopilot firmware which can fly multirotors, fixed wings, vtol planes, flapping wings and many more custom drones.
-The device consists of sensors, intgrated powerful wifi and exapansion ports for payload interfaces.    
+FlytPOD is next generation autopilot for drones. It has inbuilt powerful application processor which runs :ref:`FlytOS<flytos_about>` - the drone application development platform. FlytPOD runs customized trusted open source `PX4 <http://dev.px4.io>`_ autopilot firmware which can fly multi-rotors, fixed wings and many more custom drones.
+The device houses navigational sensors, integrated powerful WiFi router and expansion panel for an array of payload interfaces.    
 
 FlytPOD PRO
 -----------
 
-FlytPOD PRO is the advanced version of FlytPOD. For applications that demand higher reliability and superior performance, FlytPOD PRO offers sensor redundancy and faster eMMC upgrades. Built  to provide fail safe navigation with dual GPS/ MAG module and faster data transfer with inbuilt EMMC, FlytPOD PRO goes an extra mile to give you reliability and performance for your professional drone.
+FlytPOD PRO is the advanced version of FlytPOD. For applications that demand higher reliability and superior performance, FlytPOD PRO offers sensor redundancy and better storage. Built  to provide fail safe navigation with dual GPS/ MAG module, FlytPOD PRO goes an extra mile to give you reliability and performance for your professional drone. FlytPOD PRO runs customized trusted open source PX4 autopilot firmware which can fly multi-rotors, fixed wings and many more custom drones.
 
-Below is an introductory `youtube video <https://www.youtube.com/watch?v=BWaecLy8G10>`_ about FlytPOD internals.
+Watch the `youtube video <https://www.youtube.com/watch?v=BWaecLy8G10>`_ below to get yourself familiarized with FlytPOD.
 
 ..  youtube:: BWaecLy8G10
     :aspect: 16:9
@@ -36,9 +36,9 @@ Technical Specifications
 ..  :align: center
 
 
-.. image:: /_static/Images/FINAL-TECHSPECS.png
+.. image:: /_static/Images/FlytPOD_specs_comp_small.png
  :align: center
- :scale: 50%
+ :scale: 100%
  
 
 

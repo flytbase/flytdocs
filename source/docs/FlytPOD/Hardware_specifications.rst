@@ -5,6 +5,10 @@ Connections and Expansion Ports
 
 .. important:: This page is under active development.
 
+.. attention:: The following document is applicable for both FLytPOD and FlytPOD PRO. 
+
+
+
 Expansion Panel
 ---------------
 
@@ -23,7 +27,7 @@ Expansion Panel
 1. Power Button
 ^^^^^^^^^^^^^^^
 
-Gently pressing the power button turns off FlytPOD. The RGB LED turns to amber upon shutting down. After that you can remove power supply. You can switch on FlytPOD again by pressing the Power button for 1 second.
+Gently pressing the power button turns off the FlytPOD. The RGB LED turns to amber upon shutting down. After that you can remove the power supply. You can switch on FlytPOD again by pressing the Power button for 1 second.
 
 .. note:: Please be patient while the system shuts down. It may take a few seconds for the system to shut down completely.
   
@@ -84,7 +88,7 @@ To know how to use these interfaces contact us at ``admin@navstik.org``.
 3. PWM Output Port
 ^^^^^^^^^^^^^^^^^^
 
-8 PWM output channels. Plug ESC signal pins in the respective PWM output channels.
+8 PWM output channels. Plug ESC signal pins in the respective PWM output channels. Learn more :ref:`here.<PWM_Output>`
 
 .. .. image:: /_static/Images/pwm2.png
 .. 		:align: center
@@ -110,46 +114,48 @@ The RGB LED represents the vehicle state.
 
 Below are the various color patterns that the RGB LED exhibits along with their meanings.
 
-* Breathing Blue - Standby
+* Breathing Blue							- Standby
 
-* Breathing Green - Standby and GPS / Px4flow ready.
-
-* Solid Blue - Armed and No GPS lock / Px4flow quality poor. 
-
-* Solid Green - Armed and GPS lock / Px4flow available.
-
-* Breathing Red - Configuration Error
-
-* Fast blink Red while Arming- Arming Error
-
-* During Mode transition: Fast green Blink for a second: Successful
+* Breathing Green                  - Standby and GPS / Px4flow ready
   
-* During Mode transition: Fast Red Blink for a second: transition failed.
+* Breathing Red                    - Configuration Error
 
-* Amber Breathing / Solid - Low battery warning
+* Solid Blue                       - Armed and No GPS lock / Px4flow quality poor 
+
+* Solid Green                      - Armed and GPS lock / Px4flow available
+
+* Fast blink Red while Arming      - Arming Error
+
+* During vehicle mode transition   - Successful
+  (Fast green Blink for a second) 
   
-* Red Breathing / Solid - Critical battery warning 
+* During vehicle mode transition   - Transition failed
+  (Fast Red Blink for a second)   
 
-* Breathing Purple - Fail safe
-
+* Amber Breathing / Solid          - Low battery warning
   
+* Red Breathing / Solid            - Critical battery warning 
+
+* Breathing Purple                 - Fail safe
+
+* Breathing Amber                  - Vehicle shutdown/lockdown
 
 6. Programmable LEDs
 ^^^^^^^^^^^^^^^^^^^^
 
-User-programmable LEDs.
+The LEDs on the right of the IO panel marked 1, 2 and R are User-programmable LEDs. Learn more :ref:`here.<list-of-APIs>`
 
 
 7. Gimbal
 ^^^^^^^^^
 
-Dedicated 4 PWM output channels for your Gimbal.
+FlytPOD provides a dedicated 4 PWM output channels for your Gimbal. Learn more :ref:`here.<list-of-APIs>`
 
 
 8. Safety and Buzzer
 ^^^^^^^^^^^^^^^^^^^^
 
-External safety switch and buzzer. Safety switch has been disabled by default. To enable this feature, set ``CBRK_IO_SAFETY`` parameter from FlytConsole to 0 from its ``Parameter Manager`` widget.
+FlytPOD provides an external safety switch and buzzer. Safety switch has been disabled by default. To enable this feature, set ``CBRK_IO_SAFETY`` parameter from FlytConsole to 0 from its :ref:`Parameter Manager<Gain_tuning>` widget. 
 
 
 9. RC Receiver Interface
@@ -157,8 +163,8 @@ External safety switch and buzzer. Safety switch has been disabled by default. T
 
 PPM/PWM Channels
 """"""""""""""""
-PPM/8xPWM channels for RC Input. Connect the ground, power, and signal wires to the RC.
-Choose between PPM, PWM from RC configuration in FlytConsole.
+FlytPOD provides PPM/8xPWM channels for RC Input. Connect the ground, power, and signal wires to the RC.
+Choose between PPM, PWM from RC configuration in FlytConsole. Read more :ref:`here.<RC_Receiver>`
 
 
 
@@ -179,47 +185,70 @@ SBUS(futaba) connects to SBUS port and for a SPEKTRUM, DSM, DSM2, or DSM-X Satel
 
 10. WiFi Status LED
 ^^^^^^^^^^^^^^^^^^^
-Solid : WiFi booting.
-Random Blink: WiFi data transmission indicator. 
+Below are the various color patterns that the WiFi Status LED exhibits along with their meanings.
 
-11. System Health LED
+
+* Solid        - WiFi booting.
+* Random Blink - WiFi data transmission indicator. 
+* No blink     - Error state. Click here to know what to do.
+  
+11. WiFi Reset Switch
 ^^^^^^^^^^^^^^^^^^^^^
-fast green blink: Autopilot firmware updating.
+The WiFi Reset Switch is available on top of the FlytPOD as shown in the image below.
+  
+12. System Health LED
+^^^^^^^^^^^^^^^^^^^^^
 
-12. Power Supply LED
+The System Health LED exhibits only the following colour.
+
+* Fast Green blink / Solid Green - Autopilot firmware updating
+
+13. Power Supply LED
 ^^^^^^^^^^^^^^^^^^^^
-Solid red: Supply working.
+The System Health LED exhibits only the following colour.
+
+* Solid red - Supply working.
 
 
-13. External GPS MAG Port
+14. External GPS MAG Port
 ^^^^^^^^^^^^^^^^^^^^^^^^^
-Connect up to two external GPS-MAG sensors for redundancy and accuracy. 
-GPS-MAG1 is the primary port in FlytPOD. You must attach the provided GPS-MAG module to this port for stable flight.
 
-.. attention:: FlytPOD PRO comes with two GPS-MAG ports thus allowing you to connect upto two external GPS-MAG sensors. 
+The following ports are available with FlytPOD and FlytPOD PRO.
 
-14. VI Sensor Input
+* FlytPOD - GPS-MAG 1
+
+* FlytPOD PRO - GPS-MAG 1 (primary port), GPS-MAG 2
+
+You must attach the provided GPS-MAG module to these ports for stable flight. Read more :ref:`here.<GPS_Mag>`
+
+.. .. attention:: FlytPOD PRO comes with two GPS-MAG ports thus allowing you to connect upto two external GPS-MAG sensors. 
+
+15. VI Sensor Input
 ^^^^^^^^^^^^^^^^^^^
 The VI sensor output of `power module`_ must be connected to this port. This would enable FlytPOD to monitor battery status and issue low battery warnings.
 
-15. Power Input
+16. Power Input
 ^^^^^^^^^^^^^^^
 5V @ 4A input for FlytPOD.
 
 
-16. Micro SD
+17. Micro SD/eMMC
+^^^^^^^^^^^^^^^^^
+The following are available with FlytpOD and FlytPOD PRO 
+
+* FlytPOD - 32 GB Micro SD card with FlytOS image
+
+* FlytPOD PRO - 32 GB eMMC card with FlytOS image
+
+
+18. Micro SD
 ^^^^^^^^^^^^
-32 GB Micro SD card with FlytOS image.
+FlytPOD and FlytPOD PRO both have an 8 GB Micro SD card used for autopilot data logging and data storage.
 
 
-17. Micro SD
+19. USB Port
 ^^^^^^^^^^^^
-8 GB Micro SD card used for autopilot data logging.
-
-
-18. USB Port
-^^^^^^^^^^^^
-Connect USB camera, 3G/4G dongle and other payloads.
+FlytPOD provides a USB port that can connect USB camera, 3G/4G dongle and other payloads.
 
 
 
@@ -294,7 +323,7 @@ Click `here <https://pixhawk.org/platforms/vtol/start>`_ for information on VTOL
 Radio Receiver
 ^^^^^^^^^^^^^^
 
-* PWM: RC receiver in PWM mode. Channel 1 to 8 on RC port act as 8xPWM input when param PWM_PPM_SEL = 0 which can be changed from FlytConsole.
+* PWM: RC receiver in PWM mode. Channel 1 to 8 on RC port act as 8xPWM input.
   
 .. figure:: /_static/Images/ppm_pwm.jpg
  :align: center
@@ -303,14 +332,11 @@ Radio Receiver
 
  PPM and PWM RC Input Channels
 
-* PPM: RC receiver in PPM mode. Channel 1 on RC port acts as PPM input when param PWM_PPM_SEL = 1 which can be changed from FlytConsole.
-  
-
- 
+* PPM: RC receiver in PPM mode. Channel 1 on RC port acts as PPM input.
      
-.. note:: By default PPM mode is enabled.
+.. .. note:: By default PPM mode is enabled.
 
-* SPEKTRUM: For a SPEKTRUM, DSM, DSM2, or DSM-X Satellite RC receiver, connect to the SPKT/DSM port.
+* SPEKTRUM: For a SPEKTRUM, DSM, DSM2, or DSM-X Satellite RC receiver, connect to the SPEK port.
 
 * SBUS
   
@@ -320,7 +346,7 @@ Radio Receiver
 
  SBUS and SPEKTRUM RC Input Ports
     
-.. important:: It is recommended to use PPM/PWM for RC Input. For using SBUS/SPEK please contact us at ``admin@navstik.org``.
+.. .. important:: It is recommended to use PPM/PWM for RC Input. For using SBUS/SPEK please contact us at ``admin@navstik.org``.
 
 
 .. _GPS_Mag:
@@ -329,9 +355,15 @@ Radio Receiver
 GPS-Magnetometer
 ^^^^^^^^^^^^^^^^
 
-External GPS-MAG can be connected to FlytPOD through the connector provided on the side. Default port available for this is GPS-MAG 1 in FlytPOD. Use of a Standoff is recommended in order to avoid interference. Make sure to mount it in such a way that FlytPOD heading is aligned with the GPS-MAG board heading.
+External GPS-MAG can be connected to FlytPOD through the connector provided on the side.
 
-.. attention:: FlytPOD PRO comes with two GPS-MAG ports. This offers a fail safe mechanism for reliable navigation.
+* FlytPOD - FlytPOD comes with GPS-MAG 1 port. GPS-MAG sensor can be connected to this port to achieve a stable flight.
+  
+* FlytPOD PRO - FlytPOD PRO comes with GPS-MAG 1 as it's primary port and GPS-MAG 2. Upto two GPS-MAG sensors can e connected. This offers a fail safe mechanism for reliable navigation.
+
+.. Default port available for this is GPS-MAG 1 in FlytPOD. Use of a Standoff is recommended in order to avoid interference. Make sure to mount it in such a way that FlytPOD heading is aligned with the GPS-MAG board heading.
+
+.. .. attention:: FlytPOD PRO comes with two GPS-MAG ports. This offers a fail safe mechanism for reliable navigation.
 
  .. .. note:: * Of the two ports provided, GPS-MAG 1 must be used for connecting external GPS-MAG as GPS-MAG 2 is reserved for future development.
 
@@ -359,7 +391,7 @@ Connect the power module to the appropriate ports in the FlytPOD as shown in the
 
 
 
-LiDAR-lite V2 Laser Rangefinder
+LiDAR-Lite V2 Laser Rangefinder
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Below are two methods for connecting LiDAR-lite to FlytPOD.
@@ -378,17 +410,21 @@ Below are two methods for connecting LiDAR-lite to FlytPOD.
 	
 	LiDAR Pins
 
-* I2C Bus
+.. note:: Set the parameter SENS_EN_LL40LS to 1.
+
+
+
+.. * I2C Bus
   
-  Connect LiDAR-lite I2C wires to I2C-2 port as shown below.
+..   Connect LiDAR-lite I2C wires to I2C-2 port as shown below.
 
 
 
-.. figure:: /_static/Images/lidar2.jpg
-	:align: center
-	:scale: 12%
+.. .. figure:: /_static/Images/lidar2.jpg
+.. 	:align: center
+.. 	:scale: 12%
 	
-	I2C Pins
+.. 	I2C Pins
 
 
 Telemetry
@@ -410,14 +446,14 @@ Connect your Telemetry module to the Telemetry port(Rx and Tx) as shown below fo
 
 
 
-Buzzer
-^^^^^^
-Px4FLOW
-^^^^^^^
-USB Camera
-^^^^^^^^^^^
-HDMI output
-^^^^^^^^^^^^
+.. Buzzer
+.. ^^^^^^
+.. Px4FLOW
+.. ^^^^^^^
+.. USB Camera
+.. ^^^^^^^^^^^
+.. HDMI output
+.. ^^^^^^^^^^^^
 
 
 
