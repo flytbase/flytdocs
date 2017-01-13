@@ -155,7 +155,7 @@ FlytPOD provides a dedicated 4 PWM output channels for your Gimbal. Learn more :
 8. Safety and Buzzer
 ^^^^^^^^^^^^^^^^^^^^
 
-FlytPOD provides an external safety switch and buzzer. Safety switch has been disabled by default. To enable this feature, set ``CBRK_IO_SAFETY`` parameter from FlytConsole to 0 from its :ref:`Parameter Manager<Gain_tuning>` widget. 
+FlytPOD provides an external safety switch and buzzer ports. Safety switch has been disabled by default. To enable this feature, set ``CBRK_IO_SAFETY`` parameter in FlytConsole to 0 from its :ref:`Parameter Manager<Gain_tuning>` widget. 
 
 
 9. RC Receiver Interface
@@ -199,7 +199,7 @@ The WiFi Reset Switch is available on top of the FlytPOD as shown in the image b
 12. System Health LED
 ^^^^^^^^^^^^^^^^^^^^^
 
-The System Health LED exhibits only the following colour.
+The System Health LED indicates the Autopilot status.
 
 * Fast Green blink / Solid Green - Autopilot firmware updating
 
@@ -229,7 +229,7 @@ The VI sensor output of `power module`_ must be connected to this port. This wou
 
 16. Power Input
 ^^^^^^^^^^^^^^^
-5V @ 4A input for FlytPOD.
+Power input gives 5V at 4A power for FlytPOD.
 
 
 17. Micro SD/eMMC
@@ -338,7 +338,7 @@ Radio Receiver
 
 * SPEKTRUM: For a SPEKTRUM, DSM, DSM2, or DSM-X Satellite RC receiver, connect to the SPEK port.
 
-* SBUS
+* SBUS: Connect SBUS receiver to the SBUS port.
   
 .. figure:: /_static/Images/sbus_spek.jpg
  :align: center
