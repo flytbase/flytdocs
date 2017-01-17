@@ -133,11 +133,11 @@ For advanced users
 
 The FlytPOD has built-in OpenWRT powered WiFi router. Internally it is connected with the main computer on Ethernet. The Module can be configured in AP Mode or in Client Mode depending upon the application. Router is using relayd for client mode operation.
 
-In case the Flytconsole wifi setup is not sufficient for you then you can access OpenWRT router directly. There are two methods available.
+In case the FlytConsole WiFi setup is not sufficient for you then you can access OpenWRT router directly. There are two methods available.
 
 **Access Router**
 
-1) Accessing router LUCI web page from flytpod at IP 192.168.1.1 (in ap mode) or 10.0.0.1 (in client mode). 
+1) Accessing router LUCI web page from FlytPOD at IP 192.168.1.1 (in ap mode) or 10.0.0.1 (in client mode). 
 The ``default username: root`` and ``password: 123``.
 
 2) Access serial console to OpenWRT router on flytpod. ``Port: /dev/ttySAC2`` ``Baudrate: 57600``
@@ -156,7 +156,7 @@ This console is accessible from FlytPOD and you can use minicom.
 From serial console:
 
 
-Firstboot && reboot.
+firstboot && reboot.
 
 
 

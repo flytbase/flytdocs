@@ -72,7 +72,7 @@ Getting Started
    * In your laptop browser launch FlytConsole using URL: ``flytpod:9090/flytconsole``.
    * You can configure FlytPOD WiFi in hotspot or client mode. For automatic updates and Google maps to work, you need to connect FlytPOD  to your existing home/university WiFi network using client mode. 
    * Detailed instructions for WiFi setup are given :ref:`here<flytpod router setup>`.
-   * Power off FlytPOD by pressing the power button on the back panel for 3 secs. Within few seconds RGB LED should turn amber.
+   * Power off FlytPOD by gently pressing the power button on the back panel. Within few seconds RGB LED should turn amber.
  
    .. note:: Note that next time you start FlytPOD it will take some time for the RGB led to start up. This behavior will repeat every time you do a graceful shutdown as described above. 
 
@@ -161,7 +161,7 @@ Getting Started
  
 17. Select the appropriate frame and click on **Save and Reboot**.
  
-18. FlytCosole will take a few seconds to reconnect. WiFi network will not disconnect during this reboot.
+18. FlytConsole will take a few seconds to reconnect. WiFi network will not disconnect during this reboot.
  
 19. Once the 'connected' button on the top panel turns green, go to **Calibration** section in the left side-menu.
 
@@ -230,7 +230,7 @@ Getting Started
 
 31. Turn on your RC Transmitter. Check if the receiver is working.
 
-    .. note:: PWM, PPM receiver are powered through ESC supply. If your RC is not getting powered then you should check ESC supply and whether your ESCs output 5V. In case your ESCs don't have BEC then power on the receiver using some other supply. Do not draw supply for RC receiver from 5V output of FlytPOD. 
+    .. .. note:: PWM, PPM receiver are powered through ESC supply. If your RC is not getting powered then you should check ESC supply and whether your ESCs output 5V. In case your ESCs don't have BEC then power on the receiver using some other supply. Do not draw supply for RC receiver from 5V output of FlytPOD. 
       
     Following are the prerequisites for RC Calibration:
     

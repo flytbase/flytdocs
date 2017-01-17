@@ -5,7 +5,7 @@ Connections and Expansion Ports
 
 .. important:: This page is under active development.
 
-.. attention:: The following document is applicable for both FLytPOD and FlytPOD PRO. 
+.. attention:: The following document is applicable for both FlytPOD and FlytPOD PRO. 
 
 
 
@@ -192,8 +192,8 @@ Below are the various color patterns that the WiFi Status LED exhibits along wit
 * Random Blink - WiFi data transmission indicator. 
 * No blink     - Error state. Click here to know what to do.
   
-11. WiFi Reset Switch
-^^^^^^^^^^^^^^^^^^^^^
+11. WiFi Switch
+^^^^^^^^^^^^^^^
 The WiFi Reset Switch is available on top of the FlytPOD as shown in the image below.
   
 12. System Health LED
