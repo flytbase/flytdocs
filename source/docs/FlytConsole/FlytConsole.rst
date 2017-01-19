@@ -34,7 +34,7 @@ Dashboard
 Upon launch you are greeted by the Dashboard. The Dashboard displays the Connection status, Battery monitor, GPS status, Frame type and other widgets that give you the current status of your drone.
 
 
-.. figure:: /_static/Images/Dashboard.png
+.. figure:: /_static/Images/Dashboard_new.png
 	:align: center 
 	:scale: 50 %
 	
@@ -57,7 +57,7 @@ Frame Select
 """"""""""""
 
 
-.. figure:: /_static/Images/frameSelect.png
+.. figure:: /_static/Images/FrameSelect_new.png
 	:align: center
 	:scale: 50 %
 	
@@ -103,7 +103,7 @@ ESC Calibration requires the following fields to be filled:
          
 The min and max PWM values are the expected values from the FlytPOD to the ESCs. If the expected values are different from the values set in the fields above, the drone will behave differently. Number of actuators is the number of motors depending upon the airframe selected by you in Frame Select. FlytConsole consists of some predefined default values that can be changed. 
 
-.. figure:: /_static/Images/escCalibration.png
+.. figure:: /_static/Images/ESCcalib_new.png
 	:align: center
 	:scale: 50 %
 	
@@ -193,7 +193,7 @@ Sensor Calibration
 ++++++++++++++++++
 
 
-.. figure:: /_static/Images/sensorCalibration.png
+.. figure:: /_static/Images/SensorCalib_new.png
 	:align: center
 	:scale: 50 %
 	
@@ -350,7 +350,7 @@ Parameter manager consists of Gain tuning and Advanced settings.
 These are the gains that are mostly used and require to be tuned depending upon the attitude control response of the autopilot.
 
 
-.. figure:: /_static/Images/gainsBasic.png
+.. figure:: /_static/Images/GainTuning_new.png
 	:align: center
 	:scale: 50 %
 	
