@@ -34,7 +34,7 @@ Dashboard
 Upon launch you are greeted by the Dashboard. The Dashboard displays the Connection status, Battery monitor, GPS status, Frame type and other widgets that give you the current status of your drone.
 
 
-.. figure:: /_static/Images/Dashboard_new.png
+.. figure:: /_static/Images/DashboardFc.png
 	:align: center 
 	:scale: 50 %
 	
@@ -72,14 +72,21 @@ Depending upon the actual frame of your drone, select the airframe and click on 
 
 .. _Motor_config:
 
-Motor Configuration
-"""""""""""""""""""
+Calibration
+"""""""""""
 
 .. note:: Motor Configuration widget is compatible with only FlytPOD.
 
 
 
-Motor Configuration lets you calibrate the ESCs and test the motors attached to your drone.
+Motor Configuration lets you calibrate the ESCs and test the motors attached to your drone. 
+
+.. figure:: /_static/Images/Calibration.png
+	:align: center
+	:scale: 50 %
+	
+	Calibration
+
 
 .. _ESC_calibration:
 
@@ -103,7 +110,7 @@ ESC Calibration requires the following fields to be filled:
          
 The min and max PWM values are the expected values from the FlytPOD to the ESCs. If the expected values are different from the values set in the fields above, the drone will behave differently. Number of actuators is the number of motors depending upon the airframe selected by you in Frame Select. FlytConsole consists of some predefined default values that can be changed. 
 
-.. figure:: /_static/Images/ESCcalib_new.png
+.. figure:: /_static/Images/escStage1.png
 	:align: center
 	:scale: 50 %
 	
@@ -111,7 +118,7 @@ The min and max PWM values are the expected values from the FlytPOD to the ESCs.
 
 Once you have set the ``Min PWM values , Max PWM values and Number of Actuators`` click on **Start Calibration**. You will see a message saying ``Calibration started``. This marks the start of Stage 1 of ESC Calibration. Disconnect the power from the ESCs and click on **Next**. 
 
-.. figure:: /_static/Images/stage1esc.png
+.. figure:: /_static/Images/escStage2.png
 	:align: center
 	:scale: 50 %
 
@@ -119,7 +126,7 @@ Once you have set the ``Min PWM values , Max PWM values and Number of Actuators`
 
 Stage 2 involves setting the time duration(in seconds) for the PWM high time in stage 3. After this connect the power to the ESCs and click on **Next**. 
 
-.. figure:: /_static/Images/stage2esc.png
+.. figure:: /_static/Images/escStage3.png
 	:align: center
 	:scale: 50 %
 
@@ -127,7 +134,7 @@ After the time out the ESCs will automatically receive low PWM value. This is st
 
 Stage 4 marks the end of ESC Calibration. Click on **Finish**.  
 
-.. figure:: /_static/Images/stage3esc.png
+.. figure:: /_static/Images/escStage4.png
 	:align: center
 	:scale: 50 %
 
@@ -161,7 +168,7 @@ Stage 4 marks the end of ESC Calibration. Click on **Finish**.
 Motor Testing
 +++++++++++++
 
-.. figure:: /_static/Images/motorTesting.png
+.. figure:: /_static/Images/Motor_test.png
 	:align: center
 	:scale: 50 %
 	
@@ -183,8 +190,6 @@ There is also a provision for setting the time of rotation for the motors.
 
 .. _Calibration:
 
-Calibration
-"""""""""""
 
 .. _Sensor_calibration:
 
@@ -193,7 +198,7 @@ Sensor Calibration
 ++++++++++++++++++
 
 
-.. figure:: /_static/Images/SensorCalib_new.png
+.. figure:: /_static/Images/SensorCalibration.png
 	:align: center
 	:scale: 50 %
 	
@@ -217,13 +222,13 @@ Sensor calibration is of utmost importance before you fly your drone. The sensor
 
 Set the ``AUTOPILOT ORIENTATION`` if the orientation of the frame and FlytPOD are different. Click on **Start Accel Calibration** to begin.
 
-.. figure:: /_static/Images/accelcalib.png
+.. figure:: /_static/Images/AccelCalibration.png
 	:align: center
 	:scale: 50 %
 
 Hold the drone steady in all the six directions( x, -x, y, -y, z, -z) for sometime. You will be notified when the current orientation is detected and when calibration begins for that orientation. Keep steady till you are notified to change to a new direction.
 
-.. figure:: /_static/Images/accelcalib1.png
+.. figure:: /_static/Images/AccelCal1.png
 	:align: center
 	:scale: 50 %
 
@@ -233,13 +238,13 @@ Hold the drone steady in all the six directions( x, -x, y, -y, z, -z) for someti
 
 Set the ``AUTOPILOT ORIENTATION`` if the orientation of the frame and FlytPOD are different. Click on **Start Gyro Calibration** to begin.
 
-.. figure:: /_static/Images/gyrocalib.png
+.. figure:: /_static/Images/GyroCalibration.png
 	:align: center
 	:scale: 50 %
 
 Keep the drone steady without movement in a single state till the calibration ends. You will be notified when the calibration ends.
 
-.. figure:: /_static/Images/gyrocalib1.png
+.. figure:: /_static/Images/GyroCalib1.png
 	:align: center
 	:scale: 50 %
 
@@ -247,7 +252,7 @@ Keep the drone steady without movement in a single state till the calibration en
 
 Set the ``AUTOPILOT ORIENTATION`` if the orientation of the frame and FlytPOD are different. Click on **Start Mag Calibration** to begin.
 
-.. figure:: /_static/Images/magcalib.png
+.. figure:: /_static/Images/MagCalibration.png
 	:align: center
 	:scale: 50 %
 
@@ -256,7 +261,7 @@ You need to calibrate magnetometer every time you change the flying field. If yo
 This is similar to Accelerometer Calibration with an additional step of rotating the drone in vertical axis in every orientation
 thereby covering all six directions.
 
-.. figure:: /_static/Images/magcalib1.png
+.. figure:: /_static/Images/MagCalib1.png
 	:align: center
 	:scale: 50 %
 
@@ -264,13 +269,13 @@ thereby covering all six directions.
 
 Set the ``AUTOPILOT ORIENTATION`` if the orientation of the frame and FlytPOD are different. Click on **Start Level calibration** to begin.
 
-.. figure:: /_static/Images/levelcalib.png
+.. figure:: /_static/Images/LevelCalibration.png
 	:align: center
 	:scale: 50 %
 
 Keep the drone steady in flat position on a leveled surface on the floor.
 
-.. figure:: /_static/Images/levelcalib1.png
+.. figure:: /_static/Images/LevelCalib1.png
 	:align: center
 	:scale: 50 %
 
@@ -282,7 +287,7 @@ Keep the drone steady in flat position on a leveled surface on the floor.
 RC Calibration
 ++++++++++++++
       
-.. figure:: /_static/Images/rcCalibration.png
+.. figure:: /_static/Images/Rcparamfc.png
 	:align: center
 	:scale: 50 %
 	
@@ -325,7 +330,7 @@ Once this is done map RC modes to three way switch channel and manual override t
 
 
 
-.. figure:: /_static/Images/rcCalibration2.png
+.. figure:: /_static/Images/RcMode.png
 	:align: center
 	:scale: 50 %
 	
@@ -350,7 +355,7 @@ Parameter manager consists of Gain tuning and Advanced settings.
 These are the gains that are mostly used and require to be tuned depending upon the attitude control response of the autopilot.
 
 
-.. figure:: /_static/Images/GainTuning_new.png
+.. figure:: /_static/Images/Gains.png
 	:align: center
 	:scale: 50 %
 	
@@ -362,7 +367,7 @@ These are the gains that are mostly used and require to be tuned depending upon 
 
 These are all parameters used throughout FlytOS. These can be changed if at all they need to be changed.
 
-.. figure:: /_static/Images/gainsAdvanced.png
+.. figure:: /_static/Images/GainTuning_new.png
 	:align: center
 	:scale: 50 %
 	
@@ -380,7 +385,7 @@ GCS
 After completing all the above mentioned settings you are now ready to fly and test the basic navigation capabilities provided by the GCS.
    
 
-.. figure:: /_static/Images/gcs.png
+.. figure:: /_static/Images/GCSfc.png
 	:align: center
 	:scale: 50 %
 	
@@ -417,11 +422,11 @@ The functionality of GCS can be divided into three parts:
 Flyt Inspector streams live data from the drone.
 
 
-.. figure:: /_static/Images/flightInspector.png
-	:align: center
-	:scale: 50 %
+.. .. figure:: /_static/Images/flightInspector.png
+.. 	:align: center
+.. 	:scale: 50 %
 	
-	Flight Inspector  
+.. 	Flight Inspector  
 
 
 Following data is streamed from the drone:
