@@ -1,187 +1,413 @@
-.. _flytos_install_guide:
 
-FlytOS - Installation Guide
-===========================
 
-Currently FlytOS has been tested on two platforms: :ref:`FlytPOD<about flytpod>` and '`Pixhawk`_ + `ODROID-XU4`_'. Developers are encouraged to try FlytOS on 'Pixhawk + other ARM based companion computers'. 
+FlytOS Installation guide
+=========================
 
-.. _flytos install:
+.. _create_flytbase_account:
 
-FlytOS - Installation
----------------------
+Create a FlytBase account
+-------------------------
 
-FlytPOD
-^^^^^^^
+FlytBase account allows you to activate your FlytOS by registering your device and also lets you manage your license subscriptions. Follow the steps given below to create your FlytBase account.
 
-FlytOS comes pre-installed in FlytPOD. To update the package, please go to :ref:`FlytOS - update<flytos update>` section.
-
-Pixhawk + ODROID-XU4
-^^^^^^^^^^^^^^^^^^^^
-
-Hardware Setup
-""""""""""""""
-
-FlytOS needs telemetry data from autopilot(Pixhawk). Connect Pixhawk's Telemetry port to ODROID-XU4. There are many ways to do that as the following setup video suggests:
-
-a. **[Recommended]** Connect ``Pixhawk's Telem2 port`` to ``ODROID UART0`` port. We have used the ODROID XU4 Shifter Shield as a level converter and the pins mapped as ``GPA0.0(RX)`` and ``GPA0.1(TX)`` have been used as serial port UART0. 
-b. [Has known issues] Connect ``Pixhawk's micro-USB`` to the ``USB port of ODROID``.
-c. [Not Tested] Connect ``Pixhawk's Telem2 port`` to the ``USB port of ODROID`` using UART-USB converter.
-
-FlytOS comes packed with :ref:`FlytConsole<about flytconsole>` (a web-based drone configuration utility). To enable access to vehicle, WiFi-dongle must be installed onboard the ODROID-XU4.
- 
-Below is a hardware setup `youtube video <https://www.youtube.com/watch?v=B40pE02bjJI>`_ for Pixhawk + ODROID-XU4 covering all the necessary information.
-
-..  youtube:: B40pE02bjJI
-    :aspect: 16:9
-    :width: 100%
-
-|br|
-
-Firmware Setup
-""""""""""""""
-
-**Pixhawk Firmware**
-
-a. **[Recommended]** *Using Binaries* - Download and install the latest stable PX4/APM firmware release using QGC or any other means. 
-b. *Build from source* - Clone the PX4/APM stable branch, build and install on Pixhawk.			
-
-**FlytOS on ODROID-XU4**
-
-a. **[Recommended]** *Using FlytImage* - Download the `FlytImage`_ on your local machine.
-
-   1) FlytImage comes pre-installed with FlytOS. To update FlytOS, please go to :ref:`FlytOS - update<flytos update>` section.
-
-   .. important:: Do Not forget to update your FlytOS, as the pre-installed package would be old.
+1) Create your account by signing up `here <http://flytonline-staging.azurewebsites.net/>`_ and filling out the required information.
+2) Once done, an email ID confirmation link would be sent to your registered ID asking you to set a password for your account.
+3) Login using your registered user ID and password.
 
 
 
-   2) Follow `this <http://odroid.com/dokuwiki/doku.php?id=en:odroid_flashing_tools>`_ guide to install the image on ODROID's SD/eMMC card.
-   3) After installing the image on the ODROID's SD/eMMC card, launch the ODROID Utility App on the desktop. Enter the FlytPOD's password(flytpod) at the command prompt and select the fourth option i.e Resize your root partition and reboot the system.
+Preparing your Flight Computer
+------------------------------
+
+In this section, we would help you install FlytImage on a 32GB SD/eMMC card for your specific board. FlytOS is currently compatible with `FlytPOD <http://docs.flytbase.com/en/master/docs/FlytPOD/About_FlytPOD.html>`_, `FlytPOD PRO <http://docs.flytbase.com/en/master/docs/FlytPOD/About_FlytPOD.html>`_, `ODROID-XU4 <http://docs.flytbase.com/en/master/docs/FlytOS/FlytOSInstallationGuide.html#pixhawk-odroid-xu4>`_ and  `Raspberry Pi 3 <https://www.raspberrypi.org/products/raspberry-pi-3-model-b/>`_ . FlytPOD/FlytPOD PRO comes with FlytImage installed on their respective 32GB storage devices. Follow this step ONLY if you want to reflash your device.
+
+This step requires you to have a registered FlytBase account. In case you don't have an account, go to :ref:`step one<create_flytbase_account>` and follow the steps to create a FlytBase account.
+
+FlytPOD / PRO
+^^^^^^^^^^^^^
+
+Flytmage is pre installed in FlytPOD and FlytPOD PRO. In case you want to reflash their respective 32GB SD/eMMC card , follow the steps given below.
+
+**Image download:**
+
+1. Download the `FlytImage <http://flytonline-staging.azurewebsites.net/FlytOS/>`_ for FlytPOD/FlytPOD PRO from your FlytBase account.
+2. Download FlytImage mdsum.
+3. It is about 2.7 GBs in size compressed (md5sum 3355a1ea968ede3d7571452fa19b2e05) and ~ 7.9 GBs uncompressed. 
+4. Check mdsum.
+5. Uncompress the file using the following command in your terminal: gunzip pi_flytimage.img.gz 
+6. Size of uncompressed image.
    
-   
-   .. 1. FlytImage comes pre-installed with FlytOS. To update FlytOS, please go to :ref:`FlytOS - update<flytos update>` section.
-  
-   ..    .. important:: Do Not forget to update your FlytOS, as the pre-installed package would be old.
+**Image write to SD Card:**
 
-   .. ii. Follow `this <http://odroid.com/dokuwiki/doku.php?id=en:odroid_flashing_tools>`_ guide to install the image on ODROID's SD/eMMC card. 
+1. We recommend using a 32 GB sd card, but a 16 GB card would work fine too. 
+2. Format the micro sd card.
+3. Follow `this <http://odroid.com/dokuwiki/doku.php?id=en:odroid_flashing_tools>`_ guide to install the image on ODROID-XU4’s SD/eMMC card.
+4. After installing the image on the ODROID-XU4’s SD/eMMC card, launch the ODROID-XU4 Utility App on the desktop. Enter FlytPOD’s password(flytpod) at the command prompt and select the fourth option i.e Resize your root partition and reboot the system.
 
-   .. iii. After installing the image on the ODROID's SD/eMMC card, launch the ODROID Utility App on the desktop. Enter the FlytPOD's password(flytpod) at the command prompt and select the fourth option i.e Resize your root partition and reboot the system.
+5. Crisp pointsfrom above link.
 
-b. *Using FlytOS Debian Package* - FlytOS debian package for armhf architecture is also available for installation.
+**SD card expansion:**
 
-   1) But, before doing that, install the following dependencies first:
+1. Why should it be expanded?
+2. How to expand in detail. 
 
-      * Linux - Ubuntu 16.04
-      * `ROS - Kinetic`_ 
-      * `OpenCV 2.4`_ (for vision/video streaming APIs)
-      * Other dependencies - Run the following commands in your terminal with *sudo* permission.
-           
-      .. literalinclude:: include/flytos_dependency.sh
-         :language: bash
-         :tab-width: 4 
+You can install all FlytOS dependencies by either installing FlytImage(the preferred approach) in your 32GB storage device or separately install all the dependencies by following this guide:
 
-   2) You have to update some kernel modules for video streaming to work properly. Run the following script as root or run each command with *sudo* permission
-    
-      .. literalinclude:: include/kernel_module_update.sh
-         :language: bash
-         :tab-width: 4 
+1. Install the following dependencies first:
 
-   3) Before proceeding further, add the following three lines at the end of your /etc/bash.bashrc file. Please note that you will need *sudo* permission to edit the file.
-    
-   .. code-block:: bash
+   a) Linux - Ubuntu 16.04
+   b) `ROS - Kinetic <http://wiki.ros.org/kinetic/Installation/Ubuntu>`_
+   c) `OpenCV 2.4 <http://wiki.ros.org/kinetic/Installation/Ubuntu>`_(for vision/video streaming APIs).
+   d) Other dependencies - Run the following commands in your terminal with sudo permission.
+
+      .. code-block:: python
        
+           #!/bin/bash 
+           # install dependency script for FlytOS
+
+           #installing known python dependencies
+           sudo -H pip install flask_cors flask_reverse_proxy flask_restful tblib webargs click flask_security httplib2 simple_json pyzmp pyros-setup
+
+           apt-get install -y python-pip python-serial python-flask python-wtforms python-sqlalchemy python-concurrent.futures python-mock python-zmq python-twistedsudo 
+
+           #installing known ros dependencies
+           apt-get install -y ros-kinetic-image-proc ros-kinetic-image-transport-plugins ros-kinetic-image-transport ros-kinetic-rosbridge-suite ros-kinetic-control-toolbox ros-kinetic-eigen-conversions ros-kinetic-camera-info-manager ros-kinetic-pyros-utils
+
+           #installing other dependencies
+           apt-get install -y v4l2loopback-utils lsof minicom libglib2.0-dev
+           sudo -H pip install certifi
+           #removing modemmanager 
+           apt-get remove -y modemmanager
+
+           exit 0
+ 
+    
+2. You have to update some kernel modules for video streaming to work properly. Run the following script as root or run each command with sudo permission.
+   
+   .. code-block:: python
+   
+       #!/bin/bash 
+       # install v4l2loopback kernel module required for FlytOS
+
+       #Run this script as root
+
+       cd $HOME
+       git clone https://github.com/umlaeute/v4l2loopback.git
+       cd v4l2loopback/
+       apt-get install linux-headers-$(uname -r)
+       apt-get update
+       ln -s /usr/src/linux-headers-$(uname -r)/ /lib/modules/$(uname -r)/build
+       sed -i 's/#define CONFIG_NEED_MACH_MEMORY_H 1/\/\/#define CONFIG_NEED_MACH_MEMORY_H 1/g' /lib/modules/$(uname -r)/build/include/generated/autoconf.h
+       sed -i '$a \\n#define CONFIG_ARCH_MULTIPLATFORM 1\n' /lib/modules/$(uname -r)/build/include/generated/autoconf.h
+       make && make install
+       cd ..
+       rm -rf v4l2loopback/
+
+       exit 0
+
+
+
+3. Before proceeding further, add the following three lines at the end of your /etc/bash.bashrc file. Please note that you will need sudo permission to edit the file.
+ 
+   
+   .. code-block:: python
+   
        source /opt/ros/kinetic/setup.bash
        export PYTHONPATH=$PYTHONPATH:/flyt/flytapps:/flyt/userapps
        source /flyt/flytos/flytcore/setup.bash
 
-   4) Download the flytOS_0.x-y_armhf.deb file from `FlytOS Download`_ page. Once downloaded, run the following command in your terminal to install FlytOS.
-    
-   .. code-block:: bash
+4. Rc.local gpio_init.sh
+
+
+
+ODROID-XU4
+^^^^^^^^^^
+
+FlytOS is compatible with ODROID-XU4. Download FlytImage from your FlytBase account and follow the steps below to install the image on your ODROID-XU4. 
+
+**Image download:**
+
+1. Download the `FlytImage <http://flytonline-staging.azurewebsites.net/FlytOS/>`_ for ODROID-XU4 from your FlytBase account.
+2. Download FlytImage mdsum.
+3. It is about 2.7 GBs in size compressed (md5sum 3355a1ea968ede3d7571452fa19b2e05) and ~ 7.9 GBs uncompressed. 
+4. Check mdsum.
+5. Uncompress the file using the following command in your terminal: gunzip pi_flytimage.img.gz 
+6. Size of uncompressed image.
    
-       $ sudo dpkg -i <path to debian package location>/flytOS_0.x-y_armhf.deb
+**Image write to SD Card:**
 
+1. We recommend using a 32 GB sd card, but a 16 GB card would work fine too. 
+2. Format the micro sd card.
+3. Follow `this <http://odroid.com/dokuwiki/doku.php?id=en:odroid_flashing_tools>`_ guide to install the image on ODROID-XU4’s SD/eMMC card.
+4. After installing the image on the ODROID-XU4’s SD/eMMC card, launch the ODROID-XU4 Utility App on the desktop. Enter FlytPOD’s password(flytpod) at the command prompt and select the fourth option i.e Resize your root partition and reboot the system.
 
-   5) Just in case you see any dependency issues cropping up in your screen while executing the install script, kindly run the following command and execute the previous command again.
+5. Crisp pointsfrom above link.
+
+**SD card expansion:**
+
+1. Why should it be expanded?
+2. How to expand in detail. 
+
+You can install all FlytOS dependencies by either installing FlytImage(the preferred approach) in your 32GB storage device or separately install all the dependencies by following this guide:
+
+1. Install the following dependencies first:
+
+   a) Linux - Ubuntu 16.04
+   b) `ROS - Kinetic <http://wiki.ros.org/kinetic/Installation/Ubuntu>`_
+   c) `OpenCV 2.4 <http://wiki.ros.org/kinetic/Installation/Ubuntu>`_(for vision/video streaming APIs).
+   d) Other dependencies - Run the following commands in your terminal with sudo permission.
+
+      .. code-block:: python
+       
+           #!/bin/bash 
+           # install dependency script for FlytOS
+
+           #installing known python dependencies
+           sudo -H pip install flask_cors flask_reverse_proxy flask_restful tblib webargs click flask_security httplib2 simple_json pyzmp pyros-setup
+
+           apt-get install -y python-pip python-serial python-flask python-wtforms python-sqlalchemy python-concurrent.futures python-mock python-zmq python-twistedsudo 
+
+           #installing known ros dependencies
+           apt-get install -y ros-kinetic-image-proc ros-kinetic-image-transport-plugins ros-kinetic-image-transport ros-kinetic-rosbridge-suite ros-kinetic-control-toolbox ros-kinetic-eigen-conversions ros-kinetic-camera-info-manager ros-kinetic-pyros-utils
+
+           #installing other dependencies
+           apt-get install -y v4l2loopback-utils lsof minicom libglib2.0-dev
+           sudo -H pip install certifi
+           #removing modemmanager 
+           apt-get remove -y modemmanager
+
+           exit 0
+
+ 
     
+2. You have to update some kernel modules for video streaming to work properly. Run the following script as root or run each command with sudo permission.
+   
+   .. code-block:: python
+   
+       #!/bin/bash 
+       # install v4l2loopback kernel module required for FlytOS
+
+       #Run this script as root
+
+       cd $HOME
+       git clone https://github.com/umlaeute/v4l2loopback.git
+       cd v4l2loopback/
+       apt-get install linux-headers-$(uname -r)
+       apt-get update
+       ln -s /usr/src/linux-headers-$(uname -r)/ /lib/modules/$(uname -r)/build
+       sed -i 's/#define CONFIG_NEED_MACH_MEMORY_H 1/\/\/#define CONFIG_NEED_MACH_MEMORY_H 1/g' /lib/modules/$(uname -r)/build/include/generated/autoconf.h
+       sed -i '$a \\n#define CONFIG_ARCH_MULTIPLATFORM 1\n' /lib/modules/$(uname -r)/build/include/generated/autoconf.h
+       make && make install
+       cd ..
+       rm -rf v4l2loopback/
+
+       exit 0
+
+
+
+
+3. Before proceeding further, add the following three lines at the end of your /etc/bash.bashrc file. Please note that you will need sudo permission to edit the file.
+ 
+   
+   .. code-block:: python
+   
+       source /opt/ros/kinetic/setup.bash
+       export PYTHONPATH=$PYTHONPATH:/flyt/flytapps:/flyt/userapps
+       source /flyt/flytos/flytcore/setup.bash
+
+
+Raspberry Pi 3
+^^^^^^^^^^^^^^
+
+FlytOS is compatible with Raspberry Pi 3. Download FlytImage from your FlytBase account and follow the steps below to install the image on your Raspberry Pi 3.
+
+**Image download**
+
+1. Download the `FlytImage <http://flytonline-staging.azurewebsites.net/FlytOS/>`_ for Raspberry Pi 3 from your FlytBase account. 
+2. Download FlytImage mdsum.
+3. It is about 2.7 GBs in size compressed (md5sum 3355a1ea968ede3d7571452fa19b2e05) and ~ 7.9 GBs uncompressed.
+4. Check mdsum.
+5. Uncompress the file using the following command in your terminal:
+gunzip pi_flytimage.img.gz 
+
+6. Size of uncompressed image.
+   
+**Image write to SD Card**
+
+1. We recommend using a 32 GB sd card, but a 16 GB card would work fine too. 
+2. Format the micro sd card.
+3. Follow the instructions `here <https://www.raspberrypi.org/documentation/installation/installing-images/linux.md>`_ to copy the image on to the sdcard/emmc.
+   
+**Expand SD card**
+
+Since the image is only 7.9 GBs, the rest of the SD Card would have unallocated memory. Follow `this guide <http://elinux.org/RPi_Resize_Flash_Partitions>`_ to expand the partion to the maximum possible size to utilize all memory.
+
+Insert the sd card in your Raspberry Pi 3 and apply power to boot it. By default a WiFi access point is created on the Pi with following credentials:
+Ssid:       Flytpod_wifi
+Password:   FlytPOD12#
+
+Connect to the access point on another computer. Open the following link in your browser to view flytconsole:
+10.42.0.1:9090/flytconsole
+
+
+
+Download and Install FlytOS
+---------------------------
+
+FlytOS is currently compatible with `FlytPOD <http://docs.flytbase.com/en/master/docs/FlytPOD/About_FlytPOD.html>`_, `FlytPOD PRO <http://docs.flytbase.com/en/master/docs/FlytPOD/About_FlytPOD.html>`_, `ODROID-XU4 <http://docs.flytbase.com/en/master/docs/FlytOS/FlytOSInstallationGuide.html#pixhawk-odroid-xu4>`_ and  `Raspberry Pi 3 <https://www.raspberrypi.org/products/raspberry-pi-3-model-b/>`_ . This step requires you to have a registered FlytBase account. In case you don't have an account, go to :ref:`step one<create_flytbase_account>` and follow the steps to create a FlytBase account.
+Once you have installed the latest FlytImage, we recommend you to update your FlytOS by following the steps below:
+
+
+
+1. **Download FlytOS:** Download the Board specific `FlytOS <http://flytonline-staging.azurewebsites.net/FlytOS/>`_ from your FlytBase account.
+2. **Install FlytOS:** Once you have downloaded the Debian package, run the following command in your terminal to install FlytOS: 
+   
+   .. code-block:: python
+   
+       $ sudo dpkg -i <path to debian package location>/flytOS_*.deb 
+
+   
+
+4. Replace flytOS_* with the correct file name of the debian package.
+
+5. Check for **Congratulations! FlytOS installation completed** message at the end.
+6. Just in case you see any dependency issues cropping up in your screen while installing FlytOS, kindly run the following command and execute the previous command again:
+   
+   .. code-block:: python
+   
+       $ sudo apt -f install
+
+FlytOS Basics
+-------------
+
+**Start/Stop FlytOS on boot**
+
+1. If you are using FlytOS Linux image, FlytOS starts automatically on bootup.
+2. On bootup FlytOS will also check for any updates. Available updates will be downloaded and installed automatically.
+3. You can find more information on FlytOS updates here(link to FlytOS updates).
+
+**Start/Stop FlytOS**
+
+1. Launch FlytOS
+       
+   Once you have installed FlytOS, you are ready to build your own apps and test it out on the pixhawk. If you have installed FlytImage, FlytOS would be launched automatically at every system bootup. To prevent this behaviour, comment the following line in /etc/rc.local file.
+
+   To launch FlytOS, run this command in the terminal.
+
+   .. code-block:: python
+       
+       $ sudo $(rospack find core_api)/scripts/start_flytOS.sh
+
+   In case you are using APM on Pixhawk, launch FlytOS using the following script.
+
+   .. code-block:: python
+       
+       $ sudo $(rospack find core_api)/scripts/start_flytOS_apm.sh
+
+   .. important:: If you get this error: ``Error: package 'core_api' not found``, source your $HOME/.bashrc file.
+
+   You can use FlytAPIs in your command line to do some simple maneuvers. For example,
+
    .. code-block:: bash
-    
-       $ sudo apt-get -f install 
 
-   6) Check for ``Congratulations! FlytOS installation completed`` message at the end.
-    
+	    #To make the vehicle take off at its spot, execute this command in your terminal. 
+	    $ rosservice call /flytpod/navigation/take_off "takeoff_alt: 2.0"
 
-   .. i. But, before doing that, install the following dependencies first:
+   .. code-block:: bash
 
-   ..    + Linux - Ubuntu 14.04
-   ..  	+ `ROS - Indigo`_
-   ..  	+ `OpenCV 2.4`_ (for vision/video streaming APIs)
-   ..  	+ Other dependencies - Run the following commands in your terminal.
-      
-  	.. 		.. literalinclude:: include/flytos_dependency.sh
-   ..   		   :language: bash
-   ..   			:tab-width: 4 
-
-   .. ii. Before proceeding further, add the following two lines at the end of your $HOME/.bashrc file.
-    
-   .. .. code-block:: bash
-
-   ..    export PYTHONPATH=$PYTHONPATH:/flyt/flytapps
-   ..    source /flyt/flytos/flytcore/setup.bash
-
-   .. iii. Download the flytOS_0.x-y_armhf.deb file from `FlytOS Download`_ page. Once downloaded, run the following command in your terminal to install FlytOS.
-    
-   .. .. code-block:: bash
-
-   ..    $ sudo dpkg -i <path to debian package location>/flytOS_0.x-y_armhf.deb
-
-   .. iv. Just in case you see any dependency issues cropping up in your screen while executing the install script, kindly run the following command and execute the previous command again.
-    
-   .. .. code-block:: bash
-
-   ..    $ sudo apt-get -f install 
-
-   .. v. Check for ``Congratulations! FlytOS installation completed`` message at the end.
+	    #To send a position setpoint to the vehicle in NED frame, execute this command in your terminal.
+	    rosservice call /flytpod/navigation/position_set "twist:
+	    header:
+	    seq: 0
+	    stamp: {secs: 0, nsecs: 0}
+	    frame_id: ''
+	    twist:
+	    linear: {x: 3.0, y: 1.0, z: -2.0}
+	    angular: {x: 0.0, y: 0.0, z: 0.0}
+	    tolerance: 0.0
+	    async: false
+	    relative: false
+	    yaw_valid: false
+	    body_frame: false"
 
 
-.. _flytos update:
+   To know more about such commands, please refer to :ref:`FlytAPIs<list-of-APIs>` for more details.	
 
-FlytOS - Update
----------------
+   2. Kill FlytOS
+       
+      To kill this instance of FlytOS, run this command in your terminal. 
 
-FlytOS versions with bug fixes and additional features are released at regular intervals. To check the version of installed FlytOS in your system, issue the following command in your terminal.
+      .. code-block:: python
+       
+          $ sudo $(rospack find core_api)/scripts/kill_flytOS.sh
+       
 
-.. code-block:: bash
+**Security and Authentication**
 
-	 $ sudo dpkg -s flytcore
-
-Its better to again check for FlytOS dependencies just in case, the list is updated. Issue the following commands in your terminal with *sudo* permission.
-
-.. literalinclude:: include/flytos_dependency.sh
-   :language: bash
-   :tab-width: 4   
-
-Download the flytOS_0.x-y_armhf.zip file from `FlytOS Download`_ page. Once downloaded, extract the contents of the zip file. Update the autopilot firmware, by running the following command.
-
-.. code-block:: bash
-
-   $ sudo $(rospack find core_api)/scripts/firmware_upgrade_usart.sh <path to debian package location>/nuttx-navstik-v1-default.flyt
-
-Once the update is complete, run the following command in your terminal to update FlytOS.
-    
-.. code-block:: bash
-
-   $ sudo dpkg -i <path to debian package location>/flytOS_0.x-y_armhf.deb 		#fill in the v0.x-y with the correct version number
+From a Security and Authentication perspective, following layers are considered:
 
 
+1. Secure WiFi network using WPA2:
+   This is achieved by setting up a secure WiFi network (on FlytPOD by default or on a ground router).
+2. SSL (https and wss) encryption:
+   FlytOS uses SSL certificates and secure protocols (https, wss).
+3. User and Request authentication:
+   The last point involves, authenticating a user and providing role based access via a login mechanism. It also includes authenticating all the FlytAPIs for which a token based authentication mechanism is used.
+
+**Accessing apps with FlytOS**
+
+1. Open your browser and go to the following link - ``https://ip-address-of-device``.
+2. Enter ``flytPOD`` as the IP address in case you are connected to FlytPOD- ``https://flytpod``.
+3. You will be directed to a page that shows a warning **Connection is not private**. FlytOS contains self signed SSL certificates to enable access over local network.
+   
+       
+   .. image:: /_static/Images/fOSinst1.png
+      :align: center
+4. Bypass the warning by clicking Advanced> Proceed to localhost. Confirm adding an exception if prompted to do so.
+5. Next you will be directed to FlytOS login page. Login using the default credentials provided to you.
+       
+   .. image:: /_static/Images/fOSinst2.png
+      :align: center
+6. Once you have logged in you will see the list of standard apps along with other settings.
+       
+   .. image:: /_static/Images/fOSinst3.png
+      :align: center
+
+When a user tries to access an onboard web app e.g. FlytConsole, a login page is served asking for user credentials. The user credentials are validated and home page for the app is served. The response of a login request contains a token. All the FlytAPI calls need to have this token in the http header otherwise the request fails with unauthorized error.
+
+The user authentication follows Single Sign On approach with a common login for FlytPOD allowing access to all the onboard apps.
 
 
-.. |br| raw:: html
+**FlytAdmin for User Administration**
+   
+There is an inbuilt app FlytAdmin for user administration. Only ‘admin’ users have access to this app. The FlytOS admins of a device will be able to add, activate, edit, delete, deactivate users for that device using this app. The app provides views for Users and Roles. 
 
-   <br />
+.. image:: /_static/Images/fOSinst4.png
+   :align: center
 
-.. _ROS - Kinetic: http://wiki.ros.org/kinetic/Installation/Ubuntu
-.. _FlytOS Download: http://flytbase.com/flytos/#download
-.. _Pixhawk: https://pixhawk.org/choice
-.. _ODROID-XU4: http://www.hardkernel.com/main/products/prdt_info.php
-.. _FlytImage: http://www.flytbase.com/flytos/#download
-.. _OpenCV 2.4: http://docs.opencv.org/2.4/doc/tutorials/introduction/linux_install/linux_install.html
+.. image:: /_static/Images/fOSinst5.png
+   :align: center
+
+
+
+.. 1) **Image Download** : Download the FlytOS for RPi3 image from this link https://drive.google.com/file/d/0B2IXB8LxWs-qMjFsVlRHSnpzS3M/view?usp=sharing. It is about 2.7 GBs in size compressed (md5sum 3355a1ea968ede3d7571452fa19b2e05) and ~ 7.9 GBs uncompressed. Uncompress the file using the following command in your terminal:
+ 
+.. .. code-block:: bash
+
+.. 	 gunzip pi_flytimage.img.gz
+
+.. 2) **Image Write to SD Card** : Format a micro sd card (we recommend using a 32 GB sdcard, but a 16 GB card would work fine too). Follow these instructions to copy the image on to the sdcard/emmc: https://www.raspberrypi.org/documentation/installation/installing-images/linux.md
+.. 3) **Expand SD Card** : Since the image is only 7.9 GBs, the rest of the sdcard would have unallocated memory. Follow this guide to expand the partion to the maximum possible size to utilize all memory: http://elinux.org/RPi_Resize_Flash_Partitions
+.. 4) **Download latest version of FlytOS** : We highly recommend you to update the FlytOS version on your Rpi3. Download new debian from this link here: https://drive.google.com/file/d/0B2IXB8LxWs-qUkM1UUM0ME5kVTA/view?usp=sharing
+.. 5) **Install FlytOS** : Install it by running the following command in your RasPi’s terminal:
+
+.. .. code-block:: bash
+
+..     $ sudo dpkg -i flytcore_0.7-4b_armhf.deb
+
+.. 6) Insert the sd card in RPi3 and apply power to boot it. By default a wifi access point is created on the Pi with following credentials:
+
+..    a. Ssid: ``Flytpod_wifi`` 
+..    b. Password: ``FlytPOD12#``
+
+.. 7) Connect to the access point on another computer. Open the following link in your browser to view flytconsole: ``10.42.0.1:9090/flytconsole``
