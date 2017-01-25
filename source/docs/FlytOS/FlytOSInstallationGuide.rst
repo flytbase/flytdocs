@@ -10,18 +10,24 @@ Create a FlytBase account
 
 FlytBase account allows you to activate your FlytOS by registering your device and also lets you manage your license subscriptions. Follow the steps given below to create your FlytBase account.
 
-1) Create your account by signing up `here <http://flytonline-staging.azurewebsites.net/>`_ and filling out the required information.
-2) Once done, an email ID confirmation link would be sent to your registered ID asking you to set a password for your account.
-3) Login using your registered user ID and password.
+1) Connect your device to the internet. 
+   
+   .. note:: If you are connected to FlytPOD/PRO, you will have to be in client mode. Follow the `WiFi Setup <http://docs.flytbase.com/en/master/docs/FlytPOD/RouterSetup.html>`_ guide to do so.
+   
+   
+
+2) Create your account by signing up `here <http://my.flytbase.com>`_ and filling out the required information.
+3) Once done, an email ID confirmation link would be sent to your registered ID asking you to set a password for your account.
+4) Login using your registered user ID and password.
 
 
 
 Preparing your Flight Computer
 ------------------------------
 
-In this section, we would help you install FlytImage on a 32GB SD/eMMC card for your specific board. FlytOS is currently compatible with `FlytPOD <http://docs.flytbase.com/en/master/docs/FlytPOD/About_FlytPOD.html>`_, `FlytPOD PRO <http://docs.flytbase.com/en/master/docs/FlytPOD/About_FlytPOD.html>`_, `ODROID-XU4 <http://docs.flytbase.com/en/master/docs/FlytOS/FlytOSInstallationGuide.html#pixhawk-odroid-xu4>`_ and  `Raspberry Pi 3 <https://www.raspberrypi.org/products/raspberry-pi-3-model-b/>`_ . FlytPOD/FlytPOD PRO comes with FlytImage installed on their respective 32GB storage devices. Follow this step ONLY if you want to reflash your device.
+In this section, we would help you install FlytOS Linux Image on a 32GB SD/eMMC card for your specific board. FlytOS is currently compatible with `FlytPOD <http://docs.flytbase.com/en/master/docs/FlytPOD/About_FlytPOD.html>`_, `FlytPOD PRO <http://docs.flytbase.com/en/master/docs/FlytPOD/About_FlytPOD.html>`_, `ODROID-XU4 <http://docs.flytbase.com/en/master/docs/FlytOS/FlytOSInstallationGuide.html#pixhawk-odroid-xu4>`_ and  `Raspberry Pi 3 <https://www.raspberrypi.org/products/raspberry-pi-3-model-b/>`_. FlytPOD/FlytPOD PRO comes with FlytOS Linux Image installed on their respective 32GB storage devices. Follow this step ONLY if you want to reflash your device.
 
-This step requires you to have a registered FlytBase account. In case you don't have an account, go to :ref:`step one<create_flytbase_account>` and follow the steps to create a FlytBase account.
+This step requires you to have a registered FlytBase account. In case you don't have an account follow the steps to create a FlytBase account :ref:`here<create_flytbase_account>` before you proceed.
 
 FlytPOD / PRO
 ^^^^^^^^^^^^^
@@ -30,8 +36,8 @@ Flytmage is pre installed in FlytPOD and FlytPOD PRO. In case you want to reflas
 
 **Image download:**
 
-1. Download the `FlytImage <http://flytonline-staging.azurewebsites.net/FlytOS/>`_ for FlytPOD/FlytPOD PRO from your FlytBase account.
-2. Download FlytImage mdsum.
+1. Download the `FlytOS Linux Image <http://flytonline-staging.azurewebsites.net/FlytOS/>`_ for FlytPOD/FlytPOD PRO from your FlytBase account.
+2. Download FlytOS Linux Image mdsum.
 3. It is about 2.7 GBs in size compressed (md5sum 3355a1ea968ede3d7571452fa19b2e05) and ~ 7.9 GBs uncompressed. 
 4. Check mdsum.
 5. Uncompress the file using the following command in your terminal: gunzip pi_flytimage.img.gz 
@@ -51,13 +57,13 @@ Flytmage is pre installed in FlytPOD and FlytPOD PRO. In case you want to reflas
 1. Why should it be expanded?
 2. How to expand in detail. 
 
-You can install all FlytOS dependencies by either installing FlytImage(the preferred approach) in your 32GB storage device or separately install all the dependencies by following this guide:
+You can install all FlytOS dependencies by either installing FlytOS Linux Image(the preferred approach) in your 32GB storage device or separately install all the dependencies by following this guide:
 
 1. Install the following dependencies first:
 
    a) Linux - Ubuntu 16.04
    b) `ROS - Kinetic <http://wiki.ros.org/kinetic/Installation/Ubuntu>`_
-   c) `OpenCV 2.4 <http://wiki.ros.org/kinetic/Installation/Ubuntu>`_(for vision/video streaming APIs).
+   c) `OpenCV 2.4 <http://wiki.ros.org/kinetic/Installation/Ubuntu>`_ (for vision/video streaming APIs).
    d) Other dependencies - Run the following commands in your terminal with sudo permission.
 
       .. code-block:: python
@@ -123,12 +129,12 @@ You can install all FlytOS dependencies by either installing FlytImage(the prefe
 ODROID-XU4
 ^^^^^^^^^^
 
-FlytOS is compatible with ODROID-XU4. Download FlytImage from your FlytBase account and follow the steps below to install the image on your ODROID-XU4. 
+FlytOS is compatible with ODROID-XU4. Download FlytOS Linux Image from your FlytBase account and follow the steps below to install the image on your ODROID-XU4. This step requires you to have a registered FlytBase account. In case you don't have an account follow the steps to create a FlytBase account :ref:`here<create_flytbase_account>` before you proceed.
 
 **Image download:**
 
-1. Download the `FlytImage <http://flytonline-staging.azurewebsites.net/FlytOS/>`_ for ODROID-XU4 from your FlytBase account.
-2. Download FlytImage mdsum.
+1. Download the `FlytOS Linux Image <http://flytonline-staging.azurewebsites.net/FlytOS/>`_ for ODROID-XU4 from your FlytBase account.
+2. Download FlytOS Linux Image mdsum.
 3. It is about 2.7 GBs in size compressed (md5sum 3355a1ea968ede3d7571452fa19b2e05) and ~ 7.9 GBs uncompressed. 
 4. Check mdsum.
 5. Uncompress the file using the following command in your terminal: gunzip pi_flytimage.img.gz 
@@ -148,13 +154,13 @@ FlytOS is compatible with ODROID-XU4. Download FlytImage from your FlytBase acco
 1. Why should it be expanded?
 2. How to expand in detail. 
 
-You can install all FlytOS dependencies by either installing FlytImage(the preferred approach) in your 32GB storage device or separately install all the dependencies by following this guide:
+You can install all FlytOS dependencies by either installing FlytOS Linux Image(the preferred approach) in your 32GB storage device or separately install all the dependencies by following this guide:
 
 1. Install the following dependencies first:
 
    a) Linux - Ubuntu 16.04
    b) `ROS - Kinetic <http://wiki.ros.org/kinetic/Installation/Ubuntu>`_
-   c) `OpenCV 2.4 <http://wiki.ros.org/kinetic/Installation/Ubuntu>`_(for vision/video streaming APIs).
+   c) `OpenCV 2.4 <http://wiki.ros.org/kinetic/Installation/Ubuntu>`_ (for vision/video streaming APIs).
    d) Other dependencies - Run the following commands in your terminal with sudo permission.
 
       .. code-block:: python
@@ -219,12 +225,12 @@ You can install all FlytOS dependencies by either installing FlytImage(the prefe
 Raspberry Pi 3
 ^^^^^^^^^^^^^^
 
-FlytOS is compatible with Raspberry Pi 3. Download FlytImage from your FlytBase account and follow the steps below to install the image on your Raspberry Pi 3.
+FlytOS is compatible with Raspberry Pi 3. Download FlytOS Linux Image from your FlytBase account and follow the steps below to install the image on your Raspberry Pi 3. This step requires you to have a registered FlytBase account. In case you don't have an account follow the steps to create a FlytBase account :ref:`here<create_flytbase_account>` before you proceed.
 
 **Image download**
 
-1. Download the `FlytImage <http://flytonline-staging.azurewebsites.net/FlytOS/>`_ for Raspberry Pi 3 from your FlytBase account. 
-2. Download FlytImage mdsum.
+1. Download the `FlytOS Linux Image <http://flytonline-staging.azurewebsites.net/FlytOS/>`_ for Raspberry Pi 3 from your FlytBase account. 
+2. Download FlytOS Linux Image mdsum.
 3. It is about 2.7 GBs in size compressed (md5sum 3355a1ea968ede3d7571452fa19b2e05) and ~ 7.9 GBs uncompressed.
 4. Check mdsum.
 5. Uncompress the file using the following command in your terminal:
@@ -254,8 +260,8 @@ Connect to the access point on another computer. Open the following link in your
 Download and Install FlytOS
 ---------------------------
 
-FlytOS is currently compatible with `FlytPOD <http://docs.flytbase.com/en/master/docs/FlytPOD/About_FlytPOD.html>`_, `FlytPOD PRO <http://docs.flytbase.com/en/master/docs/FlytPOD/About_FlytPOD.html>`_, `ODROID-XU4 <http://docs.flytbase.com/en/master/docs/FlytOS/FlytOSInstallationGuide.html#pixhawk-odroid-xu4>`_ and  `Raspberry Pi 3 <https://www.raspberrypi.org/products/raspberry-pi-3-model-b/>`_ . This step requires you to have a registered FlytBase account. In case you don't have an account, go to :ref:`step one<create_flytbase_account>` and follow the steps to create a FlytBase account.
-Once you have installed the latest FlytImage, we recommend you to update your FlytOS by following the steps below:
+FlytOS is currently compatible with `FlytPOD <http://docs.flytbase.com/en/master/docs/FlytPOD/About_FlytPOD.html>`_, `FlytPOD PRO <http://docs.flytbase.com/en/master/docs/FlytPOD/About_FlytPOD.html>`_, `ODROID-XU4 <http://docs.flytbase.com/en/master/docs/FlytOS/FlytOSInstallationGuide.html#pixhawk-odroid-xu4>`_ and  `Raspberry Pi 3 <https://www.raspberrypi.org/products/raspberry-pi-3-model-b/>`_ . This step requires you to have a registered FlytBase account. In case you don't have an account follow the steps to create a FlytBase account :ref:`here<create_flytbase_account>` before you proceed.
+Once you have installed the latest FlytOS Linux Image, we recommend you to update your FlytOS by following the steps below:
 
 
 
@@ -290,19 +296,19 @@ FlytOS Basics
 
 1. Launch FlytOS
        
-   Once you have installed FlytOS, you are ready to build your own apps and test it out on the pixhawk. If you have installed FlytImage, FlytOS would be launched automatically at every system bootup. To prevent this behaviour, comment the following line in /etc/rc.local file.
+   Once you have installed FlytOS, you are ready to build your own apps and test it out on the pixhawk. If you have installed FlytOS Linux Image, FlytOS would be launched automatically at every system bootup. To prevent this behaviour, comment the following line in /etc/rc.local file.
 
    To launch FlytOS, run this command in the terminal.
 
    .. code-block:: python
        
-       $ sudo $(rospack find core_api)/scripts/start_flytOS.sh
+       $ sudo $(rospack find core_api)/scripts/launch_flytOS.sh
 
    In case you are using APM on Pixhawk, launch FlytOS using the following script.
 
    .. code-block:: python
        
-       $ sudo $(rospack find core_api)/scripts/start_flytOS_apm.sh
+       $ sudo $(rospack find core_api)/scripts/launch_flytOS_apm.sh
 
    .. important:: If you get this error: ``Error: package 'core_api' not found``, source your $HOME/.bashrc file.
 
@@ -339,7 +345,7 @@ FlytOS Basics
 
       .. code-block:: python
        
-          $ sudo $(rospack find core_api)/scripts/kill_flytOS.sh
+          $ sudo $(rospack find core_api)/scripts/stop_flytOS.sh
        
 
 **Security and Authentication**
@@ -387,6 +393,12 @@ There is an inbuilt app FlytAdmin for user administration. Only ‘admin’ user
 
 .. image:: /_static/Images/fOSinst5.png
    :align: center
+
+
+Activate FlytOS
+---------------
+
+Follow the steps `here <http://my.flytbase.com>`_ to register your device and activate FlytOS. 
 
 
 

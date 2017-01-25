@@ -7,13 +7,13 @@ About FlytPOD
 FlytPOD
 -------
 
-FlytPOD is next generation autopilot for drones. It has inbuilt powerful application processor which runs :ref:`FlytOS<flytos_about>` - the drone application development platform. FlytPOD runs customized trusted open source `PX4 <http://dev.px4.io>`_ autopilot firmware which can fly multi-rotors, fixed wings and many more custom drones.
+FlytPOD is next generation autopilot for drones. It has inbuilt powerful application processor which runs :ref:`FlytOS<flytos_about>` - the operating system for Drones. FlytPOD runs customized trusted open source `PX4 <http://dev.px4.io>`_ autopilot firmware which can fly multi-rotors, fixed wings and many more custom drones.
 The device houses navigational sensors, integrated powerful WiFi router and expansion panel for an array of payload interfaces.    
 
 FlytPOD PRO
 -----------
 
-FlytPOD PRO is the advanced version of FlytPOD. For applications that demand higher reliability and superior performance, FlytPOD PRO offers sensor redundancy and better storage. Built  to provide fail safe navigation with dual GPS/ MAG module, FlytPOD PRO goes an extra mile to give you reliability and performance for your professional drone. FlytPOD PRO runs customized trusted open source PX4 autopilot firmware which can fly multi-rotors, fixed wings and many more custom drones.
+FlytPOD PRO is the advanced version of FlytPOD. It includes all the featutres of FlytPOD. For applications that demand higher reliability and superior performance, FlytPOD PRO offers sensor redundancy and faster storage. Built to provide fail-safe navigation with triple IMU, dual GPS/MAG module and dual Baormeter, FlytPOD PRO goes an extra mile to give you reliability and performance for your professional drone. 
 
 Watch the `youtube video <https://www.youtube.com/watch?v=BWaecLy8G10>`_ below to get yourself familiarized with FlytPOD.
 

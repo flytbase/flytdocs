@@ -52,23 +52,27 @@ Changing the WiFi Mode
 
 3. Launch FlytConsole in the web browser using the URL ``flytpod:9090/flytconsole``. Go to the options menu in the top right corner and select WiFi setup.
 
-.. figure:: /_static/Images/wifioptions.png
+.. figure:: /_static/Images/DashboardFc.png
 	:align: center
 	:scale: 50 %
 	
 	WiFi Settings
 
-
+.. figure:: /_static/Images/APClient.png
+	:align: center
+	:scale: 50 %
+	
+	AP and Client Modes
 
 4. Select Hotspot/AP or client mode.
 
-.. figure:: /_static/Images/APMode.png
+.. figure:: /_static/Images/ApMode.png
 	:align: center
 	:scale: 50 %
 	
 	AP Mode
 
-.. figure:: /_static/Images/clientMode.png
+.. figure:: /_static/Images/ClientMode.png
 	:align: center
 	:scale: 50 %
 	

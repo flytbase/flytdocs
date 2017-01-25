@@ -5,7 +5,9 @@ Connections and Expansion Ports
 
 .. important:: This page is under active development.
 
-.. attention:: The following document is applicable for both FlytPOD and FlytPOD PRO. 
+.. note:: The following document is applicable for both FlytPOD and FlytPOD PRO
+
+ 
 
 
 

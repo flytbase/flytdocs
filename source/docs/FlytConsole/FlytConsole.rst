@@ -379,6 +379,33 @@ Once this is done, save the parameters.
 
 
 
+WiFi Setup
+""""""""""
+
+Please follow the steps given `here <http://docs.flytbase.com/en/master/docs/FlytPOD/RouterSetup.html>`_ for WiFi setup for FlytPOD/PRO.
+
+Fail Safe
+"""""""""
+
+Fail Safe allows you to assign certain Failsafe actions to be performed by the drone during crictical situations viz. Low battery, RC loss, Datalink loss, Geofence, Return Home settings and Land settings.
+
+.. figure:: /_static/Images/Failsafe.png
+	:align: center
+	:scale: 50 %
+	
+	Fail Safe 
+
+Video
+"""""
+
+Video displays the live stream of video directly being captured by the camera on the drone.
+
+.. figure:: /_static/Images/VideoFc.png
+	:align: center
+	:scale: 50 %
+	
+	Video
+
 GCS
 """
 
