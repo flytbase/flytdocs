@@ -16,22 +16,22 @@ FlytConsole - Widgets
 Connect to FlytConsole
 """"""""""""""""""""""
 
-Factory default mode of FlytPOD is access point mode(AP Mode) in which case connect to ``flytpod_wifi`` network the default password for which is ``FlytPOD123``. However if you have reconfigured the router in client mode then connect to your home wifi network.
+FlytPOD is shipped with WiFi set to Hotspot(AP mode) with WiFi SSID and password FlytPOD123. If the device running FlytOS is connected to your home network, open the link below in your browser to launch FlytConsole after connecting your personal system to the same network as the device running FlytOS.
 
-If you are in client mode flytpod_wifi will cease to exist.
-
-
-Go to ``http://flytpod:9090/flytconsole`` on your web browser to launch FlytConsole. 
+* http://flytpod:9090/flytconsole
+* https://flytpod/flytconsole
 
 
-.. important:: In case the above URL does not work replace ``flytpod`` with ``FlytPOD's IP address``.
+
+
+.. important:: In case the above URLs do not work replace ``flytpod`` with ``FlytPOD's IP address``.
 
 .. The various components included in FlytConsole are as follows:
 
 Dashboard
 """""""""
 
-Upon launch you are greeted by the Dashboard. The Dashboard displays the Connection status, Battery monitor, GPS status, Frame type and other widgets that give you the current status of your drone.
+Upon launch you are greeted by the Dashboard. The Dashboard displays the Connection status, Battery status, GPS status, Frame type and RC Mode.
 
 
 .. figure:: /_static/Images/DashboardFc.png
@@ -66,7 +66,7 @@ Frame Select
 
 Frame Select allows you to select the airframe-type of your drone. You are provided with several predefined options of multi-copter and fixed wing configurations. These configurations are further subdivided based on the make of the drone.
 
-Depending upon the actual frame of your drone, select the airframe and click on **Save and Reboot** to reboot FlytOS.
+Depending upon the actual frame of your drone, select the airframe and click on **Save and Reboot**.
 
 
 
@@ -75,11 +75,13 @@ Depending upon the actual frame of your drone, select the airframe and click on 
 Calibration
 """""""""""
 
-.. note:: Motor Configuration widget is compatible with only FlytPOD.
+This widget shows you options to calibrate your sensors, ESCs and  RC, test your motors and configure RC modes.
+
+.. .. note:: Motor Configuration widget is compatible with only FlytPOD.
 
 
 
-Motor Configuration lets you calibrate the ESCs and test the motors attached to your drone. 
+.. Motor Configuration lets you calibrate the ESCs and test the motors attached to your drone. 
 
 .. figure:: /_static/Images/Calibration.png
 	:align: center
@@ -108,9 +110,9 @@ ESC Calibration requires the following fields to be filled:
 2. Max PWM Value
 3. Number of Actuators
          
-The min and max PWM values are the expected values from the FlytPOD to the ESCs. If the expected values are different from the values set in the fields above, the drone will behave differently. Number of actuators is the number of motors depending upon the airframe selected by you in Frame Select. FlytConsole consists of some predefined default values that can be changed. 
+The Min and the Max PWM values set the range of the expected values from FlytPOD/PRO to the ESCs. Any value received from the RC beyond this range is converted to the min or max value. Number of actuators is the number of motors depending upon the airframe selected by you in Frame Select. FlytConsole consists of some predefined default values that can be changed. 
 
-.. figure:: /_static/Images/escStage1.png
+.. figure:: /_static/Images/escStage0.png
 	:align: center
 	:scale: 50 %
 	
@@ -118,7 +120,7 @@ The min and max PWM values are the expected values from the FlytPOD to the ESCs.
 
 Once you have set the ``Min PWM values , Max PWM values and Number of Actuators`` click on **Start Calibration**. You will see a message saying ``Calibration started``. This marks the start of Stage 1 of ESC Calibration. Disconnect the power from the ESCs and click on **Next**. 
 
-.. figure:: /_static/Images/escStage2.png
+.. figure:: /_static/Images/escStage1.png
 	:align: center
 	:scale: 50 %
 
@@ -126,9 +128,17 @@ Once you have set the ``Min PWM values , Max PWM values and Number of Actuators`
 
 Stage 2 involves setting the time duration(in seconds) for the PWM high time in stage 3. After this connect the power to the ESCs and click on **Next**. 
 
+.. figure:: /_static/Images/escStage2.png
+	:align: center
+	:scale: 50 %
+
+	Stage 2
+
 .. figure:: /_static/Images/escStage3.png
 	:align: center
 	:scale: 50 %
+
+	Stage 3
 
 After the time out the ESCs will automatically receive low PWM value. This is stage 3.You can enter this stage manually by disabling the Automatic PWM high time in seconds and click on **Next**.
 
@@ -176,7 +186,7 @@ Motor Testing
 
    
 
-FlytConsole allows you to test the direction of rotation of your motors attached to your drone. In Motor testing you can do this by clicking on the respective motor that you want to test. Once you click on the motor, it will start rotating and you can check whether the direction of rotation of the corresponding motor on your drone is correct or not.
+FlytConsole allows you to test if the motors are correctly connected. In Motor testing you can do this by clicking on the respective motor that you want to test. Once you click on the motor, it will start rotating and you can check whether the direction of rotation of the corresponding motor on your drone is correct or not.
 
 .. important:: * You need to power the ESCs for this.
      				* In case your motor rotates in the incorrect direction, you can swap any two of the ESC cables going to the motor and make the motor rotate in the desired direction.
@@ -244,7 +254,7 @@ Set the ``AUTOPILOT ORIENTATION`` if the orientation of the frame and FlytPOD ar
 
 Keep the drone steady without movement in a single state till the calibration ends. You will be notified when the calibration ends.
 
-.. figure:: /_static/Images/GyroCalib1.png
+.. figure:: /_static/Images/Gyro.png
 	:align: center
 	:scale: 50 %
 
@@ -275,7 +285,7 @@ Set the ``AUTOPILOT ORIENTATION`` if the orientation of the frame and FlytPOD ar
 
 Keep the drone steady in flat position on a leveled surface on the floor.
 
-.. figure:: /_static/Images/LevelCalib1.png
+.. figure:: /_static/Images/Gyro.png
 	:align: center
 	:scale: 50 %
 
@@ -316,7 +326,10 @@ Following is a list of pin positions for the next few steps:
 
 .. note:: Hold in these positions for a few seconds till you get a message feedback.
 
-Once this is done map RC modes to three way switch channel and manual override to a switch channel in the lower half of the page and set their thresholds.
+RC Mode Settings
+++++++++++++++++
+
+Map the RC mode switch to a three way switch channel and manual override to a two way switch channel and set their thresholds.
 	
 	
 .. important:: * Flyt can be used without RC, but we recommend having an emergency RC pilot ready in case something goes wrong.
@@ -344,34 +357,32 @@ Once this is done map RC modes to three way switch channel and manual override t
 
 .. _Gain_tuning:
 
-Parameter Manager
-"""""""""""""""""
+Gain Tuning
+"""""""""""
 
-Parameter manager consists of Gain tuning and Advanced settings.
+.. Parameter manager consists of Gain tuning and Advanced settings.
 
 
-**Basic**
-
-These are the gains that are mostly used and require to be tuned depending upon the attitude control response of the autopilot.
+These are the gains that are mostly used and are required to be tuned depending upon the stability of the drone's autopilot.
 
 
 .. figure:: /_static/Images/Gains.png
 	:align: center
 	:scale: 50 %
 	
-	Basic Gain Tuning  
+	Gain Tuning  
 
 
-
-**Advanced**
+Parameter Manager
+"""""""""""""""""
 
 These are all parameters used throughout FlytOS. These can be changed if at all they need to be changed.
 
-.. figure:: /_static/Images/GainTuning_new.png
+.. figure:: /_static/Images/Parameters.png
 	:align: center
 	:scale: 50 %
 	
-	Advanced Settings  
+	Parameter Manager  
 
 
 
@@ -400,7 +411,7 @@ Video
 
 Video displays the live stream of video directly being captured by the camera on the drone.
 
-.. figure:: /_static/Images/VideoFc.png
+.. figure:: /_static/Images/Video.png
 	:align: center
 	:scale: 50 %
 	
@@ -438,8 +449,7 @@ The functionality of GCS can be divided into three parts:
 
 1. TAKE OFF - arms the drone and makes it hover at a height.
 2. LAND - commands the drone to land.
-3. DISARM - disarms the drone.
-4. HOVER - makes the drone hover at its current location.
+3. HOVER - makes the drone hover at its current location.
 
 
 
