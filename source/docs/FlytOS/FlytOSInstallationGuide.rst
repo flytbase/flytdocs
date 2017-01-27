@@ -233,8 +233,7 @@ FlytOS is compatible with Raspberry Pi 3. Download FlytOS Linux Image from your 
 2. Download FlytOS Linux Image mdsum.
 3. It is about 2.7 GBs in size compressed (md5sum 3355a1ea968ede3d7571452fa19b2e05) and ~ 7.9 GBs uncompressed.
 4. Check mdsum.
-5. Uncompress the file using the following command in your terminal:
-gunzip pi_flytimage.img.gz 
+5. Uncompress the file using the following command in your terminal: ``gunzip pi_flytimage.img.gz``
 
 6. Size of uncompressed image.
    
@@ -292,7 +291,7 @@ FlytOS Basics
 2. On bootup FlytOS will also check for any updates. Available updates will be downloaded and installed automatically.
 3. You can find more information on FlytOS updates here(link to FlytOS updates).
 
-**Start/Stop FlytOS**
+**Start/Stop FlytOS from command line**
 
 1. Launch FlytOS
        
@@ -304,11 +303,11 @@ FlytOS Basics
        
        $ sudo $(rospack find core_api)/scripts/launch_flytOS.sh
 
-   In case you are using APM on Pixhawk, launch FlytOS using the following script.
+   .. In case you are using APM on Pixhawk, launch FlytOS using the following script.
 
-   .. code-block:: python
+   .. .. code-block:: python
        
-       $ sudo $(rospack find core_api)/scripts/launch_flytOS_apm.sh
+   ..     $ sudo $(rospack find core_api)/scripts/launch_flytOS_apm.sh
 
    .. important:: If you get this error: ``Error: package 'core_api' not found``, source your $HOME/.bashrc file.
 
@@ -348,57 +347,57 @@ FlytOS Basics
           $ sudo $(rospack find core_api)/scripts/stop_flytOS.sh
        
 
-**Security and Authentication**
+.. **Security and Authentication**
 
-From a Security and Authentication perspective, following layers are considered:
+.. From a Security and Authentication perspective, following layers are considered:
 
 
-1. Secure WiFi network using WPA2:
-   This is achieved by setting up a secure WiFi network (on FlytPOD by default or on a ground router).
-2. SSL (https and wss) encryption:
-   FlytOS uses SSL certificates and secure protocols (https, wss).
-3. User and Request authentication:
-   The last point involves, authenticating a user and providing role based access via a login mechanism. It also includes authenticating all the FlytAPIs for which a token based authentication mechanism is used.
+.. 1. Secure WiFi network using WPA2:
+..    This is achieved by setting up a secure WiFi network (on FlytPOD by default or on a ground router).
+.. 2. SSL (https and wss) encryption:
+..    FlytOS uses SSL certificates and secure protocols (https, wss).
+.. 3. User and Request authentication:
+..    The last point involves, authenticating a user and providing role based access via a login mechanism. It also includes authenticating all the FlytAPIs for which a token based authentication mechanism is used.
 
 **Accessing apps with FlytOS**
 
-1. Open your browser and go to the following link - ``https://ip-address-of-device``.
-2. Enter ``flytPOD`` as the IP address in case you are connected to FlytPOD- ``https://flytpod``.
-3. You will be directed to a page that shows a warning **Connection is not private**. FlytOS contains self signed SSL certificates to enable access over local network.
+1. Open your browser and go to the following link - ``http://ip-address-of-device``.
+2. Enter ``flytPOD`` as the IP address in case you are connected to FlytPOD- ``http://flytpod``.
+.. 3. You will be directed to a page that shows a warning **Connection is not private**. FlytOS contains self signed SSL certificates to enable access over local network.
    
        
-   .. image:: /_static/Images/fOSinst1.png
-      :align: center
-4. Bypass the warning by clicking Advanced> Proceed to localhost. Confirm adding an exception if prompted to do so.
-5. Next you will be directed to FlytOS login page. Login using the default credentials provided to you.
+..    .. image:: /_static/Images/fOSinst1.png
+..       :align: center
+.. 4. Bypass the warning by clicking Advanced> Proceed to localhost. Confirm adding an exception if prompted to do so.
+.. 5. Next you will be directed to FlytOS login page. Login using the default credentials provided to you.
        
-   .. image:: /_static/Images/fOSinst2.png
-      :align: center
-6. Once you have logged in you will see the list of standard apps along with other settings.
+..    .. image:: /_static/Images/fOSinst2.png
+..       :align: center
+.. 6. Once you have logged in you will see the list of standard apps along with other settings.
        
-   .. image:: /_static/Images/fOSinst3.png
-      :align: center
+..    .. image:: /_static/Images/fOSinst3.png
+..       :align: center
 
-When a user tries to access an onboard web app e.g. FlytConsole, a login page is served asking for user credentials. The user credentials are validated and home page for the app is served. The response of a login request contains a token. All the FlytAPI calls need to have this token in the http header otherwise the request fails with unauthorized error.
+.. When a user tries to access an onboard web app e.g. FlytConsole, a login page is served asking for user credentials. The user credentials are validated and home page for the app is served. The response of a login request contains a token. All the FlytAPI calls need to have this token in the http header otherwise the request fails with unauthorized error.
 
-The user authentication follows Single Sign On approach with a common login for FlytPOD allowing access to all the onboard apps.
+.. The user authentication follows Single Sign On approach with a common login for FlytPOD allowing access to all the onboard apps.
 
 
-**FlytAdmin for User Administration**
+.. **FlytAdmin for User Administration**
    
-There is an inbuilt app FlytAdmin for user administration. Only ‘admin’ users have access to this app. The FlytOS admins of a device will be able to add, activate, edit, delete, deactivate users for that device using this app. The app provides views for Users and Roles. 
+.. There is an inbuilt app FlytAdmin for user administration. Only ‘admin’ users have access to this app. The FlytOS admins of a device will be able to add, activate, edit, delete, deactivate users for that device using this app. The app provides views for Users and Roles. 
 
-.. image:: /_static/Images/fOSinst4.png
-   :align: center
+.. .. image:: /_static/Images/fOSinst4.png
+..    :align: center
 
-.. image:: /_static/Images/fOSinst5.png
-   :align: center
+.. .. image:: /_static/Images/fOSinst5.png
+..    :align: center
 
 
 Activate FlytOS
 ---------------
 
-Follow the steps `here <http://my.flytbase.com>`_ to register your device and activate FlytOS. 
+Click `here <http://my.flytbase.com>`_ to register your device and activate FlytOS. Learn more about setting up your FlytBase account here. 
 
 
 

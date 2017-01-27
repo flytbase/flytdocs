@@ -365,12 +365,90 @@ Gain Tuning
 
 These are the gains that are mostly used and are required to be tuned depending upon the stability of the drone's autopilot.
 
-
 .. figure:: /_static/Images/Gains.png
 	:align: center
 	:scale: 50 %
 	
-	Gain Tuning  
+	Gain Tuning
+
+The outer loop of orientation is controlled by the following parameters:
+
+* Roll control (MC_ROLL_P)
+* Pitch control (MC_PITCH_P)
+* Yaw control (MC_YAW_P)
+  
+Inner loop of orientation had the following PID controllers: 
+
+* Roll rate control (MC_ROLLRATE_P, MC_ROLLRATE_I, MC_ROLLRATE_D)
+* Pitch rate control (MC_PITCHRATE_P, MC_PITCHRATE_I, MC_PITCHRATE_D)
+* Yaw rate control (MC_YAWRATE_P, MC_YAWRATE_I, MC_YAWRATE_D)
+
+Begin with MC gain tuning. Once your drone is capable of stable manual flight, you can move on to MPC gain tuning to accomplish more accurate altitude and position control.
+
+.. note:: The following instructions stand for symmetric drones. If the drone is asymmetric then pitch and roll have to be tuned differently.
+
+
+MC gains
+++++++++
+
+**Parameters: MC_ROLLRATE_P, MC_PITCHRATE_P - P Gains**
+
+For a symmetrical drone the Pitch and Roll values can be same, if the drone is sluggish increase the P gain until it starts oscillating. If the P gain is too high there will be oscillations in that axis, so reduce it until it disappears.
+
+
+**Parameters: MC_ROLLRATE_D, MC_PITCHRATE_D - D Gains**
+
+After RATE_P tuning  there will be oscillations. Increase the RATE_D until the oscillations disappears. In case the RATE_D is too high the oscillations might still be there. In that case reduce RATE_D slightly.
+
+**Parameters: MC_PITCH_P, MC_ROLL_P**
+
+If there are oscillations tune down P. Increase P if the copter is sluggish.
+
+**Parameters: MC_ROLLRATE_I, MC_PITCHRATE_I - I Gains**
+
+If the roll and pitch rates never reach the setpoint but have an offset, add MC_ROLLRATE_I and MC_PITCHRATE_I gains, starting at 5-10% of the MC_ROLLRATE_P gain value.
+
+**Parameters: MC_YAWRATE_P - Yaw Rate**
+
+This parameter is not critical and can be tuned in flight, in the worst case scenario the yaw response will be sluggish or too fast. Play with FF parameter to get comfortable response.
+
+**Parameters: MC_YAW_P - Yaw Angle**
+
+Rotate it around yaw, and observe the response. It should go slowly back to the initial heading. If it oscillates, tune down P. Once the control response is slow but correct, increase P until the response is firm, but it does not oscillate. 
+
+**Parameters: MC_YAW_FF - Feed forward tuning**
+
+Feed forward weight for manual yaw control. 0 will give slow response and no overshot, 1 - fast response and big overshot.
+
+**Parameters:MC_Pitch TC**
+
+Decrease to make pitch control faster and accurate. Increase the value if its twitchy.
+
+**Parameters: MC_Roll TC**
+
+Decrease to make roll control faster and accurate. Increase the value if its twitchy.
+
+**Parameters: MC_THR_HOVER**
+
+Adjust the throttle to hover the copter in the mid-air. Decrease this value if the hover position is less than the throttle center. Increase the value if the hover is more than throttle center.
+
+
+After your drone is flying properly in manual mode without oscillations, you can start tuning the MPC gains.
+
+MPC gains
++++++++++
+
+**Parameters: MPC_XY_FF**
+
+Reduce the value to make position control smoother and less twitchy. Increase it for more accurate and aggressive position control.
+
+**Parameters: MPC_Z_FF**
+
+Reduce the value to make altitude control smoother and less twitchy. Increase it for more accurate and aggressive altitude control.
+
+To learn more about gain tuning click `here <http://px4.io/docs/multicopter-pid-tuning-guide/>`_.
+
+Click here to see the complete parameter `list <https://pixhawk.org/firmware/parameters>`_.
 
 
 Parameter Manager

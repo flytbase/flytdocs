@@ -3,11 +3,12 @@
 FlytOS Updates
 ==============
 
-Automatic over the air Updates
+Automatic Over-the-air Updates
 ------------------------------
 
 * If your device is connected to the internet, FlytOS automatically detects and downloads available updates.
 * Once the download is complete, the updates are installed upon the next reboot of your device.
+* During automatic installation, In case of FlytPOD/PRO, the user LED-1 starts fast blinking red indicating that the FlytOS update is being installed. You can also check the startup log for updates / installation debug messages.
 
 
 
@@ -22,19 +23,18 @@ Configure Updates
   
 
 
-* The update manager displays important information about FlytOS viz. Current FlytOS version, Available FlytOS version, update download progress, Install status and Blacklisted FlytOS versions. 
-* Available FlytOS version displays the latest FlytOS update available. You can update your device to the latest version.   
-* You can also monitor the progress of update download and the installation status.
+* The update manager displays important information about FlytOS viz. Current FlytOS version, Available FlytOS version, Update download progress, Install status and Blacklisted FlytOS versions. 
+* Available FlytOS version displays the latest FlytOS update available.   
+* You can disable or enable auto-updates anytime using the Auto Updates checkbox. If Auto Update field is checked and new update is available, it will get downloaded in the background if the device has internet connection.
+* You can also monitor the progress of update being downloaded and the current installation status.
 * In case there is some version of FlytOS that does not install correctly, you can blacklist that version by entering it in the Blacklist FlytOS version field. FlytOS will no longer try to update the Blacklisted FlytOS version.
-* In case of FlytPOD/PRO, the user LED-1 starts fast blinking red indicating that the FlytOS update is being installed.
-
+* In case there is some update of FlytOS that you would like to skip, you can blacklist that version by entering it in the Blacklist FlytOS version field. FlytOS will no longer try to update the Blacklisted FlytOS version.
 
 Startup Log
 -----------
 
-* Upon launch FlytOS automatically detects and downloads FlytOS updates.
-* The Startup log located at ``/flyt/logs/startup/`` contains a log of all the activities taking place after the launch of FlytOS.
-* **For debugging:** In case the updates are not installed completely or you are unable to open FlytConsole, you can check the startup log to locate the error.
+* The Startup log located at ``/flyt/logs/startup/`` contains a log of important startup events including any errors in updates or installation.
+* **For debugging:** In case the updates are not installed successfully or you are unable to open FlytConsole, you can check the startup log to locate the error. 
   
 
-.. note:: For more help please post your queries on the FlytBase `forum <http://forums.flytbase.com/>`_. 
+.. note:: For more help please post your queries in the FlytBase `forum <http://forums.flytbase.com/>`_. 
