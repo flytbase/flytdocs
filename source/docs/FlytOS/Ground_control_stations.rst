@@ -10,9 +10,9 @@ FlytConsole, a web app for configuring your drone comes pre-packaged in FlytOS.
 Follow the steps below to get started with FlytConsole.
 
 1. Power on your Flight Computer running FlytOS.
-2. Connect your personal system to the same network that your Flight Computer is connected to.
-4. If in AP mode, you can connect to FlytPOD/PRO’s WiFi i.e flytpod_wifi. If in client mode, connect to your router i.e the device running FlytOS is connected to.
-5. Next go to the following links to open FlytConsole: `<http://flytpod/flytconsole>`_
+2. Connect your personal computer to the same network that your Flight Computer is connected to.
+3. If your flight computer is in Access Point(AP) mode, you can connect to its WiFi (ssid: FlytPOD_wifi). If the flight computer is client mode, connect your personal computer to the same router which your flight computer is connected to.
+4. Next go to the following link to open FlytConsole: `<http://flytpod/flytconsole>`_
  
 
 
@@ -23,8 +23,8 @@ Follow the steps below to get started with FlytConsole.
 ..     * Username: admin
 ..     * Password: password
       
-5. Next you will have to activate FlytOS. Click `here <http://my.flytbase.com>`_ to register your device and activate FlytOS. Learn more about setting up your FlytBase account :ref:`here.<flytbase_account>` 
-6. Follow the steps `here <http://docs.flytbase.com/en/newlayout/docs/FlytConsole/FlytConsole.html>`_ to learn about FlytConsole widgets.
+5. You will now have to activate FlytOS. Click `here <http://my.flytbase.com>`_ to register your device and activate FlytOS. Learn more about setting up your FlytBase account :ref:`here.<activate_flytos>` 
+6. Follow the steps :ref:`here <flytconsole widgets>` to learn about FlytConsole widgets.
 
 
 QGC
@@ -32,9 +32,8 @@ QGC
 
 QGroundControl also supports FlytOS. Follow the steps given below to get started with QGCS:
 
-1. Connect your personal system to the same WiFi network as FlytPOD/PRO.
+1. Connect your personal computer to the same WiFi network your flight computer is connected to.
 2. `Download <http://qgroundcontrol.com/downloads/>`_ and Install QGC.
-
 3. Once installed launch the QGC app.
 4. QGC automatically connects to the default UDP link that is listening to port 14550.
 5. You can go through the `User’s Guide <http://qgroundcontrol.org/users/start>`_ to learn more about QGC.
