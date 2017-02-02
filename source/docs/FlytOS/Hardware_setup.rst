@@ -44,7 +44,9 @@ Raspberry PI 3 with Pixhawk
 ---------------------------
 
 **Company name:** Raspberry Pi foundation 
+
 **Available at:** http://uk.rs-online.com/web/b/raspberry-pi
+
 **For more information:** https://www.raspberrypi.org
 
 Tech specs
@@ -59,50 +61,48 @@ Tech specs
 * Micro SD card slot 
 * VideoCore IV 3D graphics core
 
-How to start the board
-""""""""""""""""""""""
+WiFi Access Point
+"""""""""""""""""
 
-Connect the power cable to the power plug as shown below:
+.. Connect the power cable to the power plug as shown below:
 
-.. figure:: /_static/Images/Rasp3.png
-	:align: center 
-	:scale: 50 %
+.. .. figure:: /_static/Images/Rasp3.png
+.. 	:align: center 
+.. 	:scale: 50 %
 	
-	Raspberry Pi 3
+.. 	Raspberry Pi 3
 
 
-Insert the SD Card in your Raspberry Pi 3 and apply power to boot it. By default a WiFi access point is created on the Pi with following credentials:
+Insert the SD Card with installed :ref:`FlytOS Linux Image<FlytOS_linux_image>` in your Raspberry Pi 3 and apply power to boot it. On boot up a WiFi access point is created on the device with following credentials:
 
 ssid:       FlytPOD_wifi
+
 Password:   FlytPOD123
 
-Connect to the access point on another computer. Open the following link in your browser to view flytconsole:
-10.42.0.1/flytconsole
+Connect to the access point on another computer. Open the following link in your browser to view :ref:`FlytConsole<about flytconsole>`: http://10.42.0.1/flytconsole
 
-1. Make the connections between Pixhawk’s TELEM 2 port and R pi 3’s GPIO port by following the connection table below. 
-2. Connect the power cable to the power plug.
-   
-Connection table
-""""""""""""""""
+
+Telemetry Connection
+""""""""""""""""""""
 
 Connect the UART RX and TX pins of your Raspberry Pi 3 to the TELEM2 Tx and Rx pins of your Pixhawk as shown below. Click `here <https://pixhawk.org/modules/pixhawk>`_ for more details on Pixhawk.
 
 .. figure:: /_static/Images/RaspPinout.png
 	:align: center 
-	:scale: 50 %
+	:scale: 60 %
 	
 	Connection between Raspberry Pi 3’s GPIO and Pixhawk’s TELEM 2
 
 .. figure:: /_static/Images/Pinout_PX_Rasp.png
 	:align: center 
-	:scale: 50 %
+	:scale: 75 %
 
 Configuring Pixhawk Autopilot
 """""""""""""""""""""""""""""
 
 1. Install `QGC(QGroundControl) <http://qgroundcontrol.com/>`_ in your local machine.
 2. Connect Pixhawk to QGC using the USB port at the side of Pixhawk.
-3. Install the latest stable PX4 release in Pixhawk using QGC by following `this <https://donlakeflyer.gitbooks.io/qgroundcontrol-user-guide/content/SetupView/Firmware.html>`_` guide.
+3. Install the latest stable PX4 release in Pixhawk using QGC by following `this <https://donlakeflyer.gitbooks.io/qgroundcontrol-user-guide/content/SetupView/Firmware.html>`_ guide.
 4. Once done, visit `parameter widget in QGC <https://donlakeflyer.gitbooks.io/qgroundcontrol-user-guide/content/SetupView/Parameters.html>`_ and search for parameters SYS_COMPANION and MAV_COMP_ID, set them to 921600 and 50 respectively. This would enable communication between FlytOS running on Raspberry Pi 3 and Pixhawk.
 
 

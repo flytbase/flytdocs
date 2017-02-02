@@ -75,6 +75,11 @@ We have created a video tutorial for Linux and Mac OS users, to help install Fly
 
 .. warning:: Since the image is of only around 8.5 GBs, the rest of the SD/eMMC Card would have unallocated memory. DONOT forget to expand SD/eMMC card partition.
 
+**User Credentials**
+
+All FlytOS Linux Image versions have the same user credentials: **username - flytpod & password - flytpod**
+
+|br|
 
 .. _install_dependencies:
 
