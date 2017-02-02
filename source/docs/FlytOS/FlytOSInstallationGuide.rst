@@ -25,26 +25,26 @@ FlytBase account allows you to activate your FlytOS by registering your device a
 Preparing your Flight Computer
 ------------------------------
 
-In this section, we would help you install FlytOS Linux Image on a 32GB SD/eMMC card for your specific board. FlytOS is currently compatible with :ref:`FlytPOD<about flytpod>`, :ref:`FlytPOD PRO<about flytpod>`, :ref:`ODROID-XU4<hardware_setup#odroid-xu4-with-pixhawk>` and  `Raspberry Pi 3 <https://www.raspberrypi.org/products/raspberry-pi-3-model-b/>`_. FlytPOD/FlytPOD PRO comes with FlytOS Linux Image installed on their respective 32GB storage devices. Follow this step ONLY if you want to reflash your device.
+This section will help you in installing FlytOS Linux Image on a 32GB SD/eMMC card for your specific board. FlytOS is currently compatible with :ref:`FlytPOD<about flytpod>`, :ref:`FlytPOD PRO<about flytpod>`, :ref:`ODROID-XU4<hardware_setup>` and  `Raspberry Pi 3 <https://www.raspberrypi.org/products/raspberry-pi-3-model-b/>`_. FlytPOD/FlytPOD PRO comes with FlytOS Linux Image installed on their respective 32GB storage devices. Follow this step ONLY if you want to reflash your device.
 
 This step requires you to have a registered FlytBase account. In case you don't have an account follow the steps to create a FlytBase account :ref:`here<create_flytbase_account>` before you proceed.
 
 FlytPOD / PRO
 ^^^^^^^^^^^^^
 
-Flytmage is pre installed in FlytPOD and FlytPOD PRO. In case you want to reflash their respective 32GB SD/eMMC card , follow the steps given below.
+Flytmage is pre-installed in FlytPOD and FlytPOD PRO. In case you want to reflash their respective 32GB SD/eMMC card , follow the steps given below.
 
 **Image download:**
 
 1. Download the `FlytOS Linux Image <http://my.flytbase.com/FlytOS/>`_ for FlytPOD/FlytPOD PRO from your FlytBase account.
 2. It is about 2.5 GBs in size compressed and ~ 8.5 GBs uncompressed.
-3. Check md5sum to verify the integity of downloaded file. Type ``md5sum name-of-the-file.img`` and compare the output to md5sum given near the download link.
+3. Check md5sum to verify the integrity of downloaded file. Type ``md5sum name-of-the-file.img`` and compare the output to md5sum given near the download link.
 4. Uncompress the file using the following command in your terminal: ``gunzip name-of-the-file.img.gz``
    
 **Image write to SD Card:**
 
-1. We recommend using a 32 GB sd card, but a 16 GB card would work fine too. 
-2. Format the micro sd card.
+1. We recommend using a 32 GB SD Card, but a 16 GB card would work fine too. 
+2. Format the micro SD Card.
 3. Follow `this <http://odroid.com/dokuwiki/doku.php?id=en:odroid_flashing_tools>`_ guide to install the image on ODROID-XU4’s SD/eMMC card.
 4. After installing the image on the ODROID-XU4’s SD/eMMC card, launch the ODROID-XU4 Utility App on the desktop. Enter FlytPOD’s password(flytpod) at the command prompt and select the fourth option i.e Resize your root partition and reboot the system.
 
@@ -90,19 +90,19 @@ FlytOS is compatible with ODROID-XU4. Download FlytOS Linux Image from your Flyt
 
 1. Download the `FlytOS Linux Image <my.flytbase.com/FlytOS/>`_ for ODROID-XU4 from your FlytBase account.
 2. It is about 2.5 GBs in size compressed and ~ 8.5 GBs uncompressed.
-3. Check md5sum to verify the integity of downloaded file. Type ``md5sum name-of-the-file.img`` and compare the output to md5sum given near the download link.
+3. Check md5sum to verify the integrity of downloaded file. Type ``md5sum name-of-the-file.img`` and compare the output to md5sum given near the download link.
 4. Uncompress the file using the following command in your terminal: ``gunzip name-of-the-file.img.gz``
    
 **Write Image to SD Card:**
 
-1. We recommend using a 32 GB sd card, but a 16 GB card would work fine too. 
-2. Format the micro sd card.
+1. We recommend using a 32 GB SD Card, but a 16 GB card would work fine too. 
+2. Format the micro SD Card.
 3. Follow `this <http://odroid.com/dokuwiki/doku.php?id=en:odroid_flashing_tools>`_ guide to install the image on ODROID-XU4’s SD/eMMC card.
 4. After installing the image on the ODROID-XU4’s SD/eMMC card, launch the ODROID-XU4 Utility App on the desktop. Enter FlytPOD’s password(flytpod) at the command prompt and select the fourth option i.e Resize your root partition and reboot the system.
 
 **Expand partition on SD Card:**
 
-Since the image is only around 8.5 GBs, the rest of the SD Card would have unallocated memory. Follow `this guide <http://elinux.org/RPi_Resize_Flash_Partitions>`_ to expand the partion to the maximum possible size to utilize all memory.
+Since the image is only around 8.5 GBs, the rest of the SD Card would have unallocated memory. Follow `this guide <http://elinux.org/RPi_Resize_Flash_Partitions>`_ to expand the partition to the maximum possible size to utilize all memory.
 
 
 You can install all FlytOS dependencies by either installing FlytOS Linux Image(the preferred approach) in your 32GB storage device or separately install all the dependencies by following this guide:
@@ -141,20 +141,20 @@ FlytOS is compatible with Raspberry Pi 3. Download FlytOS Linux Image from your 
 
 1. Download the `FlytOS Linux Image <http://my.flytbase.com/FlytOS/>`_ for Raspberry Pi 3 from your FlytBase account. 
 2. It is about 2.5 GBs in size compressed and ~ 8.5 GBs uncompressed.
-3. Check md5sum to verify the integity of downloaded file. Type ``md5sum name-of-the-file.img`` and compare the output to md5sum given near the download link.
+3. Check md5sum to verify the integrity of downloaded file. Type ``md5sum name-of-the-file.img`` and compare the output to md5sum given near the download link.
 4. Uncompress the file using the following command in your terminal: ``gunzip name-of-the-file.img.gz``
    
 **Image write to SD Card**
 
-1. We recommend using a 32 GB sd card, but a 16 GB card would work fine too. 
-2. Format the micro sd card.
+1. We recommend using a 32 GB SD Card, but a 16 GB card would work fine too. 
+2. Format the micro SD Card.
 3. Follow the instructions `here <https://www.raspberrypi.org/documentation/installation/installing-images/linux.md>`_ to copy the image on to the sdcard/emmc.
    
 **Expand SD card**
 
-Since the image is only around 8.5 GBs, the rest of the SD Card would have unallocated memory. Follow `this guide <http://elinux.org/RPi_Resize_Flash_Partitions>`_ to expand the partion to the maximum possible size to utilize all memory.
+Since the image is only around 8.5 GBs, the rest of the SD Card would have unallocated memory. Follow `this guide <http://elinux.org/RPi_Resize_Flash_Partitions>`_ to expand the partition to the maximum possible size to utilize all memory.
 
-Insert the sd card in your Raspberry Pi 3 and apply power to boot it. By default a WiFi access point is created on the Pi with following credentials:
+Insert the SD Card in your Raspberry Pi 3 and apply power to boot it. By default a WiFi access point is created on the Pi with following credentials:
 Ssid:       FlytPOD_wifi
 Password:   FlytPOD123
 
@@ -166,7 +166,7 @@ Connect to the access point on another computer. Open the following link in your
 Download and Install FlytOS
 ---------------------------
 
-FlytOS is currently compatible with :ref:`FlytPOD<about flytpod>`, :ref:`FlytPOD PRO<about flytpod>`, :ref:`ODROID-XU4<hardware_setup#odroid-xu4-with-pixhawk>` and  `Raspberry Pi 3 <https://www.raspberrypi.org/products/raspberry-pi-3-model-b/>`_ . This step requires you to have a registered FlytBase account. In case you don't have an account follow the steps to create a FlytBase account :ref:`here<create_flytbase_account>` before you proceed.
+FlytOS is currently compatible with :ref:`FlytPOD<about flytpod>`, :ref:`FlytPOD PRO<about flytpod>`, :ref:`ODROID-XU4<hardware_setup>` and  `Raspberry Pi 3 <https://www.raspberrypi.org/products/raspberry-pi-3-model-b/>`_ . This step requires you to have a registered FlytBase account. In case you don't have an account follow the steps to create a FlytBase account :ref:`here<create_flytbase_account>` before you proceed.
 Once you have installed the latest FlytOS Linux Image, we recommend you to update your FlytOS by following the steps below:
 
 
@@ -196,13 +196,13 @@ FlytOS Basics
 
 1. If you are using FlytOS Linux image, FlytOS starts automatically on bootup.
 2. On bootup FlytOS will also check for any updates. Available updates will be downloaded and installed automatically.
-3. You can find more information on FlytOS updates here(link to FlytOS updates).
+3. You can find more information on FlytOS updates :ref:`here<flytos_updates>`.
 
 **Start/Stop FlytOS from command line**
 
 1. Launch FlytOS
        
-   Once you have installed FlytOS, you are ready to build your own apps and test it out on the pixhawk. If you have installed FlytOS Linux Image, FlytOS would be launched automatically at every system bootup. To prevent this behaviour, comment the following line in /etc/rc.local file.
+   Once you have installed FlytOS, you are ready to build your own apps and test it out on the pixhawk. If you have installed FlytOS Linux Image, FlytOS would be launched automatically at every system bootup. To prevent this behavior, comment the following line in /etc/rc.local file.
 
    To launch FlytOS, run this command in the terminal.
 
