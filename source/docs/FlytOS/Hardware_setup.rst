@@ -6,7 +6,7 @@ Hardware Setup
 About FlytPOD and FlytPOD PRO
 -----------------------------
 
-FlytPOD comes in two variants - FlytPOD and FlytPOD PRO. See the detailed steps for getting started with FlytPOD/PRO :ref:`here<about flytpod>`.
+FlytPOD comes in two variants - FlytPOD and FlytPOD PRO. See the detailed steps for getting started with FlytPOD/PRO :ref:`here<about_flytpod_pro>`.
 
 Odroid-XU4 with Pixhawk
 -----------------------
@@ -70,9 +70,10 @@ Connect the power cable to the power plug as shown below:
 	
 	Raspberry Pi 3
 
-.. following para done by SRV to be edited later
+
 Insert the SD Card in your Raspberry Pi 3 and apply power to boot it. By default a WiFi access point is created on the Pi with following credentials:
-Ssid:       FlytPOD_wifi
+
+ssid:       FlytPOD_wifi
 Password:   FlytPOD123
 
 Connect to the access point on another computer. Open the following link in your browser to view flytconsole:
