@@ -93,6 +93,14 @@ Checkout and participate in our `forums`_ and interact with the community sharin
    docs/FlytApps/MobileApps.rst
    
 
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+   :caption: Miscellaneous
+
+   docs/Misc/Networking_Setup.rst
+
+   
 .. docs/GettingStarted/Getting_started_index.rst
 .. docs/FlytInternals/Flyt_internals_index.rst
 .. docs/API/API_index.rst
