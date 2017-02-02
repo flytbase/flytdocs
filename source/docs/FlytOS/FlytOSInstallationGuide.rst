@@ -41,12 +41,12 @@ This step requires you to have a registered FlytBase account. In case you don't 
 1. `Login <http://my.flytbase.com>`_ to your FlytBase Account.
 2. Download the hardware specific `FlytOS Linux Image <http://my.flytbase.com/FlytOS>`_ from your FlytBase account.
 3. Download size of the image is about 2.5 GBs.
-4. Check *md5sum* to verify the integrity of downloaded file:
+4. Check *MD5 Hash* to verify the integrity of downloaded file:
 
    * Linux- launch a terminal and execute the following command ``md5sum <path-to-downloaded-image>/flyt*.img.gz``.
    * Windows- launch a command window and execute the following command ``CertUtil -hashfile <path-to-downloaded-image>/flyt*.img.gz MD5``.
    * Mac OS- launch a terminal and execute the following command ``md5 <path-to-downloaded-image>/flyt*.img.gz``.
-5. Compare the md5 hash generated to *MD5 Hash* mentioned in the `download page <http://my.flytbase.com/FlytOS>`_.
+5. Compare the MD5 Hash generated to *MD5 Hash* mentioned in the `download page <http://my.flytbase.com/FlytOS>`_.
 6. Uncompress/extract the downloaded image:
 
    * Linux- launch a terminal and execute the following command ``gunzip <path-to-downloaded-image>/flyt*.img.gz``.
@@ -227,14 +227,16 @@ FlytOS Basics
 Activate FlytOS
 ---------------
 
+.. note:: This step requires you to have a registered FlytBase Account. In case you don't have an account, :ref:`create a FlytBase Account<create_flytbase_account>` before you proceed.
+
 You have to activate installed FlytOS, without which critical APIs would not function.
 
-1. Make sure your device has internet access before proceeding.
-2. Launch FlytConsole and click on activate under License tab at bottom right corner. A popup will appear which will direct you to the device registration page. You you are not logged in, enter your FlytBase Account credentials to log in.
+1. Make sure your Flight Computer has internet access before proceeding. If you are working with FlytPOD/PRO, configure its onboard WiFi router to client mode by following :ref:`this guide <flytpod router setup>`.
+2. :ref:`Launch FlytConsole <FlytConsole_launch>` and click on **Activate Now tag** under **License tab** at bottom right corner. A popup will appear which will direct you to the device registration page. If you are not logged in, enter your FlytBase Account credentials to log in.
 3. Choose a device nick-name and select your compute engine. 
 4. In the drop down for license, select existing license if available or select ‘Issue a new license’. You can also provide a nick-name for your license.  
 5. Click on Save Changes to register device and generate a license key.
-6. Copy the generated license key and enter it in FlytConsole to complete the activation process of your device. The License tab at bottom right corner of FlytConsole should now turn green.
+6. Copy the generated license key and enter it in FlytConsole to complete the activation process of your device. The Activate Now tag at bottom right corner of FlytConsole should now turn green.
 
 .. |br| raw:: html
 

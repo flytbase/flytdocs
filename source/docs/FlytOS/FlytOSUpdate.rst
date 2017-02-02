@@ -6,9 +6,11 @@ FlytOS Updates
 Automatic Over-the-air Updates
 ------------------------------
 
+.. caution:: You must :ref:`activate your device<activate_flytos>`, without which auto-updates would not work.
+
 * If your device is connected to the internet, FlytOS automatically detects and downloads available updates.
 * Once the download is complete, the updates are installed upon the next reboot of your device.
-* During automatic installation, In case of FlytPOD/PRO, the user LED-1 starts fast blinking red indicating that the FlytOS update is being installed. You can also check the startup log for updates / installation debug messages.
+* In case of FlytPOD/PRO, during automatic installation, the USER-LED-1 starts fast blinking red indicating that the FlytOS is being installed. You can also check the startup log for updates/installation related debug messages.
 
 
 
@@ -37,4 +39,4 @@ Startup Log
 * **For debugging:** In case the updates are not installed successfully or you are unable to open FlytConsole, you can check the startup log to locate the error. 
   
 
-.. note:: For more help please post your queries in the FlytBase `forum <http://forums.flytbase.com/>`_. 
+.. note:: For more help please post your queries in the `FlytBase forum <http://forums.flytbase.com/>`_. 
