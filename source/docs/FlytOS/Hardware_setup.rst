@@ -112,3 +112,6 @@ Configuring Pixhawk Autopilot
 
 Once autopilot configuration is completed, you can now launch FlytOS and connect to it via FlytConsole.
 
+.. |br| raw:: html
+
+   <br />
