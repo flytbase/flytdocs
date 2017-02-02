@@ -116,8 +116,8 @@ This guide assumes you already have a working image for your Flight Computer. We
 .. _installing_flytos:
 
 
-Installing FlytOS
------------------
+Installing FlytOS debian package
+--------------------------------
 
 .. note:: This step requires you to have a registered FlytBase Account. In case you don't have an account, :ref:`create a FlytBase Account<create_flytbase_account>` before you proceed. 
 
