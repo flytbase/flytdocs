@@ -50,7 +50,7 @@ Changing the WiFi Mode
    					* Default password: Please check the flyer shipped with FlytPOD.
    					
 
-3. Launch FlytConsole in the web browser using the URL ``flytpod:9090/flytconsole``. Go to the options menu in the top right corner and select WiFi setup.
+3. Launch FlytConsole in the web browser using the URL ``flytpod/flytconsole``. Go to the options menu in the top right corner and select WiFi setup.
 
 .. figure:: /_static/Images/DashboardFc.png
 	:align: center
@@ -96,7 +96,7 @@ Changing the WiFi Mode
 .. 8. If the mode changes are not successful then FlytPOD will automatically reset itself to default mode viz. Hotspot with ssid: flytpod_wifi and password: shipped with FlytPOD.
 
 
-.. note:: * In hotspot mode you can access FlytConsole at ``flytpod:9090/flytconsole``.
+.. note:: * In hotspot mode you can access FlytConsole at ``flytpod/flytconsole``.
 			 * In client mode you might have to replace ``flytpod`` with the IP address of FlytPOD which you can find through your router page by looking for connected client with the name 'flytpod'. Another client with name 'FlytWRT' would be connected as well but that is of no use.
 
 
@@ -106,7 +106,7 @@ Troubleshooting
 
 1. **Cannot reach FlytPOD** 
   
-   a. In hotspot mode you can access FlytConsole at ``flytpod:9090/flytconsole``.
+   a. In hotspot mode you can access FlytConsole at ``flytpod/flytconsole``.
    b. In client mode you might have to replace ``flytpod`` with the IP address of FlytPOD which you can find through your router page by looking for connected client with the name* 'flytpod'.
 
 2. **Forgot Password**
@@ -115,11 +115,11 @@ Troubleshooting
 
    a. Connect monitor, keyboard, mouse to flytpod. Plug Flytpod using wall adapter/battery. 
    b. Open firefox browser in flytpod UI.
-   c. Open FlytConsole using this URL ``localhost:9090/flytconsole``.
+   c. Open FlytConsole using this URL ``localhost/flytconsole``.
    d. You can follow steps given above to configure WiFi into AP or Client mode with new password.
 
 
-.. In hotspot mode you can access FlytConsole at ``flytpod:9090/flytconsole``.
+.. In hotspot mode you can access FlytConsole at ``flytpod/flytconsole``.
 
 .. In client mode you might have to replace ``flytpod`` with the IP address of FlytPOD which you can find through your router page by looking for connected client with the name 'flytpod'.
 
