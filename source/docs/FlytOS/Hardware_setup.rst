@@ -3,7 +3,7 @@
 Hardware Setup
 ==============
 
-Once you are thorugh with :ref:`Installing FlytOS Linux Image<FlytOS_linux_image>` and :ref:`FlytOS debian package<installing_flytos>`, you should go ahead with configuring Pixhawk with your Flight Computer.
+Once you are through with :ref:`Installing FlytOS Linux Image<FlytOS_linux_image>` and :ref:`FlytOS debian package<installing_flytos>`, you should go ahead with configuring Pixhawk with your Flight Computer.
 
 FlytPOD and FlytPOD PRO
 -----------------------
