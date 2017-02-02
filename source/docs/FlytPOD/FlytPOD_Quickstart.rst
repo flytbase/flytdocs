@@ -55,7 +55,7 @@ Getting Started
    * Wall adapter
    * MicroSD (8 GB) for data-logging
    * MicroSD (32 GB) preloaded with FlytOS
-   * FlytPOD flyer with default WiFi password.
+   * FlytPOD Manual
    * GPS Standoff
 
    Make sure your FlytKit contains all the above mentioned components.
@@ -64,23 +64,33 @@ Getting Started
    
    
 
-2. Configure / Protect FlytPOD WiFi:
+2. Connect FlytPOD to Internet:
 
    * Plug and tighten antennas on FlytPOD.
    * Power on FlytPOD using wall adapter. The RGB led should start breathing red. (Don't worry about it now.) 
-   * On you laptop connect to the WiFi network ``FlytPOD_wifi`` the password for which is ``FlytPOD123``. To set a new password and SSID follow the instructions given in :ref:`WiFi Setup<flytpod router setup>`.
-   * In your laptop browser launch FlytConsole using URL: ``flytpod:9090/flytconsole``.
-   * You can configure FlytPOD WiFi in hotspot or client mode. For automatic updates and Google maps to work, you need to connect FlytPOD  to your existing home/university WiFi network using client mode. 
-   * Detailed instructions for WiFi setup are given :ref:`here<flytpod router setup>`.
+   * On you laptop connect to the WiFi network ``FlytPOD_wifi`` the password for which is ``FlytPOD123``. 
+   * In your laptop's browser, launch FlytConsole, using URL: ``flytpod/flytconsole``.
+   * For the next few steps we need to connect FlytPOD to internet, you will need a WiFi access point with internet connection to proceed, if not available then you can create one using your android phone and mobile data connection. 
+   * Please setup FlytPOD in client mode by following steps from :ref:`this guide<flytpod router setup>`.
+  
+   
+   
+3. Activate your FlytOS: 
+
+   * Launch FlytConsole and click on activate button under License tab at bottom right corner. You will be directed to the device registration page. 
+   * Select your compute engine. If you are using FlytSIM select FlytSIM. 
+   * In the drop down for licence, select existing license if available or select ‘Issue a new licence’. 
+   * You can also provide a nick-name for your licence. 
+   * Click on Save Changes to register device and generate a license key.
+   * Enter the generated licence key  in FlytConsole to complete the activation process of your device. 
    * Power off FlytPOD by gently pressing the power button on the back panel. Within few seconds RGB LED should turn amber.
- 
-   .. note:: Note that next time you start FlytPOD it will take some time for the RGB led to start up. This behavior will repeat every time you do a graceful shutdown as described above. 
+   * You may switch FlytPOD wifi to access point mode for field operation. However FlytPOD needs internet for automatic updates to work, it's a good practise to connect FlytPOD to internet once in a week.
+
+.. note:: Note that next time you start FlytPOD it will take some time for the RGB led to start up. This behavior will repeat every time you do a graceful shutdown as described above. 
 
 
 
-.. ..insert power switch image here
-
-3. Mount FlytPOD on airframe
+4. Mount FlytPOD on airframe
 
    * Make sure neither ESCs nor the FlytPOD are powered before you proceed.
 
