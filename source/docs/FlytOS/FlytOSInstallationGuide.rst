@@ -228,7 +228,13 @@ Activate FlytOS
 ---------------
 
 You have to activate installed FlytOS, without which critical APIs would not function.
-Click `here <http://my.flytbase.com>`_ to register your device and activate FlytOS. Learn more about setting up your FlytBase account here. 
+
+1. Make sure your device has internet access before proceeding.
+2. Launch FlytConsole and click on activate under License tab at bottom right corner. A popup will appear which will direct you to the device registration page. You you are not logged in, enter your FlytBase Account credentials to log in.
+3. Choose a device nick-name and select your compute engine. 
+4. In the drop down for license, select existing license if available or select ‘Issue a new license’. You can also provide a nick-name for your license.  
+5. Click on Save Changes to register device and generate a license key.
+6. Copy the generated license key and enter it in FlytConsole to complete the activation process of your device. The License tab at bottom right corner of FlytConsole should now turn green.
 
 .. |br| raw:: html
 
