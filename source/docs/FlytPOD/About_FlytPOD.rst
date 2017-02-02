@@ -1,14 +1,15 @@
-.. _about flytpod:
+About FlytPOD/PRO
+=================
 
-
-About FlytPOD
-=============
+.. _about_flytpod:
 
 FlytPOD
 -------
 
 FlytPOD is next generation autopilot for drones. It has inbuilt powerful application processor which runs :ref:`FlytOS<flytos_about>` - the operating system for Drones. FlytPOD runs customized trusted open source `PX4 <http://dev.px4.io>`_ autopilot firmware which can fly multi-rotors, fixed wings and many more custom drones.
 The device houses navigational sensors, integrated powerful WiFi router and expansion panel for an array of payload interfaces.    
+
+.. _about_flytpodpro:
 
 FlytPOD PRO
 -----------

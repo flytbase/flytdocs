@@ -70,6 +70,14 @@ Connect the power cable to the power plug as shown below:
 	
 	Raspberry Pi 3
 
+.. following para done by SRV to be edited later
+Insert the SD Card in your Raspberry Pi 3 and apply power to boot it. By default a WiFi access point is created on the Pi with following credentials:
+Ssid:       FlytPOD_wifi
+Password:   FlytPOD123
+
+Connect to the access point on another computer. Open the following link in your browser to view flytconsole:
+10.42.0.1:9090/flytconsole
+
 1. Make the connections between Pixhawk’s TELEM 2 port and R pi 3’s GPIO port by following the connection table below. 
 2. Connect the power cable to the power plug.
    
