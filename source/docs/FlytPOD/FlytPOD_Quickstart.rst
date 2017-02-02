@@ -354,7 +354,7 @@ Getting Started
 
 .. |click_here| raw:: html
 
-   <a href="flytpod:9090/flytconsole" target="_blank">click here</a>
+   <a href="flytpod/flytconsole" target="_blank">click here</a>
 
 
 
@@ -372,7 +372,7 @@ Getting Started
 
 
 
-.. _FlytConsole: https://flytpod:9090/flytconsole
+.. _FlytConsole: https://flytpod/flytconsole
 
 
    

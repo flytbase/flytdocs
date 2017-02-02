@@ -268,7 +268,7 @@ e. Sample REST call to fetch namespace of the flytpod
           protected String doInBackground(Void... params) {
               try {
                   //Rest url
-                  final String url = "http://"+IP+":9090/ros/get_global_namespace";
+                  final String url = "http://"+IP+"/ros/get_global_namespace";
                   //params in json
                   String requestJson = "{}";
                   //headers
@@ -310,7 +310,7 @@ f. Sample websocket call to view roll pitch yaw of FlytPOD.
    
        IP=editTextIP.getText().toString();
        //Initialise a ros object with websocket url
-       ros=new Ros("ws://"+IP+":9090/websocket");
+       ros=new Ros("ws://"+IP+"/websocket");
        ros.connect();
 
        

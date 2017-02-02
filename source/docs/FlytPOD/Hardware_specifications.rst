@@ -457,7 +457,7 @@ Connect your Telemetry module to the Telemetry port(Rx and Tx) as shown below fo
 
 
 
-.. _FlytConsole: https://flytpod:9090/flytconsole
+.. _FlytConsole: https://flytpod/flytconsole
 
 
    

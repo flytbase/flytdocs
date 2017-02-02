@@ -93,7 +93,7 @@ REST
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 | URL                          | | http://<ip>/ros/get_global_namespace                                                                               |
 |                              | | <ip>: IP of the flytpod in the network along with port                                                             |
-|                              | |     eg: 192.168.x.xxx:9090                                                                                         |
+|                              | |     eg: 192.168.x.xxx                                                                                         |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 | METHOD                       | GET , POST                                                                                                           |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
@@ -153,7 +153,7 @@ REST
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 | URL                          | | http://<ip>/ros/<namespace>/navigation/arm                                                                         |
 |                              | | <ip>: IP of the flytpod in the network along with port                                                             |
-|                              | |     eg: 192.168.x.xxx:9090                                                                                         |
+|                              | |     eg: 192.168.x.xxx                                                                                         |
 |                              | | <namespace>: Name of the flytpod (default: flytpod) which is required for every rest call and can be               |
 |                              | |     fetched from get namespace rest call.                                                                          |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
@@ -203,7 +203,7 @@ REST
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 | URL                          | | http://<ip>/ros/<namespace>/navigation/disarm                                                                      |
 |                              | | <ip>: IP of the flytpod in the network along with port                                                             |
-|                              | |     eg: 192.168.x.xxx:9090                                                                                         |
+|                              | |     eg: 192.168.x.xxx                                                                                         |
 |                              | | <namespace>: Name of the flytpod (default: flytpod) which is required for every rest call and can be               |
 |                              | |     fetched from get namespace rest call.                                                                          |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
@@ -254,7 +254,7 @@ REST
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 | URL                          | | http://<ip>/ros/<namespace>/navigation/take_off                                                                    |
 |                              | | <ip>: IP of the flytpod in the network along with port                                                             |
-|                              | |     eg: 192.168.x.xxx:9090                                                                                         |
+|                              | |     eg: 192.168.x.xxx                                                                                         |
 |                              | | <namespace>: Name of the flytpod (default: flytpod) which is required for every rest call and can be               |
 |                              | |     fetched from get namespace rest call.                                                                          |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
@@ -314,7 +314,7 @@ REST
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 | URL                          | | http://<ip>/ros/<namespace>/navigation/land                                                                        |
 |                              | | <ip>: IP of the flytpod in the network along with port                                                             |
-|                              | |     eg: 192.168.x.xxx:9090                                                                                         |
+|                              | |     eg: 192.168.x.xxx                                                                                         |
 |                              | | <namespace>: Name of the flytpod (default: flytpod) which is required for every rest call and can be               |
 |                              | |     fetched from get namespace rest call.                                                                          |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
@@ -367,7 +367,7 @@ REST
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 | URL                          | | http://<ip>/ros/<namespace>/navigation/position_hold                                                               |
 |                              | | <ip>: IP of the flytpod in the network along with port                                                             |
-|                              | |     eg: 192.168.x.xxx:9090                                                                                         |
+|                              | |     eg: 192.168.x.xxx                                                                                         |
 |                              | | <namespace>: Name of the flytpod (default: flytpod) which is required for every rest call and can be               |
 |                              | |     fetched from get namespace rest call.                                                                          |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
@@ -417,7 +417,7 @@ REST
 +------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | URL                          | | http://<ip>/ros/<namespace>/navigation/position_set                                                                                                           |
 |                              | | <ip>: IP of the flytpod in the network along with port                                                                                                        |
-|                              | |     eg: 192.168.x.xxx:9090                                                                                                                                    |
+|                              | |     eg: 192.168.x.xxx                                                                                                                                    |
 |                              | | <namespace>: Name of the flytpod (default: flytpod) which is required for every rest call and can be                                                          |
 |                              | |     fetched from get namespace rest call.                                                                                                                     |
 +------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -530,7 +530,7 @@ REST
 +------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | URL                          | | http://<ip>/ros/<namespace>/navigation/velocity_set                                                                                                           |
 |                              | | <ip>: IP of the flytpod in the network along with port                                                                                                        |
-|                              | |     eg: 192.168.x.xxx:9090                                                                                                                                    |
+|                              | |     eg: 192.168.x.xxx                                                                                                                                    |
 |                              | | <namespace>: Name of the flytpod (default: flytpod) which is required for every rest call and can be                                                          |
 |                              | |     fetched from get namespace rest call.                                                                                                                     |
 +------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -642,7 +642,7 @@ REST
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 | URL                          | | http://<ip>/ros/<namespace>/navigation/attitude_set                                                                |
 |                              | | <ip>: IP of the flytpod in the network along with port                                                             |
-|                              | |     eg: 192.168.x.xxx:9090                                                                                         |
+|                              | |     eg: 192.168.x.xxx                                                                                         |
 |                              | | <namespace>: Name of the flytpod (default: flytpod) which is required for every rest call and can be               |
 |                              | |     fetched from get namespace rest call.                                                                          |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
@@ -729,7 +729,7 @@ REST
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 | URL                          | | http://<ip>/ros/<namespace>/navigation/exec_script                                                                 |
 |                              | | <ip>: IP of the flytpod in the network along with port                                                             |
-|                              | |     eg: 192.168.x.xxx:9090                                                                                         |
+|                              | |     eg: 192.168.x.xxx                                                                                         |
 |                              | | <namespace>: Name of the flytpod (default: flytpod) which is required for every rest call and can be               |
 |                              | |     fetched from get namespace rest call.                                                                          |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
@@ -796,7 +796,7 @@ REST
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
 | URL                          | | http://<ip>/ros/<namespace>/navigation/waypoint_get                                                                              |
 |                              | | <ip>: IP of the flytpod in the network along with port                                                                           |
-|                              | |     eg: 192.168.x.xxx:9090                                                                                                       |
+|                              | |     eg: 192.168.x.xxx                                                                                                       |
 |                              | | <namespace>: Name of the flytpod (default: flytpod) which is required for every rest call and can be                             |
 |                              | |     fetched from get namespace rest call.                                                                                        |
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
@@ -880,7 +880,7 @@ REST
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
 | URL                          | | http://<ip>/ros/<namespace>/navigation/waypoint_set                                                                              |
 |                              | | <ip>: IP of the flytpod in the network along with port                                                                           |
-|                              | |     eg: 192.168.x.xxx:9090                                                                                                       |
+|                              | |     eg: 192.168.x.xxx                                                                                                       |
 |                              | | <namespace>: Name of the flytpod (default: flytpod) which is required for every rest call and can be                             |
 |                              | |     fetched from get namespace rest call.                                                                                        |
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
@@ -987,7 +987,7 @@ REST
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
 | URL                          | | http://<ip>/ros/<namespace>/navigation/waypoint_execute                                                                          |
 |                              | | <ip>: IP of the flytpod in the network along with port                                                                           |
-|                              | |     eg: 192.168.x.xxx:9090                                                                                                       |
+|                              | |     eg: 192.168.x.xxx                                                                                                       |
 |                              | | <namespace>: Name of the flytpod (default: flytpod) which is required for every rest call and can be                             |
 |                              | |     fetched from get namespace rest call.                                                                                        |
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
@@ -1043,7 +1043,7 @@ REST
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
 | URL                          | | http://<ip>/ros/<namespace>/navigation/waypoint_clear                                                                            |
 |                              | | <ip>: IP of the flytpod in the network along with port                                                                           |
-|                              | |     eg: 192.168.x.xxx:9090                                                                                                       |
+|                              | |     eg: 192.168.x.xxx                                                                                                       |
 |                              | | <namespace>: Name of the flytpod (default: flytpod) which is required for every rest call and can be                             |
 |                              | |     fetched from get namespace rest call.                                                                                        |
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
@@ -1099,7 +1099,7 @@ REST
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
 | URL                          | | http://<ip>/ros/<namespace>/navigation/waypoint_pause                                                                            |
 |                              | | <ip>: IP of the flytpod in the network along with port                                                                           |
-|                              | |     eg: 192.168.x.xxx:9090                                                                                                       |
+|                              | |     eg: 192.168.x.xxx                                                                                                       |
 |                              | | <namespace>: Name of the flytpod (default: flytpod) which is required for every rest call and can be                             |
 |                              | |     fetched from get namespace rest call.                                                                                        |
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
@@ -1155,7 +1155,7 @@ REST
 +------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | URL                          | | http://<ip>/ros/<namespace>/navigation/position_set_global                                                                                                    |
 |                              | | <ip>: IP of the flytpod in the network along with port                                                                                                        |
-|                              | |     eg: 192.168.x.xxx:9090                                                                                                                                    |
+|                              | |     eg: 192.168.x.xxx                                                                                                                                    |
 |                              | | <namespace>: Name of the flytpod (default: flytpod) which is required for every rest call and can be                                                          |
 |                              | |     fetched from get namespace rest call.                                                                                                                     |
 +------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1265,7 +1265,7 @@ REST
 +------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | URL                          | | http://<ip>/ros/<namespace>/navigation/set_home                                                                                                               |
 |                              | | <ip>: IP of the flytpod in the network along with port                                                                                                        |
-|                              | |     eg: 192.168.x.xxx:9090                                                                                                                                    |
+|                              | |     eg: 192.168.x.xxx                                                                                                                                    |
 |                              | | <namespace>: Name of the flytpod (default: flytpod) which is required for every rest call and can be                                                          |
 |                              | |     fetched from get namespace rest call.                                                                                                                     |
 +------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1341,7 +1341,7 @@ REST
 +------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | URL                          | | http://<ip>/ros/<namespace>/navigation/waypoint_set_current                                                                                                   |
 |                              | | <ip>: IP of the flytpod in the network along with port                                                                                                        |
-|                              | |     eg: 192.168.x.xxx:9090                                                                                                                                    |
+|                              | |     eg: 192.168.x.xxx                                                                                                                                    |
 |                              | | <namespace>: Name of the flytpod (default: flytpod) which is required for every rest call and can be                                                          |
 |                              | |     fetched from get namespace rest call.                                                                                                                     |
 +------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1680,7 +1680,7 @@ Socket
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 | URL                          | | ws://<ip>/websocket                                                                                                |
 |                              | | <ip>: IP of the flytpod in the network along with port                                                             |
-|                              | |     eg: 192.168.x.xxx:9090                                                                                         |
+|                              | |     eg: 192.168.x.xxx                                                                                         |
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 | SAMPLE                       |  .. code-block:: rest                                                                                                |
 | CALL                         |                                                                                                                      |
@@ -1769,7 +1769,7 @@ REST
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
 | URL                          | | http://<ip>/ros/<namespace>/mavros/imu/data                                                                                      |
 |                              | | <ip>: IP of the flytpod in the network along with port                                                                           |
-|                              | |     eg: 192.168.x.xxx:9090                                                                                                       |
+|                              | |     eg: 192.168.x.xxx                                                                                                       |
 |                              | | <namespace>: Name of the flytpod (default: flytpod) which is required for every rest call and can be                             |
 |                              | |     fetched from get namespace rest call.                                                                                        |
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
@@ -1882,7 +1882,7 @@ REST
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
 | URL                          | | http://<ip>/ros/<namespace>/mavros/imu/data_euler                                                                                |
 |                              | | <ip>: IP of the flytpod in the network along with port                                                                           |
-|                              | |     eg: 192.168.x.xxx:9090                                                                                                       |
+|                              | |     eg: 192.168.x.xxx                                                                                                       |
 |                              | | <namespace>: Name of the flytpod (default: flytpod) which is required for every rest call and can be                             |
 |                              | |     fetched from get namespace rest call.                                                                                        |
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
@@ -2030,7 +2030,7 @@ REST
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
 | URL                          | | http://<ip>/ros/<namespace>/mavros/battery                                                                                       |
 |                              | | <ip>: IP of the flytpod in the network along with port                                                                           |
-|                              | |     eg: 192.168.x.xxx:9090                                                                                                       |
+|                              | |     eg: 192.168.x.xxx                                                                                                       |
 |                              | | <namespace>: Name of the flytpod (default: flytpod) which is required for every rest call and can be                             |
 |                              | |     fetched from get namespace rest call.                                                                                        |
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
@@ -2123,7 +2123,7 @@ REST
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
 | URL                          | | http://<ip>/ros/<namespace>/mavros/vfr_hud                                                                                       |
 |                              | | <ip>: IP of the flytpod in the network along with port                                                                           |
-|                              | |     eg: 192.168.x.xxx:9090                                                                                                       |
+|                              | |     eg: 192.168.x.xxx                                                                                                       |
 |                              | | <namespace>: Name of the flytpod (default: flytpod) which is required for every rest call and can be                             |
 |                              | |     fetched from get namespace rest call.                                                                                        |
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
@@ -2183,7 +2183,7 @@ REST
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
 | URL                          | | http://<ip>/ros/<namespace>/param/param_set                                                                                            |
 |                              | | <ip>: IP of the flytpod in the network along with port                                                                                 |
-|                              | |     eg: 192.168.x.xxx:9090                                                                                                             |
+|                              | |     eg: 192.168.x.xxx                                                                                                             |
 |                              | | <namespace>: Name of the flytpod (default: flytpod) which is required for every rest call                                              |
 |                              | |     and can be fetched from get namespace rest call.                                                                                   |
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
@@ -2255,7 +2255,7 @@ REST
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
 | URL                          | | http://<ip>/ros/<namespace>/param/param_get_all                                                                                        |
 |                              | | <ip>: IP of the flytpod in the network along with port                                                                                 |
-|                              | |     eg: 192.168.x.xxx:9090                                                                                                             |
+|                              | |     eg: 192.168.x.xxx                                                                                                             |
 |                              | | <namespace>: Name of the flytpod (default: flytpod) which is required for every rest call                                              |
 |                              | |     and can be fetched from get namespace rest call.                                                                                   |
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
@@ -2320,7 +2320,7 @@ REST
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
 | URL                          | | http://<ip>/ros/<namespace>/param/param_get                                                                                            |
 |                              | | <ip>: IP of the flytpod in the network along with port                                                                                 |
-|                              | |     eg: 192.168.x.xxx:9090                                                                                                             |
+|                              | |     eg: 192.168.x.xxx                                                                                                             |
 |                              | | <namespace>: Name of the flytpod (default: flytpod) which is required for every rest call                                              |
 |                              | |     and can be fetched from get namespace rest call.                                                                                   |
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
@@ -2384,7 +2384,7 @@ REST
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
 | URL                          | | http://<ip>/ros/<namespace>/param/param_save                                                                                           |
 |                              | | <ip>: IP of the flytpod in the network along with port                                                                                 |
-|                              | |     eg: 192.168.x.xxx:9090                                                                                                             |
+|                              | |     eg: 192.168.x.xxx                                                                                                             |
 |                              | | <namespace>: Name of the flytpod (default: flytpod) which is required for every rest call                                              |
 |                              | |     and can be fetched from get namespace rest call.                                                                                   |
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
@@ -2437,7 +2437,7 @@ REST
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
 | URL                          | | http://<ip>/ros/<namespace>/param/param_load                                                                                           |
 |                              | | <ip>: IP of the flytpod in the network along with port                                                                                 |
-|                              | |     eg: 192.168.x.xxx:9090                                                                                                             |
+|                              | |     eg: 192.168.x.xxx                                                                                                             |
 |                              | | <namespace>: Name of the flytpod (default: flytpod) which is required for every rest call                                              |
 |                              | |     and can be fetched from get namespace rest call.                                                                                   |
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
@@ -2490,7 +2490,7 @@ REST
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
 | URL                          | | http://<ip>/ros/<namespace>/param/param_create                                                                                         |
 |                              | | <ip>: IP of the flytpod in the network along with port                                                                                 |
-|                              | |     eg: 192.168.x.xxx:9090                                                                                                             |
+|                              | |     eg: 192.168.x.xxx                                                                                                             |
 |                              | | <namespace>: Name of the flytpod (default: flytpod) which is required for every rest call                                              |
 |                              | |     and can be fetched from get namespace rest call.                                                                                   |
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
@@ -2562,7 +2562,7 @@ REST
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
 | URL                          | | http://<ip>/ros/<namespace>/param/param_delete                                                                                         |
 |                              | | <ip>: IP of the flytpod in the network along with port                                                                                 |
-|                              | |     eg: 192.168.x.xxx:9090                                                                                                             |
+|                              | |     eg: 192.168.x.xxx                                                                                                             |
 |                              | | <namespace>: Name of the flytpod (default: flytpod) which is required for every rest call                                              |
 |                              | |     and can be fetched from get namespace rest call.                                                                                   |
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
@@ -2629,7 +2629,7 @@ REST
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
 | URL                          | | http://<ip>/ros/<namespace>/param/param_reset                                                                                          |
 |                              | | <ip>: IP of the flytpod in the network along with port                                                                                 |
-|                              | |     eg: 192.168.x.xxx:9090                                                                                                             |
+|                              | |     eg: 192.168.x.xxx                                                                                                             |
 |                              | | <namespace>: Name of the flytpod (default: flytpod) which is required for every rest call                                              |
 |                              | |     and can be fetched from get namespace rest call.                                                                                   |
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
@@ -2682,7 +2682,7 @@ This command tests the actuators in FlytOS.
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
 | URL                          | | http://<ip>/ros/<namespace>/setup/actuator_testing                                                                                     |
 |                              | | <ip>: IP of the flytpod in the network along with port                                                                                 |
-|                              | |     eg: 192.168.x.xxx:9090                                                                                                             |
+|                              | |     eg: 192.168.x.xxx                                                                                                             |
 |                              | | <namespace>: Name of the flytpod (default: flytpod) which is required for every rest call                                              |
 |                              | |     and can be fetched from get namespace rest call.                                                                                   |
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
@@ -2741,7 +2741,7 @@ This command calibrates the ESCs in FlytOS.
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
 | URL                          | | http://<ip>/ros/<namespace>/setup/esc_calibration                                                                                      |
 |                              | | <ip>: IP of the flytpod in the network along with port                                                                                 |
-|                              | |     eg: 192.168.x.xxx:9090                                                                                                             |
+|                              | |     eg: 192.168.x.xxx                                                                                                             |
 |                              | | <namespace>: Name of the flytpod (default: flytpod) which is required for every rest call                                              |
 |                              | |     and can be fetched from get namespace rest call.                                                                                   |
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
@@ -2807,7 +2807,7 @@ This command calibrates the ESCs in FlytOS.
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
 | URL                          | | http://<ip>/ros/<namespace>/setup/module_calibration                                                                                   |
 |                              | | <ip>: IP of the flytpod in the network along with port                                                                                 |
-|                              | |     eg: 192.168.x.xxx:9090                                                                                                             |
+|                              | |     eg: 192.168.x.xxx                                                                                                             |
 |                              | | <namespace>: Name of the flytpod (default: flytpod) which is required for every rest call                                              |
 |                              | |     and can be fetched from get namespace rest call.                                                                                   |
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+

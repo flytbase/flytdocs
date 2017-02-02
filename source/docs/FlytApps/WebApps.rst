@@ -294,6 +294,6 @@ Once you have built your Web app, you are ready to deploy it Onboard. FlytOS use
 
 
 
-7) Now restart the FlytOS and your web app will be served at www.flytpod:9090/sampleApp .
+7) Now restart the FlytOS and your web app will be served at flytpod/sampleApp .
 
 .. _Ionic components: http://ionicframework.com/docs/components/

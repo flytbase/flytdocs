@@ -7,7 +7,7 @@ FlytConsole - Widgets
 
 
 
-.. 1. To launch FlytConsole enter this address http://"enter ip address here" :9090.
+.. 1. To launch FlytConsole enter this address http://"enter ip address here" .
 
 .. FlytConsole is a web application that gives you an interface to configure your drone with Flyt. 
 
@@ -568,4 +568,4 @@ You have now finished configuration. Please go through the :ref:`First principle
 
 .. .. |click_here| raw:: html
 
-..    <a href="flytpod:9090/flytconsole" target="_blank">click here</a>
+..    <a href="flytpod/flytconsole" target="_blank">click here</a>

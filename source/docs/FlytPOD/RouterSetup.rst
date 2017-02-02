@@ -87,7 +87,7 @@ Changing the WiFi Mode
 
 
 
-.. 3. Launch FlytConsole in the web browser using the url ``flytpod:9090/flytconsole ``. Go to the options menu in the top right corner and select wifi setup.
+.. 3. Launch FlytConsole in the web browser using the url ``flytpod/flytconsole ``. Go to the options menu in the top right corner and select wifi setup.
 .. 4. Select hotspot/AP or client mode.
 .. 5. Select proper encryption option for hotspot/AP mode and set a password.
 .. 6. In client mode click on the button to scan for available networks. It takes nearly 10 seconds. Select the network that you want to connect to. Enter the password and click on connect.
