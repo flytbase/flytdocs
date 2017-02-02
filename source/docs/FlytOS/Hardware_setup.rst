@@ -3,12 +3,14 @@
 Hardware Setup
 ==============
 
-About FlytPOD and FlytPOD PRO
------------------------------
+Once you are thorugh with :ref:`Installing FlytOS Linux Image<FlytOS_linux_image>` and :ref:`FlytOS debian package<installing_flytos>`, you should go ahead with configuring Pixhawk with your Flight Computer.
 
-FlytPOD comes in two variants - FlytPOD and FlytPOD PRO. See the detailed steps for getting started with FlytPOD/PRO :ref:`here<about_flytpod_pro>`.
+FlytPOD and FlytPOD PRO
+-----------------------
 
-Odroid-XU4 with Pixhawk
+FlytPOD comes in two variants - FlytPOD and FlytPOD PRO. Both of them have an inbuilt autopilot and you shall not have to go through this guide. See the detailed steps for getting started with FlytPOD/PRO :ref:`here<about_flytpod_pro>`.
+
+ODROID-XU4 with Pixhawk
 -----------------------
 
 Telemetry Connection
