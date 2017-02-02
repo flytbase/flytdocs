@@ -25,6 +25,7 @@ Expansion Panel
 .. image:: /_static/Images/FPsideviews.png
 	:align: center
 
+.. note:: Notations/symbols on your FlytPOD may vary from the given image, but the pin functions remain same, please match physical location with above image in such case.
 
 1. Power Button
 ^^^^^^^^^^^^^^^
@@ -100,7 +101,7 @@ To know how to use these interfaces contact us at ``admin@navstik.org``.
 
 4. RSSI
 ^^^^^^^
-Receiver signal strength.
+Receiver signal strength input pin.
 
 .. _RGB_LED:
 
@@ -114,15 +115,15 @@ The RGB LED represents the vehicle state.
 .. 		:scale: 50%
 
 
-Below are the various color patterns that the RGB LED exhibits along with their meanings.
+Below is a list of various color patterns along with the associated message/status. 
 
-* Breathing Blue							- Standby
+* Breathing Blue	  	   - Standby, ready to arm
 
-* Breathing Green                  - Standby and GPS / Px4flow ready
+* Breathing Green                  - Standby and GPS / Px4flow ready, ready to arm
   
 * Breathing Red                    - Configuration Error
 
-* Solid Blue                       - Armed and No GPS lock / Px4flow quality poor 
+* Solid Blue                       - Armed and No GPS lock / Px4flow poor quality 
 
 * Solid Green                      - Armed and GPS lock / Px4flow available
 
@@ -145,7 +146,7 @@ Below are the various color patterns that the RGB LED exhibits along with their 
 6. Programmable LEDs
 ^^^^^^^^^^^^^^^^^^^^
 
-The LEDs on the right of the IO panel marked 1, 2 and R are User-programmable LEDs. Learn more :ref:`here.<list-of-APIs>`
+The LEDs on the right side of the IO panel, marked 1 and 2 are User-programmable LEDs. Learn more :ref:`here.<list-of-APIs>`
 
 
 7. Gimbal
@@ -192,27 +193,23 @@ Below are the various color patterns that the WiFi Status LED exhibits along wit
 
 * Solid        - WiFi booting.
 * Random Blink - WiFi data transmission indicator. 
-* No blink     - Error state. Click here to know what to do.
+The WiFi Power off Switch is available on top of the FlytPOD, in case you want to use the ethernet port.
   
-11. WiFi Switch
-^^^^^^^^^^^^^^^
-The WiFi Reset Switch is available on top of the FlytPOD as shown in the image below.
-  
-12. System Health LED
+11. System Health LED
 ^^^^^^^^^^^^^^^^^^^^^
 
 The System Health LED indicates the Autopilot status.
 
 * Fast Green blink / Solid Green - Autopilot firmware updating
 
-13. Power Supply LED
+12. Power Supply LED
 ^^^^^^^^^^^^^^^^^^^^
 The System Health LED exhibits only the following colour.
 
 * Solid red - Supply working.
 
 
-14. External GPS MAG Port
+13. External GPS MAG Port
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The following ports are available with FlytPOD and FlytPOD PRO.
@@ -223,34 +220,31 @@ The following ports are available with FlytPOD and FlytPOD PRO.
 
 You must attach the provided GPS-MAG module to these ports for stable flight. Read more :ref:`here.<GPS_Mag>`
 
-.. .. attention:: FlytPOD PRO comes with two GPS-MAG ports thus allowing you to connect upto two external GPS-MAG sensors. 
+.. .. attention:: FlytPOD PRO comes with two GPS-MAG ports thus allowing you to connect upto two external GPS-MAG sensors. In any case at least GPS-MAG 1 should be connected.
 
-15. VI Sensor Input
+14. VI Sensor Input
 ^^^^^^^^^^^^^^^^^^^
-The VI sensor output of `power module`_ must be connected to this port. This would enable FlytPOD to monitor battery status and issue low battery warnings.
+The VI sensor plug of `power module`_ must be connected to this port. This would enable FlytPOD to monitor battery status and issue low battery warnings. It also provides a 5V, 2A power input pin which is highest priority input source for autopilot. 
 
-16. Power Input
+15. Power Input
 ^^^^^^^^^^^^^^^
-Power input gives 5V at 4A power for FlytPOD.
+Power input for FlytPOD, ratings: 5V, 4A, second highest priority power input for autopilot. Odroid SBC requires this power input all the time. Autopilot and WiFi can run safely on other two power inputs as well when this plug is not connected.
 
 
-17. Micro SD/eMMC
-^^^^^^^^^^^^^^^^^
-The following are available with FlytpOD and FlytPOD PRO 
-
-* FlytPOD - 32 GB Micro SD card with FlytOS image
-
-* FlytPOD PRO - 32 GB eMMC card with FlytOS image
+16. FlytOS Micro SD/eMMC
+^^^^^^^^^^^^^^^^^^^^^^^^
+In case of FlytPOD this slot hosts 32 GB Micro SD card with FlytOS image. Without this card, FlytPOD will not boot.
+FlytPOD PRO has internal 32 GB eMMC card running FlytOS, so this slot can be used for extra micro SD card.
 
 
-18. Micro SD
-^^^^^^^^^^^^
+17. Flight log Micro SD
+^^^^^^^^^^^^^^^^^^^^^^^
 FlytPOD and FlytPOD PRO both have an 8 GB Micro SD card used for autopilot data logging and data storage.
 
 
-19. USB Port
+18. USB Port
 ^^^^^^^^^^^^
-FlytPOD provides a USB port that can connect USB camera, 3G/4G dongle and other payloads.
+FlytPOD provides 2 x high speed USB 3.0 ports, to connect USB camera, 3G/4G dongle and other payloads.
 
 
 
@@ -338,7 +332,7 @@ Radio Receiver
      
 .. .. note:: By default PPM mode is enabled.
 
-* SPEKTRUM: For a SPEKTRUM, DSM, DSM2, or DSM-X Satellite RC receiver, connect to the SPEK port.
+* SPEKTRUM: (Currently not supported on FlytPOD/PRO) For a SPEKTRUM, DSM, DSM2, or DSM-X Satellite RC receiver, connect to the SPEK port.
 
 * SBUS: Connect SBUS receiver to the SBUS port.
   
@@ -361,7 +355,7 @@ External GPS-MAG can be connected to FlytPOD through the connector provided on t
 
 * FlytPOD - FlytPOD comes with GPS-MAG 1 port. GPS-MAG sensor can be connected to this port to achieve a stable flight.
   
-* FlytPOD PRO - FlytPOD PRO comes with GPS-MAG 1 as it's primary port and GPS-MAG 2. Upto two GPS-MAG sensors can e connected. This offers a fail safe mechanism for reliable navigation.
+* FlytPOD PRO - FlytPOD PRO comes with GPS-MAG 1 as it's primary port and GPS-MAG 2. Upto two GPS-MAG sensors can be connected. This offers a fail safe mechanism for reliable navigation.
 
 .. Default port available for this is GPS-MAG 1 in FlytPOD. Use of a Standoff is recommended in order to avoid interference. Make sure to mount it in such a way that FlytPOD heading is aligned with the GPS-MAG board heading.
 
@@ -412,7 +406,7 @@ Below are two methods for connecting LiDAR-lite to FlytPOD.
 	
 	LiDAR Pins
 
-.. note:: Set the parameter SENS_EN_LL40LS to 1.
+.. note:: Set the parameter SENS_EN_LL40LS to 1. (For LIDARLiteV2, no need to connect reset pin)
 
 
 
