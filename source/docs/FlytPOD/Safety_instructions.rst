@@ -25,8 +25,8 @@ Safety Guidelines
 
 
 
-* Please go through the :ref:`First Principles<First_Principles>` of Flyt before you proceed. The on-field operations team should be aware of them.
-* Most of the operations with Flyt are fully or semi autonomous. Offboard switch is the Manual Override. Always have a dedicated manual pilot ready to take control in case of emergencies.
+* Please go through the :ref:`essentials<First_Principles>` of FlytPOD before you proceed. The on-field operations team should be aware of them.
+* Most of the operations with FlytOS are fully or semi autonomous. Offboard switch is the Manual Override. Always have a dedicated manual pilot ready to take control in case of emergencies.
 * Before switching to offboard mode it is always a good practice to check if manual and position hold modes are working.
 * FlytPOD connected to mobile phone hotspot may not give long range. Use powerful ground routers with high gain antennas for long range operations. If you want to use radio telemetry modules then check the peripherals.
 * Do not subject FlytPOD to water, dust or prolonged heat.
