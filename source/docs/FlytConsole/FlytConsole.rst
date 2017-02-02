@@ -18,8 +18,9 @@ Connect to FlytConsole
 
 FlytPOD is shipped with WiFi set to Hotspot(AP mode) with WiFi SSID and password FlytPOD123. If the device running FlytOS is connected to your home network, open the link below in your browser to launch FlytConsole after connecting your personal system to the same network as the device running FlytOS.
 
-* http://flytpod:9090/flytconsole
-* https://flytpod/flytconsole
+* http://flytpod/flytconsole
+
+.. * https://flytpod/flytconsole
 
 
 
@@ -471,12 +472,12 @@ Once this is done, save the parameters.
 WiFi Setup
 """"""""""
 
-Please follow the steps given `here <http://docs.flytbase.com/en/master/docs/FlytPOD/RouterSetup.html>`_ for WiFi setup for FlytPOD/PRO.
+Please follow the steps given :ref:`here<flytpod router setup>` for WiFi setup for FlytPOD/PRO.
 
 Fail Safe
 """""""""
 
-Fail Safe allows you to assign certain Failsafe actions to be performed by the drone during crictical situations viz. Low battery, RC loss, Datalink loss, Geofence, Return Home settings and Land settings.
+Fail Safe allows you to assign certain Failsafe actions to be performed by the drone during critical situations viz. Low battery, RC loss, Datalink loss, Geofence, Return Home settings and Land settings.
 
 .. figure:: /_static/Images/Failsafe.png
 	:align: center
