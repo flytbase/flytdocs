@@ -71,13 +71,8 @@ Getting Started
    * Power on FlytPOD using wall adapter. The RGB led should start breathing red. (Don't worry about it now.) 
    * On you laptop connect to the WiFi network ``FlytPOD_wifi`` the password for which is ``FlytPOD123``. 
    * In your laptop's browser, launch FlytConsole, using URL: ``flytpod/flytconsole``.
-   * Please setup FlytPOD in client mode by following steps from :ref:`this guide<flytpod router setup>`. 
-   * Launch FlytConsole and click on activate button under License tab at bottom right corner. You will be directed to the device registration page. 
-   * Select your compute engine. If you are using FlytSIM select FlytSIM. 
-   * In the drop down for licence, select existing license if available or select ‘Issue a new licence’. 
-   * You can also provide a nick-name for your licence. 
-   * Click on Save Changes to register device and generate a license key.
-   * Enter the generated licence key  in FlytConsole to complete the activation process of your device. 
+   * Setup FlytPOD in client mode by following steps from :ref:`this guide<flytpod router setup>`. 
+   * Follow :ref:`this guide<activate_flytos>` for activating FlytOS.
    * Power off FlytPOD by gently pressing the power button on the back panel. Within few seconds RGB LED should turn amber.
    * You may switch FlytPOD wifi to access point mode for field operation. However FlytPOD needs internet for automatic updates to work, it's a good practise to connect FlytPOD to internet once in a week.
 
