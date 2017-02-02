@@ -6,7 +6,7 @@ Supported GCS
 FlytConsole
 -----------
 
-FlytConsole, a web app for configuring your drone comes pre-packaged in FlytOS.
+:ref:`FlytConsole<about flytconsole>`, a web app for configuring your drone comes pre-packaged in FlytOS.
 Follow the steps below to get started with FlytConsole.
 
 1. Power on your Flight Computer running FlytOS.
@@ -30,7 +30,7 @@ Follow the steps below to get started with FlytConsole.
 QGC
 ---
 
-QGroundControl also supports FlytOS. Follow the steps given below to get started with QGCS:
+`QGroundControl <http://qgroundcontrol.com>`_ also supports FlytOS. Follow the steps given below to get started with QGCS:
 
 1. Connect your personal computer to the same WiFi network your flight computer is connected to.
 2. `Download <http://qgroundcontrol.com/downloads/>`_ and Install QGC.
