@@ -64,19 +64,14 @@ Getting Started
    
    
 
-2. Connect FlytPOD to Internet:
+2. Activate your FlytOS:
 
+   * For the next few steps we need to connect FlytPOD to internet, you will need a WiFi access point with internet connection to proceed, if not available then you can create one, using your android phone and mobile data connection. 
    * Plug and tighten antennas on FlytPOD.
    * Power on FlytPOD using wall adapter. The RGB led should start breathing red. (Don't worry about it now.) 
    * On you laptop connect to the WiFi network ``FlytPOD_wifi`` the password for which is ``FlytPOD123``. 
    * In your laptop's browser, launch FlytConsole, using URL: ``flytpod/flytconsole``.
-   * For the next few steps we need to connect FlytPOD to internet, you will need a WiFi access point with internet connection to proceed, if not available then you can create one using your android phone and mobile data connection. 
-   * Please setup FlytPOD in client mode by following steps from :ref:`this guide<flytpod router setup>`.
-  
-   
-   
-3. Activate your FlytOS: 
-
+   * Please setup FlytPOD in client mode by following steps from :ref:`this guide<flytpod router setup>`. 
    * Launch FlytConsole and click on activate button under License tab at bottom right corner. You will be directed to the device registration page. 
    * Select your compute engine. If you are using FlytSIM select FlytSIM. 
    * In the drop down for licence, select existing license if available or select ‘Issue a new licence’. 
@@ -90,7 +85,7 @@ Getting Started
 
 
 
-4. Mount FlytPOD on airframe
+3. Mount FlytPOD on airframe
 
    * Make sure neither ESCs nor the FlytPOD are powered before you proceed.
 
@@ -163,7 +158,7 @@ Getting Started
 
 14. After a minute when blue WiFi LED starts blinking, connect to WiFi. If you have setup FlytPOD WiFi in client mode, then wait for the FlytPOD to connect to your router.
 
-15. Open the FlytConsole in your laptop using URL: ``flytpod:9090/flytconsole``. 
+15. Open the FlytConsole in your laptop using URL: ``flytpod/flytconsole``. 
     
     .. note:: If above URL does not work then there might be some issue with your router's DNS. Please refer to the :ref:`WiFi Section<FlytPOD router setup>` for troubleshooting.
 
@@ -171,9 +166,9 @@ Getting Started
  
 17. Select the appropriate frame and click on **Save and Reboot**.
  
-18. FlytConsole will take a few seconds to reconnect. WiFi network will not disconnect during this reboot.
+18. FlytConsole will not show data for few seconds. WiFi network will not disconnect during this reboot.
  
-19. Once the 'connected' button on the top panel turns green, go to **Calibration** section in the left side-menu.
+19. Once the HUD starts working again, go to **Calibration** section in the left side-menu.
 
 20. **Sensor Calibration**: Sensor calibration is of utmost importance before you fly the drone. You need to calibrate magnetometer every time you change the flying field. If your autopilot orientation is not the same as that of your vehicle, update **AUTOPILOT ORIENTATION** parameter accordingly. Similarly, if your external magnetometer's orientation differs from FlytPOD's heading, update **EXT MAG ROTATION** parameter.
     
@@ -266,10 +261,10 @@ Getting Started
     Click :ref:`here<Gain_tuning>` to know more about Gain tuning.
 
 33. Congratulations !!! You have successfully configured FlytPOD with your drone. You are now ready to fly.
-34. At this stage the RGB LED should be breathing blue. Assuming that you have the props removed, try to ARM system and test radio commands. 
-35. You can check if the response of pitch and roll commands is as desirable.
+34. At this stage the RGB LED should be breathing blue / green. Assuming that you have the props removed, try to ARM system and test rc transmitter. 
+35. For sferty you can check if the response of pitch and roll commands is as desirable.
 36. Now you can connect any additional sensors to FlytPOD.
-37. Please go through the :ref:`First principles of flying<First_Principles>` and :ref:`First flight with FlytPOD<First_Flight>` sections before you proceed with flying your drone.
+37. Please go through the :ref:`cautions for flying with FlytPOD <First_Principles>` and :ref:`First flight with FlytPOD<First_Flight>` sections before you proceed with flying your drone.
 38. Make sure you understand all the :ref:`Safety guidelines<Safety_Guidelines>` before you fly.
  
 
