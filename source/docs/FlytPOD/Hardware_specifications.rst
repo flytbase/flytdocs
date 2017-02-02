@@ -228,8 +228,7 @@ The VI sensor plug of `power module`_ must be connected to this port. This would
 
 15. Power Input
 ^^^^^^^^^^^^^^^
-Power input for FlytPOD, ratings: 5V, 4A, second highest priority power input for autopilot.
-.. Important: Odroid SBC requires this power input all the time. Autopilot and WiFi can run safely on other two power inputs as well when this plug is not connected.
+Power input for FlytPOD, ratings: 5V, 4A, second highest priority power input for autopilot. Odroid SBC requires this power input all the time. Autopilot and WiFi can run safely on other two power inputs as well when this plug is not connected.
 
 
 16. FlytOS Micro SD/eMMC
