@@ -66,7 +66,7 @@ Getting Started
 
 2. Activate your FlytOS:
 
-   * For the next few steps we need to connect FlytPOD to internet, you will need a WiFi access point with internet connection to proceed, if not available then you can create one, using your android phone and mobile data connection. 
+   * For the next few steps FlytPOD will require access to internet. You will need a WiFi access point with internet connection to proceed. If not available then you can create one, using your android phone and mobile data connection. 
    * Plug and tighten antennas on FlytPOD.
    * Power on FlytPOD using wall adapter. The RGB led should start breathing red. (Don't worry about it now.) 
    * On you laptop connect to the WiFi network ``FlytPOD_wifi`` the password for which is ``FlytPOD123``. 
