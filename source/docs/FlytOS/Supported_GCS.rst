@@ -1,7 +1,7 @@
 .. _supported_GCS:
 
-Supported Ground Control Stations
-=================================
+Supported GCS
+=============
 
 FlytConsole
 -----------

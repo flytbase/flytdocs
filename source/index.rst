@@ -32,7 +32,7 @@ Checkout and participate in our `forums`_ and interact with the community sharin
    docs/FlytOS/FlytOSInstallationGuide.rst
    docs/FlytOS/FlytOSUpdate.rst
    docs/FlytOS/Hardware_setup.rst
-   docs/FlytOS/Ground_control_stations.rst
+   docs/FlytOS/Supported_GCS.rst
    .. docs/FlytOS/FlytBase_Account.rst
 
 .. toctree::
