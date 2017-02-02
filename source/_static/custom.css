@@ -13,13 +13,13 @@
 
 .navbar-brand {
   display: block;
-  width: 160px;
+  width: 270px;
   height: 45px !important;
   text-indent: -9999px;
   padding: 0 !important;
-  margin-left: -15% !important;
-  margin-top: 4%;	
-  background: transparent url("FlytLogos/flyt_logo_white_small.png") no-repeat 0px 5px !important;
+  margin-left: -60% !important;
+  margin-top: 2%;	
+  background: transparent url("FlytLogos/flytbaseblk.png") no-repeat 0px 5px !important;
 }
 
 .navbar-inverse {
