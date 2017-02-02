@@ -29,8 +29,8 @@ In this section, we would help you install FlytOS Linux Image on a 32GB SD/eMMC 
 
 This step requires you to have a registered FlytBase account. In case you don't have an account follow the steps to create a FlytBase account :ref:`here<create_flytbase_account>` before you proceed.
 
-FlytPOD / PRO
-^^^^^^^^^^^^^
+FlytPOD/PRO
+^^^^^^^^^^^
 
 Flytmage is pre installed in FlytPOD and FlytPOD PRO. In case you want to reflash their respective 32GB SD/eMMC card , follow the steps given below.
 
