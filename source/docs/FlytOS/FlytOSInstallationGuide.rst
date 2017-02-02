@@ -12,7 +12,7 @@ FlytBase account allows you to activate your FlytOS by registering your device a
 
 1) Connect your device to the internet. 
    
-   .. note:: If you are connected to FlytPOD/PRO, you will have to be in client mode. Follow the `WiFi Setup <http://docs.flytbase.com/en/master/docs/FlytPOD/RouterSetup.html>`_ guide to do so.
+   .. note:: If you are connected to FlytPOD/PRO, you will have to be in client mode. Follow the :ref:`WiFi Setup Guide<flytpod router setup>` to do so.
    
    
 
@@ -25,7 +25,7 @@ FlytBase account allows you to activate your FlytOS by registering your device a
 Preparing your Flight Computer
 ------------------------------
 
-In this section, we would help you install FlytOS Linux Image on a 32GB SD/eMMC card for your specific board. FlytOS is currently compatible with `FlytPOD <http://docs.flytbase.com/en/master/docs/FlytPOD/About_FlytPOD.html>`_, `FlytPOD PRO <http://docs.flytbase.com/en/master/docs/FlytPOD/About_FlytPOD.html>`_, `ODROID-XU4 <http://docs.flytbase.com/en/master/docs/FlytOS/FlytOSInstallationGuide.html#pixhawk-odroid-xu4>`_ and  `Raspberry Pi 3 <https://www.raspberrypi.org/products/raspberry-pi-3-model-b/>`_. FlytPOD/FlytPOD PRO comes with FlytOS Linux Image installed on their respective 32GB storage devices. Follow this step ONLY if you want to reflash your device.
+In this section, we would help you install FlytOS Linux Image on a 32GB SD/eMMC card for your specific board. FlytOS is currently compatible with :ref:`FlytPOD<about flytpod>`, :ref:`FlytPOD PRO<about flytpod>`, :ref:`ODROID-XU4<hardware_setup#odroid-xu4-with-pixhawk>` and  `Raspberry Pi 3 <https://www.raspberrypi.org/products/raspberry-pi-3-model-b/>`_. FlytPOD/FlytPOD PRO comes with FlytOS Linux Image installed on their respective 32GB storage devices. Follow this step ONLY if you want to reflash your device.
 
 This step requires you to have a registered FlytBase account. In case you don't have an account follow the steps to create a FlytBase account :ref:`here<create_flytbase_account>` before you proceed.
 
@@ -36,12 +36,10 @@ Flytmage is pre installed in FlytPOD and FlytPOD PRO. In case you want to reflas
 
 **Image download:**
 
-1. Download the `FlytOS Linux Image <http://flytonline-staging.azurewebsites.net/FlytOS/>`_ for FlytPOD/FlytPOD PRO from your FlytBase account.
-2. Download FlytOS Linux Image mdsum.
-3. It is about 2.7 GBs in size compressed (md5sum 3355a1ea968ede3d7571452fa19b2e05) and ~ 7.9 GBs uncompressed. 
-4. Check mdsum.
-5. Uncompress the file using the following command in your terminal: gunzip pi_flytimage.img.gz 
-6. Size of uncompressed image.
+1. Download the `FlytOS Linux Image <http://my.flytbase.com/FlytOS/>`_ for FlytPOD/FlytPOD PRO from your FlytBase account.
+2. It is about 2.5 GBs in size compressed and ~ 8.5 GBs uncompressed.
+3. Check md5sum to verify the integity of downloaded file. Type ``md5sum name-of-the-file.img`` and compare the output to md5sum given near the download link.
+4. Uncompress the file using the following command in your terminal: ``gunzip name-of-the-file.img.gz``
    
 **Image write to SD Card:**
 
@@ -50,12 +48,11 @@ Flytmage is pre installed in FlytPOD and FlytPOD PRO. In case you want to reflas
 3. Follow `this <http://odroid.com/dokuwiki/doku.php?id=en:odroid_flashing_tools>`_ guide to install the image on ODROID-XU4’s SD/eMMC card.
 4. After installing the image on the ODROID-XU4’s SD/eMMC card, launch the ODROID-XU4 Utility App on the desktop. Enter FlytPOD’s password(flytpod) at the command prompt and select the fourth option i.e Resize your root partition and reboot the system.
 
-5. Crisp pointsfrom above link.
+.. 5. Crisp pointsfrom above link.
 
-**SD card expansion:**
+.. **Expanding SD Card partion:**
 
-1. Why should it be expanded?
-2. How to expand in detail. 
+.. Since the image is only around 8.5 GBs, the rest of the SD Card would have unallocated memory. Follow `this guide <http://elinux.org/RPi_Resize_Flash_Partitions>`_ to expand the partion to the maximum possible size to utilize all memory.
 
 You can install all FlytOS dependencies by either installing FlytOS Linux Image(the preferred approach) in your 32GB storage device or separately install all the dependencies by following this guide:
 
@@ -66,64 +63,22 @@ You can install all FlytOS dependencies by either installing FlytOS Linux Image(
    c) `OpenCV 2.4 <http://wiki.ros.org/kinetic/Installation/Ubuntu>`_ (for vision/video streaming APIs).
    d) Other dependencies - Run the following commands in your terminal with sudo permission.
 
-      .. code-block:: python
-       
-           #!/bin/bash 
-           # install dependency script for FlytOS
-
-           #installing known python dependencies
-           sudo -H pip install flask_cors flask_reverse_proxy flask_restful tblib webargs click flask_security httplib2 simple_json pyzmp pyros-setup
-
-           apt-get install -y python-pip python-serial python-flask python-wtforms python-sqlalchemy python-concurrent.futures python-mock python-zmq python-twistedsudo 
-
-           #installing known ros dependencies
-           apt-get install -y ros-kinetic-image-proc ros-kinetic-image-transport-plugins ros-kinetic-image-transport ros-kinetic-rosbridge-suite ros-kinetic-control-toolbox ros-kinetic-eigen-conversions ros-kinetic-camera-info-manager ros-kinetic-pyros-utils
-
-           #installing other dependencies
-           apt-get install -y v4l2loopback-utils lsof minicom libglib2.0-dev
-           sudo -H pip install certifi
-           #removing modemmanager 
-           apt-get remove -y modemmanager
-
-           exit 0
+   .. literalinclude:: include/flytos_dependency.sh
+      :language:  bash   
  
-    
-2. You have to update some kernel modules for video streaming to work properly. Run the following script as root or run each command with sudo permission.
+.. 2. You have to update some kernel modules for video streaming to work properly. Run the following script as root or run each command with sudo permission.
    
-   .. code-block:: python
-   
-       #!/bin/bash 
-       # install v4l2loopback kernel module required for FlytOS
+..    .. literalinclude:: include/kernel_module_update.sh
+..       :language:  bash  
 
-       #Run this script as root
-
-       cd $HOME
-       git clone https://github.com/umlaeute/v4l2loopback.git
-       cd v4l2loopback/
-       apt-get install linux-headers-$(uname -r)
-       apt-get update
-       ln -s /usr/src/linux-headers-$(uname -r)/ /lib/modules/$(uname -r)/build
-       sed -i 's/#define CONFIG_NEED_MACH_MEMORY_H 1/\/\/#define CONFIG_NEED_MACH_MEMORY_H 1/g' /lib/modules/$(uname -r)/build/include/generated/autoconf.h
-       sed -i '$a \\n#define CONFIG_ARCH_MULTIPLATFORM 1\n' /lib/modules/$(uname -r)/build/include/generated/autoconf.h
-       make && make install
-       cd ..
-       rm -rf v4l2loopback/
-
-       exit 0
-
-
-
-3. Before proceeding further, add the following three lines at the end of your /etc/bash.bashrc file. Please note that you will need sudo permission to edit the file.
+2. Before proceeding further, add the following three lines at the end of your /etc/bash.bashrc file. Please note that you will need sudo permission to edit the file.
  
    
-   .. code-block:: python
+   .. code-block:: bash
    
        source /opt/ros/kinetic/setup.bash
        export PYTHONPATH=$PYTHONPATH:/flyt/flytapps:/flyt/userapps
        source /flyt/flytos/flytcore/setup.bash
-
-4. Rc.local gpio_init.sh
-
 
 
 ODROID-XU4
@@ -131,28 +86,24 @@ ODROID-XU4
 
 FlytOS is compatible with ODROID-XU4. Download FlytOS Linux Image from your FlytBase account and follow the steps below to install the image on your ODROID-XU4. This step requires you to have a registered FlytBase account. In case you don't have an account follow the steps to create a FlytBase account :ref:`here<create_flytbase_account>` before you proceed.
 
-**Image download:**
+**Download Image:**
 
-1. Download the `FlytOS Linux Image <http://flytonline-staging.azurewebsites.net/FlytOS/>`_ for ODROID-XU4 from your FlytBase account.
-2. Download FlytOS Linux Image mdsum.
-3. It is about 2.7 GBs in size compressed (md5sum 3355a1ea968ede3d7571452fa19b2e05) and ~ 7.9 GBs uncompressed. 
-4. Check mdsum.
-5. Uncompress the file using the following command in your terminal: gunzip pi_flytimage.img.gz 
-6. Size of uncompressed image.
+1. Download the `FlytOS Linux Image <my.flytbase.com/FlytOS/>`_ for ODROID-XU4 from your FlytBase account.
+2. It is about 2.5 GBs in size compressed and ~ 8.5 GBs uncompressed.
+3. Check md5sum to verify the integity of downloaded file. Type ``md5sum name-of-the-file.img`` and compare the output to md5sum given near the download link.
+4. Uncompress the file using the following command in your terminal: ``gunzip name-of-the-file.img.gz``
    
-**Image write to SD Card:**
+**Write Image to SD Card:**
 
 1. We recommend using a 32 GB sd card, but a 16 GB card would work fine too. 
 2. Format the micro sd card.
 3. Follow `this <http://odroid.com/dokuwiki/doku.php?id=en:odroid_flashing_tools>`_ guide to install the image on ODROID-XU4’s SD/eMMC card.
 4. After installing the image on the ODROID-XU4’s SD/eMMC card, launch the ODROID-XU4 Utility App on the desktop. Enter FlytPOD’s password(flytpod) at the command prompt and select the fourth option i.e Resize your root partition and reboot the system.
 
-5. Crisp pointsfrom above link.
+**Expand partition on SD Card:**
 
-**SD card expansion:**
+Since the image is only around 8.5 GBs, the rest of the SD Card would have unallocated memory. Follow `this guide <http://elinux.org/RPi_Resize_Flash_Partitions>`_ to expand the partion to the maximum possible size to utilize all memory.
 
-1. Why should it be expanded?
-2. How to expand in detail. 
 
 You can install all FlytOS dependencies by either installing FlytOS Linux Image(the preferred approach) in your 32GB storage device or separately install all the dependencies by following this guide:
 
@@ -163,59 +114,18 @@ You can install all FlytOS dependencies by either installing FlytOS Linux Image(
    c) `OpenCV 2.4 <http://wiki.ros.org/kinetic/Installation/Ubuntu>`_ (for vision/video streaming APIs).
    d) Other dependencies - Run the following commands in your terminal with sudo permission.
 
-      .. code-block:: python
-       
-           #!/bin/bash 
-           # install dependency script for FlytOS
-
-           #installing known python dependencies
-           sudo -H pip install flask_cors flask_reverse_proxy flask_restful tblib webargs click flask_security httplib2 simple_json pyzmp pyros-setup
-
-           apt-get install -y python-pip python-serial python-flask python-wtforms python-sqlalchemy python-concurrent.futures python-mock python-zmq python-twistedsudo 
-
-           #installing known ros dependencies
-           apt-get install -y ros-kinetic-image-proc ros-kinetic-image-transport-plugins ros-kinetic-image-transport ros-kinetic-rosbridge-suite ros-kinetic-control-toolbox ros-kinetic-eigen-conversions ros-kinetic-camera-info-manager ros-kinetic-pyros-utils
-
-           #installing other dependencies
-           apt-get install -y v4l2loopback-utils lsof minicom libglib2.0-dev
-           sudo -H pip install certifi
-           #removing modemmanager 
-           apt-get remove -y modemmanager
-
-           exit 0
-
+   .. literalinclude:: include/flytos_dependency.sh
+      :language:  bash   
  
-    
-2. You have to update some kernel modules for video streaming to work properly. Run the following script as root or run each command with sudo permission.
+.. 2. You have to update some kernel modules for video streaming to work properly. Run the following script as root or run each command with sudo permission.
    
-   .. code-block:: python
-   
-       #!/bin/bash 
-       # install v4l2loopback kernel module required for FlytOS
+..    .. literalinclude:: include/kernel_module_update.sh
+..       :language:  bash   
 
-       #Run this script as root
-
-       cd $HOME
-       git clone https://github.com/umlaeute/v4l2loopback.git
-       cd v4l2loopback/
-       apt-get install linux-headers-$(uname -r)
-       apt-get update
-       ln -s /usr/src/linux-headers-$(uname -r)/ /lib/modules/$(uname -r)/build
-       sed -i 's/#define CONFIG_NEED_MACH_MEMORY_H 1/\/\/#define CONFIG_NEED_MACH_MEMORY_H 1/g' /lib/modules/$(uname -r)/build/include/generated/autoconf.h
-       sed -i '$a \\n#define CONFIG_ARCH_MULTIPLATFORM 1\n' /lib/modules/$(uname -r)/build/include/generated/autoconf.h
-       make && make install
-       cd ..
-       rm -rf v4l2loopback/
-
-       exit 0
-
-
-
-
-3. Before proceeding further, add the following three lines at the end of your /etc/bash.bashrc file. Please note that you will need sudo permission to edit the file.
+2. Before proceeding further, add the following three lines at the end of your /etc/bash.bashrc file. Please note that you will need sudo permission to edit the file.
  
    
-   .. code-block:: python
+   .. code-block:: bash
    
        source /opt/ros/kinetic/setup.bash
        export PYTHONPATH=$PYTHONPATH:/flyt/flytapps:/flyt/userapps
@@ -229,13 +139,10 @@ FlytOS is compatible with Raspberry Pi 3. Download FlytOS Linux Image from your 
 
 **Image download**
 
-1. Download the `FlytOS Linux Image <http://flytonline-staging.azurewebsites.net/FlytOS/>`_ for Raspberry Pi 3 from your FlytBase account. 
-2. Download FlytOS Linux Image mdsum.
-3. It is about 2.7 GBs in size compressed (md5sum 3355a1ea968ede3d7571452fa19b2e05) and ~ 7.9 GBs uncompressed.
-4. Check mdsum.
-5. Uncompress the file using the following command in your terminal: ``gunzip pi_flytimage.img.gz``
-
-6. Size of uncompressed image.
+1. Download the `FlytOS Linux Image <http://my.flytbase.com/FlytOS/>`_ for Raspberry Pi 3 from your FlytBase account. 
+2. It is about 2.5 GBs in size compressed and ~ 8.5 GBs uncompressed.
+3. Check md5sum to verify the integity of downloaded file. Type ``md5sum name-of-the-file.img`` and compare the output to md5sum given near the download link.
+4. Uncompress the file using the following command in your terminal: ``gunzip name-of-the-file.img.gz``
    
 **Image write to SD Card**
 
@@ -245,11 +152,11 @@ FlytOS is compatible with Raspberry Pi 3. Download FlytOS Linux Image from your 
    
 **Expand SD card**
 
-Since the image is only 7.9 GBs, the rest of the SD Card would have unallocated memory. Follow `this guide <http://elinux.org/RPi_Resize_Flash_Partitions>`_ to expand the partion to the maximum possible size to utilize all memory.
+Since the image is only around 8.5 GBs, the rest of the SD Card would have unallocated memory. Follow `this guide <http://elinux.org/RPi_Resize_Flash_Partitions>`_ to expand the partion to the maximum possible size to utilize all memory.
 
 Insert the sd card in your Raspberry Pi 3 and apply power to boot it. By default a WiFi access point is created on the Pi with following credentials:
-Ssid:       Flytpod_wifi
-Password:   FlytPOD12#
+Ssid:       FlytPOD_wifi
+Password:   FlytPOD123
 
 Connect to the access point on another computer. Open the following link in your browser to view flytconsole:
 10.42.0.1:9090/flytconsole
@@ -259,15 +166,15 @@ Connect to the access point on another computer. Open the following link in your
 Download and Install FlytOS
 ---------------------------
 
-FlytOS is currently compatible with `FlytPOD <http://docs.flytbase.com/en/master/docs/FlytPOD/About_FlytPOD.html>`_, `FlytPOD PRO <http://docs.flytbase.com/en/master/docs/FlytPOD/About_FlytPOD.html>`_, `ODROID-XU4 <http://docs.flytbase.com/en/master/docs/FlytOS/FlytOSInstallationGuide.html#pixhawk-odroid-xu4>`_ and  `Raspberry Pi 3 <https://www.raspberrypi.org/products/raspberry-pi-3-model-b/>`_ . This step requires you to have a registered FlytBase account. In case you don't have an account follow the steps to create a FlytBase account :ref:`here<create_flytbase_account>` before you proceed.
+FlytOS is currently compatible with :ref:`FlytPOD<about flytpod>`, :ref:`FlytPOD PRO<about flytpod>`, :ref:`ODROID-XU4<hardware_setup#odroid-xu4-with-pixhawk>` and  `Raspberry Pi 3 <https://www.raspberrypi.org/products/raspberry-pi-3-model-b/>`_ . This step requires you to have a registered FlytBase account. In case you don't have an account follow the steps to create a FlytBase account :ref:`here<create_flytbase_account>` before you proceed.
 Once you have installed the latest FlytOS Linux Image, we recommend you to update your FlytOS by following the steps below:
 
 
 
-1. **Download FlytOS:** Download the Board specific `FlytOS <http://flytonline-staging.azurewebsites.net/FlytOS/>`_ from your FlytBase account.
+1. **Download FlytOS:** Download the Board specific `FlytOS <http://fmy.flytbase.com/FlytOS/>`_ from your FlytBase account.
 2. **Install FlytOS:** Once you have downloaded the Debian package, run the following command in your terminal to install FlytOS: 
    
-   .. code-block:: python
+   .. code-block:: bash
    
        $ sudo dpkg -i <path to debian package location>/flytOS_*.deb 
 
@@ -278,7 +185,7 @@ Once you have installed the latest FlytOS Linux Image, we recommend you to updat
 5. Check for **Congratulations! FlytOS installation completed** message at the end.
 6. Just in case you see any dependency issues cropping up in your screen while installing FlytOS, kindly run the following command and execute the previous command again:
    
-   .. code-block:: python
+   .. code-block:: bash
    
        $ sudo apt -f install
 
@@ -299,7 +206,7 @@ FlytOS Basics
 
    To launch FlytOS, run this command in the terminal.
 
-   .. code-block:: python
+   .. code-block:: bash
        
        $ sudo $(rospack find core_api)/scripts/launch_flytOS.sh
 
@@ -342,7 +249,7 @@ FlytOS Basics
        
       To kill this instance of FlytOS, run this command in your terminal. 
 
-      .. code-block:: python
+      .. code-block:: bash
        
           $ sudo $(rospack find core_api)/scripts/stop_flytOS.sh
        
@@ -361,8 +268,10 @@ FlytOS Basics
 
 **Accessing apps with FlytOS**
 
-1. Open your browser and go to the following link - ``http://ip-address-of-device``.
-2. Enter ``flytPOD`` as the IP address in case you are connected to FlytPOD- ``http://flytpod``.
+1. Open your browser and go to the following link - ``http://ip-address-of-device/flytconsole``.
+2. Enter ``flytPOD`` as the IP address in case you are connected to FlytPOD- ``http://flytpod/flytconsole``.
+
+
 .. 3. You will be directed to a page that shows a warning **Connection is not private**. FlytOS contains self signed SSL certificates to enable access over local network.
    
        
