@@ -11,6 +11,9 @@ FlytPOD comes in two variants - FlytPOD and FlytPOD PRO. See the detailed steps 
 Odroid-XU4 with Pixhawk
 -----------------------
 
+Telemetry Connection
+""""""""""""""""""""
+
 FlytOS needs telemetry data from autopilot(Pixhawk). Connect Pixhawk’s Telemetry port to ODROID-XU4. 
 
 1. **[Recommended]** Connect Pixhawk's Telem2 port to ODROID UART0 port. We have used the ODROID XU4 Shifter Shield as a level converter and the pins mapped as GPA0.0(RX) and GPA0.1(TX) have been used as serial port UART0.
@@ -28,39 +31,32 @@ Below is a hardware setup youtube video for Pixhawk + ODROID-XU4 covering all th
     :aspect: 16:9
     :width: 80%
 
-Pixhawk Firmware
-^^^^^^^^^^^^^^^^
+Configuring Pixhawk Autopilot
+"""""""""""""""""""""""""""""
 
-1. **[Recommended]** Using Binaries - Download and install the latest stable PX4/APM firmware release using QGC or any other means.
+1. Install `QGC(QGroundControl) <http://qgroundcontrol.com/>`_ in your local machine.
+2. Connect Pixhawk to QGC using the USB port at the side of Pixhawk.
+3. Install the latest stable PX4 release in Pixhawk using QGC by following `this <https://donlakeflyer.gitbooks.io/qgroundcontrol-user-guide/content/SetupView/Firmware.html>`_ guide.
+4. Once done, visit `parameter widget in QGC <https://donlakeflyer.gitbooks.io/qgroundcontrol-user-guide/content/SetupView/Parameters.html>`_ and search for parameters SYS_COMPANION and MAV_COMP_ID, set them to 921600 and 50 respectively. This would enable communication between FlytOS running on ODROID-XU4 and Pixhawk.
 
-2. Build from source - Clone the PX4/APM stable branch, build and install on Pixhawk.
 
-
-About Raspberry PI 3
-^^^^^^^^^^^^^^^^^^^^
+Raspberry PI 3 with Pixhawk
+---------------------------
 
 **Company name:** Raspberry Pi foundation 
-
-**Available at:** http://uk.rs-online.com/web/b/raspberry-pi/
-
-**For more information:** https://www.raspberrypi.org/
+**Available at:** http://uk.rs-online.com/web/b/raspberry-pi
+**For more information:** https://www.raspberrypi.org
 
 Tech specs
 """"""""""
 
-* A 1.2GHz 64-bit quad-core ARMv8 CPU
+* 1.2GHz 64-bit quad-core ARMv8 CPU
 * 802.11n Wireless LAN
-* Bluetooth 4.1
-* Bluetooth Low Energy (BLE)
 * 1GB RAM
 * 4 USB ports
-* 40 GPIO pins
 * Full HDMI port
 * Ethernet port
-* Combined 3.5mm audio jack and composite video
-* Camera interface (CSI)
-* Display interface (DSI)
-* Micro SD card slot (now push-pull rather than push-push)
+* Micro SD card slot 
 * VideoCore IV 3D graphics core
 
 How to start the board
@@ -81,7 +77,7 @@ ssid:       FlytPOD_wifi
 Password:   FlytPOD123
 
 Connect to the access point on another computer. Open the following link in your browser to view flytconsole:
-10.42.0.1:9090/flytconsole
+10.42.0.1/flytconsole
 
 1. Make the connections between Pixhawk’s TELEM 2 port and R pi 3’s GPIO port by following the connection table below. 
 2. Connect the power cable to the power plug.
@@ -107,10 +103,8 @@ Configuring Pixhawk Autopilot
 1. Install `QGC(QGroundControl) <http://qgroundcontrol.com/>`_ in your local machine.
 2. Connect Pixhawk to QGC using the USB port at the side of Pixhawk.
 3. Install the latest stable PX4 release in Pixhawk using QGC by following `this <https://donlakeflyer.gitbooks.io/qgroundcontrol-user-guide/content/SetupView/Firmware.html>`_` guide.
-4. Once done, visit `parameter widget in QGC <https://donlakeflyer.gitbooks.io/qgroundcontrol-user-guide/content/SetupView/Parameters.html>`_ and search for parameters SYS_COMPANION and MAV_COMP_ID, set them to 921600 and 50 respectively. This would enable communication between FlytOS running on Raspi and Pixhawk.
+4. Once done, visit `parameter widget in QGC <https://donlakeflyer.gitbooks.io/qgroundcontrol-user-guide/content/SetupView/Parameters.html>`_ and search for parameters SYS_COMPANION and MAV_COMP_ID, set them to 921600 and 50 respectively. This would enable communication between FlytOS running on Raspberry Pi 3 and Pixhawk.
 
-
-Once autopilot configuration is completed, you can now launch FlytOS and connect to it via FlytConsole.
 
 .. |br| raw:: html
 
