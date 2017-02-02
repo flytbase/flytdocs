@@ -8,7 +8,7 @@ About FlytPOD/PRO
 FlytPOD
 -------
 
-FlytPOD is flight computer for advanced drones. Along with a robust autopilot it has inbuilt powerful application processor which runs :ref:`FlytOS<flytos_about>` - the operating system for Drones. FlytPOD runs trusted open source `PX4 <http://dev.px4.io>`_ flight firmware stack which can fly multi-rotors, fixed wings and many more custom drones.
+FlytPOD is flight computer for advanced drones. Along with a robust autopilot it has inbuilt powerful application processor. FlytPOD runs trusted open source `PX4 <http://dev.px4.io>`_ autopilot firmware and  :ref:`FlytOS<flytos_about>` - the operating system for Drones. It can fly multi-rotors, fixed wings and many more custom drone frames.
 The device houses navigational sensors, integrated powerful WiFi router and expansion panel for an array of payload interfaces.    
 
 .. _about_flytpodpro:
