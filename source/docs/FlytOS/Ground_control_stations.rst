@@ -6,13 +6,13 @@ Supported Ground Control Stations
 FlytConsole
 -----------
 
-FlytOS comes pre-installed with FlytConsole, a web app for configuring your drone.
+FlytConsole, a web app for configuring your drone comes pre-packaged in FlytOS.
 Follow the steps below to get started with FlytConsole.
 
-1. Power on FlytPOD/PRO (or your device running FlytOS).
-2. Connect your personal system to the same network that FlytPOD/PRO is connected to.
-3. If in AP mode, you can connect to FlytPOD/PRO’s WiFi i.e flytpod_wifi. If in client mode, connect to your router i.e the device running FlytOS is connected to.
-4. Next go to the following links to open FlytConsole: `<http://flytpod/flytconsole>`_
+1. Power on your Flight Computer running FlytOS.
+2. Connect your personal system to the same network that your Flight Computer is connected to.
+4. If in AP mode, you can connect to FlytPOD/PRO’s WiFi i.e flytpod_wifi. If in client mode, connect to your router i.e the device running FlytOS is connected to.
+5. Next go to the following links to open FlytConsole: `<http://flytpod/flytconsole>`_
  
 
 
