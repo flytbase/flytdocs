@@ -1,3 +1,5 @@
+.. _about_flytpod_pro:
+
 About FlytPOD/PRO
 =================
 

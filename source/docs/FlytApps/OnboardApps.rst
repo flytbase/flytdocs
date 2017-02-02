@@ -21,7 +21,7 @@ Demo App 1
 
 This demo app makes the robot takeoff, move in a square trajectory of side length 5m and land once the entire mission is over. 
 
-Below is a demo `youtube video <https://www.youtube.com/watch?v=z36zvRfn58U&feature=youtu.be>`_ of the same app when run on :ref:`FlytSim <flytsim>`.
+Below is a demo `youtube video <https://www.youtube.com/watch?v=z36zvRfn58U&feature=youtu.be>`_ of the same app when run on :ref:`FlytSim <about_flytsim>`.
 
 ..  youtube:: z36zvRfn58U
     :aspect: 16:9
@@ -29,7 +29,7 @@ Below is a demo `youtube video <https://www.youtube.com/watch?v=z36zvRfn58U&feat
 
 |br|
 
-Below is a demo `youtube video <https://www.youtube.com/watch?v=lwKZXkzkM80>`_ of the same app when run on :ref:`FlytPOD <about flytpod>`.
+Below is a demo `youtube video <https://www.youtube.com/watch?v=lwKZXkzkM80>`_ of the same app when run on :ref:`FlytPOD <about_flytpod_pro>`.
 
 ..  youtube:: lwKZXkzkM80
     :aspect: 16:9

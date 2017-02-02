@@ -1,4 +1,4 @@
-.. _hardware_setup:
+.. _supported_GCS:
 
 Supported Ground Control Stations
 =================================

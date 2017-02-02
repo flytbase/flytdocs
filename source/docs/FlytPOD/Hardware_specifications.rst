@@ -193,6 +193,7 @@ Below are the various color patterns that the WiFi Status LED exhibits along wit
 
 * Solid        - WiFi booting.
 * Random Blink - WiFi data transmission indicator. 
+  
 The WiFi Power off Switch is available on top of the FlytPOD, in case you want to use the ethernet port.
   
 11. System Health LED
