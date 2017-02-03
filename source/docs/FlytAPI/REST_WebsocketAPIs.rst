@@ -9,70 +9,70 @@ FlytAPIs have been extended from ROS to REST and Websocket. This document descri
 
 .. caution:: This guide is under active development.
 
-Authentication APIs
--------------------
+..  Authentication APIs
+..  -------------------
 
-Be advised, the Authentication APIs are specifically for FlytPODs with authentication enabled in them.
+..  Be advised, the Authentication APIs are specifically for FlytPODs with authentication enabled in them.
 
-.. _Login_REST:
+..  .. _Login_REST:
 
-Login/token
-^^^^^^^^^^^
+..  Login/token
+..  ^^^^^^^^^^^
 
-This API is used for getting a valid token from FlytPOD. A valid token recieved from this call is sent in the header with any rest call for it to be accepted by the FlytPOD.
-
-
-REST
-""""
+..  This API is used for getting a valid token from FlytPOD. A valid token recieved from this call is sent in the header with any rest call for it to be accepted by the FlytPOD.
 
 
-+------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| URL                          | | https://<ip>/login                                                                                                 |
-|                              | | <ip>: IP of the flytpod in the network                                                                             |
-|                              | |     eg: 192.168.x.xxx                                                                                              |
-+------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| METHOD                       |  POST                                                                                                                |
-+------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| DATA PARAMS                  | | Content: application/JSON                                                                                          |
-|                              | | {                                                                                                                  |
-|                              | |      username:[String],                                                                                            |
-|                              | |      email: [String],                                                                                              |
-|                              | |      password: [String]                                                                                            |
-|                              | | }                                                                                                                  |
-|                              | | username: An existing username for the device being handled.                                                       |
-|                              | | email: Email with which the account was created / can also be supplied with the username.                          |
-|                              | | password: Valid password for the account.                                                                          |
-+------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| SUCCESS                      | | Code: 200                                                                                                          |
-| RESPONSE                     | | Content: {                                                                                                         | 
-|                              | |     response : {                                                                                                   |
-|                              | |          user: {                                                                                                   |
-|                              | |                  autentication_token : [String]                                                                    |
-|                              | |          }                                                                                                         |
-|                              | |     }                                                                                                              |
-|                              | | }                                                                                                                  |
-|                              | |                                                                                                                    |
-|                              | | authentication_token: token for making all the other rest calls.                                                   |
-+------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| ERROR                        | | Code: 404                                                                                                          |
-| RESPONSE                     | | resource not found                                                                                                 |
-+------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| SAMPLE                       |  .. code-block:: rest                                                                                                |
-| CALL                         |                                                                                                                      |
-|                              |          var msgdata={};                                                                                             |
-|                              |          msgdata['username']=$("#username").val();                                                                   |
-|                              |          msgdata['email']=$("#username").val();                                                                      |
-|                              |          msgdata['password']=$("#password").val();                                                                   |
-|                              |          $.ajax({                                                                                                    |
-|                              |          type: "POST",                                                                                               |
-|                              |          dataType: "json",                                                                                           |
-|                              |          data: JSON.stringify(msgdata),                                                                              |
-|                              |          url: "https://<ip>/login",                                                                                  |
-|                              |          success: function(data){                                                                                    |
-|                              |              console.log(data.response.user.authentication_token);                                                   |
-|                              |          }                                                                                                           |
-|                              |      });                                                                                                             |
-+------------------------------+----------------------------------------------------------------------------------------------------------------------+
+..  REST
+..  """"
+
+
+..  +------------------------------+----------------------------------------------------------------------------------------------------------------------+
+..  | URL                          | | https://<ip>/login                                                                                                 |
+..  |                              | | <ip>: IP of the flytpod in the network                                                                             |
+..  |                              | |     eg: 192.168.x.xxx                                                                                              |
+..  +------------------------------+----------------------------------------------------------------------------------------------------------------------+
+..  | METHOD                       |  POST                                                                                                                |
+..  +------------------------------+----------------------------------------------------------------------------------------------------------------------+
+..  | DATA PARAMS                  | | Content: application/JSON                                                                                          |
+..  |                              | | {                                                                                                                  |
+..  |                              | |      username:[String],                                                                                            |
+..  |                              | |      email: [String],                                                                                              |
+..  |                              | |      password: [String]                                                                                            |
+..  |                              | | }                                                                                                                  |
+..  |                              | | username: An existing username for the device being handled.                                                       |
+..  |                              | | email: Email with which the account was created / can also be supplied with the username.                          |
+..  |                              | | password: Valid password for the account.                                                                          |
+..  +------------------------------+----------------------------------------------------------------------------------------------------------------------+
+..  | SUCCESS                      | | Code: 200                                                                                                          |
+..  | RESPONSE                     | | Content: {                                                                                                         | 
+..  |                              | |     response : {                                                                                                   |
+..  |                              | |          user: {                                                                                                   |
+..  |                              | |                  autentication_token : [String]                                                                    |
+..  |                              | |          }                                                                                                         |
+..  |                              | |     }                                                                                                              |
+..  |                              | | }                                                                                                                  |
+..  |                              | |                                                                                                                    |
+..  |                              | | authentication_token: token for making all the other rest calls.                                                   |
+..  +------------------------------+----------------------------------------------------------------------------------------------------------------------+
+..  | ERROR                        | | Code: 404                                                                                                          |
+..  | RESPONSE                     | | resource not found                                                                                                 |
+..  +------------------------------+----------------------------------------------------------------------------------------------------------------------+
+..  | SAMPLE                       |  .. code-block:: rest                                                                                                |
+..  | CALL                         |                                                                                                                      |
+..  |                              |          var msgdata={};                                                                                             |
+..  |                              |          msgdata['username']=$("#username").val();                                                                   |
+..  |                              |          msgdata['email']=$("#username").val();                                                                      |
+..  |                              |          msgdata['password']=$("#password").val();                                                                   |
+..  |                              |          $.ajax({                                                                                                    |
+..  |                              |          type: "POST",                                                                                               |
+..  |                              |          dataType: "json",                                                                                           |
+..  |                              |          data: JSON.stringify(msgdata),                                                                              |
+..  |                              |          url: "https://<ip>/login",                                                                                  |
+..  |                              |          success: function(data){                                                                                    |
+..  |                              |              console.log(data.response.user.authentication_token);                                                   |
+..  |                              |          }                                                                                                           |
+..  |                              |      });                                                                                                             |
+..  +------------------------------+----------------------------------------------------------------------------------------------------------------------+
 
 ----
 
