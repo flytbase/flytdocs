@@ -107,6 +107,27 @@ Configuring Pixhawk Autopilot
 3. Install the latest stable PX4 release in Pixhawk using QGC by following `this <https://donlakeflyer.gitbooks.io/qgroundcontrol-user-guide/content/SetupView/Firmware.html>`_ guide.
 4. Once done, visit `parameter widget in QGC <https://donlakeflyer.gitbooks.io/qgroundcontrol-user-guide/content/SetupView/Parameters.html>`_ and search for parameters SYS_COMPANION and MAV_COMP_ID, set them to 921600 and 50 respectively. This would enable communication between FlytOS running on Raspberry Pi 3 and Pixhawk.
 
+Nvidia Jetson TX1
+-----------------
+
+Telemetry Connection
+""""""""""""""""""""
+
+Connect the Pixhawk autopilot board’s TELEM2 port to TX1’s UART1 port . If you are using the TX1 developer kit carrier board , then the UART1 can be found on the J17 connector. Visit `this link <https://developer.nvidia.com/embedded/dlc/jetson-tx1-developer-kit-carrier-board-spec>`_ (Page 28 Section 3.7) to view the pinout of TX1's J17 connector.
+
+.. figure:: /_static/Images/Tx1_Connection.png
+	:align: center 
+	:scale: 30 %
+	
+	Connection between TX1 developer kit's J17 connector and Pixhawk’s TELEM 2
+
+Configuring Pixhawk Autopilot
+"""""""""""""""""""""""""""""
+
+1. Install `QGC(QGroundControl) <http://qgroundcontrol.com/>`_ in your local machine.
+2. Connect Pixhawk to QGC using the USB port at the side of Pixhawk.
+3. Install the latest stable PX4 release in Pixhawk using QGC by following `this <https://donlakeflyer.gitbooks.io/qgroundcontrol-user-guide/content/SetupView/Firmware.html>`_ guide.
+4. Once done, visit `parameter widget in QGC <https://donlakeflyer.gitbooks.io/qgroundcontrol-user-guide/content/SetupView/Parameters.html>`_ and search for parameters SYS_COMPANION and MAV_COMP_ID, set them to 921600 and 50 respectively. This would enable communication between FlytOS running on Raspberry Pi 3 and Pixhawk.
 
 .. |br| raw:: html
 

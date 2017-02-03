@@ -30,7 +30,7 @@ FlytOS requires a lot of dependencies to be installed. For this, we have provide
 Flashing FlytOS Linux Image
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-This section will help you in flashing FlytOS Linux Image on any SD/eMMC card for your specific board. FlytOS is currently compatible with :ref:`FlytPOD<about_flytpod>`, :ref:`FlytPOD PRO<about_flytpodpro>`, `ODROID-XU4 <http://www.hardkernel.com/main/products/prdt_info.php?g_code=G143452239825>`_ and `Raspberry Pi 3 <https://www.raspberrypi.org/products/raspberry-pi-3-model-b>`_. We would soon introduce compatibility with a lot many popular SBCs available in the drone ecosystem. FlytPOD/PRO comes with FlytOS Linux Image pre-installed on their respective 32GB storage devices. Follow this step ONLY if you want to re-flash your FlytPOD/PRO device.
+This section will help you in flashing FlytOS Linux Image on any SD/eMMC card for your specific board. FlytOS is compatible with :ref:`FlytPOD<about_flytpod>`, :ref:`FlytPOD PRO<about_flytpodpro>`, `ODROID-XU4 <http://www.hardkernel.com/main/products/prdt_info.php?g_code=G143452239825>`_, `Raspberry Pi 3 <https://www.raspberrypi.org/products/raspberry-pi-3-model-b>`_ and `Nvidia Jetson TX1 <https://developer.nvidia.com/embedded-computing>`_. We would soon introduce compatibility with a lot many popular SBCs available in the drone ecosystem. FlytPOD/PRO comes with FlytOS Linux Image pre-installed on their respective 32GB storage devices. Follow this step ONLY if you want to re-flash your FlytPOD/PRO device.
 
 This step requires you to have a registered FlytBase account. In case you don't have an account, :ref:`create a FlytBase Account<create_flytbase_account>` before you proceed.
 
@@ -94,6 +94,9 @@ This guide assumes you already have a working image for your Flight Computer. We
 
    a) Linux - Ubuntu 16.04
    b) `ROS - Kinetic <http://wiki.ros.org/kinetic/Installation/Ubuntu>`_ (install *ros-kinetic-desktop* package)
+
+   .. note:: In the case of TX1, visit `this link <http://docs.nvidia.com/jetpack-l4t/2_3/index.html#developertools/mobile/jetpack/l4t/2.3/jetpack_l4t_install.htm>`_ to flash your flight computer with the latest Jetpack. You can refer `this link <http://www.jetsonhacks.com/2016/10/12/robot-operating-system-ros-on-nvidia-jetson-tx1/>`_ for help in installing ros-kinetic-desktop.  
+
    c) `OpenCV 2.4 <http://docs.opencv.org/2.4/doc/tutorials/introduction/linux_install/linux_install.html>`_ (for vision/video streaming APIs).
    d) Other dependencies - To install run the following commands in your terminal.
 
@@ -121,7 +124,7 @@ Installing FlytOS debian package
 
 .. note:: This step requires you to have a registered FlytBase Account. In case you don't have an account, :ref:`create a FlytBase Account<create_flytbase_account>` before you proceed. 
 
-FlytOS is compatible with :ref:`FlytPOD<about_flytpod>`, :ref:`FlytPOD PRO<about_flytpodpro>`, `ODROID-XU4 <http://www.hardkernel.com/main/products/prdt_info.php?g_code=G143452239825>`_ and `Raspberry Pi 3 <https://www.raspberrypi.org/products/raspberry-pi-3-model-b>`_ . We would soon introduce compatibility with a lot many popular SBCs available in the drone ecosystem. Once you have installed the latest FlytOS Linux Image, you **MUST update your FlytOS** by following the steps below:
+FlytOS is compatible with :ref:`FlytPOD<about_flytpod>`, :ref:`FlytPOD PRO<about_flytpodpro>`, `ODROID-XU4 <http://www.hardkernel.com/main/products/prdt_info.php?g_code=G143452239825>`_, `Raspberry Pi 3 <https://www.raspberrypi.org/products/raspberry-pi-3-model-b>`_ and `Nvidia Jetson TX1 <https://developer.nvidia.com/embedded-computing>`_. We would soon introduce compatibility with a lot many popular SBCs available in the drone ecosystem. Once you have installed the latest FlytOS Linux Image, you **MUST update your FlytOS** by following the steps below:
 
 1. `Login <http://my.flytbase.com>`_ to your FlytBase Account.
 2. Download the hardware specific `FlytOS Debian Package <http://my.flytbase.com/FlytOS>`_ from your FlytBase Account.
