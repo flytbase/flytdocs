@@ -21,16 +21,16 @@ Preparing your Flight Computer
 
 FlytOS requires a lot of dependencies to be installed. For this, we have provided the following two approaches:
 
-* :ref:`Installing FlytOS Linux Image <FlytOS_linux_image>`
+* :ref:`Flashing FlytOS Linux Image <FlytOS_linux_image>`
 * :ref:`Installing FlytOS dependencies in your custom image<install_dependencies>`
 
 .. _FlytOS_linux_image:
 
 
-Installing FlytOS Linux Image
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Flashing FlytOS Linux Image
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-This section will help you in installing FlytOS Linux Image on any SD/eMMC card for your specific board. FlytOS is currently compatible with :ref:`FlytPOD<about_flytpod>`, :ref:`FlytPOD PRO<about_flytpodpro>`, `ODROID-XU4 <http://www.hardkernel.com/main/products/prdt_info.php?g_code=G143452239825>`_ and `Raspberry Pi 3 <https://www.raspberrypi.org/products/raspberry-pi-3-model-b>`_. We would soon introduce compatibility with a lot many popular SBCs available in the drone ecosystem. FlytPOD/PRO comes with FlytOS Linux Image pre-installed on their respective 32GB storage devices. Follow this step ONLY if you want to re-flash your FlytPOD/PRO device.
+This section will help you in flashing FlytOS Linux Image on any SD/eMMC card for your specific board. FlytOS is currently compatible with :ref:`FlytPOD<about_flytpod>`, :ref:`FlytPOD PRO<about_flytpodpro>`, `ODROID-XU4 <http://www.hardkernel.com/main/products/prdt_info.php?g_code=G143452239825>`_ and `Raspberry Pi 3 <https://www.raspberrypi.org/products/raspberry-pi-3-model-b>`_. We would soon introduce compatibility with a lot many popular SBCs available in the drone ecosystem. FlytPOD/PRO comes with FlytOS Linux Image pre-installed on their respective 32GB storage devices. Follow this step ONLY if you want to re-flash your FlytPOD/PRO device.
 
 This step requires you to have a registered FlytBase account. In case you don't have an account, :ref:`create a FlytBase Account<create_flytbase_account>` before you proceed.
 
@@ -65,7 +65,7 @@ This step requires you to have a registered FlytBase account. In case you don't 
 
 .. Since the image is only around 8.5 GBs, the rest of the SD Card would have unallocated memory. Follow `this guide <http://elinux.org/RPi_Resize_Flash_Partitions>`_ to expand the partition to the maximum possible size to utilize all memory.
 
-We have created a video tutorial for Linux and Mac OS users, to help install FlytOS Linux Image on their SD/eMMC cards. Windows users can refer `this guide <http://odroid.com/dokuwiki/doku.php?id=en:odroid_flashing_tools>`_ for writing image and Windows Disk Management Utility to expand the SD/eMMC card.
+We have created a video tutorial for Linux and Mac OS users, to help flash FlytOS Linux Image on their SD/eMMC cards. Windows users can refer `this guide <http://odroid.com/dokuwiki/doku.php?id=en:odroid_flashing_tools>`_ for writing image and Windows Disk Management Utility to expand the SD/eMMC card.
 
 |br|
 
@@ -77,7 +77,7 @@ We have created a video tutorial for Linux and Mac OS users, to help install Fly
 
 **User Credentials**
 
-All FlytOS Linux Image versions have the same user credentials: **username - flytpod & password - flytpod**
+All FlytOS Linux Image versions have the same Login user credentials: **username - flytpod & password - flytpod**
 
 |br|
 
@@ -86,7 +86,7 @@ All FlytOS Linux Image versions have the same user credentials: **username - fly
 Installing FlytOS dependencies in your custom image
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. warning:: Follow this step ONLY if you have chosen to NOT TO install :ref:`FlytOS Linux Image <FlytOS_linux_image>`.
+.. warning:: Follow this step ONLY if you have chosen to NOT TO flash :ref:`FlytOS Linux Image <FlytOS_linux_image>`.
 
 This guide assumes you already have a working image for your Flight Computer. We would lay down steps to install dependencies and configure your device for FlytOS.
 
@@ -158,7 +158,7 @@ FlytOS Basics
 
 1. Launch FlytOS
        
-   Once you have installed FlytOS, you are ready to build your own apps. If you have installed FlytOS Linux Image, FlytOS would be launched automatically at every system bootup.
+   Once you have installed FlytOS, you are ready to build your own apps. If you have flashed FlytOS Linux Image, FlytOS would be launched automatically at every system bootup.
 
    To launch FlytOS, open a **new** terminal and run this command.
 

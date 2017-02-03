@@ -3,7 +3,7 @@
 Hardware Setup
 ==============
 
-Once you are through with :ref:`Installing FlytOS Linux Image<FlytOS_linux_image>` and :ref:`FlytOS debian package<installing_flytos>`, you should go ahead with configuring Pixhawk with your Flight Computer.
+Once you are through with :ref:`Flashing FlytOS Linux Image<FlytOS_linux_image>` and :ref:`FlytOS debian package<installing_flytos>`, you should go ahead with configuring Pixhawk with your Flight Computer.
 
 FlytPOD/PRO
 -----------
@@ -75,7 +75,7 @@ WiFi Access Point
 .. 	Raspberry Pi 3
 
 
-Insert the SD Card with installed :ref:`FlytOS Linux Image<FlytOS_linux_image>` in your Raspberry Pi 3 and apply power to boot it. On boot up a WiFi access point is created on the device with following credentials:
+Insert the SD Card with pre-flashed :ref:`FlytOS Linux Image<FlytOS_linux_image>` in your Raspberry Pi 3 and apply power to boot it. On boot up a WiFi access point is created on the device with following credentials:
 
 ssid:       FlytPOD_wifi
 
