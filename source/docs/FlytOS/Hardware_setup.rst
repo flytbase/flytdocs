@@ -117,7 +117,7 @@ Connect the Pixhawk autopilot board’s TELEM2 port to TX1’s UART1 port . If y
 
 .. figure:: /_static/Images/Tx1_Connection.png
 	:align: center 
-	:scale: 30 %
+	:scale: 80 %
 	
 	Connection between TX1 developer kit's J17 connector and Pixhawk’s TELEM 2
 

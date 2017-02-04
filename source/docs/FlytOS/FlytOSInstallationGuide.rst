@@ -24,13 +24,16 @@ FlytOS requires a lot of dependencies to be installed. For this, we have provide
 * :ref:`Flashing FlytOS Linux Image <FlytOS_linux_image>`
 * :ref:`Installing FlytOS dependencies in your custom image<install_dependencies>`
 
+.. note:: For installing FlytOS on NVIDIA TX1, please follow only the second approach. 
+
+
 .. _FlytOS_linux_image:
 
 
 Flashing FlytOS Linux Image
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-This section will help you in flashing FlytOS Linux Image on any SD/eMMC card for your specific board. FlytOS is compatible with :ref:`FlytPOD<about_flytpod>`, :ref:`FlytPOD PRO<about_flytpodpro>`, `ODROID-XU4 <http://www.hardkernel.com/main/products/prdt_info.php?g_code=G143452239825>`_, `Raspberry Pi 3 <https://www.raspberrypi.org/products/raspberry-pi-3-model-b>`_ and `Nvidia Jetson TX1 <https://developer.nvidia.com/embedded-computing>`_. We would soon introduce compatibility with a lot many popular SBCs available in the drone ecosystem. FlytPOD/PRO comes with FlytOS Linux Image pre-installed on their respective 32GB storage devices. Follow this step ONLY if you want to re-flash your FlytPOD/PRO device.
+This section will help you in flashing FlytOS Linux Image on any SD/eMMC card for your specific board. FlytOS is compatible with :ref:`FlytPOD<about_flytpod>`, :ref:`FlytPOD PRO<about_flytpodpro>`, `ODROID-XU4 <http://www.hardkernel.com/main/products/prdt_info.php?g_code=G143452239825>`_, `Raspberry Pi 3 <https://www.raspberrypi.org/products/raspberry-pi-3-model-b>`_ and `NVIDIA Jetson TX1 <https://developer.nvidia.com/embedded-computing>`_. We would soon introduce compatibility with a lot many popular SBCs available in the drone ecosystem. FlytPOD/PRO comes with FlytOS Linux Image pre-installed on their respective 32GB storage devices. Follow this step ONLY if you want to re-flash your FlytPOD/PRO device.
 
 This step requires you to have a registered FlytBase account. In case you don't have an account, :ref:`create a FlytBase Account<create_flytbase_account>` before you proceed.
 
@@ -116,6 +119,13 @@ This guide assumes you already have a working image for your Flight Computer. We
        export PYTHONPATH=$PYTHONPATH:/flyt/flytapps:/flyt/userapps
        source /flyt/flytos/flytcore/setup.bash
 
+3. If your flight computer is NVIDIA TX1, run the following additional commands in your terminal:
+
+   .. code-block:: bash
+   
+       sed -i 's/export PATH=/export PATH=\$PATH:/g' ~/.bashrc 
+       sed -i 's/export LD_LIBRARY_PATH=/export LD_LIBRARY_PATH=\$LD_LIBRARY_PATH:/g' ~/.bashrc
+
 .. _installing_flytos:
 
 
@@ -124,7 +134,7 @@ Installing FlytOS debian package
 
 .. note:: This step requires you to have a registered FlytBase Account. In case you don't have an account, :ref:`create a FlytBase Account<create_flytbase_account>` before you proceed. 
 
-FlytOS is compatible with :ref:`FlytPOD<about_flytpod>`, :ref:`FlytPOD PRO<about_flytpodpro>`, `ODROID-XU4 <http://www.hardkernel.com/main/products/prdt_info.php?g_code=G143452239825>`_, `Raspberry Pi 3 <https://www.raspberrypi.org/products/raspberry-pi-3-model-b>`_ and `Nvidia Jetson TX1 <https://developer.nvidia.com/embedded-computing>`_. We would soon introduce compatibility with a lot many popular SBCs available in the drone ecosystem. Once you have installed the latest FlytOS Linux Image, you **MUST update your FlytOS** by following the steps below:
+FlytOS is compatible with :ref:`FlytPOD<about_flytpod>`, :ref:`FlytPOD PRO<about_flytpodpro>`, `ODROID-XU4 <http://www.hardkernel.com/main/products/prdt_info.php?g_code=G143452239825>`_, `Raspberry Pi 3 <https://www.raspberrypi.org/products/raspberry-pi-3-model-b>`_ and `NVIDIA Jetson TX1 <https://developer.nvidia.com/embedded-computing>`_. We would soon introduce compatibility with a lot many popular SBCs available in the drone ecosystem. Once you have installed the latest FlytOS Linux Image, you **MUST update your FlytOS** by following the steps below:
 
 1. `Login <http://my.flytbase.com>`_ to your FlytBase Account.
 2. Download the hardware specific `FlytOS Debian Package <http://my.flytbase.com/FlytOS>`_ from your FlytBase Account.
