@@ -18,8 +18,7 @@ FlytBase Account allows you to activate your FlytOS by registering your Flight C
 Preparing your Flight Computer
 ------------------------------
 
-
-FlytOS requires a lot of dependencies to be installed. For this, we have provided the following two approaches:
+FlytOS is compatible with :ref:`FlytPOD<about_flytpod>`, :ref:`FlytPOD PRO<about_flytpodpro>`, `ODROID-XU4 <http://www.hardkernel.com/main/products/prdt_info.php?g_code=G143452239825>`_, `Raspberry Pi 3 <https://www.raspberrypi.org/products/raspberry-pi-3-model-b>`_ and `NVIDIA Jetson TX1 <https://developer.nvidia.com/embedded-computing>`_. We would soon introduce compatibility with a lot many popular SBCs available in the drone ecosystem. FlytOS requires a lot of dependencies to be installed. For this, we have provided the following two approaches:
 
 * :ref:`Flashing FlytOS Linux Image <FlytOS_linux_image>`
 * :ref:`Installing FlytOS dependencies in your custom image<install_dependencies>`
@@ -33,7 +32,7 @@ FlytOS requires a lot of dependencies to be installed. For this, we have provide
 Flashing FlytOS Linux Image
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-This section will help you in flashing FlytOS Linux Image on any SD/eMMC card for your specific board. FlytOS is compatible with :ref:`FlytPOD<about_flytpod>`, :ref:`FlytPOD PRO<about_flytpodpro>`, `ODROID-XU4 <http://www.hardkernel.com/main/products/prdt_info.php?g_code=G143452239825>`_, `Raspberry Pi 3 <https://www.raspberrypi.org/products/raspberry-pi-3-model-b>`_ and `NVIDIA Jetson TX1 <https://developer.nvidia.com/embedded-computing>`_. We would soon introduce compatibility with a lot many popular SBCs available in the drone ecosystem. FlytPOD/PRO comes with FlytOS Linux Image pre-installed on their respective 32GB storage devices. Follow this step ONLY if you want to re-flash your FlytPOD/PRO device.
+This section will help you in flashing FlytOS Linux Image on any SD/eMMC card for your specific board. FlytPOD/PRO comes with FlytOS Linux Image pre-installed on their respective 32GB storage devices. Follow this step ONLY if you want to re-flash your FlytPOD/PRO device.
 
 This step requires you to have a registered FlytBase account. In case you don't have an account, :ref:`create a FlytBase Account<create_flytbase_account>` before you proceed.
 
