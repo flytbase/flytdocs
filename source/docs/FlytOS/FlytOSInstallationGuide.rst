@@ -56,7 +56,7 @@ This step requires you to have a registered FlytBase account. In case you don't 
    * Mac OS- launch a terminal and execute the following command ``gunzip <path-to-downloaded-image>/flyt*.img.gz``.
 7. Uncompressed size of image is about 8.5GBs.
       
-**Image write to SD/eMMC Card:**
+**Image write to SD/eMMC Card and partition expansion:**
 
 .. 1. We recommend using a 32 GB SD Card, but a 16 GB card would work fine too. 
 .. 2. Format the micro SD Card.
@@ -67,7 +67,10 @@ This step requires you to have a registered FlytBase account. In case you don't 
 
 .. Since the image is only around 8.5 GBs, the rest of the SD Card would have unallocated memory. Follow `this guide <http://elinux.org/RPi_Resize_Flash_Partitions>`_ to expand the partition to the maximum possible size to utilize all memory.
 
-We have created a video tutorial for Linux and Mac OS users, to help flash FlytOS Linux Image on their SD/eMMC cards. Windows users can refer `this guide <http://odroid.com/dokuwiki/doku.php?id=en:odroid_flashing_tools>`_ for writing image and Windows Disk Management Utility to expand the SD/eMMC card.
+We have created a video tutorial for Linux and Mac OS users, to help flash FlytOS Linux Image on their SD/eMMC cards and then expand the partition. Windows users can refer `this guide <http://odroid.com/dokuwiki/doku.php?id=en:odroid_flashing_tools>`_ for writing image and Windows Disk Management Utility to expand the SD/eMMC card.
+
+.. warning:: Since the image is of only around 8.5 GBs, the rest of the SD/eMMC Card would have unallocated memory. DONOT forget to expand SD/eMMC card partition.
+
 
 |br|
 
@@ -75,7 +78,6 @@ We have created a video tutorial for Linux and Mac OS users, to help flash FlytO
     :aspect: 16:9
     :width: 80%
 
-.. warning:: Since the image is of only around 8.5 GBs, the rest of the SD/eMMC Card would have unallocated memory. DONOT forget to expand SD/eMMC card partition.
 
 **User Credentials**
 
