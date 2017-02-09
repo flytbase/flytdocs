@@ -1943,7 +1943,7 @@ Socket
 | SAMPLE                       |                                                                                                                                                                  |
 |                              |       var listenerLocalPosition = new ROSLIB.Topic({                                                                                                             |
 |                              |           ros :ros,                                                                                                                                              |
-|                              |           name : '/<namespace>/mavros/global_position/global',                                                                                                   |
+|                              |           name : '/<namespace>/mavros/local_position/local',                                                                                                     |
 |                              |           messageType : 'geometry_msgs/TwistStamped',                                                                                                            |
 |                              |           throttle_rate: 200                                                                                                                                     |
 |                              |       });                                                                                                                                                        |
@@ -1985,7 +1985,7 @@ Socket
 | SAMPLE                       |                                                                                                                                                                  |
 |                              |       var listenerGlobalPosition = new ROSLIB.Topic({                                                                                                            |
 |                              |           ros :ros,                                                                                                                                              |
-|                              |           name : '/<namespace>/mavros/local_position/local',                                                                                                     |
+|                              |           name : '/<namespace>/mavros/global_position/global',                                                                                                   |
 |                              |           messageType : 'sensor_msgs/NavSatFix',                                                                                                                 |
 |                              |           throttle_rate: 1000                                                                                                                                    |
 |                              |       });                                                                                                                                                        |
