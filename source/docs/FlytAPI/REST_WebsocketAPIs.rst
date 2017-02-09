@@ -2002,7 +2002,7 @@ Socket
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | NOTES                        | | ros: Pointed to the ros object created in the initialization of a web socket connection                                                                        |
 |                              | | name: Requires the name of the topic which gives out the required data.                                                                                        |
-|                              | | messageType: Set the type of predefined data structure used to deliver the required local position data.                                                       |
+|                              | | messageType: Set the type of predefined data structure used to deliver the required GPS data.                                                       |
 |                              | | throttle_rate: Sets the rate at which callbacks are called in miliseconds.                                                                                     |
 |                              | |                                                                                                                                                                |
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
