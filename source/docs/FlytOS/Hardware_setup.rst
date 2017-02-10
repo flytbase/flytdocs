@@ -146,7 +146,7 @@ FlytOS needs telemetry data from autopilot(Pixhawk). Connect Pixhawk’s Telemet
 3. Connect Pixhawk's Telem2 port to the USB port of Edison using UART-USB converter.
 
 
-.. figure:: /_static/Images/Tx1_Connection.png
+.. figure:: /_static/Images/edison_pixhawk.png
 	:align: center 
 	:scale: 80 %
 	
