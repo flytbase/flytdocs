@@ -19,7 +19,7 @@ Welcome to FlytBase, the next generation platform for commercial drone applicati
 This documentation gives all the inputs to get you started with Flyt. You can learn about FlytOS and get a detailed reference for all the FlytAPIs. It provides a step by step guide to install and get started with FlytSim simulation on your laptop. You can refer to the sample apps and start building your own onboard and web/mobile apps and test them with FlytSim.
 
 
-Checkout and participate in our `forums`_ and interact with the community sharing your use cases, feedback and anything you need help with. You can always reach out to us for any issues at support@flytbase.com. 
+Checkout and participate in our `forums`_, `facebook`_ group and  interact with the community sharing your use cases, feedback and anything you need help with. You can always reach out to us for any issues at support@flytbase.com. 
 
 .. _documentation:  
 
@@ -109,6 +109,8 @@ Checkout and participate in our `forums`_ and interact with the community sharin
 .. docs/FirmwareUpdate/Firmware_update_index.rst            
 
 .. _forums: http://forums.flytbase.com
+
+.. _facebook: https://www.facebook.com/groups/flytos/
 
 .. Indices and tables
 .. ==================

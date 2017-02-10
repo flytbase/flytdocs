@@ -149,6 +149,8 @@ This console is accessible from FlytPOD and you can use minicom.
 
 ``sudo minicom -D /dev/ttySAC2 -b 57600``
 
+After this command press enter twice to initialize OpenWRT shell.
+
 .. More about using relayd for client connections on this link https://wiki.openwrt.org/doc/recipes/relayclient
 
 `Click here`_ to know more about using relayd for client connections.
@@ -157,10 +159,10 @@ This console is accessible from FlytPOD and you can use minicom.
 
 **Reset the router**
 
-From serial console:
+Open OpenWRT console as shown above and give following command:
 
 
-firstboot && reboot.
+firstboot && reboot
 
 
 

@@ -81,7 +81,7 @@ FlytAPIs have been extended from ROS to REST and Websocket. This document descri
 Namespace
 ---------
 
-This namespace is a part of the url for all other rest calls and websocket connection. This has to be the first rest call before any other rest call or web socket connection.
+This namespace is a part of the url for all other rest calls and websocket connection. This has to be the **first REST call before any other REST call** or web socket connection.
 
 .. important:: Please make sure replace http with https and remove port in IP and add token in header of the REST call. 
 
@@ -1965,6 +1965,44 @@ Socket
 | NOTES                        | | ros: Pointed to the ros object created in the initialization of a web socket connection                                                                        |
 |                              | | name: Requires the name of the topic which gives out the required data.                                                                                        |
 |                              | | messageType: Set the type of predefined data structure used to deliver the required local position data.                                                       |
+|                              | | throttle_rate: Sets the rate at which callbacks are called in miliseconds.                                                                                     |
+|                              | |                                                                                                                                                                |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+----
+
+GPS data
+^^^^^^^^^
+
+Fetches real time GPS data at required rate. To be done after initialization of websocket.
+
+Socket
+""""""
+
+
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| INITIALISATION               |  .. code-block:: rest                                                                                                                                            |
+| SAMPLE                       |                                                                                                                                                                  |
+|                              |       var listenerGlobalPosition = new ROSLIB.Topic({                                                                                                            |
+|                              |           ros :ros,                                                                                                                                              |
+|                              |           name : '/<namespace>/mavros/global_position/global',                                                                                                   |
+|                              |           messageType : 'sensor_msgs/NavSatFix',                                                                                                                 |
+|                              |           throttle_rate: 1000                                                                                                                                    |
+|                              |       });                                                                                                                                                        |
+|                              |                                                                                                                                                                  |
+|                              |  <namespace>: Name of the flytpod (default: flytpod) which is required for every socket subscription and can be fetched from get namespace rest call.            |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| SUBSCRIPTION                 |  .. code-block:: rest                                                                                                                                            |
+| SAMPLE                       |                                                                                                                                                                  |
+|                              |      listenerGlobalPosition.subscribe(function(message) {                                                                                                        |
+|                              |          console.log(message.latitude);                                                                                                                          |
+|                              |          console.log(message.longitude);                                                                                                                         |
+|                              |      });                                                                                                                                                         |
+|                              |                                                                                                                                                                  |
++------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| NOTES                        | | ros: Pointed to the ros object created in the initialization of a web socket connection                                                                        |
+|                              | | name: Requires the name of the topic which gives out the required data.                                                                                        |
+|                              | | messageType: Set the type of predefined data structure used to deliver the required GPS data.                                                       |
 |                              | | throttle_rate: Sets the rate at which callbacks are called in miliseconds.                                                                                     |
 |                              | |                                                                                                                                                                |
 +------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
