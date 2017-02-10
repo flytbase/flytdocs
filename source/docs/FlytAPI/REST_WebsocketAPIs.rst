@@ -79,14 +79,14 @@ FlytAPIs have been extended from ROS to REST and Websocket. This document descri
 .. _Namespace_REST:
 
 Namespace
-^^^^^^^^^
+---------
 
 This namespace is a part of the url for all other rest calls and websocket connection. This has to be the first rest call before any other rest call or web socket connection.
 
 .. important:: Please make sure replace http with https and remove port in IP and add token in header of the REST call. 
 
 REST
-""""
+^^^^
 
 
 +------------------------------+----------------------------------------------------------------------------------------------------------------------+
@@ -1653,7 +1653,7 @@ Follow Object ON
 ----
 
 Telemetry APIs
----------------
+--------------
 
 Websocket Initializations
 ^^^^^^^^^^^^^^^^^^^^^^^^^
