@@ -127,7 +127,7 @@ We have created a video tutorial for to help flash FlytOS Linux Image on their I
 
 |br|
 
-..  youtube:: jyFvzluXzug
+..  youtube:: LHMF8peY2MY
     :aspect: 16:9
     :width: 80%
 
