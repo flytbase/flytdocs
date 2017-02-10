@@ -18,9 +18,9 @@ FlytBase Account allows you to activate your FlytOS by registering your Flight C
 Preparing your Flight Computer
 ------------------------------
 
-FlytOS is compatible with :ref:`FlytPOD<about_flytpod>`, :ref:`FlytPOD PRO<about_flytpodpro>`, `ODROID-XU4 <http://www.hardkernel.com/main/products/prdt_info.php?g_code=G143452239825>`_, `Raspberry Pi 3 <https://www.raspberrypi.org/products/raspberry-pi-3-model-b>`_ and `NVIDIA Jetson TX1 <https://developer.nvidia.com/embedded-computing>`_. We would soon introduce compatibility with a lot many popular SBCs available in the drone ecosystem. FlytOS requires a lot of dependencies to be installed. For this, we have provided the following two approaches:
+FlytOS is compatible with :ref:`FlytPOD<about_flytpod>`, :ref:`FlytPOD PRO<about_flytpodpro>`, `ODROID-XU4 <http://www.hardkernel.com/main/products/prdt_info.php?g_code=G143452239825>`_, `Raspberry Pi 3 <https://www.raspberrypi.org/products/raspberry-pi-3-model-b>`_, `NVIDIA Jetson TX1 <https://developer.nvidia.com/embedded-computing>`_ and `Intel Edison <https://software.intel.com/en-us/iot/hardware/edison>`_. We would soon introduce compatibility with a lot many popular SBCs available in the drone ecosystem. FlytOS requires a lot of dependencies to be installed. For this, we have provided the following two approaches:
 
-* :ref:`Flashing FlytOS Linux Image <FlytOS_linux_image>`
+* :ref:`Flashing FlytOS Linux Image <FlytOS_linux_image>` [**recommended method for all boards except NVIDIA TX1**]
 * :ref:`Installing FlytOS dependencies in your custom image<install_dependencies>`
 
 .. note:: For installing FlytOS on NVIDIA TX1, please follow only the second approach. 
@@ -37,6 +37,9 @@ This section will help you in flashing FlytOS Linux Image on any SD/eMMC card fo
 This step requires you to have a registered FlytBase account. In case you don't have an account, :ref:`create a FlytBase Account<create_flytbase_account>` before you proceed.
 
 .. note:: FlytOS Linux Image is pre-installed in FlytPOD/PRO. In case you want to re-flash their respective 32GB SD/eMMC card, or create a duplicate 32GB SD/eMMC card follow the steps given below. You can use 16GB SD/eMMC cards as well, but 32GB is preferable.
+
+FlytPOD/FlytPOD PRO/ODROID-XU4/RaspberryPi3
+"""""""""""""""""""""""""""""""""""""""""""
 
 **Image download:**
 
@@ -79,11 +82,65 @@ We have created a video tutorial for Linux and Mac OS users, to help flash FlytO
     :width: 80%
 
 
+|br|
+
 **User Credentials**
 
 All FlytOS Linux Image versions have the same Login user credentials: **username - flytpod & password - flytpod**
 
+.. note:: RaspberryPi3 will boot up with their wifi configured as Access Point. For more details, go to their respective guides :ref:`here<hardware_setup>`.
+
+
+Intel Edison
+""""""""""""
+
+**Image download:**
+
+1. `Login <http://my.flytbase.com>`_ to your FlytBase Account.
+2. Download the hardware specific `FlytOS Linux Image <http://my.flytbase.com/FlytOS>`_ from your FlytBase account.
+3. Download size of the image is about 1.5 GBs.
+4. Check *MD5 Hash* to verify the integrity of downloaded file:
+
+   * Linux- launch a terminal and execute the following command ``md5sum <path-to-downloaded-image>/flyt*.img.gz``.
+   * Windows- launch a command window and execute the following command ``CertUtil -hashfile <path-to-downloaded-image>/flyt*.img.gz MD5``.
+   * Mac OS- launch a terminal and execute the following command ``md5 <path-to-downloaded-image>/flyt*.img.gz``.
+5. Compare the MD5 Hash generated to *MD5 Hash* mentioned in the `download page <http://my.flytbase.com/FlytOS>`_.
+6. Uncompress/extract the downloaded image:
+
+   * Linux- launch a terminal and execute the following command ``gunzip <path-to-downloaded-image>/flyt*.img.gz``.
+   * Windows- download and install 7-zip from `here <http://www.7-zip.org/download.html>`_. Extract downloaded image using 7-zip.
+   * Mac OS- launch a terminal and execute the following command ``gunzip <path-to-downloaded-image>/flyt*.img.gz``.
+7. Uncompressed size of image is about 4GBs.
+      
+**Image flash:**
+
+.. 1. We recommend using a 32 GB SD Card, but a 16 GB card would work fine too. 
+.. 2. Format the micro SD Card.
+.. 3. Follow `this <http://odroid.com/dokuwiki/doku.php?id=en:odroid_flashing_tools>`_ guide to install the image on ODROID-XU4’s SD/eMMC card.
+
+
+.. **Expanding SD Card partition:**
+
+.. Since the image is only around 8.5 GBs, the rest of the SD Card would have unallocated memory. Follow `this guide <http://elinux.org/RPi_Resize_Flash_Partitions>`_ to expand the partition to the maximum possible size to utilize all memory.
+
+We have created a video tutorial for to help flash FlytOS Linux Image on their Intel Edison board. Additionally one can refer Step-2 of `this guide <https://github.com/oskarpearson/mmeowlink/wiki/Backing-up-and-cloning-your-OpenAPS-Edison#step-2-flash-image-onto-edison>`_ for the same.
+
 |br|
+
+..  youtube:: jyFvzluXzug
+    :aspect: 16:9
+    :width: 80%
+
+
+|br|
+
+**User Credentials**
+
+All FlytOS Linux Image versions have the same Login user credentials: **username - flytpod & password - flytpod**
+
+.. note:: Intel Edison will boot up with their wifi configured as Access Point. For more details, go to their respective guides :ref:`here<hardware_setup>`.
+
+
 
 .. _install_dependencies:
 
@@ -120,7 +177,7 @@ This guide assumes you already have a working image for your Flight Computer. We
        export PYTHONPATH=$PYTHONPATH:/flyt/flytapps:/flyt/userapps
        source /flyt/flytos/flytcore/setup.bash
 
-3. If your flight computer is NVIDIA TX1, run the following additional commands in your terminal:
+3. If your flight computer is **NVIDIA TX1**, run the following additional commands in your terminal:
 
    .. code-block:: bash
    
@@ -135,7 +192,7 @@ Installing FlytOS debian package
 
 .. note:: This step requires you to have a registered FlytBase Account. In case you don't have an account, :ref:`create a FlytBase Account<create_flytbase_account>` before you proceed. 
 
-FlytOS is compatible with :ref:`FlytPOD<about_flytpod>`, :ref:`FlytPOD PRO<about_flytpodpro>`, `ODROID-XU4 <http://www.hardkernel.com/main/products/prdt_info.php?g_code=G143452239825>`_, `Raspberry Pi 3 <https://www.raspberrypi.org/products/raspberry-pi-3-model-b>`_ and `NVIDIA Jetson TX1 <https://developer.nvidia.com/embedded-computing>`_. We would soon introduce compatibility with a lot many popular SBCs available in the drone ecosystem. Once you have installed the latest FlytOS Linux Image, you **MUST update your FlytOS** by following the steps below:
+FlytOS is compatible with :ref:`FlytPOD<about_flytpod>`, :ref:`FlytPOD PRO<about_flytpodpro>`, `ODROID-XU4 <http://www.hardkernel.com/main/products/prdt_info.php?g_code=G143452239825>`_, `Raspberry Pi 3 <https://www.raspberrypi.org/products/raspberry-pi-3-model-b>`_ `NVIDIA Jetson TX1 <https://developer.nvidia.com/embedded-computing>`_ and `Intel Edison <https://software.intel.com/en-us/iot/hardware/edison>`_. We would soon introduce compatibility with a lot many popular SBCs available in the drone ecosystem. Once you have installed the latest FlytOS Linux Image, you **MUST update your FlytOS debian package** by following the steps below:
 
 1. `Login <http://my.flytbase.com>`_ to your FlytBase Account.
 2. Download the hardware specific `FlytOS Debian Package <http://my.flytbase.com/FlytOS>`_ from your FlytBase Account.
@@ -143,8 +200,12 @@ FlytOS is compatible with :ref:`FlytPOD<about_flytpod>`, :ref:`FlytPOD PRO<about
    
 .. code-block:: bash
    
+   #For all boards except Intel Edison
    #make sure to provide absolute path of the debian package file: /home/flytpod/flytos_*.deb
    $ sudo apt install -y <path to debian package location>/flytos_*.deb 
+
+   #For Intel Edison
+   $ sudo dpkg -i <path to debian package location>/flytos_*.deb 
 
 4. Check for **Congratulations! FlytOS installation completed** message at the end.
 5. Just in case you see any dependency issues cropping up in your screen while installing FlytOS, kindly run the following command and execute the previous command again:
@@ -204,10 +265,10 @@ FlytOS Basics
 .. 3. User and Request authentication:
 ..    The last point involves, authenticating a user and providing role based access via a login mechanism. It also includes authenticating all the FlytAPIs for which a token based authentication mechanism is used.
 
-**Accessing built-in apps with FlytOS**
+.. **Accessing built-in apps with FlytOS**
 
-1. Open your browser and go to the following link - ``http://<ip-address-of-device>/flytconsole``.
-2. Enter ``flytpod`` in place of IP address in case you are connected to FlytPOD in AP mode- ``http://flytpod/flytconsole``.
+.. 1. Open your browser and go to the following link - ``http://<ip-address-of-device>/flytconsole``.
+.. 2. Enter ``flytpod`` in place of IP address in case you are connected to FlytPOD in AP mode- ``http://flytpod/flytconsole``.
 
 
 .. 3. You will be directed to a page that shows a warning **Connection is not private**. FlytOS contains self signed SSL certificates to enable access over local network.

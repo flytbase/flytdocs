@@ -3,7 +3,7 @@
 Hardware Setup
 ==============
 
-Once you are through with :ref:`Flashing FlytOS Linux Image<FlytOS_linux_image>` and :ref:`FlytOS debian package<installing_flytos>`, you should go ahead with configuring Pixhawk with your Flight Computer.
+Once you are through with :ref:`flashing FlytOS Linux Image<FlytOS_linux_image>` and :ref:`installing FlytOS debian package<installing_flytos>`, you should go ahead with configuring Pixhawk with your Flight Computer.
 
 FlytPOD/PRO
 -----------
@@ -66,15 +66,6 @@ Tech specs
 WiFi Access Point
 """""""""""""""""
 
-.. Connect the power cable to the power plug as shown below:
-
-.. .. figure:: /_static/Images/Rasp3.png
-.. 	:align: center 
-.. 	:scale: 50 %
-	
-.. 	Raspberry Pi 3
-
-
 Insert the SD Card with pre-flashed :ref:`FlytOS Linux Image<FlytOS_linux_image>` in your Raspberry Pi 3 and apply power to boot it. On boot up a WiFi access point is created on the device with following credentials:
 
 ssid:       FlytPOD_wifi
@@ -128,6 +119,47 @@ Configuring Pixhawk Autopilot
 2. Connect Pixhawk to QGC using the USB port at the side of Pixhawk.
 3. Install the latest stable PX4 release in Pixhawk using QGC by following `this <https://donlakeflyer.gitbooks.io/qgroundcontrol-user-guide/content/SetupView/Firmware.html>`_ guide.
 4. Once done, visit `parameter widget in QGC <https://donlakeflyer.gitbooks.io/qgroundcontrol-user-guide/content/SetupView/Parameters.html>`_ and search for parameters SYS_COMPANION and MAV_COMP_ID, set them to 921600 and 50 respectively. This would enable communication between FlytOS running on Nvidia TX1 and Pixhawk.
+
+Intel Edison with Pixhawk
+-------------------------
+
+WiFi Access Point
+"""""""""""""""""
+
+After flashing :ref:`FlytOS Linux Image<FlytOS_linux_image>` in your Intel Edison, WiFi access point is created on the device on system startup with following credentials:
+
+ssid:       edison_wifi
+
+Password:   FlytPOD123
+
+Connect to the access point on another computer. Open the following link in your browser to view :ref:`FlytConsole<about flytconsole>`: http://192.168.42.1/flytconsole
+
+
+
+Telemetry Connection
+""""""""""""""""""""
+
+FlytOS needs telemetry data from autopilot(Pixhawk). Connect Pixhawk’s Telemetry port to Intel Edison. 
+
+1. **[Recommended]** Connect Pixhawk's Telem2 port to Edison's UART port(ttyMFD1) using J18/13(RX) and J19/8(TX) (refer page-7 of `edison hardware guide <http://download.intel.com/support/edison/sb/edisonbreakout_hg_331190006.pdf>`_ for connections). If you are using Pixhawk2.1, this connection is already made available.
+2. Connect Pixhawk's micro-USB to the USB port of Edison.
+3. Connect Pixhawk's Telem2 port to the USB port of Edison using UART-USB converter.
+
+
+.. figure:: /_static/Images/Tx1_Connection.png
+	:align: center 
+	:scale: 80 %
+	
+	Connection between Edison's ttyMFD1 uart port and Pixhawk’s TELEM 2
+
+Configuring Pixhawk Autopilot
+"""""""""""""""""""""""""""""
+
+1. Install `QGC(QGroundControl) <http://qgroundcontrol.com/>`_ in your local machine.
+2. Connect Pixhawk to QGC using the USB port at the side of Pixhawk.
+3. Install the latest stable PX4 release in Pixhawk using QGC by following `this <https://donlakeflyer.gitbooks.io/qgroundcontrol-user-guide/content/SetupView/Firmware.html>`_ guide.
+4. Once done, visit `parameter widget in QGC <https://donlakeflyer.gitbooks.io/qgroundcontrol-user-guide/content/SetupView/Parameters.html>`_ and search for parameters SYS_COMPANION and MAV_COMP_ID, set them to 921600 and 50 respectively. This would enable communication between FlytOS running on Edison and Pixhawk.
+
 
 .. |br| raw:: html
 
