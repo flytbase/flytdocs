@@ -88,7 +88,7 @@ We have created a video tutorial for Linux and Mac OS users, to help flash FlytO
 
 All FlytOS Linux Image versions have the same Login user credentials: **username - flytpod & password - flytpod**
 
-.. note:: RaspberryPi3 will boot up with their wifi configured as Access Point. For more details, go to their respective guides :ref:`here<hardware_setup>`.
+.. note:: RaspberryPi3 will boot up with their wifi configured as Access Point. For more details, check :ref:`here<raspi_wifiap>`.
 
 
 Intel Edison
@@ -138,7 +138,7 @@ We have created a video tutorial for to help flash FlytOS Linux Image on their I
 
 All FlytOS Linux Image versions have the same Login user credentials: **username - flytpod & password - flytpod**
 
-.. note:: Intel Edison will boot up with their wifi configured as Access Point. For more details, go to their respective guides :ref:`here<hardware_setup>`.
+.. note:: Intel Edison will boot up with their wifi configured as Access Point. For more details, check :ref:`here<edison_wifiap>`.
 
 
 

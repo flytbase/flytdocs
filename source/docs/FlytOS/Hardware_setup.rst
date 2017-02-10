@@ -63,6 +63,8 @@ Tech specs
 * Micro SD card slot 
 * VideoCore IV 3D graphics core
 
+.. _raspi_wifiap:
+
 WiFi Access Point
 """""""""""""""""
 
@@ -122,6 +124,8 @@ Configuring Pixhawk Autopilot
 
 Intel Edison
 ------------
+
+.. _edison_wifiap:
 
 WiFi Access Point
 """""""""""""""""
