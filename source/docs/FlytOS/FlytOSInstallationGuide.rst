@@ -18,13 +18,12 @@ FlytBase Account allows you to activate your FlytOS by registering your Flight C
 Preparing your Flight Computer
 ------------------------------
 
-FlytOS is compatible with :ref:`FlytPOD<about_flytpod>`, :ref:`FlytPOD PRO<about_flytpodpro>`, `ODROID-XU4 <http://www.hardkernel.com/main/products/prdt_info.php?g_code=G143452239825>`_, `Raspberry Pi 3 <https://www.raspberrypi.org/products/raspberry-pi-3-model-b>`_, `NVIDIA Jetson TX1 <https://developer.nvidia.com/embedded-computing>`_ and `Intel Edison <https://software.intel.com/en-us/iot/hardware/edison>`_. We would soon introduce compatibility with a lot many popular SBCs available in the drone ecosystem. FlytOS requires a lot of dependencies to be installed. For this, we have provided the following two approaches:
+FlytOS is compatible with :ref:`FlytPOD<about_flytpod>`, :ref:`FlytPOD PRO<about_flytpodpro>`, `ODROID-XU4 <http://www.hardkernel.com/main/products/prdt_info.php?g_code=G143452239825>`_, `Raspberry Pi 3 <https://www.raspberrypi.org/products/raspberry-pi-3-model-b>`_, `NVIDIA Jetson TX1 <https://developer.nvidia.com/embedded-computing>`_ , `Intel Edison <https://software.intel.com/en-us/iot/hardware/edison>`_ and `Intel Aero Compute Board <https://software.intel.com/en-us/aero/dev-kit>`_. We would soon introduce compatibility with a lot many popular SBCs available in the drone ecosystem. FlytOS requires a lot of dependencies to be installed. For this, we have provided the following two approaches:
 
-* :ref:`Flashing FlytOS Linux Image <FlytOS_linux_image>` [**recommended method for all boards except NVIDIA TX1**]
+* :ref:`Flashing FlytOS Linux Image <FlytOS_linux_image>` [**recommended method for all boards except NVIDIA TX1 and Intel Aero**]
 * :ref:`Installing FlytOS dependencies in your custom image<install_dependencies>`
 
-.. note:: For installing FlytOS on NVIDIA TX1, please follow only the second approach. 
-
+.. note:: For installing FlytOS on NVIDIA TX1 and Intel Aero, please follow only the second approach. 
 
 .. _FlytOS_linux_image:
 
@@ -158,6 +157,8 @@ This guide assumes you already have a working image for your Flight Computer. We
    b) `ROS - Kinetic <http://wiki.ros.org/kinetic/Installation/Ubuntu>`_ (install *ros-kinetic-desktop* package)
 
    .. note:: In the case of TX1, visit `this link <http://docs.nvidia.com/jetpack-l4t/2_3/index.html#developertools/mobile/jetpack/l4t/2.3/jetpack_l4t_install.htm>`_ to flash your flight computer with the latest Jetpack. You can refer `this link <http://www.jetsonhacks.com/2016/10/12/robot-operating-system-ros-on-nvidia-jetson-tx1/>`_ for help in installing ros-kinetic-desktop.  
+
+   .. note:: In the case of Intel Aero, please install Ubuntu 16.04 by following :ref:`these instructions <aero_ubuntu>`. FlytOS is not compatible with the official Yocto distribution therefore you will miss out some features of the board. These features will be added in the future as Intel releases additional information
 
    c) `OpenCV 2.4 <http://docs.opencv.org/2.4/doc/tutorials/introduction/linux_install/linux_install.html>`_ (for vision/video streaming APIs).
    d) Other dependencies - To install run the following commands in your terminal.
