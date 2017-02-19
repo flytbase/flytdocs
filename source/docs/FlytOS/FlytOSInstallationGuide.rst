@@ -193,7 +193,7 @@ Installing FlytOS debian package
 
 .. note:: This step requires you to have a registered FlytBase Account. In case you don't have an account, :ref:`create a FlytBase Account<create_flytbase_account>` before you proceed. 
 
-FlytOS is compatible with :ref:`FlytPOD<about_flytpod>`, :ref:`FlytPOD PRO<about_flytpodpro>`, `ODROID-XU4 <http://www.hardkernel.com/main/products/prdt_info.php?g_code=G143452239825>`_, `Raspberry Pi 3 <https://www.raspberrypi.org/products/raspberry-pi-3-model-b>`_ `NVIDIA Jetson TX1 <https://developer.nvidia.com/embedded-computing>`_ and `Intel Edison <https://software.intel.com/en-us/iot/hardware/edison>`_. We would soon introduce compatibility with a lot many popular SBCs available in the drone ecosystem. Once you have installed the latest FlytOS Linux Image, you **MUST update your FlytOS debian package** by following the steps below:
+FlytOS is compatible with :ref:`FlytPOD<about_flytpod>`, :ref:`FlytPOD PRO<about_flytpodpro>`, `ODROID-XU4 <http://www.hardkernel.com/main/products/prdt_info.php?g_code=G143452239825>`_, `Raspberry Pi 3 <https://www.raspberrypi.org/products/raspberry-pi-3-model-b>`_, `NVIDIA Jetson TX1 <https://developer.nvidia.com/embedded-computing>`_ and `Intel Edison <https://software.intel.com/en-us/iot/hardware/edison>`_. We would soon introduce compatibility with a lot many popular SBCs available in the drone ecosystem. Once you have installed the latest FlytOS Linux Image, you **MUST update your FlytOS debian package** by following the steps below:
 
 1. `Login <http://my.flytbase.com>`_ to your FlytBase Account.
 2. Download the hardware specific `FlytOS Debian Package <http://my.flytbase.com/FlytOS>`_ from your FlytBase Account.
