@@ -659,15 +659,15 @@ Python
 
 No Python API is available for execution of onboard scripts.
 
-----
+.. ----
 
 
-.. _Waypoint_Handling_onboard:
+.. .. _Waypoint_Handling_onboard:
 
-**Waypoint Handling**
-^^^^^^^^^^^^^^^^^^^^^
+.. **Waypoint Handling**
+.. ^^^^^^^^^^^^^^^^^^^^^
 
-For waypoint handling following FlytAPIs have been made available.
+.. For waypoint handling following FlytAPIs have been made available.
 
 
 .. ROS
