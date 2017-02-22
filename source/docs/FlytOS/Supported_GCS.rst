@@ -32,12 +32,10 @@ QGC
 
 `QGroundControl <http://qgroundcontrol.com>`_ also supports FlytOS. Follow the steps given below to get started with QGCS:
 
-1. Connect your personal computer to the same WiFi network your flight computer is connected to.
-2. `Download <http://qgroundcontrol.com/downloads/>`_ and Install QGC.
-3. Once installed launch the QGC app.
-4. QGC automatically connects to the default UDP link that is listening to port 14550.
-5. You can go through the `User’s Guide <http://qgroundcontrol.org/users/start>`_ to learn more about QGC.
-
-
-
+1. `Download <http://qgroundcontrol.com/downloads/>`_ and Install QGC.
+2. Once installed launch the QGC app.
+3. Connect your personal computer to the same WiFi network your flight computer is connected to.
+4. Create a new *TCP Comm Link* in QGC, with *Host Address* as IP Address of your flight computer and *TCP Port* as 5760.
+5. Once done, press the button connect and QGC will now connect to FlytOS.
+6. You can go through the `User’s Guide <http://qgroundcontrol.org/users/start>`_ to learn more about QGC.
 

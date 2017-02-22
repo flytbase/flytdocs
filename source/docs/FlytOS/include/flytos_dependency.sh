@@ -1,4 +1,4 @@
-#!/bin/bash 
+#!/bin/bash -e
 # install dependency script for FlytOS
 
 #installing known python dependencies
