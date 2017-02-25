@@ -595,7 +595,7 @@ CPP
 
 .. cpp:function:: int Navigation::position_hold()
 
-   :return: returns 1 if the command is successfully sent to the vehicle
+   :return: returns 0 if the command is successfully sent to the vehicle
 
 *Usage:*
 
@@ -611,7 +611,7 @@ Python
  
 .. py:function:: navigation.position_hold(self)
     
-   :return: returns 1 if the command is successfully sent to the vehicle
+   :return: returns 0 if the command is successfully sent to the vehicle
 
 *Usage:*
 
