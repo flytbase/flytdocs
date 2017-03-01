@@ -1,3 +1,6 @@
+.. _rpi_guide:
+
+
 FlytOS Installation guide for Raspberry Pi 3
 ============================================
 

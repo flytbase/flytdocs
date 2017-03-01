@@ -1,3 +1,6 @@
+.. _odroid_guide:
+
+
 FlytOS Installation guide for ODROID-XU4
 =========================================
 

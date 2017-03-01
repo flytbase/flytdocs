@@ -1,3 +1,6 @@
+.. _tx1_guide:
+
+
 FlytOS Installation guide for Nvidia TX1
 ========================================
 

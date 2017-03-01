@@ -1,3 +1,6 @@
+.. _edison_guide:
+
+
 FlytOS Installation guide for Intel Edison
 ==========================================
 

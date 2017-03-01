@@ -1,3 +1,6 @@
+.. _aero_guide:
+
+
 FlytOS Installation guide for Intel Aero Compute Board
 ======================================================
 

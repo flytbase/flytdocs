@@ -1,3 +1,6 @@
+.. _flytpod_guide:
+
+
 FlytOS Installation guide for FlytPOD/PRO
 =========================================
 
