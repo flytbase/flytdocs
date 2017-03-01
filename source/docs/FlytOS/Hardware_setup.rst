@@ -5,10 +5,14 @@ Hardware Setup
 
 Once you are through with :ref:`flashing FlytOS Linux Image<FlytOS_linux_image>` and :ref:`installing FlytOS debian package<installing_flytos>`, you should go ahead with configuring Pixhawk with your Flight Computer.
 
+.. _hardware_setup_flytpod:
+
 FlytPOD/PRO
 -----------
 
 FlytPOD comes in two variants - FlytPOD and FlytPOD PRO. Both of them have an inbuilt autopilot and you shall not have to go through this guide. See the detailed steps for getting started with FlytPOD/PRO :ref:`here<about_flytpod_pro>`.
+
+.. _hardware_setup_odroid:
 
 ODROID-XU4
 ----------
@@ -41,6 +45,8 @@ Configuring Pixhawk Autopilot
 3. Install the latest stable PX4 release in Pixhawk using QGC by following `this <https://donlakeflyer.gitbooks.io/qgroundcontrol-user-guide/content/SetupView/Firmware.html>`_ guide.
 4. Once done, visit `parameter widget in QGC <https://donlakeflyer.gitbooks.io/qgroundcontrol-user-guide/content/SetupView/Parameters.html>`_ and search for parameters SYS_COMPANION and MAV_COMP_ID, set them to 921600 and 50 respectively. This would enable communication between FlytOS running on ODROID-XU4 and Pixhawk.
 
+
+.. _hardware_setup_rpi:
 
 Raspberry PI 3
 --------------
@@ -100,6 +106,8 @@ Configuring Pixhawk Autopilot
 3. Install the latest stable PX4 release in Pixhawk using QGC by following `this <https://donlakeflyer.gitbooks.io/qgroundcontrol-user-guide/content/SetupView/Firmware.html>`_ guide.
 4. Once done, visit `parameter widget in QGC <https://donlakeflyer.gitbooks.io/qgroundcontrol-user-guide/content/SetupView/Parameters.html>`_ and search for parameters SYS_COMPANION and MAV_COMP_ID, set them to 921600 and 50 respectively. This would enable communication between FlytOS running on Raspberry Pi 3 and Pixhawk.
 
+.. _hardware_setup_tx1:
+
 Nvidia Jetson TX1
 -----------------
 
@@ -121,6 +129,8 @@ Configuring Pixhawk Autopilot
 2. Connect Pixhawk to QGC using the USB port at the side of Pixhawk.
 3. Install the latest stable PX4 release in Pixhawk using QGC by following `this <https://donlakeflyer.gitbooks.io/qgroundcontrol-user-guide/content/SetupView/Firmware.html>`_ guide.
 4. Once done, visit `parameter widget in QGC <https://donlakeflyer.gitbooks.io/qgroundcontrol-user-guide/content/SetupView/Parameters.html>`_ and search for parameters SYS_COMPANION and MAV_COMP_ID, set them to 921600 and 50 respectively. This would enable communication between FlytOS running on Nvidia TX1 and Pixhawk.
+
+.. _hardware_setup_edison:
 
 Intel Edison
 ------------
@@ -164,6 +174,7 @@ Configuring Pixhawk Autopilot
 3. Install the latest stable PX4 release in Pixhawk using QGC by following `this <https://donlakeflyer.gitbooks.io/qgroundcontrol-user-guide/content/SetupView/Firmware.html>`_ guide.
 4. Once done, visit `parameter widget in QGC <https://donlakeflyer.gitbooks.io/qgroundcontrol-user-guide/content/SetupView/Parameters.html>`_ and search for parameters SYS_COMPANION and MAV_COMP_ID, set them to 921600 and 50 respectively. This would enable communication between FlytOS running on Edison and Pixhawk.
 
+.. _hardware_setup_aero:
 
 Intel Aero
 ----------
