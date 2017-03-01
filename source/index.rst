@@ -99,7 +99,7 @@ Checkout and participate in our `forums`_, `facebook`_ group and  interact with 
    :caption: Miscellaneous
 
    docs/Misc/Networking_Setup.rst
-   docs/Misc/Guide.rst
+
    
 .. docs/GettingStarted/Getting_started_index.rst
 .. docs/FlytInternals/Flyt_internals_index.rst
