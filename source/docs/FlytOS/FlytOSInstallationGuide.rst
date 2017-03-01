@@ -13,19 +13,19 @@ FlytBase Account allows you to activate your FlytOS by registering your Flight C
 3. Login using your registered email ID and password.
 
 
-.. _Hardware specific Installation Guide:
+.. _Hardware Specific Installation Guide:
 
-Hardware specific installation guide
+Hardware Specific Installation Guide
 -------------------------------------
 
-FlytOS is compatible with :ref:`FlytPOD<about_flytpod>`, :ref:`FlytPOD PRO<about_flytpodpro>`, `ODROID-XU4 <http://www.hardkernel.com/main/products/prdt_info.php?g_code=G143452239825>`_, `Raspberry Pi 3 <https://www.raspberrypi.org/products/raspberry-pi-3-model-b>`_, `NVIDIA Jetson TX1 <https://developer.nvidia.com/embedded-computing>`_ , `Intel Edison <https://software.intel.com/en-us/iot/hardware/edison>`_ and `Intel Aero Compute Board <https://software.intel.com/en-us/aero/dev-kit>`_. We would soon introduce compatibility with a lot many popular SBCs available in the drone ecosystem. Click the link appropriate to your flight computer for a tutorial on intaling FlytOS:
+FlytOS is compatible with :ref:`FlytPOD<about_flytpod>`, :ref:`FlytPOD PRO<about_flytpodpro>`, `ODROID-XU4 <http://www.hardkernel.com/main/products/prdt_info.php?g_code=G143452239825>`_, `Raspberry Pi 3 <https://www.raspberrypi.org/products/raspberry-pi-3-model-b>`_, `NVIDIA Jetson TX1 <https://developer.nvidia.com/embedded-computing>`_ , `Intel Edison <https://software.intel.com/en-us/iot/hardware/edison>`_ and `Intel Aero Compute Board <https://software.intel.com/en-us/aero/dev-kit>`_. We would soon introduce compatibility with a lot many popular SBCs available in the drone ecosystem. Click the link appropriate to your flight computer for a tutorial on installing FlytOS:
 
-* :ref:`FlytOS Installation guide for FlytPOD/PRO<flytpod_guide>`
-* :ref:`FlytOS Installation guide for Odroid XU-4<odroid_guide>`
-* :ref:`FlytOS Installation guide for Raspberry Pi 3<rpi_guide>`
-* :ref:`FlytOS Installation guide for Nvidia TX1<tx1_guide>`  
-* :ref:`FlytOS Installation guide for Intel Edison<edison_guide>`
-* :ref:`FlytOS Installation guide for Intel Aero Compute Board<aero_guide>`
+* :ref:`FlytPOD/PRO<flytpod_guide>`
+* :ref:`Odroid XU-4<odroid_guide>`
+* :ref:`Raspberry Pi 3<rpi_guide>`
+* :ref:`Nvidia TX1<tx1_guide>`  
+* :ref:`Intel Edison<edison_guide>`
+* :ref:`Intel Aero Compute Board<aero_guide>`
 
 
 .. toctree::
