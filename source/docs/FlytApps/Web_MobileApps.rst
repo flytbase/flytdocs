@@ -10,11 +10,7 @@ Introduction
 This document deals with the instructions and step by step guide for creating Web and Mobile apps for your Drone. The Web apps can be developed using HTML, CSS and JS, however in the case of Mobile apps there are two ways of doing so. The conventional way is to build a mobile app in JAVA using IDEs such as Eclipse or Android Studio. The other way of going about creating mobile apps is to reuse the Web app code i.e a simple HTML, CSS and JS project and convert that into a mobile app using frameworks such as Cordova and Phonegap. This allows for sharing the same codebase for creating cross-platform mobile apps.
 
 
-Here we will delve into the second approach: developing a web app with HTML, CSS, JS/Jquery and Cordova engine. These apps will allow you to remotely monitor and command your drone. You will also see how to get custom data from the Drone on your app.
-  
-
-The IDE that we have selected for this project is IntelliJ Idea. The GUI and the client side coding is done in HTML, CSS and JS/Jquery
-then reusing the code to create mobile apps using Ionic as the front end framework for both Web and Mobile apps.
+Here in the second approach we develop an android app with HTML, CSS, JS/Jquery using Cordova engine. These apps will allow you to remotely monitor and command your drone. You will also see how to get custom data from the Drone on your app. The IDE that we have selected for this approach is IntelliJ Idea. The GUI and the client side coding is done in HTML, CSS and JS/Jquery, reused code from Web Apps to create Mobile Apps.
 
 
 .. figure:: /_static/Images/Web_mobile_blockdiagram.png
@@ -34,7 +30,7 @@ then reusing the code to create mobile apps using Ionic as the front end framewo
 Front end Framework
 ^^^^^^^^^^^^^^^^^^^
 
-Ionic is free, open source and offers a library of mobile optimized HTML, CSS and JS components, reusable and customizable UI elements and other tools for building highly interactive mobile apps.We will be using Ionic for the front end development of Web apps since we will be converting these Web apps into Mobile apps later in this tutorial. Ionic uses Cordova engine which is a mobile development framework that uses web technologies for cross platform app development. You can refer to Ionic `getting started`_ guide for further instructions and to make yourself familiarized with the Ionic framework. For details about Cordova, you can look at their documentation `here`_.
+Ionic is free, open source and offers a library of mobile optimized HTML, CSS and JS components, reusable and customizable UI elements and other tools for building highly interactive mobile apps. We will be using Ionic for the front end development of Mobile apps. Ionic uses Cordova engine which is a mobile development framework that uses web technologies for cross platform app development. You can refer to Ionic `getting started`_ guide for further instructions and to make yourself familiarized with the Ionic framework. For details about Cordova, you can look at their documentation `here`_.
 
 
 .. note:: There are many other Web and Mobile app front end frameworks available. You can use any framework that you are comfortable with. The UI of an app may have to be designed separately for web and mobile for platform specific optimizations.
