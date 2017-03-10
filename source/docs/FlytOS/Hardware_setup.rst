@@ -83,7 +83,7 @@ Connect to the access point on another computer. Open the following link in your
 
 * If you installed FlytOS on a custom image, then you can create your own access point.
 
-.. note:: If you want to want to have internet access on your Raspberry Pi (for activation, loading maps, auto updates, etc), you can delete the access point and connect RPi's wifi to you home router that has internet access. More advanced users can follow :ref:`this networking setup guide<networking_setup>`
+.. note:: To access internet on your Raspberry Pi (for activation, loading maps, auto updates, etc), you can delete the access point and connect RPi's wifi to you home router that has internet access. Beginners can see `this tutorial <https://cdn-learn.adafruit.com/downloads/pdf/adafruits-raspberry-pi-lesson-3-network-setup.pdf>`_  to learn about networking on Raspberry Pi. More advanced users can follow :ref:`this networking setup guide<networking_setup>`. 
 
 :ref:`Go back to Raspberry Pi Guide. <activate_flytos_rpi>`
 
