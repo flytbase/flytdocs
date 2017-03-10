@@ -9,7 +9,7 @@ Automatic Over-the-air Updates
 .. caution:: You must :ref:`activate your device<activate_flytos>`, without which auto-updates would not work.
 
 * Apart from the option of manually downloading and installing the latest FlytOS debian, FlytOS has a built in auto-update functionality. 
-* Whenever a flight computer with FlyOS installed on it has internet access at boot, it checks for possible updates and downloads them.
+* Whenever a flight computer with FlytOS installed on it has internet access at boot, it checks for possible updates and downloads them.
 * Once the download is complete, the updates are installed upon the next reboot of your device.
 * In case of FlytPOD/PRO, during automatic installation, the USER-LED-1 starts fast blinking red indicating that the FlytOS is being installed. You can also check the startup log for updates/installation related debug messages.
 
