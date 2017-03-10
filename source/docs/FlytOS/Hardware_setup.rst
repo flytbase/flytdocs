@@ -71,17 +71,23 @@ Tech specs
 
 .. _raspi_wifiap:
 
-WiFi Access Point
-"""""""""""""""""
+WiFi Setup
+""""""""""
 
-Insert the SD Card with pre-flashed :ref:`FlytOS Linux Image<FlytOS_linux_image>` in your Raspberry Pi 3 and apply power to boot it. On boot up a WiFi access point is created on the device with following credentials:
-
+* Insert the SD Card in your Raspberry Pi 3 after flashing :ref:`FlytOS Linux image<flashing_img_rpi>` on it and apply power to boot it. On boot up a WiFi access point is created on the device with following credentials:
 ssid:       FlytPOD_wifi
 
 Password:   FlytPOD123
 
 Connect to the access point on another computer. Open the following link in your browser to view :ref:`FlytConsole<about flytconsole>`: http://10.42.0.1/flytconsole
 
+* If you installed FlytOS on a custom image, then you can create your own access point.
+
+.. note:: If you want to want to have internet access on your Raspberry Pi (for activation, loading maps, auto updates, etc), you can delete the access point and connect RPi's wifi to you home router that has internet access. More advanced users can follow :ref:`this networking setup guide<networking_setup>`
+
+:ref:`Go back to Raspberry Pi Guide. <activate_flytos_rpi>`
+
+.. _raspi_telem:
 
 Telemetry Connection
 """"""""""""""""""""
@@ -105,6 +111,8 @@ Configuring Pixhawk Autopilot
 2. Connect Pixhawk to QGC using the USB port at the side of Pixhawk.
 3. Install the latest stable PX4 release in Pixhawk using QGC by following `this <https://donlakeflyer.gitbooks.io/qgroundcontrol-user-guide/content/SetupView/Firmware.html>`_ guide.
 4. Once done, visit `parameter widget in QGC <https://donlakeflyer.gitbooks.io/qgroundcontrol-user-guide/content/SetupView/Parameters.html>`_ and search for parameters SYS_COMPANION and MAV_COMP_ID, set them to 921600 and 50 respectively. This would enable communication between FlytOS running on Raspberry Pi 3 and Pixhawk.
+
+:ref:`Go back to Raspberry Pi Guide. <hardware_rpi_guide>`
 
 .. _hardware_setup_tx1:
 
