@@ -13,7 +13,7 @@ Installing FlytOS dependencies
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. caution:: Intel Aero Compute board currently supports only the Yocto Linux distribution. Since FlytOS is only supported on Ubuntu/Debian based Linux distros, you will have to re-flash the operating system. This may void your Aero Board's warranty so we recommend users to use  their discretion while installing FlytOS on the board. Flytbase does not take any responsibility and is free from any liability caused by following these instructions to install Ubuntu on Intel Aero Board.
 
-1. List of FlytOS dependencies to be installed in your Flight Computer:
+1. List of FlytOS dependencies to be installed on your Aero Board:
 
    a) Linux - Ubuntu 16.04. First create an Ubuntu 16.04 bootable USB drive by following `these instructions <https://www.ubuntu.com/download/desktop/create-a-usb-stick-on-ubuntu>`_ . Connect the USB drive to the Aero Board using a micro USB OTG cable. You may also want to use a USB hub to attach a keyboard and mouse to the Board. Then power up the Aero board and press escape while it boots up to enter the BIOS menu. Select the option to boot from your USB drive. Then follow `these instructions <https://www.ubuntu.com/download/desktop/install-ubuntu-desktop>`_ to install Ubuntu on the board. 
    
@@ -45,8 +45,17 @@ Installing FlytOS debian package
 
 Next, you **MUST update your FlytOS debian package** by following the steps below:
 
-1. `Login <http://my.flytbase.com>`_ to your FlytBase Account.
-2. Download the hardware specific `FlytOS Debian Package <http://my.flytbase.com/FlytOS>`_ from your FlytBase Account.
+1. |my_flytbase_link| to your FlytBase Account.
+
+.. |my_flytbase_link| raw:: html
+
+   <a href="http://my.flytbase.com" target="_blank">Login</a>
+
+.. |flytos_dl_link| raw:: html
+
+   <a href="http://my.flytbase.com/FlytOS" target="_blank">FlytOS Debian Package</a>
+
+2. Download the hardware specific |flytos_dl_link| from your FlytBase Account.
 3. Verify that the dependencies are installed. To install run the following commands in your terminal.
 
    .. literalinclude:: include/flytos_dependency.sh
@@ -59,8 +68,8 @@ Next, you **MUST update your FlytOS debian package** by following the steps belo
    #make sure to provide absolute path of the debian package file: /home/flytpod/flytos_*.deb
    $ sudo apt install -y <path to debian package location>/flytos_*.deb 
 
-4. Check for **Congratulations! FlytOS installation completed** message at the end.
-5. Just in case you see any dependency issues cropping up in your screen while installing FlytOS, kindly run the following command and execute the previous command again:
+5. Check for **Congratulations! FlytOS installation completed** message at the end.
+6. Just in case you see any dependency issues cropping up in your screen while installing FlytOS, kindly run the following command and execute the previous command again:
    
 .. code-block:: bash
    
@@ -69,41 +78,6 @@ Next, you **MUST update your FlytOS debian package** by following the steps belo
 .. caution:: You must :ref:`activate your device<activate_flytos_aero>`, without which critical APIs would not function.
 
 
-.. _flytos_basics_aero:
-
-
-FlytOS Basics
--------------
-
-**Start/Stop FlytOS on boot**
-
-1. If you are using FlytOS Linux image, FlytOS starts automatically on bootup.
-2. On bootup FlytOS will also check for any updates. Available updates will be downloaded and installed automatically.
-3. You can find more information on FlytOS automatic updates :ref:`here<flytos_updates>`.
-
-**Start/Stop FlytOS from command line**
-
-1. Launch FlytOS
-       
-   Once you have installed FlytOS, you are ready to build your own apps. If you have flashed FlytOS Linux Image, FlytOS would be launched automatically at every system bootup.
-
-   To launch FlytOS, open a **new** terminal and run this command.
-
-   .. code-block:: bash
-       
-       $ sudo $(rospack find core_api)/scripts/launch_flytOS.sh
-
-   .. important:: If you get this error: ``Error: package 'core_api' not found``, source your /etc/bash.bashrc file.
-	
-
-2. Kill FlytOS
-       
-   To kill this instance of FlytOS, run this command in your terminal. 
-
-   .. code-block:: bash
-       
-      $ sudo $(rospack find core_api)/scripts/stop_flytOS.sh    
-       
 
 .. **Security and Authentication**
 
@@ -163,8 +137,8 @@ Activate FlytOS
 
 You have to activate installed FlytOS, without which critical APIs would not function.
 
-1. Make sure your Flight Computer has internet access before proceeding.
-2. :ref:`Launch FlytConsole <FlytConsole_launch>` and click on **Activate Now tag** under **License tab** at bottom right corner. A popup will appear which will direct you to the device registration page. If you are not logged in, enter your FlytBase Account credentials to log in.
+1. Make sure your Aero Board has internet access before proceeding.
+2. :ref:`Launch FlytConsole <FlytConsole_launch>`. You can launch FlytConsole in your Aero's browser using the URL ``http://localhost/flytconsole`` or on your PC's browser using the URL ``http://ip-address-of-device/flytconsole`` . In FlytConsole click on **Activate Now tag** under **License tab** at bottom right corner. A pop-up will appear which will direct you to the device registration page. If you are not logged in, enter your FlytBase Account credentials to log in.
 3. Choose a device nick-name and select your compute engine. 
 4. In the drop down for license, select existing license if available or select ‘Issue a new license’. You can also provide a nick-name for your license.  
 5. Click on Save Changes to register device and generate a license key.
@@ -174,6 +148,18 @@ Hardware Setup
 --------------
 
 Visit :ref:`this link <hardware_setup_aero>` for details regarding hardware setup.
+
+
+Getting started with FlytOS
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+* After completing the above steps, you can now attach various components of you drone to the pixhawk like ESCs, GPS, Radio and other payloads. 
+* Calibrate the drone's sensors, RC and ESCs in FlytConsole by following the instructions given on the :ref:`FlytConsole page<Motor_config>`.
+* You are now ready to try some sample FlytOS apps on your drone. A good starting point for beginners is the |github_link|. More documentation can be found in :ref:`Sample Apps section<onboard app>`. Please note, in order to run any onboard app in FlytOS, make sure that your drone is in Offboard/API mode.
+
+.. |github_link| raw:: html
+
+   <a href="https://github.com/flytbase/flytsamples/tree/master/AndroidApps/HTML-JS-Apps/Joystick" target="_blank">Joystick app (Github Link)</a>
 
 .. |br| raw:: html
 
