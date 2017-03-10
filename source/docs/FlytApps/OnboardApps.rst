@@ -318,7 +318,7 @@ and copy this script to mentioned location::
 	$ sudo cp <my_first_python_app>.py /flyt/flytapps/onboard/install/
 
 
-.. _github link: https://github.com/navstik/flytsamples
+.. _github link: https://github.com/flytbase/flytsamples
 
 
 .. |br| raw:: html
