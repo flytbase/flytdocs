@@ -29,7 +29,7 @@ FlytOS needs telemetry data from autopilot(Pixhawk). Connect Pixhawk’s Telemet
 
 .. FlytConsole comes pre-packaged in FlytOS (a web-based drone configuration utility). To enable access to vehicle, WiFi-dongle must be installed onboard the ODROID-XU4.
 
-Below is a hardware setup youtube video for Pixhawk + ODROID-XU4 covering all the necessary information.
+Below is a hardware setup youtube video for Pixhawk + ODROID-XU4 covering all the necessary information, including WiFi-enabling the ODROID.
 
 |br|
 

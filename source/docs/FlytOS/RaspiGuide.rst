@@ -71,7 +71,7 @@ To install FlytOS on Raspberry Pi 3, there are 2 ways that you can follow. We re
 .. _activate_flytos_rpi:
 
 Activate FlytOS
----------------
+^^^^^^^^^^^^^^^
 
 .. note:: This step requires you to have a registered FlytBase Account. In case you don't have an account, :ref:`create a FlytBase Account<create_flytbase_account>` before you proceed.
 
@@ -88,12 +88,12 @@ You have to activate installed FlytOS, without which critical APIs would not fun
 .. _hardware_rpi_guide:
 
 Hardware Setup
---------------
+^^^^^^^^^^^^^^
 
 Visit :ref:`this link <raspi_telem>` for instructions on connecting a Pixhawk to your Raspberry Pi.
 
 Getting started with FlytOS
----------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 * After completing the above steps, you can now attach various components of you drone to the pixhawk like ESCs, GPS, Radio and other payloads. 
 * Calibrate the drone's sensors, RC and ESCs in FlytConsole by following the instructions given on the :ref:`FlytConsole page<Motor_config>`.
