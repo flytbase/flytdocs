@@ -333,8 +333,8 @@ RC Mode Settings
 Map the RC mode switch to a three way switch channel and manual override to a two way switch channel and set their thresholds.
 	
 	
-.. important:: * Flyt can be used without RC, but we recommend having an emergency RC pilot ready in case something goes wrong.
-					* You need a minimum six channel radio to use with Flyt.
+.. important:: * FlytOS can be used without RC, but we recommend having an emergency RC pilot ready in case something goes wrong.
+					* You need a minimum six channel radio to use with FlytOS.
 					* Four channels for roll, pitch, yaw and throttle.
 					* A three way switch for testing with RC modes.
 					* A two way switch for Manual override.
