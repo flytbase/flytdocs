@@ -1,4 +1,4 @@
-.. _install_dependencies_flytpod:
+.. _odroid_guide:
 
 
 FlytOS Installation guide for ODROID-XU4
@@ -77,7 +77,7 @@ Activate FlytOS
 You have to activate installed FlytOS, without which critical APIs would not function.
 
 1. Make sure your FlytPOD has internet access before proceeding. WiFi enable your router by referring the video in :ref:`this guide <hardware_setup_odroid>`. The connect the WiFi to your home's WiFi router which has internet access.
-2. :ref:`Launch FlytConsole <FlytConsole_launch>`. You can launch FlytConsole in the RPi's browser using the URL ``http://localhost/flytconsole`` or on your PC's browser using the URL ``http://ip-address-of-device/flytconsole`` . In FlytConsole click on **Activate Now tag** under **License tab** at bottom right corner. A pop-up will appear which will direct you to the device registration page. If you are not logged in, enter your FlytBase Account credentials to log in. 
+2. :ref:`Launch FlytConsole <FlytConsole_launch>`. You can launch FlytConsole in the ODROID's browser using the URL ``http://localhost/flytconsole`` or on your PC's browser using the URL ``http://ip-address-of-device/flytconsole`` . In FlytConsole click on **Activate Now tag** under **License tab** at bottom right corner. A pop-up will appear which will direct you to the device registration page. If you are not logged in, enter your FlytBase Account credentials to log in. 
 3. Choose a device nick-name and select your compute engine. 
 4. In the drop down for license, select existing license if available or select ‘Issue a new license’. You can also provide a nick-name for your license.  
 5. Click on Save Changes to register device and generate a license key.

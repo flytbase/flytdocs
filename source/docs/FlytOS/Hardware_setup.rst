@@ -119,6 +119,12 @@ Configuring Pixhawk Autopilot
 Nvidia Jetson TX1
 -----------------
 
+WiFi Setup
+""""""""""
+
+*  To access internet on your TX1 (for activation, loading maps, auto updates, etc), you can connect the WiFi on TX1 to your home's WiFi router that has access to internet.
+*  If you want to create a WiFi hotspot on the TX1, follow the steps given in `this post.<https://devtalk.nvidia.com/default/topic/910608/jetson-tx1/setting-up-wifi-access-point-on-tx1/post/4893879/#4893879>`_
+
 Telemetry Connection
 """"""""""""""""""""
 

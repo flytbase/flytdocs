@@ -1,4 +1,4 @@
-.. _install_dependencies_flytpod:
+.. _install_dependencies_odroid:
 
 Installing FlytOS dependencies in your custom image (Odroid-XU4)
 =================================================================
