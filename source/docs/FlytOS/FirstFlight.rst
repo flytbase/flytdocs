@@ -11,7 +11,7 @@ First Flight
    :caption: First Flight
   
    ../FlytOS/AutopilotConf.rst
-   ../FlytOS/BasicFlight.rst
    ../FlytOS/Essentials.rst
    ../FlytOS/Safety.rst
+   ../FlytOS/BasicFlight.rst
    ../FlytOS/TestFlytOS.rst
