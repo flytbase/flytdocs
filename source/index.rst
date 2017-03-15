@@ -28,13 +28,15 @@ Checkout and participate in our `forums`_, `facebook`_ group and  interact with 
    :hidden:
    :caption: FlytOS
 	
-   .. docs/FlytOS/FlytOS.rst
-   docs/FlytOS/SignUp.rst
-   docs/FlytOS/FlytOSInstallationGuide.rst
-   docs/FlytOS/Supported_GCS.rst
-   docs/FlytOS/FirstFlight.rst
-   docs/FlytOS/BuiltinApps.rst
-   docs/FlytOS/FlytOSUpdate.rst
+   docs/GettingStarted.rst
+   docs/Developer.rst
+   docs/Troubleshooting.rst
+   .. docs/FlytOS/SignUp.rst
+   .. docs/FlytOS/FlytOSInstallationGuide.rst
+   .. docs/FlytOS/Supported_GCS.rst
+   .. docs/FlytOS/FirstFlight.rst
+   .. docs/FlytOS/BuiltinApps.rst
+   .. docs/FlytOS/FlytOSUpdate.rst
 
 .. toctree::
     :maxdepth: 2
