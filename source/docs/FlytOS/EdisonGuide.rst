@@ -1,8 +1,8 @@
 .. _edison_guide:
 
 
-FlytOS Installation guide for Intel Edison
-==========================================
+Intel Edison
+============
 
 ..  FlytOS requires a lot of dependencies to be installed. For this, we have provided the following two approaches:
 
@@ -14,8 +14,8 @@ FlytOS Installation guide for Intel Edison
 
 .. _FlytOS_linux_image_edison:
 
-Flashing FlytOS Linux Image
----------------------------
+Flashing FlytOS Image
+^^^^^^^^^^^^^^^^^^^^^
 
 This section will help you in flashing FlytOS Linux Image on your Intel Edison Board.
 This step requires you to have a registered FlytBase account. In case you don't have an account, :ref:`create a FlytBase Account<create_flytbase_account>` before you proceed.
@@ -176,7 +176,7 @@ All FlytOS Linux Image versions have the same Login user credentials: **username
 .. _activate_flytos_edison:
 
 Activate FlytOS
----------------
+^^^^^^^^^^^^^^^
 
 .. note:: This step requires you to have a registered FlytBase Account. In case you don't have an account, :ref:`create a FlytBase Account<create_flytbase_account>` before you proceed.
 
@@ -191,13 +191,52 @@ You have to activate installed FlytOS, without which critical APIs would not fun
 
 
 Hardware Setup
---------------
+^^^^^^^^^^^^^^^
 
-Visit :ref:`this link <hardware_setup_edison>` for details regarding hardware setup.
+.. _edison_wifiap:
+
+WiFi Access Point
+"""""""""""""""""
+
+After flashing :ref:`FlytOS Linux Image<FlytOS_linux_image>` in your Intel Edison, WiFi access point is created on the device on system startup with following credentials:
+
+ssid:       edison_wifi
+
+Password:   FlytPOD123
+
+Connect to the access point on another computer. Open the following link in your browser to view :ref:`FlytConsole<about flytconsole>`: http://192.168.42.1/flytconsole
+
+
+
+Telemetry Connection
+""""""""""""""""""""
+
+FlytOS needs telemetry data from autopilot(Pixhawk). Connect Pixhawk’s Telemetry port to Intel Edison. 
+
+1. **[Recommended]** Connect Pixhawk's Telem2 port to Edison's UART port(ttyMFD1) using J18/13(RX) and J19/8(TX) (refer page-7 of `edison hardware guide <http://download.intel.com/support/edison/sb/edisonbreakout_hg_331190006.pdf>`_ for connections). If you are using Pixhawk2.1, this connection is already made available.
+2. Connect Pixhawk's micro-USB to the USB port of Edison.
+3. Connect Pixhawk's Telem2 port to the USB port of Edison using UART-USB converter.
+
+
+.. figure:: /_static/Images/edison_pixhawk.jpg
+  :align: center 
+  :scale: 100 %
+  
+  Connection between Edison's ttyMFD1 uart port and Pixhawk’s TELEM 2
+
+Configuring Pixhawk Autopilot
+"""""""""""""""""""""""""""""
+
+1. Install `QGC(QGroundControl) <http://qgroundcontrol.com/>`_ in your local machine.
+2. Connect Pixhawk to QGC using the USB port at the side of Pixhawk.
+3. Install the latest stable PX4 release in Pixhawk using QGC by following `this <https://donlakeflyer.gitbooks.io/qgroundcontrol-user-guide/content/SetupView/Firmware.html>`_ guide.
+4. Once done, visit `parameter widget in QGC <https://donlakeflyer.gitbooks.io/qgroundcontrol-user-guide/content/SetupView/Parameters.html>`_ and search for parameters SYS_COMPANION and MAV_COMP_ID, set them to 921600 and 50 respectively. This would enable communication between FlytOS running on Edison and Pixhawk.
+
+:ref:`Go back to Edison Guide. <activate_flytos_edison>`
 
 
 Getting started with FlytOS
----------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 * After completing the above steps, you can now attach various components of you drone to the pixhawk like ESCs, GPS, Radio and other payloads. 
 * Calibrate the drone's sensors, RC and ESCs in FlytConsole by following the instructions given on the :ref:`FlytConsole page<Motor_config>`.

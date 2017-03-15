@@ -1,11 +1,11 @@
 .. _flytpod_guide:
 
 
-FlytOS Installation guide for FlytPOD/PRO
-=========================================
+FlytPOD/PRO
+===========
 
 
-Preparing your FlytPOD/PRO
+Installing FlytOS
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. note:: FlytOS Linux Image is pre-installed in FlytPOD/PRO. In case you want to re-flash their respective 32GB SD/eMMC card, or create a duplicate 32GB SD/eMMC card follow the steps given below. You can use 16GB SD/eMMC cards as well, but 32GB is preferable.
@@ -90,7 +90,7 @@ You have to activate installed FlytOS, without which critical APIs would not fun
 Hardware Setup
 ^^^^^^^^^^^^^^^
 
-Visit :ref:`this link<about_flytpod_pro>` for details regarding hardware setup.
+FlytPOD comes in two variants - FlytPOD and FlytPOD PRO. Both of them have an inbuilt autopilot and you shall not have to go through this guide. See the detailed steps for getting started with FlytPOD/PRO :ref:`here<about_flytpod_pro>`.
 
 Getting started with FlytOS
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^

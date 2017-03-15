@@ -1,12 +1,12 @@
 .. _odroid_guide:
 
 
-FlytOS Installation guide for ODROID-XU4
-=========================================
+ODROID-XU4
+============
 
 
-Preparing your Flight Computer
-------------------------------
+Installing FlytOS
+^^^^^^^^^^^^^^^^^^
 
 To install FlytOS on ODROID-XU4, there are 2 ways that you can follow. We recommended the first method for an easier install:
 
@@ -70,7 +70,7 @@ To install FlytOS on ODROID-XU4, there are 2 ways that you can follow. We recomm
 .. _activate_flytos_odroid:
 
 Activate FlytOS
----------------
+^^^^^^^^^^^^^^^^
 
 .. note:: This step requires you to have a registered FlytBase Account. In case you don't have an account, :ref:`create a FlytBase Account<create_flytbase_account>` before you proceed.
 
@@ -87,7 +87,33 @@ You have to activate installed FlytOS, without which critical APIs would not fun
 Hardware Setup
 ^^^^^^^^^^^^^^
 
-Visit :ref:`this link <hardware_setup_odroid>` for instructions on connecting a Pixhawk to your ODROID-XU4 and WiFi enabling your ODROID.
+Telemetry Connection
+""""""""""""""""""""
+
+FlytOS needs telemetry data from autopilot(Pixhawk). Connect Pixhawk’s Telemetry port to ODROID-XU4. 
+
+1. **[Recommended]** Connect Pixhawk's Telem2 port to ODROID UART0 port. We have used the ODROID XU4 Shifter Shield as a level converter and the pins mapped as GPA0.0(RX) and GPA0.1(TX) have been used as serial port UART0.
+2. Connect Pixhawk's micro-USB to the USB port of ODROID.
+3. Connect Pixhawk's Telem2 port to the USB port of ODROID using UART-USB converter.
+   
+
+.. FlytConsole comes pre-packaged in FlytOS (a web-based drone configuration utility). To enable access to vehicle, WiFi-dongle must be installed onboard the ODROID-XU4.
+
+Below is a hardware setup youtube video for Pixhawk + ODROID-XU4 covering all the necessary information, including WiFi-enabling the ODROID.
+
+|br|
+
+..  youtube:: B40pE02bjJI
+    :aspect: 16:9
+    :width: 80%
+
+Configuring Pixhawk Autopilot
+"""""""""""""""""""""""""""""
+
+1. Install `QGC(QGroundControl) <http://qgroundcontrol.com/>`_ in your local machine.
+2. Connect Pixhawk to QGC using the USB port at the side of Pixhawk.
+3. Install the latest stable PX4 release in Pixhawk using QGC by following `this <https://donlakeflyer.gitbooks.io/qgroundcontrol-user-guide/content/SetupView/Firmware.html>`_ guide.
+4. Once done, visit `parameter widget in QGC <https://donlakeflyer.gitbooks.io/qgroundcontrol-user-guide/content/SetupView/Parameters.html>`_ and search for parameters SYS_COMPANION and MAV_COMP_ID, set them to 921600 and 50 respectively. This would enable communication between FlytOS running on ODROID-XU4 and Pixhawk.
 
 
 Getting started with FlytOS

@@ -1,16 +1,19 @@
 .. _aero_guide:
 
 
-FlytOS Installation guide for Intel Aero Compute Board
-======================================================
+Intel Aero Compute Board
+=========================
 
-Preparing your Intel Aero Board
--------------------------------
+
 
 .. _install_dependencies_aero:
 
-Installing FlytOS dependencies
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Installing FlytOS 
+^^^^^^^^^^^^^^^^^^
+
+Installing Dependencies
+"""""""""""""""""""""""
+
 .. caution:: Intel Aero Compute board currently supports only the Yocto Linux distribution. Since FlytOS is only supported on Ubuntu/Debian based Linux distros, you will have to re-flash the operating system. This may void your Aero Board's warranty so we recommend users to use  their discretion while installing FlytOS on the board. Flytbase does not take any responsibility and is free from any liability caused by following these instructions to install Ubuntu on Intel Aero Board.
 
 1. List of FlytOS dependencies to be installed on your Aero Board:
@@ -38,8 +41,8 @@ Installing FlytOS dependencies
        export PYTHONPATH=$PYTHONPATH:/flyt/flytapps:/flyt/userapps
        source /flyt/flytos/flytcore/setup.bash
 
-Installing FlytOS debian package
---------------------------------
+Installing debian package
+"""""""""""""""""""""""""
 
 .. note:: This step requires you to have a registered FlytBase Account. In case you don't have an account, :ref:`create a FlytBase Account<create_flytbase_account>` before you proceed. 
 
@@ -131,7 +134,7 @@ Next, you **MUST update your FlytOS debian package** by following the steps belo
 .. _activate_flytos_aero:
 
 Activate FlytOS
----------------
+^^^^^^^^^^^^^^^
 
 .. note:: This step requires you to have a registered FlytBase Account. In case you don't have an account, :ref:`create a FlytBase Account<create_flytbase_account>` before you proceed.
 
@@ -145,10 +148,21 @@ You have to activate installed FlytOS, without which critical APIs would not fun
 6. Copy the generated license key and enter it in FlytConsole to complete the activation process of your device. The Activate Now tag at bottom right corner of FlytConsole should now turn green.
 
 Hardware Setup
---------------
+^^^^^^^^^^^^^^
 
-Visit :ref:`this link <hardware_setup_aero>` for details regarding hardware setup.
 
+Telemetry Connection
+""""""""""""""""""""
+
+Connect the Pixhawk autopilot board’s USB port on the side to Aero's USB port. The Pixhawk will be visible on Aero by the device name /dev/ttyACM0.
+
+Configuring Pixhawk Autopilot
+"""""""""""""""""""""""""""""
+
+1. Install `QGC(QGroundControl) <http://qgroundcontrol.com/>`_ in your local machine.
+2. Connect Pixhawk to QGC using the USB port at the side of Pixhawk.
+3. Install the latest stable PX4 release in Pixhawk using QGC by following `this <https://donlakeflyer.gitbooks.io/qgroundcontrol-user-guide/content/SetupView/Firmware.html>`_ guide.
+4. Once done, visit `parameter widget in QGC <https://donlakeflyer.gitbooks.io/qgroundcontrol-user-guide/content/SetupView/Parameters.html>`_ and search for parameters SYS_COMPANION and MAV_COMP_ID, set them to 921600 and 50 respectively. This would enable communication between FlytOS running on Aero and Pixhawk.
 
 Getting started with FlytOS
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^

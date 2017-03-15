@@ -28,11 +28,12 @@ Checkout and participate in our `forums`_, `facebook`_ group and  interact with 
    :hidden:
    :caption: FlytOS
 	
-   docs/FlytOS/FlytOS.rst
+   .. docs/FlytOS/FlytOS.rst
+   docs/FlytOS/SignUp.rst
    docs/FlytOS/FlytOSInstallationGuide.rst
    docs/FlytOS/FlytOSUpdate.rst
-   docs/FlytOS/Hardware_setup.rst
    docs/FlytOS/Supported_GCS.rst
+   .. docs/FlytOS/Hardware_setup.rst
    docs/FlytOS/FlytOSBasics.rst
    .. docs/FlytOS/FlytBase_Account.rst
 

@@ -1,8 +1,8 @@
 .. _tx1_guide:
 
 
-FlytOS Installation guide for Nvidia TX1
-========================================
+Nvidia TX1
+==========
 
 
 .. Preparing your TX1
@@ -10,8 +10,11 @@ FlytOS Installation guide for Nvidia TX1
 
 .. _install_dependencies_tx1:
 
-Installing FlytOS dependencies
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Installing FlytOS 
+^^^^^^^^^^^^^^^^^^
+
+Install Dependencies
+""""""""""""""""""""
 
 1. List of FlytOS dependencies to be installed on your Nvidia TX1:
 
@@ -47,8 +50,8 @@ Installing FlytOS dependencies
 .. _installing_flytos_tx1:
 
 
-Installing FlytOS debian package
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Installing debian package
+"""""""""""""""""""""""""
 
 .. note:: This step requires you to have a registered FlytBase Account. In case you don't have an account, :ref:`create a FlytBase Account<create_flytbase_account>` before you proceed. 
 
@@ -149,7 +152,30 @@ You have to activate installed FlytOS, without which critical APIs would not fun
 Hardware Setup
 ^^^^^^^^^^^^^^
 
-Visit :ref:`this link <hardware_setup_tx1>` for details regarding hardware setup.
+WiFi Setup
+""""""""""
+
+*  To access internet on your TX1 (for activation, loading maps, auto updates, etc), you can connect the WiFi on TX1 to your home's WiFi router that has access to internet.
+*  If you want to create a WiFi hotspot on the TX1, follow the steps given in `this post <https://devtalk.nvidia.com/default/topic/910608/jetson-tx1/setting-up-wifi-access-point-on-tx1/post/4893879/#4893879>`_
+
+Telemetry Connection
+""""""""""""""""""""
+
+Connect the Pixhawk autopilot board’s TELEM2 port to TX1’s UART1 port . If you are using the TX1 developer kit carrier board , then the UART1 can be found on the J17 connector. Visit `this link <https://developer.nvidia.com/embedded/dlc/jetson-tx1-developer-kit-carrier-board-spec>`_ (Page 28 Section 3.7) to view the pinout of TX1's J17 connector.
+
+.. figure:: /_static/Images/Tx1_Connection.png
+  :align: center 
+  :scale: 80 %
+  
+  Connection between TX1 developer kit's J17 connector and Pixhawk’s TELEM 2
+
+Configuring Pixhawk Autopilot
+"""""""""""""""""""""""""""""
+
+1. Install `QGC(QGroundControl) <http://qgroundcontrol.com/>`_ in your local machine.
+2. Connect Pixhawk to QGC using the USB port at the side of Pixhawk.
+3. Install the latest stable PX4 release in Pixhawk using QGC by following `this <https://donlakeflyer.gitbooks.io/qgroundcontrol-user-guide/content/SetupView/Firmware.html>`_ guide.
+4. Once done, visit `parameter widget in QGC <https://donlakeflyer.gitbooks.io/qgroundcontrol-user-guide/content/SetupView/Parameters.html>`_ and search for parameters SYS_COMPANION and MAV_COMP_ID, set them to 921600 and 50 respectively. This would enable communication between FlytOS running on Nvidia TX1 and Pixhawk.
 
 Getting started with FlytOS
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
