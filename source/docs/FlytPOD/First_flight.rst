@@ -1,33 +1,32 @@
 .. _First_Flight:
 
-First Flight with FlytPOD
+Basic Flight
 =========================
 
-1. General Instructions: We recommend getting Manual stabilize mode to work first. Then go for Position hold using GPS. Once you are sure about these basic manual modes then you can switch to FlytOS using offboard switch. 
-
-2. Manual Mode:
-   
-   a. This is basic stabilize mode. 
-   b. If RGB LED is breathing blue or green then you are good to go. Click :ref:`here<RGB_LED>` to know more about RGB LED patterns.
-   c. Make sure you are following all safety guidelines given :ref:`here<Safety_guidelines>`.
-   d. In case you are not sure about Gains please have a look at this guide `here <http://px4.io/docs/multicopter-pid-tuning-guide/>`_.
-   e. Once your basic gains are stable and vehicle is stabilizing well then go to ``Altctl Mode``. Height will be stabilized automatically. Without LIDAR or SONAR the height might drift within a meter.
-   f. In ``altitude control mode`` throttle stick should be kept at middle to stay at current altitude. 
-
-3. Position hold:
-  
-   a. Position and height are stabilized in this mode.
-   b. RGB LED should be green for this mode to work.
-   c. In this mode throttle and roll/pitch stick should be at the center for staying at current location.
-
-4. Offboard mode / Flying with FlytOS:
-  
-   a. Vehicle is autonomously controlled by FlytOS and will be given position, velocity commands according to running apps.
-   b. RGB LED should be green for this mode to work.
-   c. Make sure that Position control works before switching to offboard mode.
-   d. Vehicle will start to hover at the same position after switching to offboard mode until you start using any other app. 
-   e. RC controller sticks will not work in this mode. Only offboard switch will work which should be kept handy for emergency situations.
-   f. Try testing your first Flyt app :ref:`here<onboard app>`.
+1. Read all safety guidelines given :ref:`here<Safety_guidelines>`. 
 
 .. note:: In case you are using Pixhawk, check out the `pre-flight checklist <http://ardupilot.org/copter/docs/flying-arducopter.html>`_ before you fly. 
+
+2. It is important to make sure that autopilot is configured properly so that basic position hold works perfectly. 
+3. Skip to step 4 if RC | POSCTL mode is already configured and tested:
+   
+   a. Keep vehicle in MANUAL mode 
+   b. Wait for the RGB led to turn green.
+   c. Arm the vehicle and takeoff manually. 
+   d. If vehicle is not stabilized refer to gain tuning section `here <http://px4.io/docs/multicopter-pid-tuning-guide/>`_.
+   e. Switch to RC | POSCTL mode using rc switch. Without LIDAR or SONAR the height might drift within a meter.
+   f. In this mode throttle and roll/pitch stick should be at the center to hold drone at current location.
+   
+4. Prepare for Offboard mode:
+  
+   a. RGB LED should be green for this mode to work.
+   b. Offboard / API switch on RC is used to switch API control on or off. In case of emergency in offboard mode flip the switch for RC control.
+   c. Vehicle will start to hover at the same position when switched to offboard mode.
+   d. RC sticks will not work in this mode. FlytOS API's will be commanding the drone. 
+
+5. While in RC | POSCTL mode flip the RC offboard switch to enter into OFFBoard / API-POSCtl mode.
+6. Vehicle should hover at the same location. RC sticks will not work in this mode. Just to make sure that it is indeed offboard mode try giving some control actions from RC e.g. roll. If vehicle doesn't react to these commands then FlytOS is controling the drone.
+7. If everything goes right then switch the drone back to RC modes and land it.
+
+
 
