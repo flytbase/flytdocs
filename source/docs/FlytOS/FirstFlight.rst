@@ -15,4 +15,3 @@ First Flight
    ../FlytOS/Essentials.rst
    ../FlytOS/Safety.rst
    ../FlytOS/TestFlytOS.rst
-   ../FlytOS/BuiltinApps.rst

@@ -33,6 +33,7 @@ Checkout and participate in our `forums`_, `facebook`_ group and  interact with 
    docs/FlytOS/FlytOSInstallationGuide.rst
    docs/FlytOS/Supported_GCS.rst
    docs/FlytOS/FirstFlight.rst
+   docs/FlytOS/BuiltinApps.rst
    docs/FlytOS/FlytOSUpdate.rst
 
 .. toctree::
