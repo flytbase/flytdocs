@@ -25,23 +25,17 @@ Safety Guidelines
 
 
 
-.. * Please go through the :ref:`essentials<First_Principles>` of FlytPOD before you proceed. The on-field operations team should be aware of them.
-.. * Most of the operations with FlytOS are fully or semi autonomous. Offboard switch is the Manual Override. Always have a dedicated manual pilot ready to take control in case of emergencies.
-.. * Before switching to offboard mode it is always a good practice to check if manual and position hold modes are working.
-.. * FlytPOD connected to mobile phone hotspot may not give long range. Use powerful ground routers with high gain antennas for long range operations. If you want to use radio telemetry modules then check the peripherals.
-.. * Do not subject FlytPOD to water, dust or prolonged heat.
-.. * Do not draw power from FlytPOD for any payload not mentioned specifically in the peripherals.
-.. * Always use external GPS-MAG module for stable yaw performance. Internal compass suffers a lot of interference.
-.. * Please do not try to dismantle the FlytPOD. You might not be able to reassemble the device in order and might cause the vibration dampening mechanism to fail.
-.. * Always keep FlytPOD updated. We are adding lot of security and safety modules and will be continuously releasing updates.
-.. * Please follow rules and regulations laid down by your local authority.
-
-* Please go through the :ref:`essentials<First_Principles>` before you proceed. The on-field operations team should be aware of them.
+* Please go through the :ref:`essentials<First_Principles>` of FlytPOD before you proceed. The on-field operations team should be aware of them.
 * Most of the operations with FlytOS are fully or semi autonomous. Offboard switch is the Manual Override. Always have a dedicated manual pilot ready to take control in case of emergencies.
 * Before switching to offboard mode it is always a good practice to check if manual and position hold modes are working.
 * FlytPOD connected to mobile phone hotspot may not give long range. Use powerful ground routers with high gain antennas for long range operations. If you want to use radio telemetry modules then check the peripherals.
+* Do not subject FlytPOD to water, dust or prolonged heat.
+* Do not draw power from FlytPOD for any payload not mentioned specifically in the peripherals.
 * Always use external GPS-MAG module for stable yaw performance. Internal compass suffers a lot of interference.
-* FlytOS comes with automatic update functionality. We keep pushing lot of security and new feature updates. FlytOS will download and install updates when device is connected to internet. It is good practise to connect your drone to internet once a week at least.
+* Please do not try to dismantle the FlytPOD. You might not be able to reassemble the device in order and might cause the vibration dampening mechanism to fail.
+* Always keep FlytPOD updated. We are adding lot of security and safety modules and will be continuously releasing updates.
 * Please follow rules and regulations laid down by your local authority.
+
+.. note:: In case you are using Pixhawk, check out the `pre-flight checklist <http://ardupilot.org/copter/docs/flying-arducopter.html>`_ before you fly.
 
 
