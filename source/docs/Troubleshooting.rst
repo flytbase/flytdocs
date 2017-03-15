@@ -6,7 +6,7 @@ Troubleshooting
 .. toctree::
    :maxdepth: 2
    :hidden:
-   :caption: Troubleshooting
+   :caption: Debugging and Advanced Topics
   
    ./FlytOS/Troubleshooting/Flytpod.rst
    ./FlytOS/Troubleshooting/GCSBridge.rst
