@@ -4,13 +4,14 @@ First Flight
 ================
 
 
+We are ready for flight testing the vehicle with FlytOS. Follow the instructions provided in next sections.
+
 
 .. toctree::
    :maxdepth: 2
    :hidden:
    :caption: First Flight
   
-   ../FlytOS/AutopilotConf.rst
    ../FlytOS/Essentials.rst
    ../FlytOS/Safety.rst
    ../FlytOS/BasicFlight.rst

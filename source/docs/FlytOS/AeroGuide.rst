@@ -163,6 +163,7 @@ Configuring Pixhawk Autopilot
 2. Connect Pixhawk to QGC using the USB port at the side of Pixhawk.
 3. Install the latest stable PX4 release in Pixhawk using QGC by following `this <https://donlakeflyer.gitbooks.io/qgroundcontrol-user-guide/content/SetupView/Firmware.html>`_ guide.
 4. Once done, visit `parameter widget in QGC <https://donlakeflyer.gitbooks.io/qgroundcontrol-user-guide/content/SetupView/Parameters.html>`_ and search for parameters SYS_COMPANION and MAV_COMP_ID, set them to 921600 and 50 respectively. This would enable communication between FlytOS running on Aero and Pixhawk.
+5. Configure a dedicated two way switch for offboard mode during RC calibration.
 
 Getting started with FlytOS
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
