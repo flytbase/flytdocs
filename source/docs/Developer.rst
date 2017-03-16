@@ -11,6 +11,6 @@ Developers
    ./FlytOS/Developers/GettingStarted.rst
    ./FlytOS/Developers/APIDocumentation.rst
    ./FlytOS/Developers/Flytsim.rst
-   ./FlytOS/Developers/Developers/WriteDroneApp.rst
+   ./FlytOS/Developers/WriteDroneApp.rst
    ./FlytOS/Developers/MoreSampleApps.rst
    ./FlytOS/Developers/NeedHelp.rst
