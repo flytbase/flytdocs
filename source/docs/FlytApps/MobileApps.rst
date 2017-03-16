@@ -41,7 +41,7 @@ You can build and run the app using IntelliJ IDEA in either a browser based emul
 
 **Running in Device:**
 
-- Connect mobile device to computer using a USB/uUSB cable.
+- Connect mobile device to computer using a USB cable.
 - Select **Specify target** in IntelliJ Idea corresponding to your device (Refresh if necessary).
 - Click on **Run** button to start building your app and to install it on the device.
 
@@ -65,142 +65,160 @@ You just need to connect to the FlytOS running system by entering the **URL** in
   :align: center
         
 
-You can Also try out other Apps by downloading the apks from below or code from the `repository`_:
-`Flyt Joystick`_
-`Flyt Follow me`_
-`Flyt GPS`_
+You can Also try out `Flyt Joystick`_ app or view the code from the `repository`_:
+
+- Install or build the app and launch it.
+- Enter the IP of the device running FlytOS to be able to communicate with it.
+
+.. image:: /_static/Images/app-login-screen.png
+  :align: center 
+
+- Once the IP is confirmed you are redirected to the app screen.
+- This App allows the user to send the drone velocity setpoints and control the drone as with a regular joystick.
+
+Things to Remember
+
+- You need to takeoff before you can use the joystick to control your drone.
+- The left joystick gives the drone commands to move up down turn-left and turn-right.
+- The right joystick gives the drone commands to move front back left and right.
+- All the commands are given with respect to the drone(front = direction of the nose/front of the drone).
+
+
+.. image:: /_static/Images/app-screen.png
+  :align: center
 
 
 
-Android App - Java (Android-Studio)
-===================================
+
+.. Android App - Java (Android-Studio)
+.. ===================================
 
 
-Flyt - Android SDK
-------------------
+.. Flyt - Android SDK
+.. ------------------
 
-a. Here you are required to download the Flyt-Android-SDK based on Android Studio by signing up `here <http://flytbase.com/flytos#flytsdk>`_ and build your app using it.
-b. You will recieve the download links by mail, once you sign up.
-c. The SDK has all the required libraries for making REST calls and a websocket connection to FlytPOD already integrated in it.
-d. The mainActivity in it shows a sample of how a REST call and a WebSocket call is to be made.
-e. Sample REST call to fetch namespace of the flytpod
+.. a. Here you are required to download the Flyt-Android-SDK based on Android Studio by signing up `here <http://flytbase.com/flytos#flytsdk>`_ and build your app using it.
+.. b. You will recieve the download links by mail, once you sign up.
+.. c. The SDK has all the required libraries for making REST calls and a websocket connection to FlytPOD already integrated in it.
+.. d. The mainActivity in it shows a sample of how a REST call and a WebSocket call is to be made.
+.. e. Sample REST call to fetch namespace of the flytpod
    
-   .. code-block:: java
+..    .. code-block:: java
    
-       private class NamespaceRequest extends AsyncTask<Void, Void, String> {
-          @Override
-          protected String doInBackground(Void... params) {
-              try {
-                  //Rest url
-                  final String url = "http://"+IP+"/ros/get_global_namespace";
-                  //params in json
-                  String requestJson = "{}";
-                  //headers
-                  HttpHeaders headers = new HttpHeaders();
-                  headers.setContentType(MediaType.APPLICATION_JSON);
+..        private class NamespaceRequest extends AsyncTask<Void, Void, String> {
+..           @Override
+..           protected String doInBackground(Void... params) {
+..               try {
+..                   //Rest url
+..                   final String url = "http://"+IP+"/ros/get_global_namespace";
+..                   //params in json
+..                   String requestJson = "{}";
+..                   //headers
+..                   HttpHeaders headers = new HttpHeaders();
+..                   headers.setContentType(MediaType.APPLICATION_JSON);
 
-                  HttpEntity<String> entity = new HttpEntity<String>(requestJson,headers);
-                  //restTemplate object initialise for rest call
-                  RestTemplate restTemplate = new RestTemplate();
-                  restTemplate.getMessageConverters().add(new StringHttpMessageConverter());
-                  // make the rest call and recieve the response in "response"
-                  String response = restTemplate.postForObject(url,entity, String.class);
+..                   HttpEntity<String> entity = new HttpEntity<String>(requestJson,headers);
+..                   //restTemplate object initialise for rest call
+..                   RestTemplate restTemplate = new RestTemplate();
+..                   restTemplate.getMessageConverters().add(new StringHttpMessageConverter());
+..                   // make the rest call and recieve the response in "response"
+..                   String response = restTemplate.postForObject(url,entity, String.class);
 
-                  return response;
-              } catch (Exception  e) {
-                  Log.e("MainActivity", e.getMessage(), e);
-              }
+..                   return response;
+..               } catch (Exception  e) {
+..                   Log.e("MainActivity", e.getMessage(), e);
+..               }
 
-              return null;
-          }
-          //function called after a successful rest call
-          @Override
-          protected void onPostExecute(String response) {
-              if (response!="") {
+..               return null;
+..           }
+..           //function called after a successful rest call
+..           @Override
+..           protected void onPostExecute(String response) {
+..               if (response!="") {
 
-                  try {
-                      //initialise a JSON object with the response string
-                      JSONObject resp = new JSONObject(response);
-                      //extract the required field from the JSON object
-                      namespace=resp.getJSONObject("param_info").getString("param_value");
-                  } catch (JSONException  | NullPointerException e) {
-              }
-          }
-      }
+..                   try {
+..                       //initialise a JSON object with the response string
+..                       JSONObject resp = new JSONObject(response);
+..                       //extract the required field from the JSON object
+..                       namespace=resp.getJSONObject("param_info").getString("param_value");
+..                   } catch (JSONException  | NullPointerException e) {
+..               }
+..           }
+..       }
     
-f. Sample websocket call to view roll pitch yaw of FlytPOD.
+.. f. Sample websocket call to view roll pitch yaw of FlytPOD.
    
-   .. code-block:: java
+..    .. code-block:: java
    
-       IP=editTextIP.getText().toString();
-       //Initialise a ros object with websocket url
-       ros=new Ros("ws://"+IP+"/websocket");
-       ros.connect();
+..        IP=editTextIP.getText().toString();
+..        //Initialise a ros object with websocket url
+..        ros=new Ros("ws://"+IP+"/websocket");
+..        ros.connect();
 
        
-   .. note:: The Ros object initialisation is done only once every time the app is run unless you are planning tp connect to multiple FlytPODs.
+..    .. note:: The Ros object initialisation is done only once every time the app is run unless you are planning tp connect to multiple FlytPODs.
         
         
 
 
-   .. code-block:: java
+..    .. code-block:: java
         
-       //the namespace(unique for every FlytPOD) fetched from the rest call is used to subscribe to a web socket topic
-       //the syntax Topic(<ros>, <topic>, <type>, <throttle rate>optional)
-       topic=new Topic(ros,"/"+namespace+"/mavros/imu/data_euler" , "geometry_msgs/TwistStamped",200);
-       topic.subscribe(new CallbackRos(){
-             //callback method- what to do when messages recieved.
-             @Override
-             public void handleMessage(JSONObject message){
-                  try {
-                      updateRoll(message.getJSONObject("twist").getJSONObject("linear").getDouble("x"));
-                      updatePitch(message.getJSONObject("twist").getJSONObject("linear").getDouble("y"));
-                      updateYaw(message.getJSONObject("twist").getJSONObject("linear").getDouble("z"));
+..        //the namespace(unique for every FlytPOD) fetched from the rest call is used to subscribe to a web socket topic
+..        //the syntax Topic(<ros>, <topic>, <type>, <throttle rate>optional)
+..        topic=new Topic(ros,"/"+namespace+"/mavros/imu/data_euler" , "geometry_msgs/TwistStamped",200);
+..        topic.subscribe(new CallbackRos(){
+..              //callback method- what to do when messages recieved.
+..              @Override
+..              public void handleMessage(JSONObject message){
+..                   try {
+..                       updateRoll(message.getJSONObject("twist").getJSONObject("linear").getDouble("x"));
+..                       updatePitch(message.getJSONObject("twist").getJSONObject("linear").getDouble("y"));
+..                       updateYaw(message.getJSONObject("twist").getJSONObject("linear").getDouble("z"));
 
 
-                  }catch(JSONException e){}
-             }
-       });  
+..                   }catch(JSONException e){}
+..              }
+..        });  
 
 
-Flyt Sample Apps
-----------------
+.. Flyt Sample Apps
+.. ----------------
 
 
-1. Flyt Sample App 1 - REST
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. 1. Flyt Sample App 1 - REST
+.. ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-* This sample app shows how to make REST calls. 
-* To try this app you can download the apk from `here <https://s3-us-west-2.amazonaws.com/flytos/SampleAndroidApk/FLYT-Sample-App1-Rest.apk>`_ or download the source code from `here <https://github.com/flytbase/flytsamples/tree/master/AndroidApps/Java-Apps/SampleApp1-REST>`_.
+.. * This sample app shows how to make REST calls. 
+.. * To try this app you can download the apk from `here <https://s3-us-west-2.amazonaws.com/flytos/SampleAndroidApk/FLYT-Sample-App1-Rest.apk>`_ or download the source code from `here <https://github.com/flytbase/flytsamples/tree/master/AndroidApps/Java-Apps/SampleApp1-REST>`_.
   
-  .. image:: /_static/Images/flytAndroidSample1.png
-  				:height: 500px
-  				:width: 300px
-  				:align: center
+..   .. image:: /_static/Images/flytAndroidSample1.png
+..   				:height: 500px
+..   				:width: 300px
+..   				:align: center
 
  
-2. Flyt Sample App 2 - Socket
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. 2. Flyt Sample App 2 - Socket
+.. ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-* This sample app shows how to make WebSocket subscription for live streaming of data. 
-* To try this app you can download the apk from `here <https://s3-us-west-2.amazonaws.com/flytos/SampleAndroidApk/FLYT-Sample-App2-Socket.apk>`_ or download the source code from `here <https://github.com/flytbase/flytsamples/tree/master/AndroidApps/Java-Apps/SampleApp2-Socket>`_.
+.. * This sample app shows how to make WebSocket subscription for live streaming of data. 
+.. * To try this app you can download the apk from `here <https://s3-us-west-2.amazonaws.com/flytos/SampleAndroidApk/FLYT-Sample-App2-Socket.apk>`_ or download the source code from `here <https://github.com/flytbase/flytsamples/tree/master/AndroidApps/Java-Apps/SampleApp2-Socket>`_.
   
-  .. image:: /_static/Images/flytAndroidSample3.png
-  				:height: 500px
-  				:width: 300px
-  				:align: center
+..   .. image:: /_static/Images/flytAndroidSample3.png
+..   				:height: 500px
+..   				:width: 300px
+..   				:align: center
   
 
-3. Flyt Sample App 3 - Joystick
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. 3. Flyt Sample App 3 - Joystick
+.. ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-* This is a sample Joystick app to control the FlytPOD. 
-* To try this app you can download the apk from `here <https://s3-us-west-2.amazonaws.com/flytos/SampleAndroidApk/FLYT-Sample-App3-Joystick.apk>`_ or download the source code from `here <https://github.com/flytbase/flytsamples/tree/master/AndroidApps/Java-Apps/SampleApp3-Joystick>`_.
+.. * This is a sample Joystick app to control the FlytPOD. 
+.. * To try this app you can download the apk from `here <https://s3-us-west-2.amazonaws.com/flytos/SampleAndroidApk/FLYT-Sample-App3-Joystick.apk>`_ or download the source code from `here <https://github.com/flytbase/flytsamples/tree/master/AndroidApps/Java-Apps/SampleApp3-Joystick>`_.
   
-  .. image:: /_static/Images/flytAndroidSample2.png
-  				:height: 300px
-  				:width: 500px
-  				:align: center
+..   .. image:: /_static/Images/flytAndroidSample2.png
+..   				:height: 300px
+..   				:width: 500px
+..   				:align: center
   				
 
 

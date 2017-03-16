@@ -56,6 +56,29 @@ Following is a simple demonstration of how to run a Web application for your dro
 
 
 
+You can Also try out `Flyt Joystick`_ Web app :
+
+- Launch the index.html file in your browser.
+- Enter the IP of the device running FlytOS to be able to communicate with it.
+
+.. image:: /_static/Images/web-app-login-screen.png
+  :align: center 
+
+- Once the IP is confirmed you are redirected to the app screen.
+- This App allows the user to send the drone velocity setpoints and control the drone as with a regular joystick.
+
+Things to Remember
+
+- You need to takeoff before you can use the joystick to control your drone.
+- The left joystick gives the drone commands to move up down turn-left and turn-right.
+- The right joystick gives the drone commands to move front back left and right.
+- All the commands are given with respect to the drone(front = direction of the nose/front of the drone).
+
+
+.. image:: /_static/Images/web-app-screen.png
+  :align: center
+
+
 
 Deploying Web App Onboard
 =============================
@@ -102,5 +125,6 @@ Once you have built your Web app, you are ready to deploy it Onboard. FlytOS use
 
 .. _Ionic components: http://ionicframework.com/docs/components/
 .. _Flyt_Web_SDK: https://github.com/flytbase/flytsamples/tree/master/WebApps/Flyt_Web_SDK
+.. _Flyt Joystick: https://github.com/flytbase/flytsamples/tree/master/WebApps/Flyt_Joystick
 .. _API documentation: http://docs.flytbase.com/docs/FlytAPI/REST_WebsocketAPIs.html
 .. _github repository: https://github.com/flytbase/flytsamples

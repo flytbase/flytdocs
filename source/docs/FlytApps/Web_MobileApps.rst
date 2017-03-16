@@ -383,7 +383,7 @@ For a quick start, you can follow the steps given below to install Ionic, Cordov
 
 .. **Running in Device:**
 
-.. - Connect mobile device to computer using a USB/uUSB cable.
+.. - Connect mobile device to computer using a USB cable.
 .. - Select **Specify target** in IntelliJ Idea corresponding to your device (Refresh if necessary).
 .. - Click on **Run** button to start building your app and to install it on the device.
 
