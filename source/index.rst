@@ -30,7 +30,8 @@ Checkout and participate in our `forums`_, `facebook`_ group and  interact with 
 	
    docs/GettingStarted.rst
    docs/Developer.rst
-   docs/Troubleshooting.rst
+   docs/Debugging.rst
+   docs/AdvancedTopics.rst
    .. docs/FlytOS/SignUp.rst
    .. docs/FlytOS/FlytOSInstallationGuide.rst
    .. docs/FlytOS/Supported_GCS.rst

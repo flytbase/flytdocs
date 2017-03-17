@@ -1,7 +1,7 @@
 .. _advanced_networking:
 
-Networking Setup
-================
+Advanced Networking
+===================
 
 For commercial applications real-time transport of rich data to and from the drone is crucial. This guide suggests methods to help you customize your networking infrastructure for reliable operation.
 
