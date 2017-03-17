@@ -75,14 +75,14 @@ Checkout and participate in our `forums`_, `facebook`_ group and  interact with 
 ..    docs/FlytSim/FlytSimLaunch.rst
 ..    docs/FlytSim/FlytSimTroubleshooting.rst
 
-.. toctree::
-   :maxdepth: 2
-   :hidden:
-   :caption: FlytAPI
+.. .. toctree::
+..    :maxdepth: 2
+..    :hidden:
+..    :caption: FlytAPI
   
-   docs/FlytAPI/ListOfAPIs.rst
-   docs/FlytAPI/OnboardAPIs.rst
-   docs/FlytAPI/REST_WebsocketAPIs.rst
+..    docs/FlytAPI/ListOfAPIs.rst
+..    docs/FlytAPI/OnboardAPIs.rst
+..    docs/FlytAPI/REST_WebsocketAPIs.rst
 
 
 .. toctree::
