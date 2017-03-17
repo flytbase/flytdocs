@@ -1,9 +1,11 @@
-Flyt your Drone 
+.. _Hardware Specific Installation Guide:
+
+Setup FlytOS
 ================
 
 
 
-.. _Hardware Specific Installation Guide:
+
 
 .. Hardware Specific Installation Guide
 .. -------------------------------------

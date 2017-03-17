@@ -92,17 +92,21 @@ Hardware Setup
 
 FlytPOD comes in two variants - FlytPOD and FlytPOD PRO. Both of them have an inbuilt autopilot and you shall not have to go through this guide. See the detailed steps for getting started with FlytPOD/PRO :ref:`here<about_flytpod_pro>`.
 
-Getting started with FlytOS
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-* After completing the above steps, you can now attach various components of you drone to the pixhawk like ESCs, GPS, Radio and other payloads. 
-* Calibrate the drone's sensors, RC and ESCs in FlytConsole by following the instructions given on the :ref:`FlytConsole page<Motor_config>`.
-* It is highly recommended that you visit the :ref:`FlytPOD essentials<First_Principles>`, :ref:`First Flight<First_Flight>` and :ref:`Safety Guidelines<Safety_guidelines>` pages before proceeding.
-* You are now ready to try some sample FlytOS apps on your drone. A good starting point for beginners is the |github_link|. More documentation can be found in :ref:`Sample Apps section<onboard app>`. Please note, in order to run any onboard app in FlytOS, make sure that your drone is in Offboard/API mode.
+Next Step: :ref:`Supported Ground Control Stations<supported_GCS>`
+------------------------------------------------------------------
 
-.. |github_link| raw:: html
+.. Getting started with FlytOS
+.. ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-   <a href="https://github.com/flytbase/flytsamples/tree/master/AndroidApps/HTML-JS-Apps/Joystick" target="_blank">Joystick app (Github Link)</a>
+.. * After completing the above steps, you can now attach various components of you drone to the pixhawk like ESCs, GPS, Radio and other payloads. 
+.. * Calibrate the drone's sensors, RC and ESCs in FlytConsole by following the instructions given on the :ref:`FlytConsole page<Motor_config>`.
+.. * It is highly recommended that you visit the :ref:`FlytPOD essentials<First_Principles>`, :ref:`First Flight<First_Flight>` and :ref:`Safety Guidelines<Safety_guidelines>` pages before proceeding.
+.. * You are now ready to try some sample FlytOS apps on your drone. A good starting point for beginners is the |github_link|. More documentation can be found in :ref:`Sample Apps section<onboard app>`. Please note, in order to run any onboard app in FlytOS, make sure that your drone is in Offboard/API mode.
+
+.. .. |github_link| raw:: html
+
+..    <a href="https://github.com/flytbase/flytsamples/tree/master/AndroidApps/HTML-JS-Apps/Joystick" target="_blank">Joystick app (Github Link)</a>
 
 .. |br| raw:: html
 

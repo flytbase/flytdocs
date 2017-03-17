@@ -1,7 +1,7 @@
 .. _troubleshooting_main:
 
-Troubleshooting
-===============
+Debugging and Advanced Topics
+=============================
 
 .. toctree::
    :maxdepth: 2

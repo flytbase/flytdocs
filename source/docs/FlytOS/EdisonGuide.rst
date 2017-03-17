@@ -233,19 +233,22 @@ Configuring Pixhawk Autopilot
 4. Once done, visit `parameter widget in QGC <https://donlakeflyer.gitbooks.io/qgroundcontrol-user-guide/content/SetupView/Parameters.html>`_ and search for parameters SYS_COMPANION and MAV_COMP_ID, set them to 921600 and 50 respectively. This would enable communication between FlytOS running on Edison and Pixhawk.
 5. Configure a dedicated two way switch for offboard mode during RC calibration.
 
-:ref:`Go back to Edison Guide. <activate_flytos_edison>`
 
 
-Getting started with FlytOS
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Next Step: :ref:`Supported Ground Control Stations<supported_GCS>`
+------------------------------------------------------------------
 
-* After completing the above steps, you can now attach various components of you drone to the pixhawk like ESCs, GPS, Radio and other payloads. 
-* Calibrate the drone's sensors, RC and ESCs in FlytConsole by following the instructions given on the :ref:`FlytConsole page<Motor_config>`.
-* You are now ready to try some sample FlytOS apps on your drone. A good starting point for beginners is the |github_link|. More documentation can be found in :ref:`Sample Apps section<onboard app>`. Please note, in order to run any onboard app in FlytOS, make sure that your drone is in Offboard/API mode.
 
-.. |github_link| raw:: html
+.. Getting started with FlytOS
+.. ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-   <a href="https://github.com/flytbase/flytsamples/tree/master/AndroidApps/HTML-JS-Apps/Joystick" target="_blank">Joystick app (Github Link)</a>
+.. * After completing the above steps, you can now attach various components of you drone to the pixhawk like ESCs, GPS, Radio and other payloads. 
+.. * Calibrate the drone's sensors, RC and ESCs in FlytConsole by following the instructions given on the :ref:`FlytConsole page<Motor_config>`.
+.. * You are now ready to try some sample FlytOS apps on your drone. A good starting point for beginners is the |github_link|. More documentation can be found in :ref:`Sample Apps section<onboard app>`. Please note, in order to run any onboard app in FlytOS, make sure that your drone is in Offboard/API mode.
+
+.. .. |github_link| raw:: html
+
+..    <a href="https://github.com/flytbase/flytsamples/tree/master/AndroidApps/HTML-JS-Apps/Joystick" target="_blank">Joystick app (Github Link)</a>
 
 .. |br| raw:: html
 
