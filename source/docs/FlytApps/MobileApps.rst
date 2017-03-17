@@ -225,7 +225,7 @@ Things to Remember
 
 
 .. _Ionic components: http://ionicframework.com/docs/components/
-.. _Flyt_Web_SDK: https://github.com/flytbase/flytsamples/tree/master/WebApps/Flyt_Web_SDK
+.. _Flyt_Web_SDK: https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/flytbase/flytsamples/tree/master/WebApps/Flyt_Web_SDK
 .. _repository: https://github.com/flytbase/flytsamples/tree/master/AndroidApps/HTML-JS-Apps
 .. _Flyt Joystick: https://flyt.blob.core.windows.net/flytos/downloads/apk/Flyt-Joystick.apk
 .. _Flyt Follow me: https://flyt.blob.core.windows.net/flytos/downloads/apk/Flyt-FollowMe.apk
