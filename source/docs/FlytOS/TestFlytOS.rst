@@ -8,8 +8,8 @@ Make sure that you have successfully tested Offboard mode with FlytOS.
 
 Next step is to test a web/mobile app built on top of FlytOS APIs.
 
-1. Download Flyt Joystick android app from `here`_ .
-2. Alternatively you can use joystik web app on your laptop. Download Flyt Joystick web app on your laptop from `here`_ . Enter into the directory and open index.html into browser.
+1. Download Flyt Joystick android app from `here1`_ .
+2. Alternatively you can use joystik web app on your laptop. Download Flyt Joystick web app on your laptop from `here2`_ . Enter into the directory and open index.html into browser.
 3. Connect your mobile / laptop to same wifi network that your companion computer / FlytPOD is connected to.
 
 
@@ -39,5 +39,5 @@ Next step is to test a web/mobile app built on top of FlytOS APIs.
 
 
 
-.. _here: https://flyt.blob.core.windows.net/flytos/downloads/apk/Flyt-Joystick.apk
-.. _here:  https://github.com/flytbase/flytsamples/tree/master/WebApps/Flyt_Joystick
+.. _here1: https://flyt.blob.core.windows.net/flytos/downloads/apk/Flyt-Joystick.apk
+.. _here2: https://minhaskamal.github.io/DownGit/#/home?url=https:%2F%2Fgithub.com%2Fflytbase%2Fflytsamples%2Ftree%2Fmaster%2FWebApps%2FFlyt_Joystick
