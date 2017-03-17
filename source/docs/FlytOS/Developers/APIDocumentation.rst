@@ -3,7 +3,7 @@
 API Documentation
 =================
 
-Extensive documentation for Python, C++. Roscpp, Rospy, Rest and Websockets Flyt APIs are available. Visit |api_link| to view the API documentation.
+Visit |api_link| for extensive documentation of FlytAPI's in various languages. Examples are available in Python, C++. Roscpp, Rospy, Javascript(Rest and Websocket).
 
 .. |api_link| raw:: html
 
