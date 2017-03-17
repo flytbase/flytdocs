@@ -33,7 +33,7 @@ This guide assumes you already have a working image for your Flight Computer. We
        export PYTHONPATH=$PYTHONPATH:/flyt/flytapps:/flyt/userapps
        source /flyt/flytos/flytcore/setup.bash
 
-.. _installing_flytos_flytpod:
+.. _installing_flytos_odroid:
 
 
 Installing FlytOS debian package
