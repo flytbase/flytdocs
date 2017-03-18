@@ -57,7 +57,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'FlytDocs'
-copyright = u'NavStik Labs'
+copyright = u'FlytBase Inc'
 author = u'sharvashish_das'
 
 # The version info for the project you're documenting, acts as replacement for
