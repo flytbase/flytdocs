@@ -46,6 +46,7 @@ Install Dependencies
    
        sed -i 's/export PATH=/export PATH=\$PATH:/g' ~/.bashrc 
        sed -i 's/export LD_LIBRARY_PATH=/export LD_LIBRARY_PATH=\$LD_LIBRARY_PATH:/g' ~/.bashrc
+       sed -i 's/source \/opt\/ros\/kinetic\/setup.bash//g' ~/.bashrc
 
 .. _installing_flytos_tx1:
 
