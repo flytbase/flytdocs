@@ -18,8 +18,11 @@ FlytBase is the next generation platform for commercial drone applications. It i
 
 **FlytPOD/PRO** is an integrated flight computer stack with a hybrid architecture, consisting of a STM32 microcontroller based autopilot tightly coupled with ODROID-XU4 SBC (single board computer). It also has a powerful WiFi router running OpenWRT firmware and several interfaces for custom payloads, radio receivers and special sensors. It comes with PX4 flight stack and FlytOS preloaded for an out-of-the-box ready-to-fly experience.
 
-This documentation gives all the inputs to get you started with FlytBase. You can learn about FlytOS and get a detailed reference for all the `FlytAPIs<api.flytbase.com>`_. It provides a step by step guide to install and get started with drone application development. You can refer to the sample apps and start building your own onboard and web/mobile apps.
+This documentation gives all the inputs to get you started with FlytBase. You can learn about FlytOS and get a detailed reference for all the |api_link|. It provides a step by step guide to install and get started with drone application development. You can refer to the sample apps and start building your own onboard and web/mobile apps.
 
+.. |api_link| raw:: html
+
+   <a href="http://api.flytbase.com" target="_blank">FlytAPIs</a> 
 
 You can participate in our `forums`_ or `facebook`_ group discussions to interact with other drone developers and share your use cases to get valuable feedback or get help in development. You can always reach out to us for any issues at support@flytbase.com. 
 
