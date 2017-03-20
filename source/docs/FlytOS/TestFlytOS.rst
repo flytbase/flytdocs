@@ -16,10 +16,10 @@ Next step is to test a web/mobile app built on top of FlytOS APIs.
 .. image:: /_static/Images/app-login-screen.png
   :align: center 
 
-4. Enter IP address of the companion computer / FlytPOD in the app and click connect.
+4. Enter IP address of the companion computer / FlytPOD/PRO in the app and click connect.
 5. Manually arm the drone and takeoff. Switch to RC-POSCTL mode. Make sure that drone is holding its position.
 6. Switch to OFFBOARD/API-POSCTL mode using the offboard switch on RC.
-7. Now the Joystik app should have the control. Try moving the drone using buttons on app.
+7. Now the Joystik app should have the control. Try moving the drone using app.
 
 
 .. image:: /_static/Images/app-screen.png
