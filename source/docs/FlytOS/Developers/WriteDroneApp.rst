@@ -9,7 +9,7 @@ Onboard Apps
 ------------
 
 * :ref:`Onboard C++<write_onboard_cpp>`
-* :ref:`Onboard PYthon<write_onboard_python>`
+* :ref:`Onboard Python<write_onboard_python>`
 * :ref:`ROSCPP<write_roscpp>`
 * :ref:`ROSPY<write_rospy>`
 
