@@ -94,7 +94,9 @@ User Credentials
 ^^^^^^^^^^^^^^^^
 
 
-All FlytOS Linux Image versions have the same Login user credentials: **username - flytpod & password - flytpod**
+All FlytOS Linux Image versions have the same Login user credentials: 
+**username : flytpod**
+**password : flytpod**
 
 :ref:`Go back to the installation guide <odroid_guide>`
 
