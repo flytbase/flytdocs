@@ -14,12 +14,14 @@ FlytBase is the next generation platform for commercial drone applications. It i
 
 **FlytOS** is based on Linux and ROS (Robot Operating System) making it an ideal platform for research and commercial drone applications. It can interact with any compatible drone/autopilot using its adapter layer and exposes high level FlytAPIs in ROS, CPP, Python, REST and Websocket. It makes it easy to integrate custom payload and also provides advanced APIs using its onboard modules. These rich set of APIs allow for easy development of onboard business logic as well as remote monitoring and control through web and mobile apps. The modular design of FlytOS allows for integration with external ROS/Linux libraries and custom data plumbing between onboard and offboard apps. The vision of FlytOS is to provide a standard language for the drone developers to talk to their drones.
 
+**FlytSIM** FlytSim offers a 3D SITL(Software In The Loop) ROS-Gazebo based simulation environment for testing user apps without the drone hardware. Applications developed using FlytAPIs can be tested in FlytSim, before deploying on actual drones. This offers developers a pleasant drone application development experience, while keeping it safe, and saving them huge amount of time and effort.
+
 **FlytPOD/PRO** is an integrated flight computer stack with a hybrid architecture, consisting of a STM32 microcontroller based autopilot tightly coupled with ODROID-XU4 SBC (single board computer). It also has a powerful WiFi router running OpenWRT firmware and several interfaces for custom payloads, radio receivers and special sensors. It comes with PX4 flight stack and FlytOS preloaded for an out-of-the-box ready-to-fly experience.
 
-This documentation gives all the inputs to get you started with FlytBase. You can learn about FlytOS and get a detailed reference for all the `FlytAPIs<api.flytbase.com>`_. It provides a step by step guide to install and get started with FlytSim simulation on your laptop. You can refer to the sample apps and start building your own onboard & web/mobile apps and test them with FlytSim.
+This documentation gives all the inputs to get you started with FlytBase. You can learn about FlytOS and get a detailed reference for all the `FlytAPIs<api.flytbase.com>`_. It provides a step by step guide to install and get started with drone application development. You can refer to the sample apps and start building your own onboard and web/mobile apps.
 
 
-Checkout and participate in our `forums`_, `facebook`_ group and  interact with the community sharing your use cases, feedback and anything you need help with. You can always reach out to us for any issues at support@flytbase.com. 
+You can participate in our `forums`_ or `facebook`_ group discussions to interact with other drone developers and share your use cases to get valuable feedback or get help in development. You can always reach out to us for any issues at support@flytbase.com. 
 
 .. _documentation:  
 
