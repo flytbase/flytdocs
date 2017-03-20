@@ -1,9 +1,9 @@
 .. _write_drone_app:
 
-Write Drone App
-===============
+Building Custom Apps
+=====================
 
-FlytOS provides developers a vast array of language options when it comes to writing their Custom Drone Applications. 
+FlytOS provides developers a vast array of language options when it comes to building their custom drone applications. 
 
 Onboard Apps
 ------------
