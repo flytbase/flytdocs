@@ -12,7 +12,7 @@ Follow the steps below to get started with FlytConsole.
 1. Power on your Flight Computer running FlytOS.
 2. Connect your personal computer to the same network that your Flight Computer is connected to.
 3. If your flight computer is in Access Point(AP) mode, you can connect to its WiFi (ssid: FlytPOD_wifi). If the flight computer is client mode, connect your personal computer to the same router which your flight computer is connected to.
-4. Next go to the following link to open FlytConsole: `<http://flytpod/flytconsole>`_
+4. Next go to the following link to open FlytConsole: `<http://flytpod/flytconsole>`_ or `<http://ip-address-of-device/flytconsole>`_
  
 
 

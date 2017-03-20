@@ -10,19 +10,19 @@ WiFi Setup
 Brief introduction of HotSpot and Client Modes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-FlytPOD has inbuilt powerful 2.4 GHz WiFi router, which can be set into Hotspot/AP or Client mode.
+FlytPOD/PRO has inbuilt powerful 2.4 GHz WiFi router, which can be set into Hotspot/AP or Client mode.
 
 
 
 **HotSpot/AP Mode**
 
-FlytPOD creates a WiFi access point to which your mobile devices can connect. FlytPOD ships with this default mode. Please note that in this mode FlytPOD can not access the Internet. Hence, automatic updates, maps in FlytConsole will not work when FlytPOD is operating in Hotspot/AP mode.
+FlytPOD/PRO creates a WiFi access point to which your mobile devices can connect. FlytPOD ships with this as default mode. Please note that in this mode FlytPOD/PRO can't access the Internet. Hence, automatic updates and maps in FlytConsole will not work while FlytPOD/PRO is operating in Hotspot/AP mode.
 
 
 
 **Client Mode**
 
-FlytPOD connects to available university, home WiFi network. Your WiFi network should have Internet connectivity in order for FytPOD to access the Internet.
+FlytPOD/PRO connects to available WiFi network. Your WiFi network should have Internet connectivity in order for the FlytPOD/PRO to access the Internet.
 
 
 .. Configuring WiFi Module
@@ -42,21 +42,23 @@ Changing the WiFi Mode
 
 .. **Changing the WiFi Mode:**
 
-1. Power on FlyPOD using the battery or wall adapter.
-2. Connect to flytpod_wifi network.
+1. Power ON FlytPOD/PRO using the battery or wall adapter.
+2. Connect to FlytPOD_wifi network.
    
-   .. important:: * By default FlytPOD is configured into Hotspot/AP mode.
-   					* Default SSID: flytpod_wifi.
-   					* Default password: Please check the flyer shipped with FlytPOD.
+   .. important:: * By default FlytPOD/PRO is configured into Hotspot/AP mode.
+   					* Default SSID: FlytPOD_wifi.
+   					* Default password: FlytPOD123 (or please check the flyer shipped with FlytPOD/PRO).
    					
 
-3. Launch FlytConsole in the web browser using the URL ``flytpod/flytconsole``. Go to the options menu in the top right corner and select WiFi setup.
+3. Launch FlytConsole in the web browser using the URL ``flytpod/flytconsole``. Go to the WiFi setup.
 
 .. figure:: /_static/Images/DashboardFc.png
 	:align: center
 	:scale: 50 %
 	
-	WiFi Settings
+	WiFi Setup
+
+4. Select Hotspot/AP or client mode.
 
 .. figure:: /_static/Images/APClient.png
 	:align: center
@@ -64,7 +66,6 @@ Changing the WiFi Mode
 	
 	AP and Client Modes
 
-4. Select Hotspot/AP or client mode.
 
 .. figure:: /_static/Images/ApMode.png
 	:align: center
@@ -80,10 +81,10 @@ Changing the WiFi Mode
 
 
 5. Select proper encryption option for Hotspot/AP mode and set a password.
-6. In client mode click on the button to scan for available networks. It takes nearly 10 seconds. Select the network that you want to connect to. Enter the password and click on connect.
-7. After clicking on connect in Hotspot or client mode you should wait for 2 minutes and then shutdown FlytPOD by pressing the power switch on the back panel for 4 seconds. After shutdown is complete (fan stopped) remove the power cable and then power it up again. FlytPOD should now be in the new configured mode.
+6. In client mode click on the button to scan for available networks. It takes nearly 10 seconds. Select the network that you want to connect to, enter the password and click on connect.
+7. After clicking on connect in Hotspot or client mode you should wait for 2 minutes and then shutdown FlytPOD by pressing the power switch on the back panel. After shutdown is complete (fan stopped) remove the power cable and then power it up again. FlytPOD/PRO should now be in the new configured mode.
 
-8. If the mode changes are not successful then FlytPOD will automatically reset itself to default mode viz. Hotspot with SSID: flytpod_wifi and password: shipped with FlytPOD.
+8. If the mode changes are not successful then FlytPOD/PRO will automatically reset itself to default mode viz. Hotspot with SSID: FlytPOD_wifi and password: FlytPOD123 (shipped with FlytPOD/PRO).
 
 
 
@@ -97,24 +98,24 @@ Changing the WiFi Mode
 
 
 .. note:: * In hotspot mode you can access FlytConsole at ``flytpod/flytconsole``.
-			 * In client mode you might have to replace ``flytpod`` with the IP address of FlytPOD which you can find through your router page by looking for connected client with the name 'flytpod'. Another client with name 'FlytWRT' would be connected as well but that is of no use.
+			 * In client mode you might have to replace ``flytpod`` with the IP address of FlytPOD/PRO which you can find through your router page by looking for connected client with the name 'flytpod'. Another client with name 'FlytWRT' would be connected as well but that is of no use.
 
 
 
 Troubleshooting
 ^^^^^^^^^^^^^^^
 
-1. **Cannot reach FlytPOD** 
+1. **Cannot reach FlytPOD/PRO** 
   
    a. In hotspot mode you can access FlytConsole at ``flytpod/flytconsole``.
    b. In client mode you might have to replace ``flytpod`` with the IP address of FlytPOD which you can find through your router page by looking for connected client with the name* 'flytpod'.
 
 2. **Forgot Password**
   
-   If you have forgottoen password or your settings are not useful further then you can reset the wifi to default.
+   If you have forgot your password or your settings are not further useful, then you can reset the wifi to default.
 
-   a. Connect monitor, keyboard, mouse to flytpod. Plug Flytpod using wall adapter/battery. 
-   b. Open firefox browser in flytpod UI.
+   a. Connect monitor, keyboard, mouse to FlytPOD/PRO. Plug FlytPOD/PRO using wall adapter/battery. 
+   b. Open firefox browser in FlytPOD/PRO UI.
    c. Open FlytConsole using this URL ``localhost/flytconsole``.
    d. You can follow steps given above to configure WiFi into AP or Client mode with new password.
 
@@ -135,17 +136,17 @@ Please follow the steps below only if you are an advanced user.
 For advanced users
 """"""""""""""""""
 
-The FlytPOD has built-in OpenWRT powered WiFi router. Internally it is connected with the main computer on Ethernet. The Module can be configured in AP Mode or in Client Mode depending upon the application. Router is using relayd for client mode operation.
+The FlytPOD/PRO has built-in OpenWRT powered WiFi router. Internally it is connected with the main computer on Ethernet. The Module can be configured in AP Mode or in Client Mode depending upon the application. Router is using *relayd* for client mode operation.
 
 In case the FlytConsole WiFi setup is not sufficient for you then you can access OpenWRT router directly. There are two methods available.
 
 **Access Router**
 
-1) Accessing router LUCI web page from FlytPOD at IP 192.168.1.1 (in ap mode) or 10.0.0.1 (in client mode). 
+1) Accessing router LUCI web page from FlytPOD/PRO at IP 192.168.1.1 (in AP mode) or 10.0.0.1 (in Client mode). 
 The ``default username: root`` and ``password: 123``.
 
-2) Access serial console to OpenWRT router on flytpod. ``Port: /dev/ttySAC2`` ``Baudrate: 57600``
-This console is accessible from FlytPOD and you can use minicom.
+2) Access serial console to OpenWRT router on FlytPOD/PRO. ``Port: /dev/ttySAC2`` ``Baudrate: 57600``
+This console is accessible from FlytPOD/PRO and you can use minicom.
 
 ``sudo minicom -D /dev/ttySAC2 -b 57600``
 
@@ -162,7 +163,7 @@ After this command press enter twice to initialize OpenWRT shell.
 Open OpenWRT console as shown above and give following command:
 
 
-firstboot && reboot
+``firstboot && reboot``
 
 
 

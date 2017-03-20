@@ -84,3 +84,6 @@ WiFi setup
 
 :ref:`Go back to the installation guide <rpi_guide>`
 
+.. |br| raw:: html
+
+   <br />
