@@ -88,7 +88,7 @@ We have created a video tutorial demonstrating how to flash FlytOS Linux Image o
 
 All FlytOS Linux Image versions have the same Login user credentials: **username - flytpod & password - flytpod**
 
-.. note:: Intel Edison will boot up with its wifi configured as Access Point. For more details, check :ref:`here<edison_wifiap>`.
+.. note:: Intel Edison will boot up with its wifi configured as Access Point. 
 
 
 .. .. _installing_flytos_edison:
@@ -172,6 +172,19 @@ All FlytOS Linux Image versions have the same Login user credentials: **username
 .. .. image:: /_static/Images/fOSinst5.png
 ..    :align: center
 
+.. _edison_wifiap:
+
+WiFi Access Point
+^^^^^^^^^^^^^^^^^
+
+After flashing :ref:`FlytOS Linux Image<FlytOS_linux_image>` in your Intel Edison, WiFi access point is created on the device on system startup with following credentials:
+
+ssid:       edison_wifi
+
+Password:   FlytPOD123
+
+Connect to the access point on another computer. Open the following link in your browser to view :ref:`FlytConsole<about flytconsole>`: http://192.168.42.1/flytconsole
+
 
 .. _activate_flytos_edison:
 
@@ -192,20 +205,6 @@ You have to activate installed FlytOS, without which critical APIs would not fun
 
 Hardware Setup
 ^^^^^^^^^^^^^^^
-
-.. _edison_wifiap:
-
-WiFi Access Point
-"""""""""""""""""
-
-After flashing :ref:`FlytOS Linux Image<FlytOS_linux_image>` in your Intel Edison, WiFi access point is created on the device on system startup with following credentials:
-
-ssid:       edison_wifi
-
-Password:   FlytPOD123
-
-Connect to the access point on another computer. Open the following link in your browser to view :ref:`FlytConsole<about flytconsole>`: http://192.168.42.1/flytconsole
-
 
 
 Telemetry Connection
