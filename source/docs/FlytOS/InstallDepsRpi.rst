@@ -71,5 +71,16 @@ Once you have installed the latest FlytOS Linux Image, you **MUST update your Fl
 
 .. caution:: You must :ref:`activate your device<activate_flytos_rpi>`, without which critical APIs would not function.
 
+
+WiFi setup
+----------
+
+* If you installed FlytOS on a custom image, then you can create your own wifi access point access point.
+
+* To access internet on your Raspberry Pi (for activation, loading maps, auto updates, etc), you can delete the access point and connect RPi's wifi to you home router that has internet access. Beginners can see `this tutorial <https://cdn-learn.adafruit.com/downloads/pdf/adafruits-raspberry-pi-lesson-3-network-setup.pdf>`_  to learn about networking on Raspberry Pi. More advanced users can follow :ref:`this networking setup guide<advanced_networking>`. 
+
+
+|br|
+
 :ref:`Go back to the installation guide <rpi_guide>`
 

@@ -77,8 +77,8 @@ Activate FlytOS
 
 You have to activate installed FlytOS, without which critical APIs would not function.
 
-1. Make sure your Raspberry Pi has internet access before proceeding. You can visit :ref:`the wifi setup page<raspi_wifiap>` to know how you can get internet access on RPi.
-2. :ref:`Launch FlytConsole <FlytConsole_launch>`. You can launch FlytConsole in the RPi's browser using the URL ``http://localhost/flytconsole`` or on your PC's browser using the URL ``http://ip-address-of-device/flytconsole`` . In FlytConsole click on **Activate Now tag** under **License tab** at bottom right corner. A pop-up will appear which will direct you to the device registration page. If you are not logged in, enter your FlytBase Account credentials to log in. 
+1. Make sure your Raspberry Pi has internet access before proceeding. To access internet on your Raspberry Pi (for activation, loading maps, auto updates, etc), you can delete the access point and connect RPi's wifi to you home router that has internet access. Beginners can see `this tutorial <https://cdn-learn.adafruit.com/downloads/pdf/adafruits-raspberry-pi-lesson-3-network-setup.pdf>`_  to learn about networking on Raspberry Pi. More advanced users can follow :ref:`this networking setup guide<networking_setup>`. 
+2. :ref:`Launch FlytConsole <FlytConsole_launch>`. You can launch FlytConsole in the RPi's browser using the URL ``http://localhost/flytconsole`` or on your PC's browser using the URL ``http://<ip-address-of-device>/flytconsole`` . In FlytConsole click on **Activate Now tag** under **License tab** at bottom right corner. A pop-up will appear which will direct you to the device registration page. If you are not logged in, enter your FlytBase Account credentials to log in. 
 3. Choose a device nick-name and select your compute engine. 
 4. In the drop down for license, select existing license if available or select ‘Issue a new license’. You can also provide a nick-name for your license.  
 5. Click on Save Changes to register device and generate a license key.
@@ -89,24 +89,6 @@ You have to activate installed FlytOS, without which critical APIs would not fun
 
 Hardware Setup
 ^^^^^^^^^^^^^^
-
-.. _raspi_wifiap:
-
-WiFi Setup
-""""""""""
-
-* Insert the SD Card in your Raspberry Pi 3 after flashing :ref:`FlytOS Linux image<flashing_img_rpi>` on it and apply power to boot it. On boot up a WiFi access point is created on the device with following credentials:
-ssid:       FlytPOD_wifi
-
-Password:   FlytPOD123
-
-Connect to the access point on another computer. Open the following link in your browser to view :ref:`FlytConsole<about flytconsole>`: http://10.42.0.1/flytconsole
-
-* If you installed FlytOS on a custom image, then you can create your own access point.
-
-.. note:: To access internet on your Raspberry Pi (for activation, loading maps, auto updates, etc), you can delete the access point and connect RPi's wifi to you home router that has internet access. Beginners can see `this tutorial <https://cdn-learn.adafruit.com/downloads/pdf/adafruits-raspberry-pi-lesson-3-network-setup.pdf>`_  to learn about networking on Raspberry Pi. More advanced users can follow :ref:`this networking setup guide<networking_setup>`. 
-
-:ref:`Go back to Raspberry Pi Guide. <activate_flytos_rpi>`
 
 .. _raspi_telem:
 
