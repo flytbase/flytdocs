@@ -14,13 +14,13 @@ Video Streaming App
 
 4. Enter IP address of the companion computer / FlytPOD in the app and click connect.
 5. Now the Flyt Cam app should be connected.
+6. Select the video topic to view, from the drop down list and click on the play button. 
+7. You should see a video feed pop up below.
 
 
 .. image:: /_static/Images/video-app-screen.png
   :align: center
 
-6. Select the video topic to view, from the drop down list and click on the play button. 
-7. You should see a video feed pop up below.
 8. To start a different stream select a different link from the download link or stop button to stop playing.
 
 
