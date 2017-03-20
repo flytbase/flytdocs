@@ -61,7 +61,7 @@ Image download:
 
 7. Uncompressed size of image is about 8.5GBs.
       
-Image write to SD/eMMC Card and partition expansion:
+Write image to SD/eMMC Card and partition expansion:
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. 1. We recommend using a 32 GB SD Card, but a 16 GB card would work fine too. 
@@ -91,7 +91,9 @@ We have created a video tutorial for Linux and Mac OS users, to help flash FlytO
 User Credentials
 ^^^^^^^^^^^^^^^^
 
-All FlytOS Linux Image versions have the same Login user credentials: **username - flytpod & password - flytpod**
+All FlytOS Linux Image versions have the same Login user credentials: 
+**username : flytpod**
+**password : flytpod**
 
 :ref:`Go back to the installation guide <flytpod_guide>`
 
