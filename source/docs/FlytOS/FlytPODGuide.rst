@@ -93,7 +93,7 @@ Hardware Setup
 FlytPOD comes in two variants - FlytPOD and FlytPOD PRO. Both of them have an inbuilt autopilot and you shall not have to go through this guide. See the detailed steps for getting started with FlytPOD/PRO :ref:`here<about_flytpod_pro>`.
 
 
-Next Step: :ref:`Supported Ground Control Stations<supported_GCS>`
+Next Step: :ref:`Connections and Expansion Ports<FlytPOD_specifications>`
 ------------------------------------------------------------------
 
 .. Getting started with FlytOS
