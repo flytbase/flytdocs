@@ -11,5 +11,6 @@ FlytBase Account allows you to activate your FlytOS by registering your Flight C
 
    <a href="http://my.flytbase.com" target="_blank">here</a>
 
-2. Once done, an email ID confirmation link would be sent to your registered email ID asking you to set a password for your account.
+2. Once done, a confirmation link would be sent to your registered email ID asking you to set a password for your account.
+
 3. Login using your registered email ID and password.

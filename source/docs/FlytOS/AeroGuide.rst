@@ -41,6 +41,12 @@ Installing Dependencies
        export PYTHONPATH=$PYTHONPATH:/flyt/flytapps:/flyt/userapps
        source /flyt/flytos/flytcore/setup.bash
 
+3. Run the following additional command in your terminal:
+
+   .. code-block:: bash
+   
+       sed -i 's/source \/opt\/ros\/kinetic\/setup.bash//g' ~/.bashrc
+       
 Installing debian package
 """""""""""""""""""""""""
 
