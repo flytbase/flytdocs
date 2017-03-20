@@ -58,7 +58,7 @@ Image download:
 
 7. Uncompressed size of image is about 8.5GBs.
       
-Image write to SD/eMMC Card and partition expansion:
+Write Image to SD/eMMC Card and partition expansion:
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. 1. We recommend using a 32 GB SD Card, but a 16 GB card would work fine too. 
@@ -84,13 +84,15 @@ We have created a video tutorial for Linux and Mac OS users, to help flash FlytO
 
 |br|
 
-After performing the above steps, your FlytOS SD Card is ready. Insert the card in Raspberry Pi's SD Card slot and apply power to the Pi to start booting FlytOS.
+After performing the above steps, your FlytOS SD Card is ready. Insert the card in Raspberry Pi's SD Card slot and power ON the Pi to start booting FlytOS.
 
 User Credentials
 ^^^^^^^^^^^^^^^^
 
 
-All FlytOS Linux Image versions have the same Login user credentials: **username - flytpod & password - flytpod**
+All FlytOS Linux Image versions have the same Login user credentials: 
+**username : flytpod** 
+**password : flytpod**
 
 .. note:: RaspberryPi3 will boot up with its wifi configured as Access Point. For more details, check :ref:`here<raspi_wifiap>`.
 
