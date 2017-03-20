@@ -94,7 +94,7 @@ FlytPOD comes in two variants - FlytPOD and FlytPOD PRO. Both of them have an in
 
 
 Next Step: :ref:`Connections and Expansion Ports<FlytPOD_specifications>`
-------------------------------------------------------------------
+--------------------------------------------------------------------------
 
 .. Getting started with FlytOS
 .. ^^^^^^^^^^^^^^^^^^^^^^^^^^^
