@@ -91,15 +91,15 @@ You can participate in our `forums`_ or `facebook`_ group discussions to interac
 ..    docs/FlytAPI/REST_WebsocketAPIs.rst
 
 
-.. toctree::
-   :maxdepth: 2
-   :hidden:
-   :caption: FlytApps Tutorials
+.. .. toctree::
+..    :maxdepth: 2
+..    :hidden:
+..    :caption: FlytApps Tutorials
    
-   docs/FlytApps/OnboardApps.rst
-   docs/FlytApps/Web_MobileApps.rst
-   docs/FlytApps/WebApps.rst
-   docs/FlytApps/MobileApps.rst
+..    docs/FlytApps/OnboardApps.rst
+..    docs/FlytApps/Web_MobileApps.rst
+..    docs/FlytApps/WebApps.rst
+..    docs/FlytApps/MobileApps.rst
    
 
 .. .. toctree::
