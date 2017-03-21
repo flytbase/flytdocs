@@ -3,9 +3,9 @@
 Frequently Asked Questions 
 ==========================
 
-.. * **Not able to login after boot due to out of memory error after making a FlytOS sdcard**
+* **Not able to login after boot due to out of memory error after making a FlytOS sdcard**
   
-..   Make sure you have not skipped the important step of expanding the root partition after flashing your sdcard/eMMC. Read the tutorial for your specific hardware again and make sure you completed every step.
+  Make sure you have not skipped the important step of expanding the root partition after flashing your sdcard/eMMC. Read the tutorial for your specific hardware again and make sure you completed every step.
 
 .. * **FlytConsole shows connected and disconnected again and again**
   
