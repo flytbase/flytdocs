@@ -91,8 +91,8 @@ WiFi Setup
 ^^^^^^^^^^^
 
 * Insert the SD Card in your Raspberry Pi 3 after flashing :ref:`FlytOS Linux image<flashing_img_rpi>` on it and apply power to boot it. On boot up a WiFi access point is created on the device with following credentials:
-ssid:       FlytPOD_wifi
 
+ssid:       FlytPOD_wifi
 Password:   FlytPOD123
 
 Connect to the access point on another computer. Open the following link in your browser to view :ref:`FlytConsole<about flytconsole>`: http://10.42.0.1/flytconsole

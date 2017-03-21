@@ -37,12 +37,6 @@ You can participate in our `forums`_ or `facebook`_ group discussions to interac
    docs/Developer.rst
    docs/Debugging.rst
    docs/AdvancedTopics.rst
-   .. docs/FlytOS/SignUp.rst
-   .. docs/FlytOS/FlytOSInstallationGuide.rst
-   .. docs/FlytOS/Supported_GCS.rst
-   .. docs/FlytOS/FirstFlight.rst
-   .. docs/FlytOS/BuiltinApps.rst
-   .. docs/FlytOS/FlytOSUpdate.rst
 
 .. toctree::
     :maxdepth: 2

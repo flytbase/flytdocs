@@ -1,7 +1,7 @@
 .. _more_sample_app:
 
 More Sample Apps
-===============
+================
 
 Flytbase provides a number of sample apps thst demonstrate the use of different FlytAPIs. You can download the code from Github and follow the instructions given on Github to run them.
 

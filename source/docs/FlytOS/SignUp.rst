@@ -1,7 +1,7 @@
 .. _create_flytbase_account:
 
-Sign In
-========
+Register FlytBase Account
+=========================
 
 FlytBase Account allows you to activate your FlytOS by registering your Flight Computer and also lets you manage your license subscriptions. Login using your registered email ID and password. If you do not have a FlytBase account, follow the steps given below to create your FlytBase Account.
 

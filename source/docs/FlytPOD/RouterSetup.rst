@@ -160,7 +160,7 @@ After this command press enter twice to initialize OpenWRT shell.
 
 **Reset the router**
 
-Open OpenWRT console as shown above and give following command:
+Access serial console to OpenWRT router as shown above and execute the following command:
 
 
 ``firstboot && reboot``

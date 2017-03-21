@@ -98,14 +98,10 @@ FlytOS is compatible with :ref:`FlytPOD<about_flytpod>`, :ref:`FlytPOD PRO<about
 .. .. warning:: Since the image is of only around 8.5 GBs, the rest of the SD/eMMC Card would have unallocated memory. DONOT forget to expand SD/eMMC card partition.
 
 
-.. |br|
-
 .. ..  youtube:: jyFvzluXzug
 ..     :aspect: 16:9
 ..     :width: 80%
 
-
-.. |br|
 
 .. **User Credentials**
 
@@ -149,14 +145,11 @@ FlytOS is compatible with :ref:`FlytPOD<about_flytpod>`, :ref:`FlytPOD PRO<about
 
 .. We have created a video tutorial demonstrating how to flash FlytOS Linux Image on your Intel Edison board. Additionally one can refer Step-2 of `this guide <https://github.com/oskarpearson/mmeowlink/wiki/Backing-up-and-cloning-your-OpenAPS-Edison#step-2-flash-image-onto-edison>`_ for the same.
 
-.. |br|
 
 .. ..  youtube:: LHMF8peY2MY
 ..     :aspect: 16:9
 ..     :width: 80%
 
-
-.. |br|
 
 .. **User Credentials**
 

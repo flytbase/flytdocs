@@ -1,7 +1,7 @@
 .. _ready_video_streaming:
 
 Video Streaming App
-==================
+===================
 
 
 1. Download Flyt Cam android app from `here1`_ .

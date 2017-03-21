@@ -1,7 +1,7 @@
 .. _write_onboard_python:
 
 Onboard Python APP
-===============
+==================
 
 
 Below is a demo `youtube video <https://www.youtube.com/watch?v=rKUt884XtNg>`_ describing how to execute a built-in demo-app in FlytSim.
@@ -33,7 +33,7 @@ And this is actual flight test `video <https://www.youtube.com/watch?v=lwKZXkzkM
 
 
 Execution
-""""""""""""""""""
+"""""""""
 
 The source code *demoapp1.py* of this app is located at */flyt/flytapps/onboard/install*. To execute this app run the following command in your terminal.
 
@@ -42,14 +42,14 @@ The source code *demoapp1.py* of this app is located at */flyt/flytapps/onboard/
     $ python /flyt/flytapps/onboard/install/demoapp1.py
 
 Code
-"""""""""""""
+""""
 
 .. literalinclude:: include/demoapp1.py
    :language: py
    :tab-width: 2
 
 Code Explained
-"""""""""""""""""""""""
+""""""""""""""
 
 * Imports and initialization:
 
@@ -90,7 +90,7 @@ Demo App 2
 This demo app makes the robot takeoff, move in a square trajectory of side length *provided as an argument to the script* and land once the entire mission is over.
 
 Execution
-""""""""""""""""""
+"""""""""
 
 The source code *demoapp2.py* of this app is located at */flyt/flytapps/onboard/install*. To execute this app run the following command in your terminal.
 
@@ -100,7 +100,7 @@ The source code *demoapp2.py* of this app is located at */flyt/flytapps/onboard/
     # here '3.0' is passed as an argument, one could send any other float value.
 
 Code
-"""""""""""""
+""""
 
 .. literalinclude:: include/demoapp2.py
    :language: py
