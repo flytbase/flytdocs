@@ -28,7 +28,7 @@ You can also see the FlytOS version in FlytConsole in the top right.
 	:scale: 60 %
 
 
-.. _flytos_startup_log:
+.. _forum_startup_log:
 
 FlytOS Startup Log 
 """"""""""""""""""
@@ -46,6 +46,8 @@ Many errors can be caught in the FlytOS startup log itself. To capture the log, 
 You will see a lot of text scroll by in your terminal. Wait for a few seconds for FlytOS to start completely. Then copy the complete text, paste it in a text file. You can attach this file with the question that you ask in the forum. 
 
 
+.. _forum_update_log:
+
 FlytOS Update Log
 """"""""""""""""""
 
@@ -55,6 +57,8 @@ If you are facing any issues related to Autoupdate in case the updates are not i
    
    $ cat /flyt/logs/startup/flyt_startup.log
 
+
+.. _forum_sourcing_files:
 
 Sourcing Files
 """"""""""""""""""

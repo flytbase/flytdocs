@@ -177,7 +177,7 @@ All FlytOS Linux Image versions have the same Login user credentials: **username
 WiFi Access Point
 ^^^^^^^^^^^^^^^^^
 
-After flashing :ref:`FlytOS Linux Image<FlytOS_linux_image>` in your Intel Edison, WiFi access point is created on the device on system startup with following credentials:
+After flashing FlytOS Linux Image in your Intel Edison, WiFi access point is created on the device on system startup with following credentials:
 
 ssid:       edison_wifi
 
