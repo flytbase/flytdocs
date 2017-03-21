@@ -12,7 +12,7 @@ Debugging
    :caption: Debugging and Advanced Topics
   
    ./FlytOS/Troubleshooting/GettingHelpForum.rst
-   .. ./FlytOS/Troubleshooting/FAQ.rst
+   ./FlytOS/Troubleshooting/FAQ.rst
    .. ./FlytOS/Troubleshooting/GCSBridge.rst
    .. ./FlytOS/Troubleshooting/AutopilotConnectionIssues.rst
    .. ./FlytOS/Troubleshooting/AdditionalPayloadSetup.rst
