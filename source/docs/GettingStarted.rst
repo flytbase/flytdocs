@@ -7,7 +7,7 @@ FlytOS is the software framework of FlytBase. It is based on Linux and ROS (Robo
 
 This section will help you in installing FlytOS on your device
 
-* :ref:`Sign In<create_flytbase_account>`
+* :ref:`Create FlytBase Account<create_flytbase_account>`
 * :ref:`Setup FlytOS<Hardware Specific Installation Guide>`
 * :ref:`Supported GCS<supported_GCS>`
 * :ref:`First Flight<first_flight_main>`

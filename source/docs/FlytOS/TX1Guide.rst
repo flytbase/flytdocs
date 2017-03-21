@@ -58,8 +58,8 @@ Installing debian package
 
  Once you have prepared FlytOS Linux Image, you **MUST install/update your FlytOS debian package** by following the steps below:
 
-1. `Login <http://my.flytbase.com>`_ to your FlytBase Account.
-2. Download the hardware specific `FlytOS Debian Package <http://my.flytbase.com/FlytOS>`_ from your FlytBase Account.
+1. `Login <https://my.flytbase.com>`_ to your FlytBase Account.
+2. Download the hardware specific `FlytOS Debian Package <https://my.flytbase.com/FlytOS>`_ from your FlytBase Account.
 
 .. 3. Install some dependencies - To install run the following commands in your terminal.
 

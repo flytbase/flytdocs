@@ -58,11 +58,11 @@ Next, you **MUST update your FlytOS debian package** by following the steps belo
 
 .. |my_flytbase_link| raw:: html
 
-   <a href="http://my.flytbase.com" target="_blank">Login</a>
+   <a href="https://my.flytbase.com" target="_blank">Login</a>
 
 .. |flytos_dl_link| raw:: html
 
-   <a href="http://my.flytbase.com/FlytOS" target="_blank">FlytOS Debian Package</a>
+   <a href="https://my.flytbase.com/FlytOS" target="_blank">FlytOS Debian Package</a>
 
 2. Download the hardware specific |flytos_dl_link| from your FlytBase Account.
 3. Verify that the dependencies are installed. To install run the following commands in your terminal.

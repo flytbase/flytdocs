@@ -24,11 +24,11 @@ This step requires you to have a registered FlytBase account. In case you don't 
 
 .. |my_flytbase_link| raw:: html
 
-   <a href="http://my.flytbase.com" target="_blank">Login</a>
+   <a href="https://my.flytbase.com" target="_blank">Login</a>
 
 .. |flytos_dl_link| raw:: html
 
-   <a href="http://my.flytbase.com/FlytOS" target="_blank">FlytOS Linux Image</a>
+   <a href="https://my.flytbase.com/FlytOS" target="_blank">FlytOS Linux Image</a>
 
 1. |my_flytbase_link| to your FlytBase Account.
 2. Download the hardware specific |flytos_dl_link| from your FlytBase account.
@@ -101,8 +101,8 @@ All FlytOS Linux Image versions have the same Login user credentials: **username
 
 .. Once you have installed the latest FlytOS Linux Image, you **MUST update your FlytOS debian package** by following the steps below:
 
-.. 1. `Login <http://my.flytbase.com>`_ to your FlytBase Account.
-.. 2. Download the hardware specific `FlytOS Debian Package <http://my.flytbase.com/FlytOS>`_ from your FlytBase Account.
+.. 1. `Login <https://my.flytbase.com>`_ to your FlytBase Account.
+.. 2. Download the hardware specific `FlytOS Debian Package <https://my.flytbase.com/FlytOS>`_ from your FlytBase Account.
 .. 3. Install some dependencies - To install run the following commands in your terminal.
 
 ..    .. literalinclude:: include/flytos_dependency.sh

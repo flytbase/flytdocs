@@ -14,11 +14,11 @@ Image download:
 ^^^^^^^^^^^^^^^
 .. |my_flytbase_link| raw:: html
 
-   <a href="http://my.flytbase.com" target="_blank">Login</a>
+   <a href="https://my.flytbase.com" target="_blank">Login</a>
 
 .. |flytos_dl_link| raw:: html
 
-   <a href="http://my.flytbase.com/FlytOS" target="_blank">FlytOS Linux Image</a>
+   <a href="https://my.flytbase.com/FlytOS" target="_blank">FlytOS Linux Image</a>
 
 1. |my_flytbase_link| to your FlytBase Account.
 2. Download the hardware specific |flytos_dl_link| from your FlytBase account.
