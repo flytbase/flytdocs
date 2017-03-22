@@ -105,7 +105,7 @@ Next step is to test a web/mobile app built on top of FlytOS APIs.
 11. If everything goes right then press land button on app.
 12. If auto landing worked well then keep the drone on ground, disarmed and switch to OFFBOARD/ API-POSCTL.
 13. This time take-off with app and move the drone around and then land.
-  14. If you are here then you have succefully integrated FlytOS with your drone.
+14. If you are here then you have succefully integrated FlytOS with your drone.
 15. Welcome onboard! Go ahead and check out some cool built in apps for your drone.
 
 
