@@ -20,7 +20,7 @@ FlytSim Dependencies
 
 FlytSim requires Gazebo7 which comes pre-packaged with ROS Kinetic. If in case, you have a different version of Gazebo, please install Gazebo7 before moving ahead in this tutorial. Failing to install the right version can render the simulation inoperational. 
 
-2. Before proceeding further, add the following lines at the end of your /etc/bash.bashrc file. To open the file for editing, run the following command the terminal ``sudo nano /etc/bash.bashrc`` and to save your edited file, press ``ctrl+o+ENTER`` and to exit press ``ctrl+x``.
+2. Before proceeding further, add the following lines at the end of your /etc/bash.bashrc file. To open the file for editing, run the following command in the terminal ``sudo nano /etc/bash.bashrc`` and to save your edited file, press ``ctrl+o+ENTER`` and to exit press ``ctrl+x``.
 
    .. code-block:: bash
    
@@ -28,6 +28,7 @@ FlytSim requires Gazebo7 which comes pre-packaged with ROS Kinetic. If in case, 
        export PYTHONPATH=$PYTHONPATH:/flyt/flytapps:/flyt/userapps
        source /flyt/flytos/flytcore/setup.bash
        source /flyt/flytos/flytcore/share/sitl_gazebo/setup.sh
+       export CPATH=$CPATH:/opt/ros/kinetic/include
 
 3. Run the following additional command in your terminal:
 

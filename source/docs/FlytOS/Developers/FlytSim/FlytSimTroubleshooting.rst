@@ -65,8 +65,8 @@ Errors
    $ sudo apt-get install ros-kinetic-gazebo*
   
 
-* **dpkg: error processing archive /home/srv/Downloads/abc/flytsim-pe-staging_1.1-1g_amd64.deb (--unpack):
- trying to overwrite '/flyt/flytos/flytcore/_setup_util.py', which is also in package flytsim**
+* **dpkg: error processing archive /home/srv/Downloads/abc/flytsim-pe-staging_1.1-1g_amd64.deb (--unpack): trying to overwrite '/flyt/flytos/flytcore/_setup_util.py', which is also in package flytsim**
+  
  	You had previously installed beta version of FlytSim on your machine. Please uninstall it by running the following commands in your terminal.
 
   .. code-block:: bash
@@ -74,6 +74,14 @@ Errors
    $ sudo dpkg -r flytsim
    $ sudo rm -r /flyt
 
+* **ros/ros.h not found**
+	
+	Check whether the following line has been added to your /etc/bash.bashrc file 
+	  
+	.. code-block:: bash
+
+     export CPATH=$CPATH:/opt/ros/kinetic/include
+ 
 FAQs
 ----
 
