@@ -3,7 +3,7 @@
 Video Streaming App
 ===================
 
-1. Download Flyt Cam android app from `here <https://flyt.blob.core.windows.net/flytos/downloads/apk/Flyt-Joystick.apk>`_ .
+1. Download Flyt Cam android app from `here <https://flyt.blob.core.windows.net/flytos/downloads/apk/Flyt-Cam.apk>`_ .
 2. Alternatively you can use video web app on your laptop. Download Flyt Cam web app on your laptop from `here <https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/flytbase/flytsamples/tree/master/WebApps/Flyt_Cam>`_ . Enter into the directory and open index.html into browser.
 3. Connect your mobile / laptop to same wifi network that your companion computer / FlytPOD is connected to.
 
