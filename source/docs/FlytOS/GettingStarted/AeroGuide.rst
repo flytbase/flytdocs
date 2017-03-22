@@ -1,4 +1,4 @@
-.. _aero_guide:
+  .. _aero_guide:
 
 
 Intel Aero Compute Board
@@ -52,8 +52,6 @@ Installing debian package
 
 .. note:: This step requires you to have a registered FlytBase Account. In case you don't have an account, :ref:`create a FlytBase Account<create_flytbase_account>` before you proceed. 
 
-Next, you **MUST update your FlytOS debian package** by following the steps below:
-
 1. |my_flytbase_link| to your FlytBase Account.
 
 .. |my_flytbase_link| raw:: html
@@ -74,8 +72,8 @@ Next, you **MUST update your FlytOS debian package** by following the steps belo
    
 .. code-block:: bash
    
-   #make sure to provide absolute path of the debian package file: /home/flytpod/flytos_*.deb
-   $ sudo apt install -y <path to debian package location>/flytos_*.deb 
+   #make sure to provide absolute path of the debian package file: /home/flytpod/flyt*.deb
+   $ sudo apt install -y <path to debian package location>/flyt*.deb 
 
 5. Check for **Congratulations! FlytOS installation completed** message at the end.
 6. Just in case you see any dependency issues cropping up in your screen while installing FlytOS, kindly run the following command and execute the previous command again:

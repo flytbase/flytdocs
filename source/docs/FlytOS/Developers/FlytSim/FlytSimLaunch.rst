@@ -1,7 +1,7 @@
 .. _flytsim basics:
 
-FlytSim Basics
-==============
+FlytSim Start/Stop
+==================
 
 .. _launch flytsim:
 
@@ -13,13 +13,13 @@ To launch FlytSim, run this command in the **new** terminal.
 
 .. code-block:: bash
 
-	$ sudo $(rospack find core_api)/scripts/start_flytOS.sh --sitl
+	$ sudo $(rospack find core_api)/scripts/launch_flytSim.sh
 
-.. caution:: If you get this error: ``Error: package 'core_api' not found``, source your $HOME/.bashrc file or launch FlytSim in new terminal.
+.. caution:: If you get this error: ``Error: package 'core_api' not found``, try to launch FlytSim in new terminal.
 
 .. note:: For first time Gazebo users, Gazebo might take some time to launch. Be Patient!
 
-The above command would launch ROS and Gazebo. A quadrotor model-Iris will be automatically spawned for you to start executing your app. You can use FlytAPIs in your command line to do some simple maneuvers. For example,
+The above command would launch ROS and Gazebo. A hexrotor model-typhoon-h480 will be automatically spawned for you to start executing your app. You can use FlytAPIs in your command line to do some simple maneuvers. For example,
 
 .. code-block:: bash
 
@@ -42,19 +42,20 @@ The above command would launch ROS and Gazebo. A quadrotor model-Iris will be au
 	relative: false
 	yaw_valid: false
 	body_frame: false"
+	#This sends the vehicle to location (3,1,-2) in NED Frame.
 
 .. caution:: Gazebo runs in ENU frame, hence the above setpoints given in NED Frame would be transformed to ENU Frame by Gazebo.
 
 To know more about such commands, please refer to `FlytAPIs <http://api.flytbase.com>`_ for more details.	
 
-Kill FlytSim
+Stop FlytSim
 ------------
 
-To kill this instance of FlytSim, run this command in your terminal.
+To stop this instance of FlytSim, run this command in your terminal.
 
 .. code-block:: bash
 
-	$ sudo $(rospack find core_api)/scripts/kill_flytOS.sh
+	$ sudo $(rospack find core_api)/scripts/stop_flytSim.sh
 
 
 

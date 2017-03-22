@@ -12,7 +12,7 @@ Scroll through the various topics below for more information on building your ow
    :hidden:
    :caption: Developers 
 	
-   ./Developers/GettingStarted.rst
+   ./Developers/Introduction.rst
    ./Developers/APIDocumentation.rst
    ./Developers/Flytsim.rst
    ./Developers/WriteDroneApps.rst

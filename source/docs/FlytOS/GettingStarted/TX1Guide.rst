@@ -11,7 +11,7 @@ Nvidia TX1
 .. _install_dependencies_tx1:
 
 Installing FlytOS 
-^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^
 
 Install Dependencies
 """"""""""""""""""""
@@ -56,8 +56,6 @@ Installing debian package
 
 .. note:: This step requires you to have a registered FlytBase Account. In case you don't have an account, :ref:`create a FlytBase Account<create_flytbase_account>` before you proceed. 
 
- Once you have prepared FlytOS Linux Image, you **MUST install/update your FlytOS debian package** by following the steps below:
-
 1. `Login <https://my.flytbase.com>`_ to your FlytBase Account.
 2. Download the hardware specific `FlytOS Debian Package <https://my.flytbase.com/FlytOS>`_ from your FlytBase Account.
 
@@ -70,8 +68,8 @@ Installing debian package
    
 .. code-block:: bash
    
-   #make sure to provide absolute path of the debian package file: /home/flytpod/flytos_*.deb
-   $ sudo apt install -y <path to debian package location>/flytos_*.deb 
+   #make sure to provide absolute path of the debian package file: /home/flytpod/flyt*.deb
+   $ sudo apt install -y <path to debian package location>/flyt*.deb 
 
 4. Check for **Congratulations! FlytOS installation completed** message at the end.
 5. Just in case you see any dependency issues cropping up in your screen while installing FlytOS, kindly run the following command and execute the previous command again:

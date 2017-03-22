@@ -10,39 +10,39 @@ Errors
 
 * **package 'core_api' not found**
   
-  Check whether the following lines have been added to your $HOME/.bashrc file 
+  Check whether the following lines have been added to your /etc/bash.bashrc file 
     
   .. code-block:: bash
 
-     export PYTHONPATH=$PYTHONPATH:/flyt/flytapps
+     export PYTHONPATH=$PYTHONPATH:/flyt/flytapps:/flyt/userapps
      source /flyt/flytos/flytcore/setup.bash
      source /flyt/flytos/flytcore/share/sitl_gazebo/setup.sh
 
-  Once checked/added, source your $HOME/.bashrc file or launch FlytSim in new terminal
+  Once checked/added, source your /etc/bash.bashrc file or launch FlytSim in new terminal
 
 * **Unable to find uri[model://iris]**
   
-  Check whether the following lines have been added to your $HOME/.bashrc file 
+  Check whether the following lines have been added to your /etc/bash.bashrc file 
     
   .. code-block:: bash
 
-     export PYTHONPATH=$PYTHONPATH:/flyt/flytapps
+     export PYTHONPATH=$PYTHONPATH:/flyt/flytapps:/flyt/userapps
      source /flyt/flytos/flytcore/setup.bash
      source /flyt/flytos/flytcore/share/sitl_gazebo/setup.sh
 
-  Once checked/added, source your $HOME/.bashrc file or launch FlytSim in new terminal
+  Once checked/added, source your /etc/bash.bashrc file or launch FlytSim in new terminal
 
 * **ImportError: No module named web.apps**
 
-  Check whether the following lines have been added to your $HOME/.bashrc file 
+  Check whether the following lines have been added to your /etc/bash.bashrc file 
     
   .. code-block:: bash
 
-     export PYTHONPATH=$PYTHONPATH:/flyt/flytapps
+     export PYTHONPATH=$PYTHONPATH:/flyt/flytapps:/flyt/userapps
      source /flyt/flytos/flytcore/setup.bash
      source /flyt/flytos/flytcore/share/sitl_gazebo/setup.sh
 
-  Once checked/added, source your $HOME/.bashrc file or launch FlytSim in new terminal
+  Once checked/added, source your /etc/bash.bashrc file or launch FlytSim in new terminal
 
 * **touch: cannot touch ‘/flyt/flytos/flytcore/share/sitl_gazebo/posix/rootfs/eeprom/parameters’: Permission denied** 
   
@@ -62,11 +62,17 @@ Errors
 
   .. code-block:: bash
 
-   $ sudo apt-get install ros-indigo-gazebo7-*
+   $ sudo apt-get install ros-kinetic-gazebo*
   
 
+* **dpkg: error processing archive /home/srv/Downloads/abc/flytsim-pe-staging_1.1-1g_amd64.deb (--unpack):
+ trying to overwrite '/flyt/flytos/flytcore/_setup_util.py', which is also in package flytsim**
+ 	You had previously installed beta version of FlytSim on your machine. Please uninstall it by running the following commands in your terminal.
 
+  .. code-block:: bash
 
+   $ sudo dpkg -r flytsim
+   $ sudo rm -r /flyt
 
 FAQs
 ----
@@ -77,7 +83,7 @@ FAQs
 
   .. code-block:: bash
 
-   $ dpkg -s flytcore
+   $ flytos_version.sh
 
 * How to know my Gazebo version?
 
@@ -87,7 +93,3 @@ FAQs
 
    $ gazebo -v
 
-.. * How to update FlytSIM to the latest version?
-  
-  
-.. * When are new updates released?

@@ -1,4 +1,4 @@
-.. _dev_getting_started:
+.. _dev_introduction:
 
 Introduction
 ============
