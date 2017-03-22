@@ -21,8 +21,6 @@ Basic Flight
   
    a. RGB LED should be green for this mode to work.
    b. Offboard / API switch on RC is used to switch API control ON or OFF. In case of emergency during offboard mode flip this switch to take back RC control.
-   c. Vehicle will start to hover at the same position when switched to offboard mode.
-   d. RC sticks will not work in this mode. FlytOS API's will be commanding the drone. 
 
 5. While in RC | POSCTL mode flip the RC offboard switch to enter into OFFBOARD / API-POSCTL mode.
 6. Vehicle should hover at the same location. RC sticks will not work in this mode. Just to make sure that it is indeed offboard mode try giving some control actions from RC e.g. roll. If vehicle doesn't react to these commands then FlytOS is controling the drone.
