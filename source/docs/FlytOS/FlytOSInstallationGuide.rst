@@ -66,15 +66,15 @@ FlytOS is compatible with :ref:`FlytPOD<about_flytpod>`, :ref:`FlytPOD PRO<about
 
 .. **Image download:**
 
-.. 1. `Login <http://my.flytbase.com>`_ to your FlytBase Account.
-.. 2. Download the hardware specific `FlytOS Linux Image <http://my.flytbase.com/FlytOS>`_ from your FlytBase account.
+.. 1. `Login <https://my.flytbase.com>`_ to your FlytBase Account.
+.. 2. Download the hardware specific `FlytOS Linux Image <https://my.flytbase.com/FlytOS>`_ from your FlytBase account.
 .. 3. Download size of the image is about 2.5 GBs.
 .. 4. Check *MD5 Hash* to verify the integrity of downloaded file:
 
 ..    * Linux- launch a terminal and execute the following command ``md5sum <path-to-downloaded-image>/flyt*.img.gz``.
 ..    * Windows- launch a command window and execute the following command ``CertUtil -hashfile <path-to-downloaded-image>/flyt*.img.gz MD5``.
 ..    * Mac OS- launch a terminal and execute the following command ``md5 <path-to-downloaded-image>/flyt*.img.gz``.
-.. 5. Compare the MD5 Hash generated to *MD5 Hash* mentioned in the `download page <http://my.flytbase.com/FlytOS>`_.
+.. 5. Compare the MD5 Hash generated to *MD5 Hash* mentioned in the `download page <https://my.flytbase.com/FlytOS>`_.
 .. 6. Uncompress/extract the downloaded image:
 
 ..    * Linux- launch a terminal and execute the following command ``gunzip <path-to-downloaded-image>/flyt*.img.gz``.
@@ -98,14 +98,10 @@ FlytOS is compatible with :ref:`FlytPOD<about_flytpod>`, :ref:`FlytPOD PRO<about
 .. .. warning:: Since the image is of only around 8.5 GBs, the rest of the SD/eMMC Card would have unallocated memory. DONOT forget to expand SD/eMMC card partition.
 
 
-.. |br|
-
 .. ..  youtube:: jyFvzluXzug
 ..     :aspect: 16:9
 ..     :width: 80%
 
-
-.. |br|
 
 .. **User Credentials**
 
@@ -119,15 +115,15 @@ FlytOS is compatible with :ref:`FlytPOD<about_flytpod>`, :ref:`FlytPOD PRO<about
 
 .. **Image download:**
 
-.. 1. `Login <http://my.flytbase.com>`_ to your FlytBase Account.
-.. 2. Download the hardware specific `FlytOS Linux Image <http://my.flytbase.com/FlytOS>`_ from your FlytBase account.
+.. 1. `Login <https://my.flytbase.com>`_ to your FlytBase Account.
+.. 2. Download the hardware specific `FlytOS Linux Image <https://my.flytbase.com/FlytOS>`_ from your FlytBase account.
 .. 3. Download size of the image is about 1.5 GBs.
 .. 4. Check *MD5 Hash* to verify the integrity of downloaded file:
 
 ..    * Linux- launch a terminal and execute the following command ``md5sum <path-to-downloaded-image>/flyt*.img.gz``.
 ..    * Windows- launch a command window and execute the following command ``CertUtil -hashfile <path-to-downloaded-image>/flyt*.img.gz MD5``.
 ..    * Mac OS- launch a terminal and execute the following command ``md5 <path-to-downloaded-image>/flyt*.img.gz``.
-.. 5. Compare the MD5 Hash generated to *MD5 Hash* mentioned in the `download page <http://my.flytbase.com/FlytOS>`_.
+.. 5. Compare the MD5 Hash generated to *MD5 Hash* mentioned in the `download page <https://my.flytbase.com/FlytOS>`_.
 
 .. .. 6. Uncompress/extract the downloaded image:
 
@@ -149,14 +145,11 @@ FlytOS is compatible with :ref:`FlytPOD<about_flytpod>`, :ref:`FlytPOD PRO<about
 
 .. We have created a video tutorial demonstrating how to flash FlytOS Linux Image on your Intel Edison board. Additionally one can refer Step-2 of `this guide <https://github.com/oskarpearson/mmeowlink/wiki/Backing-up-and-cloning-your-OpenAPS-Edison#step-2-flash-image-onto-edison>`_ for the same.
 
-.. |br|
 
 .. ..  youtube:: LHMF8peY2MY
 ..     :aspect: 16:9
 ..     :width: 80%
 
-
-.. |br|
 
 .. **User Credentials**
 
@@ -220,8 +213,8 @@ FlytOS is compatible with :ref:`FlytPOD<about_flytpod>`, :ref:`FlytPOD PRO<about
 
 .. FlytOS is compatible with :ref:`FlytPOD<about_flytpod>`, :ref:`FlytPOD PRO<about_flytpodpro>`, `ODROID-XU4 <http://www.hardkernel.com/main/products/prdt_info.php?g_code=G143452239825>`_, `Raspberry Pi 3 <https://www.raspberrypi.org/products/raspberry-pi-3-model-b>`_, `NVIDIA Jetson TX1 <https://developer.nvidia.com/embedded-computing>`_, `Intel Edison <https://software.intel.com/en-us/iot/hardware/edison>`_ and `Intel Aero Compute Board <https://software.intel.com/en-us/aero/dev-kit>`_. We would soon introduce compatibility with a lot many popular SBCs available in the drone ecosystem. Once you have installed the latest FlytOS Linux Image, you **MUST update your FlytOS debian package** by following the steps below:
 
-.. 1. `Login <http://my.flytbase.com>`_ to your FlytBase Account.
-.. 2. Download the hardware specific `FlytOS Debian Package <http://my.flytbase.com/FlytOS>`_ from your FlytBase Account.
+.. 1. `Login <https://my.flytbase.com>`_ to your FlytBase Account.
+.. 2. Download the hardware specific `FlytOS Debian Package <https://my.flytbase.com/FlytOS>`_ from your FlytBase Account.
 .. 3. Install some dependencies - To install run the following commands in your terminal.
 
 ..    .. literalinclude:: include/flytos_dependency.sh

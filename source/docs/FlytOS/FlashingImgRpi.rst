@@ -11,11 +11,11 @@ Image download:
 ^^^^^^^^^^^^^^^
 .. |my_flytbase_link| raw:: html
 
-   <a href="http://my.flytbase.com" target="_blank">Login</a>
+   <a href="https://my.flytbase.com" target="_blank">Login</a>
 
 .. |flytos_dl_link| raw:: html
 
-   <a href="http://my.flytbase.com/FlytOS" target="_blank">FlytOS Linux Image</a>
+   <a href="https://my.flytbase.com/FlytOS" target="_blank">FlytOS Linux Image</a>
 
 1. |my_flytbase_link| to your FlytBase Account.
 2. Download the hardware specific |flytos_dl_link| from your FlytBase account.
@@ -58,7 +58,7 @@ Image download:
 
 7. Uncompressed size of image is about 8.5GBs.
       
-Image write to SD/eMMC Card and partition expansion:
+Write Image to SD/eMMC Card and partition expansion:
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. 1. We recommend using a 32 GB SD Card, but a 16 GB card would work fine too. 
@@ -84,15 +84,28 @@ We have created a video tutorial for Linux and Mac OS users, to help flash FlytO
 
 |br|
 
-After performing the above steps, your FlytOS SD Card is ready. Insert the card in Raspberry Pi's SD Card slot and apply power to the Pi to start booting FlytOS.
+After performing the above steps, your FlytOS SD Card is ready. Insert the card in Raspberry Pi's SD Card slot and power ON the Pi to start booting FlytOS.
+
+
+WiFi Setup
+^^^^^^^^^^^
+
+* Insert the SD Card in your Raspberry Pi 3 after flashing :ref:`FlytOS Linux image<flashing_img_rpi>` on it and apply power to boot it. On boot up a WiFi access point is created on the device with following credentials:
+
+ssid:       FlytPOD_wifi
+Password:   FlytPOD123
+
+Connect to the access point on another computer. Open the following link in your browser to view :ref:`FlytConsole<about flytconsole>`: http://10.42.0.1/flytconsole
+
 
 User Credentials
 ^^^^^^^^^^^^^^^^
 
+All FlytOS Linux Image versions have the same Login user credentials: 
+**username : flytpod** 
+**password : flytpod**
 
-All FlytOS Linux Image versions have the same Login user credentials: **username - flytpod & password - flytpod**
-
-.. note:: RaspberryPi3 will boot up with its wifi configured as Access Point. For more details, check :ref:`here<raspi_wifiap>`.
+|br|
 
 :ref:`Go back to the installation guide <rpi_guide>`
 

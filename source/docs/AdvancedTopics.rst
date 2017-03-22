@@ -3,6 +3,8 @@
 Advanced Topics
 =================
 
+* :ref:`Advanced Networking<advanced_networking>`
+  
 .. toctree::
    :maxdepth: 2
    :hidden:

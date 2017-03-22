@@ -25,7 +25,8 @@ The auto-update process is configurable to user need. This section explains the 
   
   .. image:: /_static/Images/ConfigureUpdatesButton.png
      :align: center 
-     
+
+|br|
 
 * The update manager displays important information about FlytOS viz. Current FlytOS version, Available FlytOS version, Update download progress, Install status and Blacklisted FlytOS versions.
   
@@ -33,22 +34,25 @@ The auto-update process is configurable to user need. This section explains the 
   .. image:: /_static/Images/ConfigureUpdatesTab.png
      :align: center 
      
+|br|
 
 * **Current FlytOS version** displays the currently installed FlytOS version. 
-* **Available FlytOS version** displays the latest FlytOS update available.   
+* **Available FlytOS version** displays the latest FlytOS update available in our server.   
 * You can disable or enable auto-updates anytime using the **Auto Updates** checkbox. If Auto Update field is checked and new update is available, it will get downloaded in the background if the device has internet connection.
 * You can also monitor the progress of update being downloaded from the **Update Download progress** field.
   
   .. image:: /_static/Images/DownloadProgress.png
      :align: center 
-     
 
-* In case there is some version of FlytOS that does not install correctly, or you want to skip that update completely, you can blacklist that version by entering it in the **Blacklist FlytOS version** field. FlytOS will no longer try to update the Blacklisted FlytOS version. When another higher version is available to download, FlytOS will automatically download and install that version.
+|br|
+
+* In case there is some version of FlytOS that does not install correctly, or you want to skip that update completely, you can blacklist that version by entering it in the **Blacklist FlytOS version** field. FlytOS will no longer try to update to the Blacklisted FlytOS version. When another higher version is available to download, FlytOS will automatically download and install that version.
 
   
   .. image:: /_static/Images/BlacklistedVersion.png
      :align: center 
      
+|br|
 
 Startup Log
 -----------
@@ -62,3 +66,7 @@ Startup Log
   
 
 .. note:: For more help regarding auto updates, please post your queries in the `FlytBase forum <http://forums.flytbase.com/>`_ with the the startup log attached. 
+
+.. |br| raw:: html
+
+   <br />

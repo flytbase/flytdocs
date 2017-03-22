@@ -58,8 +58,8 @@ Installing debian package
 
  Once you have prepared FlytOS Linux Image, you **MUST install/update your FlytOS debian package** by following the steps below:
 
-1. `Login <http://my.flytbase.com>`_ to your FlytBase Account.
-2. Download the hardware specific `FlytOS Debian Package <http://my.flytbase.com/FlytOS>`_ from your FlytBase Account.
+1. `Login <https://my.flytbase.com>`_ to your FlytBase Account.
+2. Download the hardware specific `FlytOS Debian Package <https://my.flytbase.com/FlytOS>`_ from your FlytBase Account.
 
 .. 3. Install some dependencies - To install run the following commands in your terminal.
 
@@ -132,6 +132,11 @@ Installing debian package
 .. .. image:: /_static/Images/fOSinst5.png
 ..    :align: center
 
+WiFi Setup
+^^^^^^^^^^^
+
+*  To access internet on your TX1 (for activation, loading maps, auto updates, etc), you can connect the WiFi on TX1 to your home's WiFi router that has access to internet.
+*  If you want to create a WiFi hotspot on the TX1, follow the steps given in `this post <https://devtalk.nvidia.com/default/topic/910608/jetson-tx1/setting-up-wifi-access-point-on-tx1/post/4893879/#4893879>`_
 
 .. _activate_flytos_tx1:
 
@@ -142,7 +147,7 @@ Activate FlytOS
 
 You have to activate installed FlytOS, without which critical APIs would not function.
 
-1. Make sure your TX1 has internet access before proceeding. You can visit :ref:`the wifi setup page<hardware_setup_tx1>` to know how you can get internet access on TX1.
+1. Make sure your TX1 has internet access before proceeding. 
 2. :ref:`Launch FlytConsole <FlytConsole_launch>`. You can launch FlytConsole in the TX1's browser using the URL ``http://localhost/flytconsole`` or on your PC's browser using the URL ``http://ip-address-of-device/flytconsole`` . In FlytConsole click on **Activate Now tag** under **License tab** at bottom right corner. A pop-up will appear which will direct you to the device registration page. If you are not logged in, enter your FlytBase Account credentials to log in. 
 3. Choose a device nick-name and select your compute engine. 
 4. In the drop down for license, select existing license if available or select ‘Issue a new license’. You can also provide a nick-name for your license.  
@@ -152,12 +157,6 @@ You have to activate installed FlytOS, without which critical APIs would not fun
 
 Hardware Setup
 ^^^^^^^^^^^^^^
-
-WiFi Setup
-""""""""""
-
-*  To access internet on your TX1 (for activation, loading maps, auto updates, etc), you can connect the WiFi on TX1 to your home's WiFi router that has access to internet.
-*  If you want to create a WiFi hotspot on the TX1, follow the steps given in `this post <https://devtalk.nvidia.com/default/topic/910608/jetson-tx1/setting-up-wifi-access-point-on-tx1/post/4893879/#4893879>`_
 
 Telemetry Connection
 """"""""""""""""""""

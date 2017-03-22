@@ -18,7 +18,7 @@ Installing Dependencies
 
 1. List of FlytOS dependencies to be installed on your Aero Board:
 
-   a) Linux - Ubuntu 16.04. First create an Ubuntu 16.04 bootable USB drive by following `these instructions <https://www.ubuntu.com/download/desktop/create-a-usb-stick-on-ubuntu>`_ . Connect the USB drive to the Aero Board using a micro USB OTG cable. You may also want to use a USB hub to attach a keyboard and mouse to the Board. Then power up the Aero board and press escape while it boots up to enter the BIOS menu. Select the option to boot from your USB drive. Then follow `these instructions <https://www.ubuntu.com/download/desktop/install-ubuntu-desktop>`_ to install Ubuntu on the board. 
+   a) Linux - Ubuntu 16.04. First create an Ubuntu 16.04 bootable USB drive by following `these instructions <https://www.ubuntu.com/download/desktop/create-a-usb-stick-on-ubuntu>`_. Connect the USB drive to the Aero Board using a micro USB OTG cable. You may also want to use a USB hub to attach a keyboard and mouse to the Board. Then power up the Aero board and press escape while it boots up to enter the BIOS menu. Select the option to boot from your USB drive. Then follow `these instructions <https://www.ubuntu.com/download/desktop/install-ubuntu-desktop>`_ to install Ubuntu on the board. 
    
    b) `ROS - Kinetic <http://wiki.ros.org/kinetic/Installation/Ubuntu>`_ (install *ros-kinetic-desktop* package)
    
@@ -58,11 +58,11 @@ Next, you **MUST update your FlytOS debian package** by following the steps belo
 
 .. |my_flytbase_link| raw:: html
 
-   <a href="http://my.flytbase.com" target="_blank">Login</a>
+   <a href="https://my.flytbase.com" target="_blank">Login</a>
 
 .. |flytos_dl_link| raw:: html
 
-   <a href="http://my.flytbase.com/FlytOS" target="_blank">FlytOS Debian Package</a>
+   <a href="https://my.flytbase.com/FlytOS" target="_blank">FlytOS Debian Package</a>
 
 2. Download the hardware specific |flytos_dl_link| from your FlytBase Account.
 3. Verify that the dependencies are installed. To install run the following commands in your terminal.

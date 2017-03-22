@@ -1,10 +1,7 @@
 .. _dev_getting_started:
 
-Getting Started 
-===============
-
 Introduction
-^^^^^^^^^^^^
+============
 
 |br|
 
@@ -15,7 +12,7 @@ Introduction
 |br|
 
 
-FlytOS is the software framework of FlytBase. It is based on Linux and ROS (Robot Operating System) making it an ideal platform for research and commercial drone applications. It can interact with any compatible drone/autopilot using its adapter layer and exposes high level FlytAPIs in ROS, CPP, Python, REST and Websocket. It makes it easy to integrate custom payload and also provides advanced APIs using its onboard modules. These rich set of APIs allow for easy development of onboard business logic as well as remote monitoring and control through web and mobile apps. The modular design of FlytOS allows for integration with external ROS/Linux libraries and custom data plumbing between onboard and offboard apps. 
+FlytOS is the software framework of FlytBase. It is based on Linux and ROS (Robot Operating System) making it an ideal platform for research and commercial drone applications. It can interact with any compatible drone/autopilot using its adapter layer and exposes high level FlytAPIs in ROS, C++, Python, REST and Websocket. It makes it easy to integrate custom payload and also provides advanced APIs using its onboard modules. These rich set of APIs allow for easy development of onboard business logic as well as remote monitoring and control through web and mobile apps. The modular design of FlytOS allows for integration with external ROS/Linux libraries and custom data plumbing between onboard and offboard apps. 
 
 FlytOS comes preloaded with FlytPOD/PRO. Alternatively, it is also available for download and can then be installed on a Linux/ROS based computer. This setup allows for integration with any compatible drone/autopilot.
 
@@ -75,7 +72,7 @@ However these APIs are also available in the form of various interfaces for non 
 
 1. Python: Pure python interface using flyt_python package. It uses Zeromq internally which provides access to ROS system.
 
-2. CPP: These are ROS to CPP bindings for pure CPP applications.
+2. C++: These are ROS to C++ bindings for pure C++ applications.
 
 3. RESTful Server: FlytOS runs a server to provide RESTful interface to the ROS system.
 
@@ -85,7 +82,7 @@ Same functionality is available on all interfaces, only the API definition may c
 
 With all above interfaces available we can classify them into two broad categories on the basis of type of typical applications that will be using them.
 
-1. **Onboad APIs**: ROS, Python, CPP interfaces come under onboard API's since they can only be accessed by on board (which run on vehicle's companion computer) applications.
+1. **Onboad APIs**: ROS, Python, C++ interfaces come under onboard API's since they can only be accessed by on board (which run on vehicle's companion computer) applications.
 
 2. **Remote APIs**: RESTful and WebSocket interfaces are classified as remote API's since they will mostly be used by remote (which run on ground devices) applications.
 
