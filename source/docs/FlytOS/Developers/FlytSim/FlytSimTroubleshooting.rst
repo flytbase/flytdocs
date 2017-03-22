@@ -62,7 +62,7 @@ Errors
 
   .. code-block:: bash
 
-   $ sudo apt-get install ros-kinetic-gazebo*
+     $ sudo apt-get install ros-kinetic-gazebo*
   
 
 * **dpkg: error processing archive /home/srv/Downloads/abc/flytsim-pe-staging_1.1-1g_amd64.deb (--unpack): trying to overwrite '/flyt/flytos/flytcore/_setup_util.py', which is also in package flytsim**
@@ -71,8 +71,8 @@ Errors
 
   .. code-block:: bash
 
-   $ sudo dpkg -r flytsim
-   $ sudo rm -r /flyt
+     $ sudo dpkg -r flytsim
+     $ sudo rm -r /flyt
 
 * **ros/ros.h not found**
 	
