@@ -20,8 +20,6 @@ Onboard Apps
   
    ./WriteDroneApps/OnboardCPP.rst
    ./WriteDroneApps/OnboardPython.rst
-   ./WriteDroneApps/ROSCPP.rst
-   ./WriteDroneApps/ROSPY.rst	
    ./WriteDroneApps/RemoteWeb.rst
    ./WriteDroneApps/RemoteMobile.rst
 
