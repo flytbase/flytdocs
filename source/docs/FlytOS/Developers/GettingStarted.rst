@@ -28,7 +28,7 @@ The apps developed with FlytAPIs can talk to compatible drone/autopilot as well 
 
 .. _start_stop_flytos:
 
-Start / stop FlytOS
+Start / Stop FlytOS
 ^^^^^^^^^^^^^^^^^^^^
 
 **Start/Stop FlytOS on boot**
