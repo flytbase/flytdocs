@@ -6,7 +6,7 @@ FlytOS Updates
 Automatic Over-the-air Updates
 ------------------------------
 
-.. caution:: You must :ref:`activate your device<activate_flytos>`, without which auto-updates would not work.
+.. caution:: You must activate your device, without which auto-updates would not work.
 
 * Apart from the option of manually downloading and installing the latest FlytOS debian, FlytOS has a built in auto-update functionality. 
 * Whenever a flight computer with FlytOS installed on it has internet access at boot, it checks for possible updates and downloads them.

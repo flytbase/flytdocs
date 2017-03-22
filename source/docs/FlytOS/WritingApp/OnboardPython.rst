@@ -65,7 +65,7 @@ Code Explained
 	   :tab-width: 2
 	   :lines: 4-6
 
-* Actual flight logic: By default position_set() is synchronous in action, i.e. your script will wait for the vehicle to reach the specified target before continuing to execute the next command. Visit :ref:`FlytAPIs<list-of-APIs>` for more information.
+* Actual flight logic: By default position_set() is synchronous in action, i.e. your script will wait for the vehicle to reach the specified target before continuing to execute the next command. Visit `FlytAPIs <http://api.flytbase.com>`_ for more information.
 
 .. literalinclude:: include/demoapp1.py
    :language: py
@@ -135,7 +135,7 @@ Create and Compile custom app
 Execute custom app
 ^^^^^^^^^^^^^^^^^^
 
-* If FlytOS/FlytSim is not launched, launch :ref:`FlytOS <launch flytos>` or :ref:`FlytSim <launch flytsim>`.
+* If FlytOS/FlytSim is not launched, launch :ref:`FlytOS <start_stop_flytos>` or :ref:`FlytSim <launch flytsim>`.
 * Execute your <my_first_python_app>.py python script from terminal.
 
 Install custom app

@@ -72,7 +72,7 @@ Getting Started
    * On you laptop connect to the WiFi network ``FlytPOD_wifi`` the password for which is ``FlytPOD123``. 
    * In your laptop's browser, launch FlytConsole, using URL: ``flytpod/flytconsole``.
    * Setup FlytPOD in client mode by following steps from :ref:`this guide<flytpod router setup>`. 
-   * Follow :ref:`this guide<activate_flytos>` for activating FlytOS.
+   * Follow :ref:`this guide<activate_flytos_flytpod>` for activating FlytOS.
    * Power off FlytPOD by gently pressing the power button on the back panel. Within few seconds RGB LED should turn amber.
    * You may switch FlytPOD wifi to access point mode for field operation. However FlytPOD needs internet for automatic updates to work, it's a good practise to connect FlytPOD to internet once in a week.
 

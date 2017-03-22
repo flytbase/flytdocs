@@ -23,7 +23,7 @@ FlytOS is compatible with :ref:`FlytPOD<about_flytpod>`, :ref:`FlytPOD PRO<about
 .. toctree::
    :maxdepth: 2
    :hidden:
-   :caption: FlytOS
+   :caption: Setup FlytOS
   
    ../FlytOS/FlytPODGuide.rst
    ../FlytOS/OdroidGuide.rst

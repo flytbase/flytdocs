@@ -146,13 +146,13 @@ Below is a list of various color patterns along with the associated message/stat
 6. Programmable LEDs
 ^^^^^^^^^^^^^^^^^^^^
 
-The LEDs on the right side of the IO panel, marked 1 and 2 are User-programmable LEDs. Learn more :ref:`here.<list-of-APIs>`
+The LEDs on the right side of the IO panel, marked 1 and 2 are User-programmable LEDs. Learn more `here. <http://api.flytbase.com>`_
 
 
 7. Gimbal
 ^^^^^^^^^
 
-FlytPOD provides a dedicated 4 PWM output channels for your Gimbal. Learn more :ref:`here.<list-of-APIs>`
+FlytPOD provides a dedicated 4 PWM output channels for your Gimbal. Learn more `here. <http://api.flytbase.com>`_
 
 
 8. Safety and Buzzer

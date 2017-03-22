@@ -3,7 +3,7 @@
 Installing FlytOS dependencies in your custom image (FlytPOD/PRO)
 =================================================================
 
-.. warning:: Follow this step ONLY if you have chosen to NOT TO flash :ref:`FlytOS Linux Image <FlytOS_linux_image_flytpod>`.
+.. warning:: Follow this step ONLY if you have chosen to NOT TO flash :ref:`FlytOS Linux Image <flashing_img_flytpod>`.
 
 .. note:: You have to perform all the steps below on your FlytPOD/PRO. 
 

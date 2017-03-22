@@ -8,7 +8,7 @@ We are ready for flight testing the vehicle with FlytOS. Follow the instructions
 
 
 Essentials
-^^^^^^^^^^
+^^^^^^^^^^^^
 
 Below are important guidelines that the on-field operations team should be aware of.
 
@@ -37,9 +37,9 @@ Below are important guidelines that the on-field operations team should be aware
 
 
 Safety Guidelines
-^^^^^^^^^^
+^^^^^^^^^^^^^^^^^
 
-* Please go through the :ref:`essentials<essentials>` before you proceed. The on-field operations team should be aware of them.
+* Please go through the essentials given above before you proceed. The on-field operations team should be aware of them.
 * Most of the operations with FlytOS are fully or semi autonomous. Offboard switch is the Manual Override. Always have a dedicated manual pilot ready to take control in case of emergencies.
 * Before switching to offboard mode it is always a good practice to check if manual and position hold modes are working.
 * SBC connected to mobile phone WiFi hotspot may not give long range. Use powerful WiFi ground routers with high gain antennas for long range operations. You can also use radio telemetry modules for long range.
@@ -49,10 +49,9 @@ Safety Guidelines
 
 
 Basic Flight
-^^^^^^^^^^
+^^^^^^^^^^^^^
 
-1. Read all safety guidelines given :ref:`here<general_safety_guidelines>`.
-
+1. Read all safety guidelines given above.
 .. note:: In case you are using Pixhawk, check out the `pre-flight checklist <http://ardupilot.org/copter/docs/flying-arducopter.html>`_ before you fly.
 
 2. It is important to make sure that autopilot is configured properly for RC | POSCTL mode.
@@ -76,7 +75,7 @@ Basic Flight
 
 
 Test FlytOS
-^^^^^^^^^^
+^^^^^^^^^^^^
 
 Make sure that you have successfully tested Offboard mode with FlytOS.
 
@@ -84,7 +83,7 @@ Next step is to test a web/mobile app built on top of FlytOS APIs.
 
 1. Download Flyt Joystick android app from `here1`_ .
 2. Alternatively you can use joystik web app on your laptop. Download Flyt Joystick web app on your laptop from `here2`_ . Enter into the directory and open index.html into browser.
-3. Connect your mobile / laptop to same wifi network that your companion computer / FlytPOD is connected to.
+3. Connect your mobile / laptop to same wifi network that your companion computer / FlytPOD/PRO is connected to.
 
 
 .. image:: /_static/Images/app-login-screen.png

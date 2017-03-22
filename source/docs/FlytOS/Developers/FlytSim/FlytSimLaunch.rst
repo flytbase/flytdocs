@@ -45,7 +45,7 @@ The above command would launch ROS and Gazebo. A quadrotor model-Iris will be au
 
 .. caution:: Gazebo runs in ENU frame, hence the above setpoints given in NED Frame would be transformed to ENU Frame by Gazebo.
 
-To know more about such commands, please refer to :ref:`FlytAPIs<list-of-APIs>` for more details.	
+To know more about such commands, please refer to `FlytAPIs <http://api.flytbase.com>`_ for more details.	
 
 Kill FlytSim
 ------------

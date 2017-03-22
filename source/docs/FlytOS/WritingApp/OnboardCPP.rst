@@ -221,7 +221,7 @@ Execute custom app
 ^^^^^^^^^^^^^^^^^^
 
 * After compiling your my_first_cpp_app project, your executable my_first_cpp_app will be created inside build directory.
-* If FlytOS/FlytSim is not launched, launch :ref:`FlytOS <launch flytos>` or :ref:`FlytSim <launch flytsim>`.
+* If FlytOS/FlytSim is not launched, launch :ref:`FlytOS <start_stop_flytos>` or :ref:`FlytSim <launch flytsim>`.
 * Execute your my_first_cpp_app cpp executable from terminal. 
 
 
