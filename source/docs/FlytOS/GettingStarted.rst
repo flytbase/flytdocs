@@ -19,9 +19,9 @@ This section will help you in installing FlytOS on your device
    :hidden:
    :caption: Getting Started 
 	
-   ./FlytOS/SignUp.rst
-   ./FlytOS/FlytOSInstallationGuide.rst
-   ./FlytOS/Supported_GCS.rst
-   ./FlytOS/FirstFlight.rst
-   ./FlytOS/ReadytouseApps.rst
-   ./FlytOS/FlytOSUpdate.rst
+   ./GettingStarted/SignUp.rst
+   ./GettingStarted/FlytOSInstallationGuide.rst
+   ./GettingStarted/Supported_GCS.rst
+   ./GettingStarted/FirstFlight.rst
+   ./GettingStarted/ReadytouseApps.rst
+   ./GettingStarted/FlytOSUpdate.rst

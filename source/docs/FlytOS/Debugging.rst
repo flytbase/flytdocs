@@ -11,5 +11,5 @@ Debugging
    :hidden:
    :caption: Debugging and Advanced Topics
   
-   ./FlytOS/Troubleshooting/GettingHelpForum.rst
-   ./FlytOS/Troubleshooting/FAQ.rst
+   ./Debugging/GettingHelpForum.rst
+   ./Debugging/FAQ.rst

@@ -25,12 +25,12 @@ FlytOS is compatible with :ref:`FlytPOD<about_flytpod>`, :ref:`FlytPOD PRO<about
    :hidden:
    :caption: Setup FlytOS
   
-   ../FlytOS/FlytPODGuide.rst
-   ../FlytOS/OdroidGuide.rst
-   ../FlytOS/RaspiGuide.rst
-   ../FlytOS/TX1Guide.rst
-   ../FlytOS/EdisonGuide.rst
-   ../FlytOS/AeroGuide.rst
+   ./FlytPODGuide.rst
+   ./OdroidGuide.rst
+   ./RaspiGuide.rst
+   ./TX1Guide.rst
+   ./EdisonGuide.rst
+   ./AeroGuide.rst
    
    
    

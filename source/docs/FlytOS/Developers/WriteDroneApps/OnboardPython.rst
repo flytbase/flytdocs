@@ -74,7 +74,7 @@ Code Explained
 
 * Interface shutdown:
 
-When drone interface is no longer required shutdown it *[]:
+When drone interface is no longer required shut it down :
 
 .. literalinclude:: include/demoapp1.py
    :language: py

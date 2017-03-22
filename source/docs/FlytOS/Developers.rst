@@ -12,9 +12,9 @@ Scroll through the various topics below for more information on building your ow
    :hidden:
    :caption: Developers 
 	
-   ./FlytOS/Developers/GettingStarted.rst
-   ./FlytOS/Developers/APIDocumentation.rst
-   ./FlytOS/Developers/Flytsim.rst
-   ./FlytOS/Developers/WriteDroneApp.rst
-   ./FlytOS/Developers/MoreSampleApps.rst
-   ./FlytOS/Developers/NeedHelp.rst
+   ./Developers/GettingStarted.rst
+   ./Developers/APIDocumentation.rst
+   ./Developers/Flytsim.rst
+   ./Developers/WriteDroneApps.rst
+   ./Developers/MoreSampleApps.rst
+   ./Developers/NeedHelp.rst

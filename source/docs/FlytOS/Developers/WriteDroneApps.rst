@@ -18,12 +18,12 @@ Onboard Apps
    :hidden:
    :caption: Onboard
   
-   ../WritingApp/OnboardCPP.rst
-   ../WritingApp/OnboardPython.rst
-   ../WritingApp/ROSCPP.rst
-   ../WritingApp/ROSPY.rst	
-   ../WritingApp/RemoteWeb.rst
-   ../WritingApp/RemoteMobile.rst
+   ./WriteDroneApps/OnboardCPP.rst
+   ./WriteDroneApps/OnboardPython.rst
+   ./WriteDroneApps/ROSCPP.rst
+   ./WriteDroneApps/ROSPY.rst	
+   ./WriteDroneApps/RemoteWeb.rst
+   ./WriteDroneApps/RemoteMobile.rst
 
 
 Remote Apps

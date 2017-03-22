@@ -33,10 +33,10 @@ You can participate in our `forums`_ or `facebook`_ group discussions to interac
    :hidden:
    :caption: FlytOS
 	
-   docs/GettingStarted.rst
-   docs/Developer.rst
-   docs/Debugging.rst
-   docs/AdvancedTopics.rst
+   docs/FlytOS/GettingStarted.rst
+   docs/FlytOS/Developers.rst
+   docs/FlytOS/Debugging.rst
+   docs/FlytOS/AdvancedTopics.rst
 
 .. toctree::
     :maxdepth: 2

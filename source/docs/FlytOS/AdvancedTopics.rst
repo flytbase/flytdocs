@@ -10,5 +10,5 @@ Advanced Topics
    :hidden:
    :caption: Advanced Topics
   
-   ./FlytOS/Troubleshooting/AdvancedNetworking.rst
+   ./AdvancedTopics/AdvancedNetworking.rst
 
