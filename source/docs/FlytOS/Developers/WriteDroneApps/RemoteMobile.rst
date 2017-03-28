@@ -116,7 +116,7 @@ Sample Apps
 
 * The app uses velocity_set API to control the drone.
   
-  .. image:: /_static/Images/follow-me-android-app.png
+  .. image:: /_static/Images/flytAndroidSample2.png
          :height: 300px
          :width: 500px
          :align: center
@@ -137,7 +137,7 @@ Sample Apps
 * Keep in mind to stop follow before giving it Land command.
 
   
-  .. image:: /_static/Images/flytAndroidSample3.png
+  .. image:: /_static/Images/follow-me-android-app.png
          :height: 500px
          :width: 300px
          :align: center
