@@ -7,20 +7,13 @@ Connections and Expansion Ports
 
 .. note:: The following document is applicable for both FlytPOD and FlytPOD PRO
 
- 
-
-
 
 Expansion Panel
 ---------------
 
 
 .. image:: /_static/Images/iopannel.jpg
-  	:align: center
-
-.. .. image:: /_static/Images/sideviews.jpg
-.. 	:scale: 35%
-.. 	:align: center
+   :align: center
 	
 .. image:: /_static/Images/FPsideviews.png
 	:align: center
@@ -30,73 +23,27 @@ Expansion Panel
 1. Power Button
 ^^^^^^^^^^^^^^^
 
-Gently pressing the power button turns off the FlytPOD. The RGB LED turns to amber upon shutting down. After that you can remove the power supply. You can switch on FlytPOD again by pressing the Power button for 1 second.
+Gently pressing the power button turns off the FlytPOD. The RGB LED turns to amber upon shutting down. After that you can remove the power supply. You can switch on FlytPOD again by pressing the Power button and holding for about 1 second.
 
 .. note:: Please be patient while the system shuts down. It may take a few seconds for the system to shut down completely.
   
-      
-
-
-.. .. image:: /_static/Images/powerswitch.png
-.. 		:align: center
-.. 		:scale: 50%
-
 
 2. External Sensors / Payload Expansion port 2*17
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Below are the ports available for external sensors and payload interface.
 
-.. Columns described From left to right. 
-.. (Net: top_pin, bottom_pin : Description)
-
-
 .. image:: /_static/Images/exsensors.jpg
 		:align: center
 		:scale: 80%
 
-.. * 3V3, -          :   3.3 V output, Gnd from FlytPOD for external sensors.
-.. * GP1, GP2        :   GPIO 1 and GPIO 2 on odroid GPIO 30 pin connector. Pin GPX1.2, GPX1.3   
-.. * ADC1, ADC2      :   ADC input pins. (more info coming soon).
-.. * 3V3, -          :   3.3 V output, Gnd from FlytPOD for external sensors.     
-.. * SPI1:  MO, CS   :   Mosi and CSN pins on Odroid SPI1 Bus. Pin GPA2.7, GPA2.5     
-.. * SPI1:  MI, CK   :   Miso and Clock pins on Odroid SPI1 Bus. Pin GPA2.6, GPA2.4
-.. * I2C1:  CL, DA   :   SCL and SDA pins from Odroid I2C_1 bus. Pin GPB3.3, GPB3.2
-.. * 3V3, -          :   3.3 V output, Gnd from FlytPOD for external sensors.     
-.. * SPI2:  MO, CS   :   Mosi and CSN pins on reserved SPI bus.
-.. * SPI2:  MI, CK   :   Miso and Clk pins on reserved SPI bus.
-.. * I2C2:  CL, DA   :   SCL and SDA pins of I2C_expansion bus. For rangefinder, px4flow, mag, etc.
-.. * +, -            :   UBEC output, Gnd from ESC. Available only if your ESC have UBEC. Do not mix this with 5v supply from flytpod.
-.. * US, LI          :   Ultrasonic and Lidar pins. For connecting PWM based ultrasonic  
-.. * CAN:   H, L     :   CAN high, CAN Low pins on internal CAN bus.
-.. * UART:  RT, CT   :   RTSN and CTSN pins on Telemetry Port.
-.. * UART:  RX, TX   :   Rx and Tx pins on Telemetry Port. (Mavlink accessible at Baud rate 57600)
-.. * 5V, -           :   5V output, Gnd from Flytpod for external Sensors.
- 
-
 .. note:: In some beta kits the I2C1 and I2C2 pins were labeled wrong. These are the correct labels for all FlytPODs.
-
-
-
-.. Note that: In some beta kits the I2C1 and I2C2 pins were labeled wrong. These are the correct labels for all flytpods.
-
-To know how to use these interfaces contact us at ``admin@navstik.org``.
-
-
-.. .. image:: /_static/Images/external_sensors.png
-.. 		:align: center
-.. 		:scale: 30%
 
 
 3. PWM Output Port
 ^^^^^^^^^^^^^^^^^^
 
 8 PWM output channels. Plug ESC signal pins in the respective PWM output channels. Learn more :ref:`here.<PWM_Output>`
-
-.. .. image:: /_static/Images/pwm2.png
-.. 		:align: center
-.. 		:scale: 50%
-
 
 
 4. RSSI
@@ -107,52 +54,41 @@ Receiver signal strength input pin.
 
 5. RGB LED
 ^^^^^^^^^^
-The RGB LED represents the vehicle state.
+The RGB LED represents the vehicle state. Below is a list of various color patterns along with the associated message/status. 
 
+* Red Blink                    		 - Configuration Error
+* Red FastBlink while Arming       - Arming Error
+* Blue Breathing 									 - Standby, NO-GPS lock, ready to arm
+* Blue Solid                       - Armed and No GPS lock / Px4flow poor quality 
+* Green Breathing                  - Standby and GPS / Px4flow ready, ready to arm
+* Green Solid                      - Armed and GPS lock / Px4flow available
+* Amber Breathing                  - Vehicle shutdown/lockdown mode
 
-.. .. image:: /_static/Images/rgbled.png
-.. 		:align: center
-.. 		:scale: 50%
+During vehicle mode transition
 
-
-Below is a list of various color patterns along with the associated message/status. 
-
-* Breathing Blue	  	   - Standby, ready to arm
-
-* Breathing Green                  - Standby and GPS / Px4flow ready, ready to arm
+* Green FastBlink for a second   			- Successful 
+* Red FastBlink for a second   				- Transition failed
   
-* Breathing Red                    - Configuration Error
-
-* Solid Blue                       - Armed and No GPS lock / Px4flow poor quality 
-
-* Solid Green                      - Armed and GPS lock / Px4flow available
-
-* Fast blink Red while Arming      - Arming Error
-
-* During vehicle mode transition   - Successful
-  (Fast green Blink for a second) 
-  
-* During vehicle mode transition   - Transition failed
-  (Fast Red Blink for a second)   
+Battery warnings
 
 * Amber Breathing / Solid          - Low battery warning
-  
-* Red Breathing / Solid            - Critical battery warning 
+* Red Breathing / Solid            - Critical battery warning
 
-* Breathing Purple                 - Fail safe
+Failsafe Mode Trigger
 
-* Breathing Amber                  - Vehicle shutdown/lockdown
+* Purple Breathing                 - Vehicle in Fail safe mode
+
 
 6. Programmable LEDs
 ^^^^^^^^^^^^^^^^^^^^
 
-The LEDs on the right side of the IO panel, marked 1 and 2 are User-programmable LEDs. Learn more `here. <http://api.flytbase.com>`_
+The LEDs on the right side of the IO panel, marked 1 and 2 are User-programmable LEDs. To control these LEDs via FlytAPIs, click `here. <http://api.flytbase.com>`_
 
 
 7. Gimbal
 ^^^^^^^^^
 
-FlytPOD provides a dedicated 4 PWM output channels for your Gimbal. Learn more `here. <http://api.flytbase.com>`_
+FlytPOD provides a dedicated 4 PWM output channels for your Gimbal with pins marked as 1, 2 and 3 are Roll, Pitch and Yaw respectively. To control your gimbal using FlytAPIs, click `here <http://api.flytbase.com>`_.
 
 
 8. Safety and Buzzer
@@ -170,20 +106,9 @@ FlytPOD provides PPM/8xPWM channels for RC Input. Connect the ground, power, and
 Choose between PPM, PWM from RC configuration in FlytConsole. Read more :ref:`here.<RC_Receiver>`
 
 
-
-.. .. image:: /_static/Images/ppm2.png
-.. 		:align: center
-.. 		:scale: 50%
-
-SBUS/SPEKTRUM
-"""""""""""""
-SBUS(futaba) connects to SBUS port and for a SPEKTRUM, DSM, DSM2, or DSM-X Satellite RC receiver, connect to the SPEK port.
-
-.. .. image:: /_static/Images/sbusspek1.png
-.. 		:align: center
-.. 		:scale: 50%
-
-
+SBUS
+""""
+Connect your SBUS receiver to RX pin of SBUS port.
 
 
 10. WiFi Status LED
@@ -199,9 +124,12 @@ The WiFi Power off Switch is available on top of the FlytPOD, in case you want t
 11. System Health LED
 ^^^^^^^^^^^^^^^^^^^^^
 
-The System Health LED indicates the Autopilot status.
+The System Health LED indicates the Autopilot Health status.
 
-* Fast Green blink / Solid Green - Autopilot firmware updating
+* Green FastBlink - Autopilot Configuration Error
+* Green Blink at 1 Hz - Autopilot Ready to Arm
+
+In case of Autopilot firmware upgrade in progress, (marked by RGBled status either being solid green or blank), helath led shows either Green FastBlink or Solid.
 
 12. Power Supply LED
 ^^^^^^^^^^^^^^^^^^^^
@@ -216,12 +144,9 @@ The System Health LED exhibits only the following colour.
 The following ports are available with FlytPOD and FlytPOD PRO.
 
 * FlytPOD - GPS-MAG 1
-
-* FlytPOD PRO - GPS-MAG 1 (primary port), GPS-MAG 2
+* FlytPOD PRO - GPS-MAG 1 (primary port), GPS-MAG 2 (secondary/backup port)
 
 You must attach the provided GPS-MAG module to these ports for stable flight. Read more :ref:`here.<GPS_Mag>`
-
-.. .. attention:: FlytPOD PRO comes with two GPS-MAG ports thus allowing you to connect upto two external GPS-MAG sensors. In any case at least GPS-MAG 1 should be connected.
 
 14. VI Sensor Input
 ^^^^^^^^^^^^^^^^^^^
@@ -246,10 +171,6 @@ FlytPOD and FlytPOD PRO both have an 8 GB Micro SD card used for autopilot data 
 18. USB Port
 ^^^^^^^^^^^^
 FlytPOD provides 2 x high speed USB 3.0 ports, to connect USB camera, 3G/4G dongle and other payloads.
-
-
-
-
 
 
 Peripherals
@@ -355,14 +276,7 @@ GPS-Magnetometer
 External GPS-MAG can be connected to FlytPOD through the connector provided on the side.
 
 * FlytPOD - FlytPOD comes with GPS-MAG 1 port. GPS-MAG sensor can be connected to this port to achieve a stable flight.
-  
 * FlytPOD PRO - FlytPOD PRO comes with GPS-MAG 1 as it's primary port and GPS-MAG 2. Upto two GPS-MAG sensors can be connected. This offers a fail safe mechanism for reliable navigation.
-
-.. Default port available for this is GPS-MAG 1 in FlytPOD. Use of a Standoff is recommended in order to avoid interference. Make sure to mount it in such a way that FlytPOD heading is aligned with the GPS-MAG board heading.
-
-.. .. attention:: FlytPOD PRO comes with two GPS-MAG ports. This offers a fail safe mechanism for reliable navigation.
-
- .. .. note:: * Of the two ports provided, GPS-MAG 1 must be used for connecting external GPS-MAG as GPS-MAG 2 is reserved for future development.
 
 .. figure:: /_static/Images/Gpsmag.png
  :align: center
@@ -377,8 +291,6 @@ External GPS-MAG can be connected to FlytPOD through the connector provided on t
 Power Module
 ^^^^^^^^^^^^
 Connect the power module to the appropriate ports in the FlytPOD as shown in the image. 
-
-
 
 .. figure:: /_static/Images/PowerModule.jpg
 	:align: center
@@ -410,20 +322,6 @@ Below are two methods for connecting LiDAR-lite to FlytPOD.
 .. note:: Set the parameter SENS_EN_LL40LS to 1. (For LIDARLiteV2, no need to connect reset pin)
 
 
-
-.. * I2C Bus
-  
-..   Connect LiDAR-lite I2C wires to I2C-2 port as shown below.
-
-
-
-.. .. figure:: /_static/Images/lidar2.jpg
-.. 	:align: center
-.. 	:scale: 12%
-	
-.. 	I2C Pins
-
-
 Telemetry
 ^^^^^^^^^
 
@@ -436,43 +334,8 @@ Connect your Telemetry module to the Telemetry port(Rx and Tx) as shown below fo
 	Telemetry pins
 
 
-
-
-
-
-
-
-
-.. Buzzer
-.. ^^^^^^
-.. Px4FLOW
-.. ^^^^^^^
-.. USB Camera
-.. ^^^^^^^^^^^
-.. HDMI output
-.. ^^^^^^^^^^^^
-
-
-
-
-
-
-.. _FlytConsole: https://flytpod/flytconsole
-
-
-   
+.. _FlytConsole: https://flytpod/flytconsole   
 .. _Fixed wings/Planes: https://pixhawk.org/platforms/planes/start
-
-
-   
 .. _VTOL: https://pixhawk.org/platforms/vtol/start
-
 .. _Multicopters: https://pixhawk.org/platforms/multicopters/start
-
-
-
 .. _FlytConsole widgets: http://docs.flytbase.com/docs/FlytConsole/About_FlytConsole.html
-
-
-
-
