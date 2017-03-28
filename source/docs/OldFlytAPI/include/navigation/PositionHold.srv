@@ -1,5 +1,0 @@
-#Request : NULL
-#Response : return success=true if command sent successfully to autopilot
-
----
-bool success

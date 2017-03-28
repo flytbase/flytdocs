@@ -27,7 +27,7 @@ First Flight with FlytPOD
    c. Make sure that Position control works before switching to offboard mode.
    d. Vehicle will start to hover at the same position after switching to offboard mode until you start using any other app.
    e. RC controller sticks will not work in this mode. Only offboard switch will work which should be kept handy for emergency situations.
-   f. Try testing your first Flyt app :ref:`here<onboard app>`.
+   f. Try testing your first Flyt app :ref:`here<ready_to_use_apps>`.
 
 .. note:: In case you are using Pixhawk, check out the `pre-flight checklist <http://ardupilot.org/copter/docs/flying-arducopter.html>`_ before you fly.
 

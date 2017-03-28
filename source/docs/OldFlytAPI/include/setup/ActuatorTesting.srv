@@ -1,4 +1,0 @@
-uint8 actuator_id
-float32 time_s
----
-bool success

@@ -1,8 +1,0 @@
-#Request : expects attitude setpoint via pose.twist.angular.x(ROLL),angular.y(PITCH),angular.z(YAW) and thrust setpoint
-#Response : return success=true if command is successfully sent to autopilot
-
-geometry_msgs/TwistStamped pose
-float32 thrust
-
----
-bool success

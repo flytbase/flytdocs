@@ -1,9 +1,0 @@
-int8 CALIBRATION_STATE_SET_PWM_MAX = 1
-int8 CALIBRATION_STATE_SET_PWM_MIN = 2
-int8 CALIBRATION_STATE_CANCEL = 3
-float32 pwm_min
-float32 pwm_max
-int8 num_of_actuators
-int8 calibration_state
----
-bool success

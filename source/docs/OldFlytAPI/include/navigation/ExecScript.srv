@@ -1,6 +1,0 @@
-#Request : Expects name of the application to execute and the arguments to be passed to it
-#Response : return success=true if script starts to get executed
-string app_name
-string arguments
----
-bool success
