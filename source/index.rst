@@ -5,7 +5,7 @@
 
 .. _introduction:
 
-Welcome to FlytDocs!
+Welcome to FlytDocs
 ====================
 
 |br|
