@@ -88,7 +88,7 @@ The LEDs on the right side of the IO panel, marked 1 and 2 are User-programmable
 7. Gimbal
 ^^^^^^^^^
 
-FlytPOD provides a dedicated 4 PWM output channels for your Gimbal with pins marked as 1, 2 and 3 are Roll, Pitch and Yaw respectively. To control your gimbal using FlytAPIs, click `here <http://api.flytbase.com>`_.
+FlytPOD provides a dedicated 4 PWM output channels for your Gimbal with pins marked as 1, 2 and 3 are Roll, Pitch and Yaw respectively. To control your gimbal using FlytAPIs, click `here <http://api.flytbase.com/#gimbal-control>`_.
 
 
 8. Safety and Buzzer
