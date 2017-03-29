@@ -15,6 +15,6 @@ Scroll through the various topics below for more information on building your ow
    ./Developers/Introduction.rst
    ./Developers/APIDocumentation.rst
    ./Developers/Flytsim.rst
-   ./Developers/WriteDroneApps.rst
+   ./Developers/BuildingCustomApps.rst
    ./Developers/MoreSampleApps.rst
    ./Developers/NeedHelp.rst
