@@ -18,10 +18,10 @@ Onboard Apps
    :hidden:
    :caption: Onboard
   
-   ./WriteDroneApps/OnboardCPP.rst
-   ./WriteDroneApps/OnboardPython.rst
-   ./WriteDroneApps/RemoteWeb.rst
-   ./WriteDroneApps/RemoteMobile.rst
+   ./BuildingCustomApps/OnboardCPP.rst
+   ./BuildingCustomApps/OnboardPython.rst
+   ./BuildingCustomApps/RemoteWeb.rst
+   ./BuildingCustomApps/RemoteMobile.rst
 
 
 Remote Apps
