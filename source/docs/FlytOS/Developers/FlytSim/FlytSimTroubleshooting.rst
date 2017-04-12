@@ -101,6 +101,8 @@ FAQs
 
    $ gazebo -v
 
+.. flytsim_troubleshooting_dronecrash
+
 * My drone keeps crashing sometime after takeoff. what should I do?
   
   FlytSIM is quite computationally heavy. Make sure you are not running FlytSIM on a VirtualMachine, instead install Ubuntu natively on your machine. If you still are facing this issue, launch flytSIM and then execute the following command in a new terminal.
