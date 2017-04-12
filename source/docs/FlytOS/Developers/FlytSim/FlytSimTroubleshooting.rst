@@ -103,7 +103,7 @@ FAQs
 
 * My drone keeps crashing sometime after takeoff. what should I do?
   
-  Execute the following command in your terminal.
+  FlytSIM is quite computationally heavy. Make sure you are not running FlytSIM on a VirtualMachine, instead install Ubuntu natively on your machine. If you still are facing this issue, launch flytSIM and then execute the following command in a new terminal.
 
   .. code-block:: bash
 
@@ -113,5 +113,11 @@ FAQs
 
   .. code-block:: bash
 
-   $ Factor[0.99] SimTime[11.99] RealTime[12.12] Paused[F]
+   $ Factor[0.99] SimTime[5.29] RealTime[5.34] Paused[F]
+   $ Factor[0.99] SimTime[5.49] RealTime[5.54] Paused[F]
+   $ Factor[0.99] SimTime[5.68] RealTime[5.74] Paused[F]
+   $ Factor[0.99] SimTime[5.88] RealTime[5.94] Paused[F]
+   $ Factor[0.99] SimTime[6.08] RealTime[6.14] Paused[F]
+   $ Factor[0.99] SimTime[6.28] RealTime[6.34] Paused[F]
 
+  Make sure the value of ``Factor`` is above 0.8 all the time. 
