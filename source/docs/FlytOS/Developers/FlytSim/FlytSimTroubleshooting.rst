@@ -101,3 +101,17 @@ FAQs
 
    $ gazebo -v
 
+* My drone keeps crashing sometime after takeoff. what should I do?
+  
+  Execute the following command in your terminal.
+
+  .. code-block:: bash
+
+   $ gz stats  
+
+  The above command starts printing some information on your screen. Typically it would be something like this:
+
+  .. code-block:: bash
+
+   $ Factor[0.99] SimTime[11.99] RealTime[12.12] Paused[F]
+
