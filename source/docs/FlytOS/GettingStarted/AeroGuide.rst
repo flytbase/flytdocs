@@ -45,7 +45,7 @@ Installing Dependencies
 
    .. code-block:: bash
    
-       sed -i 's/source \/opt\/ros\/kinetic\/setup.bash//g' ~/.bashrc
+       sed -i 's#source /opt/ros/kinetic/setup.bash##g' ~/.bashrc
        
 Installing debian package
 """""""""""""""""""""""""
