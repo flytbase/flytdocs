@@ -34,7 +34,7 @@ FlytSim requires Gazebo7 which comes pre-packaged with ROS Kinetic. If in case, 
 
    .. code-block:: bash
    
-       sed -i 's/source \/opt\/ros\/kinetic\/setup.bash//g' ~/.bashrc
+       sed -i 's#source /opt/ros/kinetic/setup.bash##g' ~/.bashrc
 
 Install FlytSim
 ^^^^^^^^^^^^^^^

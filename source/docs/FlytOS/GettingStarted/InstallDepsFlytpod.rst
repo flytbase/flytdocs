@@ -36,7 +36,7 @@ This guide assumes you already have a working image for your Flight Computer. We
 
    .. code-block:: bash
    
-       sed -i 's/source \/opt\/ros\/kinetic\/setup.bash//g' ~/.bashrc
+       sed -i 's#source /opt/ros/kinetic/setup.bash##g' ~/.bashrc
    
 .. _installing_flytos_flytpod:
 
