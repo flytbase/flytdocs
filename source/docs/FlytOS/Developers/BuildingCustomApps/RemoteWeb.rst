@@ -85,7 +85,7 @@ Deploying Web App Onboard
 
 Once you have built your Web app, you are ready to deploy it Onboard. FlytOS uses lightweight Flask microframework for onboard web apps. Custom user apps can be added as blueprints as shown below. You can write a complete app with server side code in Python and Static content with HTML, CSS, JS. These are the steps to be followed.
 
-1) Go into the folder /flyt/flytapps/web_user.
+1) Go into the folder /flyt/userapps/web_user.
 2) Create a folder for your Web app, eg sampleApp.
 3) Inside th samplApp folder create a folder named static and paste the contents of your Web app folder inside this folder.
 4) Create an empty document named __init__.py and views.py alongside static folder.
@@ -104,7 +104,7 @@ Once you have built your Web app, you are ready to deploy it Onboard. FlytOS use
 
 
 
-6) Now come back to /flyt/flytapps/web_user and add an entry for your sampleApp in apps.py file.
+6) Now come back to /flyt/userapps/web_user and add an entry for your sampleApp in apps.py file.
 
 .. code-block:: python
 
