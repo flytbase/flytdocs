@@ -101,3 +101,23 @@ FAQs
 
    $ gazebo -v
 
+* My drone keeps crashing sometime after takeoff. what should I do?
+  
+  FlytSIM is quite computationally heavy. Make sure you are not running FlytSIM on a VirtualMachine, instead install Ubuntu natively on your machine. If you still are facing this issue, launch flytSIM and then execute the following command in a new terminal.
+
+  .. code-block:: bash
+
+   $ gz stats  
+
+  The above command starts printing some information on your screen. Typically it would be something like this:
+
+  .. code-block:: bash
+
+   $ Factor[0.99] SimTime[5.29] RealTime[5.34] Paused[F]
+   $ Factor[0.99] SimTime[5.49] RealTime[5.54] Paused[F]
+   $ Factor[0.99] SimTime[5.68] RealTime[5.74] Paused[F]
+   $ Factor[0.99] SimTime[5.88] RealTime[5.94] Paused[F]
+   $ Factor[0.99] SimTime[6.08] RealTime[6.14] Paused[F]
+   $ Factor[0.99] SimTime[6.28] RealTime[6.34] Paused[F]
+
+  Make sure the value of ``Factor`` is above 0.8 all the time. The value of *Factor* in essence shows how well your machine is handling FlytSIM's computations. In case the value of *Factor* keeps droping below 0.8, try closing the Gazebo GUI by clicking 'x' button in top left corner. To permanently prevent the Gazebo GUI from starting, edit the file in location */flyt/flytos/flytcore/share/sitl_gazebo/launch/posix_sitl.launch* and change the value of gui to false.
