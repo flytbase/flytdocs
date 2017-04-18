@@ -20,6 +20,7 @@ Onboard Apps
   
    ./BuildingCustomApps/OnboardCPP.rst
    ./BuildingCustomApps/OnboardPython.rst
+   ./BuildingCustomApps/ROSCPP.rst
    ./BuildingCustomApps/RemoteWeb.rst
    ./BuildingCustomApps/RemoteMobile.rst
 
