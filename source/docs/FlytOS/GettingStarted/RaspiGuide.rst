@@ -7,7 +7,7 @@ Raspberry Pi 3
 Installing FlytOS 
 ^^^^^^^^^^^^^^^^^^
 
-To install FlytOS on Raspberry Pi 3, there are 2 ways that you can follow. We recommended the first method for an easier install:
+To install FlytOS on Raspberry Pi 3, there are 2 ways that you can follow. We recommend the first method for an easier install:
 
 * :ref:`Flashing FlytOS Linux Image <flashing_img_rpi>` [**Recommended method**]
               

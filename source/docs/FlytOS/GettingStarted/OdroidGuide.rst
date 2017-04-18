@@ -8,7 +8,7 @@ ODROID-XU4
 Installing FlytOS
 ^^^^^^^^^^^^^^^^^^
 
-To install FlytOS on ODROID-XU4, there are 2 ways that you can follow. We recommended the first method for an easier install:
+To install FlytOS on ODROID-XU4, there are 2 ways that you can follow. We recommend the first method for an easier install:
 
 * :ref:`Flashing FlytOS Linux Image <flashing_img_odroid>`  [**Recommended method**]
   

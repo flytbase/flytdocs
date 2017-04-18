@@ -33,7 +33,7 @@ This step requires you to have a registered FlytBase account. In case you don't 
 1. |my_flytbase_link| to your FlytBase Account.
 2. Download the hardware specific |flytos_dl_link| from your FlytBase account.
 3. Download size of the image is about 1.5 GBs.
-4. Check *MD5 Hash* to verify the integrity of downloaded file. Since it is a large file, the commands may take a few minutes to complete:
+4. Check *MD5 Hash* to verify the integrity of downloaded file. Since it is a large file, the command may take a few minutes to complete:
 
    * Linux- launch a terminal and execute the following command 
    

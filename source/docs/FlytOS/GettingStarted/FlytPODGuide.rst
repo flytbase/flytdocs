@@ -10,7 +10,7 @@ Installing FlytOS
 
 .. note:: FlytOS Linux Image is pre-installed in FlytPOD/PRO. In case you want to re-flash their respective 32GB SD/eMMC card, or create a duplicate 32GB SD/eMMC card follow the steps given below. You can use 16GB SD/eMMC cards as well, but 32GB is preferable.
 
-To re-install FlytOS on FlytPOD/PRO, there are 2 ways that you can follow. We recommended the first method for an easier install:
+To re-install FlytOS on FlytPOD/PRO, there are 2 ways that you can follow. We recommend the first method for an easier install:
 
 * :ref:`Flashing FlytOS Linux Image <flashing_img_flytpod>`  [**Recommended method**]
   
