@@ -15,7 +15,7 @@ Download and Build the Demo Apps
   		$ mkdir -p ~/catkin_ws/src
   		$ cd ~/catkin_ws/src
 
-* Copy the roscpp_demoapps demoapps folder in src
+* Copy the ros_demoapps folder in src
   
 * You can now compile the the app by entering the following commands
 
@@ -54,7 +54,7 @@ If you have compiled the downloaded programs successfully, execute them by runni
 
 .. code-block:: bash
 
-    $ rosrun roscpp_demoapps demoapp1_node 
+    $ rosrun ros_demoapps demoapp1_node 
 
 Code
 """"""""""
@@ -126,7 +126,7 @@ If you have compiled the downloaded programs successfully, execute them by runni
 
 .. code-block:: bash
 
-    $ rosrun roscpp_demoapps demoapp2_node 3.0
+    $ rosrun ros_demoapps demoapp2_node 3.0
     # here '3.0' is passed as an argument, one could send any other float value.
 
 Code
@@ -138,7 +138,7 @@ Code
 
 
 
-.. _github page: https://github.com/flytbase/flytsamples/tree/master/CPP-Python-ROS-Apps/roscpp_demoapps
+.. _github page: https://github.com/flytbase/flytsamples/tree/master/CPP-Python-ROS-Apps/ros_demoapps
 
 
 .. |br| raw:: html
