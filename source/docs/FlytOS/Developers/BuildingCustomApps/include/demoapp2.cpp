@@ -1,5 +1,6 @@
-#include <core_script_bridge/navigation_bridge.h>
+#include <cpp_api/navigation_bridge.h>
 #include <iostream>
+#include <ros/package.h>
 
 Navigation nav;
 int main(int argc, char *argv[])

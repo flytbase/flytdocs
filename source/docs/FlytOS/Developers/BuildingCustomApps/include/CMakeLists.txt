@@ -2,7 +2,7 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(demoapp1)
 
-SET(CMAKE_INSTALL_PREFIX /usr/local/flytos/userapps CACHE PATH "Cmake install prefix path for flytapps" FORCE)
+SET(CMAKE_INSTALL_PREFIX /usr/local/flytos/flytapps CACHE PATH "Cmake install prefix path for flytapps" FORCE)
 
 add_definitions(-std=c++11)
 

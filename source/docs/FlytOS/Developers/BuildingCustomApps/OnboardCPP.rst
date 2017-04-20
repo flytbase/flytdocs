@@ -20,7 +20,7 @@ All the sample applications can be found at our `github link`_.
 Demo App 1
 ----------
 
-This demo app makes the robot takeoff, move in a square trajectory of side length 5m and land once the entire mission is over. 
+This demo app makes the drone takeoff, move in a square trajectory of side length 5m and land once the entire mission is over. 
 
 .. Below is a demo `youtube video <https://www.youtube.com/watch?v=z36zvRfn58U&feature=youtu.be>`_ of the same app when run on :ref:`FlytSim <about_flytsim>`.
 
@@ -38,7 +38,7 @@ Below is a demo `youtube video <https://www.youtube.com/watch?v=lwKZXkzkM80>`_ o
 |br|
 
 Execution
-"""""""""""""""
+"""""""""
 
 The source code of this app is located at */flyt/flytapps/onboard/src/demoapp1* and its executable *demoapp1* is at */flyt/flytapps/onboard/install*. To execute this app run the following command in your terminal.
 
@@ -47,14 +47,14 @@ The source code of this app is located at */flyt/flytapps/onboard/src/demoapp1* 
     $ /flyt/flytapps/onboard/install/demoapp1 
 
 Code
-""""""""""
+""""
 
 .. literalinclude:: include/demoapp1.cpp
    :language: c
    :tab-width: 2
 
 Code Explained
-""""""""""""""""""""
+""""""""""""""
 
 * You must include the following header file to make FlytAPI-navigation available for the script.
 
@@ -68,14 +68,14 @@ Code Explained
   .. literalinclude:: include/demoapp1.cpp
      :language: c
      :tab-width: 2
-     :lines: 4
+     :lines: 3
 
 * TakeOff command could be sent to vehicle with relative takeoff altitude in meters as argument. Over here the takeoff altitude is 3m.
 
   .. literalinclude:: include/demoapp1.cpp
      :language: c
      :tab-width: 2
-     :lines: 7
+     :lines: 6
 
   .. caution:: You must ensure to call takeoff() before sending any other position setpoints. takeoff() inherently calls arm(), hence calling arm() directly also arms the vehicle and makes it responsive towards next setpoint commands.
 
@@ -84,14 +84,14 @@ Code Explained
   .. literalinclude:: include/demoapp1.cpp
      :language: cpp
      :tab-width: 2
-     :lines: 8-11
+     :lines: 7-10
 
 * Land command must be used to send the vehicle into Landing mode.
 
   .. literalinclude:: include/demoapp1.cpp
      :language: cpp
      :tab-width: 2
-     :lines: 12
+     :lines: 11
 
 * Please refer to |api_link| to get more information on the available list of APIs.
 
@@ -107,10 +107,10 @@ Demo App 2
 .. note:: This demo requires arguments to be passed.
 
 
-This demo app makes the robot takeoff, move in a square trajectory of side length *provided as an argument to the script* and land once the entire mission is over.
+This demo app makes the drone takeoff, move in a square trajectory of side length *provided as an argument to the script* and land once the entire mission is over.
 
 Execution
-"""""""""""""""
+"""""""""
 
 The source code of this app is located at */flyt/flytapps/onboard/src/demoapp2* and its executable *demoapp2* is at */flyt/flytapps/onboard/install*. To execute this app run the following command in your terminal.
 
@@ -120,7 +120,7 @@ The source code of this app is located at */flyt/flytapps/onboard/src/demoapp2* 
     # here '3' is passed as an argument, one could send any other float value.
 
 Code
-""""""""""
+""""
 
 .. literalinclude:: include/demoapp2.cpp
    :language: c
@@ -141,8 +141,7 @@ Create and Compile custom app
   
   .. code-block:: c
     
-        #include <core_script_bridge/navigation_bridge.h>
-        #include <iostream>
+        #include <cpp_api/navigation_bridge.h>
 
         Navigation nav;
         int main(int argc, char *argv[])
@@ -166,6 +165,7 @@ Create and Compile custom app
 * Inside build directory, run the cmake command::
   
   $ cmake ..
+
 * To build your cpp file, run the make command::
   
   $ make
@@ -188,7 +188,7 @@ CMakeLists.txt - Explained
 
       add_definitions(-std=c++11)
 
-* Make Navigation FlytAPI Library - *core_script_bridge* and other dependencies available for your my_first_cpp_app.cpp.
+* Make Navigation FlytAPI Library - *cpp_api* and other dependencies available for your my_first_cpp_app.cpp.
 
   .. code-block:: CMake
 
@@ -204,14 +204,14 @@ CMakeLists.txt - Explained
   .. literalinclude:: include/CMakeLists.txt
      :language: cmake
      :tab-width: 2
-     :lines: 11-12
+     :lines: 14-15
 
-* Add the following install command to install your created my_first_cpp_app executable target to install space - /flyt/flytapps/onboard/install. This would allow web/mobile apps to execute your installed scripts remotely. Visit |exec_script_link| for details about the corresponding API call. 
+* Add the following install command to install your created my_first_cpp_app executable target to install space - /flyt/userapps/onboard_user/install. This would allow web/mobile apps to execute your installed scripts remotely. Visit |exec_script_link| for details about the corresponding API call. 
 
   .. literalinclude:: include/CMakeLists.txt
      :language: cmake
      :tab-width: 2
-     :lines: 14-16
+     :lines: 17-19
 
 .. |exec_script_link| raw:: html
 
@@ -229,9 +229,9 @@ Install custom app
 ^^^^^^^^^^^^^^^^^^
 
 
-To install your app into /flyt/flytapps/onboard/install space, so that your Android/Web App could execute it remotely, run this command in your terminal::
+To install your app into /flyt/userapps/onboard_user/install space, so that your Android/Web App could execute it remotely, run this command in your terminal::
 
-  $ sudo cmake -DCOMPONENT=Runtime -P cmake_install.cmake
+  $ sudo make install
 
 
 
