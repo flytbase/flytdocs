@@ -9,7 +9,7 @@ FlytSim Dependencies
 1. Before you can start off with installing FlytSim, make sure you fulfill all the following dependencies.
 
 * Intel 64 bit architecture
-* `Linux - Ubuntu 16.04`_
+* `Linux - Ubuntu 16.04`_ (preferably **NOT** in a Virtual Machine environment)
 * `ROS - Kinetic`_ (install *ros-kinetic-desktop-full*)
 * `OpenCV 2.4`_ (for vision/video streaming APIs)
 * Gazebo7 (comes with ROS-Kinetic)
