@@ -48,7 +48,8 @@ Run the following commands on your Companion Computer to install all FlytOS depe
 
 **How do I figure out that FlytOS has autodetected my apm/px4 stack correctly**
 
-Open the file ``/flyt/config/flyt.config`` on your companion computer and check the value of ``flight_stack``. It would be set to either ``px4`` or ``apm`` according to flight-stack detected. If FlytOS is not being able to detect autopilot stack correctly:
+Open up ``flytconsole`` and check for either ``PX4`` or ``Ardupilot`` logo at top right corner. If FlytOS is not being able to detect autopilot stack correctly:
 
 * Make sure you have installed all the dependencies mentioned :ref:`here <flytos_dependency>` successfully.
 * If the problem still persists, make sure *portname* and *baudrate* is correctly configured in the file ``/flyt/flytos/flytcore/share/core_api/launch/core_api_autopilot.launch``. For more information on this :ref:`click here <change_baudrate_or_portname>`.
+* Open up ``/flyt/logs/startup/flyt_startup.log``, and check the first couple of lines for debug messages.
