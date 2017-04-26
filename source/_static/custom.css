@@ -121,3 +121,7 @@ img{
     background-color: transparent;
     z-index: 3000;
 }
+
+.glyphicon {
+    color: #fff;
+}
