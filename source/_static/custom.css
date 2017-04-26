@@ -109,3 +109,10 @@ img{
 .top-navbar-api{
 	left:835px;
 }
+
+#mobile-toggle {
+    width: 10%;
+    border-bottom: none;
+    background-color: transparent;
+    z-index: 3000;
+}
