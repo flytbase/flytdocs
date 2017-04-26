@@ -38,12 +38,6 @@ Getting Started
 ===============
 
 
-.. important:: This guide is under active development.
-
-
-
-
-
 1. Unboxing Flytkit
  
    The FlytKit Includes: 

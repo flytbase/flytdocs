@@ -3,9 +3,6 @@
 FlytConsole - Widgets
 =====================
 
-.. important:: This site is under active development.
-
-
 
 .. 1. To launch FlytConsole enter this address http://"enter ip address here" .
 

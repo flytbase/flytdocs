@@ -3,8 +3,6 @@
 Connections/Expansion Ports
 ===========================
 
-.. important:: This page is under active development.
-
 .. note:: The following document is applicable for both FlytPOD and FlytPOD PRO
 
 

@@ -3,8 +3,6 @@
 Managing Payloads
 =================
 
-.. important:: This page is under active development.
-
 .. attention:: The following document is applicable for both FlytPOD and FlytPOD PRO. 
 
 
