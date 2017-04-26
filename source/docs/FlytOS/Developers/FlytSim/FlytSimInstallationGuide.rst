@@ -1,7 +1,7 @@
 .. _FlytSim Installation Guide: 
 
-FlytSim Installation Guide
-==========================
+Installation Guide
+==================
 
 FlytSim Dependencies
 ^^^^^^^^^^^^^^^^^^^^

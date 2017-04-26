@@ -7,8 +7,8 @@ WiFi Setup
 .. .. _configuring WiFi module in client mode:
 
 
-Brief introduction of HotSpot and Client Modes
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Introduction
+^^^^^^^^^^^^
 
 FlytPOD/PRO has inbuilt powerful 2.4 GHz WiFi router, which can be set into Hotspot/AP or Client mode.
 

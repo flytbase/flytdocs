@@ -1,7 +1,7 @@
 .. _FlytPOD_specifications:
 
-Connections and Expansion Ports
-===============================
+Connections/Expansion Ports
+===========================
 
 .. important:: This page is under active development.
 
@@ -13,10 +13,10 @@ Expansion Panel
 
 
 .. image:: /_static/Images/iopannel.jpg
-   :align: center
-	
+		:align: center
+
 .. image:: /_static/Images/FPsideviews.png
-	:align: center
+		:align: center
 
 .. note:: Notations/symbols on your FlytPOD may vary from the given image, but the pin functions remain same, please match physical location with above image in such case.
 

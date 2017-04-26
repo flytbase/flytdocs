@@ -1,7 +1,7 @@
 .. _flytsim basics:
 
-FlytSim Start/Stop
-==================
+How to Launch?
+==============
 
 .. _launch flytsim:
 

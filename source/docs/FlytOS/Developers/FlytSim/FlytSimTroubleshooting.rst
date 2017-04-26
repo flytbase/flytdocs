@@ -1,7 +1,7 @@
 .. _flytsim troubleshooting:
 
-FlytSim Troubleshooting
-=======================
+Troubleshooting
+===============
 
 .. _flytsim errors:
 

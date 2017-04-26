@@ -8,7 +8,6 @@
 Welcome to FlytDocs
 ====================
 
-|br|
 
 FlytBase is the next generation platform for commercial drone applications. It is by design open for developers to build advanced drone applications using its open APIs. FlytBase consists of FlytOS, the software framework and FlytPOD/PRO, the integrated hardware.
 
@@ -41,30 +40,22 @@ You can participate in our `forums`_ or `facebook`_ group discussions to interac
 .. toctree::
     :maxdepth: 2
     :hidden:
-    :caption: FlytPOD
-	
-    docs/FlytPOD/About_FlytPOD.rst
-    docs/FlytPOD/Hardware_specifications.rst
-    docs/FlytPOD/FlytPOD_Quickstart.rst
-    docs/FlytPOD/First_principles.rst
-    docs/FlytPOD/First_flight.rst
-    docs/FlytPOD/Safety_instructions.rst
-    docs/FlytPOD/RouterSetup.rst
-
-
-    
-
-
-.. toctree::
-    :maxdepth: 2
-    :hidden:
     :caption: FlytConsole
   
     docs/FlytConsole/About_FlytConsole.rst
     docs/FlytConsole/FlytConsole.rst 
 
+.. toctree::
+    :maxdepth: 2
+    :hidden:
+    :caption: FlytPOD
+	
+    docs/FlytPOD/About_FlytPOD.rst
+    docs/FlytPOD/Hardware_specifications.rst
+    docs/FlytPOD/FlytPOD_Quickstart.rst
+    docs/FlytPOD/BeginnerGuide.rst
+    docs/FlytPOD/RouterSetup.rst
 
-   
 .. .. toctree::
 ..    :maxdepth: 2
 ..    :hidden:

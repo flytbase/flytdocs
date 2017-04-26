@@ -3,8 +3,8 @@
 FlytOS Updates
 ==============
 
-Automatic Over-the-air Updates
-------------------------------
+Automatic OTA
+-------------
 
 .. caution:: You must activate your device, without which auto-updates would not work.
 

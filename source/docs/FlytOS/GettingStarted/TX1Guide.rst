@@ -170,16 +170,6 @@ Connect the Pixhawk autopilot board’s TELEM2 port to TX1’s UART1 port . If y
 Configuring Pixhawk Autopilot
 """""""""""""""""""""""""""""
 
-For PX4 users
--------------
-
-1. Install `QGC(QGroundControl) <http://qgroundcontrol.com/>`_ in your local machine.
-2. Connect Pixhawk to QGC using the USB port at the side of Pixhawk.
-3. Install the latest stable PX4 release in Pixhawk using QGC by following `this <https://donlakeflyer.gitbooks.io/qgroundcontrol-user-guide/content/SetupView/Firmware.html>`_ guide.
-4. Once done, visit `parameter widget in QGC <https://donlakeflyer.gitbooks.io/qgroundcontrol-user-guide/content/SetupView/Parameters.html>`_ and search for parameters SYS_COMPANION and MAV_COMP_ID, set them to 921600 and 50 respectively. This would enable communication between FlytOS running on Nvidia TX1 and Pixhawk.
-5. Configure a dedicated two way switch for ``OFFBOARD MODE`` during RC calibration, to allow FlytOS to take control of drone from RC when vehicle is switched to ``OFFBOARD MODE``.
-
-
 For APM users
 -------------
 
@@ -188,6 +178,15 @@ For APM users
 3. Install the latest stable APM release in Pixhawk using QGC by following `this <https://donlakeflyer.gitbooks.io/qgroundcontrol-user-guide/content/SetupView/Firmware.html>`_ guide.
 4. Once done, visit `parameter widget in QGC <https://donlakeflyer.gitbooks.io/qgroundcontrol-user-guide/content/SetupView/Parameters.html>`_ and search for parameters SERIAL2_BAUD and SERIAL2_PROTOCOL, set them to 921 and 1 respectively. This would enable communication between FlytOS running on Nvidia TX1 and Pixhawk.
 5. Configure a dedicated switch position for ``GUIDED MODE`` during RC calibration, to allow FlytOS to take control of drone from RC when vehicle is switched to ``GUIDED MODE``.
+
+For PX4 users
+-------------
+
+1. Install `QGC(QGroundControl) <http://qgroundcontrol.com/>`_ in your local machine.
+2. Connect Pixhawk to QGC using the USB port at the side of Pixhawk.
+3. Install the latest stable PX4 release in Pixhawk using QGC by following `this <https://donlakeflyer.gitbooks.io/qgroundcontrol-user-guide/content/SetupView/Firmware.html>`_ guide.
+4. Once done, visit `parameter widget in QGC <https://donlakeflyer.gitbooks.io/qgroundcontrol-user-guide/content/SetupView/Parameters.html>`_ and search for parameters SYS_COMPANION and MAV_COMP_ID, set them to 921600 and 50 respectively. This would enable communication between FlytOS running on Nvidia TX1 and Pixhawk.
+5. Configure a dedicated two way switch for ``OFFBOARD MODE`` during RC calibration, to allow FlytOS to take control of drone from RC when vehicle is switched to ``OFFBOARD MODE``.
 
 Next Step: :ref:`Supported Ground Control Stations<supported_GCS>`
 ------------------------------------------------------------------

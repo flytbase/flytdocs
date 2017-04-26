@@ -1,7 +1,7 @@
 .. _faq_troubleshooting:
 
-Frequently Asked Questions 
-==========================
+FAQs 
+====
 
 .. _cannot_login_to_device_after_image_write:
 

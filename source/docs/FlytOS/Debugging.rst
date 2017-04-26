@@ -4,7 +4,7 @@ Debugging
 =========
 
 * :ref:`Getting Help in Forum<forum_help_troubleshooting>`
-* :ref:`Frequently Asked Questions<faq_troubleshooting>`
+* :ref:`FAQs<faq_troubleshooting>`
 
 .. toctree::
    :maxdepth: 2
