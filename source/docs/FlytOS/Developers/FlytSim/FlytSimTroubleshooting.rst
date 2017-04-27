@@ -120,4 +120,4 @@ FAQs
    $ Factor[0.99] SimTime[6.08] RealTime[6.14] Paused[F]
    $ Factor[0.99] SimTime[6.28] RealTime[6.34] Paused[F]
 
-  Make sure the value of ``Factor`` is above 0.8 all the time. The value of *Factor* in essence shows how well your machine is handling FlytSIM's computations. In case the value of *Factor* keeps droping below 0.8, try closing the Gazebo GUI by clicking 'x' button in top left corner. To permanently prevent the Gazebo GUI from starting, edit the file in location */flyt/flytos/flytcore/share/sitl_gazebo/launch/posix_sitl.launch* and change the value of gui to false.
+  Make sure the value of ``Factor`` is above 0.8 all the time. The value of *Factor* in essence shows how well your machine is handling FlytSIM's computations. In case the value of *Factor* keeps droping below 0.8, try closing the Gazebo GUI by clicking 'x' button in top left corner. To permanently prevent the Gazebo GUI from starting, edit the file in location */flyt/flytos/flytcore/share/core_api/launch/core_api_sitl.launch* and change the value of gui to false.

@@ -124,7 +124,7 @@ Once you have built your Web app, you are ready to deploy it Onboard. FlytOS use
 8) You can also try out other Sample Apps in the repository.
 
 .. _Ionic components: http://ionicframework.com/docs/components/
-.. _Flyt_Web_SDK: https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/flytbase/flytsamples/tree/master/WebApps/Flyt_Web_SDK
+.. _Flyt_Web_SDK: https://downloads.flytbase.com/flytos/downloads/sdk/Flyt_Web_SDK.zip
 .. _Flyt Joystick: https://minhaskamal.github.io/DownGit/#/home?url=https:%2F%2Fgithub.com%2Fflytbase%2Fflytsamples%2Ftree%2Fmaster%2FWebApps%2FFlyt_Joystick
 .. _API documentation: http://docs.flytbase.com/docs/FlytAPI/REST_WebsocketAPIs.html
 .. _github repository: https://github.com/flytbase/flytsamples
