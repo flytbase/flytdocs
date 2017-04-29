@@ -29,6 +29,18 @@ Make sure you have these following lines amongst the last few lines in ``/etc/ba
 
 Also make sure you DO NOT have any of the above lines in the ``~/.bashrc`` file. If the lines are present, remove them, save the file and reboot the device. 
 
+.. _start_stop_flytos:
+
+**How to start/stop FlytOS**
+
+.. code-block:: bash
+    
+    $ sudo $(rospack find core_api)/scripts/stop_flytOS.sh
+
+.. code-block:: bash
+    
+    $ sudo $(rospack find core_api)/scripts/launch_flytOS.sh
+
 .. _change_baudrate_or_portname:
 
 **Need to change the baudrate/port of Flight Control Unit(Pixhawk)**

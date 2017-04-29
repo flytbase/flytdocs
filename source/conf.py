@@ -64,6 +64,9 @@ html_theme_options = {
     "projectlink": "http://docs.flytbase.com"
 }
 
+# If false, no index is generated.
+html_use_index = True
+
 if on_rtd:  # only import and set the theme if we're building docs locally
   html_context = {
     'css_files': [
