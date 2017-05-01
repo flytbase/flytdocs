@@ -125,3 +125,7 @@ img{
 .glyphicon {
     color: #fff;
 }
+
+#main-search form .input-group input {
+    margin-bottom: 50px;
+}
