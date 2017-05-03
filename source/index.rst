@@ -9,11 +9,13 @@ Welcome to FlytDocs
 ====================
 
 
-FlytBase is the next generation platform for commercial drone applications. It is by design open for developers to build advanced drone applications using its open APIs. FlytBase consists of FlytOS, the software framework and FlytPOD/PRO, the integrated hardware.
+FlytBase is the next generation platform for commercial drone applications. It is by design open for developers to build advanced drone applications using its open APIs. FlytBase offers FlytOS, the software framework for drones, FlytSIM, the simulation environment and FlytSDKs the web and mobile app development kits. Currently supported autopilot stacks include PX4 and APM and companion computers include Raspberry Pi3, NVIDIA TX1, Intel Edison, Intel Aero, ODROID-XU4 and FlytPOD/PRO.
 
 **FlytOS** is based on Linux and ROS (Robot Operating System) making it an ideal platform for research and commercial drone applications. It can interact with any compatible drone/autopilot using its adapter layer and exposes high level FlytAPIs in ROS, CPP, Python, REST and Websocket. It makes it easy to integrate custom payload and also provides advanced APIs using its onboard modules. These rich set of APIs allow for easy development of onboard business logic as well as remote monitoring and control through web and mobile apps. The modular design of FlytOS allows for integration with external ROS/Linux libraries and custom data plumbing between onboard and offboard apps. The vision of FlytOS is to provide a standard language for the drone developers to talk to their drones.
 
 **FlytSIM** offers a 3D SITL(Software In The Loop) ROS-Gazebo based simulation environment for testing user apps without the drone hardware. Applications developed using FlytAPIs can be tested in FlytSim, before deploying on actual drones. This offers developers a pleasant drone application development experience, while keeping it safe, and saving them huge amount of time and effort.
+
+**FlytSDKs** are web and mobile app development kits to give you a headstart in building your apps using FlytAPIs. FlytSDKs simplify development by providing pre-integrated client libraries, mechanism to connect to the drone and a complete sample project with REST and WebSocket calls. 
 
 **FlytPOD/PRO** is an integrated flight computer stack with a hybrid architecture, consisting of a STM32 microcontroller based autopilot tightly coupled with ODROID-XU4 SBC (single board computer). It also has a powerful WiFi router running OpenWRT firmware and several interfaces for custom payloads, radio receivers and special sensors. It comes with PX4 flight stack and FlytOS preloaded for an out-of-the-box ready-to-fly experience.
 
