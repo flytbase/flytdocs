@@ -16,15 +16,15 @@ Expansion Panel
 .. image:: /_static/Images/FPsideviews.png
 		:align: center
 
-.. note:: Notations/symbols on your FlytPOD may vary from the given image, but the pin functions remain same, please match physical location with above image in such case.
+.. note:: Notations/symbols on your FlytPOD/PRO may vary from the given image, but the pin functions remain same, please match physical location with above image in such case.
 
 1. Power Button
 ^^^^^^^^^^^^^^^
 
-Gently pressing the power button turns off the FlytPOD. The RGB LED turns to amber upon shutting down. After that you can remove the power supply. You can switch on FlytPOD again by pressing the Power button and holding for about 1 second.
+Gently pressing the power button turns off the FlytPOD/PRO. The RGB LED turns to amber upon shutting down. After that you can remove the power supply. You can switch on FlytPOD again by pressing the Power button and holding for about 1 second.
 
 .. note:: Please be patient while the system shuts down. It may take a few seconds for the system to shut down completely.
-  
+
 
 2. External Sensors / Payload Expansion port 2*17
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -52,21 +52,21 @@ Receiver signal strength input pin.
 
 5. RGB LED
 ^^^^^^^^^^
-The RGB LED represents the vehicle state. Below is a list of various color patterns along with the associated message/status. 
+The RGB LED represents the vehicle state. Below is a list of various color patterns along with the associated message/status.
 
 * Red Blink                    		 - Configuration Error
 * Red FastBlink while Arming       - Arming Error
 * Blue Breathing 									 - Standby, NO-GPS lock, ready to arm
-* Blue Solid                       - Armed and No GPS lock / Px4flow poor quality 
+* Blue Solid                       - Armed and No GPS lock / Px4flow poor quality
 * Green Breathing                  - Standby and GPS / Px4flow ready, ready to arm
 * Green Solid                      - Armed and GPS lock / Px4flow available
 * Amber Breathing                  - Vehicle shutdown/lockdown mode
 
 During vehicle mode transition
 
-* Green FastBlink for a second   			- Successful 
+* Green FastBlink for a second   			- Successful
 * Red FastBlink for a second   				- Transition failed
-  
+
 Battery warnings
 
 * Amber Breathing / Solid          - Low battery warning
@@ -92,7 +92,7 @@ FlytPOD provides a dedicated 4 PWM output channels for your Gimbal with pins mar
 8. Safety and Buzzer
 ^^^^^^^^^^^^^^^^^^^^
 
-FlytPOD provides an external safety switch and buzzer ports. Safety switch has been disabled by default. To enable this feature, set ``CBRK_IO_SAFETY`` parameter in FlytConsole to 0 from its :ref:`Parameter Manager<Gain_tuning>` widget. 
+FlytPOD provides an external safety switch and buzzer ports. Safety switch has been disabled by default. To enable this feature, set ``CBRK_IO_SAFETY`` parameter in FlytConsole to 0 from its :ref:`Parameter Manager<Gain_tuning>` widget.
 
 
 9. RC Receiver Interface
@@ -115,10 +115,10 @@ Below are the various color patterns that the WiFi Status LED exhibits along wit
 
 
 * Solid        - WiFi booting.
-* Random Blink - WiFi data transmission indicator. 
-  
+* Random Blink - WiFi data transmission indicator.
+
 The WiFi Power off Switch is available on top of the FlytPOD, in case you want to use the ethernet port.
-  
+
 11. System Health LED
 ^^^^^^^^^^^^^^^^^^^^^
 
@@ -127,7 +127,7 @@ The System Health LED indicates the Autopilot Health status.
 * Green FastBlink - Autopilot Configuration Error
 * Green Blink at 1 Hz - Autopilot Ready to Arm
 
-In case of Autopilot firmware upgrade in progress, (marked by RGBled status either being solid green or blank), helath led shows either Green FastBlink or Solid.
+In case of Autopilot firmware upgrade in progress, (marked by RGB Led status either being solid green or blank), health led shows either Green FastBlink or Solid.
 
 12. Power Supply LED
 ^^^^^^^^^^^^^^^^^^^^
@@ -148,7 +148,7 @@ You must attach the provided GPS-MAG module to these ports for stable flight. Re
 
 14. VI Sensor Input
 ^^^^^^^^^^^^^^^^^^^
-The VI sensor plug of `power module`_ must be connected to this port. This would enable FlytPOD to monitor battery status and issue low battery warnings. It also provides a 5V, 2A power input pin which is highest priority input source for autopilot. 
+The VI sensor plug of `power module`_ must be connected to this port. This would enable FlytPOD to monitor battery status and issue low battery warnings. It also provides a 5V, 2A power input pin which is highest priority input source for autopilot.
 
 15. Power Input
 ^^^^^^^^^^^^^^^
@@ -199,14 +199,14 @@ Peripherals
 Servo Output / PWM output
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-According to your platform connect up to 8 motors (ESCs) to the PWM output channel. 
+According to your platform connect up to 8 motors (ESCs) to the PWM output channel.
 
 .. figure:: /_static/Images/statusLEDs.jpg
  :align: center
  :scale: 12%
-   
+
  PWM Channel
-   
+
 
 Multicopters
 """"""""""""
@@ -240,28 +240,28 @@ Radio Receiver
 ^^^^^^^^^^^^^^
 
 * PWM: RC receiver in PWM mode. Channel 1 to 8 on RC port act as 8xPWM input.
-  
+
 .. figure:: /_static/Images/ppm_pwm.jpg
  :align: center
  :scale: 50%
- 
+
 
  PPM and PWM RC Input Channels
 
 * PPM: RC receiver in PPM mode. Channel 1 on RC port acts as PPM input.
-     
+
 .. .. note:: By default PPM mode is enabled.
 
 * SPEKTRUM: (Currently not supported on FlytPOD/PRO) For a SPEKTRUM, DSM, DSM2, or DSM-X Satellite RC receiver, connect to the SPEK port.
 
 * SBUS: Connect SBUS receiver to the SBUS port.
-  
+
 .. figure:: /_static/Images/sbus_spek.jpg
  :align: center
  :scale: 50%
 
  SBUS and SPEKTRUM RC Input Ports
-    
+
 .. .. important:: It is recommended to use PPM/PWM for RC Input. For using SBUS/SPEK please contact us at ``admin@navstik.org``.
 
 
@@ -271,7 +271,7 @@ Radio Receiver
 GPS-Magnetometer
 ^^^^^^^^^^^^^^^^
 
-External GPS-MAG can be connected to FlytPOD through the connector provided on the side.
+External GPS-MAG can be connected to FlytPOD/PRO through the connector provided on the side.
 
 * FlytPOD - FlytPOD comes with GPS-MAG 1 port. GPS-MAG sensor can be connected to this port to achieve a stable flight.
 * FlytPOD PRO - FlytPOD PRO comes with GPS-MAG 1 as it's primary port and GPS-MAG 2. Upto two GPS-MAG sensors can be connected. This offers a fail safe mechanism for reliable navigation.
@@ -279,8 +279,8 @@ External GPS-MAG can be connected to FlytPOD through the connector provided on t
 .. figure:: /_static/Images/Gpsmag.png
  :align: center
  :scale: 65%
- 
- External GPS-MAG ports 
+
+ External GPS-MAG ports
 
 
 .. _Power_Module:
@@ -288,12 +288,12 @@ External GPS-MAG can be connected to FlytPOD through the connector provided on t
 
 Power Module
 ^^^^^^^^^^^^
-Connect the power module to the appropriate ports in the FlytPOD as shown in the image. 
+Connect the power module to the appropriate ports in the FlytPOD/PRO as shown in the image.
 
 .. figure:: /_static/Images/PowerModule.jpg
 	:align: center
 	:scale: 30%
-	
+
 	PowerModule
 
 
@@ -301,10 +301,10 @@ Connect the power module to the appropriate ports in the FlytPOD as shown in the
 LiDAR-Lite V2 Laser Rangefinder
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Below are two methods for connecting LiDAR-lite to FlytPOD.
+Below are two methods for connecting LiDAR-lite to FlytPOD/PRO.
 
 * PWM Input
-  
+
   Please follow the table below to make the required connections.
 
 .. image:: /_static/Images/lidarpinstable.jpg
@@ -314,7 +314,7 @@ Below are two methods for connecting LiDAR-lite to FlytPOD.
 .. figure:: /_static/Images/lidar1.jpg
 	:align: center
 	:scale: 12%
-	
+
 	LiDAR Pins
 
 .. note:: Set the parameter SENS_EN_LL40LS to 1. (For LIDARLiteV2, no need to connect reset pin)
@@ -328,11 +328,11 @@ Connect your Telemetry module to the Telemetry port(Rx and Tx) as shown below fo
 .. figure:: /_static/Images/lidar3.jpg
 	:align: center
 	:scale: 12%
-	
+
 	Telemetry pins
 
 
-.. _FlytConsole: https://flytpod/flytconsole   
+.. _FlytConsole: https://flytpod/flytconsole
 .. _Fixed wings/Planes: https://pixhawk.org/platforms/planes/start
 .. _VTOL: https://pixhawk.org/platforms/vtol/start
 .. _Multicopters: https://pixhawk.org/platforms/multicopters/start
