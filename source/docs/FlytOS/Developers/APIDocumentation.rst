@@ -3,7 +3,7 @@
 API Documentation
 =================
 
-Visit |api_link| for extensive documentation of FlytAPI's in various languages. Examples are available in Python, C++. Roscpp, Rospy, Javascript(Rest and Websocket).
+Visit |api_link| for extensive documentation of FlytAPI's in various languages. Examples are available in Python, C++, Roscpp, Rospy, Javascript(Rest and Websocket).
 
 
 FlytOS uses ROS at its heart. So all the API's of FlytOS are basically implemented in ROS.

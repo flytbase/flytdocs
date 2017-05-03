@@ -1,6 +1,6 @@
 .. _first_flight_main:
 
-First Flight 
+First Flight
 ================
 
 
@@ -26,7 +26,7 @@ Below are important guidelines that the on-field operations team should be aware
 
 7. Offboard switch on RC is the emergency switch. Flip it to enable RC control.
 
-8. When vehicle is in offboard mode keep the Position switch in POSHOLD position, both sticks at the center. So that when vehicle is switched back to RC mode from Offboard mode vehicle will enter RC-POSCTL mode. If this care is not taken then vehicle may enter in RC-MANUAL mode and depending on throttle stick will suddenly dive or soar up.
+8. When vehicle is in offboard mode keep the Position switch in RC-POSCTL position, both sticks at the center. So that when vehicle is switched back to RC mode from Offboard mode vehicle will enter RC-POSCTL mode. If this care is not taken then vehicle may enter in RC-MANUAL mode and depending on throttle stick will suddenly dive or soar up.
 
 9. To execute waypoint mission using FlytConsole you have to switch to OFFBOARD/API mode. To execute waypoint mission using qgroundcontrol you need to switch to AUTO-Mission. (Configure a separate switch for AUTO-Mission mode from rc-calibration page)
 
@@ -52,6 +52,7 @@ Basic Flight
 ^^^^^^^^^^^^^
 
 1. Read all safety guidelines given above.
+
 .. note:: In case you are using Pixhawk, check out the `pre-flight checklist <http://ardupilot.org/copter/docs/flying-arducopter.html>`_ before you fly.
 
 2. It is important to make sure that autopilot is configured properly for RC | POSCTL mode.
@@ -82,14 +83,14 @@ Make sure that you have successfully tested Offboard mode with FlytOS.
 Next step is to test a web/mobile app built on top of FlytOS APIs.
 
 1. Download Flyt Joystick android app from `here <https://flyt.blob.core.windows.net/flytos/downloads/apk/Flyt-Joystick.apk>`_ .
-2. Alternatively you can use joystik web app on your laptop. Download Flyt Joystick web app on your laptop from `here <https://minhaskamal.github.io/DownGit/#/home?url=https:%2F%2Fgithub.com%2Fflytbase%2Fflytsamples%2Ftree%2Fmaster%2FWebApps%2FFlyt_Joystick>`_ . Enter into the directory and open index.html into browser.
-3. Connect your mobile / laptop to same wifi network that your companion computer / FlytPOD/PRO is connected to.
+2. Alternatively you can use joystick web app on your laptop. Download Flyt Joystick web app on your laptop from `here <https://minhaskamal.github.io/DownGit/#/home?url=https:%2F%2Fgithub.com%2Fflytbase%2Fflytsamples%2Ftree%2Fmaster%2FWebApps%2FFlyt_Joystick>`_ . Enter into the directory and open index.html into browser.
+3. Connect your mobile / laptop to same wifi network that your companion computer / FlytPOD is connected to.
 
 
 .. image:: /_static/Images/app-login-screen.png
   :align: center
 
-4. Enter IP address of the companion computer / FlytPOD/PRO in the app and click connect.
+4. Enter IP address of the companion computer / FlytPOD in the app and click connect.
 5. Manually arm the drone and takeoff. Switch to RC-POSCTL mode. Make sure that drone is holding its position.
 6. Switch to OFFBOARD/API-POSCTL mode using the offboard switch on RC.
 7. Now the Joystik app should have the control. Try moving the drone using app.
@@ -98,12 +99,11 @@ Next step is to test a web/mobile app built on top of FlytOS APIs.
 .. image:: /_static/Images/app-screen.png
   :align: center
 
-8. The left joystick gives the drone commands to move up down turn-left and turn-right.
-9. The right joystick gives the drone commands to move front back left and right.
+8. The left joystick gives the drone commands to move up, down, turn-left and turn-right.
+9. The right joystick gives the drone commands to move front, back, left and right.
 10. All the commands are given with respect to the drone(front = direction of the nose/front of the drone).
 11. If everything goes right then press land button on app.
 12. If auto landing worked well then keep the drone on ground, disarmed and switch to OFFBOARD/ API-POSCTL.
 13. This time take-off with app and move the drone around and then land.
 14. If you are here then you have succefully integrated FlytOS with your drone.
 15. Welcome onboard! Go ahead and check out some cool built in apps for your drone.
-
