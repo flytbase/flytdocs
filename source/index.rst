@@ -115,6 +115,3 @@ You can participate in our `forums`_ or `facebook`_ group discussions to interac
 .. * :ref:`modindex`
 .. * :ref:`search`
 
-.. |br| raw:: html
-
-   <br />
