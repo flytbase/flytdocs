@@ -74,10 +74,10 @@ There are two ways to deploy web apps built using FlytAPIs.  One option is to de
 You can deploy the app on a remote server of your choice. The HTML/JS/CSS code of the app will typically go in the static directory while the server side code will depend on the server stack used. The SDK has an initial connection page which is useful in remote deployment to provide the URL(IP) of the system running FlytOS. The internal REST/WebSocket calls are then routed accordingly. 
 Here are the steps for a sample remote deployment using a simple flask dev server:
 
-Create a folder for your Web app, eg sampleApp.
-Inside th samplApp folder create a folder named static and paste the contents (HTML/JS/CSS) of your Web app folder inside this folder.
-Create an empty document named __init__.py and sampleapp.py alongside static folder.
-Open the sampleapp.py file and write the following code:
+* Create a folder for your Web app, eg sampleApp.
+* Inside the samplApp folder create a folder named static and paste the contents (HTML/JS/CSS) of your Web app folder inside this folder.
+* Create an empty document named __init__.py and sampleapp.py alongside static folder.
+* Open the sampleapp.py file and write the following code:
 
 .. code-block:: python
 
@@ -109,10 +109,10 @@ Open the sampleapp.py file and write the following code:
           use_reloader=True)
 
 
-To start the server, run the following command on command line from within your app directory :
+* To start the server, run the following command on command line from within your app directory :
 python sampleapp.py
 
-To view your app, open a browser and go to http://<URL of server>
+* To view your app, open a browser and go to http://<URL of server>
 
 Note: This is only a dev server and for production deployment with flask you can check the options `here <http://flask.pocoo.org/docs/0.12/deploying/#deployment>`_
 
