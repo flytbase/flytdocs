@@ -28,6 +28,8 @@ Deploying the App
 There are two ways to deploy web apps built using FlytAPIs.  One option is to deploy an app on the onboard web server within FlytOS or alternately the app can be deployed remotely on your own custom server. 
 
 **Deploying on Onboard Server**
+
+
 * Go into the folder /flyt/flytapps/web/.
 * Create a folder for your Web app, eg sampleApp.
 * Inside th samplApp folder create a folder named static and paste the contents of your Web app folder inside this folder.
