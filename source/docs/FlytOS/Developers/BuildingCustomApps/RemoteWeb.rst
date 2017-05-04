@@ -13,7 +13,7 @@ There are several sample web apps available on `Flytsamples github <https://gith
 Create a New Project
 ---------------------
 
-* We have put together a Web SDK <http://docs.flytbase.com/docs/FlytOS/Developers/FlytSDKs.html> for Flytbase to help speed up the process of building your custom app
+* We have put together a `Web SDK <http://docs.flytbase.com/docs/FlytOS/Developers/FlytSDKs.html>`_ for Flytbase to help speed up the process of building your custom app
 
 * You can download the SDK `here <https://downloads.flytbase.com/flytos/downloads/sdk/Flyt_Web_SDK.zip>`_ and follow the `instructions <http://docs.flytbase.com/docs/FlytOS/Developers/FlytSDKs.html>`_ to get a “Hello World” app up and running.
 * The SDK has a **URL** screen and websocket initialisation code pre-integrated. This helps to establish connection and access telemetry data which is required for all the apps
