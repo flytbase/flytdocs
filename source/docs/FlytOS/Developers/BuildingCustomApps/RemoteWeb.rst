@@ -7,32 +7,20 @@ Remote Web
 Create a New Project
 ====================
 
-To help speed up the process of App building, we have provided a `Flyt_Web_SDK`_ from here.
+To help speed up the process of App building, we have provided a `FlytSDK Web <https://downloads.flytbase.com/flytos/downloads/sdk/Flyt_Web_SDK.zip>`_.
 
+* The SDK has **FlytLibrary Web** pre-integrated.
+* It has a **URL** screen and websocket initialisation code for telemetry data which is required for all FlytApps.
+* All your App specific UI components and JS code goes in **app.html** and **app.js** respectively.
 
-
-#. The SDK has **Flyt_Web_Library** included by default.
-#. It has a **URL** screen and websocket initialisation code preintegrated for telemetry data which is required for all FlytApps.
-#. All your App specific UI components and JS code goes in **app.html** and **app.js** respectively.
-
-
-
-All you need to do is add specific UI components and respective socket or REST calls from the `API documentation`_ to the above mentioned files and you are good to go.
-
-
-
-
-Running the Project
-================================
-
-
+All you need to do is add specific UI components and respective socket or REST calls from the `API documentation <http://api.flytbase.com>`_ to the above mentioned files and you are good to go.
 
 
 You can run the app by opening the **index.html** file in a browser. Follow the steps below:
 
 
-
-- In the screen that pops up, enter the **URL** of the system/FlytPOD running FlytOS and click on connect to be redirected to your app screen.
+- In the screen that pops up, enter the **URL** of the device running FlytOS and click on connect.
+- You will be redirected to your app screen.
 
 
 .. image:: /_static/Images/web-sdk-url.png
@@ -42,7 +30,7 @@ You can run the app by opening the **index.html** file in a browser. Follow the 
 Sample Web Application
 ======================
 
-.. note:: The source code for the sample web/mobile apps is available in `github repository`_ for your reference.
+.. note:: The source code for the sample web/mobile apps is available in `github repository <https://github.com/flytbase/flytsamples/tree/master/Web-Apps>`_ for your reference.
 
 
 
@@ -56,7 +44,7 @@ Following is a simple demonstration of how to run a Web application for your dro
 
 
 
-You can Also try out `Flyt Joystick`_ Web app :
+You can Also try out `Joystick <https://downloads.flytbase.com/flytos/downloads/webApps/Joystick.zip>`_ Web app :
 
 - Launch the index.html file in your browser.
 - Enter the IP of the device running FlytOS to be able to communicate with it.
@@ -124,7 +112,3 @@ Once you have built your Web app, you are ready to deploy it Onboard. FlytOS use
 8) You can also try out other Sample Apps in the repository.
 
 .. _Ionic components: http://ionicframework.com/docs/components/
-.. _Flyt_Web_SDK: https://downloads.flytbase.com/flytos/downloads/sdk/Flyt_Web_SDK.zip
-.. _Flyt Joystick: https://minhaskamal.github.io/DownGit/#/home?url=https:%2F%2Fgithub.com%2Fflytbase%2Fflytsamples%2Ftree%2Fmaster%2FWebApps%2FFlyt_Joystick
-.. _API documentation: http://docs.flytbase.com/docs/FlytAPI/REST_WebsocketAPIs.html
-.. _github repository: https://github.com/flytbase/flytsamples

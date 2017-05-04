@@ -8,13 +8,19 @@ Android App - Java (Android-Studio)
 ===================================
 
 
-Flyt - Android SDK
+FlytSDK - Android
 ------------------
 
-a. Here you are required to download the Flyt-Android-SDK based on Android Studio from `here <https://downloads.flytbase.com/flytos/downloads/sdk/Flyt_Android_SDK.zip>`_ and build your app using it.
-b. The SDK has all the required libraries for making REST calls and a websocket connection to FlytPOD already integrated in it.
-c. The mainActivity in it shows a sample of how a REST call and a WebSocket call is to be made.
-d. Sample REST call to fetch namespace of the flytpod
+* You can download FlytSDK android from `here <https://downloads.flytbase.com/flytos/downloads/sdk/Flyt-Android-SDK.zip>`_ and build your app using it.
+
+
+.. figure:: /_static/Images/android-sdk.png
+  :align: center
+  :width: 30%
+
+* The SDK has all the required libraries for making REST calls and a websocket connection to FlytOS already integrated in it.
+* The mainActivity in it shows a sample of how a REST call and a WebSocket call is to be made.
+* Sample REST call to fetch namespace from FlytOS
    
    .. code-block:: java
    
@@ -59,7 +65,7 @@ d. Sample REST call to fetch namespace of the flytpod
           }
       }
     
-e. Sample websocket call to view roll pitch yaw of FlytPOD.
+* Sample websocket call to view roll pitch yaw from FlytOS.
    
    .. code-block:: java
    
@@ -69,7 +75,7 @@ e. Sample websocket call to view roll pitch yaw of FlytPOD.
        ros.connect();
 
        
-   .. note:: The Ros object initialisation is done only once every time the app is run unless you are planning tp connect to multiple FlytPODs.
+   .. note:: The Ros object initialisation is done only once every time the app is run unless you are planning tp connect to multiple FlytOS devices.
         
         
 
@@ -93,16 +99,15 @@ e. Sample websocket call to view roll pitch yaw of FlytPOD.
              }
        });  
 
-
 Sample Apps
 ----------------
 
 
-1. Flyt Joystick App
-^^^^^^^^^^^^^^^^^^^^^
+1. Joystick App
+^^^^^^^^^^^^^^^^^
 
 * This is a sample joystick app to control your drone like you would in a regular joystick. 
-* To try this app you can download the apk from `here <https://flyt.blob.core.windows.net/flytos/downloads/apk/com.example.navstik.joystik_n.apk>`_ or download the source code from `here <https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/flytbase/flytsamples/tree/master/Mobile-Apps/Java-Apps/Flyt-Joystick>`_.
+* To try this app you can download the apk from `here <https://downloads.flytbase.com/flytos/downloads/apk/Flyt-Joystick-mode-1.apk>`_ or download the source code from `here <https://github.com/flytbase/flytsamples/tree/master/Mobile-Apps/Java-Apps/Joystick>`_.
 
 * Once you have connected to your FlytOS device using the right URL, you will be redirected to the app screen.
 
@@ -122,11 +127,11 @@ Sample Apps
          :align: center
 
  
-2. Flyt Follow me App
+2. Follow me App
 ^^^^^^^^^^^^^^^^^^^^^^
 
 * This App allows the user to send the drone the its(mobile device running the app) GPS location on click of a button and make the drone follow you. 
-* To try this app you can download the apk from `here <https://flyt.blob.core.windows.net/flytos/downloads/apk/com.example.god.flyt_follow_me.apk>`_ or download the source code from `here <https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/flytbase/flytsamples/tree/master/Mobile-Apps/Java-Apps/Flyt-Follow-Me>`_.
+* To try this app you can download the apk from `here <https://downloads.flytbase.com/flytos/downloads/apk/Flyt-Follow-me.apk>`_ or download the source code from `here <https://github.com/flytbase/flytsamples/tree/master/Mobile-Apps/Java-Apps/Follow_me>`_.
 * Once you have connected to your FlytOS device using the right URL, you will be redirected to the app screen.  
 * The blue marker shows the location of the drone on the map.
 * The blue dot shows the mobile location of the mobile device.
@@ -212,7 +217,7 @@ Follow the steps below to get create a mobile app :
 The front end of the app is developed in HTML, CSS, JS/Jquery .
 
 
-To start building an Android App using Cordova all you need to do is, add the files of `Flyt_Web_SDK`_ to this project and build your App like you would a Web App (editing the app.html and app.js files).
+To start building an Android App using Cordova all you need to do is, add the files of `FlytSDK Web <https://downloads.flytbase.com/flytos/downloads/sdk/Flyt_Web_SDK.zip>`_ to this project and build your App like you would a Web App (editing the app.html and app.js files).
 
 
 Building and running the project
@@ -255,7 +260,7 @@ You just need to connect to the FlytOS running system by entering the **URL** in
   :align: center
         
 
-You can Also try out `Flyt Joystick`_ app or view the code from the `repository`_:
+You can Also try out `Flyt Joystick <https://downloads.flytbase.com/flytos/downloads/apk/Flyt-Joystick-mode-2.apk>`_ app or view the code from the `repository <https://github.com/flytbase/flytsamples/tree/master/Mobile-Apps/HTML-JS-Apps/Joystick>`_:
 
 - Install or build the app and launch it.
 - Enter the IP of the device running FlytOS to be able to communicate with it.
@@ -284,11 +289,6 @@ Things to Remember
 
 .. _Ionic components: http://ionicframework.com/docs/components/
 .. _Flyt_Web_SDK: https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/flytbase/flytsamples/tree/master/WebApps/Flyt_Web_SDK
-.. _repository: https://github.com/flytbase/flytsamples/tree/master/AndroidApps/HTML-JS-Apps
-.. _Flyt Joystick: https://flyt.blob.core.windows.net/flytos/downloads/apk/Flyt-Joystick.apk
-.. _Flyt Follow me: https://flyt.blob.core.windows.net/flytos/downloads/apk/Flyt-FollowMe.apk
-.. _Flyt GPS: https://flyt.blob.core.windows.net/flytos/downloads/apk/Flyt-GPS.apk
-
 
 .. _getting started: http://ionicframework.com/getting-started
 
