@@ -17,6 +17,10 @@ Image download:
 
    <a href="https://my.flytbase.com/FlytOS" target="_blank">FlytOS Linux Image</a>
 
+.. |etcher_link| raw:: html
+
+   <a href="https://etcher.io/" target="_blank">Etcher</a>
+
 1. |my_flytbase_link| to your FlytBase Account.
 2. Download the hardware specific |flytos_dl_link| from your FlytBase account.
 3. Download size of the image is about 2.5 GBs.
@@ -58,8 +62,8 @@ Image download:
 
 7. Uncompressed size of image is about 8.5GBs.
 
-Write Image to SD/eMMC Card and partition expansion:
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Image write to SD Card:
+^^^^^^^^^^^^^^^^^^^^^^^
 
 .. 1. We recommend using a 32 GB SD Card, but a 16 GB card would work fine too.
 .. 2. Format the micro SD Card.
@@ -70,9 +74,32 @@ Write Image to SD/eMMC Card and partition expansion:
 
 .. Since the image is only around 8.5 GBs, the rest of the SD Card would have unallocated memory. Follow `this guide <http://elinux.org/RPi_Resize_Flash_Partitions>`_ to expand the partition to the maximum possible size to utilize all memory.
 
-We have created a video tutorial for Linux and Mac OS users, to help flash FlytOS Linux Image on their SD/eMMC cards and then expand the partition. Windows users can refer `this guide <http://odroid.com/dokuwiki/doku.php?id=en:odroid_flashing_tools>`_ for writing image and Windows Disk Management Utility to expand the SD/eMMC card.
+.. We have created a video tutorial for Linux and Mac OS users, to help flash FlytOS Linux Image on their SD/eMMC cards and then expand the partition. Windows users can refer `this guide <http://odroid.com/dokuwiki/doku.php?id=en:odroid_flashing_tools>`_ for writing image and Windows Disk Management Utility to expand the SD/eMMC card.
 
-.. warning:: Since the image is of only around 8.5 GBs, the rest of the SD/eMMC Card would have unallocated memory. DONOT forget to expand SD/eMMC card partition.
+We recommend using |etcher_link| for burning images to SD/eMMC cards.
+To burn an image to your SD/eMMC card:
+
+1. Download Etcher for your Operating System (OS X, Linux, Windows).
+
+2. On opening you will be greeted with the following screen.
+
+    .. image:: /_static/Images/etcher_tut_1.png
+
+3. Select your downloaded **uncompressed** image.
+
+4. Choose the bootable drive (SD/eMMC Card) to burn the image onto (Please note that Etcher detects pendrives as bootable disks so proceed with caution).
+
+    .. image:: /_static/Images/etcher_tut_2.png
+
+5. Click on **Flash**.
+
+    .. image:: /_static/Images/etcher_tut_3.png
+
+Etcher will burn the image onto the SD/eMMC card and verify the image. Remove the SD card after you get the prompt.
+
+.. warning:: Since the image is of only around 11.5 GBs, the rest of the SD/eMMC Card would have unallocated memory. DO NOT forget to expand SD/eMMC card partition.
+
+Users more comfortable with *gparted* can refer to the following video tutorial to help flash FlytOS Linux Image on their SD/eMMC cards and then expand the partition.
 
 
 |br|
@@ -102,8 +129,9 @@ User Credentials
 ^^^^^^^^^^^^^^^^
 
 All FlytOS Linux Image versions have the same Login user credentials:
-**username : flytpod**
-**password : flytpod**
+
+| **username : flytpod**
+| **password : flytpod**
 
 |br|
 
