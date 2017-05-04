@@ -8,7 +8,7 @@ Joystick App
 3. Connect your mobile / laptop to same wifi network that your companion computer / FlytPOD is connected to.
 
 .. image:: /_static/Images/app-login-screen.png
-  :align: center 
+  :align: center
 
 4. Enter IP address of the companion computer / FlytPOD in the app and click connect.
 5. Switch to OFFBOARD/API-POSCTL mode using the offboard switch on RC.
@@ -18,8 +18,7 @@ Joystick App
 .. image:: /_static/Images/app-screen.png
   :align: center
 
-8. The left joystick gives the drone commands to move up down turn-left and turn-right.
-9. The right joystick gives the drone commands to move front back left and right.
+8. The left joystick gives the drone commands to move up, down, turn-left and turn-right.
+9. The right joystick gives the drone commands to move front, back, left and right.
 10. All the commands are given with respect to the drone(front = direction of the nose/front of the drone).
 11. If everything goes right then press land button on app.
-

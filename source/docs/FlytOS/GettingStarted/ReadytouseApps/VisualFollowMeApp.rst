@@ -3,8 +3,8 @@
 Visual Follow Me
 ================
 
-
 Visual Follow Me is an onboard web app that comes bundled with FlytOS (placed in /flyt/flytapps/web/flytfollowme). This app talks to the onboard Object Tracking module using its FlytAPIs. To open this app, connect to your FlytPOD (or other device running FlytOS) from a browser and go to URL 
+
 
 
 .. code-block:: c
@@ -13,23 +13,25 @@ Visual Follow Me is an onboard web app that comes bundled with FlytOS (placed in
 
 .
  .. image:: /_static/Images/visual_follow_me.png
-     :align: center 
+     :align: center
 
 
 How to use the app:
 -------------------
 
-* Launch the object tracking module (start button at top) and start the video stream. 
+* Launch the object tracking module (start button at top) and start the video stream.
 * Note: For older version of FlytOS, you may have to run this command:
 .. code-block:: c
 
 		roslaunch vision_apps object_tracking.launch global_namespace:=<namespace>
 
 * Once the object tracking module is up and running, the video stream will show processed images from the module
-* The next step is to select the Detect/Track mode in the app (right panel)
+* The next step is to select the Track/Detect mode in the app (right panel)
 * Select the target object in the video stream by drawing a rectangle with mouse (avoid including background i.e. non-target content)
 * Once selected, the video will show the object being tracked. Use the params in the right panel to tune the tracking algorithm for the given object and environment
-* To make the drone follow the object, select the Follow tab in the right panel for setting initial parameters for the onboard PD controller. Then click on the Start button in the same tab to start following. You can tune the controller parameters in-flight for desired performance. Note: Try first in FlytSIM simulator to get acquainted and get approximate idea of the param values.
+* To make the drone follow the object, select the Follow tab in the right panel for setting initial parameters for the onboard PD controller. Then click on the Start button in the same tab to start following. You can tune the controller parameters in-flight for desired performance.
+
+.. note:: Try first in FlytSIM simulator to get acquainted and get approximate idea of the param values.
 
 
 Setting up and deep dive:
@@ -74,12 +76,17 @@ The object of interest can be selected on the video stream itself. Depending on 
 
 
  .. image:: /_static/Images/ObjTrackingBlog.png
-     :align: center 
+     :align: center
 
 
+<<<<<<< HEAD
 Track and Follow Parameters
 ---------------------------
 Several params have been exposed from the onboard object tracking module so that they can be tuned from the ground app for a given setup. These include HSV color ranges, Hough circle params, TLD params, controller gains and options to turn attitude compensation, tracking and follow modes On and Off. 
+=======
+
+Several params have been exposed from the onboard object tracking module so that they can be tuned from the ground app for a given setup. These include HSV color ranges, Hough circle params, TLD params, controller gains and options to turn attitude compensation, tracking and follow modes On and Off.
+>>>>>>> dee30904d85ecc49bc5a4c86ded09e7f1cc56915
 
 
 **Color Mode**
@@ -93,17 +100,21 @@ Several params have been exposed from the onboard object tracking module so that
 TLD
 	* Learning - Turn learning On or Off
 	* Detector - If Off, detector is switched off when tracker is available
-	* New Object - Turn On when starting with a new object 
+	* New Object - Turn On when starting with a new object
 	* Model - Export saves the model to a file, Import loads model from the file, Clear resets model
 
 Follow Mode
 	* Kp, Kd - Proportional and derivative gains for controller
-	* Velocity XY min, max - Minimum and maximum velocity along XY 
+	* Velocity XY min, max - Minimum and maximum velocity along XY
 	* Inner Tolerance - The drone is considered to have reached the target if the distance between them is less than inner tolerance
 	* Outer Tolerance - Once inner tolerance is achieved, the drone is considered to be at the target until the distance between them is less than outer tolerance
 
+<<<<<<< HEAD
 Inspect Window
 --------------
 The Inspect section in the app shows object centroid position, drone’s position and the setpoints being sent. These data streams are obtained by subscribing to them using FlytOS websocket APIs. Please refer to API `docs <http://api.flytbase.com>`_ for more details. 
+=======
+The Inspect section in the app shows object centroid position, drone’s position and the setpoints being sent. These data streams are obtained by subscribing to them using FlytOS websocket APIs. Please refer to API `docs <http://api.flytbase.com>`_ for more details.
+>>>>>>> dee30904d85ecc49bc5a4c86ded09e7f1cc56915
 
-You may also want to visit our blog on `Object Tracking and Following <http://blogs.flytbase.com/computer-vision-for-drones-part-2/>`_. 
+You may also want to visit our blog on `Object Tracking and Following <http://blogs.flytbase.com/computer-vision-for-drones-part-2/>`_.
