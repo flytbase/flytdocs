@@ -17,6 +17,9 @@ Intel Edison
 Flashing FlytOS Image
 ^^^^^^^^^^^^^^^^^^^^^
 
+.. note:: Due to the large number of steps involved in installing dependencies for FlytOS on Intel Edison, currently the only recommended method to use FlytOS on Intel Edison is using the FlytOS Image.
+
+
 This section will help you in flashing FlytOS Linux Image on your Intel Edison Board.
 This step requires you to have a registered FlytBase account. In case you don't have an account, :ref:`create a FlytBase Account<create_flytbase_account>` before you proceed.
 
@@ -87,7 +90,8 @@ We have created a video tutorial demonstrating how to flash FlytOS Linux Image o
 **User Credentials**
 
 All FlytOS Linux Image versions have the same Login user credentials:
-| **username - flytpod** 
+
+| **username - flytpod**
 | **password - flytpod**
 
 .. note:: Intel Edison will boot up with its wifi configured as Access Point.
