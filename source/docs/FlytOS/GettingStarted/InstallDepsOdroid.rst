@@ -7,7 +7,7 @@ Installing FlytOS dependencies in your custom image (Odroid-XU4)
 
 .. warning:: Follow this step ONLY if you have chosen to NOT TO flash :ref:`FlytOS Linux Image <flashing_img_odroid>`.
 
-.. note:: You have to perform all the steps below on your FlytPOD/PRO.
+.. note:: You have to perform all the steps below on your ODROID.
 
 This guide assumes you already have a working image for your Flight Computer. We would lay down steps to install dependencies and configure your device for FlytOS.
 
