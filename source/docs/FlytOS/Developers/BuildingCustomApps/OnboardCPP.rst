@@ -8,7 +8,7 @@ Execute built-in Demo Apps
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 FlytOS comes with pre-installed Demo apps which can be executed to do simple navigation tasks. 
-All the sample applications can be found at our `github link`_.
+All the sample applications can be found on our `github`_.
 
 .. Below is a demo `youtube video <https://www.youtube.com/watch?v=rKUt884XtNg>`_ about how to execute a built-in demo-app in FlytSim.
 
@@ -40,7 +40,7 @@ Below is a demo `youtube video <https://www.youtube.com/watch?v=lwKZXkzkM80>`_ o
 Execution
 """""""""
 
-The source code of this app is located at */flyt/flytapps/onboard/src/demoapp1* and its executable *demoapp1* is at */flyt/flytapps/onboard/install*. To execute this app run the following command in your terminal.
+The source code of this app is located at */flyt/flytapps/onboard/src/demoapp1* and its executable file *demoapp1* is at */flyt/flytapps/onboard/install*. To execute this app run the following command in your terminal.
 
 .. code-block:: bash
 
@@ -70,7 +70,7 @@ Code Explained
      :tab-width: 2
      :lines: 3
 
-* TakeOff command could be sent to vehicle with relative takeoff altitude in meters as argument. Over here the takeoff altitude is 3m.
+* TakeOff command can be sent to vehicle with relative takeoff altitude in meters as argument. Over here, the takeoff altitude is 3m.
 
   .. literalinclude:: include/demoapp1.cpp
      :language: c
@@ -112,7 +112,7 @@ This demo app makes the drone takeoff, move in a square trajectory of side lengt
 Execution
 """""""""
 
-The source code of this app is located at */flyt/flytapps/onboard/src/demoapp2* and its executable *demoapp2* is at */flyt/flytapps/onboard/install*. To execute this app run the following command in your terminal.
+The source code of this app is located at */flyt/flytapps/onboard/src/demoapp2* and its executable file *demoapp2* is at */flyt/flytapps/onboard/install*. To execute this app run the following command in your terminal.
 
 .. code-block:: bash
 
@@ -199,7 +199,7 @@ CMakeLists.txt - Explained
       include_directories(${catkin_INCLUDE_DIRS} ${PYTHON_INCLUDE_DIRS})
 
 
-* Give a suitable name (for example my_first_cpp_app) to your executable and link it with libraries.
+* Give a suitable name (for example my_first_cpp_app) to your executable file and link it with libraries.
 
   .. literalinclude:: include/CMakeLists.txt
      :language: cmake
