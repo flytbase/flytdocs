@@ -78,15 +78,10 @@ The object of interest can be selected on the video stream itself. Depending on 
  .. image:: /_static/Images/ObjTrackingBlog.png
      :align: center
 
-
-<<<<<<< HEAD
 Track and Follow Parameters
 ---------------------------
 Several params have been exposed from the onboard object tracking module so that they can be tuned from the ground app for a given setup. These include HSV color ranges, Hough circle params, TLD params, controller gains and options to turn attitude compensation, tracking and follow modes On and Off. 
-=======
 
-Several params have been exposed from the onboard object tracking module so that they can be tuned from the ground app for a given setup. These include HSV color ranges, Hough circle params, TLD params, controller gains and options to turn attitude compensation, tracking and follow modes On and Off.
->>>>>>> dee30904d85ecc49bc5a4c86ded09e7f1cc56915
 
 
 **Color Mode**
@@ -109,12 +104,9 @@ Follow Mode
 	* Inner Tolerance - The drone is considered to have reached the target if the distance between them is less than inner tolerance
 	* Outer Tolerance - Once inner tolerance is achieved, the drone is considered to be at the target until the distance between them is less than outer tolerance
 
-<<<<<<< HEAD
 Inspect Window
 --------------
 The Inspect section in the app shows object centroid position, drone’s position and the setpoints being sent. These data streams are obtained by subscribing to them using FlytOS websocket APIs. Please refer to API `docs <http://api.flytbase.com>`_ for more details. 
-=======
-The Inspect section in the app shows object centroid position, drone’s position and the setpoints being sent. These data streams are obtained by subscribing to them using FlytOS websocket APIs. Please refer to API `docs <http://api.flytbase.com>`_ for more details.
->>>>>>> dee30904d85ecc49bc5a4c86ded09e7f1cc56915
+
 
 You may also want to visit our blog on `Object Tracking and Following <http://blogs.flytbase.com/computer-vision-for-drones-part-2/>`_.
