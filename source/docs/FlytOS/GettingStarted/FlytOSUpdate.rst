@@ -6,19 +6,19 @@ FlytOS Updates
 Automatic OTA
 -------------
 
-.. caution:: You must activate your device, without which auto-updates would not work.
+.. caution:: You must activate your device, without which auto-updates will not work.
 
 * Apart from the option of manually downloading and installing the latest FlytOS debian, FlytOS has a built in auto-update functionality. 
 * Whenever a flight computer with FlytOS installed on it has internet access at boot, it checks for possible updates and downloads them.
 * Once the download is complete, the updates are installed upon the next reboot of your device.
-* In case of FlytPOD/PRO, during automatic installation, the USER-LED-1 starts fast blinking red indicating that the FlytOS is being installed. You can also check the startup log for updates/installation related debug messages.
+* In case of FlytPOD/PRO, during automatic installation, the USER-LED-1 starts blinking rapidly in red indicating that the FlytOS is being installed. You can also check the startup log for updates/installation related debug messages.
 
 
 
 Configure Updates
 -----------------
 
-The auto-update process is configurable to user need. This section explains the different configuration options available and possible debugging methods.
+The auto-update process is configurable as per user needs. This section explains the different configuration options available and possible debugging methods.
 
 
 * To configure updates launch FlytConsole and click on Update manager on the top right corner of FlytConsole.
@@ -38,7 +38,7 @@ The auto-update process is configurable to user need. This section explains the 
 
 * **Current FlytOS version** displays the currently installed FlytOS version. 
 * **Available FlytOS version** displays the latest FlytOS update available in our server.   
-* You can disable or enable auto-updates anytime using the **Auto Updates** checkbox. If Auto Update field is checked and new update is available, it will get downloaded in the background if the device has internet connection.
+* You can disable or enable auto-updates anytime using the **Auto Updates** checkbox. If Auto Update field is checked and a new update is available, it will get downloaded in the background, if the device has internet connection.
 * You can also monitor the progress of update being downloaded from the **Update Download progress** field.
   
   .. image:: /_static/Images/DownloadProgress.png
