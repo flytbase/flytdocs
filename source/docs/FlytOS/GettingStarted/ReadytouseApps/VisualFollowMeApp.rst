@@ -25,10 +25,10 @@ How to use the app:
 
 		roslaunch vision_apps object_tracking.launch global_namespace:=<namespace>
 
-* Once the object tracking module is up and running, the video stream will show processed images from the module
-* The next step is to select the Track/Detect mode in the app (right panel)
-* Select the target object in the video stream by drawing a rectangle with mouse (avoid including background i.e. non-target content)
-* Once selected, the video will show the object being tracked. Use the params in the right panel to tune the tracking algorithm for the given object and environment
+* Once the object tracking module is up and running, the video stream will show processed images from the module.
+* The next step is to select the Track/Detect mode in the app (right panel).
+* Select the target object in the video stream by drawing a rectangle with mouse (avoid including background i.e. non-target content).
+* Once selected, the video will show the object being tracked. Use the params in the right panel to tune the tracking algorithm for the given object and environment.
 * To make the drone follow the object, select the Follow tab in the right panel for setting initial parameters for the onboard PD controller. Then click on the Start button in the same tab to start following. You can tune the controller parameters in-flight for desired performance.
 
 .. note:: Try first in FlytSIM simulator to get acquainted and get approximate idea of the param values.
@@ -92,22 +92,22 @@ Several params have been exposed from the onboard object tracking module so that
 **Color Mode**
 	* HSV color ranges (Hue, Saturation, Value)
 **Circle Mode**
-	* Canny Threshold - the higher threshold of the two passed to the Canny edge detector
-	* Accumulated Threshold - the accumulator threshold for the circle centers at the detection stage
-	* Accumulated Inv Ratio - Inverse ratio of the accumulator resolution to the image resolution
-	* Minimum Radius - Minimum circle radius
+	* Canny Threshold - the higher threshold of the two passed to the Canny edge detector.
+	* Accumulated Threshold - the accumulator threshold for the circle centers at the detection stage.
+	* Accumulated Inv Ratio - Inverse ratio of the accumulator resolution to the image resolution.
+	* Minimum Radius - Minimum circle radius.
 
 TLD
-	* Learning - Turn learning On or Off
-	* Detector - If Off, detector is switched off when tracker is available
-	* New Object - Turn On when starting with a new object
-	* Model - Export saves the model to a file, Import loads model from the file, Clear resets model
+	* Learning - Turn learning On or Off.
+	* Detector - If Off, detector is switched off when tracker is available.
+	* New Object - Turn On when starting with a new object.
+	* Model - Export saves the model to a file, Import loads model from the file, Clear resets model.
 
 Follow Mode
-	* Kp, Kd - Proportional and derivative gains for controller
-	* Velocity XY min, max - Minimum and maximum velocity along XY
-	* Inner Tolerance - The drone is considered to have reached the target if the distance between them is less than inner tolerance
-	* Outer Tolerance - Once inner tolerance is achieved, the drone is considered to be at the target until the distance between them is less than outer tolerance
+	* Kp, Kd - Proportional and derivative gains for controller.
+	* Velocity XY min, max - Minimum and maximum velocity along XY.
+	* Inner Tolerance - The drone is considered to have reached the target if the distance between them is less than inner tolerance.
+	* Outer Tolerance - Once inner tolerance is achieved, the drone is considered to be at the target until the distance between them is less than outer tolerance.
 
 <<<<<<< HEAD
 Inspect Window
