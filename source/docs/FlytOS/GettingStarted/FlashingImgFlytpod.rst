@@ -10,8 +10,8 @@ This step requires you to have a registered FlytBase account. In case you don't 
 .. note:: FlytOS Linux Image is pre-installed in FlytPOD/PRO. In case you want to re-flash their respective 32GB SD/eMMC card, or create a duplicate 32GB SD/eMMC card follow the steps given below. You can use 16GB SD/eMMC cards as well, but 32GB is preferable.
 
 
-Image download:
-^^^^^^^^^^^^^^^
+Image download
+^^^^^^^^^^^^^^
 .. |my_flytbase_link| raw:: html
 
    <a href="https://my.flytbase.com" target="_blank">Login</a>
@@ -29,35 +29,35 @@ Image download:
 3. Download size of the image is about 2.5 GBs.
 4. Check *MD5 Hash* to verify the integrity of downloaded file. Since it is a large file, the commands may take a few minutes to complete:
 
-   * Linux- launch a terminal and execute the following command
+   * **Linux**- launch a terminal and execute the following command
 
-   .. code-block:: bash
+     .. code-block:: bash
 
-       $ md5sum <path-to-downloaded-image>/flyt*.img.gz
+         $ md5sum <path-to-downloaded-image>/flyt*.img.gz
 
-   * Windows- launch a command window and execute the following command
+   * **Windows**- launch a command window and execute the following command
 
-   .. code-block:: bash
+     .. code-block:: bash
 
-       $ CertUtil -hashfile <path-to-downloaded-image>/flyt*.img.gz MD5
+         $ CertUtil -hashfile <path-to-downloaded-image>/flyt*.img.gz MD5
 
-   * Mac OS- launch a terminal and execute the following command
+   * **Mac OS**- launch a terminal and execute the following command
 
-   .. code-block:: bash
+     .. code-block:: bash
 
-       $ md5 <path-to-downloaded-image>/flyt*.img.gz
+         $ md5 <path-to-downloaded-image>/flyt*.img.gz
 
 5. Compare the MD5 Hash generated to *MD5 Hash* mentioned in the |flytos_dl_link| download page.
 6. Uncompress/extract the downloaded image:
 
-   * Linux- launch a terminal and execute the following command
+   * **Linux**- launch a terminal and execute the following command
 
      .. code-block:: bash
 
          gunzip <path-to-downloaded-image>/flyt*.img.gz
 
-   * Windows- download and install 7-zip from `here <http://www.7-zip.org/download.html>`_. Extract downloaded image using 7-zip.
-   * Mac OS- launch a terminal and execute the following command
+   * **Windows**- download and install 7-zip from `here <http://www.7-zip.org/download.html>`_. Extract downloaded image using 7-zip.
+   * **Mac OS**- launch a terminal and execute the following command
 
      .. code-block:: bash
 
@@ -65,8 +65,8 @@ Image download:
 
 7. Uncompressed size of image is about 11.5GBs.
 
-Image write to SD/eMMC Card:
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Image write to SD/eMMC Card
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. 1. We recommend using a 32 GB SD Card, but a 16 GB card would work fine too.
 .. 2. Format the micro SD Card.
@@ -114,36 +114,37 @@ Users more comfortable with *gparted* can refer to the following video tutorial 
 
 |br|
 
-Partition Expansion:
-^^^^^^^^^^^^^^^^^^^^
+Partition Expansion
+^^^^^^^^^^^^^^^^^^^
 
 The image is around 11.5 GB in size, thus the rest of the SD Card would have unallocated space. As this limits the available user area it is advised to extend your partition on your **first boot up**.
 
 To extend your partition to cover your full SD card:
 
 * Run the following command from terminal
-.. code-block:: bash
+  
+  .. code-block:: bash
 
-    $ sudo resize_flytimage
+      $ sudo resize_flytimage
 
 * On successful execution you will get the following output
 
-.. code-block:: bash
+  .. code-block:: bash
 
-    Ok, Partition resized, please reboot now
-    Once the reboot is completed please run this script again
+      Ok, Partition resized, please reboot now
+      Once the reboot is completed please run this script again
 
 * At this point please run the following to reboot your system
 
-.. code-block:: bash
+  .. code-block:: bash
 
-    $ sudo reboot
+      $ sudo reboot
 
 * On successful reboot please run the command again
 
-.. code-block:: bash
+  .. code-block:: bash
 
-    $ sudo resize_flytimage
+      $ sudo resize_flytimage
 
 * Your partition has been extended to cover your full SD Card and is now ready to use.
 

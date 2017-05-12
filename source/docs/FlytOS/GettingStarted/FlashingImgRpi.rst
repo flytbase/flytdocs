@@ -7,8 +7,8 @@ This section will help you in flashing FlytOS Linux Image on any SD card for you
 This step requires you to have a registered FlytBase account. In case you don't have an account, :ref:`create a FlytBase Account<create_flytbase_account>` before you proceed.
 
 
-Image download:
-^^^^^^^^^^^^^^^
+Image download
+^^^^^^^^^^^^^^
 .. |my_flytbase_link| raw:: html
 
    <a href="https://my.flytbase.com" target="_blank">Login</a>
@@ -26,35 +26,35 @@ Image download:
 3. Download size of the image is about 2.5 GBs.
 4. Check *MD5 Hash* to verify the integrity of downloaded file. Since it is a large file, the commands may take a few minutes to complete:
 
-   * Linux- launch a terminal and execute the following command
+   * **Linux**- launch a terminal and execute the following command
 
-   .. code-block:: bash
+     .. code-block:: bash
 
-       $ md5sum <path-to-downloaded-image>/flyt*.img.gz
+         $ md5sum <path-to-downloaded-image>/flyt*.img.gz
 
-   * Windows- launch a command window and execute the following command
+   * **Windows**- launch a command window and execute the following command
 
-   .. code-block:: bash
+     .. code-block:: bash
 
-       $ CertUtil -hashfile <path-to-downloaded-image>/flyt*.img.gz MD5
+         $ CertUtil -hashfile <path-to-downloaded-image>/flyt*.img.gz MD5
 
-   * Mac OS- launch a terminal and execute the following command
+   * **Mac OS**- launch a terminal and execute the following command
 
-   .. code-block:: bash
+     .. code-block:: bash
 
-       $ md5 <path-to-downloaded-image>/flyt*.img.gz
+         $ md5 <path-to-downloaded-image>/flyt*.img.gz
 
 5. Compare the MD5 Hash generated to *MD5 Hash* mentioned in the |flytos_dl_link| download page.
 6. Uncompress/extract the downloaded image:
 
-   * Linux- launch a terminal and execute the following command
+   * **Linux**- launch a terminal and execute the following command
 
      .. code-block:: bash
 
          gunzip <path-to-downloaded-image>/flyt*.img.gz
 
-   * Windows- download and install 7-zip from `here <http://www.7-zip.org/download.html>`_. Extract downloaded image using 7-zip.
-   * Mac OS- launch a terminal and execute the following command
+   * **Windows**- download and install 7-zip from `here <http://www.7-zip.org/download.html>`_. Extract downloaded image using 7-zip.
+   * **Mac OS**- launch a terminal and execute the following command
 
      .. code-block:: bash
 
@@ -62,8 +62,8 @@ Image download:
 
 7. Uncompressed size of image is about 8.5GBs.
 
-Image write to SD Card:
-^^^^^^^^^^^^^^^^^^^^^^^
+Image write to SD Card
+^^^^^^^^^^^^^^^^^^^^^^
 
 .. 1. We recommend using a 32 GB SD Card, but a 16 GB card would work fine too.
 .. 2. Format the micro SD Card.
@@ -115,7 +115,7 @@ After performing the above steps, your FlytOS SD Card is ready. Insert the card 
 
 
 WiFi Setup
-^^^^^^^^^^^
+^^^^^^^^^^
 
 * Insert the SD Card in your Raspberry Pi 3 after flashing :ref:`FlytOS Linux image<flashing_img_rpi>` on it and apply power to boot it. On boot up a WiFi access point is created on the device with following credentials:
 
