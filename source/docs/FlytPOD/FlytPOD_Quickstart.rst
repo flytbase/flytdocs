@@ -62,15 +62,15 @@ Getting Started
 
    * For the next few steps FlytPOD will require access to internet. You will need a WiFi access point with internet connection to proceed. If not available then you can create one, using your android phone and mobile data connection. 
    * Plug and tighten antennas on FlytPOD.
-   * Power on FlytPOD using wall adapter. The RGB led should start breathing red. (Don't worry about it now.) 
-   * On you laptop connect to the WiFi network ``FlytPOD_wifi`` the password for which is ``FlytPOD123``. 
+   * Power on FlytPOD using wall adapter. The RGB LED should start blinking red. (Don't worry about it now.) 
+   * From your laptop, connect to the WiFi network ``FlytPOD_wifi`` the password for which is ``FlytPOD123``. 
    * In your laptop's browser, launch FlytConsole, using URL: ``flytpod/flytconsole``.
    * Setup FlytPOD in client mode by following steps from :ref:`this guide<flytpod router setup>`. 
    * Follow :ref:`this guide<activate_flytos_flytpod>` for activating FlytOS.
    * Power off FlytPOD by gently pressing the power button on the back panel. Within few seconds RGB LED should turn amber.
    * You may switch FlytPOD wifi to access point mode for field operation. However FlytPOD needs internet for automatic updates to work, it's a good practise to connect FlytPOD to internet once in a week.
 
-.. note:: Note that next time you start FlytPOD it will take some time for the RGB led to start up. This behavior will repeat every time you do a graceful shutdown as described above. 
+.. note:: Note that the next time you start FlytPOD, it will take some time for the RGB LED to start up. This behavior will repeat every time you do a graceful shutdown as described above. 
 
 
 
@@ -80,14 +80,14 @@ Getting Started
 
    * Drone and FlytPOD Orientation
 
-     FlytPOD should be mounted in such a way that the front of the FlytPOD is aligned with the heading of the drone. The front of the FlytPOD is the x-axis as shown in the diagram below. 
+     FlytPOD should be mounted in such a way that the front of the FlytPOD is aligned with the head of the drone. The front of the FlytPOD is the x-axis as shown in the diagram below. 
 
-   .. if in some other orientation then change autopilot orientation parameter.
+   .. if its in some other orientation, then change autopilot orientation parameter.
 
    * Mount points
 
      You can use M3 screws for mounting the FlytPOD onto the Drone. Image below shows the mount holes available. 
-     FlytPOD has internal vibration damping mechanism, still for better performance you can use dampening mounts.
+     FlytPOD has internal vibration damping mechanism, for better performance you can use dampening mounts.
 
 
    .. tip:: You can choose to mount the FlytPOD in a different direction. For this, change the Autopilot Orientation in the Sensor calibration tab in FlytConsole.
@@ -184,7 +184,7 @@ Getting Started
 22. The RGB LED should be breathing blue or green now. For more info on RGB LED patterns click :ref:`here<RGB_LED>`.
     If it is flashing red then check if you have properly connected GPS-MAG module.
 23. Power on the ESCs through power module as described :ref:`here<Power_Module>`.
-24. Generally your motors should play a tone, but don't worry if they do not.  
+24. Usually your motors should play a tone, but don't worry if they do not.  
 25. Next go to **Motor Config** in left side-menu. Here you will be calibrating the ESCs and testing the motors.
 26. Select **ESC Calibration** in top menu.
       
@@ -203,11 +203,11 @@ Getting Started
     Click :ref:`here<ESC_calibration>` to know more about ESC Calibration.
 
 27. After finishing ESC Calibration gracefully shutdown the FlytPOD and remove the Battery.
-28. Power the FlytPOD and ESCs back on before you move to the next steps. 
+28. Power the FlytPOD and ESCs back on before you move on to the next steps. 
 29. Select **Motor testing** in top-menu of FlytConsole's **Motor Config** page.
      
       
-    .. warning:: No propellers please during setup!
+    .. warning:: Do not use propellers during setup!
     
 
     You can test the direction of rotation and order of the motors here. Click on the motors to make them rotate and check the direction of rotation of the corresponding motor on your vehicle.
@@ -216,15 +216,15 @@ Getting Started
     Click :ref:`here<Motor_test>` to know more about Motor testing.
 
 
-    .. note:: In case your motors rotate in the incorrect direction, you can swap the ESC cables and make the motors rotate in the desired direction.
+    .. note:: In case your motors rotate in an incorrect direction, you can swap the ESC cables and make the motors rotate in the desired direction.
 
 30. Select **RC Calibration** in left side-menu.
 
-    .. .. warning:: Again, No props please, during setup!
-
+    .. .. warning:: Again, Do not use propellers during setup!
+    
 31. Turn on your RC Transmitter. Check if the receiver is working.
 
-    .. .. note:: PWM, PPM receiver are powered through ESC supply. If your RC is not getting powered then you should check ESC supply and whether your ESCs output 5V. In case your ESCs don't have BEC then power on the receiver using some other supply. Do not draw supply for RC receiver from 5V output of FlytPOD. 
+    .. .. note:: PWM, PPM receiver are powered through ESC supply. If your RC is not getting powered then you should check ESC supply and whether your ESCs output is 5V. In case your ESCs don't have BEC then power on the receiver using some other supply. Do not draw supply for RC receiver from 5V output of FlytPOD. 
       
     Following are the prerequisites for RC Calibration:
     
@@ -249,9 +249,9 @@ Getting Started
    
     Click :ref:`here<Gain_tuning>` to know more about Gain tuning.
 
-33. Congratulations !!! You have successfully configured FlytPOD with your drone. You are now ready to fly.
-34. At this stage the RGB LED should be breathing blue / green. Assuming that you have the props removed, try to ARM system and test rc transmitter. 
-35. For sferty you can check if the response of pitch and roll commands is as desirable.
+33. Congratulations! You have successfully configured FlytPOD with your drone. You are now ready to fly.
+34. At this stage the RGB LED should blink blue / green. Assuming that you have the props removed, try to ARM the system and test rc transmitter. 
+35. For safety you can check if the response of pitch and roll commands is as desirable.
 36. Now you can connect any additional sensors to FlytPOD.
 37. Please go through the :ref:`cautions for flying with FlytPOD <First_Principles>` and :ref:`First flight with FlytPOD<First_Flight>` sections before you proceed with flying your drone.
 38. Make sure you understand all the :ref:`Safety guidelines<Safety_Guidelines>` before you fly.
