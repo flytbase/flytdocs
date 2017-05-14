@@ -12,7 +12,7 @@ First Flight
 2. Manual Mode:
 
    a. This is basic stabilize mode.
-   b. If RGB LED is blinking blue or green then you are good to go. Click :ref:`here<RGB_LED>` to know more about RGB LED patterns.
+   b. If RGB LED is breathing blue or green then you are good to go. Click :ref:`here<RGB_LED>` to know more about RGB LED patterns.
    c. Make sure you are following all safety guidelines given :ref:`here<Safety_guidelines>`.
    d. In case you are not sure about Gains, please have a look at this guide `here <http://px4.io/docs/multicopter-pid-tuning-guide/>`_.
    e. Once your basic gains are stable and vehicle is stabilizing well then go to ``Altctl Mode``. Height will be stabilized automatically. Without LIDAR or SONAR the height might drift within a meter.
