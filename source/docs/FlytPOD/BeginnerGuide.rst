@@ -12,9 +12,9 @@ First Flight
 2. Manual Mode:
 
    a. This is basic stabilize mode.
-   b. If RGB LED is breathing blue or green then you are good to go. Click :ref:`here<RGB_LED>` to know more about RGB LED patterns.
+   b. If RGB LED is blinking blue or green then you are good to go. Click :ref:`here<RGB_LED>` to know more about RGB LED patterns.
    c. Make sure you are following all safety guidelines given :ref:`here<Safety_guidelines>`.
-   d. In case you are not sure about Gains please have a look at this guide `here <http://px4.io/docs/multicopter-pid-tuning-guide/>`_.
+   d. In case you are not sure about Gains, please have a look at this guide `here <http://px4.io/docs/multicopter-pid-tuning-guide/>`_.
    e. Once your basic gains are stable and vehicle is stabilizing well then go to ``Altctl Mode``. Height will be stabilized automatically. Without LIDAR or SONAR the height might drift within a meter.
    f. In ``altitude control mode`` throttle stick should be kept at middle to stay at current altitude.
 
@@ -52,13 +52,13 @@ Below are a few important guidelines that the on-field operations team should be
 
 5. In ``RC-Manual``, ``RC-ALTCTL`` and ``RC-POSCTL`` modes, RC transmitter can control the vehicle.
 
-6. After switching to OFFBOARD/API mode, FlytOS takes control of the vehicle and holds position until any app tries to take control of the vehicle. To execute waypoint mission using FlytConsole you have to switch to OFFBOARD/API mode. To esecute waypoint mission using qgroundcontrol you need to switch to AUTO-Mission. (Configure a separate switch for AUTO-Mission mode from rc-calibration page)
+6. After switching to OFFBOARD/API mode, FlytOS takes control of the vehicle and holds position until any app tries to take control of the vehicle. To execute waypoint mission using FlytConsole you have to switch to OFFBOARD/API mode. To execute waypoint mission using qgroundcontrol you need to switch to AUTO-Mission. (Configure a separate switch for AUTO-Mission mode from rc-calibration page)
 
 7. Automatic Takeoff and Land parameters need to be configured according to frame, weight, motor configuration and performance requirements.
 
 8. For automatic arm in Takeoff command from FlytOS (onboard scripts / mobile apps / FlytConsole) to work, FlytPOD has to be put in OFFBOARD/API mode.
 
-9. FlytPOD has 3 power rails marked as '5V', '3V3' and '+'. On IO panel, pins marked as '5V' and '3V3' output 5V and 3.3V and can be used to power payloads. Pins marked as '+' are powered through ESCs.
+9. FlytPOD has 3 power rails marked as '5V', '3V3' and '+'. On IO panel, pins are marked as '5V' and '3V3' output 5V and 3.3V and can be used to power payloads. Pins marked as '+' are powered through ESCs.
 
 .. note:: In case you are using Pixhawk, check out the `pre-flight checklist <http://ardupilot.org/copter/docs/flying-arducopter.html>`_ before you fly.
 
