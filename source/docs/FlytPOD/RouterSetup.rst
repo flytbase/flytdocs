@@ -98,7 +98,7 @@ Changing the WiFi Mode
 
 
 .. note:: * In hotspot mode you can access FlytConsole at ``flytpod/flytconsole``.
-			 * In client mode you might have to replace ``flytpod`` with the IP address of FlytPOD/PRO which you can find through your router page by looking for connected client with the name 'flytpod'. Another client with name 'FlytWRT' would be connected as well but that is of no use.
+			 * In client mode you might have to replace ``flytpod`` with the IP address of FlytPOD/PRO which you can find through your router page by looking for connected client with the name 'flytpod'. Another client with name 'FlytWRT' will be connected as well but that won't be useful.
 
 
 
@@ -112,7 +112,7 @@ Troubleshooting
 
 2. **Forgot Password**
   
-   If you have forgot your password or your settings are not further useful, then you can reset the wifi to default.
+   If you forgot your password or your settings are not useful, then you can reset the wifi to default.
 
    a. Connect monitor, keyboard, mouse to FlytPOD/PRO. Plug FlytPOD/PRO using wall adapter/battery. 
    b. Open firefox browser in FlytPOD/PRO UI.
@@ -138,7 +138,7 @@ For advanced users
 
 The FlytPOD/PRO has built-in OpenWRT powered WiFi router. Internally it is connected with the main computer on Ethernet. The Module can be configured in AP Mode or in Client Mode depending upon the application. Router is using *relayd* for client mode operation.
 
-In case the FlytConsole WiFi setup is not sufficient for you then you can access OpenWRT router directly. There are two methods available.
+In case the FlytConsole WiFi setup is not sufficient for you, you can access OpenWRT router directly. There are two methods available.
 
 **Access Router**
 
