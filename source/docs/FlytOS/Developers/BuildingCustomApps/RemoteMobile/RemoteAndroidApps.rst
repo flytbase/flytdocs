@@ -68,7 +68,7 @@ Android App - Java (Android-Studio)
        ros.connect();
 
        
-   .. note:: The Ros object initialisation is done only once every time the app is run unless you are planning tp connect to multiple FlytOS devices.
+   .. note:: The Ros object initialisation is done once every time the app is run unless you are planning to connect to multiple FlytOS devices.
         
         
 
@@ -131,7 +131,7 @@ Sample Apps
 * Click on the follow on button on the bottom of the screen for the drone to start following you.
 * Please wait for the mobile device to get an accurate GPS location for the drone to start accepting the GPS location.
 * Click on follow off to stop the drone from following.
-* Click the nudge button on the left side of the screen (first button on the left) to give or remove any offset between you and your drone when at placed at the same location.
+* Click the nudge button on the left side of the screen (first button on the left) to give or remove any offset between you and your drone when placed at the same location.
 * Keep in mind to stop follow before giving it Land command.
 
   
