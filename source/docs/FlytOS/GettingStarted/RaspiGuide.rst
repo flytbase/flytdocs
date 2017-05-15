@@ -77,10 +77,10 @@ Activate FlytOS
 
 You have to activate installed FlytOS, without which critical APIs would not function.
 
-1. Make sure your Raspberry Pi has internet access before proceeding. To access internet on your Raspberry Pi (for activation, loading maps, auto updates, etc), you can either connnect a LAN cable coming from your router, or delete the access point and connect RPi's wifi to your home router that has internet access. Beginners can see `this tutorial <https://cdn-learn.adafruit.com/downloads/pdf/adafruits-raspberry-pi-lesson-3-network-setup.pdf>`_  to learn about networking on Raspberry Pi. More advanced users can follow :ref:`this networking setup guide<advanced_networking>`. 
+1. Make sure your Raspberry Pi has internet access before proceeding. To access internet on your Raspberry Pi (for activation, loading maps, auto updates, etc), you can either connnect through a LAN cable from your router, or delete the access point and connect RPi's wifi to your home router with internet access. Beginners can see `this tutorial <https://cdn-learn.adafruit.com/downloads/pdf/adafruits-raspberry-pi-lesson-3-network-setup.pdf>`_  to learn about networking on Raspberry Pi. More advanced users can follow :ref:`this networking setup guide<advanced_networking>`. 
 2. :ref:`Launch FlytConsole <FlytConsole_launch>`. You can launch FlytConsole in the RPi's browser using the URL ``http://localhost/flytconsole`` or on your PC's browser using the URL ``http://<ip-address-of-device>/flytconsole`` . In FlytConsole click on **Activate Now tag** under **License tab** at bottom right corner. A pop-up will appear which will direct you to the device registration page. If you are not logged in, enter your FlytBase Account credentials to log in. 
 3. Choose a device nick-name and select your compute engine. 
-4. In the drop down for license, select existing license if available or select ‘Issue a new license’. You can also provide a nick-name for your license.  
+4. In the license drop-down list, select existing license if available or select ‘Issue a new license’. You can also provide a nick-name for your license.  
 5. Click on Save Changes to register device and generate a license key.
 6. Copy the generated license key and enter it in FlytConsole to complete the activation process of your device. The Activate Now tag at bottom right corner of FlytConsole should now turn green.
 
@@ -113,7 +113,7 @@ Configuring Pixhawk Autopilot
 For APM users
 -------------
 
-1. Install `QGC(QGroundControl) <http://qgroundcontrol.com/>`_ in your local machine.
+1. Install `QGC(QGroundControl) <http://qgroundcontrol.com/>`_ on your local machine.
 2. Connect Pixhawk to QGC using the USB port at the side of Pixhawk.
 3. Install the latest stable APM release in Pixhawk using QGC by following `this <https://donlakeflyer.gitbooks.io/qgroundcontrol-user-guide/content/SetupView/Firmware.html>`_ guide.
 4. Once done, visit `parameter widget in QGC <https://donlakeflyer.gitbooks.io/qgroundcontrol-user-guide/content/SetupView/Parameters.html>`_ and search for parameters SERIAL2_BAUD and SERIAL2_PROTOCOL, set them to 921 and 1 respectively. This would enable communication between FlytOS running on Raspberry Pi 3 and Pixhawk.
@@ -122,7 +122,7 @@ For APM users
 For PX4 users
 -------------
 
-1. Install `QGC(QGroundControl) <http://qgroundcontrol.com/>`_ in your local machine.
+1. Install `QGC(QGroundControl) <http://qgroundcontrol.com/>`_ on your local machine.
 2. Connect Pixhawk to QGC using the USB port at the side of Pixhawk.
 3. Install the latest stable PX4 release in Pixhawk using QGC by following `this <https://donlakeflyer.gitbooks.io/qgroundcontrol-user-guide/content/SetupView/Firmware.html>`_ guide.
 4. Once done, visit `parameter widget in QGC <https://donlakeflyer.gitbooks.io/qgroundcontrol-user-guide/content/SetupView/Parameters.html>`_ and search for parameters SYS_COMPANION and MAV_COMP_ID, set them to 921600 and 50 respectively. This would enable communication between FlytOS running on Raspberry Pi 3 and Pixhawk.
