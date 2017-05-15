@@ -16,7 +16,7 @@ FlytOS is the software framework of FlytBase. It is based on Linux and ROS (Robo
 
 FlytOS comes preloaded with FlytPOD/PRO. Alternatively, it is also available for download and can then be installed on a Linux/ROS based computer. This setup allows for integration with any compatible drone/autopilot.
 
-The apps developed with FlytAPIs can talk to compatible drone/autopilot as well as can be tested in a virtual ROS/Gazebo environment using FlytSim. The vision of FlytOS is to provide a standard language for the drone developers to talk to their drones.
+The apps developed with FlytAPIs can talk to compatible drone/autopilot and can also be tested in a virtual ROS/Gazebo environment using FlytSim. The vision of FlytOS is to provide a standard language for the drone developers to talk to their drones.
 
 
 .. figure:: /_static/Images/FlytOSArch_withbg.png
