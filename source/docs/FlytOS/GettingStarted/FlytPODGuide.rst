@@ -10,7 +10,7 @@ Installing FlytOS
 
 .. note:: FlytOS Linux Image is pre-installed in FlytPOD/PRO. In case you want to re-flash their respective 32GB SD/eMMC card, or create a duplicate 32GB SD/eMMC card follow the steps given below. You can use 16GB SD/eMMC cards as well, but 32GB is preferable.
 
-To re-install FlytOS on FlytPOD/PRO, there are 2 ways that you can follow. We recommend the first method for an easier install:
+There are two ways to re-install FlytOS on FlytPOD/PRO. We recommend the first method for an easier install:
 
 * :ref:`Flashing FlytOS Linux Image <flashing_img_flytpod>`  [**Recommended method**]
   
@@ -76,12 +76,12 @@ Activate FlytOS
 
 .. note:: This step requires you to have a registered FlytBase Account. In case you don't have an account, :ref:`create a FlytBase Account<create_flytbase_account>` before you proceed.
 
-You have to activate installed FlytOS, without which critical APIs would not function.
+You have to activate the installed FlytOS, without which critical APIs would not function.
 
 1. Make sure your FlytPOD/PRO has internet access before proceeding. Configure its onboard WiFi router to client mode by following :ref:`this guide <flytpod router setup>`.
-2. :ref:`Launch FlytConsole <FlytConsole_launch>`. You can launch FlytConsole in the FlytPOD/PRO's browser using the URL ``http://localhost/flytconsole`` or on your PC's browser using the URL ``http://ip-address-of-device/flytconsole``. In FlytConsole click on **Activate Now tag** under **License tab** at bottom right corner. A pop-up will appear which will direct you to the device registration page. If you are not logged in, enter your FlytBase Account credentials to log in. 
+2. :ref:`Launch FlytConsole <FlytConsole_launch>`. You can launch FlytConsole in the FlytPOD/PRO's browser using the URL ``http://localhost/flytconsole`` or on your PC's browser using the URL ``http://ip-address-of-device/flytconsole``. In FlytConsole, click on **Activate Now tag** under **License tab** at bottom right corner. A pop-up will appear which will direct you to the device registration page. If you are not logged in, enter your FlytBase Account credentials to log in. 
 3. Choose a device nick-name. 
-4. In the drop down for license, select existing license if available or select ‘Issue a new license’. You can also provide a nick-name for your license.  
+4. In the license drop-down list, select existing license if available or select ‘Issue a new license’. You can also provide a nick-name for your license.  
 5. Click on Save Changes to register device and generate a license key.
 6. Copy the generated license key and enter it in FlytConsole to complete the activation process of your device. The Activate Now tag at bottom right corner of FlytConsole should now turn green.
 
