@@ -16,12 +16,12 @@ Expansion Panel
 .. image:: /_static/Images/FPsideviews.png
 		:align: center
 
-.. note:: Notations/symbols on your FlytPOD/PRO may vary from the given image, but the pin functions remain same, please match physical location with above image in such case.
+.. note:: Notations/symbols on your FlytPOD/PRO may vary from the given image, but the pin functions remain same. Please match physical location with above image in such case.
 
 1. Power Button
 ^^^^^^^^^^^^^^^
 
-Gently pressing the power button turns off the FlytPOD/PRO. The RGB LED turns to amber upon shutting down. After that you can remove the power supply. You can switch on FlytPOD again by pressing the Power button and holding for about 1 second.
+Gently pressing the power button turns off the FlytPOD/PRO. The RGB LED turns to amber upon shutting down. After that you can remove the power supply. You can switch on FlytPOD again by pressing the Power button and holding it for about 1 second.
 
 .. note:: Please be patient while the system shuts down. It may take a few seconds for the system to shut down completely.
 
@@ -127,7 +127,7 @@ The System Health LED indicates the Autopilot Health status.
 * Green FastBlink - Autopilot Configuration Error
 * Green Blink at 1 Hz - Autopilot Ready to Arm
 
-In case of Autopilot firmware upgrade in progress, (marked by RGB Led status either being solid green or blank), health led shows either Green FastBlink or Solid.
+In case of Autopilot firmware upgrade in progress, (marked by RGB Led status either being solid green or blank), health LED shows either Green FastBlink or Solid.
 
 12. Power Supply LED
 ^^^^^^^^^^^^^^^^^^^^
@@ -152,7 +152,7 @@ The VI sensor plug of `power module`_ must be connected to this port. This would
 
 15. Power Input
 ^^^^^^^^^^^^^^^
-Power input for FlytPOD, ratings: 5V, 4A, second highest priority power input for autopilot. Odroid SBC requires this power input all the time. Autopilot and WiFi can run safely on other two power inputs as well when this plug is not connected.
+Power input for FlytPOD, ratings: 5V, 4A, second highest priority power input for autopilot. Odroid SBC requires this power input all the time. Autopilot and WiFi can run safely on other two power inputs and also when this plug is not connected.
 
 
 16. FlytOS Micro SD/eMMC
