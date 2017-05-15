@@ -327,7 +327,7 @@ Following is a list of pin positions for the next few steps:
 RC Mode Settings
 ++++++++++++++++
 
-Map the RC mode switch to a three way switch channel and manually override to a two way switch channel and set their thresholds.
+Map the RC mode switch to a three way switch channel and manual override function to a two way switch channel. Set their respective thresholds.
 	
 	
 .. important:: * FlytOS can be used without RC, but we recommend having an emergency RC pilot ready in case something goes wrong.
