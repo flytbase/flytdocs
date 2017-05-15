@@ -6,7 +6,7 @@ ROSCPP
 Download and Build the Demo Apps
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-* Source code for the roscpp sample applications can be found at our `github page`_. Download the folder and place it in the ``src`` folder of your catkin workspace in your flight computer. If you do not created a catkin workspace before, follow these steps to create one.
+* Source code for the roscpp sample applications can be found at our `github page`_. Download the folder and place it in the ``src`` folder of your catkin workspace in your flight computer. If you haven't created a catkin workspace before, follow these steps to create one.
 
 * We are going to name our catkin workspace catkin_ws. Create the folder by typing the following commands in your terminal:
   
