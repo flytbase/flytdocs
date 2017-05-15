@@ -11,7 +11,7 @@ Android SDK
 	:width: 30%
 
 * The SDK has all the required libraries for making REST calls and a websocket connection to FlytOS already integrated in it.
-* The main feature shows a sample of how a REST call and a WebSocket call is to be made.
+* The mainActivity shows a sample of how a REST call and a WebSocket call is to be made.
 * Sample REST call to fetch namespace from FlytOS
    
    .. code-block:: java
