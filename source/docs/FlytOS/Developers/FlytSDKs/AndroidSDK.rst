@@ -11,7 +11,7 @@ Android SDK
 	:width: 30%
 
 * The SDK has all the required libraries for making REST calls and a websocket connection to FlytOS already integrated in it.
-* The mainActivity in it shows a sample of how a REST call and a WebSocket call is to be made.
+* The mainActivity shows a sample of how a REST call and a WebSocket call is to be made.
 * Sample REST call to fetch namespace from FlytOS
    
    .. code-block:: java
@@ -67,7 +67,7 @@ Android SDK
        ros.connect();
 
        
-   .. note:: The Ros object initialisation is done only once every time the app is run unless you are planning tp connect to multiple FlytOS devices.
+   .. note:: The Ros object initialisation is done once every time the app is run unless you are planning to connect multiple FlytOS devices.
         
         
 
