@@ -62,7 +62,7 @@ Getting Started
 
    * For the next few steps FlytPOD will require access to internet. You will need a WiFi access point with internet connection to proceed. If not available then you can create one, using your android phone and mobile data connection. 
    * Plug and tighten antennas on FlytPOD.
-   * Power on FlytPOD using wall adapter. The RGB LED should start blinking red. (Don't worry about it now.) 
+   * Power on FlytPOD using wall adapter. The RGB LED should start breathing red. (Don't worry about it now.) 
    * From your laptop, connect to the WiFi network ``FlytPOD_wifi`` the password for which is ``FlytPOD123``. 
    * In your laptop's browser, launch FlytConsole, using URL: ``flytpod/flytconsole``.
    * Setup FlytPOD in client mode by following steps from :ref:`this guide<flytpod router setup>`. 
