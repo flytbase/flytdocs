@@ -184,7 +184,7 @@ Motor Testing
 
    
 
-FlytConsole allows you to test if the motors are correctly connected. In Motor testing you can do this by clicking on the respective motor that you want to test. Once you click on the motor, it will start rotating and you can check whether the direction of rotation of the corresponding motor on your drone is correct or not.
+FlytConsole allows you to test if the motors are correctly connected. In Motor testing, you can do this by clicking on the respective motor that you want to test. Once you click on the motor, it will start rotating and you can check whether the direction of rotation of the corresponding motor on your drone is correct or not.
 
 .. important:: * You need to power the ESCs for this.
      				* In case your motor rotates in the incorrect direction, you can swap any two of the ESC cables going to the motor and make the motor rotate in the desired direction.
@@ -281,7 +281,7 @@ Set the ``AUTOPILOT ORIENTATION`` if the orientation of the frame and FlytPOD ar
 	:align: center
 	:scale: 50 %
 
-Keep the drone steady in flat position on a leveled surface on the floor.
+Keep the drone steady in flat position on a levelled surface on the floor.
 
 .. figure:: /_static/Images/Gyro.png
 	:align: center
@@ -327,7 +327,7 @@ Following is a list of pin positions for the next few steps:
 RC Mode Settings
 ++++++++++++++++
 
-Map the RC mode switch to a three way switch channel and manual override to a two way switch channel and set their thresholds.
+Map the RC mode switch to a three way switch channel and manual override function to a two way switch channel. Set their respective thresholds.
 	
 	
 .. important:: * FlytOS can be used without RC, but we recommend having an emergency RC pilot ready in case something goes wrong.
@@ -412,7 +412,7 @@ This parameter is not critical and can be tuned in flight, in the worst case sce
 
 **Parameters: MC_YAW_P - Yaw Angle**
 
-Rotate it around yaw, and observe the response. It should go slowly back to the initial heading. If it oscillates, tune down P. Once the control response is slow but correct, increase P until the response is firm, but it does not oscillate. 
+Rotate it around yaw, and observe the response. It should go back slowly to the initial heading. If it oscillates, tune down P. Once the control response is slow but correct, increase P until the response is firm, but it does not oscillate. 
 
 **Parameters: MC_YAW_FF - Feed forward tuning**
 
@@ -452,7 +452,7 @@ Click here to see the complete parameter `list <https://pixhawk.org/firmware/par
 Parameter Manager
 """""""""""""""""
 
-These are all parameters used throughout FlytOS. These can be changed if at all they need to be changed.
+These are all parameters used throughout FlytOS. These can be changed if needed.
 
 .. figure:: /_static/Images/Parameters.png
 	:align: center
