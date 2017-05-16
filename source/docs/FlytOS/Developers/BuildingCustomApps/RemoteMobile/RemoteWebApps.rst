@@ -71,7 +71,7 @@ The front end of the app is developed in HTML, CSS, JS/Jquery .
 To start building an Android App using Cordova all you need to do is, add the files of `FlytSDK Web <https://downloads.flytbase.com/flytos/downloads/sdk/Flyt_Web_SDK.zip>`_ to this project and build your App like you would a Web App (editing the app.html and app.js files).
 
 
-Building and Run the Project
+Build and Run the Project
 ---------------------------------
 
 
