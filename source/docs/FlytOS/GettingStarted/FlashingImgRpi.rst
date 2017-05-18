@@ -97,8 +97,6 @@ To burn an image to your SD/eMMC card:
 
 Etcher will burn the image onto the SD/eMMC card and verify the image. Remove the SD card after you get the prompt.
 
-.. warning:: Since the image is of only around 11.5 GBs, the rest of the SD/eMMC Card would have unallocated memory. DO NOT forget to expand SD/eMMC card partition.
-
 Users more comfortable with *gparted* can refer to the following video tutorial to help flash FlytOS Linux Image on their SD/eMMC cards and then expand the partition.
 
 
@@ -113,6 +111,42 @@ Users more comfortable with *gparted* can refer to the following video tutorial 
 
 After performing the above steps, your FlytOS SD Card is ready. Insert the card in Raspberry Pi's SD Card slot and power ON the Pi to start booting FlytOS.
 
+.. warning:: Since the image is of only around 11.5 GBs, the rest of the SD/eMMC Card would have unallocated memory. DO NOT forget to expand SD/eMMC card partition.
+
+Partition Expansion on Raspberry Pi
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+After you burn the Raspberry Pi FlytOS image, the rest of the SD Card has unallocated space. As this limits the available user area it is advised to extend your partition on your **first boot up**.
+
+To extend your partition to cover your full SD card, execute the following steps.
+
+You will need to connect your Raspberry Pi to the internet. As the internal WiFi is being used as an Access Point, internet can be provided through either an ethernet cable or through the USB port by connecting a WiFi dongle or using an Android phone in USB Tethering mode.
+
+* Run the following command in system terminal
+
+  .. code-block:: bash
+
+      $ sudo apt-get update
+
+* Download raspi-config
+
+  .. code-block:: bash
+
+      $ sudo apt-get install raspi-config
+
+* On successful installation of raspi-config run
+
+  .. code-block:: bash
+
+      $ sudo raspi-config --expand-rootfs
+
+* After execution you will be asked to reboot your system
+
+  .. code-block:: bash
+
+      $ sudo reboot
+
+* On restart your partition has will be extended to cover your full SD Card and is now ready to use.
 
 WiFi Setup
 ^^^^^^^^^^
