@@ -10,6 +10,30 @@ echo Logging at $HOME/flytos_installation_log.txt
 exec > >(tee -i $HOME/flytos_installation_log.txt)
 exec 2>&1
 
+#Functions for setting up UART on Raspberry Pi
+set_config_var() {
+  lua - "$1" "$2" "$3" <<EOF > "$3.bak"
+local key=assert(arg[1])
+local value=assert(arg[2])
+local fn=assert(arg[3])
+local file=assert(io.open(fn))
+local made_change=false
+for line in file:lines() do
+  if line:match("^#?%s*"..key.."=.*$") then
+    line=key.."="..value
+    made_change=true
+  end
+  print(line)
+end
+
+if not made_change then
+  print(key.."="..value)
+end
+EOF
+mv "$3.bak" "$3"
+}
+
+
 if [ "$EUID" -ne 0 ]
   then echo -e "\033[0;31m Please run as root \033[0m"
   echo "Exiting"
@@ -106,12 +130,18 @@ sed -i '/source \/opt\/ros\/kinetic\/setup.bash/d' /etc/bash.bashrc
 sed -i '/export PYTHONPATH=$PYTHONPATH:\/flyt\/flytapps:\/flyt\/userapps/d' /etc/bash.bashrc
 sed -i '/source \/flyt\/flytos\/flytcore\/setup.bash/d' /etc/bash.bashrc
 sed -i '/export CPATH=$CPATH:\/opt\/ros\/kinetic\/include/d' /etc/bash.bashrc
+sed -i '/alias launch_flytOS=sudo $(rospack find core_api)\/scripts\/launch_flytOS.sh/d' /etc/bash.bashrc
+sed -i '/alias stop_flytOS=sudo $(rospack find core_api)\/scripts\/stop_flytOS.sh/d' /etc/bash.bashrc
 
 #Add Sourcing
 echo "source /opt/ros/kinetic/setup.bash" >> /etc/bash.bashrc
 echo 'export PYTHONPATH=$PYTHONPATH:/flyt/flytapps:/flyt/userapps' >> /etc/bash.bashrc
 echo "source /flyt/flytos/flytcore/setup.bash" >> /etc/bash.bashrc
 echo 'export CPATH=$CPATH:/opt/ros/kinetic/include' >> /etc/bash.bashrc
+
+#Alias for start and stop
+echo 'alias launch_flytOS=sudo $(rospack find core_api)/scripts/launch_flytOS.sh' >> /etc/bash.bashrc
+echo 'alias stop_flytOS=sudo $(rospack find core_api)/scripts/stop_flytOS.sh' >> /etc/bash.bashrc
 
 sed -i 's#source /opt/ros/kinetic/setup.bash##g' $HOME/.bashrc
 
@@ -161,6 +191,18 @@ elif [ $DEVICE == "ODROID" ]; then
         fi
     fi    
 elif [ $DEVICE == "RPi" ]; then
+
+    #First disable login shell over serial
+    sed -i /boot/cmdline.txt -e "s/console=ttyAMA0,[0-9]\+ //"
+    sed -i /boot/cmdline.txt -e "s/console=serial0,[0-9]\+ //"
+
+    #Enable serial hardware
+    set_config_var enable_uart 1 /boot/config.txt
+
+    # Disable Bluetooth and Switch Hardware Bluetooth to Pins.
+    # Serial needs to be enabled from raspi-config as well, otherwise RPi may restart erratically.
+    sed -i '/dtoverlay=pi3-disable-bt/d' /boot/config.txt
+    echo 'dtoverlay=pi3-disable-bt' >> /boot/config.txt
 
     wget -O $HOME/flytos.deb $(curl -sS https://my.flytbase.com/api/downloads/latest/Raspberry%20Pi%203/ | python -c "import sys, json; print json.load(sys.stdin)['link']") || (echo -e "\033[0;31m Unable to get flytos debian package. Are you connected to the internet? \033[0m" ; exit 1)
 
