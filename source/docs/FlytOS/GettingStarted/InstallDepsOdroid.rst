@@ -9,26 +9,22 @@ Installing FlytOS dependencies in your custom image (Odroid-XU4)
 
 1. Please ensure you are running Linux - Ubuntu 16.04 before proceeding with installation. This guide assumes you already have a working image for your Flight Computer.
 
-2. Download the FlytOS installation script :download:`FlytOS Installation Script </_static/Downloads/flytOS_installation.sh>`
-
-3. Open terminal and change the script to executable through
-
-   .. code-block:: bash
-
-       $ chmod +x flytOS_installation.sh
-
 .. warning:: Please save and close all open applications before executing the script as your system shall reboot on installation.
 
-4. Run the script through terminal and enter your system password when prompted
+2. Open terminal and run the following command
 
    .. code-block:: bash
 
-       $ sudo ./flytOS_installation.sh
+       $ sudo bash -c 'curl -sSL docs.flytbase.com/_downloads/flytOS_installation.sh | bash'
 
-5. On successful installation you will get the message **Congratulations! FlytOS installation completed** and your system shall reboot.
+3. Please enter your system password when prompted
+
+4. On successful installation you will get the message **Congratulations! FlytOS installation completed** and your system shall reboot.
 
 Troubleshooting
 ---------------
+
+* If you get an error while installation, please reboot and try again.
 
 * If you get the error "Connection Timed Out":
   Please check your internet connection and run the script again.
