@@ -131,8 +131,8 @@ sed -i '/source \/opt\/ros\/kinetic\/setup.bash/d' /etc/bash.bashrc
 sed -i '/export PYTHONPATH=$PYTHONPATH:\/flyt\/flytapps:\/flyt\/userapps/d' /etc/bash.bashrc
 sed -i '/source \/flyt\/flytos\/flytcore\/setup.bash/d' /etc/bash.bashrc
 sed -i '/export CPATH=$CPATH:\/opt\/ros\/kinetic\/include/d' /etc/bash.bashrc
-sed -i '/alias launch_flytOS=sudo $(rospack find core_api)\/scripts\/launch_flytOS.sh/d' /etc/bash.bashrc
-sed -i '/alias stop_flytOS=sudo $(rospack find core_api)\/scripts\/stop_flytOS.sh/d' /etc/bash.bashrc
+sed -i '/alias launch_flytOS='\''sudo $(rospack find core_api)\/scripts\/launch_flytOS.sh'\''/d' /etc/bash.bashrc
+sed -i '/alias stop_flytOS='\''sudo $(rospack find core_api)\/scripts\/stop_flytOS.sh'\''/d' /etc/bash.bashrc
 
 #Add Sourcing
 echo "source /opt/ros/kinetic/setup.bash" >> /etc/bash.bashrc
@@ -141,8 +141,8 @@ echo "source /flyt/flytos/flytcore/setup.bash" >> /etc/bash.bashrc
 echo 'export CPATH=$CPATH:/opt/ros/kinetic/include' >> /etc/bash.bashrc
 
 #Alias for start and stop
-echo 'alias launch_flytOS=sudo $(rospack find core_api)/scripts/launch_flytOS.sh' >> /etc/bash.bashrc
-echo 'alias stop_flytOS=sudo $(rospack find core_api)/scripts/stop_flytOS.sh' >> /etc/bash.bashrc
+echo 'alias launch_flytOS='\''sudo $(rospack find core_api)/scripts/launch_flytOS.sh'\''' >> /etc/bash.bashrc
+echo 'alias stop_flytOS='\''sudo $(rospack find core_api)/scripts/stop_flytOS.sh'\''' >> /etc/bash.bashrc
 
 #Prevent clash in sourcing with local bashrc
 sed -i 's#source /opt/ros/kinetic/setup.bash##g' $HOME/.bashrc
