@@ -15,7 +15,7 @@ Installing FlytOS dependencies in your custom image (Odroid-XU4)
 
    .. code-block:: bash
 
-       $ sudo bash -c 'curl -sSL http://docs.flytbase.com/_static/Downloads/flytOS_installation.sh | bash'
+       $ sudo bash -c 'curl -sSL http://docs.flytbase.com/_static/Downloads/flytOS_installation.sh | bash -e'
 
 3. Please enter your system password when prompted
 
