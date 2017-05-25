@@ -15,11 +15,17 @@ Installing FlytOS dependencies in your custom image (Odroid-XU4)
 
    .. code-block:: bash
 
+       $ sudo bash -c 'wget -O http://docs.flytbase.com/_static/Downloads/flytOS_installation.sh | bash -e'
+
+3. In case you get an error saying wget not found, please run the following command
+
+   .. code-block:: bash
+
        $ sudo bash -c 'curl -sSL http://docs.flytbase.com/_static/Downloads/flytOS_installation.sh | bash -e'
 
-3. Please enter your system password when prompted
+4. Please enter your system password when prompted
 
-4. On successful installation you will get the message **Congratulations! FlytOS installation completed** and your system shall reboot.
+5. On successful installation you will get the message **Congratulations! FlytOS installation completed** and your system shall reboot.
 
 Troubleshooting
 ---------------
