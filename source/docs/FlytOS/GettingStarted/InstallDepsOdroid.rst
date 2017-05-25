@@ -15,7 +15,7 @@ Installing FlytOS dependencies in your custom image (Odroid-XU4)
 
    .. code-block:: bash
 
-       $ sudo bash -c 'wget -O http://docs.flytbase.com/_static/Downloads/flytOS_installation.sh | bash -e'
+       $ sudo bash -c 'wget -O - http://docs.flytbase.com/_static/Downloads/flytOS_installation.sh | bash -e'
 
 3. In case you get an error saying wget not found, please run the following command
 
