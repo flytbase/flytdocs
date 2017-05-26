@@ -35,13 +35,13 @@ Troubleshooting
 * If you get the error "Connection Timed Out":
   Please check your internet connection and run the script again.
 
-* If the script is interrupted during execution try running the following command before you execute the script again
+* If the script is interrupted during execution, try running the following command before you execute the script again
 
   .. code-block:: bash
 
       $ sudo dpkg --configure -a
 
-* If the above command does not work run the following to fix your packages before running the installation script
+* If the above command does not work, run the following to fix your packages before running the installation script
 
   .. code-block:: bash
 
@@ -115,7 +115,7 @@ Troubleshooting
 WiFi setup
 ----------
 
-* If you installed FlytOS on a custom image, then you can create your own wifi access point access point.
+* If you installed FlytOS on a custom image, then you can create your own wifi access point.
 
 * To access internet on your Raspberry Pi (for activation, loading maps, auto updates, etc), you can delete the access point and connect RPi's wifi to you home router that has internet access. Beginners can see `this tutorial <https://cdn-learn.adafruit.com/downloads/pdf/adafruits-raspberry-pi-lesson-3-network-setup.pdf>`_  to learn about networking on Raspberry Pi. More advanced users can follow :ref:`this networking setup guide<advanced_networking>`.
 

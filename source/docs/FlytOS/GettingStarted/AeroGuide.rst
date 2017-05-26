@@ -41,13 +41,13 @@ Troubleshooting
 * If you get the error "Connection Timed Out":
   Please check your internet connection and run the script again.
 
-* If the script is interrupted during execution try running the following command before you execute the script again
+* If the script is interrupted during execution, try running the following command before you execute the script again
 
   .. code-block:: bash
 
       $ sudo dpkg --configure -a
 
-* If the above command does not work run the following to fix your packages before running the installation script
+* If the above command does not work, run the following to fix your packages before running the installation script
 
   .. code-block:: bash
 

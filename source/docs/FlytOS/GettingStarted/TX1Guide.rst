@@ -41,13 +41,13 @@ Troubleshooting
 * If you get the error "Connection Timed Out":
   Please check your internet connection and run the script again.
 
-* If the script is interrupted during execution try running the following command before you execute the script again
+* If the script is interrupted during execution, try running the following command before you execute the script again
 
   .. code-block:: bash
 
       $ sudo dpkg --configure -a
 
-* If the above command does not work run the following to fix your packages before running the installation script
+* If the above command does not work, run the following to fix your packages before running the installation script
 
   .. code-block:: bash
 
@@ -196,7 +196,7 @@ Hardware Setup
 Telemetry Connection
 """"""""""""""""""""
 
-Connect the Pixhawk autopilot board’s TELEM2 port to TX1’s UART1 port . If you are using the TX1 developer kit carrier board , then the UART1 can be found on the J17 connector. Visit `this link <https://developer.nvidia.com/embedded/dlc/jetson-tx1-developer-kit-carrier-board-spec>`_ (Page 28 Section 3.7) to view the pinout of TX1's J17 connector.
+Connect the TELEM2 port of Pixhawk autopilot to UART1 port of TX1. If you are using the TX1 developer kit carrier board , then the UART1 can be found on the J17 connector. Visit `this link <https://developer.nvidia.com/embedded/dlc/jetson-tx1-developer-kit-carrier-board-spec>`_ (Page 28 Section 3.7) to view the pinout of TX1's J17 connector.
 
 .. figure:: /_static/Images/Tx1_Connection.png
   :align: center
