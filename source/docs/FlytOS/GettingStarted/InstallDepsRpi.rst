@@ -5,7 +5,7 @@ Installing FlytOS in your custom image (RPi3)
 
 .. warning:: You may face issues in FlytOS due to the latest update in Open CV Library. It is currently advised to use FlytOS through flashing :ref:`FlytOS Linux Image <flashing_img_rpi>`.
 
-.. warning:: Follow this step ONLY if you have chosen NOT TO flash :ref:`FlytOS Linux Image <flashing_img_rpi>`.
+.. note:: Follow this step ONLY if you have chosen NOT TO flash :ref:`FlytOS Linux Image <flashing_img_rpi>`.
 
 1. Please ensure you are running Linux - Ubuntu 16.04 before proceeding with installation. This guide assumes you already have a working operating system on your Flight Computer. The following commands should be executed on your flight computer, you may either use an external display or ssh into your flight computer.
 
