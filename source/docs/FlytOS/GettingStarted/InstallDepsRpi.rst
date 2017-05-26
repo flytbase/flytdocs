@@ -3,7 +3,7 @@
 Installing FlytOS in your custom image (RPi3)
 ==========================================================
 
-.. warning:: You may face issues in FlytOS due to the latest update in Open CV Library. It is currently advised to use FlytOS through flashing :ref:`FlytOS Linux Image <flashing_img_rpi>`.
+.. warning:: You may face issues in FlytOS due to the latest update in OpenCV Library. It is currently advised to use FlytOS through flashing :ref:`FlytOS Linux Image <flashing_img_rpi>`.
 
 .. note:: Follow this step ONLY if you have chosen NOT TO flash :ref:`FlytOS Linux Image <flashing_img_rpi>`.
 
