@@ -1,18 +1,17 @@
 .. _install_dependencies_odroid:
 
-Installing FlytOS dependencies in your custom image (Odroid-XU4)
+Installing FlytOS in your custom image (Odroid-XU4)
 =================================================================
 
 .. warning:: You may face issues in FlytOS due to the latest update in OpenCV Library. It is currently advised to use FlytOS through flashing :ref:`FlytOS Linux Image <flashing_img_odroid>`.
 
 .. note:: Follow this step ONLY if you have chosen to NOT flash :ref:`FlytOS Linux Image <flashing_img_odroid>`.
 
-1. Please ensure you are running Linux - Ubuntu 16.04 before proceeding with installation. This guide assumes you already have a working operating system on your Flight Computer.
-The following commands should be executed on your flight computer, you may either use an external display or ssh into your flight computer.
+1. Please ensure you are running Linux - Ubuntu 16.04 before proceeding with installation. This guide assumes you already have a working operating system on your Flight Computer. The following commands should be executed on your flight computer, you may either use an external display or ssh into your flight computer.
 
 .. warning:: Please make sure you have a stable internet connection. Save and close all open applications before executing the script as your system shall reboot on installation.
 
-3. Open terminal and run the following command
+2. Open terminal and run the following command
 
    .. code-block:: bash
 
@@ -24,9 +23,9 @@ The following commands should be executed on your flight computer, you may eithe
 
        $ sudo bash -c 'wget -O - http://docs.flytbase.com/_static/Downloads/flytOS_installation.sh | bash -e'
 
-4. Please enter your system password when prompted
+3. Please enter your system password when prompted
 
-5. On successful installation you will get the message **Congratulations! FlytOS installation completed** and your system shall reboot.
+4. On successful installation you will get the message **Congratulations! FlytOS installation completed** and your system shall reboot.
 
 Troubleshooting
 ---------------

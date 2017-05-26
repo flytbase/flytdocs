@@ -4,87 +4,124 @@
 Intel Aero
 ==========
 
-
-
 .. _install_dependencies_aero:
 
-Installing FlytOS 
+Installing FlytOS
 ^^^^^^^^^^^^^^^^^^
-
-Installing Dependencies
-"""""""""""""""""""""""
 
 .. caution:: Intel Aero Compute board currently supports only the Yocto Linux distribution. Since FlytOS is only supported on Ubuntu/Debian based Linux distros, you will have to re-flash the operating system. This may void your Aero Board's warranty so we recommend users to use  their discretion while installing FlytOS on the board. Flytbase does not take any responsibility and is free from any liability caused by following these instructions to install Ubuntu on Intel Aero Board.
 
-1. List of FlytOS dependencies to be installed on your Aero Board:
+1. First create an Ubuntu 16.04 bootable USB drive by following `these instructions <https://www.ubuntu.com/download/desktop/create-a-usb-stick-on-ubuntu>`_. Connect the USB drive to the Aero Board using a micro USB OTG cable. You may also want to use a USB hub to attach a keyboard and mouse to the Board. Then power up the Aero board and press escape while it boots up to enter the BIOS menu. Select the option to boot from your USB drive. Then follow `these instructions <https://www.ubuntu.com/download/desktop/install-ubuntu-desktop>`_ to install Ubuntu on the board.
 
-   a) Linux - Ubuntu 16.04. First create an Ubuntu 16.04 bootable USB drive by following `these instructions <https://www.ubuntu.com/download/desktop/create-a-usb-stick-on-ubuntu>`_. Connect the USB drive to the Aero Board using a micro USB OTG cable. You may also want to use a USB hub to attach a keyboard and mouse to the Board. Then power up the Aero board and press escape while it boots up to enter the BIOS menu. Select the option to boot from your USB drive. Then follow `these instructions <https://www.ubuntu.com/download/desktop/install-ubuntu-desktop>`_ to install Ubuntu on the board. 
-   
-   b) `ROS - Kinetic <http://wiki.ros.org/kinetic/Installation/Ubuntu>`_ (install *ros-kinetic-desktop* package)
-   
-   c) `OpenCV 2.4 <http://docs.opencv.org/2.4/doc/tutorials/introduction/linux_install/linux_install.html>`_ (for vision/video streaming APIs).
-   d) Other dependencies - To install run the following commands in your terminal.
+2. Please ensure you are running Linux - Ubuntu 16.04 before proceeding with installation. This guide assumes you already have a working operating system on your Flight Computer. The following commands should be executed on your flight computer, you may either use an external display or ssh into your flight computer.
 
-   .. literalinclude:: include/flytos_dependency.sh
-      :language: bash   
- 
-.. 2. You have to update some kernel modules for video streaming to work properly. Run the following script as root or run each command with sudo permission.
-   
-..    .. literalinclude:: include/kernel_module_update.sh
-..       :language:  bash  
+.. warning:: Please make sure you have a stable internet connection. Save and close all open applications before executing the script as your system shall reboot on installation.
 
-2. Before proceeding further, add the following lines at the end of your /etc/bash.bashrc file. To open the file for editing, run the following command the terminal ``sudo nano /etc/bash.bashrc`` and to save your edited file, press ``ctrl+o+ENTER`` and to exit press ``ctrl+x``.
+3. Open terminal and run the following command
 
    .. code-block:: bash
-   
-       source /opt/ros/kinetic/setup.bash
-       export PYTHONPATH=$PYTHONPATH:/flyt/flytapps:/flyt/userapps
-       source /flyt/flytos/flytcore/setup.bash
 
-3. Run the following additional command in your terminal:
+       $ sudo bash -c 'curl -sSL http://docs.flytbase.com/_static/Downloads/flytOS_installation.sh | bash -e'
+
+   In case you get an error saying curl: command not found, please run the following command
 
    .. code-block:: bash
-   
-       sed -i 's#source /opt/ros/kinetic/setup.bash##g' ~/.bashrc
-       
-Installing debian package
-"""""""""""""""""""""""""
 
-.. note:: This step requires you to have a registered FlytBase Account. In case you don't have an account, :ref:`create a FlytBase Account<create_flytbase_account>` before you proceed. 
+       $ sudo bash -c 'wget -O - http://docs.flytbase.com/_static/Downloads/flytOS_installation.sh | bash -e'
 
-1. |my_flytbase_link| to your FlytBase Account.
+4. Please enter your system password when prompted
 
-.. |my_flytbase_link| raw:: html
+5. On successful installation you will get the message **Congratulations! FlytOS installation completed** and your system shall reboot.
 
-   <a href="https://my.flytbase.com" target="_blank">Login</a>
+Troubleshooting
+---------------
 
-.. |flytos_dl_link| raw:: html
+* If the installation script throws an error, please reboot and try again.
 
-   <a href="https://my.flytbase.com/FlytOS" target="_blank">FlytOS Debian Package</a>
+* If you get the error "Connection Timed Out":
+  Please check your internet connection and run the script again.
 
-2. Download the hardware specific |flytos_dl_link| from your FlytBase Account.
-3. Verify that the dependencies are installed. To install run the following commands in your terminal.
+* If the script is interrupted during execution try running the following command before you execute the script again
 
-   .. literalinclude:: include/flytos_dependency.sh
-      :language: bash	
+  .. code-block:: bash
 
-4. Once you have downloaded the Debian package, run the following command in your terminal to install FlytOS: 
-   
-.. code-block:: bash
-   
-   #make sure to provide absolute path of the debian package file: /home/flytpod/flyt*.deb
-   $ sudo apt install -y <path to debian package location>/flyt*.deb 
+      $ sudo dpkg --configure -a
 
-5. Check for **Congratulations! FlytOS installation completed** message at the end.
-6. Just in case you see any dependency issues cropping up in your screen while installing FlytOS, kindly run the following command and execute the previous command again:
-   
-.. code-block:: bash
-   
-   $ sudo apt -f -y install
+* If the above command does not work run the following to fix your packages before running the installation script
 
+  .. code-block:: bash
+
+      $ sudo apt-get upgrade --fix-broken
+
+.. 1. List of FlytOS dependencies to be installed on your Aero Board:
+..
+..    a) Linux - Ubuntu 16.04. First create an Ubuntu 16.04 bootable USB drive by following `these instructions <https://www.ubuntu.com/download/desktop/create-a-usb-stick-on-ubuntu>`_. Connect the USB drive to the Aero Board using a micro USB OTG cable. You may also want to use a USB hub to attach a keyboard and mouse to the Board. Then power up the Aero board and press escape while it boots up to enter the BIOS menu. Select the option to boot from your USB drive. Then follow `these instructions <https://www.ubuntu.com/download/desktop/install-ubuntu-desktop>`_ to install Ubuntu on the board.
+..
+..    b) `ROS - Kinetic <http://wiki.ros.org/kinetic/Installation/Ubuntu>`_ (install *ros-kinetic-desktop* package)
+..
+..    c) `OpenCV 2.4 <http://docs.opencv.org/2.4/doc/tutorials/introduction/linux_install/linux_install.html>`_ (for vision/video streaming APIs).
+..    d) Other dependencies - To install run the following commands in your terminal.
+..
+..    .. literalinclude:: include/flytos_dependency.sh
+..       :language: bash
+..
+.. .. 2. You have to update some kernel modules for video streaming to work properly. Run the following script as root or run each command with sudo permission.
+..
+.. ..    .. literalinclude:: include/kernel_module_update.sh
+.. ..       :language:  bash
+..
+.. 2. Before proceeding further, add the following lines at the end of your /etc/bash.bashrc file. To open the file for editing, run the following command the terminal ``sudo nano /etc/bash.bashrc`` and to save your edited file, press ``ctrl+o+ENTER`` and to exit press ``ctrl+x``.
+..
+..    .. code-block:: bash
+..
+..        source /opt/ros/kinetic/setup.bash
+..        export PYTHONPATH=$PYTHONPATH:/flyt/flytapps:/flyt/userapps
+..        source /flyt/flytos/flytcore/setup.bash
+..
+.. 3. Run the following additional command in your terminal:
+..
+..    .. code-block:: bash
+..
+..        sed -i 's#source /opt/ros/kinetic/setup.bash##g' ~/.bashrc
+..
+.. Installing debian package
+.. """""""""""""""""""""""""
+..
+.. .. note:: This step requires you to have a registered FlytBase Account. In case you don't have an account, :ref:`create a FlytBase Account<create_flytbase_account>` before you proceed.
+..
+.. 1. |my_flytbase_link| to your FlytBase Account.
+..
+.. .. |my_flytbase_link| raw:: html
+..
+..    <a href="https://my.flytbase.com" target="_blank">Login</a>
+..
+.. .. |flytos_dl_link| raw:: html
+..
+..    <a href="https://my.flytbase.com/FlytOS" target="_blank">FlytOS Debian Package</a>
+..
+.. 2. Download the hardware specific |flytos_dl_link| from your FlytBase Account.
+.. 3. Verify that the dependencies are installed. To install run the following commands in your terminal.
+..
+..    .. literalinclude:: include/flytos_dependency.sh
+..       :language: bash
+..
+.. 4. Once you have downloaded the Debian package, run the following command in your terminal to install FlytOS:
+..
+.. .. code-block:: bash
+..
+..    #make sure to provide absolute path of the debian package file: /home/flytpod/flyt*.deb
+..    $ sudo apt install -y <path to debian package location>/flyt*.deb
+..
+.. 5. Check for **Congratulations! FlytOS installation completed** message at the end.
+.. 6. Just in case you see any dependency issues cropping up in your screen while installing FlytOS, kindly run the following command and execute the previous command again:
+..
+.. .. code-block:: bash
+..
+..    $ sudo apt -f -y install
+..
 .. caution:: You must :ref:`activate your device<activate_flytos_aero>`, without which critical APIs would not function.
-
-
+..
+..
 
 .. **Security and Authentication**
 
@@ -105,17 +142,17 @@ Installing debian package
 
 
 .. 3. You will be directed to a page that shows a warning **Connection is not private**. FlytOS contains self signed SSL certificates to enable access over local network.
-   
-       
+
+
 ..    .. image:: /_static/Images/fOSinst1.png
 ..       :align: center
 .. 4. Bypass the warning by clicking Advanced> Proceed to localhost. Confirm adding an exception if prompted to do so.
 .. 5. Next you will be directed to FlytOS login page. Login using the default credentials provided to you.
-       
+
 ..    .. image:: /_static/Images/fOSinst2.png
 ..       :align: center
 .. 6. Once you have logged in you will see the list of standard apps along with other settings.
-       
+
 ..    .. image:: /_static/Images/fOSinst3.png
 ..       :align: center
 
@@ -125,8 +162,8 @@ Installing debian package
 
 
 .. **FlytAdmin for User Administration**
-   
-.. There is an inbuilt app FlytAdmin for user administration. Only ‘admin’ users have access to this app. The FlytOS admins of a device will be able to add, activate, edit, delete, deactivate users for that device using this app. The app provides views for Users and Roles. 
+
+.. There is an inbuilt app FlytAdmin for user administration. Only ‘admin’ users have access to this app. The FlytOS admins of a device will be able to add, activate, edit, delete, deactivate users for that device using this app. The app provides views for Users and Roles.
 
 .. .. image:: /_static/Images/fOSinst4.png
 ..    :align: center
@@ -146,8 +183,8 @@ You have to activate installed FlytOS, without which critical APIs would not fun
 
 1. Make sure your Aero Board has internet access before proceeding.
 2. :ref:`Launch FlytConsole <FlytConsole_launch>`. You can launch FlytConsole in your Aero's browser using the URL ``http://localhost/flytconsole`` or on your PC's browser using the URL ``http://ip-address-of-device/flytconsole`` . In FlytConsole click on **Activate Now tag** under **License tab** at bottom right corner. A pop-up will appear which will direct you to the device registration page. If you are not logged in, enter your FlytBase Account credentials to log in.
-3. Choose a device nick-name and select your compute engine. 
-4. In the license drop-down list, select existing license if available or select ‘Issue a new license’. You can also provide a nick-name for your license.  
+3. Choose a device nick-name and select your compute engine.
+4. In the license drop-down list, select existing license if available or select ‘Issue a new license’. You can also provide a nick-name for your license.
 5. Click on Save Changes to register device and generate a license key.
 6. Copy the generated license key and enter it in FlytConsole to complete the activation process of your device. The Activate Now tag at bottom right corner of FlytConsole should now turn green.
 
@@ -189,7 +226,7 @@ Next Step: :ref:`Supported Ground Control Stations<supported_GCS>`
 .. Getting started with FlytOS
 .. ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. * After completing the above steps, you can now attach various components of you drone to the pixhawk like ESCs, GPS, Radio and other payloads. 
+.. * After completing the above steps, you can now attach various components of you drone to the pixhawk like ESCs, GPS, Radio and other payloads.
 .. * Calibrate the drone's sensors, RC and ESCs in FlytConsole by following the instructions given on the :ref:`FlytConsole page<Motor_config>`.
 .. * You are now ready to try some sample FlytOS apps on your drone. A good starting point for beginners is the |github_link|. More documentation can be found in :ref:`Sample Apps section<onboard app>`. Please note, in order to run any onboard app in FlytOS, make sure that your drone is in Offboard/API mode.
 
