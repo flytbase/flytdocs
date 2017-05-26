@@ -7,21 +7,22 @@ Installing FlytOS dependencies in your custom image (Odroid-XU4)
 
 .. note:: Follow this step ONLY if you have chosen to NOT flash :ref:`FlytOS Linux Image <flashing_img_odroid>`.
 
-1. Please ensure you are running Linux - Ubuntu 16.04 before proceeding with installation. This guide assumes you already have a working image for your Flight Computer.
+1. Please ensure you are running Linux - Ubuntu 16.04 before proceeding with installation. This guide assumes you already have a working operating system on your Flight Computer.
+The following commands should be executed on your flight computer, you may either use an external display or ssh into your system.
 
-.. warning:: Please save and close all open applications before executing the script as your system shall reboot on installation.
+.. warning:: Please make sure you have a stable internet connection and save and close all open applications before executing the script as your system shall reboot on installation.
 
-2. Open terminal and run the following command
-
-   .. code-block:: bash
-
-       $ sudo bash -c 'wget -O - http://docs.flytbase.com/_static/Downloads/flytOS_installation.sh | bash -e'
-
-3. In case you get an error saying wget not found, please run the following command
+3. Open terminal and run the following command
 
    .. code-block:: bash
 
        $ sudo bash -c 'curl -sSL http://docs.flytbase.com/_static/Downloads/flytOS_installation.sh | bash -e'
+
+   In case you get an error saying curl command not found, please run the following command
+
+   .. code-block:: bash
+
+       $ sudo bash -c 'wget -O - http://docs.flytbase.com/_static/Downloads/flytOS_installation.sh | bash -e'
 
 4. Please enter your system password when prompted
 
@@ -30,7 +31,7 @@ Installing FlytOS dependencies in your custom image (Odroid-XU4)
 Troubleshooting
 ---------------
 
-* If you get an error while installation, please reboot and try again.
+* If the installation script throws an error, please reboot and try again.
 
 * If you get the error "Connection Timed Out":
   Please check your internet connection and run the script again.
@@ -41,7 +42,7 @@ Troubleshooting
 
       $ sudo dpkg --configure -a
 
-* If the above command does not work run the following to fix your packages before running the install script
+* If the above command does not work run the following to fix your packages before running the installation script
 
   .. code-block:: bash
 
