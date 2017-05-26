@@ -5,12 +5,14 @@
 # This script needs to be run as root.
 # --
 
+echo -e "\033[0;34mThis script shall install FlytOS and its dependencies. \nPlease note that your system shall reboot on successful installation.\033[0m" 
+
 echo Logging at $HOME/flytos_installation_log.txt
 
 exec > >(tee -i $HOME/flytos_installation_log.txt)
 exec 2>&1
 
-#Functions for setting up UART on Raspberry Pi
+#Function for setting up UART on Raspberry Pi
 set_config_var() {
   lua - "$1" "$2" "$3" <<EOF > "$3.bak"
 local key=assert(arg[1])
