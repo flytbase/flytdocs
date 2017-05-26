@@ -99,6 +99,7 @@ if [ $DEVICE == "TX1" ]; then
     sudo c_rehash /etc/ssl/certs
 fi
 
+#Check if rosdep has been initialized earlier
 ros_init_file="/etc/ros/rosdep/sources.list.d/20-default.list"
 
 if [ ! -f "$ros_init_file" ]; then
@@ -130,8 +131,8 @@ sed -i '/source \/opt\/ros\/kinetic\/setup.bash/d' /etc/bash.bashrc
 sed -i '/export PYTHONPATH=$PYTHONPATH:\/flyt\/flytapps:\/flyt\/userapps/d' /etc/bash.bashrc
 sed -i '/source \/flyt\/flytos\/flytcore\/setup.bash/d' /etc/bash.bashrc
 sed -i '/export CPATH=$CPATH:\/opt\/ros\/kinetic\/include/d' /etc/bash.bashrc
-sed -i '/alias launch_flytOS=sudo $(rospack find core_api)\/scripts\/launch_flytOS.sh/d' /etc/bash.bashrc
-sed -i '/alias stop_flytOS=sudo $(rospack find core_api)\/scripts\/stop_flytOS.sh/d' /etc/bash.bashrc
+sed -i '/alias launch_flytOS='\''sudo $(rospack find core_api)\/scripts\/launch_flytOS.sh'\''/d' /etc/bash.bashrc
+sed -i '/alias stop_flytOS='\''sudo $(rospack find core_api)\/scripts\/stop_flytOS.sh'\''/d' /etc/bash.bashrc
 
 #Add Sourcing
 echo "source /opt/ros/kinetic/setup.bash" >> /etc/bash.bashrc
@@ -140,9 +141,10 @@ echo "source /flyt/flytos/flytcore/setup.bash" >> /etc/bash.bashrc
 echo 'export CPATH=$CPATH:/opt/ros/kinetic/include' >> /etc/bash.bashrc
 
 #Alias for start and stop
-echo 'alias launch_flytOS=sudo $(rospack find core_api)/scripts/launch_flytOS.sh' >> /etc/bash.bashrc
-echo 'alias stop_flytOS=sudo $(rospack find core_api)/scripts/stop_flytOS.sh' >> /etc/bash.bashrc
+echo 'alias launch_flytOS='\''sudo $(rospack find core_api)/scripts/launch_flytOS.sh'\''' >> /etc/bash.bashrc
+echo 'alias stop_flytOS='\''sudo $(rospack find core_api)/scripts/stop_flytOS.sh'\''' >> /etc/bash.bashrc
 
+#Prevent clash in sourcing with local bashrc
 sed -i 's#source /opt/ros/kinetic/setup.bash##g' $HOME/.bashrc
 
 if [ $DEVICE == "TX1" ]; then
@@ -171,6 +173,10 @@ if [ $DEVICE == "Aero" ]; then
         fi
     fi
 elif [ $DEVICE == "ODROID" ]; then
+
+    #Enable Auto Login
+    sed -i "/autologin-user=$SUDO_USER/d" /usr/share/lightdm/lightdm.conf.d/60-lightdm-gtk-greeter.conf
+    echo "autologin-user=$SUDO_USER" >> /usr/share/lightdm/lightdm.conf.d/60-lightdm-gtk-greeter.conf
 
     wget -O $HOME/flytos.deb $(curl -sS https://my.flytbase.com/api/downloads/latest/ODROID-XU4/ | python -c "import sys, json; print json.load(sys.stdin)['link']") || (echo -e "\033[0;31m Unable to get flytos debian package. Are you connected to the internet? \033[0m" ; exit 1)
 
@@ -203,6 +209,10 @@ elif [ $DEVICE == "RPi" ]; then
     # Serial needs to be enabled from raspi-config as well, otherwise RPi may restart erratically.
     sed -i '/dtoverlay=pi3-disable-bt/d' /boot/config.txt
     echo 'dtoverlay=pi3-disable-bt' >> /boot/config.txt
+
+    #Enable Auto Login
+    sed -i "/autologin-user=$SUDO_USER/d" /usr/share/lightdm/lightdm.conf.d/60-lightdm-gtk-greeter.conf
+    echo "autologin-user=$SUDO_USER" >> /usr/share/lightdm/lightdm.conf.d/60-lightdm-gtk-greeter.conf
 
     wget -O $HOME/flytos.deb $(curl -sS https://my.flytbase.com/api/downloads/latest/Raspberry%20Pi%203/ | python -c "import sys, json; print json.load(sys.stdin)['link']") || (echo -e "\033[0;31m Unable to get flytos debian package. Are you connected to the internet? \033[0m" ; exit 1)
 
@@ -247,7 +257,7 @@ fi
 # In case there is an issue with installing flytos, second option
 apt-get install -y $HOME/flytos.deb || (apt-get -f -y install ; apt-get install -y $HOME/flytos.deb)
 
-echo "Your System Will Reboot Now"
+echo "Your System Will Reboot in 10 seconds"
 
 echo "Clearing Up Installation Files"
 
