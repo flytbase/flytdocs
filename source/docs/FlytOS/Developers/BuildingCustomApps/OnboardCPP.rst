@@ -8,26 +8,12 @@ Execute built-in Demo Apps
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 FlytOS comes with pre-installed Demo apps which can be executed to do simple navigation tasks. 
-All the sample applications can be found on our `github`_.
-
-.. Below is a demo `youtube video <https://www.youtube.com/watch?v=rKUt884XtNg>`_ about how to execute a built-in demo-app in FlytSim.
-
-.. ..  youtube:: rKUt884XtNg
-..     :aspect: 16:9
-..     :width: 100%
-
+All the sample applications can be found on our `github repository <https://github.com/flytbase/flytsamples>`_.
 
 Demo App 1
 ----------
 
 This demo app makes the drone takeoff, move in a square trajectory of side length 5m and land once the entire mission is over. 
-
-.. Below is a demo `youtube video <https://www.youtube.com/watch?v=z36zvRfn58U&feature=youtu.be>`_ of the same app when run on :ref:`FlytSim <about_flytsim>`.
-
-.. ..  youtube:: z36zvRfn58U
-..     :aspect: 16:9
-..     :width: 100%
-
 
 Below is a demo `youtube video <https://www.youtube.com/watch?v=lwKZXkzkM80>`_ of the same app when run on :ref:`FlytPOD <about_flytpod_pro>`.
 
@@ -232,10 +218,6 @@ Install custom app
 To install your app into /flyt/userapps/onboard_user/install space, so that your Android/Web App could execute it remotely, run this command in your terminal::
 
   $ sudo make install
-
-
-
-.. _github link: https://github.com/flytbase/flytsamples
 
 
 .. |br| raw:: html

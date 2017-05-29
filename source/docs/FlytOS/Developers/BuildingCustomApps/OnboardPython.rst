@@ -141,13 +141,13 @@ Execute custom app
 Install custom app
 ^^^^^^^^^^^^^^^^^^
 
-To install your app into /flyt/flytapps/onboard/install space, so that your Android/Web App could execute it remotely, make your python script executable::
+To install your app into /flyt/userapps/onboard_user/install space, so that your Android/Web App could execute it remotely, make your python script executable::
 
 	$ sudo chmod +x <my_first_python_app>.py
 
 and copy this script to mentioned location::
 
-	$ sudo cp <my_first_python_app>.py /flyt/flytapps/onboard/install/
+	$ sudo cp <my_first_python_app>.py /flyt/userapps/onboard_user/install
 
 
 .. _github link: https://github.com/flytbase/flytsamples
