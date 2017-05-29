@@ -44,6 +44,8 @@ if [[ $(sudo dpkg-query -l | grep "flytsim " | wc -l) = "0" ]]; then
   echo ""
 else
     dpkg -r flytsim
+    cp -r /flyt /flyt_bak
+    rm -rf /flyt
 fi
 
 #Check if FlytSim installed
