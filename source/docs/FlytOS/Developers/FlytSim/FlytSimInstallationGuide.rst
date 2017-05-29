@@ -3,66 +3,55 @@
 Installation Guide
 ==================
 
-FlytSim Dependencies
-^^^^^^^^^^^^^^^^^^^^
+1. Please ensure you are running Linux - Ubuntu 16.04 before proceeding with installation.
 
-1. Before you can start off with installing FlytSim, make sure you fulfill all the following dependencies.
+.. warning:: Please make sure you have a stable internet connection. Save and close all open applications before executing the script as your system shall reboot on installation.
 
-* Intel 64 bit architecture
-* `Linux - Ubuntu 16.04`_ (preferably **NOT** in a Virtual Machine environment)
-* `ROS - Kinetic`_ (install *ros-kinetic-desktop-full*)
-* `OpenCV 2.4`_ (for vision/video streaming APIs)
-* Gazebo7 (comes with ROS-Kinetic)
-* Other dependencies - To install run the following commands in your terminal.
-
-  .. literalinclude:: include/flytos_dependency.sh
-     :language: bash
-
-FlytSim requires Gazebo7 which comes pre-packaged with ROS Kinetic. If in case, you have a different version of Gazebo, please install Gazebo7 before moving ahead in this tutorial. Failing to install the right version can render the simulation inoperational. 
-
-2. Before proceeding further, add the following lines at the end of your /etc/bash.bashrc file. To open the file for editing, run the following command in the terminal ``sudo nano /etc/bash.bashrc`` and to save your edited file, press ``ctrl+o+ENTER`` and to exit press ``ctrl+x``.
+2. Open terminal and run the following command
 
    .. code-block:: bash
-   
-       source /opt/ros/kinetic/setup.bash
-       export PYTHONPATH=$PYTHONPATH:/flyt/flytapps:/flyt/userapps
-       source /flyt/flytos/flytcore/setup.bash
-       source /flyt/flytos/flytcore/share/sitl_gazebo/setup.sh
-       export CPATH=$CPATH:/opt/ros/kinetic/include
 
-3. Run the following additional command in your terminal:
+       $ sudo bash -c 'curl -sSL http://docs.flytbase.com/_static/Downloads/flytSim_installation.sh | bash -e'
+
+   In case you get an error saying curl: command not found, please run the following command
 
    .. code-block:: bash
-   
-       sed -i 's#source /opt/ros/kinetic/setup.bash##g' ~/.bashrc
 
-Install FlytSim
-^^^^^^^^^^^^^^^
+       $ sudo bash -c 'wget -O - http://docs.flytbase.com/_static/Downloads/flytSim_installation.sh | bash -e'
 
-.. note:: This step requires you to have a registered FlytBase Account. In case you don't have an account, :ref:`create a FlytBase Account<create_flytbase_account>` before you proceed. 
+3. Please enter your system password when prompted
 
-1. `Login <https://my.flytbase.com>`_ to your FlytBase Account.
-2. Download the `FlytSim Debian Package <https://my.flytbase.com/FlytOS>`_ from your FlytBase Account.
-3. Once you have downloaded the Debian package, run the following command in your terminal to install FlytSim: 
-   
-.. code-block:: bash
-   
-   #make sure to provide absolute path of the debian package file: /home/flytpod/flyt*.deb
-   $ sudo apt install -y <path to debian package location>/flyt*.deb 
-
-4. Check for **Congratulations! FlytSim installation completed** message at the end.
-5. Just in case you see any dependency issues cropping up in your screen while installing FlytSim, kindly run the following command and execute the previous command again:
-   
-.. code-block:: bash
-   
-   $ sudo apt -f -y install
+4. On successful installation you will get the message **Congratulations! FlytOS installation completed** and your system shall reboot.
 
 .. caution:: You must :ref:`activate your device<activate_flytsim>`, without which critical APIs will not function.
+
+
+Troubleshooting
+---------------
+
+* If the installation script throws an error, please reboot and try again.
+
+* If you get the error "Connection Timed Out":
+  Please check your internet connection and run the script again.
+
+* If the script is interrupted during execution, try running the following command before you execute the script again
+
+  .. code-block:: bash
+
+      $ sudo dpkg --configure -a
+
+* If the above command does not work, run the following to fix your packages before running the installation script
+
+  .. code-block:: bash
+
+      $ sudo apt-get upgrade --fix-broken
+
+
 
 .. _activate_flytsim:
 
 Activate FlytSim
-^^^^^^^^^^^^^^^^
+----------------
 
 .. note:: This step requires you to have a registered FlytBase Account. In case you don't have an account, :ref:`create a FlytBase Account<create_flytbase_account>` before you proceed.
 
@@ -78,7 +67,7 @@ You have to activate installed FlytSim, without which critical APIs will not fun
 
 
 Update FlytSim
-^^^^^^^^^^^^^^
+--------------
 
 FlytSim comes with automatic over-the-air update feature whenever it detects an updated version of FlytSim in our servers. To know more about automatic updates, click :ref:`here <flytos_updates>`.
 
