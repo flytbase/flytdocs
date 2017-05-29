@@ -1,7 +1,7 @@
 #!/bin/bash -e
 # --
 # Add -ex for Debugging
-# Script to install FlytOS dependencies and package.
+# Script to install FlytOS and its dependencies.
 # This script needs to be run as root.
 # --
 
