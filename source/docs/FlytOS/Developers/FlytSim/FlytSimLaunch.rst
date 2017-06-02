@@ -15,7 +15,7 @@ To launch FlytSim, run this command in the **new** terminal.
 
 	$ launch_flytSim
 
-.. caution:: If you get this error: ``Error: package 'core_api' not found``, try to launch FlytSim in new terminal.
+.. caution:: If you get this error: ``bash: launch_flytSim: command not found``, try to launch FlytSim in a new terminal.
 
 .. note:: For first time Gazebo users, Gazebo might take some time to launch. Be Patient!
 
