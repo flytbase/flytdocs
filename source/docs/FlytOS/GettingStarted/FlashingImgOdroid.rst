@@ -30,46 +30,46 @@ Image download
 3. Download size of the image is about 2.5 GBs.
 4. Check *MD5 Hash* to verify the integrity of downloaded file. Since it is a large file, the commands may take a few minutes to complete:
 
-   * **Linux**- launch a terminal and execute the following command 
-   
-     .. code-block:: bash
-      
-         $ md5sum <path-to-downloaded-image>/flyt*.img.gz
-   
-   * **Windows**- launch a command window and execute the following command 
+   * **Linux**- launch a terminal and execute the following command
 
      .. code-block:: bash
-      
+
+         $ md5sum <path-to-downloaded-image>/flyt*.img.gz
+
+   * **Windows**- launch a command window and execute the following command
+
+     .. code-block:: bash
+
          $ CertUtil -hashfile <path-to-downloaded-image>/flyt*.img.gz MD5
 
-   * **Mac OS**- launch a terminal and execute the following command 
-   
+   * **Mac OS**- launch a terminal and execute the following command
+
      .. code-block:: bash
-         
+
          $ md5 <path-to-downloaded-image>/flyt*.img.gz
 
 5. Compare the MD5 Hash generated to *MD5 Hash* mentioned in the |flytos_dl_link| download page.
 6. Uncompress/extract the downloaded image:
 
-   * **Linux**- launch a terminal and execute the following command 
-     
+   * **Linux**- launch a terminal and execute the following command
+
      .. code-block:: bash
-         
+
          gunzip <path-to-downloaded-image>/flyt*.img.gz
 
    * **Windows**- download and install 7-zip from `here <http://www.7-zip.org/download.html>`_. Extract downloaded image using 7-zip.
-   * **Mac OS**- launch a terminal and execute the following command 
-     
+   * **Mac OS**- launch a terminal and execute the following command
+
      .. code-block:: bash
-    
+
          gunzip <path-to-downloaded-image>/flyt*.img.gz
 
 7. Uncompressed size of image is about 11.5GBs.
-      
+
 Image write to SD/eMMC Card
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. 1. We recommend using a 32 GB SD Card, but a 16 GB card would work fine too. 
+.. 1. We recommend using a 32 GB SD Card, but a 16 GB card would work fine too.
 .. 2. Format the micro SD Card.
 .. 3. Follow `this <http://odroid.com/dokuwiki/doku.php?id=en:odroid_flashing_tools>`_ guide to install the image on ODROID-XU4’s SD/eMMC card.
 
@@ -99,7 +99,7 @@ To burn an image to your SD/eMMC card:
 
     .. image:: /_static/Images/etcher_tut_3.png
 
-Etcher will burn the image onto the SD/eMMC card and verify the image. Remove the SD card after you get the prompt.	
+Etcher will burn the image onto the SD/eMMC card and verify the image. Remove the SD card after you get the prompt.
 
 .. warning:: Since the image is of only around 11.5 GBs, the rest of the SD/eMMC Card would have unallocated memory. DO NOT forget to expand SD/eMMC card partition.
 
@@ -124,7 +124,7 @@ The image is around 11.5 GB in size, thus the rest of the SD Card would have una
 To extend your partition to cover your full SD card:
 
 * Run the following command from terminal
-  
+
   .. code-block:: bash
 
       $ sudo resize_flytimage
@@ -157,10 +157,10 @@ User Credentials
 ^^^^^^^^^^^^^^^^
 
 
-All FlytOS Linux Image versions have the same Login user credentials: 
+All FlytOS Linux Image versions have the same Login user credentials:
 
-| **username : flytpod**
-| **password : flytpod**
+| **username : flytos**
+| **password : flytos**
 
 :ref:`Go back to the installation guide <odroid_guide>`
 
