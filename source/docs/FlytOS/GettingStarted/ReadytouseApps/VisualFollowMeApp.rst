@@ -66,9 +66,10 @@ If you want to use OpenTLD based tracker then follow instruction given below to 
 * Clone FlytOpenTLD repo from `here <https://github.com/flytbase/flyt_open_tld_3d.git>`_.
 * It is a ROS project, so compile it using the 'catkin_make' command.
 * After compilation, source the repo using command 'source <path to repo>/devel/setup.bash'.
-* Launch OpenTLD using command 'roslaunch open_tld_3d open_tld_3d.launch global_namespace:=flytsim'.
+* Launch OpenTLD using command 'roslaunch open_tld_3d open_tld_3d.launch global_namespace:=<namespace>'.
 * Once launched, it will share data with FlytOS and will be accessible through the Follow Me web app.
-* To get more details on this project, visit `here <https://github.com/flytbase/flyt_open_tld_3d/tree/master/src>`_.
+* To get more details on this project, visit `here <https://github.com/flytbase/flyt_open_tld_3d>`_.
+* Note: This project depends on the ros pcl library and it needs to be installed on the device.
 
 Object Tracking Workflow
 ------------------------
