@@ -18,14 +18,14 @@ Android SDK
 
 An Android Studio project to get you started with building your native Android App using FlytAPIs. 
 
-:ref:`Learn more<flytsdks_android>`  |  `Download <https://downloads.flytbase.com/flytos/downloads/sdk/Flyt-Android-SDK.zip>`_
+:ref:`Learn more<flytsdks_android>`  |  `Download <https://downloads.flytbase.com/flytos/downloads/sdk/Flyt-Android-SDK.zip>`__
 
 Web SDK
 --------
 
 A web development kit to get you started with building your web app using FlytAPIs. 
 
-:ref:`Learn more<flytsdks_web>`   |  `Download <https://downloads.flytbase.com/flytos/downloads/sdk/Flyt_Web_SDK.zip>`_
+:ref:`Learn more<flytsdks_web>`   |  `Download <https://downloads.flytbase.com/flytos/downloads/sdk/Flyt_Web_SDK.zip>`__
 
 .. toctree::
    :maxdepth: 2

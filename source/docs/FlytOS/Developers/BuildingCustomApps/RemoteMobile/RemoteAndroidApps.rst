@@ -4,7 +4,7 @@
 Android App - Java (Android-Studio)
 ====================================
 
-* You can download FlytSDK android from `here <https://downloads.flytbase.com/flytos/downloads/sdk/Flyt-Android-SDK.zip>`_ and build your app using it.
+* You can download FlytSDK android from `here <https://downloads.flytbase.com/flytos/downloads/sdk/Flyt-Android-SDK.zip>`__ and build your app using it.
 
 
 .. figure:: /_static/Images/android-sdk.png
@@ -100,7 +100,7 @@ Sample Apps
 ^^^^^^^^^^^^^^^^^
 
 * This is a sample joystick app to control your drone like you would in a regular joystick. 
-* To try this app you can download the apk from `here <https://downloads.flytbase.com/flytos/downloads/apk/Flyt-Joystick-mode-1.apk>`_ or download the source code from `here <https://github.com/flytbase/flytsamples/tree/master/Mobile-Apps/Java-Apps/Joystick>`_.
+* To try this app you can download the apk from `here <https://downloads.flytbase.com/flytos/downloads/apk/Flyt-Joystick-mode-1.apk>`__ or download the source code from `here <https://github.com/flytbase/flytsamples/tree/master/Mobile-Apps/Java-Apps/Joystick>`__.
 
 * Once you have connected to your FlytOS device using the right URL, you will be redirected to the app screen.
 
@@ -124,7 +124,7 @@ Sample Apps
 ^^^^^^^^^^^^^^^^^^^^^^
 
 * This App allows the user to send the drone the its(mobile device running the app) GPS location on click of a button and make the drone follow you. 
-* To try this app you can download the apk from `here <https://downloads.flytbase.com/flytos/downloads/apk/Flyt-Follow-me.apk>`_ or download the source code from `here <https://github.com/flytbase/flytsamples/tree/master/Mobile-Apps/Java-Apps/Follow_me>`_.
+* To try this app you can download the apk from `here <https://downloads.flytbase.com/flytos/downloads/apk/Flyt-Follow-me.apk>`_ or download the source code from `here <https://github.com/flytbase/flytsamples/tree/master/Mobile-Apps/Java-Apps/Follow_me>`__.
 * Once you have connected to your FlytOS device using the right URL, you will be redirected to the app screen.  
 * The blue marker shows the location of the drone on the map.
 * The blue dot shows the mobile location of the mobile device.

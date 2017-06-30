@@ -21,7 +21,8 @@ How to use the app:
 
 * Launch the object tracking module (start button at top) and start the video stream.
 * Note: For older version of FlytOS, you may have to run this command:
-.. code-block:: c
+
+.. code-block:: bash
 
 		roslaunch vision_apps object_tracking.launch global_namespace:=<namespace>
 
@@ -38,14 +39,15 @@ Setting up and deep dive:
 -------------------------
 
 * This app requires a downward looking camera mounted on the drone. By default FlytOS automatically connects to any camera available at /dev/video0 when it is booting up. If you connected the camera after FlytOS was launched then launch the cam_api as shown below -
-.. code-block:: c
 
-		roslaunch vision_apps cam_api.launch
+.. code-block:: bash
+
+		$ roslaunch vision_apps cam_api.launch
 
 
 * In case you want to change the camera capture settings, edit following launch file -
 
-.. code-block:: c
+.. code-block:: bash
 
 		/flyt/flytos/flytcore/share/vision_apps/launch/cam_api.launch
 
@@ -63,7 +65,7 @@ OpenTLD Setup
 -------------
 If you want to use OpenTLD based tracker then follow instruction given below to run OpenTLD:
 
-* Clone FlytOpenTLD repo from `here <https://github.com/flytbase/flyt_open_tld_3d.git>`_.
+* Clone FlytOpenTLD repo from `here <https://github.com/flytbase/flyt_open_tld_3d.git>`__.
 * It is a ROS project, so compile it using the 'catkin_make' command.
 * After compilation, source the repo using command 'source <path to repo>/devel/setup.bash'.
 * Launch OpenTLD using command 'roslaunch open_tld_3d open_tld_3d.launch global_namespace:=flytsim'.

@@ -4,7 +4,7 @@ Onboard Python APP
 ==================
 
 
-Below is a demo `youtube video <https://www.youtube.com/watch?v=rKUt884XtNg>`_ describing how to execute a built-in demo-app in FlytSim.
+Below is a demo `youtube video <https://www.youtube.com/watch?v=rKUt884XtNg>`__ describing how to execute a built-in demo-app in FlytSim.
 
 ..  youtube:: rKUt884XtNg
     :aspect: 16:9

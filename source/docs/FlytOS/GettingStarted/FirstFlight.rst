@@ -61,7 +61,7 @@ Basic Flight
    a. Keep vehicle in MANUAL mode
    b. Wait for the RGB led to turn green.
    c. Arm the vehicle and takeoff manually.
-   d. If vehicle is not stabilized refer to gain tuning section `here <http://px4.io/docs/multicopter-pid-tuning-guide/>`_.
+   d. If vehicle is not stabilized refer to gain tuning section `here <http://px4.io/docs/multicopter-pid-tuning-guide/>`__.
    e. Switch to RC | POSCTL mode using RC switch. Without LIDAR or SONAR the height might drift within a meter.
    f. In this mode, throttle and roll/pitch stick should be at the center to hold drone at current location.
 
@@ -76,13 +76,13 @@ Basic Flight
 
 
 Test FlytOS
-^^^^^^^^^^^^
+^^^^^^^^^^^
 
 Make sure that you have successfully tested Offboard mode with FlytOS.
 
 Next step is to test a web/mobile app built on top of FlytOS APIs.
 
-1. Download Flyt Joystick android app from `here <https://flyt.blob.core.windows.net/flytos/downloads/apk/Flyt-Joystick.apk>`_ .
+1. Download Flyt Joystick android app from `here <https://flyt.blob.core.windows.net/flytos/downloads/apk/Flyt-Joystick.apk>`__ .
 2. Alternatively you can use joystick web app on your laptop. Download Flyt Joystick web app on your laptop from `here <https://minhaskamal.github.io/DownGit/#/home?url=https:%2F%2Fgithub.com%2Fflytbase%2Fflytsamples%2Ftree%2Fmaster%2FWebApps%2FFlyt_Joystick>`_ . Enter into the directory and open index.html into browser.
 3. Connect your mobile / laptop to same wifi network that your companion computer / FlytPOD is connected to.
 

@@ -15,7 +15,7 @@ Create a New Project
 
 * We have put together a `Web SDK <http://docs.flytbase.com/docs/FlytOS/Developers/FlytSDKs.html>`_ for Flytbase to help speed up the process of building your custom app
 
-* You can download the SDK `here <https://downloads.flytbase.com/flytos/downloads/sdk/Flyt_Web_SDK.zip>`_ and follow the `instructions <http://docs.flytbase.com/docs/FlytOS/Developers/FlytSDKs.html>`_ to get a “Hello World” app up and running.
+* You can download the SDK `here <https://downloads.flytbase.com/flytos/downloads/sdk/Flyt_Web_SDK.zip>`__ and follow the `instructions <http://docs.flytbase.com/docs/FlytOS/Developers/FlytSDKs.html>`_ to get a “Hello World” app up and running.
 * The SDK has a **URL** screen and websocket initialisation code pre-integrated. This helps to establish connection and access telemetry data which is required for all the apps
 * All your app specific UI components and JS code goes in app.html and app.js respectively.
 * Next step is to add specific UI components and respective socket or REST calls from the `API documentation <http://api.flytbase.com>`_ to the above mentioned files and you are good to go.
@@ -110,7 +110,10 @@ Here are the steps for a sample remote deployment using a simple flask dev serve
 
 
 * To start the server, run the following command on command line from within your app directory :
-python sampleapp.py
+
+.. code-block:: bash
+    
+   $ sudo python sampleapp.py
 
 * To view your app, open a browser and go to http://<URL of server>
 

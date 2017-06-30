@@ -7,17 +7,7 @@ FlytSim
 
 .. With latest addition of FlytSim as a Docker app, both PX4 as well as APM SITL has been incorporated within FlytSim. Users could now configure FlytSim to work with PX4/APM according to their need. :ref:`Know More <>`_.
 
-|br|
 
-.. toctree::
-   :maxdepth: 2
-   :hidden:
-   :caption: FlytSim
-   
-   ./FlytSim/FlytSimInstallationGuide.rst
-   ./FlytSim/FlytSimLaunch.rst
-   ./FlytSim/FlytSimTroubleshooting.rst
-   
 .. |br| raw:: html
 
    <br />

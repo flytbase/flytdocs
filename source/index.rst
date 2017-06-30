@@ -13,7 +13,7 @@ FlytBase is the next generation platform for commercial drone applications. It i
 
 **FlytOS** is based on Linux and ROS (Robot Operating System) making it an ideal platform for research and commercial drone applications. It can interact with any compatible drone/autopilot using its adapter layer and exposes high level FlytAPIs in ROS, CPP, Python, REST and Websocket. It makes it easy to integrate custom payload and also provides advanced APIs using its onboard modules. These rich set of APIs allow for easy development of onboard business logic as well as remote monitoring and control through web and mobile apps. The modular design of FlytOS allows for integration with external ROS/Linux libraries and custom data plumbing between onboard and offboard apps. The vision of FlytOS is to provide a standard language for the drone developers to talk to their drones.
 
-**FlytSIM** offers a 3D SITL(Software In The Loop) ROS-Gazebo based simulation environment for testing user apps without the drone hardware. Applications developed using FlytAPIs can be tested in FlytSim, before deploying on actual drones. This offers developers a pleasant drone application development experience, while keeping it safe, and saving them huge amount of time and effort.
+**FlytSIM** offers a SITL(Software In The Loop) simulation environment for testing user apps without the drone hardware. Applications developed using FlytAPIs can be tested in FlytSim, before deploying on actual drones. This offers developers a pleasant drone application development experience, while keeping it safe, and saving them huge amount of time and effort.
 
 **FlytSDKs** are web and mobile app development kits to give you a headstart in building your apps using FlytAPIs. FlytSDKs simplify development by providing pre-integrated client libraries, mechanism to connect to the drone and a complete sample project with REST and WebSocket calls. 
 
@@ -40,6 +40,14 @@ You can participate in our `forums`_ or `facebook`_ group discussions to interac
    docs/FlytOS/AdvancedTopics.rst
 
 .. toctree::
+   :maxdepth: 2
+   :hidden:
+   :caption: FlytSim
+   
+   docs/FlytSim/docker.rst
+   docs/FlytSim/native.rst
+   
+.. toctree::
     :maxdepth: 2
     :hidden:
     :caption: FlytConsole
@@ -58,15 +66,6 @@ You can participate in our `forums`_ or `facebook`_ group discussions to interac
     docs/FlytPOD/BeginnerGuide.rst
     docs/FlytPOD/RouterSetup.rst
 
-.. .. toctree::
-..    :maxdepth: 2
-..    :hidden:
-..    :caption: FlytSim
-   
-..    docs/FlytSim/FlytSim.rst
-..    docs/FlytSim/FlytSimInstallationGuide.rst
-..    docs/FlytSim/FlytSimLaunch.rst
-..    docs/FlytSim/FlytSimTroubleshooting.rst
 
 .. .. toctree::
 ..    :maxdepth: 2

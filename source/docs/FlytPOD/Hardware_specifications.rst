@@ -86,7 +86,7 @@ The LEDs on the right side of the IO panel, marked 1 and 2 are User-programmable
 7. Gimbal
 ^^^^^^^^^
 
-FlytPOD provides a dedicated 4 PWM output channels for your Gimbal with pins marked as 1, 2 and 3 are Roll, Pitch and Yaw respectively. To control your gimbal using FlytAPIs, click `here <http://api.flytbase.com/#gimbal-control>`_.
+FlytPOD provides a dedicated 4 PWM output channels for your Gimbal with pins marked as 1, 2 and 3 are Roll, Pitch and Yaw respectively. To control your gimbal using FlytAPIs, click `here <http://api.flytbase.com/#gimbal-control>`__.
 
 
 8. Safety and Buzzer
@@ -213,7 +213,7 @@ Multicopters
 
 Following image shows the motors numbered on various platforms according to their position. Plug-in the signal cable from the corresponding ESC in exactly the same PWM output channel. e.g. Motor 3 on your platform should be connected to PWM out 3 channel.
 
-Click `here <http://pixhawk.org/platforms/multicopters/start>`_ for more information on Multicopters.
+Click `here <http://pixhawk.org/platforms/multicopters/start>`__ for more information on Multicopters.
 
 
 
@@ -225,13 +225,13 @@ Click `here <http://pixhawk.org/platforms/multicopters/start>`_ for more informa
 Fixed Wing
 """"""""""
 
-Click `here <https://pixhawk.org/platforms/planes/start>`_ for information on Fixed Wing.
+Click `here <https://pixhawk.org/platforms/planes/start>`__ for information on Fixed Wing.
 
 
 VTOL
 """"
 
-Click `here <https://pixhawk.org/platforms/vtol/start>`_ for information on VTOL.
+Click `here <https://pixhawk.org/platforms/vtol/start>`__ for information on VTOL.
 
 
 .. _RC_Receiver:

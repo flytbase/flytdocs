@@ -53,13 +53,13 @@ Troubleshooting
 Activate FlytSim
 ----------------
 
-.. note:: This step requires you to have a registered FlytBase Account. In case you don't have an account, :ref:`create a FlytBase Account<create_flytbase_account>` before you proceed.
+.. note:: This step requires you to have a registered FlytBase Account. In case you don't have an account, `create a FlytBase Account <http://docs.flytbase.com/docs/FlytOS/GettingStarted/SignUp.html>`_ before you proceed.
 
 You have to activate installed FlytSim, without which critical APIs will not function.
 
 1. Make sure your machine has internet access before proceeding.
 2. :ref:`Launch FlytSim <launch flytsim>` and ignore warnings thrown in the terminal for license not being activated.
-3. :ref:`Launch FlytConsole <FlytConsole_launch>`. You can launch FlytConsole in your browser using the URL ``http://localhost/flytconsole`` or on some other PC's browser using the URL ``http://ip-address-of-device/flytconsole``. In FlytConsole click on **Activate Now tag** under **License tab** at bottom right corner. A pop-up will appear which will direct you to the device registration page. If you are not logged in, enter your FlytBase Account credentials to log in. 
+3. `Launch FlytConsole <http://localhost/flytconsole>`_. You can launch FlytConsole in your browser using the URL ``http://localhost/flytconsole`` or on some other PC's browser using the URL ``http://ip-address-of-device/flytconsole``. In FlytConsole click on **Activate Now tag** under **License tab** at bottom right corner. A pop-up will appear which will direct you to the device registration page. If you are not logged in, enter your FlytBase Account credentials to log in.
 4. Choose a device nick-name and select your compute engine. 
 5. In the license drop-down list, select existing license if available or select ‘Issue a new license’. You can also provide a nick-name for your license.  
 6. Click on Save Changes to register device and generate a license key.
@@ -69,8 +69,5 @@ You have to activate installed FlytSim, without which critical APIs will not fun
 Update FlytSim
 --------------
 
-FlytSim comes with automatic over-the-air update feature whenever it detects an updated version of FlytSim in our servers. To know more about automatic updates, click :ref:`here <flytos_updates>`.
+FlytSim comes with automatic over-the-air update feature whenever it detects an updated version of FlytSim in our servers. To know more about automatic updates, click `here <http://docs.flytbase.com/docs/FlytOS/GettingStarted/FlytOSUpdate.html>`__.
 
-.. _Linux - Ubuntu 16.04: https://wiki.ubuntu.com/XenialXerus/ReleaseNotes
-.. _ROS - Kinetic: http://wiki.ros.org/kinetic/Installation/Ubuntu
-.. _OpenCV 2.4: http://docs.opencv.org/2.4/doc/tutorials/introduction/linux_install/linux_install.html
