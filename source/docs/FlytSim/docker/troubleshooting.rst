@@ -26,7 +26,7 @@ How to get my FlytSIM version?
 For docker running on Windows/Mac, how much CPU and RAM should I allocate to Docker?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-FlytSim with its **default configuration(APM-SITL)** is very light weight and allocating 2GB RAM and 4 CPUs should be just fine.
+FlytSim with its **default configuration (APM-SITL)** is very light weight and allocating 2GB RAM and 4 CPUs should be just fine.
  
 FlytSim if configured to use **PX4-SITL** is quite computationally heavy. You can allocate 2GB RAM for Docker. For CPU, you could begin with allocating 4CPUs, but since it depends on your device's CPU power, the number may vary for different machines. FlytSim is a very power intensive application, and it won't function correctly if not allotted enough resources. To know whether FlytSim is not getting deprived of resources, try opening a shell inside the container using *openshell* script. Once inside run this command:
  
@@ -65,7 +65,7 @@ Make sure the value of your *Factor* is above 0.70 all the time, for smooth func
  
 |br|
  
-I use PX4 firmware on my drone, and would like to use its simulator. How to configure FlytSim to run PX4-SITL instead of its default(APM-SITL)?
+I use PX4 firmware on my drone, and would like to use its simulator. How to configure FlytSim to run PX4-SITL instead of its default (APM-SITL)?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To configure FlytSim to launch PX4 simulator, start the FlytSim simulator. Open **flytconsole**, and click top-right corner setup button. It would open a config window, go to Sim Settings tab, and select PX4 as *sim pilot*. You could configure other FlytSim settings as well.

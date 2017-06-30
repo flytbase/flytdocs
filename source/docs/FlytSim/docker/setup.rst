@@ -5,14 +5,14 @@ Setup
 
 These instructions will get FlytSim up and running on your local machine for development and testing of your apps.
  
-Before moving ahead with FlytSim setup, download(.zip file) the latest stable release from our `release page <https://github.com/flytbase/flytsim-docker/releases/latest>`_ and unzip it to your preferable location.
+Before moving ahead with FlytSim setup, download (.zip file) the latest stable release from our `release page <https://github.com/flytbase/flytsim-docker/releases/latest>`_ and unzip it to your preferable location.
 
 .. _flytsim_setup_linux:
 
 Linux
 ----- 
 
-**FlytSim in its default configuration runs a headless(no-GUI) APM-SITL.** It is computationally light weight and should suit most of your simulation requirements. If your use-case doesn’t need a 3D Gazebo based GUI, please continue to Intel GPU section and don’t pay heed to any warning.
+**FlytSim in its default configuration runs a headless (no-GUI) APM-SITL.** It is computationally light weight and should suit most of your simulation requirements. If your use-case doesn’t need a 3D Gazebo based GUI, please continue to Intel GPU section and don’t pay heed to any warning.
  
 **FlytSim when configured as PX4-SITL, runs on top of Gazebo, which means it not only simulates the drone but also provides a GUI** of the drone along with its environment. For this, docker container running FlytSim needs access to your machine's GPU libraries. For now we only support Intel and Nvidia graphics card powered devices. In future we may add support for AMD too. AMD users could try going through the steps provided for Intel users, in case they have switchable graphics with Intel.
  
@@ -104,7 +104,7 @@ Windows
 Docker-for-Windows
 ^^^^^^^^^^^^^^^^^^
 
-1. Make sure you have installed Docker and it is running. (It would be visible in your system's tray icon). An easy test for that would be to start a sample docker app. Run the following command in command prompt or powershell.
+1. Make sure you have installed Docker and it is running (It would be visible in your system's tray icon). An easy test for that would be to start a sample docker app. Run the following command in command prompt or powershell.
 
    .. code-block:: bash
     
