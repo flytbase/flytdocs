@@ -52,9 +52,9 @@ Intel GPU
     
        $ sudo ./start.sh
 
-.. Note:: Since, FlytSim is running in its default configuration, **you won’t get to see any Gazebo environment**. To shift it to Gazebo based PX4-SITL mode, visit our <rework> :ref: FAQ section.
+.. Note:: Since, FlytSim is running in its default configuration, **you won’t get to see any Gazebo environment**. To shift it to Gazebo based PX4-SITL mode, visit our :ref:`FAQ section <flytsim_faq1>`.
  
-6. Wait for around 30-40secs after triggering the above script, for Flytconsole to open up in your browser and if it still doesn’t then try `opening it manually <http://localhost/flytconsole>`_. Check for a valid **Connected** status in FlytConsole. **If you don’t get a positive Connected status, check your terminal for any critical error.** If yes, then look at our <rework>:ref:Troubleshooting guide for a possible solution or post your query on our `Forum <http://forums.flytbase.com/>`_ or `Gitter Channel <https://gitter.im/FlytBASE/FlytOS>`_.
+6. Wait for around 30-40secs after triggering the above script, for Flytconsole to open up in your browser and if it still doesn’t then try `opening it manually <http://localhost/flytconsole>`_. Check for a valid **Connected** status in FlytConsole. **If you don’t get a positive Connected status, check your terminal for any critical error.** If yes, then look at our :ref:`Troubleshooting guide <flytsim_troubleshooting>` for a possible solution or post your query on our `Forum <http://forums.flytbase.com/>`_ or `Gitter Channel <https://gitter.im/FlytBASE/FlytOS>`_.
 
 Nvidia GPU
 ^^^^^^^^^^
@@ -69,7 +69,7 @@ Nvidia GPU
     
        $ cd linux/nvidiagraphics
 
-3. Make sure you have installed proprietary Nvidia driver > 340.29. Visit our <rework>:ref:FAQ section to find how to install Nvidia driver.
+3. Make sure you have installed proprietary Nvidia driver > 340.29. Visit our :ref:`FAQ section <flytsim_faq10>` to find how to install Nvidia driver.
 4. If you are running Ubuntu, execute the **setup.sh** script with **sudo** permission, which would install `docker <https://docs.docker.com/engine/installation/>`_, `docker-compose <https://docs.docker.com/compose/install/>`_, `nvidia-docker <https://github.com/NVIDIA/nvidia-docker>`_ and `nvidia-docker-compose <https://github.com/eywalker/nvidia-docker-compose>`_ on your machine. In case you are using any *other flavour of Linux*, please install them manually by following their individual guides from `Docker installation guide <https://docs.docker.com/engine/installation/#supported-platforms>`_.
  
    .. code-block:: bash
@@ -94,9 +94,9 @@ Nvidia GPU
     
        $ sudo ./start.sh
 
-.. Note:: Since, FlytSim is running in its default configuration, **you won’t get to see any Gazebo environment**. To shift it to Gazebo based PX4-SITL mode, visit our <rework> :ref: FAQ section. 
+.. Note:: Since, FlytSim is running in its default configuration, **you won’t get to see any Gazebo environment**. To shift it to Gazebo based PX4-SITL mode, visit our :ref:`FAQ section <flytsim_faq1>`. 
  
-6. Wait for around 30-40secs after triggering the above script, for Flytconsole to open up in your browser and if it still doesn’t then try `opening it manually <http://localhost/flytconsole>`_. Check for a valid **Connected** status in FlytConsole. **If you don’t get a positive Connected status, check your terminal for any critical error**. If yes, then look at our <rework>:ref:Troubleshooting guide for a possible solution or post your query on our `Forum <http://forums.flytbase.com/>`_ or `Gitter Channel <https://gitter.im/FlytBASE/FlytOS>`_.
+6. Wait for around 30-40secs after triggering the above script, for Flytconsole to open up in your browser and if it still doesn’t then try `opening it manually <http://localhost/flytconsole>`_. Check for a valid **Connected** status in FlytConsole. **If you don’t get a positive Connected status, check your terminal for any critical error**. If yes, then look at our :ref:`Troubleshooting guide <flytsim_troubleshooting>` for a possible solution or post your query on our `Forum <http://forums.flytbase.com/>`_ or `Gitter Channel <https://gitter.im/FlytBASE/FlytOS>`_.
 
 Windows
 -------
@@ -120,11 +120,11 @@ Docker-for-Windows
  
 3. Get inside *Windows* directory, and open **setup.ps1** with Windows PowerShell application. You might have to unblock the file, by opening up its properties. This setup would install `Xming x-server <http://www.straightrunning.com/XmingNotes/>`_ for rendering FlytSim's GUI.
  
-3. Start your FlytSim session by opening **start.ps1** script with Windows Powershell application. This script would start a docker container running FlytSim app and also open a tab in your browser pointing to http://localhost/flytconsole, once it detects a successful launch.
+4. Start your FlytSim session by opening **start.ps1** script with Windows Powershell application. This script would start a docker container running FlytSim app and also open a tab in your browser pointing to http://localhost/flytconsole, once it detects a successful launch.
  
-.. Note:: Since, FlytSim is running in its default configuration, **you won’t get to see any Gazebo environment**. To shift it to Gazebo based PX4-SITL mode, visit our <rework> :ref: FAQ section. 
+.. Note:: Since, FlytSim is running in its default configuration, **you won’t get to see any Gazebo environment**. To shift it to Gazebo based PX4-SITL mode, visit our :ref:`FAQ section <flytsim_faq1>`. 
  
-5. Wait for around 30-40secs after triggering the above script, for Flytconsole to open up in your browser and if it still doesn’t then try `opening it manually <http://localhost/flytconsole>`_. Check for a valid **Connected** status in FlytConsole. **If you don’t get a positive Connected status, check your terminal for any critical error**. If yes, then look at our <rework>:ref:Troubleshooting guide for a possible solution or post your query on our `Forum <http://forums.flytbase.com/>`_ or `Gitter Channel <https://gitter.im/FlytBASE/FlytOS>`_.
+5. Wait for around 30-40secs after triggering the above script, for Flytconsole to open up in your browser and if it still doesn’t then try `opening it manually <http://localhost/flytconsole>`_. Check for a valid **Connected** status in FlytConsole. **If you don’t get a positive Connected status, check your terminal for any critical error**. If yes, then look at our :ref:`Troubleshooting guide <flytsim_troubleshooting>` for a possible solution or post your query on our `Forum <http://forums.flytbase.com/>`_ or `Gitter Channel <https://gitter.im/FlytBASE/FlytOS>`_.
  
  
 Docker Toolbox for Windows [Unsupported]
@@ -160,7 +160,7 @@ Docker-for-Mac
 
 .. Warning:: As mentioned before, in MacOS, you won’t get to see any 3D GUI Gazebo environment. If you are keen on having 3D GUI Gazebo based environment, then please use Linux or Windows.
  
-5. Wait for around 30-40secs after triggering the above script, for Flytconsole to open up in your browser and if it still doesn’t then try `opening it manually <http://localhost/flytconsole>`_. Check for a valid **Connected** status in FlytConsole. **If you don’t get a positive Connected status, check your terminal for any critical error**. If yes, then look at our <rework>:ref:Troubleshooting guide for a possible solution or post your query on our `Forum <http://forums.flytbase.com/>`_ or `Gitter Channel <https://gitter.im/FlytBASE/FlytOS>`_.
+5. Wait for around 30-40secs after triggering the above script, for Flytconsole to open up in your browser and if it still doesn’t then try `opening it manually <http://localhost/flytconsole>`_. Check for a valid **Connected** status in FlytConsole. **If you don’t get a positive Connected status, check your terminal for any critical error**. If yes, then look at our :ref:`Troubleshooting guide <flytsim_troubleshooting>` for a possible solution or post your query on our `Forum <http://forums.flytbase.com/>`_ or `Gitter Channel <https://gitter.im/FlytBASE/FlytOS>`_.
 
 Docker Toolbox for Mac [Unsupported]
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

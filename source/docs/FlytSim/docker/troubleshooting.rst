@@ -118,7 +118,9 @@ My device has Nvidia GPU alongside Intel GPU. How do I know, which graphics card
 If you want APM-SITL, you don't need to worry about it, and go ahead with Intel GPU steps. For PX4-SITL, there are many ways to find this out. If you are using Ubuntu, go to System Settings -> Details look for Graphics Card details. You can also install `glxinfo` and run the command: `glxinfo | grep OpenGL` to view the GPU being used.
  
 |br|
- 
+
+.. _flytsim_faq10:
+
 How do I install Nvidia proprietary drivers for my Linux OS?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
  
