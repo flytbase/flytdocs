@@ -6,7 +6,7 @@ Prerequisites
 Linux
 -----
 
-Follow the `Docker installation guide <https://docs.docker.com/engine/installation/#supported-platforms>`_ and make sure your flavour of Linux is supported by Docker. If you are running anything apart from Ubuntu, please follow the above guide and install docker in your machine. For Ubuntu users, we have an installation script which would take care of it, details of which are in :ref:`setup <flytsim_setup_linux>` section. It is preferable if you use Ubuntu 14.04 or above.
+Visit the `Docker installation guide <https://docs.docker.com/engine/installation/#supported-platforms>`_ and make sure your flavour of Linux is supported by Docker. If you are running anything apart from Ubuntu, please follow the above guide and install docker in your machine. **For Ubuntu users, we have an installation script**, details of which are in :ref:`setup <flytsim_setup_linux>` section. It is preferable if you use Ubuntu 14.04 or above.
  
 Windows
 -------

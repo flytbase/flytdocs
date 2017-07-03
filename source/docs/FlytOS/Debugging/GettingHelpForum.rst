@@ -33,7 +33,7 @@ You can also see the FlytOS version in FlytConsole in the top right.
 FlytOS Run Log
 """"""""""""""
 
-Many errors can be caught in the FlytOS startup log itself. To capture the log, open a terminal in your Flight Computer. You can get terminal access either by attaching an HDMI monitor to your Flight Computer or SSHing into it. Stop and start FlytOS by typing the following two commands respectively:
+Many errors can be caught in the FlytOS run log itself. To capture the log, open a terminal in your Flight Computer. You can get terminal access either by attaching an HDMI monitor to your Flight Computer or SSHing into it. Stop and start FlytOS by typing the following two commands respectively:
 
 .. code-block:: bash
     

@@ -3,8 +3,8 @@
 Supported GCS
 =============
 
-For APM users
--------------
+APM-SITL
+--------
 
 FlytConsole
 ^^^^^^^^^^^
@@ -39,8 +39,8 @@ APM Planner/Mission Planner
 4. Create a new *TCP Comm Link* in the app, with *Host Address* as IP Address of your flight computer and *TCP Port* as 5760.
 5. Once done, press the *connect* button and the app will now connect to FlytSim.
 
-For PX4 users
--------------
+PX4-SITL
+--------
 
 FlytConsole
 ^^^^^^^^^^^
