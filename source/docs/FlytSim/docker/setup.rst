@@ -42,7 +42,7 @@ Intel GPU
 
    If everything is working fine, you should get the following output.
 
-   .. image:: /_static/Images/intel_test.png
+   .. image:: /_static/Images/docker_test.png
 
 |br|
 
@@ -84,7 +84,7 @@ Nvidia GPU
 
    If everything is working fine, you should get the following output.
 
-   .. image:: /_static/Images/intel_test.png
+   .. image:: /_static/Images/docker_test.png
 
 |br|
 
@@ -112,7 +112,7 @@ Docker-for-Windows
 
    If everything is working fine, you should get the following output.
 
-   .. image:: /_static/Images/intel_test.png
+   .. image:: /_static/Images/docker_test.png
 
 |br|
 
@@ -144,6 +144,10 @@ Docker-for-Mac
     
        $ docker run hello-world
 
+   If everything is working fine, you should get the following output.
+
+   .. image:: /_static/Images/docker_test.png
+   
 2. Open a new terminal, and go to the directory where you have unzipped our latest release. If you haven’t yet downloaded it then please download from our `release page <https://github.com/flytbase/flytsim-docker/releases/latest>`_.
  
 3. In the above terminal, get inside folder named *mac*.

@@ -91,8 +91,8 @@ Make sure the value of your *Factor* is above 0.70 all the time, for smooth func
  
 |br|
  
-Why does my drone crashes after takeoff?
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Why does my drone crash after takeoff?
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Typically, this happens when your CPU is not powerful enough to handle FlytSim's computational requirements. If you are running Docker for Windows/Mac, increase CPU and RAM allocated to docker. If you have configured FlytSim to run **PX4-SITL**, open a shell inside the container using *openshell* script. Once inside run this command:
  
