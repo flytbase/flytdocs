@@ -3,7 +3,7 @@
 FlytSim Docker
 ==============
 
-.. warning:: [WIP] This product is not LIVE yet.
+.. .. warning:: [WIP] This product is not LIVE yet.
 
 **FlytSim** offers **SITL (Software In The Loop)** simulation environment for testing user apps without the drone hardware. FlytSim simulates the drone and its world, programmatically generating the state variables, while the control algorithms applied are same as onboard the drone. The **FlytAPIs** are also available in FlytSim and thus the user apps built with these APIs can be tested on any computer running FlytSim.
  
