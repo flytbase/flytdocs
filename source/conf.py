@@ -51,7 +51,7 @@ html_theme_options = {
     # "google_analytics_account": "my_ga_account",
 
     # # Path to a touch icon
-    "touch_icon": "_static/FlytLogos/apple-icon-144x144",
+    "touch_icon": "FlytLogos/apple-icon-144x144.png",
 
     # # Specify a base_url used to generate sitemap.xml links. If not
     # # specified, then no sitemap will be built.

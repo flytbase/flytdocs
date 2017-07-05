@@ -82,10 +82,9 @@ Make sure that you have successfully tested Offboard mode with FlytOS.
 
 Next step is to test a web/mobile app built on top of FlytOS APIs.
 
-1. Download Flyt Joystick android app from `here <https://flyt.blob.core.windows.net/flytos/downloads/apk/Flyt-Joystick.apk>`__ .
-2. Alternatively you can use joystick web app on your laptop. Download Flyt Joystick web app on your laptop from `here <https://minhaskamal.github.io/DownGit/#/home?url=https:%2F%2Fgithub.com%2Fflytbase%2Fflytsamples%2Ftree%2Fmaster%2FWebApps%2FFlyt_Joystick>`_ . Enter into the directory and open index.html into browser.
+1. Download Flyt Joystick android app from `here <https://downloads.flytbase.com/flytos/downloads/apk/Flyt-Joystick-mode-1.apk>`__.
+2. Alternatively you can use joystik web app on your laptop. Download Flyt Joystick web app on your laptop from `here <https://downloads.flytbase.com/flytos/downloads/webApps/Joystick.zip>`_. Enter into the directory and open index.html into browser.
 3. Connect your mobile / laptop to same wifi network that your companion computer / FlytPOD is connected to.
-
 
 .. image:: /_static/Images/app-login-screen.png
   :align: center
@@ -107,3 +106,5 @@ Next step is to test a web/mobile app built on top of FlytOS APIs.
 13. This time take-off with app and move the drone around and then land.
 14. If you are here then you have succefully integrated FlytOS with your drone.
 15. Welcome onboard! Go ahead and check out some cool built in apps for your drone.
+
+.. warning:: Turn-left and turn-right function is not supported in APM

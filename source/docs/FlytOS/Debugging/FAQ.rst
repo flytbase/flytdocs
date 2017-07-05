@@ -52,6 +52,8 @@ Also make sure you DO NOT have any of the above lines in the ``~/.bashrc`` file.
 
 **Need to change the baudrate/port of Flight Control Unit(Pixhawk)**
 
+From v1.3-5, FlytOS now autodetects serial connection to autopilot in ports: ``'/dev/ttyUSB0','/dev/ttyUSB1','/dev/ttyACM0','/dev/ttyACM1','/dev/ttySAC0','/dev/ttySAC1','/dev/ttyAMA0','/dev/ttyAMA1','/dev/ttyTHS1','/dev/ttyTHS2','/dev/ttyMFD1','udp://0.0.0.0:14550@:14555'`` with baudrate: ``921600, 57600, 115200``.
+
 To use your FCU/Pixhawk on another port, open the following file on your Companion Computer: ``/flyt/flytos/flytcore/share/core_api/launch/core_api_autopilot.launch``  and edit the the line starting with ``<arg name="fcu_url" value`` appropriately. For e.g.  If you want to use a USB to UART module to connect to Pixhawk's TELEM2 and your module shows up as /dev/ttyUSB0 on your Companion Computer and Pixhawk's baudrate is 921600. Edit the above line to be: ``<arg name="fcu_url" value="/dev/ttyUSB0:921600" />``.
 
 |br|
