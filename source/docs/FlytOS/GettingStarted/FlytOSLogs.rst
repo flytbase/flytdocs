@@ -21,7 +21,7 @@ Startup Logs
 
 * The startup log contains a lot of important startup related events including any errors in updates or installation.
 
-* Viewing startup logs in browser helps debug any startup realated issues in real time.
+* Viewing startup logs in browser helps debug any startup related issues in real time.
 
 * You may view the current log as it is being generated as well as logs from previous instances of FlytOS.
 
@@ -57,7 +57,7 @@ Autopilot Logs
 
 .. note:: Downloading logs from autopilot is significantly faster when the autopilot is connected to SBC through USB as compared to telemetry.
 
-* Successfully downloaded autopilot logs will be automatically upoaded to cloud. They can be accessed and downloaded through your account at |my_flytbase_link|.
+* Successfully downloaded autopilot logs will be automatically uploaded to cloud. They can be accessed and downloaded through your account at |my_flytbase_link|.
 
 |br|
 
