@@ -7,7 +7,7 @@ Joystick App
 2. Alternatively you can use joystik web app on your laptop. Download Flyt Joystick web app on your laptop from `here <https://downloads.flytbase.com/flytos/downloads/webApps/Joystick.zip>`_. Enter into the directory and open index.html into browser.
 3. Connect your mobile / laptop to same wifi network that your companion computer / FlytPOD is connected to.
 
-.. image:: /_static/Images/app-login-screen.png
+.. image:: /_static/Images/app-login-screen.jpg
   :align: center
 
 4. Enter IP address of the companion computer / FlytPOD in the app and click connect.
@@ -15,7 +15,7 @@ Joystick App
 6. Now the Joystik app should have the control.
 7. Give the drone take-off command using the takeoff button. Try moving the drone using buttons on app.
 
-.. image:: /_static/Images/app-screen.png
+.. image:: /_static/Images/app-screen.jpg
   :align: center
 
 8. The left joystick gives the drone commands to move up, down, turn-left and turn-right.
