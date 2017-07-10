@@ -55,13 +55,13 @@ html_theme_options = {
 
     # # Specify a base_url used to generate sitemap.xml links. If not
     # # specified, then no sitemap will be built.
-    "base_url": "http://docs.flytbase.com",
+    "base_url": "http://docs.flytbase.com/",
 
     # # Allow a separate homepage from the master_doc
     # "homepage": "index",
 
     # # Allow the project link to be overriden to a custom URL.
-    "projectlink": "http://docs.flytbase.com"
+    "projectlink": "http://docs.flytbase.com/"
 }
 
 # If false, no index is generated.
