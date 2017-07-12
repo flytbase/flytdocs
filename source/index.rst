@@ -19,6 +19,8 @@ FlytBase is the next generation platform for commercial drone applications. It i
 
 **FlytPOD/PRO** is an integrated flight computer stack with a hybrid architecture, consisting of a STM32 microcontroller based autopilot tightly coupled with ODROID-XU4 SBC (single board computer). It also has a powerful WiFi router running OpenWRT firmware and several interfaces for custom payloads, radio receivers and special sensors. It comes with PX4 flight stack and FlytOS preloaded for an out-of-the-box ready-to-fly experience.
 
+**FlytBase Cloud** is industry’s first Drone-API As A Service. It provides APIs for real-time secure access to drone navigation, payload and telemetry over 4G/LTE. It also provides easy integration with variety of 3rd party apps to help developers create custom workflows to suit different business needs. 
+
 This documentation gives all the inputs to get you started with FlytBase. You can learn about FlytOS and get a detailed reference for all the |api_link|. It provides a step by step guide to install and get started with drone application development. You can refer to the sample apps and start building your own onboard and web/mobile apps.
 
 .. |api_link| raw:: html
@@ -66,6 +68,12 @@ You can participate in our `forums`_ or `facebook`_ group discussions to interac
     docs/FlytPOD/BeginnerGuide.rst
     docs/FlytPOD/RouterSetup.rst
 
+.. toctree::
+    :maxdepth: 2
+    :hidden:
+    :caption: FlytBase Cloud
+    
+    docs/FlytBase_Cloud/About_FlytBase_Cloud.rst
 
 .. .. toctree::
 ..    :maxdepth: 2
