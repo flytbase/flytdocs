@@ -32,7 +32,30 @@ Enable the access status of the devices on which you want to use the Cloud APIs,
 
 .. note:: It is recommended to first test the Cloud APIs on the `Cloud Simulator <Cloud_Simulator.html>`_ device before you fly.
 
-3. Ready to Test:
+3. Enable Cloud Client
+^^^^^^^^^^^^^^^^^^^^^^
+
+Open FlytConsole on the device on which you wish to run cloud APIs.
+
+.. figure:: /_static/Images/flytos_console.png
+	:align: center 
+	:scale: 50 %
+
+Press the settings button, as shown in the image
+
+.. figure:: /_static/Images/flytconsole.png
+	:align: center 
+	:scale: 50 %
+
+Check the cloud client check box to enable cloud APIs.
+
+.. figure:: /_static/Images/enable_cloud_client.png
+	:align: center 
+	:scale: 50 %
+ 
+.. note:: Cloud APIs will be enabled after you restart your device
+
+4. Ready to Test:
 ^^^^^^^^^^^^^^^^^
 
 Refer to `api.flytbase.com <http://api.flytbase.com/>`_ JS-Rest/JS-WebSocket section to learn how to make the rest/websocket requests to the Cloud API using JavaScript.
