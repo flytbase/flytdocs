@@ -32,7 +32,30 @@ Enable the access status of the devices on which you want to use the Cloud APIs,
 
 .. note:: It is recommended to first test the Cloud APIs on the `Cloud Simulator <Cloud_Simulator.html>`_ device before you fly.
 
-3. Ready to Test:
+3. Enable Cloud Client
+^^^^^^^^^^^^^^^^^^^^^^
+
+Open FlytConsole on the device on which you wish to run cloud APIs.
+
+.. figure:: /_static/Images/flytos_console.png
+	:align: center 
+	:scale: 50 %
+
+Press the settings button, as shown in the image
+
+.. figure:: /_static/Images/flytconsole.png
+	:align: center 
+	:scale: 50 %
+
+Check the cloud client check box to enable cloud APIs.
+
+.. figure:: /_static/Images/enable_cloud_client.png
+	:align: center 
+	:scale: 50 %
+ 
+.. note:: Cloud APIs will be enabled after you restart your device
+
+4. Ready to Test:
 ^^^^^^^^^^^^^^^^^
 
 Refer to `api.flytbase.com <http://api.flytbase.com/>`_ JS-Rest/JS-WebSocket section to learn how to make the rest/websocket requests to the Cloud API using JavaScript.
@@ -48,7 +71,7 @@ Then download the `flytsamples repository <https://github.com/flytbase/flytsampl
 Replace the variable 'token' with your Personal Access Token and the variable 'VehicleID' with the VehicleID of the device you want to control. Do not forget to place the Token and VehicleID within single inverted commas.
 
 .. note:: Some APIs do not work for all devices, check `api.flytbase.com <http://api.flytbase.com/>`_ to check if your device supports a specific API.
-.. note:: APIs which will result in the movement of vehicle have been commented out (except Take off, Land, RTL and Position Hold), so that the vehicle doesn't run into trouble because of arbitrary values. You can uncomment and try them yourselves, be careful of what values you pass with them. 
+.. note:: APIs which will result in the movement of vehicle have been commented out in the sample python file, so that the vehicle doesn't run into trouble because of arbitrary values. You can uncomment and try them yourselves, be careful of what values you pass with them. 
  
 
 .. |flytbase_cloud_link| raw:: html
