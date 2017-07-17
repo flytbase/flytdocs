@@ -11,7 +11,7 @@ FlytOS Logs
 
    <br />
 
-FlytOS Logs can be accessed through the Logs Onboard Web App. They can be accessed from the homepage at
+FlytOS Logs can be accessed through the Logs onboard web app. To open the web app, click on the Logs button on homepage or open the URL:
 
 ``http://<ip-address-of-device>/logs``
 
