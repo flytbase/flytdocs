@@ -1,0 +1,26 @@
+Feb 2017
+#########
+
+FlytOS update version 1.0 changelog.
+
+**Key Updates**
+
+* Official FlytOS release
+* Feature addition: Mavros updated to use MAVLink 2.0.
+* Feature addition: added APIs for controlling USER LEDs, GPIOs.
+* Feature addition: added APIs for fetching data from ADCs.
+* Added support for Raspberry Pi3.
+
+**Bug Fixes**
+
+* You can now Arm the drone after the takeoff command is accepted.
+* Launch sequence of mavros delayed until the param save is completed.
+
+**Other**
+
+* Reduced bandwith usage for webapp.
+* Enhaced update management.
+* Support added for more sigle board computers.
+* Parameter caching enabled.
+bug fix: arming done after takeoff command accepted
+bug fix: launch sequence of mavros delayed to let param save finish
