@@ -2,8 +2,8 @@
 July 2017
 ##########
 
-FlytOS Update 1.41 Change log
-******************************
+FlytOS update version 1.41 changelog
+------------------------------
 
 **Key Updates**
 
