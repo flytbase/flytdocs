@@ -7,7 +7,7 @@ a list of changes so far.
 .. toctree::
    :maxdepth: 2
    :hidden:
-   :caption: Recent Updates
+   :caption: Recent Notes
 
    ./Release Notes/July 2017.rst
    ./Release Notes/June 2017.rst
