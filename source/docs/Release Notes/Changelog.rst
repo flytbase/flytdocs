@@ -4,9 +4,7 @@ Recent Updates
 We improve the FlytBase platform continually by releasing new features, removing bugs and updating documentation. Here's 
 a list of changes so far. 
 
-**July 2017**
-
-FlytOS Update 1.41 Change log
+**July 2017 - FlytOS Update 1.41 Change log**
 
 **Software Updates**
 
