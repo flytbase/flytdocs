@@ -22,5 +22,3 @@ FlytOS update version 1.0 changelog.
 * Enhaced update management.
 * Support added for more sigle board computers.
 * Parameter caching enabled.
-bug fix: arming done after takeoff command accepted
-bug fix: launch sequence of mavros delayed to let param save finish
