@@ -118,28 +118,39 @@ FlytOS version 1.1-0 release notes
 **Other**
 
 * Updated Config file.
+* Major improvements for Parameter handling in Param API.
 
-FlytOS version 1.0 release notes
+FlytOS version 1.0-5 release notes
 ##################################
 
-*Released on 1st Feb, 2017*
+*Released on 21st Feb, 2017*
 
 **Key Updates**
 
+* Reduced bandwith usage for webapp.
+* Enhaced update management.
+* Support added for more sigle board computers.
+* Parameter caching enabled.
+
+FlytOS version 1.0-5 release notes
+####################################
+
+*Released on 3rd Feb, 2017*
+
+FlytOS version 1.0 release notes
+###################################
+
 * Official FlytOS release
+
+Pre-release updates 
+####################
+
 * Feature addition: Mavros updated to use MAVLink 2.0.
 * Feature addition: added APIs for controlling USER LEDs, GPIOs.
 * Feature addition: added APIs for fetching data from ADCs.
-* Added support for Raspberry Pi3.
 
 **Bug Fixes**
 
 * You can now Arm the drone after the takeoff command is accepted.
 * Launch sequence of mavros delayed until the param save is completed.
 
-**Other**
-
-* Reduced bandwith usage for webapp.
-* Enhaced update management.
-* Support added for more sigle board computers.
-* Parameter caching enabled.
