@@ -67,6 +67,13 @@ You can participate in our `forums`_ or `facebook`_ group discussions to interac
     docs/FlytPOD/FlytPOD_Quickstart.rst
     docs/FlytPOD/BeginnerGuide.rst
     docs/FlytPOD/RouterSetup.rst
+    
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+   :caption: Release Notes
+	
+   docs/Release Notes/RecentUpdates.rst
 
 .. toctree::
     :maxdepth: 2
