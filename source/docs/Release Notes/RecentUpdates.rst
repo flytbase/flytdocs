@@ -3,10 +3,10 @@ Recent Updates
 
 We improve the FlytBase platform continually by releasing new features, removing bugs and updating documentation. 
 
-FlytOS version 1.4-1 release notes
-##################################
+Version 1.4-1
+##############
 
-*Released on *
+*Released on 14th July, 2017*
 
 **Key Updates**
 
@@ -35,8 +35,8 @@ FlytOS version 1.4-1 release notes
 * FlytOS runlog would now be logged at /flyt/logs/runlogs/flyt_runlogs.log. 
 * No need to reboot after license activation.
 
-FlytOS version 1.3 release notes
-##################################
+Version 1.3
+############
 
 *Released on 7th June, 2017*
 
@@ -74,8 +74,8 @@ FlytOS version 1.3 release notes
 * Enabled motor testing widget for APM.
 
 
-FlytOS version 1.2 release notes
-#################################
+Version 1.2
+############
 
 *Released on 21st April, 2017*
 
@@ -94,8 +94,8 @@ FlytOS version 1.2 release notes
 * Added wlx and eno to recognised network interfaces.
 
 
-FlytOS version 1.1-1 release notes
-#################################
+Version 1.1-1 
+##############
 
 *Released on 22nd March, 2017*
 
@@ -105,8 +105,8 @@ FlytOS version 1.1-1 release notes
 * Gimbal API added for both Autopilot and FlytPOD, with FlytPOD getting gimbal pwm signal in its dedicated port.
 * FlytPOD now has fixed IP in AP mode.
 
-FlytOS version 1.1-0 release notes
-###################################
+Version 1.1-0 
+##############
 
 *Released on 1st March, 2017*
 
@@ -120,8 +120,8 @@ FlytOS version 1.1-0 release notes
 * Updated Config file.
 * Major improvements for Parameter handling in Param API.
 
-FlytOS version 1.0-5 release notes
-##################################
+Version 1.0-5
+##############
 
 *Released on 21st Feb, 2017*
 
@@ -132,18 +132,18 @@ FlytOS version 1.0-5 release notes
 * Support added for more sigle board computers.
 * Parameter caching enabled.
 
-FlytOS version 1.0-5 release notes
-####################################
+Version 1.0-5
+##############
 
 *Released on 3rd Feb, 2017*
 
-FlytOS version 1.0 release notes
-###################################
+Version 1.0 
+############
 
 * Official FlytOS release
 
-Pre-release updates 
-###################
+Version 0.7-9 
+##############
 
 * Feature addition: Mavros updated to use MAVLink 2.0.
 * Feature addition: added APIs for controlling USER LEDs, GPIOs.
