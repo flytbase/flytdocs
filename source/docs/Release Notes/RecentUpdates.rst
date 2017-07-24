@@ -3,10 +3,10 @@ Recent Updates
 
 We improve the FlytBase platform continually by releasing new features, removing bugs and updating documentation. 
 
-July 2017
-##########
+FlytOS version 1.4-1 release notes
+##################################
 
-FlytOS update version 1.41 changelog
+*Released on *
 
 **Key Updates**
 
@@ -35,10 +35,10 @@ FlytOS update version 1.41 changelog
 * FlytOS runlog would now be logged at /flyt/logs/runlogs/flyt_runlogs.log. 
 * No need to reboot after license activation.
 
-June 2017
-##########
+FlytOS version 1.3 release notes
+##################################
 
-FlytOS update version 1.3 changelog
+*Released on 7th June, 2017*
 
 **Key Updates**
 
@@ -74,10 +74,10 @@ FlytOS update version 1.3 changelog
 * Enabled motor testing widget for APM.
 
 
-April 2017
-###########
+FlytOS version 1.2 release notes
+#################################
 
-FlytOS update version 1.2 changelog.
+*Released on 21st April, 2017*
 
 **Key Updates**
 
@@ -94,16 +94,21 @@ FlytOS update version 1.2 changelog.
 * Added wlx and eno to recognised network interfaces.
 
 
-March 2017
-###########
+FlytOS version 1.1-1 release notes
+#################################
 
-FlytOS update version 1.1 changelog.
+*Released on 22nd March, 2017*
 
 **Key Updates**
 
 * Official launch of FlytSim.
 * Gimbal API added for both Autopilot and FlytPOD, with FlytPOD getting gimbal pwm signal in its dedicated port.
 * FlytPOD now has fixed IP in AP mode.
+
+FlytOS version 1.1-0 release notes
+###################################
+
+*Released on 1st March, 2017*
 
 **Bug Fixes**
 
@@ -114,10 +119,10 @@ FlytOS update version 1.1 changelog.
 
 * Updated Config file.
 
-Feb 2017
-#########
+FlytOS version 1.0 release notes
+##################################
 
-FlytOS update version 1.0 changelog.
+*Released on 1st Feb, 2017*
 
 **Key Updates**
 
