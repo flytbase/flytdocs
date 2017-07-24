@@ -42,6 +42,13 @@ You can participate in our `forums`_ or `facebook`_ group discussions to interac
    docs/FlytOS/AdvancedTopics.rst
 
 .. toctree::
+    :maxdepth: 2
+    :hidden:
+    :caption: FlytBase Cloud
+    
+    docs/FlytBase_Cloud/About_FlytBase_Cloud.rst
+
+.. toctree::
    :maxdepth: 2
    :hidden:
    :caption: FlytSim
@@ -74,13 +81,6 @@ You can participate in our `forums`_ or `facebook`_ group discussions to interac
    :caption: Release Notes
 	
    docs/Release Notes/RecentUpdates.rst
-
-.. toctree::
-    :maxdepth: 2
-    :hidden:
-    :caption: FlytBase Cloud
-    
-    docs/FlytBase_Cloud/About_FlytBase_Cloud.rst
 
 .. .. toctree::
 ..    :maxdepth: 2
