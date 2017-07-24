@@ -143,7 +143,7 @@ FlytOS version 1.0 release notes
 * Official FlytOS release
 
 Pre-release updates 
-####################
+###################
 
 * Feature addition: Mavros updated to use MAVLink 2.0.
 * Feature addition: added APIs for controlling USER LEDs, GPIOs.
