@@ -151,12 +151,12 @@ You will need to connect your Raspberry Pi to the internet. As the internal WiFi
 WiFi Setup
 ^^^^^^^^^^
 
-* Insert the SD Card in your Raspberry Pi 3 after flashing :ref:`FlytOS Linux image<flashing_img_rpi>` on it and apply power to boot it. On boot up a WiFi access point is created on the device with following credentials:
+Insert the SD Card in your Raspberry Pi 3 after flashing :ref:`FlytOS Linux image<flashing_img_rpi>` on it and apply power to boot it. On boot up a WiFi access point is created on the device with following credentials:
 
 | ssid:       flytos_WiFi
 | Password:   flytos123
 
-* Connect to the access point on another computer. Open the following link in your browser to view :ref:`FlytConsole<about flytconsole>`: http://10.42.0.1/flytconsole
+Connect to the access point on another computer. Open the following link in your browser to view :ref:`FlytConsole<about flytconsole>`: http://10.42.0.1/flytconsole
 
 
 User Credentials
