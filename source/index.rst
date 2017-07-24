@@ -69,18 +69,19 @@ You can participate in our `forums`_ or `facebook`_ group discussions to interac
     docs/FlytPOD/RouterSetup.rst
     
 .. toctree::
-   :maxdepth: 2
-   :hidden:
-   :caption: Release Notes
-	
-   docs/Release Notes/RecentUpdates.rst
-
-.. toctree::
     :maxdepth: 2
     :hidden:
     :caption: FlytBase Cloud
     
     docs/FlytBase_Cloud/About_FlytBase_Cloud.rst
+    
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+   :caption: Release Notes
+	
+   docs/Release Notes/RecentUpdates.rst
+    
 
 .. .. toctree::
 ..    :maxdepth: 2
