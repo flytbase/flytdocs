@@ -6,10 +6,10 @@ We improve the FlytBase platform continually by releasing new features, removing
 .. toctree::
    :maxdepth: 2
    :hidden:
-   :caption: Recent Updates
+   :caption: RecentUpdates
 
-   ./July 2017.rst
-   ./June 2017.rst
-   ./April 2017.rst
-   ./March 2017.rst
-   ./Feb 2017.rst
+   ./July2017.rst
+   ./June2017.rst
+   ./April2017.rst
+   ./March2017.rst
+   ./Feb2017.rst
