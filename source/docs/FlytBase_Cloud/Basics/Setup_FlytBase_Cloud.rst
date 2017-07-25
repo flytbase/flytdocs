@@ -41,7 +41,6 @@ Open FlytConsole on the device on which you wish to run cloud APIs.
 	:align: center 
 	:scale: 50 %
 
-   <br />
 Press the settings button, as shown in the image
 
 .. figure:: /_static/Images/flytconsole.png
