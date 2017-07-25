@@ -22,20 +22,22 @@ Once you get a confirmation from the support team, a new 'Developer Settings' ta
 	:align: center 
 	:scale: 50 %
 	
-Once you get the 'Developer Settings' tab, you can open it to get your personal access token. Press the edit button to control which device can be controlled using the Cloud API.   
+Once you get the 'Developer Settings' tab, you can open it to get your personal access token. Copy this API token ID. Do not share the token ID with any third party unless you trust them. As of the current cloud release API token key and vehicle ID combined together provide user a pass to access every API, including navigation. 
+
+Press the edit button to manage the devices  which can be accessed over the cloud. Unchecked devices won't be accessible through cloud APIs.    
 
 .. figure:: /_static/Images/edit_access.png
 	:align: center 
 	:scale: 50 %
 
-Enable the access status of the devices on which you want to use the Cloud APIs, note the Vehicle ID of the device and Press Save. 
+Enable the access status of the devices for which you want to enable the Cloud access. You can change your settings later from developer settings tab. 
 
 .. note:: It is recommended to first test the Cloud APIs on the `Cloud Simulator <Cloud_Simulator.html>`_ device before you fly.
 
 3. Enable Cloud Client
 ^^^^^^^^^^^^^^^^^^^^^^
 
-Open FlytConsole on the device on which you wish to run cloud APIs.
+FlytOS comes with in-built client software that runs on companion computer and connects with cloud. For user privacy and security this client is disabled by default. To enable the cloud APIs for companion computer start FlytOS and open FlytConsole.
 
 .. figure:: /_static/Images/flytos_console.png
 	:align: center 
