@@ -3,7 +3,7 @@
 About FlytBase Cloud
 ====================
 
-FlytBase Cloud is industry’s first Drone-API As A Service. It provides APIs for real-time secure access to drone navigation, payload and telemetry over 4G/LTE. It also provides easy integration with variety of 3rd party apps to help developers create custom workflows to suit different business needs. 
+FlytBase Cloud is industry’s first Drone-API as a Service. It provides APIs for real-time secure access to drone navigation, payload and telemetry over 4G/LTE. It also provides easy integration with variety of 3rd party apps to help developers create custom workflows to suit different business needs. 
 
 * :ref:`Setup<setup_flytbase_cloud>`
 * :ref:`Real-time access and control<realtime_access_and_control>`
