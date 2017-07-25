@@ -10,17 +10,16 @@ Version 1.4-1
 
 **Key Updates**
 
-* Added log retrieval from my.flytbase account.
+* Added autopilot log download option in my.flytbase portal.
 * Added remote client for FlytBase Cloud. It is disabled by default.
 * Added support for Intel Joule.
-* FlytOS runlog will now be logged at /flyt/logs/runlogs/flyt_runlogs.log.
 * FlytOS now autodetects serial port and the baudrate on which Autopilot is connected. List of autodetectable 
   ports is `here <http://docs.flytbase.com/docs/FlytOS/Debugging/FAQ.html#change-baudrate-or-portname/>`_.
 
 **UI Updates**
 
 * FlytConsole, message window now prints navigation API debug messages.
-* Added autopilot, startup and runlog View and Download buttons at http://ip-of-your-device/logs.
+* New webapp added for autopilot, startup and runlog View and Download at http://ip-of-your-device/logs.
 
 **Bug Fixes**
 
@@ -38,7 +37,7 @@ Version 1.4-1
 * Added new device ID for Intel Edison.
 * Changed logger level to debug for clock skew message.
 
-Version 1.3
+Version 1.3-1
 ############
 
 *Released on 7th June, 2017*
@@ -77,7 +76,7 @@ Version 1.3
 * Enabled motor testing widget for APM.
 
 
-Version 1.2
+Version 1.2-1
 ############
 
 *Released on 21st April, 2017*
@@ -135,18 +134,17 @@ Version 1.0-5
 * Support added for more sigle board computers.
 * Parameter caching enabled.
 
-Version 1.0-5
-##############
-
-*Released on 3rd Feb, 2017*
-
-Version 1.0 
+Version 1.0.0 
 ############
+
+*Released on 1st Feb, 2017*
 
 * Official FlytOS release
 
 Version 0.7-9 
 ##############
+
+*Released on 23rd Jan, 2017*
 
 * Feature addition: Mavros updated to use MAVLink 2.0.
 * Feature addition: added APIs for controlling USER LEDs, GPIOs.
