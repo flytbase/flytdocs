@@ -10,16 +10,17 @@ Version 1.4-1
 
 **Key Updates**
 
-* Added log retrieval from FlytBase Cloud.
+* Added log retrieval from my.flytbase account.
 * Added remote client for FlytBase Cloud. It is disabled by default.
 * Added support for Intel Joule.
+* FlytOS runlog will now be logged at /flyt/logs/runlogs/flyt_runlogs.log.
 * FlytOS now autodetects serial port and the baudrate on which Autopilot is connected. List of autodetectable 
   ports is `here <http://docs.flytbase.com/docs/FlytOS/Debugging/FAQ.html#change-baudrate-or-portname/>`_.
 
 **UI Updates**
 
 * FlytConsole, message window now prints navigation API debug messages.
-* Added log view and download webapp options at http://localhost/logs.
+* Added autopilot, startup and runlog View and Download buttons at http://ip-of-your-device/logs.
 
 **Bug Fixes**
 
@@ -27,13 +28,15 @@ Version 1.4-1
 * FlytConsole -> calibration msgs fixes.
 * FixedWing -> PositionHold and PositionSetGlobal now respond correctly. Unsupported APIs: PositionSet and VelocitySet return   without sending any setpoint to drone.
 
-**Other**
+**Minor Updates**
 
 * Calling access_request API is now MUST if vehicle is not switched to OFFBOARD/GUIDED mode via RC or set_mode API.
 * Shifted SITL gcs_url from UDP to TCP. 
 * Configured mavros target_comp_id to 0 -> no need to set PX4 param MAV_COMP_ID to 50.
 * FlytOS runlog would now be logged at /flyt/logs/runlogs/flyt_runlogs.log. 
 * No need to reboot after license activation.
+* Added new device ID for Intel Edison.
+* Changed logger level to debug for clock skew message.
 
 Version 1.3
 ############
@@ -63,7 +66,7 @@ Version 1.3
 * Fixed autoupdate getting stuck during the update.
 * Removed init.d script warning.
 
-**Other**
+**Minor Updates**
 
 * FlytFollowMe: updated url from /flytfollowme to /followme.
 * ALL APIs now respond with relevant messages.
@@ -89,7 +92,7 @@ Version 1.2
 
 * Fixed a bug causing GPS lock in FlytConsole.
 
-**Other**
+**Minor Updates**
 
 * Added wlx and eno to recognised network interfaces.
 
@@ -115,7 +118,7 @@ Version 1.1-0
 * Added new features and minor bugfixes in CPP API.
 * Added new features and minor bugfixes in FlytConsole.
 
-**Other**
+**Minor Updates**
 
 * Updated Config file.
 * Major improvements for Parameter handling in Param API.
