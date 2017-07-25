@@ -7,7 +7,9 @@ FlytBase Cloud is industry’s first Drone-API as a Service. It provides APIs fo
 
 Follow the setup link below to try out FlytBase cloud APIs. Test out the cloud APIs on virtual drone first (explained in setup), once you are familiar with the workflow go on to connect real drone.
 
-Make sure to follow local laws and regulations. Having a pilot on ground to take control of drone in case of emergency is always a good idea. Remember that navigation APIs on companion computer, local network or cloud can only be used when drone is in OffBoard / API_POSCTL mode. Telemetry and payload APIs have no restiction of flight mode. 
+Make sure to follow local laws and regulations. Having a pilot on ground to take control of drone in case of emergency is always a good idea. 
+
+Remember that navigation APIs on companion computer, local network or cloud can only be used when drone is in OffBoard / API_POSCTL mode. Telemetry and payload APIs have no restiction of flight mode. 
 
 * :ref:`Setup<setup_flytbase_cloud>`
 * :ref:`Real-time access and control<realtime_access_and_control>`
