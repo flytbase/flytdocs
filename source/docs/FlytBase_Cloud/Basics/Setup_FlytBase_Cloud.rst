@@ -22,7 +22,7 @@ Once you get a confirmation from the support team, a new 'Developer Settings' ta
 	:align: center 
 	:scale: 50 %
 	
-Once you get the 'Developer Settings' tab, you can open it to get your personal access token. Copy this API token ID. Do not share the token ID with any third party unless you trust them. As of the current cloud release API token key and vehicle ID combined together provide user a pass to access every API, including navigation. 
+Once you get the 'Developer Settings' tab, you can open it to get your personal access token. Copy this API token ID. Do not share the token ID with any third party unless you trust them. As of the current cloud API release API token key and vehicle ID combined together grant access to all APIs, including navigation. 
 
 Press the edit button to manage the devices  which can be accessed over the cloud. Unchecked devices won't be accessible through cloud APIs.    
 
