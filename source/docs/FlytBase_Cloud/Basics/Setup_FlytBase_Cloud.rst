@@ -32,10 +32,12 @@ Press the edit button to manage the devices  which can be accessed over the clou
 
 Enable the access status of the devices for which you want to enable the Cloud access. You can change your settings later from developer settings tab. 
 
-.. note:: It is recommended to first test the Cloud APIs on the `Cloud Simulator <Cloud_Simulator.html>`_ device before you fly.
+.. note:: It is recommended to first test the Cloud APIs on the `Cloud Simulator <Cloud_Simulator.html>`_ device before actual drone. Proceed further to enable and use cloud APIs for actual drone.
 
-3. Enable Cloud Client
-^^^^^^^^^^^^^^^^^^^^^^
+3. Enable Cloud Client on drone
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+To use cloud APIs the companion computer has to be connected to Internet over a 3G/4G/LTE or WiFi connection. Before proceeding further make sure that companion computer is connected to Internet.
 
 FlytOS comes with in-built client software that runs on companion computer and connects with cloud. For user privacy and security this client is disabled by default. To enable the cloud APIs for companion computer start FlytOS and open FlytConsole.
 
@@ -59,6 +61,8 @@ Check the cloud client check box to enable cloud APIs.
 
 4. Ready to Test:
 ^^^^^^^^^^^^^^^^^
+
+To try out the FlytConsole cloud app go to |my_flytbase_link|, devices tab. In front of the particular device click on launch console button to launch the app. This app can be used to control, monitor the drone from anywhere in the world. Follow the local rules and regulations. 
 
 Refer to `api.flytbase.com <http://api.flytbase.com/>`_ JS-Rest/JS-WebSocket section to learn how to make the rest/websocket requests to the Cloud API using JavaScript.
 
