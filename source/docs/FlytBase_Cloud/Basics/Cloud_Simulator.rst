@@ -25,3 +25,5 @@ Wait for the CloudSim device to start and load, once that is done, press the lau
 	:align: center 
 	:scale: 50 %
 
+Your cloudsim instance is up and running. You can write cloud, web, mobile apps using FlytBase APIs for you virtual drone. Use the vehicle ID and API key of the virtual drone for testing and replace it with actual drone for deployment.
+Happy coding!
