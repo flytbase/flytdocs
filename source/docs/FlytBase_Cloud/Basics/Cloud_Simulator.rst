@@ -25,5 +25,7 @@ Wait for the CloudSim device to start and load, once that is done, press the lau
 	:align: center 
 	:scale: 50 %
 
-Your cloudsim instance is up and running. You can write cloud, web, mobile apps using FlytBase APIs for you virtual drone. Use the vehicle ID and API key of the virtual drone for testing and replace it with actual drone for deployment.
+The cloudsim device is up and running. Use the FlytConsole cloud app to monitor, command the virtual drone. This app supports mission, basic navigation commands, HUD and basic telemetry. When the actual drone connects to FlytBase cloud this same app can be used to control and monitor the drone from anywhere in the world. Follow the local laws and regulations. 
+
+FlytBase APIs for you virtual drone can be used to write cloud, web, mobile apps. Use the vehicle ID and API key of the virtual drone for testing and replace it with actual drone for deployment. 
 Happy coding!
