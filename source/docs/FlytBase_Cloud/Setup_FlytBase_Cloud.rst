@@ -74,7 +74,7 @@ Then download the `flytsamples repository <https://github.com/flytbase/flytsampl
 Replace the variable 'token' with your Personal Access Token and the variable 'VehicleID' with the VehicleID of the device you want to control. Do not forget to place the Token and VehicleID within single inverted commas.
 
 .. note:: Some APIs do not work for all devices, check `api.flytbase.com <http://api.flytbase.com/>`_ to check if your device supports a specific API.
-.. note:: APIs will result in the movement of vehicle have been commented out in the sample python file, so that the vehicle doesn't run into trouble because of arbitrary values. You can uncomment and try them yourselves, be careful of what values you pass with them. 
+.. note:: APIs which will result in the movement of vehicle have been commented out in the sample python file, so that the vehicle doesn't run into trouble because of arbitrary values. You can uncomment and try them yourselves, be careful of what values you pass with them. 
  
 
 .. |flytbase_cloud_link| raw:: html
