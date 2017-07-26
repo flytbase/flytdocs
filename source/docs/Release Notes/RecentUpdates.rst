@@ -134,7 +134,7 @@ Version 1.0-5
 * Support added for more sigle board computers.
 * Parameter caching enabled.
 
-Version 1.0.0 
+Version 1.0-0 
 ############
 
 *Released on 1st Feb, 2017*
