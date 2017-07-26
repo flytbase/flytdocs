@@ -74,6 +74,9 @@ You can participate in our `forums`_ or `facebook`_ group discussions to interac
     :caption: FlytBase Cloud
     
     docs/FlytBase_Cloud/About_FlytBase_Cloud.rst
+    docs/FlytBase_Cloud/Setup_FlytBase_Cloud.rst
+    docs/FlytBase_Cloud/Integration_Third_Party.rst
+    docs/FlytBase_Cloud/Cloud_Simulator.rst
 
 .. .. toctree::
 ..    :maxdepth: 2
