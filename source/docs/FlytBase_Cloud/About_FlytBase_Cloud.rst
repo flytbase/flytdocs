@@ -11,17 +11,9 @@ Make sure to follow local laws and regulations. Having a pilot on ground to take
 
 Remember that navigation APIs on companion computer, local network or cloud can only be used when drone is in OffBoard / API_POSCTL mode. Telemetry and payload APIs have no restiction of flight mode. 
 
-* :ref:`Setup<setup_flytbase_cloud>`
-* :ref:`Real-time access and control<realtime_access_and_control>`
-* :ref:`Integration with third party apps<integration_third_party>`
-* :ref:`Cloud Simulator<cloud_simulator>`
+`Setup <Setup_FlytBase_Cloud.html>`_
 
-.. toctree::
-   :maxdepth: 2
-   :hidden:
-   :caption: About FlytBase Cloud
-	
-   ./Basics/Setup_FlytBase_Cloud.rst
-   ./Basics/Realtime_Access_And_Control.rst
-   ./Basics/Integration_Third_Party.rst
-   ./Basics/Cloud_Simulator.rst
+`Integration with third party apps <Integration_Third_Party.html>`_
+
+`Cloud Simulator <Cloud_Simulator.html>`_
+

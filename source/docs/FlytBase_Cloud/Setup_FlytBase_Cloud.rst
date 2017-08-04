@@ -45,11 +45,13 @@ FlytOS comes with in-built client software that runs on companion computer and c
 	:align: center 
 	:scale: 50 %
 
+
 Press the settings button, as shown in the image
 
 .. figure:: /_static/Images/flytconsole.png
 	:align: center 
 	:scale: 50 %
+
 
 Check the cloud client check box to enable cloud APIs.
 
@@ -57,6 +59,7 @@ Check the cloud client check box to enable cloud APIs.
 	:align: center 
 	:scale: 50 %
  
+
 .. note:: Cloud APIs will be enabled after you restart your device
 
 4. Ready to Test:
