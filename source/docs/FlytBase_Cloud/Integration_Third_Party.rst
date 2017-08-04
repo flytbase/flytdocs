@@ -16,6 +16,7 @@ Login to built.io
 	:align: center 
 	:scale: 50 %
 
+
 Create a new Workflow
 ^^^^^^^^^^^^^^^^^^^^^
 
@@ -33,6 +34,7 @@ Use any of the available options as a trigger
 	:align: center 
 	:scale: 50 %
 
+
 Add Action
 ^^^^^^^^^^
 
@@ -41,6 +43,7 @@ To integrate it to FlyBase, you need to add an action as a FlytBase API.
 .. figure:: /_static/Images/add-action.png
 	:align: center 
 	:scale: 50 %
+
 
 Select Event
 ^^^^^^^^^^^^
@@ -51,6 +54,7 @@ Select the desirable event that needs to take place and press Next.
 	:align: center 
 	:scale: 50 %
 
+
 Add Account
 ^^^^^^^^^^^
 
@@ -59,6 +63,7 @@ Press add account to integrate with your vehicle.
 .. figure:: /_static/Images/add_account.png
 	:align: center 
 	:scale: 50 %
+
 
 Fill Access Details
 ^^^^^^^^^^^^^^^^^^^
@@ -78,6 +83,7 @@ Once your account is added, press on the newly made action to configure it.
 .. figure:: /_static/Images/account_added.png
 	:align: center 
 	:scale: 50 %
+
 
 Configure
 ^^^^^^^^^
@@ -101,6 +107,7 @@ Fill in the other details, like height in this case and press Next.
 .. figure:: /_static/Images/specify_height.png
 	:align: center 
 	:scale: 50 % 
+
 
 Save and Test Workflow
 ^^^^^^^^^^^^^^^^^^^^^^

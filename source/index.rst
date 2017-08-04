@@ -47,10 +47,9 @@ You can participate in our `forums`_ or `facebook`_ group discussions to interac
     :caption: FlytBase Cloud
     
     docs/FlytBase_Cloud/About_FlytBase_Cloud.rst
-    docs/FlytBase_Cloud/Basics/Setup_FlytBase_Cloud.rst
-    docs/FlytBase_Cloud/Basics/Realtime_Access_And_Control.rst
-    docs/FlytBase_Cloud/Basics/Integration_Third_Party.rst
-    docs/FlytBase_Cloud/Basics/Cloud_Simulator.rst
+    docs/FlytBase_Cloud/Setup_FlytBase_Cloud.rst
+    docs/FlytBase_Cloud/Integration_Third_Party.rst
+    docs/FlytBase_Cloud/Cloud_Simulator.rst
 
 .. toctree::
    :maxdepth: 2
@@ -79,12 +78,6 @@ You can participate in our `forums`_ or `facebook`_ group discussions to interac
     docs/FlytPOD/BeginnerGuide.rst
     docs/FlytPOD/RouterSetup.rst
     
-.. toctree::
-   :maxdepth: 2
-   :hidden:
-   :caption: Release Notes
-	
-   docs/Release Notes/RecentUpdates.rst
 
 .. .. toctree::
 ..    :maxdepth: 2
