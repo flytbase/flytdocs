@@ -50,7 +50,7 @@ This step requires you to have a registered FlytBase account. In case you don't 
 
 **Image flash**
 
-.. note:: This step is exactly similar to the standard method of flashing Intel Edison board. The following guide is ONLY for Linux users. Windows users could follow `this <https://software.intel.com/en-us/flashing-firmware-on-your-intel-edison-board-windows>`_ and MacOS user could use `this guide <https://software.intel.com/en-us/node/637974#manual-flash-process>`_.
+.. note:: This step is exactly similar to the standard method of flashing Intel Edison board. The following guide is ONLY for Linux users. Windows users could follow `this <https://software.intel.com/en-us/flashing-firmware-on-your-intel-edison-board-windows>`_ and MacOS users could use `this guide <https://software.intel.com/en-us/node/637974#manual-flash-process>`_.
 
 1. Unzip the downloaded file flyt*.zip to any location.
 2. Plug a USB cable into the USB port labeled OTG.

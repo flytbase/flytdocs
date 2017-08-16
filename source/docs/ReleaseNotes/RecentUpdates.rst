@@ -1,10 +1,34 @@
 Recent Updates
-===============
+==============
 
 We improve the FlytBase platform continually by releasing new features, removing bugs and updating documentation. 
 
+
+Version 1.4-2
+#############
+
+*Released on 2nd August, 2017*
+
+**Key Updates**
+
+* FlytSim APM now simulates APM-3.5.0.
+  
+**UI Updates**
+
+* FLytConsole and Welcome page updated to indicate FlytOS Commercial License.
+  
+**Bug Fixes**
+
+* significantly improved FlytSim PX4 Gazebo vehicle stability.
+* fixed FLytOS autorestart on boot up issue.
+
+**Minor Updates**
+
+* reduced message rate of 'inefficient baud rate', when baudrate apart from 921600 is used to communicate with autopilot.
+
+
 Version 1.4-1
-##############
+#############
 
 *Released on 14th July, 2017*
 
@@ -38,7 +62,7 @@ Version 1.4-1
 * Changed logger level to debug for clock skew message.
 
 Version 1.3-1
-############
+#############
 
 *Released on 7th June, 2017*
 
@@ -77,7 +101,7 @@ Version 1.3-1
 
 
 Version 1.2-1
-############
+#############
 
 *Released on 21st April, 2017*
 
@@ -96,8 +120,8 @@ Version 1.2-1
 * Added wlx and eno to recognised network interfaces.
 
 
-Version 1.1-1 
-##############
+Version 1.1-1
+#############
 
 *Released on 22nd March, 2017*
 
@@ -107,8 +131,8 @@ Version 1.1-1
 * Gimbal API added for both Autopilot and FlytPOD, with FlytPOD getting gimbal pwm signal in its dedicated port.
 * FlytPOD now has fixed IP in AP mode.
 
-Version 1.1-0 
-##############
+Version 1.1-0
+#############
 
 *Released on 1st March, 2017*
 
@@ -123,7 +147,7 @@ Version 1.1-0
 * Major improvements for Parameter handling in Param API.
 
 Version 1.0-5
-##############
+#############
 
 *Released on 21st Feb, 2017*
 
@@ -134,15 +158,15 @@ Version 1.0-5
 * Support added for more sigle board computers.
 * Parameter caching enabled.
 
-Version 1.0-0 
-############
+Version 1.0-0
+#############
 
 *Released on 1st Feb, 2017*
 
 * Official FlytOS release
 
-Version 0.7-9 
-##############
+Version 0.7-9
+#############
 
 *Released on 23rd Jan, 2017*
 

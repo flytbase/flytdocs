@@ -84,7 +84,7 @@ You can participate in our `forums`_ or `facebook`_ group discussions to interac
     :hidden:
     :caption: Release Notes
  	
-    docs/Release Notes/RecentUpdates.rst
+    docs/ReleaseNotes/RecentUpdates.rst
 
 .. .. toctree::
 ..    :maxdepth: 2
