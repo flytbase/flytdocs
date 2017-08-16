@@ -15,16 +15,16 @@ Version 1.4-2
   
 **UI Updates**
 
-* FLytConsole and Welcome page updated to indicate FlytOS Commercial License.
+* FlytConsole and Welcome page updated to indicate FlytOS Commercial License.
   
 **Bug Fixes**
 
-* significantly improved FlytSim PX4 Gazebo vehicle stability.
-* fixed FLytOS autorestart on boot up issue.
+* Significantly improved FlytSim PX4 Gazebo vehicle stability.
+* Fixed FLytOS autorestart on boot up issue.
 
 **Minor Updates**
 
-* reduced message rate of 'inefficient baud rate', when baudrate apart from 921600 is used to communicate with autopilot.
+* Reduced message rate of 'inefficient baud rate', when baudrate apart from 921600 is used to communicate with autopilot.
 
 
 Version 1.4-1
