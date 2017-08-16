@@ -20,7 +20,7 @@ Version 1.4-2
 **Bug Fixes**
 
 * Significantly improved FlytSim PX4 Gazebo vehicle stability.
-* Fixed FLytOS autorestart on boot up issue.
+* Fixed FlytOS autorestart on boot up issue.
 
 **Minor Updates**
 
