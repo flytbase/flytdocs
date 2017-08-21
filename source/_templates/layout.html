@@ -83,14 +83,15 @@
   <div id="left-column">
     <div class="sphinxsidebar">
       {%- if sidebars != None %}
+        {% include "searchbox.html" %}
         {#- new style sidebar: explicitly include/exclude templates #}
         {%- for sidebartemplate in sidebars %}
         {%- include sidebartemplate %}
         {%- endfor %}
       {% else %}
         {% include "logo-text.html" %}
-        {% include "globaltoc.html" %}
         {% include "searchbox.html" %}
+        {% include "globaltoc.html" %}
       {%- endif %}
     </div>
   </div>
