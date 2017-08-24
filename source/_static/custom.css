@@ -4,7 +4,6 @@
 
 .caption {
   padding-left: 20px;
-  padding-top: 15px;
 }
 
 .caption-text {
@@ -126,6 +125,6 @@ img{
     color: #fff;
 }
 
-#main-search form .input-group input {
-    margin-bottom: 50px;
+div.sphinxsidebar {
+    margin-bottom: 100px;
 }

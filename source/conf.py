@@ -19,8 +19,7 @@ exclude_patterns = ['_build']
 
 html_show_sourcelink = False
 html_sidebars = {
-    '**': ['globaltoc.html',
-           'searchbox.html']
+    '**': ['globaltoc.html']
 }
 
 import guzzle_sphinx_theme
