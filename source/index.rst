@@ -74,7 +74,6 @@ You can participate in our `forums`_ or `facebook`_ group discussions to interac
     :hidden:
     :caption: FlytPi
 
-    docs/FlytPi/FlytPi.rst
     docs/FlytPi/FlytPi_Getting_Started.rst
 
 .. toctree::
