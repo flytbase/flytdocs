@@ -3,6 +3,10 @@
 Getting Started with FlytPi
 ===========================
 
+.. .. figure:: /_static/Images/FlytPi.png
+.. 	:align: center
+.. 	:scale: 120 %
+
 Contents
 ^^^^^^^^
 
@@ -14,7 +18,7 @@ Contents
 
 * 1x Attached UART-to-UART cable
 
-* 1x Power Module 5V 4A (Powers FlytPi provides battery out for Autopilot and ESCs)
+* 1x Power Module 5V 4A (Powers FlytPi, provides battery out for Autopilot and ESCs)
 
 * 1x Wall Adapter (Micro-USB)
 
@@ -22,15 +26,15 @@ Contents
 
 * 1x Ethernet Cable
 
-The FlytPi comes preactivated with a commercial licence so that you can start your drone application right out of the box.
+.. note:: The FlytPi comes preactivated with a FlytOS commercial licence right out of the box.
 
-Integrating FlytPi into your Drone
+Integrating FlytPi with your Drone
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Prerequsites
-""""""""""""
+Prerequisites
+"""""""""""""
 
-* Drone with compatible autopilot.
+* Drone with compatible autopilot (Pixhawk/Pixhawk2.1 Cube/Pixhawk Mini).
 
 * Drone should be able to do position hold with GPS.
 
@@ -38,7 +42,7 @@ Prerequsites
 
 * Battery 2s-6s with XT60 output connector.
 
-* Companion computer settings on autopilot as given below.
+* Configure autopilot for companion computer as given below.
 
 Configuring Pixhawk Autopilot
 """""""""""""""""""""""""""""
@@ -62,28 +66,30 @@ For PX4 users
 5. Configure a dedicated two way switch for ``OFFBOARD MODE`` during RC calibration, to allow FlytOS to take control of drone from RC when vehicle is switched to ``OFFBOARD MODE``.
 
 
-Once you are Ready to Set Up the FlytPi on your Drone
-"""""""""""""""""""""""""""""""""""""""""""""""""""""
+Setup the FlytPi on your Drone
+""""""""""""""""""""""""""""""
 
 * Mount the FlytPi on drone at convenient spot.
 
-* Connect the UART connector of your FlytPi to the TELEM 2 port of Pixhawk/Pixhawk2/Pixhawk Mini.
-
-* (Optional) If you want to use a screen, connect a HDMI cable from the FlytPi to a monitor. This step is optional as you can also use FlytPi in headless mode (without a monitor).
+* Connect the UART connector of your FlytPi to the TELEM 2 port of Pixhawk/Pixhawk2.1 Cube/Pixhawk Mini.
 
 * Mount power module on the drone.
 
 * Connect micro USB connector of power module to the FlytPi power input connector.
 
-* Connect Female XT60 connector of the power module to power module for Pixhawk. Note that the power module for FlytPi does not power up the Pixhawk.
+* Connect Female XT60 connector of the power module to power module for Pixhawk.
+
+.. figure:: /_static/Images/FlytPi_PowerModule.png
+	:align: center
+	:scale: 60 %
+
+.. note:: Power module for FlytPi does not power up the Pixhawk.
 
 * Connect male XT60 connector to the battery.
 
-* Wait a minute for the FlytPi to boot.
-
 * Wait for the FlytPi to boot up. This may take about a minute.
 
-* Connect your device to the FlytPi WiFi network.
+* FlytPi creates a WiFi access point on boot up. Connect your device to the FlytPi WiFi network with following credentials.
 
   | **SSID: flytos_WiFi**
   | **Password: flytos123**
@@ -94,5 +100,8 @@ Once you are Ready to Set Up the FlytPi on your Drone
 
 .. * With the drone on ground and GPS fix, switch the drone to OFFBoard mode. Pixhawk LED should fast blink green to show the successful transition. Also confirm the mode in FlytConsole top bar. It should show API-POSCTL. If it is successful then continue. Else check the autopilot connection settings.
 
-You are now ready for :ref:`First Flight!<first_flight_main>`
+.. note:: (Optional) If you want to use a screen, connect a HDMI cable from the FlytPi to a monitor. This step is optional as you can also use FlytPi in headless mode (without a monitor).
+
+
+Now you can get your drone ready for :ref:`First Flight!<first_flight_main>`
 ------------------------------------------------------------
