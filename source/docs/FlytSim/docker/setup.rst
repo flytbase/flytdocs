@@ -61,7 +61,7 @@ Nvidia GPU
 
 .. Warning:: Follow this section only if your device is running on Nvidia GPU, failure to do so may lead to error while GUI rendering, **unless you want to run FlytSim in its default headless mode (APM-SITL)**.
  
-1.Open a new terminal, and go to the directory where you have unzipped our latest release. If you haven’t yet downloaded it then please do it from our `release page <https://github.com/flytbase/flytsim-docker/releases/latest>`_.
+1. Open a new terminal, and go to the directory where you have unzipped our latest release. If you haven’t yet downloaded it then please do it from our `release page <https://github.com/flytbase/flytsim-docker/releases/latest>`_.
  
 2. Get to nvidiagraphics directory inside linux directory.
 
@@ -70,13 +70,14 @@ Nvidia GPU
        $ cd linux/nvidiagraphics
 
 3. Make sure you have installed proprietary Nvidia driver > 340.29. Visit our :ref:`FAQ section <flytsim_faq10>` to find how to install Nvidia driver.
+
 4. If you are running Ubuntu, execute the **setup.sh** script with **sudo** permission, which would install `docker <https://docs.docker.com/engine/installation/>`_, `docker-compose <https://docs.docker.com/compose/install/>`_, `nvidia-docker <https://github.com/NVIDIA/nvidia-docker>`_ and `nvidia-docker-compose <https://github.com/eywalker/nvidia-docker-compose>`_ on your machine. In case you are using any *other flavour of Linux*, please install them manually by following their individual guides from `Docker installation guide <https://docs.docker.com/engine/installation/#supported-platforms>`_.
  
    .. code-block:: bash
     
        $ sudo ./setup.sh
 
-4. Once setup is completed (or you have manually installed docker, docker-compose, nvidia-docker and nvidia-docker-compose), start a sample docker example to make sure it is indeed setup correctly.
+5. Once setup is completed (or you have manually installed docker, docker-compose, nvidia-docker and nvidia-docker-compose), start a sample docker example to make sure it is indeed setup correctly.
  
    .. code-block:: bash
     
@@ -88,7 +89,7 @@ Nvidia GPU
 
 |br|
 
-5. Start your FlytSim session by executing **start.sh** script, with **sudo** permission,  This script would start a docker container running FlytSim app and also open a tab in browser pointing to http://localhost/flytconsole, once it detects a successful launch.
+6. Start your FlytSim session by executing **start.sh** script, with **sudo** permission,  This script would start a docker container running FlytSim app and also open a tab in browser pointing to http://localhost/flytconsole, once it detects a successful launch.
  
    .. code-block:: bash
     
@@ -96,7 +97,7 @@ Nvidia GPU
 
 .. Note:: Since, FlytSim is running in its default configuration, **you won’t get to see any Gazebo environment**. To shift it to Gazebo based PX4-SITL mode, visit our :ref:`FAQ section <flytsim_faq1>`. 
  
-6. Wait for around 30-40secs after triggering the above script, for Flytconsole to open up in your browser and if it still doesn’t then try `opening it manually <http://localhost/flytconsole>`_. Check for a valid **Connected** status in FlytConsole. **If you don’t get a positive Connected status, check your terminal for any critical error**. If yes, then look at our :ref:`Troubleshooting guide <flytsim_troubleshooting>` for a possible solution or post your query on our `Forum <http://forums.flytbase.com/>`_ or `Gitter Channel <https://gitter.im/FlytBASE/FlytOS>`_.
+7. Wait for around 30-40secs after triggering the above script, for Flytconsole to open up in your browser and if it still doesn’t then try `opening it manually <http://localhost/flytconsole>`_. Check for a valid **Connected** status in FlytConsole. **If you don’t get a positive Connected status, check your terminal for any critical error**. If yes, then look at our :ref:`Troubleshooting guide <flytsim_troubleshooting>` for a possible solution or post your query on our `Forum <http://forums.flytbase.com/>`_ or `Gitter Channel <https://gitter.im/FlytBASE/FlytOS>`_.
 
 Windows
 -------

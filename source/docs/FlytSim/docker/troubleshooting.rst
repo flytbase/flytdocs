@@ -124,7 +124,7 @@ If you want APM-SITL, you don't need to worry about it, and go ahead with Intel 
 How do I install Nvidia proprietary drivers for my Linux OS?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
  
-If you are on Ubuntu, follow this `nvidia gpu install guide <https://help.ubuntu.com/community/BinaryDriverHowto/Nvidia>`_ by Ubuntu.
+If you are on Ubuntu, download latest driver from `here <http://www.nvidia.com/object/unix.html>`_.
 
 |br|
 
