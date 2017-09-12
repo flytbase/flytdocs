@@ -3,6 +3,19 @@ Recent Updates
 
 We improve the FlytBase platform continually by releasing new features, removing bugs and updating documentation. 
 
+Version 1.5-0
+#############
+
+*Released on 7th September, 2017*
+
+**Key Updates**
+
+* Update in licensing scheme now allows FlytOS to run across all devices which support Ubuntu 16.04
+
+**Bug Fixes**
+
+* Navigation APIs - position_set and velocity_set with body_frame flag set to true behaved incorrectly
+* Sometimes vehicle would yaw if position_hold API is called after velocity_set API
 
 Version 1.4-2
 #############
