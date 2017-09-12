@@ -45,11 +45,17 @@ fi
 #Query System Hardware
 if [[ $(cat /proc/cpuinfo | grep -Po -m 1 'model name\t: \K.*$') = "Intel(R) Atom(TM) x7-Z8750  CPU @ 1.60GHz" ]]; then
   echo -e "\033[0;34mFound Intel Aero\033[0m"
-  DEVICE="Aero" 
+  DEVICE="Aero"
+elif [[ $(cat /proc/cpuinfo | grep -Po -m 1 'model name\t: \K.*$') = "Intel(R) Atom(TM) Processor T5700 @ 1.70GHz" ]]; then
+  echo -e "\033[0;34mFound Intel Joule\033[0m"
+  DEVICE="Aero"
 elif [[ $(cat /proc/cpuinfo | grep -Po 'Hardware\t: \K.*$') = "ODROID-XU3" ]]; then
   echo -e "\033[0;34mFound ODROID\033[0m"
   DEVICE="ODROID"
 elif [[ $(cat /proc/cpuinfo | grep -Po 'Hardware\t: \K.*$') = "BCM2709" ]]; then
+  echo -e "\033[0;34mFound Raspberry Pi\033[0m"
+  DEVICE="RPi"
+elif [[ $(cat /proc/cpuinfo | grep -Po 'Hardware\t: \K.*$') = "BCM2835" ]]; then
   echo -e "\033[0;34mFound Raspberry Pi\033[0m"
   DEVICE="RPi"
 elif [[ $(cat /proc/cpuinfo | grep -Po 'Hardware\t: \K.*$') = "jetson_tx1" ]]; then
