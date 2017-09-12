@@ -1,12 +1,8 @@
 .. _tx1_guide:
 
 
-Nvidia TX1
-==========
-
-
-.. Preparing your TX1
-.. -------------------
+Nvidia TX1/TX2
+==============
 
 .. _install_dependencies_tx1:
 
@@ -56,8 +52,8 @@ Troubleshooting
 WiFi Setup
 ^^^^^^^^^^
 
-*  To access internet on your TX1 (for activation, loading maps, auto updates, etc), you can connect the WiFi on TX1 to your home's WiFi router that has access to internet.
-*  If you want to create a WiFi hotspot on the TX1, follow the steps given in `this post <https://devtalk.nvidia.com/default/topic/910608/jetson-tx1/setting-up-wifi-access-point-on-tx1/post/4893879/#4893879>`_
+*  To access internet on your TX1/TX2 (for activation, loading maps, auto updates, etc), you can connect the WiFi on TX1/TX2 to your home's WiFi router that has access to internet.
+*  If you want to create a WiFi hotspot on the TX1/TX2, follow the steps given in `this post <https://devtalk.nvidia.com/default/topic/910608/jetson-tx1/setting-up-wifi-access-point-on-tx1/post/4893879/#4893879>`_
 
 .. _activate_flytos_tx1:
 
@@ -68,7 +64,7 @@ Activate FlytOS
 
 You have to activate installed FlytOS, without which critical APIs would not function.
 
-1. Make sure your TX1 has internet access before proceeding.
+1. Make sure your TX1/TX2 has internet access before proceeding.
 2. :ref:`Launch FlytConsole <FlytConsole_launch>`. You can launch FlytConsole in the TX1's browser using the URL ``http://localhost/flytconsole`` or on your PC's browser using the URL ``http://ip-address-of-device/flytconsole`` . In FlytConsole click on **Activate Now tag** under **License tab** at bottom right corner. A pop-up will appear which will direct you to the device registration page. If you are not logged in, enter your FlytBase Account credentials to log in.
 3. Choose a device nick-name and select your compute engine.
 4. In the license drop-down list, select existing license if available or select ‘Issue a new license’. You can also provide a nick-name for your license.
@@ -82,7 +78,7 @@ Hardware Setup
 Telemetry Connection
 --------------------
 
-Connect the TELEM2 port of Pixhawk autopilot to UART1 port of TX1. If you are using the TX1 developer kit carrier board , then the UART1 can be found on the J17 connector. Visit `this link <https://developer.nvidia.com/embedded/dlc/jetson-tx1-developer-kit-carrier-board-spec>`_ (Page 28 Section 3.7) to view the pinout of TX1's J17 connector.
+Connect the TELEM2 port of Pixhawk autopilot to UART1 port of TX1/TX2. If you are using the TX1/TX2 developer kit carrier board , then the UART1 can be found on the J17 connector. Visit `this link <https://developer.nvidia.com/embedded/dlc/jetson-tx1-developer-kit-carrier-board-spec>`_ (Page 28 Section 3.7) to view the pinout of TX1's J17 connector.
 
 .. figure:: /_static/Images/Tx1_Connection.png
   :align: center
@@ -99,7 +95,7 @@ For APM users
 1. Install `QGC(QGroundControl) <http://qgroundcontrol.com/>`_ in your local machine.
 2. Connect Pixhawk to QGC using the USB port at the side of Pixhawk.
 3. Install the latest stable APM release in Pixhawk using QGC by following `this <https://donlakeflyer.gitbooks.io/qgroundcontrol-user-guide/content/SetupView/Firmware.html>`_ guide.
-4. Once done, visit `parameter widget in QGC <https://donlakeflyer.gitbooks.io/qgroundcontrol-user-guide/content/SetupView/Parameters.html>`_ and search for parameters SERIAL2_BAUD and SERIAL2_PROTOCOL, set them to 921 and 1 respectively. This would enable communication between FlytOS running on Nvidia TX1 and Pixhawk.
+4. Once done, visit `parameter widget in QGC <https://donlakeflyer.gitbooks.io/qgroundcontrol-user-guide/content/SetupView/Parameters.html>`_ and search for parameters SERIAL2_BAUD and SERIAL2_PROTOCOL, set them to 921 and 1 respectively. This would enable communication between FlytOS running on Nvidia TX1/TX2 and Pixhawk.
 5. Configure a dedicated switch position for ``GUIDED MODE`` during RC calibration, to allow FlytOS to take control of drone from RC when vehicle is switched to ``GUIDED MODE``.
 
 For PX4 users
@@ -108,7 +104,7 @@ For PX4 users
 1. Install `QGC(QGroundControl) <http://qgroundcontrol.com/>`_ in your local machine.
 2. Connect Pixhawk to QGC using the USB port at the side of Pixhawk.
 3. Install the latest stable PX4 release in Pixhawk using QGC by following `this <https://donlakeflyer.gitbooks.io/qgroundcontrol-user-guide/content/SetupView/Firmware.html>`_ guide.
-4. Once done, visit `parameter widget in QGC <https://donlakeflyer.gitbooks.io/qgroundcontrol-user-guide/content/SetupView/Parameters.html>`_ and search for parameters SYS_COMPANION and MAV_COMP_ID, set them to 921600 and 50 respectively. This would enable communication between FlytOS running on Nvidia TX1 and Pixhawk.
+4. Once done, visit `parameter widget in QGC <https://donlakeflyer.gitbooks.io/qgroundcontrol-user-guide/content/SetupView/Parameters.html>`_ and search for parameters SYS_COMPANION and MAV_COMP_ID, set them to 921600 and 50 respectively. This would enable communication between FlytOS running on Nvidia TX1/TX2 and Pixhawk.
 5. Configure a dedicated two way switch for ``OFFBOARD MODE`` during RC calibration, to allow FlytOS to take control of drone from RC when vehicle is switched to ``OFFBOARD MODE``.
 
 Next Step: :ref:`Supported Ground Control Stations<supported_GCS>`

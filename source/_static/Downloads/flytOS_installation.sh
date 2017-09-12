@@ -55,9 +55,12 @@ elif [[ $(cat /proc/cpuinfo | grep -Po 'Hardware\t: \K.*$') = "BCM2709" ]]; then
 elif [[ $(cat /proc/cpuinfo | grep -Po 'Hardware\t: \K.*$') = "jetson_tx1" ]]; then
   echo -e "\033[0;34mFound TX1\033[0m"
   DEVICE="TX1"
+elif [[ $(cat /sys/module/tegra_fuse/parameters/tegra_chip_id) = "24" ]]; then
+  echo -e "\033[0;34mFound TX2\033[0m"
+  DEVICE="TX1"
 else
     echo -e "\033[0;31m Please use Script with supported device \033[0m"
-    echo "Exiting"    
+    echo "Exiting"
     exit 1
 fi
 
