@@ -25,7 +25,7 @@ To configure FlytSim to launch PX4 simulator, start the FlytSim simulator. Open 
 Why don’t I see Gazebo GUI when I launch FlytSim?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-FlytSim is by default configured to run APM-SITL which is NOT Gazebo based. You would have to configure FlytSim to run PX4-SITL to get Gazebo GUI. :ref:`Click here <flytsim_faq1>` to know how.
+FlytSim is by default configured to run APM-SITL which is NOT Gazebo based. You would have to configure FlytSim to run PX4-SITL to get Gazebo GUI. :ref:`Click here <flytsim_faqs>` to know how.
 
 |br|
 
@@ -50,7 +50,11 @@ How to get my FlytSIM version?
 How to get FlytSim startup logs?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-If you are facing any issues related to Autoupdate in case the updates are not installed successfully or you are unable to open FlytConsole, you can check the startup log to locate the error. You should attach the file ``/flyt/logs/startup/flyt_startup.log`` , which will be present inside FlytSim's docker container, with your question on the forum. To open terminal inside the container, :ref:`click here <flytsim_shell>`. You can view the log in a terminal using the following command:
+If you are facing any issues related to Autoupdate such as in case the updates are not installed successfully or you are unable to open FlytConsole, you can check the startup log to locate the error. 
+
+You can use our :ref:`logviewer web app <flytos_logs>` to see the logs in your browser.
+
+Otherwise, you can also attach the file ``/flyt/logs/startup/flyt_startup.log``, which will be present inside FlytSim's docker container, with your question on the forum. To open terminal inside the container, :ref:`click here <flytsim_shell>`. You can view the log in a terminal using the following command:
 
 .. code-block:: bash
    
@@ -61,7 +65,11 @@ If you are facing any issues related to Autoupdate in case the updates are not i
 How to get FlytSim run logs?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Many errors can be caught in the FlytOS run log itself. You should attach the file ``/flyt/logs/startup/flyt_startup.log`` , which will be present inside FlytSim's docker container, with your question on the forum. To open terminal inside the container, :ref:`click here <flytsim_shell>`. You can view the log in a terminal using the following command:
+Many errors can be caught in the FlytOS run log itself. 
+
+You can use our :ref:`logviewer web app <flytos_logs>` to see the logs in your browser.
+
+Otherwise, you can also attach the file ``/flyt/logs/runlogs/flyt_runlogs.log``, which will be present inside FlytSim's docker container, with your question on the forum. To open terminal inside the container, :ref:`click here <flytsim_shell>`. You can view the log in a terminal using the following command:
 
 .. code-block:: bash
    
@@ -111,7 +119,6 @@ Make sure the value of your *Factor* is above 0.70 all the time, for smooth func
  
 |br|
 
-
 My device has Nvidia GPU alongside Intel GPU. How do I know, which graphics card is being used by my Linux OS?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -134,7 +141,6 @@ Why is FlytSim not responding to my Api calls?
 FlytSim has many safety features because of which it might reject any syntactically correct API calls. Every API call, responds with a suitable debug message on its success or failure. For Navigation APIs, FlytConsole's message window also captures this debug info.
 
 |br|
-
 
 .. |br| raw:: html
 

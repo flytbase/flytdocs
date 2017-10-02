@@ -33,30 +33,28 @@ You can also see the FlytOS version in FlytConsole in the top right.
 FlytOS Run Log
 """"""""""""""
 
-Many errors can be caught in the FlytOS run log itself. To capture the log, open a terminal in your Flight Computer. You can get terminal access either by attaching an HDMI monitor to your Flight Computer or SSHing into it. Stop and start FlytOS by typing the following two commands respectively:
+Many errors can be caught in the FlytOS run log itself. 
+You can use our :ref:`logviewer web app <flytos_logs>` to see the logs in your browser.
+
+Otherwise, you can also attach the file ``/flyt/logs/runlogs/flyt_runlogs.log``, which will be present on your Flight Computer, with your question on the forum. You can view the log in a terminal using the following command:
 
 .. code-block:: bash
-    
-    $ sudo $(rospack find core_api)/scripts/stop_flytOS.sh
-
-.. code-block:: bash
-    
-    $ sudo $(rospack find core_api)/scripts/launch_flytOS.sh
-
-You will see a lot of text scroll by in your terminal. Wait for a few seconds for FlytOS to start completely. Then copy the complete text, paste it in a text file. You can attach this file with the question that you ask in the forum. 
-
+   
+   $ cat /flyt/logs/runlogs/flyt_runlogs.log
 
 .. _forum_startup_log:
 
 FlytOS Startup Log
 """"""""""""""""""
 
-If you are facing any issues related to Autoupdate in case the updates are not installed successfully or you are unable to open FlytConsole, you can check the startup log to locate the error. You should attach the file ``/flyt/logs/startup/flyt_startup.log`` , which will be present on your Flight Computer, with your question on the forum. You can view the log in a terminal using the following command:
+If you are facing any issues related to Autoupdate such as in case the updates are not installed successfully or you are unable to open FlytConsole, you can check the startup log to locate the error. 
+You can use our :ref:`logviewer web app <flytos_logs>` to see the logs in your browser.
+
+Otherwise, you can also attach the file ``/flyt/logs/startup/flyt_startup.log``, which will be present on your Flight Computer, with your question on the forum. You can view the log in a terminal using the following command:
 
 .. code-block:: bash
    
    $ cat /flyt/logs/startup/flyt_startup.log
-
 
 .. _forum_sourcing_files:
 
