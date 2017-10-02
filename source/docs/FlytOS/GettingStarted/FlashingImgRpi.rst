@@ -45,22 +45,22 @@ Image download
          $ md5 <path-to-downloaded-image>/flyt*.img.gz
 
 5. Compare the MD5 Hash generated to *MD5 Hash* mentioned in the |flytos_dl_link| download page.
-6. Uncompress/extract the downloaded image:
+.. 6. Uncompress/extract the downloaded image:
 
-   * **Linux**- launch a terminal and execute the following command
+..    * **Linux**- launch a terminal and execute the following command
 
-     .. code-block:: bash
+..      .. code-block:: bash
 
-         gunzip <path-to-downloaded-image>/flyt*.img.gz
+..          gunzip <path-to-downloaded-image>/flyt*.img.gz
 
-   * **Windows**- download and install 7-zip from `here <http://www.7-zip.org/download.html>`_. Extract downloaded image using 7-zip.
-   * **Mac OS**- launch a terminal and execute the following command
+..    * **Windows**- download and install 7-zip from `here <http://www.7-zip.org/download.html>`_. Extract downloaded image using 7-zip.
+..    * **Mac OS**- launch a terminal and execute the following command
 
-     .. code-block:: bash
+..      .. code-block:: bash
 
-         gunzip <path-to-downloaded-image>/flyt*.img.gz
+..          gunzip <path-to-downloaded-image>/flyt*.img.gz
 
-7. Uncompressed size of image is about 8.5GBs.
+.. 7. Uncompressed size of image is about 8.5GBs.
 
 Image write to SD Card
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -85,7 +85,9 @@ To burn an image to your SD/eMMC card:
 
     .. image:: /_static/Images/etcher_tut_1.png
 
-3. Select your downloaded **uncompressed** image.
+.. 3. Select your downloaded **uncompressed** image.
+
+3. Select your downloaded image.
 
 4. Choose the bootable drive (SD/eMMC Card) to burn the image onto (Please note that Etcher detects pendrives as bootable disks so proceed with caution).
 
