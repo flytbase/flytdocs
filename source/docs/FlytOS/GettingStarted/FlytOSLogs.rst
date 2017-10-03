@@ -55,7 +55,7 @@ Run Logs
 |br|
 
 Autopilot Logs
-==============
+--------------
 
 .. warning:: Viewing and downloading autopilot logs can take place only when the drone is not armed. Please do not arm the drone in the process of log viewing and downloading.
 
