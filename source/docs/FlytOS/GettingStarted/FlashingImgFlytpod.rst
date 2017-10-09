@@ -89,6 +89,7 @@ To burn an image to your SD/eMMC card:
     .. image:: /_static/Images/etcher_tut_1.png
 
 .. 3. Select your downloaded **uncompressed** image.
+
 3. Select your downloaded image.
  
 4. Choose the bootable drive (SD/eMMC Card) to burn the image onto (Please note that Etcher detects pendrives as bootable disks so proceed with caution).

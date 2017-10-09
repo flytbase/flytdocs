@@ -128,3 +128,7 @@ img{
 div.sphinxsidebar {
     margin-bottom: 100px;
 }
+
+#right-column {
+    max-width: 940px;
+}

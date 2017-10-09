@@ -21,13 +21,13 @@ Installing FlytOS
 
    .. code-block:: bash
 
-       $ sudo bash -c 'curl -sSL http://docs.flytbase.com/_static/Downloads/flytOS_installation.sh | bash -e'
+       $ sudo sh -c 'curl -sSL https://downloads.flytbase.com/flytos/install/flytOS.sh | bash'
 
    In case you get an error saying curl: command not found, please run the following command
 
    .. code-block:: bash
 
-       $ sudo bash -c 'wget -O - http://docs.flytbase.com/_static/Downloads/flytOS_installation.sh | bash -e'
+       $ sudo sh -c 'wget -O - https://downloads.flytbase.com/flytos/install/flytOS.sh | bash'
 
 4. Please enter your system password when prompted
 
