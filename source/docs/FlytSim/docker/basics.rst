@@ -12,7 +12,7 @@ Eventually, all the directories have the following scripts:
  
 **setup** : This script as the name suggests sets up your machine to run FlytSim.
 
-**start** : This script launches a FlytSim docker container for you. It also opens up a tab in your browser connecting to http://localhost/flytconsole. Try waiting for around 30 seconds after triggering this script, before manually opening up the link to FlytConsole.
+**start** : This script launches a FlytSim docker container for you. It also opens up a tab in your browser connecting to http://localhost/flytconsole. Try waiting for around 30 seconds after triggering this script, before manually opening up the link to FlytConsole. You can use this script to restart FlytSim session as well.
  
 **stop** : As its clear from the name, it stops the FlytSim app and shuts down the docker container, but preserving its environment, which means executing the *start* script again, would start FlytSim app and resume the container session for you.
  

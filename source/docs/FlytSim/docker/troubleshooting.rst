@@ -18,14 +18,14 @@ FAQs
 How to start PX4-SITL instead of the default (APM-SITL)?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-To configure FlytSim to launch PX4 simulator, start the FlytSim simulator. Open **flytconsole**, and click top-right corner setup button. It would open a config window, go to Sim Settings tab, and select PX4 as *sim pilot*. You could configure other FlytSim settings as well.
+To configure FlytSim to launch PX4 simulator, start the FlytSim simulator. Open `FlytConsole <http://localhost/flytconsole>`_, and click top-right corner setup button. It would open a config window, go to Sim Settings tab, and select PX4 as *sim pilot*. You could configure other FlytSim settings as well. Once done, restart FlytSim session by executing *start* script which you used to launch FlytSim.
  
 |br|
 
 Why don’t I see Gazebo GUI when I launch FlytSim?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-FlytSim is by default configured to run APM-SITL which is NOT Gazebo based. You would have to configure FlytSim to run PX4-SITL to get Gazebo GUI. :ref:`Click here <flytsim_faqs>` to know how.
+FlytSim is by default configured to run APM-SITL which is NOT Gazebo based. You would have to configure FlytSim to run PX4-SITL to get Gazebo GUI. To configure FlytSim to launch PX4 simulator, start the FlytSim simulator. Open `FlytConsole <http://localhost/flytconsole>`_, and click top-right corner setup button. It would open a config window, go to Sim Settings tab, and select PX4 as *sim pilot*. You could configure other FlytSim settings such as enabling simulated camera access and Gazebo GUI as well. Once done, restart FlytSim session by executing *start* script which you used to launch FlytSim.
 
 |br|
 

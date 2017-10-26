@@ -3,11 +3,11 @@
 Getting Help in Forum
 =====================
 
-If you are facing any issues or have any general query regarding FlyOS, you can visit |forum_link| and can get your questions answered quickly by FlytBase experts and other community members. To be more helpful while asking your questions, it is recommended that you include logs and files pertaining to the issue.
+If you are facing any issues or have any general query regarding FlytOS, you can visit |forum_link| and get your questions answered quickly by FlytBase experts and other community members. To be more helpful while asking your questions, it is recommended that you include logs and files pertaining to the issue.
 
 .. |forum_link| raw:: html
 
-   <a href="http://forums.flytbase.com" target="_blank">Flyt Forums</a>
+   <a href="http://forums.flytbase.com" target="_blank">our forum</a>
 
 
 .. _getting_flytos_version:
