@@ -42,6 +42,11 @@ Setting up and deep dive:
 
 .. code-block:: bash
 
+		$ export ROS_NAMESPACE=<namespace>
+
+
+.. code-block:: bash
+
 		$ roslaunch vision_apps cam_api.launch
 
 
