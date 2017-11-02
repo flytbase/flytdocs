@@ -3,7 +3,7 @@
 Visual Follow Me
 ================
 
-Visual Follow Me is an onboard web app that comes bundled with FlytOS (placed in /flyt/flytapps/web/flytfollowme). This app talks to the onboard Object Tracking module using its FlytAPIs. To open this app, connect to your FlytPOD (or other device running FlytOS) from a browser and go to URL 
+Visual Follow Me is an onboard web app that comes bundled with FlytOS (placed in /flyt/flytapps/web/flytfollowme). This app talks to the onboard Object Tracking module using its FlytAPIs. To open this app, connect to your device running FlytOS from a browser and go to URL 
 
 
 
