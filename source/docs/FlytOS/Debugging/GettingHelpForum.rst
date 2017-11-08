@@ -34,9 +34,9 @@ FlytOS Run Log
 """"""""""""""
 
 Many errors can be caught in the FlytOS run log itself. 
-You can use our :ref:`logviewer web app <flytos_logs>` to see the logs in your browser.
+You can use our :ref:`logviewer <flytos_logs>` **web app** to see the logs in your browser.
 
-Otherwise, you can also attach the file ``/flyt/logs/runlogs/flyt_runlogs.log``, which will be present on your Flight Computer, with your question on the forum. You can view the log in a terminal using the following command:
+**Otherwise**, you can also attach the file ``/flyt/logs/runlogs/flyt_runlogs.log``, which will be present on your Flight Computer, with your question on the forum. You can view the log in a terminal using the following command:
 
 .. code-block:: bash
    
@@ -48,9 +48,10 @@ FlytOS Startup Log
 """"""""""""""""""
 
 If you are facing any issues related to Autoupdate such as in case the updates are not installed successfully or you are unable to open FlytConsole, you can check the startup log to locate the error. 
-You can use our :ref:`logviewer web app <flytos_logs>` to see the logs in your browser.
 
-Otherwise, you can also attach the file ``/flyt/logs/startup/flyt_startup.log``, which will be present on your Flight Computer, with your question on the forum. You can view the log in a terminal using the following command:
+You can use our :ref:`logviewer <flytos_logs>` **web app** to see the logs in your browser.
+
+**Otherwise**, you can also attach the file ``/flyt/logs/startup/flyt_startup.log``, which will be present on your Flight Computer, with your question on the forum. You can view the log in a terminal using the following command:
 
 .. code-block:: bash
    
