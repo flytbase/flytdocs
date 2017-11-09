@@ -133,7 +133,7 @@ Following is a simple demonstration of how to run a Web application for your dro
 
 
   			
-.. image:: /_static/Images/sample-app-screen.png
+.. image:: /_static/Images/sample-app-screenupdated.png
   :align: center
 
 
@@ -144,7 +144,7 @@ You can Also try out `Joystick <https://downloads.flytbase.com/flytos/downloads/
 - Launch the index.html file in your browser.
 - Enter the IP of the device running FlytOS to be able to communicate with it.
 
-.. image:: /_static/Images/web-app-login-screen.png
+.. image:: /_static/Images/web-app-login-screenupdated.png
   :align: center 
 
 - Once the IP is confirmed you are redirected to the app screen.
@@ -158,6 +158,6 @@ Things to Remember
 - All the commands are given with respect to the drone(front = direction of the nose/front of the drone).
 
 
-.. image:: /_static/Images/web-app-screen.png
+.. image:: /_static/Images/web-app-screenupdated.png
   :align: center
 

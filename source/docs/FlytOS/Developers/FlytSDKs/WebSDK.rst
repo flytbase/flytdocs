@@ -19,5 +19,5 @@ You can run the app by opening the **index.html** file in a browser. Follow the 
 - You will be redirected to your app screen.
 
 
-.. image:: /_static/Images/web-sdk-url.png
+.. image:: /_static/Images/web-sdk-urlupdated.png
   :align: center

@@ -74,7 +74,7 @@ Android SDK
 
    .. code-block:: java
         
-       //the namespace(unique for every FlytPOD) fetched from the rest call is used to subscribe to a web socket topic
+       //the namespace(unique for every FlytPOD/FlytPi) fetched from the rest call is used to subscribe to a web socket topic
        //the syntax Topic(<ros>, <topic>, <type>, <throttle rate>optional)
        topic=new Topic(ros,"/"+namespace+"/mavros/imu/data_euler" , "geometry_msgs/TwistStamped",200);
        topic.subscribe(new CallbackRos(){
