@@ -104,7 +104,7 @@ You just need to connect to the FlytOS running system by entering the **URL** in
 
 
 
-.. image:: /_static/Images/mobile-sample-app-url.png
+.. image:: /_static/Images/mobile-sample-app-urlupdated.png
   :align: center
 
 .. image:: /_static/Images/mobile-app-sample.png

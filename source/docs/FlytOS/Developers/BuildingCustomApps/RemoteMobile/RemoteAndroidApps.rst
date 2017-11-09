@@ -1,4 +1,4 @@
-.. _write_remote_mobile_android:
+S.. _write_remote_mobile_android:
 
 
 Android App - Java (Android-Studio)
@@ -114,7 +114,7 @@ Sample Apps
 
 * The app uses velocity_set API to control the drone.
   
-  .. image:: /_static/Images/flytAndroidSample2.png
+  .. image:: /_static/Images/flytAndroidSample2updated.png
          :height: 300px
          :width: 500px
          :align: center
