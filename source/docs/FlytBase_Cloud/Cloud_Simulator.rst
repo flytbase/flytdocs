@@ -3,6 +3,15 @@
 Cloud Simulator
 ===============
 
+|br|
+
+..  youtube:: lNCA13mgbdw
+    :aspect: 16:9
+    :width: 100%
+
+|br|
+
+
 One click access to simulator instance for drone developers. Test applications in a safe and secure environment, resolve issues and accelerate your development process.
 
 To test Cloud API on the Cloud Simulator, follow the steps given in `Setup <Setup_FlytBase_Cloud.html>`_. When you are enabling access to Vehicles, enable it for the CloudSim device, and note that device's  VehicleID.
@@ -31,3 +40,8 @@ The cloudsim device is up and running. Use the FlytConsole cloud app to monitor,
 
 FlytBase APIs for you virtual drone can be used to write cloud, web, mobile apps. Use the vehicle ID and API key of the virtual drone for testing and replace it with actual drone for deployment. 
 Happy coding!
+
+.. |br| raw:: html
+
+   <br />
+
