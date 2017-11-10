@@ -14,7 +14,7 @@ Introduction
 
 FlytOS is the software framework of FlytBase. It is based on Linux and ROS (Robot Operating System) making it an ideal platform for research and commercial drone applications. It can interact with any compatible drone/autopilot using its adapter layer and exposes high level FlytAPIs in ROS, C++, Python, REST and Websocket. It makes it easy to integrate custom payload and also provides advanced APIs using its onboard modules. These rich set of APIs allow for easy development of onboard business logic as well as remote monitoring and control through web and mobile apps. The modular design of FlytOS allows for integration with external ROS/Linux libraries and custom data plumbing between onboard and offboard apps. 
 
-FlytOS comes preloaded with FlytPOD/PRO. Alternatively, it is also available for download and can then be installed on a Linux/ROS based computer. This setup allows for integration with any compatible drone/autopilot.
+FlytOS is available for download and install on a Linux/ROS based computer. This setup allows for integration with any compatible drone/autopilot.
 
 The apps developed with FlytAPIs can talk to compatible drone/autopilot and can also be tested in a virtual ROS/Gazebo environment using FlytSim. The vision of FlytOS is to provide a standard language for the drone developers to talk to their drones.
 
@@ -45,7 +45,7 @@ Start / Stop FlytOS
 
    .. code-block:: bash
        
-       $ sudo $(rospack find core_api)/scripts/launch_flytOS.sh
+       $ launch_flytOS
 
    .. important:: If you get this error: ``Error: package 'core_api' not found``, source your /etc/bash.bashrc file.
 	
@@ -56,7 +56,7 @@ Start / Stop FlytOS
 
    .. code-block:: bash
        
-      $ sudo $(rospack find core_api)/scripts/stop_flytOS.sh    
+      $ stop_flytOS    
 
 
 
