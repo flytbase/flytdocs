@@ -3,7 +3,7 @@
 Visual Follow Me
 ================
 
-Visual Follow Me is an onboard web app that comes bundled with FlytOS (placed in /flyt/flytapps/web/flytfollowme). This app talks to the onboard Object Tracking module using its FlytAPIs. To open this app, connect to your FlytPOD (or other device running FlytOS) from a browser and go to URL 
+Visual Follow Me is an onboard web app that comes bundled with FlytOS (placed in /flyt/flytapps/web/flytfollowme). This app talks to the onboard Object Tracking module using its FlytAPIs. To open this app, connect to your device running FlytOS from a browser and go to URL 
 
 
 
@@ -39,6 +39,11 @@ Setting up and deep dive:
 -------------------------
 
 * This app requires a downward looking camera mounted on the drone. By default FlytOS automatically connects to any camera available at /dev/video0 when it is booting up. If you connected the camera after FlytOS was launched then launch the cam_api as shown below -
+
+.. code-block:: bash
+
+		$ export ROS_NAMESPACE=<namespace>
+
 
 .. code-block:: bash
 

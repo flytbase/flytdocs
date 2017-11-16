@@ -13,16 +13,12 @@ FlytConsole - Widgets
 Connect to FlytConsole
 """"""""""""""""""""""
 
-FlytPOD is shipped with WiFi set to Hotspot(AP mode) with WiFi SSID and password FlytPOD123. If the device running FlytOS is connected to your home network, open the link below in your browser to launch FlytConsole after connecting your personal system to the same network as the device running FlytOS.
+To Launch FlytConsole enter the following address in your browser.
+** if you are trying to open flytconsole on a device other than Companion Computer(device running FlytOS) make sure you are on the same network as of the Companion Computer 
 
-* http://flytpod/flytconsole
+.. code-block:: c
 
-.. * https://flytpod/flytconsole
-
-
-
-
-.. important:: In case the above URLs do not work replace ``flytpod`` with ``FlytPOD's IP address``.
+		<Companion Computer's IP address>/flytconsole
 
 .. The various components included in FlytConsole are as follows:
 
@@ -108,7 +104,7 @@ ESC Calibration requires the following fields to be filled:
 2. Max PWM Value
 3. Number of Actuators
          
-The Min and the Max PWM values set the range of the expected values from FlytPOD/PRO to the ESCs. Any value received from the RC beyond this range is converted to the min or max value. Number of actuators is the number of motors depending upon the airframe selected by you in Frame Select. FlytConsole consists of some predefined default values that can be changed. 
+The Min and the Max PWM values set the range of the expected values from AUTOPILOT to the ESCs. Any value received from the RC beyond this range is converted to the min or max value. Number of actuators is the number of motors depending upon the airframe selected by you in Frame Select. FlytConsole consists of some predefined default values that can be changed. 
 
 .. figure:: /_static/Images/escStage0.png
 	:align: center
@@ -215,7 +211,7 @@ Sensor Calibration
    
 
 
-Sensor calibration is of utmost importance before you fly your drone. The sensors to be calibrated for correct attitude are given below:
+Sensor calibration is of utmost importance before you fly your drone. Set the ``AUTOPILOT ORIENTATION`` & ``EXTERNAL MAG ORIENTATION`` if the orientation of the frame and AUTOPILOT are different. The sensors to be calibrated for correct attitude are given below:
 
 
 .. 1. Accelerometer Calibration 
@@ -228,11 +224,7 @@ Sensor calibration is of utmost importance before you fly your drone. The sensor
 
 **Accelerometer Calibration**
 
-Set the ``AUTOPILOT ORIENTATION`` if the orientation of the frame and FlytPOD are different. Click on **Start Accel Calibration** to begin.
-
-.. figure:: /_static/Images/AccelCalibration.png
-	:align: center
-	:scale: 50 %
+Click on **Accel Calibration** to begin.
 
 Hold the drone steady in all the six directions( x, -x, y, -y, z, -z) for sometime. You will be notified when the current orientation is detected and when calibration begins for that orientation. Keep steady till you are notified to change to a new direction.
 
@@ -244,11 +236,7 @@ Hold the drone steady in all the six directions( x, -x, y, -y, z, -z) for someti
 
 **Gyroscope Calibration**
 
-Set the ``AUTOPILOT ORIENTATION`` if the orientation of the frame and FlytPOD are different. Click on **Start Gyro Calibration** to begin.
-
-.. figure:: /_static/Images/GyroCalibration.png
-	:align: center
-	:scale: 50 %
+Click on **Gyro Calibration** to begin.
 
 Keep the drone steady without movement in a single state till the calibration ends. You will be notified when the calibration ends.
 
@@ -258,12 +246,7 @@ Keep the drone steady without movement in a single state till the calibration en
 
 **Magnetometer Calibration**
 
-Set the ``AUTOPILOT ORIENTATION`` if the orientation of the frame and FlytPOD are different. Click on **Start Mag Calibration** to begin.
-
-.. figure:: /_static/Images/MagCalibration.png
-	:align: center
-	:scale: 50 %
-
+Click on **Mag Calibration** to begin.
 
 You need to calibrate magnetometer every time you change the flying field. If your autopilot orientation is not the same as that of your drone, update ``AUTOPILOT ORIENTATION`` parameter accordingly. Similarly, if your external magnetometer's orientation differs from FlytPOD's heading, update ``EXT MAG ROTATION`` parameter.
 This is similar to Accelerometer Calibration with an additional step of rotating the drone in vertical axis in every orientation
@@ -275,11 +258,7 @@ thereby covering all six directions.
 
 **Level calibration**
 
-Set the ``AUTOPILOT ORIENTATION`` if the orientation of the frame and FlytPOD are different. Click on **Start Level calibration** to begin.
-
-.. figure:: /_static/Images/LevelCalibration.png
-	:align: center
-	:scale: 50 %
+Click on **Level calibration** to begin.
 
 Keep the drone steady in flat position on a levelled surface on the floor.
 
@@ -544,18 +523,18 @@ Flyt Inspector streams live data from the drone.
 
 Following data is streamed from the drone:
 
-1. Battery - gives the voltage and current consumed by the FlytPOD.
+1. Battery - gives the voltage and current consumed by the System.
 2. GPS - gives the current latitude, longitude and altitude of the drone.
 3. IMU - gives the current attitude with respect to NED.
 4. Local Position - gives the position of the drone with respect to the home position.
-5. RC IN - gives the input value received by FlytPOD because of RC.
+5. RC IN - gives the input value received by AUTOPILOT because of RC.
 
 You have now finished configuration. Please go through the :ref:`First principles of flying<First_Principles>` and :ref:`First flight with FlytPOD<First_Flight>` sections before you proceed with flying your drone and make sure you understand all the :ref:`Safety guidelines<Safety_Guidelines>`.
 
 
 .. It is recommended to use the RC when testing for the first time.
-.. If the RC is not connected, FlytPOD will go to API_Mode by default. Use API_mode switch to control drone from RC.
-.. Before you arm the FlytPOD make sure that the position of the propellers is correct i.e. anticlockwise and clockwise propellers are mounted on the right motors.
+.. If the RC is not connected, AUTOPILOT will go to API_Mode by default. Use API_mode switch to control drone from RC.
+.. Before you arm the System make sure that the position of the propellers is correct i.e. anticlockwise and clockwise propellers are mounted on the right motors.
     
     .. warning:: Have a RC pilot ready to take control even if you are flying in API mode in case of emergency.
 
