@@ -105,16 +105,6 @@ Etcher will burn the image onto the SD/eMMC card and verify the image. Remove th
 
 .. warning:: Since the image is of only around 11.5 GBs, the rest of the SD/eMMC Card would have unallocated memory. DO NOT forget to expand SD/eMMC card partition.
 
-Users more comfortable with *gparted* can refer to the following video tutorial to help flash FlytOS Linux Image on their SD/eMMC cards and then expand the partition.
-
-|br|
-
-..  youtube:: jyFvzluXzug
-    :aspect: 16:9
-    :width: 80%
-
-
-|br|
 
 After performing the above steps, your FlytOS SD Card/eMMC is ready. Insert the card in ODROID-XU4’s SD Card/eMMC slot and apply power to it to start booting FlytOS.
 
