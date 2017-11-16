@@ -14,11 +14,11 @@ Connect to FlytConsole
 """"""""""""""""""""""
 
 To Launch FlytConsole enter the following address in your browser.
-** if you are trying to open flytconsole on a device other than Companion Computer(device running FlytOS) make sure you are on the same network as of the Companion Computer 
+If you are trying to open flytconsole on a device other than Companion Computer(device running FlytOS) make sure you are on the same network as of the Companion Computer 
 
 .. code-block:: c
 
-		<Companion Computer's IP address>/flytconsole
+		http://<Companion Computer's IP address>/flytconsole
 
 .. The various components included in FlytConsole are as follows:
 
