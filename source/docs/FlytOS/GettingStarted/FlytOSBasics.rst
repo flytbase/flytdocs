@@ -18,7 +18,7 @@ FlytOS Basics
 
    .. code-block:: bash
        
-       $ sudo $launch_flytOS.sh
+       $ sudo $ launch_flytOS.sh
 
    .. important:: If you get this error: ``Error: package 'core_api' not found``, source your /etc/bash.bashrc file.
 	
@@ -29,5 +29,5 @@ FlytOS Basics
 
    .. code-block:: bash
        
-      $ sudo $stop_flytOS.sh    
+      $ sudo $ stop_flytOS.sh    
        
