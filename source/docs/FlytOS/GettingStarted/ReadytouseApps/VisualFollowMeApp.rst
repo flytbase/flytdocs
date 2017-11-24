@@ -11,7 +11,7 @@ Visual Follow Me is an onboard web app that comes bundled with FlytOS (placed in
 
 		<ip>/followme
 
-.
+		
  .. image:: /_static/Images/visual_follow_me.png
      :align: center
 
