@@ -55,14 +55,14 @@ Basic Flight
 
 .. note:: In case you are using Pixhawk, check out the `pre-flight checklist <http://ardupilot.org/copter/docs/flying-arducopter.html>`_ before you fly.
 
-2. It is important to make sure that autopilot is configured properly for RC | POSCTL mode.
-3. Skip to step 4 if RC | POSCTL mode is already configured and tested:
+2. It is important to make sure that autopilot is configured properly for RC | POSCTL/LOITER mode.
+3. Skip to step 4 if RC | POSCTL/LOITER mode is already configured and tested:
 
    a. Keep vehicle in MANUAL mode
    b. Wait for the RGB led to turn green.
    c. Arm the vehicle and takeoff manually.
    d. If vehicle is not stabilized refer to gain tuning section `here <http://px4.io/docs/multicopter-pid-tuning-guide/>`__.
-   e. Switch to RC | POSCTL mode using RC switch. Without LIDAR or SONAR the height might drift within a meter.
+   e. Switch to RC | POSCTL/LOITER mode using RC switch. Without LIDAR or SONAR the height might drift within a meter.
    f. In this mode, throttle and roll/pitch stick should be at the center to hold drone at current location.
 
 4. Prepare for Offboard mode:
