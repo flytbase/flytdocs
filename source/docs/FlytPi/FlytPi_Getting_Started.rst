@@ -3,10 +3,20 @@
 Getting Started with FlytPi
 ===========================
 
+|br|
+
+..  youtube:: mYnLhnN0zKk
+    :aspect: 16:9
+    :width: 80%
+
+|br|
+
+
 .. .. figure:: /_static/Images/FlytPi.png
 .. 	:align: center
-.. 	:scale: 120 %
+.. 	:scale: 50 %
 
+	
 Contents
 ^^^^^^^^
 
@@ -103,5 +113,19 @@ Setup the FlytPi on your Drone
 .. note:: (Optional) If you want to use a screen, connect a HDMI cable from the FlytPi to a monitor. This step is optional as you can also use FlytPi in headless mode (without a monitor).
 
 
+|br|
+
+..  youtube:: gDi46ibIB10
+    :aspect: 16:9
+    :width: 100%
+
+|br|
+
+
 Now you can get your drone ready for :ref:`First Flight!<first_flight_main>`
 ----------------------------------------------------------------------------
+
+.. |br| raw:: html
+
+   <br />
+
