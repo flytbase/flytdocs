@@ -4,6 +4,8 @@ Android SDK
 ============
 
 * You can download FlytSDK android from `here <https://downloads.flytbase.com/flytos/downloads/sdk/Flyt-Android-SDK.zip>`_ and build your app using it.
+* You need to add the JAR to Android Project. You can do that by copying the JAR File to Libs Folder and also choose the dependency pointing towards the JAR file which will be in Libs folder.
+* Finally press the Sync Gradle button.
 
 
 .. figure:: /_static/Images/android-sdk.png
