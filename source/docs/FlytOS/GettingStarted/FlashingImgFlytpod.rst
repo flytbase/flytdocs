@@ -102,24 +102,9 @@ To burn an image to your SD/eMMC card:
 
 Etcher will burn the image onto the SD/eMMC card and verify the image. Remove the SD card after you get the prompt.
 
-.. warning:: Since the image is of only around 11.5 GBs, the rest of the SD/eMMC Card would have unallocated memory. DO NOT forget to expand SD/eMMC card partition.
 
-Users more comfortable with *gparted* can refer to the following video tutorial to help flash FlytOS Linux Image on their SD/eMMC cards and then expand the partition.
+.. warning:: The image is around 11.5 GB in size, thus the rest of the SD Card would have unallocated space. As this limits the available user area it is advised to extend your partition.
 
-
-|br|
-
-..  youtube:: jyFvzluXzug
-    :aspect: 16:9
-    :width: 80%
-
-
-|br|
-
-Partition Expansion
-^^^^^^^^^^^^^^^^^^^
-
-The image is around 11.5 GB in size, thus the rest of the SD Card would have unallocated space. As this limits the available user area it is advised to extend your partition on your **first boot up**.
 
 To extend your partition to cover your full SD card:
 

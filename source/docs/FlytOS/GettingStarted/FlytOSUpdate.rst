@@ -11,6 +11,8 @@ Automatic OTA
 * Apart from the option of manually downloading and installing the latest FlytOS debian, FlytOS has a built in auto-update functionality. 
 * Whenever a flight computer with FlytOS installed on it has internet access at boot, it checks for possible updates and downloads them.
 * Once the download is complete, the updates are installed upon the next reboot of your device.
+* Reboot your device once the download is complete. Installation of the update would be triggered automatically.
+* Please wait for a few minutes before trying to connect to FlytOS.
 * In case of FlytPOD/PRO, during automatic installation, the USER-LED-1 starts blinking rapidly in red indicating that the FlytOS is being installed. You can also check the startup log for updates/installation related debug messages.
 
 
