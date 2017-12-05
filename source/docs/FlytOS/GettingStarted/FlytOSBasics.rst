@@ -18,9 +18,9 @@ FlytOS Basics
 
    .. code-block:: bash
        
-       $ sudo $(rospack find core_api)/scripts/launch_flytOS.sh
+       $ launch_flytOS.sh
 
-   .. important:: If you get this error: ``Error: package 'core_api' not found``, source your /etc/bash.bashrc file.
+   .. important:: If you get this error: ``Error: package 'core_api' not found``, post the issue in our forum and attach your /etc/bash.bashrc and $HOME/.bashrc files.
 	
 
 2. Kill FlytOS
@@ -29,5 +29,5 @@ FlytOS Basics
 
    .. code-block:: bash
        
-      $ sudo $(rospack find core_api)/scripts/stop_flytOS.sh    
+      $ stop_flytOS.sh    
        

@@ -62,7 +62,7 @@ Kit includes
 
 * 1x Plastic Enclosure
 
-* 1x 32GB uSD Card Class 10 with FlytOS Commercial Edition
+* 1x 16GB uSD Card Class 10 with FlytOS Commercial Edition
 
 * 1x Attached UART-to-UART cable
 

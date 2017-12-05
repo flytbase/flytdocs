@@ -1,7 +1,7 @@
 .. _ready_camera_settings:
 
 Camera Settings
-================
+===============
 
 During bootup FlytOS automatically connects to any camera device available at port '/dev/video0'. If you connect the camera after FlytOS was launched you'll have to manually launch the cam_api using the commands given below:
 
@@ -44,9 +44,8 @@ And change the camera_info_url param in the launch file mentioned above.
 
 
 Using Raspi Cam with Raspberry Pi
-----------------------------------
 
-To get raspi cam enabled, run the following command
+To get raspi cam enabled, run the following commands:
 
 .. code-block:: bash
 
@@ -72,8 +71,5 @@ It would be better if you also upgrade your kernel, by running this command
 
 Once, done reboot your device. 
 
-**Make sure while using the raspi camera you connect the camera to the board before booting it up.
-
-
-
+**Make sure while using the raspi camera you connect the camera to the board before booting it up.**
 
