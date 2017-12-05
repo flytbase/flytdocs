@@ -103,7 +103,8 @@ To burn an image to your SD/eMMC card:
 Etcher will burn the image onto the SD/eMMC card and verify the image. Remove the SD card after you get the prompt.
 
 
-.. warning::The image is around 11.5 GB in size, thus the rest of the SD Card would have unallocated space. As this limits the available user area it is advised to extend your partition on your **first boot up**.
+.. warning:: The image is around 11.5 GB in size, thus the rest of the SD Card would have unallocated space. As this limits the available user area it is advised to extend your partition.
+
 
 To extend your partition to cover your full SD card:
 
