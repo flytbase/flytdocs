@@ -72,15 +72,3 @@ QGC
 6. You can go through their `User’s Guide <http://qgroundcontrol.org/users/start>`_ to learn more about QGC.
 
 
-APM Planner/Mission Planner
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-`APM Planner <http://ardupilot.org/planner2/>`_ and `Mission Planner <http://ardupilot.org/planner/index.html>`_ also support FlytOS. Follow the steps given below to get started with them:
-
-1. Download and install either of APM Planner/Mission Planner by following the above links.
-2. Once installed launch the app.
-3. Connect your personal computer to the same WiFi network your flight computer is connected to.
-4. Create a new *TCP Comm Link* in the app, with *Host Address* as IP Address of your flight computer and *TCP Port* as 5760.
-5. Once done, press the *connect* button and the app will now connect to FlytOS.
-
-
