@@ -50,7 +50,7 @@ Setting up and deep dive:
 		$ roslaunch vision_apps cam_api.launch
 
 
-* In case you want to change the camera capture settings, edit following launch file -
+* In case you want to change the camera capture settings, edit the following launch file -
 
 
      **/flyt/flytos/flytcore/share/vision_apps/launch/cam_api.launch**
