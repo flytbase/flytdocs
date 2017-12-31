@@ -16,7 +16,8 @@ The SDKs give you a headstart in your app development by providing following:
 Android SDK
 ------------
 
-An Android Studio project to get you started with building your native Android App using FlytAPIs. 
+An Android FlytSDK to get you started with building your native Android App using FlytAPIs.
+
 
 :ref:`Learn more<flytsdks_android>`  |  `Download <https://downloads.flytbase.com/flytos/downloads/sdk/Flyt-Android-SDK.zip>`__
 
