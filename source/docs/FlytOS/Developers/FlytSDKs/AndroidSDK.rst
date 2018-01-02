@@ -3,7 +3,7 @@
 Android SDK
 ============
 
-prerequisite
+Prerequisite
 ^^^^^^^^^^^^
 
 Before you can use the Android FlytSDK, you'll need:
@@ -12,21 +12,23 @@ Before you can use the Android FlytSDK, you'll need:
 * JDK 1.8 or higher
 * Android Studio
 
-**Setup**
+Setup
+^^^^^
 
 1. Download FlytSDK android from here.
 2. Copy the Downloaded file and add it to the libs folder in your android project. If your project does not contain any libs directory, you can create the directory in the same level to the project src folder.
 3. Register module in build.gradle file.
 
-     a. Click on file menu and on the pop up menu click on the project structure
+* Click on file menu and on the pop up menu click on the project structure
      
-     b. On the new window, select you app and click on Dependencies tab to select it.
+* On the new window, select you app and click on Dependencies tab to select it.
 
-     c. Click on the + sign icon on the top right, choose File dependency and select the dependency file from libs folder.Then click apply and OK to finish.
+* Click on the + sign icon on the top right, choose File dependency and select the dependency file from libs folder.Then click apply and OK to finish.
+
 4. Click on Sync Project with gradle files
 
-**Sample App**
-
+Sample App
+^^^^^^^^^^
 Clone the FlytSample repository from Github:`FlytSample App <https://github.com/flytbase/flytsamples.git>`_
 
 **Building**
@@ -39,7 +41,8 @@ Clone the FlytSample repository from Github:`FlytSample App <https://github.com/
 * If it asks you to use Instant Run, click Proceed Without Instant Run.
 * Also, you need to have an Android device plugged in with developer options enabled at this point. See here for more details on setting up developer devices.
 
-**How to use FlytSDK**
+How to use FlytSDK
+^^^^^^^^^^^^^^^^^^
 
 **Following is a sample implementation of the REST call to fetch namespace from FlytOS**
 
@@ -61,10 +64,10 @@ Clone the FlytSample repository from Github:`FlytSample App <https://github.com/
        }
        });
        request.execute(httpParam);
-  
-  ** Following is a sample implementation of the websocket call to get state from FlytOS.**
 
-* Sample websocket call to view roll pitch yaw from FlytOS.
+  
+**Following is a sample implementation of the websocket call to get state from FlytOS**
+
    
    .. code-block:: java
    
@@ -79,7 +82,7 @@ Clone the FlytSample repository from Github:`FlytSample App <https://github.com/
 
    .. code-block:: java
         
-      Topic stateData = new Topic(ros, "/" + namespace + "/flyt/state",     "mavros_msgs/State", 200);
+      Topic stateData = new Topic(ros, "/" + namespace + "/flyt/state","mavros_msgs/State", 200);
       stateData.subscribe(new CallbackRos() {
             @Override
             public void handleMessage(JSONObject message) {
