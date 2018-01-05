@@ -14,7 +14,7 @@ Getting Started with FlytPi
 
 .. .. figure:: /_static/Images/FlytPi.png
 .. 	:align: center
-.. 	:scale: 50 %
+.. 	:scale: 120 %
 
 	
 Contents
