@@ -6,12 +6,12 @@ Android App - Java (Android-Studio)
 
 Sample App
 ^^^^^^^^^^
-Clone the FlytSample repository from Github:`FlytSample App <https://github.com/flytbase/flytsamples.git>`_
+Download the FlytSample repository from Github:`FlytSample App <https://github.com/flytbase/flytsamples/tree/master/Mobile-Apps/Java-Apps/SampleApp>`_
 
 **Building**
 
 * Open Android Studio, and from the Welcome screen, select Open an existing Android Studio project.
-* From the Open File or Project window that appears, navigate to and select the directory from wherever you cloned the `FlytSDK Sample <https://github.com/flytbase/flytsamples.git>`_ Github repo. Click OK.
+* From the Open File or Project window that appears, navigate to and select the directory where you have cloned FlytSDK. Click OK.
 * If it asks you to do a Gradle Sync, click OK.
 * You may also need to install various platforms and tools, if you get errors like **"Failed to find target with hash string 'android-23' "** and similar.
 * Click the Run button (the green arrow) or use Run -> Run 'android' from the top menu.

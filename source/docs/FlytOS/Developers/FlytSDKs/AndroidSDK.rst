@@ -15,7 +15,7 @@ Before you can use the Android FlytSDK, you'll need:
 Setup
 ^^^^^
 
-1. Download FlytSDK android from here.
+1. Download FlytSDK android from `here <https://github.com/flytbase/flytsamples/tree/master/Mobile-Apps/Java-Apps/FlytbaseSDK>`_
 2. Copy the Downloaded file and add it to the libs folder in your android project. If your project does not contain any libs directory, you can create the directory in the same level to the project src folder.
 3. Register module in build.gradle file.
 
@@ -29,12 +29,12 @@ Setup
 
 Sample App
 ^^^^^^^^^^
-Clone the FlytSample repository from Github:`FlytSample App <https://github.com/flytbase/flytsamples.git>`_
+Download the FlytSample repository from Github:`FlytSample App <https://github.com/flytbase/flytsamples/tree/master/Mobile-Apps/Java-Apps/SampleApp>`_
 
 **Building**
 
 * Open Android Studio, and from the Welcome screen, select Open an existing Android Studio project.
-* From the Open File or Project window that appears, navigate to and select the directory from wherever you cloned the `FlytSDK Sample <https://github.com/flytbase/flytsamples.git>`_ Github repo. Click OK.
+* From the Open File or Project window that appears, navigate to and select the directory where you have cloned the FlytSample App, Click OK.
 * If it asks you to do a Gradle Sync, click OK.
 * You may also need to install various platforms and tools, if you get errors like **"Failed to find target with hash string 'android-23' "** and similar.
 * Click the Run button (the green arrow) or use Run -> Run 'android' from the top menu.

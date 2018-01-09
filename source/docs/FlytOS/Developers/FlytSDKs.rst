@@ -19,7 +19,7 @@ Android SDK
 An Android FlytSDK to get you started with building your native Android App using FlytAPIs.
 
 
-:ref:`Learn more<flytsdks_android>`  |  `Download <https://downloads.flytbase.com/flytos/downloads/sdk/Flyt-Android-SDK.zip>`__
+:ref:`Learn more<flytsdks_android>`  |  `Download <https://github.com/flytbase/flytsamples/tree/master/Mobile-Apps/Java-Apps>`__
 
 Web SDK
 --------
