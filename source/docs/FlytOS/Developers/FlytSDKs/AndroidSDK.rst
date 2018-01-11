@@ -3,92 +3,93 @@
 Android SDK
 ============
 
-* You can download FlytSDK android from `here <https://downloads.flytbase.com/flytos/downloads/sdk/Flyt-Android-SDK.zip>`_ and build your app using it.
-* You need to add the JAR to Android Project. You can do that by copying the JAR File to Libs Folder and also choose the dependency pointing towards the JAR file which will be in Libs folder.
-* Finally press the Sync Gradle button.
+Prerequisite
+^^^^^^^^^^^^
 
+Before you can use the Android FlytSDK, you'll need:
 
-.. figure:: /_static/Images/android-sdk.png
-	:align: center
-	:width: 30%
+* Android SDK Level 14 (Ice Cream Sandwich 4.0) or higher
+* JDK 1.8 or higher
+* Android Studio
 
-* The SDK has all the required libraries for making REST calls and a websocket connection to FlytOS already integrated in it.
-* The mainActivity shows a sample of how a REST call and a WebSocket call is to be made.
-* Sample REST call to fetch namespace from FlytOS
+Setup
+^^^^^
+
+1. Download FlytSDK android from `here <https://github.com/flytbase/flytsamples/tree/master/Mobile-Apps/Java-Apps/FlytbaseSDK>`_
+2. Copy the Downloaded file and add it to the libs folder in your android project. If your project does not contain any libs directory, you can create the directory in the same level to the project src folder.
+3. Register module in build.gradle file.
+
+* Click on file menu and on the pop up menu click on the project structure
+     
+* On the new window, select you app and click on Dependencies tab to select it.
+
+* Click on the + sign icon on the top right, choose File dependency and select the dependency file from libs folder.Then click apply and OK to finish.
+
+4. Click on Sync Project with gradle files
+
+Sample App
+^^^^^^^^^^
+Download the FlytSample repository from Github:`FlytSample App <https://github.com/flytbase/flytsamples/tree/master/Mobile-Apps/Java-Apps/SampleApp>`_
+
+**Building**
+
+* Open Android Studio, and from the Welcome screen, select Open an existing Android Studio project.
+* From the Open File or Project window that appears, navigate to and select the directory where you have cloned the FlytSample App, Click OK.
+* If it asks you to do a Gradle Sync, click OK.
+* You may also need to install various platforms and tools, if you get errors like **"Failed to find target with hash string 'android-23' "** and similar.
+* Click the Run button (the green arrow) or use Run -> Run 'android' from the top menu.
+* If it asks you to use Instant Run, click Proceed Without Instant Run.
+* Also, you need to have an Android device plugged in with developer options enabled at this point. See here for more details on setting up developer devices.
+
+How to use FlytSDK
+^^^^^^^^^^^^^^^^^^
+
+**Following is a sample implementation of the REST call to fetch namespace from FlytOS**
+
+   .. code-block:: java
+   
+      HttpParam httpParam = new HttpParam();
+      httpParam.setUrl("http://" + {IP ADDRESS} + "/ros/get_global_namespace");
+      JSONObject params=new JSONObject();
+      httpParam.setParams(params);
+
+      HttpRequest request=  new HttpRequest(new HttpRequest.IResponseHandler() {
+      @Override
+      public void onResponse(String response) {
+           try {
+                   JSONObject resp = new JSONObject(response);
+                   namespace = resp.getJSONObject("param_info").getString("param_value");
+           } catch (Exception| IOError e) {
+           }
+       }
+       });
+       request.execute(httpParam);
+
+  
+**Following is a sample implementation of the websocket call to get state from FlytOS**
+
    
    .. code-block:: java
    
-       private class NamespaceRequest extends AsyncTask<Void, Void, String> {
-          @Override
-          protected String doInBackground(Void... params) {
-              try {
-                  //Rest url
-                  final String url = "http://"+IP+"/ros/get_global_namespace";
-                  //params in json
-                  String requestJson = "{}";
-                  //headers
-                  HttpHeaders headers = new HttpHeaders();
-                  headers.setContentType(MediaType.APPLICATION_JSON);
-
-                  HttpEntity<String> entity = new HttpEntity<String>(requestJson,headers);
-                  //restTemplate object initialise for rest call
-                  RestTemplate restTemplate = new RestTemplate();
-                  restTemplate.getMessageConverters().add(new StringHttpMessageConverter());
-                  // make the rest call and recieve the response in "response"
-                  String response = restTemplate.postForObject(url,entity, String.class);
-
-                  return response;
-              } catch (Exception  e) {
-                  Log.e("MainActivity", e.getMessage(), e);
-              }
-
-              return null;
-          }
-          //function called after a successful rest call
-          @Override
-          protected void onPostExecute(String response) {
-              if (response!="") {
-
-                  try {
-                      //initialise a JSON object with the response string
-                      JSONObject resp = new JSONObject(response);
-                      //extract the required field from the JSON object
-                      namespace=resp.getJSONObject("param_info").getString("param_value");
-                  } catch (JSONException  | NullPointerException e) {
-              }
-          }
-      }
-    
-* Sample websocket call to view roll pitch yaw from FlytOS.
-   
-   .. code-block:: java
-   
-       IP=editTextIP.getText().toString();
-       //Initialise a ros object with websocket url
-       ros=new Ros("ws://"+IP+"/websocket");
-       ros.connect();
+      Ros ros=new Ros("ws://"+{IP Address}+"/websocket");
+      ros.connect();
 
        
-   .. note:: The Ros object initialisation is done once every time the app is run unless you are planning to connect multiple FlytOS devices.
+   .. note:: The Ros object initialisation is done once every time the app is start unless you are planning to connect multiple FlytOS devices.
         
         
 
 
    .. code-block:: java
         
-       //the namespace(unique for every FlytPOD) fetched from the rest call is used to subscribe to a web socket topic
-       //the syntax Topic(<ros>, <topic>, <type>, <throttle rate>optional)
-       topic=new Topic(ros,"/"+namespace+"/mavros/imu/data_euler" , "geometry_msgs/TwistStamped",200);
-       topic.subscribe(new CallbackRos(){
-             //callback method- what to do when messages recieved.
-             @Override
-             public void handleMessage(JSONObject message){
-                  try {
-                      updateRoll(message.getJSONObject("twist").getJSONObject("linear").getDouble("x"));
-                      updatePitch(message.getJSONObject("twist").getJSONObject("linear").getDouble("y"));
-                      updateYaw(message.getJSONObject("twist").getJSONObject("linear").getDouble("z"));
-
-
-                  }catch(JSONException e){}
-             }
-       });  
+      Topic stateData = new Topic(ros, "/" + namespace + "/flyt/state","mavros_msgs/State", 200);
+      stateData.subscribe(new CallbackRos() {
+            @Override
+            public void handleMessage(JSONObject message) {
+                try {
+                    connectionStatus = message.getBoolean("connected");
+                    armStatus= message.getBoolean("armed");
+                } catch (JSONException e) {
+                }
+          }
+          });
