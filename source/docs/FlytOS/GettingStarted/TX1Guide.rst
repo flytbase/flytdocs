@@ -68,8 +68,9 @@ You have to activate installed FlytOS, without which critical APIs would not fun
 2. :ref:`Launch FlytConsole <FlytConsole_launch>`. You can launch FlytConsole in the TX1's browser using the URL ``http://localhost/flytconsole`` or on your PC's browser using the URL ``http://ip-address-of-device/flytconsole`` . In FlytConsole click on **Activate Now tag** under **License tab** at bottom right corner. A pop-up will appear which will direct you to the device registration page. If you are not logged in, enter your FlytBase Account credentials to log in.
 3. Choose a device nick-name and select your compute engine.
 4. In the license drop-down list, select existing license if available or select ‘Issue a new license’. You can also provide a nick-name for your license.
-5. Click on Save Changes to register device and generate a license key.
-6. Copy the generated license key and enter it in FlytConsole to complete the activation process of your device. The Activate Now tag at bottom right corner of FlytConsole should now turn green.
+5. Choose commercial license if you have purchased a commercial license and have the commercial license code or select the personal license.
+6. Click on Save Changes to register device and generate a license key.
+7. Copy the generated license key and enter it in FlytConsole to complete the activation process of your device. The Activate Now tag at bottom right corner of FlytConsole should now turn green.
 
 
 Hardware Setup
