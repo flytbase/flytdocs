@@ -15,7 +15,7 @@ Before you can use the Android FlytSDK, you'll need:
 Setup
 ^^^^^
 
-1. Download FlytSDK android from `here <https://github.com/flytbase/flytsamples/tree/master/Mobile-Apps/Java-Apps/FlytbaseSDK>`_
+1. Download FlytSDK android from `here <https://github.com/flytbase/flytsamples/raw/master/Mobile-Apps/Java-Apps/FlytbaseSDK/FlytSDK.jar>`_
 2. Copy the Downloaded file and add it to the libs folder in your android project. If your project does not contain any libs directory, you can create the directory in the same level to the project src folder.
 3. Register module in build.gradle file.
 
@@ -75,7 +75,6 @@ How to use FlytSDK
       ros.connect();
 
        
-   .. note:: The Ros object initialisation is done once every time the app is start unless you are planning to connect multiple FlytOS devices.
         
         
 
