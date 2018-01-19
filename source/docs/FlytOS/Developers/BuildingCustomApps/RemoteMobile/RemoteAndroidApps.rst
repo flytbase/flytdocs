@@ -6,7 +6,7 @@ Android App - Java (Android-Studio)
 
 Sample App
 ^^^^^^^^^^
-Download the FlytSample repository from Github:`FlytSample App <https://github.com/flytbase/flytsamples/tree/master/Mobile-Apps/Java-Apps/SampleApp>`_
+Download the `FlytSample repository <https://github.com/flytbase/flytsamples/tree/master/Mobile-Apps/Java-Apps/SampleApp>`_ from Github. 
 
 **Building**
 
