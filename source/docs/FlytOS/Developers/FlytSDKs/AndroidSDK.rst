@@ -15,16 +15,13 @@ Before you can use the Android FlytSDK, you'll need:
 Setup
 ^^^^^
 
-1. Download FlytSDK android from `here <https://github.com/flytbase/flytsamples/raw/master/Mobile-Apps/Java-Apps/FlytbaseSDK/FlytSDK.jar>`_
+1. Download FlytSDK android from `here <https://github.com/flytbase/flytsamples/raw/master/Mobile-Apps/Java-Apps/FlytSDK/FlytSDK.jar>`_.
 2. Copy the Downloaded file and add it to the libs folder in your android project. If your project does not contain any libs directory, you can create the directory in the same level to the project src folder.
 3. Register module in build.gradle file.
 
-* Click on file menu and on the pop up menu click on the project structure
-     
-* On the new window, select you app and click on Dependencies tab to select it.
-
-* Click on the + sign icon on the top right, choose File dependency and select the dependency file from libs folder.Then click apply and OK to finish.
-
+   * Click on file menu and on the pop up menu click on the project structure.
+   * On the new window, select you app and click on Dependencies tab to select it.
+   * Click on the + sign icon on the top right, choose File dependency and select the dependency file from libs folder.Then click apply and OK to finish.
 4. Click on Sync Project with gradle files
 
 Sample App
