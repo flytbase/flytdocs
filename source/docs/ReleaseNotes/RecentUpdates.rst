@@ -1,7 +1,11 @@
 Recent Updates
 ==============
 
-We improve the FlytBase platform continually by releasing new features, removing bugs and updating documentation. 
+FlytOS is being continuously evolved to add more features, wider compatibility with hardware options, more sample codes to assist developers, fix bugs and enrich documentation. We request users to keep their drones updated at all times. Instructions for installing the latest update are available |flytos_update_link|.
+
+.. |flytos_update_link| raw:: html
+
+   <a href="http://docs.flytbase.com/docs/FlytOS/GettingStarted/FlytOSUpdate.html#flytos-updates" target="_blank">here</a>
 
 Version 1.5-5
 #############
