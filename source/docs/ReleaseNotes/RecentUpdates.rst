@@ -3,6 +3,81 @@ Recent Updates
 
 We improve the FlytBase platform continually by releasing new features, removing bugs and updating documentation. 
 
+Version 1.5-5
+#############
+
+*Released on 25th January, 2018*
+
+**Key Updates**
+
+* added RPi camera video streaming API via FlytCloud 
+* released FlytOS beta version for DJI
+
+**Bug Fixes**
+
+* FlytOS during boot up on NvidiaTX1, would freeze its UI
+* position_set_global API for APM sometimes sent drone to incorrect location
+* position_set_global API would return success=true even if command terminated due to timeout
+* FlytOS during boot up would delete saved values of user created params in few cases
+* exec_script API when used to trigger complicated python script would fail sometimes
+* FlytOS would not allow RC to switch over from OFFBOARD mode for PX4 in some cases
+
+**Minor Updates**
+
+* FlytSim now runs latest arducopter SITL firmware (v3.5.4)
+* FlytOS now also checks newer FLTMODE feature of PX4, to verify API (OFFBOARD mode) switch position of RC
+* Navigation APIs now detect valid position data even if position sensors other than GPS are used. Only for PX4
+* added support for maxbotix MB1242 (I2C) sensors, allowing obstacle avoidance for APM
+* added support for JeVois cameras (upto 2 camera supported) and enabled its ARTag detection API
+* running stop_flytOS.sh script now prints relevant info, as opposed previously
+
+Version 1.5-4
+#############
+
+*Released on 9th November, 2017*
+
+**Key Updates**
+
+* added support for DJI Guidance
+* added video streaming option for RPi Camera using raspicam. Use FlytPilot android app, to view the stream
+
+**Minor Updates**
+
+* added radio_status API. This API provides RSSI information and is useful if FlytOS is connected to Autopilot via a telemetry device
+* added polygon geofence_set/get API for APM
+* In take_off API, minimum takeoff_alt accepted reduced to 1.5m from 3m
+* Runlog utility now stores previous logs (limited upto last 10 logs)
+    
+
+Version 1.5-3
+#############
+
+*Released on 14th October, 2017*
+
+**UI update**
+
+* Vehicle mode 'LOITER' now supported in FlytConsole's 'mode indicator'
+
+**Bug Fix**
+
+* waypoint_achieved counter did not reset if waypoint_clear API is called
+  
+**Minor Updates**
+
+* added access_request API and set_mode API to list of allowed REST APIs
+* Runlog now stores one previous log along with current log
+* improved debug messages of demoapp1 (cpp demo script)
+
+Version 1.5-2
+#############
+
+*Released on 21st September, 2017*
+
+**Bug Fixes**
+
+* FlytOS autoupdate bug fix for FlytPOD
+* FlytConsole bug fix for FlytPOD specific widgets
+
 Version 1.5-0
 #############
 
