@@ -5,7 +5,7 @@ FlytOS is being continuously evolved to add more features, wider compatibility w
 
 .. |flytos_update_link| raw:: html
 
-   <a href="http://docs.flytbase.com/docs/FlytOS/GettingStarted/FlytOSUpdate.html#flytos-updates" target="_blank">here</a>
+   <a href="http://docs.flytbase.com/docs/FlytOS/GettingStarted/FlytOSUpdate.html#flytos-updates">here</a>
 
 Version 1.5-5
 #############
