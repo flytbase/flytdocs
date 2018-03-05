@@ -11,7 +11,7 @@ Visual Follow Me is an onboard web app that comes bundled with FlytOS (placed in
 
 		<ip>/followme
 
-.
+		
  .. image:: /_static/Images/visual_follow_me.png
      :align: center
 
@@ -50,11 +50,11 @@ Setting up and deep dive:
 		$ roslaunch vision_apps cam_api.launch
 
 
-* In case you want to change the camera capture settings, edit following launch file -
+* In case you want to change the camera capture settings, edit the following launch file -
 
-.. code-block:: bash
 
-		/flyt/flytos/flytcore/share/vision_apps/launch/cam_api.launch
+     **/flyt/flytos/flytcore/share/vision_apps/launch/cam_api.launch**
+
 
 * To start the onboard object tracking module, click on the Launch Object Tracking button. It can take few seconds to launch the app and get the video stream.
 
