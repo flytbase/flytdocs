@@ -7,6 +7,7 @@ Ready to use Apps
 * :ref:`Video Streaming App<ready_video_streaming>`
 * :ref:`Visual Follow Me App<ready_visual_follow_me>`
 * :ref:`Camera Settings<ready_camera_settings>`
+* :ref:`FlytPilot App<ready_FlytPilotApp>`
 
 
 .. toctree::
@@ -18,3 +19,4 @@ Ready to use Apps
    ./ReadytouseApps/VideoStreamingApp.rst
    ./ReadytouseApps/VisualFollowMeApp.rst
    ./ReadytouseApps/CameraSettings.rst
+   ./ReadytouseApps/FlytPilotApp.rst
