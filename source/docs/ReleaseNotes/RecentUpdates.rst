@@ -3,6 +3,56 @@ Recent Updates
 
 We improve the FlytBase platform continually by releasing new features, removing bugs and updating documentation. 
 
+Version 1.5-6
+#############
+
+*Released on 28th March, 2018*
+
+**Key Updates**
+
+* Releasing official support for DJI Drones. With this release, FlytOS can seemlessly communicate with either PX4/APM/DJI devices connected via a serial port, as long as the corresponding autopilots are configured correctly. `Click here <https://docs.google.com/document/d/1Q6vTM6LQ1jh-kpcCmUbdifHaNtjmWGDCPsxUa10ay3o/edit>`_ to setup FlytOS for DJI devices.
+
+	* Extends these Navigation APIs for DJI:
+
+	  * TakeOff
+	  * Land
+	  * Local Position Setpoint
+	  * Global Position Setpoint
+	  * Waypoint Get/Set/Clear/Pause/Execute
+	  * Position Hold
+	  * RTL
+
+	* Also, extending these Telemetry APIs:
+
+	  * Attitude (Euler/Quaternion)
+	  * Local Position
+	  * Global Position
+	  * Battery Status
+	  * RC Data
+	  * Vehicle State
+
+* Updated DJI OSDK to 3.6 from 3.3 from https://github.com/dji-sdk/Onboard-SDK
+* Updated PX4 SITL from https://github.com/PX4/sitl_gazebo. Improvement in vehicle stability observed. Performance significantly improved in low compute power devices.
+
+**UI updates: FlytConsole**
+
+* DJI Encryption key and APP ID must now be fed to FlytOS via FlytConsole's settings page.
+* Improved Video streaming widget. Now video starts as soon as you open the widget. Also, fixed drop down issue where it used to show one entry even when no camera was detected.
+* AutoPilot (APM/PX4/DJI) identification in top bar changed from logo to text.
+* Fixed incorrect 'unsupported' message in few widgets.
+* Removed few widgets which ONLY catered to FlytPOD.
+* Motor Testing widget made available for APM.
+
+**Bug Fixes**
+
+* Skipping ttySx port during FlytOS bootup while searching serial port for autopilot, significantly improves startup time.
+* Disabled feature to send drone to offboard mode whenever it is in disarmed state.
+
+**Minor Updates**
+
+* Increased data subscription rate for POSITION and EXTRA1 to 40Hz for APM
+* Added support for a custom launch file for developers. Users can create user.launch file beside core_api_autopilot.launch and add their custom ros nodes. This file won't be overwritten by auto-update.
+
 Version 1.5-5
 #############
 
