@@ -83,3 +83,15 @@ Windows
 ^^^^^^^
 
 Go to the directory where this project was unzipped by you. **Get inside Windows directory.** Start your FlytSim session by opening **openshell.ps1** script with Windows Powershell application.
+
+.. _flytsim_ide:
+
+Web-IDE Access
+--------------
+
+With FlytSim-Docker version 1.5-5, we have introduced `Cloud9 <https://en.wikipedia.org/wiki/Cloud9_IDE>`_, a web-based IDE which supports multitudes of programming languages. It is recommended to use this tool, if the developer wants to edit/write any code inside FlytSim's docker instance.
+
+To open the IDE, launch a web browser and go to URL: ``http://<ip of your laptop running FlytSim>:9000/``.
+**Username** and **Password** credentials are **'flytos'** and **'flytos'** respectively.
+
+.. image:: /_static/Images/IDE.png
