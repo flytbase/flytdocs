@@ -75,7 +75,7 @@ WiFi Access Point
 
 After flashing FlytOS Linux Image in your Intel Edison, WiFi access point is created on the device on system startup with following credentials:
 
-ssid:       edison_ap
+ssid:       EDISON-XX-XX (XX-XX will be replaced by string unique to your device)
 
 Password:   flytos12#
 
