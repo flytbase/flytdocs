@@ -7,8 +7,9 @@ Installing FlytOS in your custom image (RPi3)
 
 .. note:: Follow this step ONLY if you have chosen NOT TO flash :ref:`FlytOS Linux Image <flashing_img_rpi>`.
 
-1. Please ensure you are running Linux - Ubuntu 16.04 before proceeding with installation. This guide assumes you already have a working operating system on your Flight Computer. The following commands should be executed on your flight computer, you may either use an external display or ssh into your flight computer.
+1. Please ensure you are running Linux - Ubuntu 16.04 Mate before proceeding with installation. This guide assumes you already have a working operating system on your Flight Computer. The following commands should be executed on your flight computer, you may either use an external display or ssh into your flight computer.
 
+.. tip:: To install Ubuntu 16.04 Mate, Raspberry Pi 3B users should refer to `this link <https://ubuntu-mate.org/raspberry-pi/>`_, while 3B+ users should refer to `this link <https://ubuntu-mate.community/t/ubuntu-mate-for-raspberry-pi-3-model-b/15867/10>`_.
 .. warning:: Please make sure you have a stable internet connection. Save and close all open applications before executing the script as your system shall reboot on installation.
 
 2. Open terminal and run the following command

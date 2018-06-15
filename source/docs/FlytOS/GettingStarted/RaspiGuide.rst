@@ -1,13 +1,13 @@
 .. _rpi_guide:
 
 
-Raspberry Pi 3
-===============
+Raspberry Pi 3B/ 3B+
+====================
 
 Installing FlytOS 
 ^^^^^^^^^^^^^^^^^^
 
-To install FlytOS on Raspberry Pi 3, there are 2 ways that you can follow. We recommend the first method for an easier install:
+To install FlytOS on Raspberry Pi 3B, there are 2 ways that you can follow. We recommend the first method for an easier install:
 
 * :ref:`Flashing FlytOS Linux Image <flashing_img_rpi>` [**Recommended method**]
               
@@ -16,7 +16,7 @@ To install FlytOS on Raspberry Pi 3, there are 2 ways that you can follow. We re
 * :ref:`Installing FlytOS dependencies in your custom image<install_dependencies_rpi>`
 
 
-   
+.. note:: Our image only works for Raspberry Pi 3B. If you have the newer 3B+ module, please follow :ref:`this guide<install_dependencies_rpi>`.
        
 
 .. **Security and Authentication**
